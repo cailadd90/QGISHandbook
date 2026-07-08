@@ -1,4 +1,4 @@
-# Introduction {.unnumbered}
+# Cyflwyniad {.unnumbered}
 
 Mae System Gwybodaeth Ddaearyddol (GIS) yn ffordd bwerus o weithio gyda gwybodaeth sydd ynghlwm wrth leoliadau ar y Ddaear. Mae'r math hwn o wybodaeth — a elwir yn aml yn ddata *geofodol* — yn cynnwys unrhyw beth sydd â chyfeiriad daearyddol, fel cyfesurynnau, cyfeiriadau, neu nodweddion map. Mae GIS yn caniatáu ichi storio, gweld, dadansoddi a chyflwyno'r data hwn fel y gallwch ddeall patrymau a pherthnasoedd gofodol.
 

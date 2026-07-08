@@ -44,3 +44,9 @@ author-cy:
   - 'Cai Ladd'
   - 'Adrian Luckman'
 lang: en
+language:
+  cy:
+    toc-title-document: "Cynnwys"
+    title-block-author-single: "Awdur"
+    title-block-author-plural: "Awduron"
+
