@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cy" xml:lang="cy">
+<head>
+<link rel="alternate" hreflang="en" href="https://cailadd90.github.io/QGISHandbook//chapters/e01.html" />
+<link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e01.cy.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>1  Getting started with GIS – QGIS Handbook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
+<link href="../chapters/e02.cy.html" rel="next">
+<link href="../chapters/intro.cy.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+</head>
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/e01.cy.html"><span class="chapter-number">1</span>  <span class="chapter-title">Getting started with GIS</span></a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">QGIS Handbook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="dropdown" id="languages-links-parent">
+<button class="btn btn-primary dropdown-toggle babelquarto-languages-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Fersiwn yn y Gymraeg</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://cailadd90.github.io/QGISHandbook//chapters/e01.html" id="language-link-en">Version in English</a></li></ul>
+</div>
+<div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/intro.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cyn i chi ddechrau</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/e01.cy.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Getting started with GIS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/e02.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps in QGIS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/e03.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/e04.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/e05.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Elevation, slope, and wind speed</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/e06.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Wind farm area polygon, viewshed, and impact</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/faq.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/references.cy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Appendices</span></span>
+  </li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#starting-up" id="toc-starting-up" class="nav-link active" data-scroll-target="#starting-up"><span class="header-section-number">1.1</span> <input type="checkbox"> Starting up</a></li>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation"><span class="header-section-number">1.2</span> <input type="checkbox"> Navigation</a></li>
+  <li><a href="#sec-properties" id="toc-sec-properties" class="nav-link" data-scroll-target="#sec-properties"><span class="header-section-number">1.3</span> <input type="checkbox"> Adjusting style properties</a></li>
+  <li><a href="#measuring-geospatial-objects" id="toc-measuring-geospatial-objects" class="nav-link" data-scroll-target="#measuring-geospatial-objects"><span class="header-section-number">1.4</span> <input type="checkbox"> Measuring geospatial objects</a></li>
+  <li><a href="#exploring-the-attribute-table" id="toc-exploring-the-attribute-table" class="nav-link" data-scroll-target="#exploring-the-attribute-table"><span class="header-section-number">1.5</span> <input type="checkbox"> Exploring the Attribute Table</a></li>
+  <li><a href="#arranging-layers" id="toc-arranging-layers" class="nav-link" data-scroll-target="#arranging-layers"><span class="header-section-number">1.6</span> <input type="checkbox"> Arranging layers</a></li>
+  <li><a href="#labelling-layers" id="toc-labelling-layers" class="nav-link" data-scroll-target="#labelling-layers"><span class="header-section-number">1.7</span> <input type="checkbox"> Labelling layers</a></li>
+  <li><a href="#adding-and-filtering-data" id="toc-adding-and-filtering-data" class="nav-link" data-scroll-target="#adding-and-filtering-data"><span class="header-section-number">1.8</span> <input type="checkbox"> Adding and filtering data</a></li>
+  <li><a href="#adding-external-data" id="toc-adding-external-data" class="nav-link" data-scroll-target="#adding-external-data"><span class="header-section-number">1.9</span> <input type="checkbox"> Adding external data</a></li>
+  <li><a href="#have-you-finished" id="toc-have-you-finished" class="nav-link" data-scroll-target="#have-you-finished"><span class="header-section-number">1.10</span> <input type="checkbox"> Have you finished?</a></li>
+  </ul></nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title"><span id="sec-e01" class="quarto-section-identifier"><span class="chapter-number">1</span>  <span class="chapter-title">Getting started with GIS</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><blockquote class="blockquote">
+<p><strong>Date of practical:</strong> 2nd October 2025</p>
+</blockquote>
+<p>To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the rest of this module and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning aims
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To become familiar with the Quantum GIS (QGIS) environment for visualising and processing geospatial data. You will learn how to open various types of data layer, adjust the way they look, explore their attributes, and select features for further analysis.</p>
+</div>
+</div>
+<section id="starting-up" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="starting-up">
+<span class="header-section-number">1.1</span> <input type="checkbox"> Starting up</h2>
+<ol class="example" type="1">
+<li><p><strong>Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it’ll appear in File Explorer under your OneDrive section</strong></p></li>
+<li><p>Launch <code>QGIS</code>. This could be on a University computer, via a remote desktop, or on your own computer</p></li>
+<li><p>From the menu bar, click <code>Project</code> &gt; <code>New</code>. Find the shortcut icon to create a new project</p></li>
+<li><p>Add your first vector layer in QGIS. From the menu bar, click <code>Layer</code> &gt; <code>Add Layer</code> &gt; <code>Add Vector Layer...</code></p></li>
+<li><p>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) and navigate to the folder where the data is stored, i.e. <strong><code>GEG276</code></strong></p></li>
+<li><p>Open the <code>British_Isles_land_polygons</code> folder and click on the corresponding <code>.gpkg</code> vector layer</p></li>
+<li><p>Click <code>Open</code> &gt; <code>Add</code> &gt; <code>Close</code>. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the <code>Layers</code> panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/Layers.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</section><section id="navigation" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="navigation">
+<span class="header-section-number">1.2</span> <input type="checkbox"> Navigation</h2>
+<ol start="8" class="example" type="1">
+<li>Use the <code>Map Navigation Toolbar</code> to explore this dataset by panning and zooming</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/MapNavigationToolbar.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="9" class="example" type="1">
+<li><p>Try using the mouse scroll wheel as a shortcut</p></li>
+<li><p>Make yourself familiar with navigating around the Map Canvas by losing yourself! Pan and zoom until you can’t see the British Isles layer anymore</p></li>
+<li><p>Once lost, right-click on the layer in the <code>Layers</code> panel and click <code>Zoom to Layer(s)</code> to easily return to view that layer</p></li>
+</ol></section><section id="sec-properties" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="sec-properties">
+<span class="header-section-number">1.3</span> <input type="checkbox"> Adjusting style properties</h2>
+<ol start="12" class="example" type="1">
+<li><p>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Properties...</code> &gt; <code>Symbology</code>. A useful shortcut to <code>Properties</code> is to double-click the layer</p></li>
+<li><p>Click <code>Simple Fill</code> and experiment with changing the layer symbology’s colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/SimpleFill.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
+</figure>
+</div>
+<ol start="14" class="example" type="1">
+<li>From the menu bar, click <code>Project</code> &gt; <code>Save</code> and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!</li>
+</ol></section><section id="measuring-geospatial-objects" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="measuring-geospatial-objects">
+<span class="header-section-number">1.4</span> <input type="checkbox"> Measuring geospatial objects</h2>
+<ol start="15" class="example" type="1">
+<li>
+<p>Click the drop-down arrow next to the <code>Measure</code> icon to select the appropriate tool for measuring:</p>
+<ol type="i">
+<li>The length of Great Britain (in miles)</li>
+<li>The approximate area of the Isle of Man (in square kilometres)</li>
+</ol>
+</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/MeasureDropdown.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+<ol start="16" class="example" type="1">
+<li><p>Use left-click to add points, and right-click to stop taking the length / area measurements</p></li>
+<li><p>Share your answers on Menti! Being able to measure geographic features is a fundamental objective of GIS analysis</p></li>
+</ol></section><section id="exploring-the-attribute-table" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="exploring-the-attribute-table">
+<span class="header-section-number">1.5</span> <input type="checkbox"> Exploring the Attribute Table</h2>
+<ol start="18" class="example" type="1">
+<li>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Open Attribute Table</code>
+</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The Attribute Table
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: <code>fid</code> (field identifier) and <code>Area</code>.</p>
+</div>
+</div>
+<ol start="19" class="example" type="1">
+<li>
+<p>Arrange the Map Canvas and attribute table windows so that you can see both on screen at once. To understand how the attribute table corresponds with the vector layer:</p>
+<ol type="i">
+<li>Sort the attribute table according to each polygon’s area by clicking the <code>Area</code> column title. Repeated clicks will sort by ascending or descending the values</li>
+<li>Click a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow</li>
+<li>Click the <code>Zoom map to the selected rows</code> icon in the top-right corner (<img src="figs/ZoomToSelection.png" class="img-fluid" style="width:3.0%">) to zoom to the selected polygon in the Map Canvas</li>
+</ol>
+</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/SortAttributeTable.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="20" class="example" type="1">
+<li><p>Repeat the step above to explore the ten largest islands of the British Isles. Can you name the seventh-largest? If so, submit it on Menti!</p></li>
+<li>
+<p>You can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:</p>
+<ol type="i">
+<li>Click the <code>Select Features</code> icon (<img src="figs/Select.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Select (highlight in yellow) the Isle of Wight</li>
+<li>In the attribute table, click the <code>Move selection to top</code> icon (<img src="figs/MoveSelection.png" class="img-fluid" style="width:3.0%">) to move the selected line of the table to the top</li>
+<li>Read the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)</li>
+<li>Report your result on Menti!</li>
+</ol>
+</li>
+<li><p>Click the <code>Deselect features</code> icon (<img src="figs/Deselect.png" class="img-fluid" style="width:3.0%">) to deselect the current selection. These functions will be very useful later on</p></li>
+</ol></section><section id="arranging-layers" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="arranging-layers">
+<span class="header-section-number">1.6</span> <input type="checkbox"> Arranging layers</h2>
+<ol start="23" class="example" type="1">
+<li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer in the <code>UK_Boundaries</code> folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the <code>Layers</code> panel</p></li>
+<li><p>Adjust the style of this layer and explore its attribute table</p></li>
+<li><p>Experiment with switching layer visibility on or off using the tick boxes in the <code>Layer</code> panel (<img src="figs/CheckLayer.png" class="img-fluid" style="width:3.0%">). This becomes essential when managing multiple layers in a project</p></li>
+<li><p>Change the order of the layers by dragging each upwards or downwards in the layer panel</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Boundary disputes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice how the seaward political (Principal Area) boundary of Wales goes beyond the coastline (Land Polygons). This is because the physical land boundary is generally classified according to the mean high water mark, while administrative boundaries are normally classified according to the mean low water mark. That’s Geography!</p>
+</div>
+</div>
+<ol start="27" class="example" type="1">
+<li><p>Move <code>Wales_Principle_Areas</code> to the top of the <code>Layers</code> panel</p></li>
+<li><p>Open the layer’s <code>Symbology</code> window</p></li>
+<li><p>Use the drop-down menu to change the symbology source from <code>Single Symbol</code> to <code>Categorized</code></p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/SymbologySource.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
+</figure>
+</div>
+<ol start="30" class="example" type="1">
+<li><p>Use the <code>Value</code> drop-down menu to select the attribute <code>name</code></p></li>
+<li><p>Click <code>Classify</code> &gt; <code>OK</code>. How colourful!</p></li>
+</ol></section><section id="labelling-layers" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="labelling-layers">
+<span class="header-section-number">1.7</span> <input type="checkbox"> Labelling layers</h2>
+<ol start="32" class="example" type="1">
+<li><p>Select <code>Wales_Principal_Areas layer</code> in the <code>Layers</code> panel</p></li>
+<li><p>From the menu bar, click <code>Layer</code> &gt; <code>Labelling</code>. Find the shortcuts to this window (hint - check out <code>Properties...</code>)</p></li>
+<li><p>Use the drop-down menu to change the labelling source from <code>No Labels</code> to <code>Single Labels</code></p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/LabellingSource.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+<ol start="35" class="example" type="1">
+<li>Change the <code>Value</code> drop-down menu to label the Wales Principle Area polygons according to their English or Welsh names</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/LabelValue.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+<ol start="36" class="example" type="1">
+<li>
+<p>Experiment with modifying the labels by:</p>
+<ol type="i">
+<li>Changing the text style (<img src="figs/TextStyle.png" class="img-fluid" style="width:3.0%">) e.g. style and size</li>
+<li>Changing the label format (<img src="figs/TextFormatting.png" class="img-fluid" style="width:3.0%">) e.g. wrapping and orientation</li>
+<li>Adding a text buffer (<img src="figs/TextBuffer.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Changing the label placement (<img src="figs/LabelPlacement.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Playing around with other options. You are in complete control!</li>
+<li>Have you saved your project recently?</li>
+</ol>
+</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Smart labelling
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the <code>Labelling</code> window and you are encouraged to experiment.</p>
+</div>
+</div>
+</section><section id="adding-and-filtering-data" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="adding-and-filtering-data">
+<span class="header-section-number">1.8</span> <input type="checkbox"> Adding and filtering data</h2>
+<ol start="37" class="example" type="1">
+<li><p>Add the vector layer <code>Wales_operational_windfarms.gpkg</code> to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales</p></li>
+<li><p>Examine the attribute table</p></li>
+<li><p>Adjust the layer’s style, noting that point data is represented in a different way to polygon data</p></li>
+<li><p>Label the wind farms by their name or by their generation capacity</p></li>
+<li><p>Add the vector layer <code>gis_osm_roads_free_1.gpkg</code>, which is in the folder <code>British_Isles_geofabrik</code> &gt; <code>wales</code>. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display</p></li>
+<li>
+<p>Once again, for this layer:</p>
+<ol type="i">
+<li>Examine the attribute table</li>
+<li>Experiment with different styles for line data</li>
+<li>Try labelling the roads with the attribute <code>ref</code> (i.e. the road number). See how these labels are displayed as you zoom in and out of the map</li>
+</ol>
+</li>
+<li>
+<p>There is a lot of data here! So let’s subset it. There are many ways to make subsets of data layers to select only the data you need or that you want to display. To filter the data universally:</p>
+<ol type="i">
+<li>Right-click on the roads layer and click <code>Filter...</code>
+</li>
+<li>This tool allows you to easily see all the unique values contained in each field (or column) of the attribute table. Click <code>fclass</code> &gt; <code>All</code>. You can now see all the unique classes of road in the vector layer</li>
+<li>Under <code>Provider Specific Filter Expression</code>, type <code>"fclass" IN ('primary', 'trunk', 'motorway')</code>. Make sure of precise punctuation and spacing</li>
+<li>Click <code>OK</code>. Your map should now only display roads classed as primary and secondary. A funnel icon (<img src="figs/Filter.png" class="img-fluid" style="width:3.0%">) has also appeared next to the layer in name in the `Layers’ panel, to remind you a filter has been applied</li>
+<li>Experiment with the filter to see which combinations of data you can display</li>
+<li>When you have finished, click <code>Clear</code> &gt; <code>OK</code> to remove the filter and close the tool</li>
+</ol>
+</li>
+<li>
+<p>To filter the data by defining what is presented in the map:</p>
+<ol type="i">
+<li>Open the layer’s <code>Symbology</code> window</li>
+<li>Use the <code>Categorized</code> option to categorise the road symbology according to the <code>fclass</code> attribute</li>
+<li>Delete all the road classes except <code>primary</code>, <code>trunk</code>, and <code>motorway</code>. See if you can make this task easier for yourself by using the <code>Shift</code> and <code>Ctrl</code> keys…</li>
+<li>Double-click the line symbol per category to choose a suitable symbology for these remaining roads (e.g. thick red for primary, very thick light blue for motorway)</li>
+</ol>
+</li>
+<li><p>Add the <code>gis_osm_waterways_free_1.gpkg</code> vector layer in the <code>British_Isles_geofabrik</code> &gt; <code>wales</code> folders. What colour would be best for these?</p></li>
+</ol></section><section id="adding-external-data" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="adding-external-data">
+<span class="header-section-number">1.9</span> <input type="checkbox"> Adding external data</h2>
+<ol start="46" class="example" type="1">
+<li><p>Navigate to <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a></p></li>
+<li><p>Search for “Wales Coast Path” and click on the link</p></li>
+<li><p>Under <code>Select spatial data format</code>, choose <code>OFC Geopackage</code> and click <code>Download</code></p></li>
+<li><p>Move the downloaded file to your OneDrive</p></li>
+<li><p>Open the layer in QGIS and explore it</p></li>
+<li><p>Try searching for and downloading other GIS data files from DataMapWales, geofabrik.de, or any another source</p></li>
+<li><p>When you’ve found a juicy dataset, report it on Menti</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Dissertation ideas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Searching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon</p>
+</div>
+</div>
+</section><section id="have-you-finished" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="have-you-finished">
+<span class="header-section-number">1.10</span> <input type="checkbox"> Have you finished?</h2>
+<ol start="53" class="example" type="1">
+<li>Congratulations! You’ve learned the basics of QGIS. Make sure that you’ve understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning outcomes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this exercise you should:</p>
+<ol type="1">
+<li>Be able to create a new QGIS project, add vector layers, change their style and navigate around them.</li>
+<li>Understand how to re-order layers, switch layer visibility on and off, and remove layers.</li>
+<li>Appreciate the relationship between GIS layers and attribute tables, and be able to label features.</li>
+<li>Know how to download data for use in QGIS.</li>
+</ol>
+</div>
+</div>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cailadd90\.github\.io\/QGISHandbook\/cy");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../chapters/intro.cy.html" class="pagination-link" aria-label="Cyn i chi ddechrau">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cyn i chi ddechrau</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/e02.cy.html" class="pagination-link" aria-label="Composing maps in QGIS">
+        <span class="nav-page-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps in QGIS</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body>
+</html>

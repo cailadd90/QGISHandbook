@@ -1,0 +1,83 @@
+# Geocoding and population {#sec-e03}
+
+> **Date of practical:** 16th October 2025
+
+The location and density of the human population underpin how society is organised. GIS helps you understand population density, proximity to features, and assign data to addresses. Postcodes link human activity to physical locations.
+
+You will find data for this exercise on the **L:** drive under `College of Science/Geography/GEG276`. Read alongside **GIS_guide_to_practical_exercises**.
+
+::: {.callout-note}
+## Learning aims
+
+Examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments.
+:::
+
+## <input type="checkbox"> Postcode point locations
+
+(@) Launch QGIS, create a new project and open `Wales_Principal_Areas`.
+
+(@) Open `Wales_headcounts_at_postcodes_2021`. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.
+
+(@) Investigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.
+
+(@) Using attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.
+
+(@) Under **Layer Properties → Symbology**, change from **Single Symbol** to **Graduated**. Set **Column** to `Total` (population 2021), choose **Method** = **Size**, then **Classify** and **Apply**. Point sizes should now reflect population per postcode.
+
+## <input type="checkbox"> Finding headcount statistics
+
+(@) From **Vector → Analysis Tools → Basic Statistics For Fields**, compute statistics for the `Total` attribute in `Wales_headcounts_at_postcodes_2021`. Consider each value presented. What was the registered population of Wales in 2021?
+
+(@) Open the 2011 dataset (same folder) and calculate the percentage population change in Wales between 2011 and 2021. Close the 2011 dataset.
+
+(@) Select the Swansea polygon from `Wales_Principal_Areas` in the Project window (highlighted yellow).
+
+(@) Open **Vector → Research Tools → Select By Location**. Select features from `Wales_headcounts_at_postcodes_2021` that **are within** `Wales_Principal_Areas`, ticking **Selected features only** to select only Swansea. Run to select all postcode points within Swansea.
+
+(@) Use **Basic Statistics** again to find the 2021 `Total` population of Swansea. Tick **Selected features only**. Compare to Cardiff. Optionally find Swansea’s 10‑year population change.
+
+## <input type="checkbox"> Population density
+
+(@) Open the **Processing Toolbox** and run **Interpolation → Heatmap (Kernel Density Estimation)**. Point Layer: `Wales_headcounts_at_postcodes_2021`; Radius: `500`; Pixel size X/Y: `100`; Advanced → **Weight from field**: `Total`. This creates a raster population density layer.
+
+(@) Under **Layer Properties**, experiment with symbology for the density raster: **Singleband gray** or **Singleband pseudocolor** using different ramps. It may help to switch off the 2021 point layer while experimenting.
+
+(@) Vary the **Radius** and change the weighting field to see how the map changes. Save your project.
+
+## <input type="checkbox"> Geocoding new addresses
+
+(@) Compile a CSV of Tesco stores in the Swansea area with columns for `postcode` and `name` (use the Tesco store locator). Include at least 7 stores with unique postcodes.
+
+(@) Install the **MMQGIS** plugin (**Plugins → Manage and Install Plugins**).
+
+(@) Understand that geocoding uses a postcode database to attach coordinates to postcode‑referenced data (as used to build the headcounts dataset).
+
+(@) From **MMQGIS → Geocode → Geocode CSV with Web Service**, select your CSV as **Input**, set the postcode column as **Address Field**, choose **OpenStreetMap/Nominatim** as Web Service, and choose output files on OneDrive for both **Output Layer** and **Not Found Output List**. The output is a Shapefile. If errors occur, try the provided CSV in `wales_tesco_postcodes`. Label stores by name.
+
+(@) Reproject the new layer to OSGB. Use **Layer → Save As…**, set **CRS** to **EPSG:27700 OSGB 1936**, **Format** = **GeoPackage**, and save to OneDrive. The appearance is the same but the CRS now matches other layers.
+
+## <input type="checkbox"> Simple catchments
+
+(@) Create buffers to approximate walking distance: **Vector → Geoprocessing Tools → Buffer**. Input: your OSGB Tesco layer; Distance: `500 m`; tick **Dissolve buffer results**.
+
+(@) Using selection by location and Basic Statistics, find the total number of people registered to postcodes within 500 m of Tesco stores.
+
+(@) Experiment with other buffer distances and compare other supermarket chains.
+
+(@) (Optional) Find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE).
+
+(@) Note that these skills are vital for the wind farm projects.
+
+::: {.callout-tip}
+# Learning outcomes
+
+By the end of this exercise you should:
+
+1. Understand the nature and distribution of UK postcode points in Wales.
+2. Vary symbol size or colour for points based on attributes.
+3. Select from point data based on containment within polygons.
+4. Calculate statistics from full tables or selections.
+5. Create a heatmap and choose raster presentation styles.
+6. Create buffers and count population in simple catchments.
+7. Install and use QGIS plugins.
+:::

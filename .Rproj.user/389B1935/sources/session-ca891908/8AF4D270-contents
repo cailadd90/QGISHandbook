@@ -1,0 +1,85 @@
+# Combining vector layers {#sec-e04}
+
+> **Dates of practical:** 23rd and 30th October 2025
+
+Creating spatial and thematic subsets of vector layers is essential GIS practice and a key step in preparing for the wind farm Project. Before you begin, familiarise yourself with the wind farm Project instructions.
+
+You will find data for this exercise on the **L:** drive under `College of Science/Geography/GEG276`. Read alongside **GIS_guide_to_practical_exercises**.
+
+::: {.callout-note}
+## Learning aims
+
+Clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers.
+:::
+
+## <input type="checkbox"> Investigating your map tile
+
+(@) Launch QGIS, create a new project, and open layer `Wales_border` from `UK_Boundaries`.
+
+(@) From `Wales_map_tiles`, open the layer corresponding to your assigned OS map tile to see where your wind farm project will focus.
+
+(@) Calculate the area of your 20 × 20 km map tile (square metres) and its perimeter (metres).
+
+(@) Open the attribute table for your map tile. This layer has one polygon. Open the **Field Calculator** and explore `$area` and `$perimeter`. Values differ slightly from expectations due to Earth curvature and projection distortion.
+
+(@) Using prior methods, calculate the number of people living within your polygon at the 2021 Census. Compute population density for your tile.
+
+## <input type="checkbox"> Clipping polygon and point layers
+
+(@) Open layers in `Wales_protected_areas`. Investigate what “protected area” means and explore attribute tables. Save your project regularly.
+
+(@) Clip these layers to your map tile using **Vector → Geoprocessing Tools → Clip**. Input: the dataset to clip; Overlay: your map tile polygon. Choose **Save to File**, **GeoPackage** format, sensible names, and folder structure. Examine the new clipped layer.
+
+(@) Clip each protected area dataset relevant to your tile. Save clipped layers with appropriate filenames.
+
+(@) Merge protected area layers with **Vector → Data Management Tools → Merge Vector Layers** to create a single protected‑areas layer. Alternatives include **Union** or **MMQGIS → Merge**.
+
+(@) Dissolve internal boundaries with **Vector → Geoprocessing Tools → Dissolve**. Save to disk. Use the field calculator to find total protected area and percentage of your tile.
+
+(@) Using prior data, clip existing or planned wind farms to your map tile. Save your work.
+
+## <input type="checkbox"> Clipping line layers and adding buffers
+
+(@) From `British_Isles_geofabrik/wales`, open `waterways`, `water`, `railways`, and `roads`. Explore attributes.
+
+(@) Clip each of these layers to your tile. Name outputs sensibly.
+
+(@) Review wind farm Project constraints (e.g., distances from transport links and water bodies).
+
+(@) Create buffers with **Vector → Geoprocessing Tools → Buffer** for each transport and water layer. Dissolve boundaries (during or after) and optionally clip buffers to the tile polygon.
+
+(@) Create buffers for existing/planned wind farms if appropriate. Name layers carefully and organise files.
+
+(@) Merge buffered layers if helpful.
+
+(@) Consider merging clipped layers before buffering as an alternative workflow.
+
+## <input type="checkbox"> Selecting elements by attribute
+
+(@) Open `gis_osm_landuse_a_free_1` (landuse) and clip to your map tile.
+
+(@) Examine the attribute table. Open **Select by expression**, expand **Fields and Values**, choose `fclass`, and list unique values. Decide which classes are relevant (e.g., `residential`, `forest`).
+
+(@) Use **Select by expression** to select features, e.g. `"fclass" = 'residential'`.
+
+(@) Save selected features to a new layer (**Layer → Save As** or **Export → Save Selected Features As**). Name and store methodically.
+
+(@) Repeat for other relevant landuse classes.
+
+## <input type="checkbox"> Taking stock of planning constraints
+
+(@) Review the layers that represent areas unsuitable for wind farm development because of their position within, or proximity to, man‑made or natural features.
+
+(@) Explore unconstrained areas large enough for a wind farm. Use subsequent exercises to evaluate the best site.
+
+::: {.callout-tip}
+# Learning outcomes
+
+By the end of this exercise you should:
+
+1. Calculate area and perimeter of a polygon using the Field Calculator.
+2. Clip point, line, and polygon vector layers.
+3. Create and dissolve buffers around point, line, and polygon layers.
+4. Select and save subsets from a vector layer by attribute.
+5. Build layers that represent your tile’s wind farm planning constraints.
+:::

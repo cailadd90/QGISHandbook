@@ -1,0 +1,622 @@
+[
+  {
+    "objectID": "index.cy.html",
+    "href": "index.cy.html",
+    "title": "QGIS Handbook",
+    "section": "",
+    "text": "Introduction\nA Geographic Information System (GIS) is a powerful way to work with information that’s tied to locations on Earth. This type of information — often called geospatial data — includes anything that has a geographic reference, such as coordinates, addresses, or map features. GIS allows you to store, view, analyse, and present these data so you can understand spatial patterns and relationships.\nIn this course, you will learn how to use GIS to solve a real-world problem: deciding where to build a wind farm. Through a series of practical exercises, you will bring together many different datasets — including land use, protected areas, topography, and average wind speed — to identify the most suitable location for a new wind farm in part of the Welsh landscape.\nBy the end of the course, you will be able to:\n\nLoad, explore, and manage different types of geospatial data.\nCreate maps and visualisations using QGIS.\nAnalyse spatial data to assess suitability for development.\nApply common planning and environmental constraints to real-world scenarios.\n\nThe skills you gain here can also be applied to a wide range of other questions, from identifying flood risk zones to planning urban transport routes or mapping wildlife habitats — anywhere location matters.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html",
+    "href": "chapters/intro.cy.html",
+    "title": "Cyn i chi ddechrau",
+    "section": "",
+    "text": "Mynediad i QGIS\nY canllaw hwn yw eich cydymaith i’r ymarferion ymarferol Cyflwyniad i GIS. Bydd yn eich helpu i feithrin sgiliau ymarferol, osgoi peryglon cyffredin, a gwneud y gorau o’ch amser yn y labordy cyfrifiadurol. Gallwch weithio ar eich cyflymder eich hun, ond mae’n bwysig mynychu pob sesiwn ymarferol gyfrifiadurol a drefnwyd. Y sesiynau hyn yw eich cyfle i rannu eich cynnydd, gofyn cwestiynau, ac egluro camddealltwriaethau mewn amgylchedd dysgu cefnogol, wedi’i droi (Dikilitas a/ac Fructuoso 2023).\nDrwy ddilyn y cyngor yn y bennod hon, byddwch wedi’ch paratoi’n well i gwblhau’r ymarferion yn effeithlon ac yn hyderus.\nDarperir meddalwedd a data drwy’r rhwydwaith cyfrifiadurol Mynediad Agored, y gallwch ei gyrchu’n bersonol yn un o’r labordai o amgylch y campws, neu drwy benbwrdd rhithwir ar unrhyw gyfrifiadur sydd â Phrotocol Penbwrdd o Bell wedi’i osod (safonol ar gyfer y rhan fwyaf o gyfrifiaduron Windows, ar gael ar gyfer y rhan fwyaf o gyfrifiaduron Mac a Linux). Gweler mewn man arall am gyfarwyddiadau ar sut i gael mynediad i’r penbwrdd rhithwir, a fydd angen Dilysu Aml-Ffactor drwy Ap Ffôn Clyfar.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#cyfrifiadur-prifysgol",
+    "href": "chapters/intro.cy.html#cyfrifiadur-prifysgol",
+    "title": "Cyn i chi ddechrau",
+    "section": "Cyfrifiadur Prifysgol",
+    "text": "Cyfrifiadur Prifysgol\nDarperir cymwysiadau drwy’r ffolder ZenWorks ar eich bwrdd gwaith. Fe welwch QGIS (ac ArcGIS) yn yr ardal Gwyddoniaeth &gt; Daearyddiaeth. Rydym yn defnyddio’r fersiwn sefydlog ddiweddaraf o QGIS.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#cyfrifiadur-personol",
+    "href": "chapters/intro.cy.html#cyfrifiadur-personol",
+    "title": "Cyn i chi ddechrau",
+    "section": "Cyfrifiadur Personol",
+    "text": "Cyfrifiadur Personol\nMae QGIS yn feddalwedd ffynhonnell agored am ddim sydd ar gael ar gyfer Windows, Mac, a Linux. Mae hyn yn golygu nad ydych chi wedi’ch cyfyngu i ddefnyddio cyfrifiaduron Prifysgol - gallwch chi ei osod ar eich peiriant eich hun a gweithio lle bynnag a phryd bynnag y dymunwch.\nLawrlwythwch a gosodwch QGIS o’r wefan swyddogol yma.\nDilynwch y dolenni i’r Gosodwr Annibynnol QGIS ar gyfer eich system weithredu.\n\nOs ydych chi eisiau’r nodweddion mwyaf cyfredol, dewiswch y Rhyddhad Diweddaraf. Os yw’n well gennych i’ch gosodiad gyd-fynd â’r fersiwn sydd wedi’i gosod ar gyfrifiaduron y Brifysgol, dewiswch y Rhyddhad Hirdymor (LTR).",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#penbwrdd-o-bell",
+    "href": "chapters/intro.cy.html#penbwrdd-o-bell",
+    "title": "Cyn i chi ddechrau",
+    "section": "Penbwrdd o Bell",
+    "text": "Penbwrdd o Bell\nMae’r Bwrdd Gwaith o Bell yn caniatáu ichi fewngofnodi i un o gyfrifiaduron Mynediad Agored y Brifysgol o’ch cartref. Ar ôl cysylltu, bydd gennych yr un mynediad at feddalwedd a data ag y byddech pe baech ar y campws yn gorfforol — gan gynnwys gyriant Cyffredin y Myfyrwyr (L:/Coleg y Gwyddorau/Daearyddiaeth/GEG276).\n\nMae nifer y cysylltiadau Penbwrdd o Bell ar yr un pryd wedi’i gapio, felly efallai na fyddwch bob amser yn gallu mewngofnodi.\n\nMae defnyddio’r Penbwrdd o Bell yn gofyn am:\n\nDilysu Aml-Ffactor (MFA); ail gam diogelwch yn ogystal â’ch cyfrinair.\nYr ap Microsoft Authenticator wedi’i osod ar ffôn clyfar.\nMynediad VPN (gweler canllawiau TG y Brifysgol).\n\nI sefydlu MFA ar gyfer Penbwrdd o Bell:\n\nLawrlwythwch yr Ap Dilysu Microsoft o’ch siop apiau.\nEwch i’r hwb MyUni. a mewngofnodi.\nCliciwch Fy Apiau.\nDewiswch Diogelu fy Nghyfrif (gwaelod ar y dde).\nDewiswch Ychwanegu dull (uwchben eich rhif ffôn).\nGosodwch Ap Dilysu fel eich dull dilysu diofyn.\nRhowch y cod a anfonwyd atoch drwy neges destun.\nCliciwch Nesaf i barhau.\nSganiwch y cod QR a ddangosir ar y sgrin gyda’ch Ap Dilysu.\n\nOs nad yw’r gosodiad yn gweithio’r tro cyntaf, ailadroddwch y camau’n ofalus i gadarnhau bod pob cam wedi’i gwblhau. Os ydych chi’n dal i gael problemau, dilynwch y tiwtorialau ar-lein yn Remote PC Access Service a Account Enquiry and MFA Setup, gofynnwch am gymorth gan y tîm TG gan ddefnyddio’r Wasanaeth Ganolfan, neu cysylltwch â mi am arweiniad.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#y-data",
+    "href": "chapters/intro.cy.html#y-data",
+    "title": "Cyn i chi ddechrau",
+    "section": "Y data",
+    "text": "Y data\nMae’r holl setiau data sydd eu hangen arnoch ar gyfer y sesiynau ymarferol a’r prosiect terfynol wedi’u darparu ar y gyriant L:Common Student:\nL:/Coleg Gwyddoniaeth/Daearyddiaeth/GEG276\nOs yw’n well gennych weithio ar eich cyfrifiadur eich hun, bydd angen i chi gopïo’r setiau data hyn i’ch cyfrifiadur personol. Gallwch wneud hyn mewn un o ddwy ffordd:\n\nTrosglwyddo o’r gyriant L: Defnyddiwch ddyfais storio USB neu wasanaeth storio cwmwl fel Microsoft OneDrive neu Google Drive i gopïo’r ffeiliau perthnasol o’r gyriant L.\nLawrlwytho o Google Drive: Copïwch y ffeiliau perthnasol gan ddefnyddio’r ddolen yma.\n\nEr mwyn arbed amser a lle, dim ond lawrlwythwch neu gopïwch y data sydd ei angen arnoch ar gyfer pob ymarfer yn hytrach na throsglwyddo popeth ar unwaith.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#storio-data",
+    "href": "chapters/intro.cy.html#storio-data",
+    "title": "Cyn i chi ddechrau",
+    "section": "Storio data",
+    "text": "Storio data\nMae Prifysgol Abertawe yn darparu storfa ddiogel drwy OneDrive a gyriannau rhwydwaith. Mae’r rhain yn ymddangos yr un fath ni waeth pa gyfrifiadur Prifysgol rydych chi’n mewngofnodi iddo, a gallwch hefyd gael mynediad at OneDrive o’ch dyfeisiau eich hun. Mae gen i ddau awgrym allweddol i chi:\n\nCadwch eich gwaith i OneDrive bob amser. Mae hyn yn ei gadw’n ddiogel rhag colli’n ddamweiniol ac yn hygyrch lle bynnag yr ydych. Osgowch storio gwaith cwrs ar y gyriant C: lleol — dim ond ar y peiriant hwnnw y mae ffeiliau a gedwir yno ar gael a gallant gael eu dileu’n awtomatig dros nos.\nByddwch yn drefnus. Crëwch strwythur ffolderi clir ar gyfer eich gwaith GIS ac enwch ffeiliau’n rhesymegol. Gall prosiectau GIS gynhyrchu cannoedd o ffeiliau; bydd aros yn daclus yn arbed amser a rhwystredigaeth i chi yn ddiweddarach.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#gwyliwch-eich-lle-storio",
+    "href": "chapters/intro.cy.html#gwyliwch-eich-lle-storio",
+    "title": "Cyn i chi ddechrau",
+    "section": "Gwyliwch eich lle storio",
+    "text": "Gwyliwch eich lle storio\nOs bydd eich lle disg yn llawn, gall QGIS a meddalwedd arall chwalu. I unioni hyn:\n\nGwiriwch y lle gwag yn y panel hysbysiadau bwrdd gwaith neu drwy glicio ar y dde ar y gyriant yn Windows Explorer a dewis Priodweddau.\nDileu ffeiliau dros dro neu ddiangen i ryddhau lle.\n\nOs yw problemau’n parhau — er enghraifft, os na allwch fewngofnodi, cael mynediad at feddalwedd, neu gadw ffeiliau — gwnewch gais i’r Ganolfan Wasanaeth yma.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#dewisiadau-meddalwedd-gis",
+    "href": "chapters/intro.cy.html#dewisiadau-meddalwedd-gis",
+    "title": "Cyn i chi ddechrau",
+    "section": "Dewisiadau meddalwedd GIS",
+    "text": "Dewisiadau meddalwedd GIS\nAr hyn o bryd mae dau gymhwysiad meddalwedd yn dominyddu’r farchnad GIS, pob un â manteision ac anfanteision:\n\nESRI ArcGIS: Mae ArcGIS yn gyfres o raglenni, gan gynnwys ArcMap (GIS safonol) ac ArcScene (GIS 3D). Mae wedi bod yn arweinydd y diwydiant ers degawdau ac fe’i defnyddir yn helaeth gan weithwyr proffesiynol.\n\n\nManteision: Wedi’i sefydlu’n dda, yn llawn nodweddion, ac wedi’i gefnogi gan ddogfennaeth helaeth ar-lein. Anfanteision: Gall deimlo’n anghredadwy, yn dueddol o gael chwilod achlysurol, ac addysg allanol ddrud.\n\n\nQGIS (GIS Cwantwm): Mae QGIS yn gymhwysiad ffynhonnell agored sengl sydd wedi tyfu’n gyflym o ran poblogrwydd, yn enwedig yn y sector cyhoeddus.\n\n\nManteision: Am ddim i’w osod, ffynhonnell agored, ac yn gynyddol gystadleuol gydag ArcGIS. Anfanteision: Mae’n dal i fod yn brin o rai swyddogaethau uwch ac efallai ei fod yn llai cyffredin mewn rhai marchnadoedd swyddi.\n\nFel Adran Ddaearyddiaeth, rydym wedi dewis eich dysgu QGIS. Pam? Oherwydd ei fod yn cyfuno pŵer a hyblygrwydd GIS proffesiynol â hygyrchedd a rhyddid meddalwedd ffynhonnell agored.\nMae QGIS yn rhad ac am ddim i’w osod ar eich cyfrifiadur eich hun, sy’n golygu y gallwch ymarfer ac arbrofi unrhyw le, unrhyw bryd, heb ddibynnu ar labordai campws na thrwyddedau drud. Mae ganddo ryngwyneb glân, reddfol y mae llawer o ddechreuwyr yn ei chael hi’n haws i’w ddysgu nag ArcGIS, ond mae’n dal i gynnig offer uwch a ddefnyddir gan weithwyr proffesiynol ledled y byd.\nY tu hwnt i’r ystafell ddosbarth, mae QGIS yn ennill tir yn gyflym yn y sectorau llywodraeth, ymgynghoriaeth ac ymchwil, yn enwedig lle mae cyllidebau’n dynn a rhannu data yn bwysig (Graser et al. 2025). Mae ei natur ffynhonnell agored yn golygu bod nodweddion ac ategion newydd yn cael eu hychwanegu gan gymuned fyd-eang o arbenigwyr GIS - felly rydych chi’n dysgu gyda llwyfan sy’n esblygu ar flaen y gad.\nMae ei osod nawr yn rhoi set sgiliau sy’n barod ar gyfer gyrfa i chi, y gallu i gydweithio’n rhyngwladol heb rwystrau trwydded, a’r hyder y gallwch chi bob amser gael mynediad at becyn cymorth GIS pwerus ymhell ar ôl graddio. Gallwch ei lawrlwytho yma.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#datblygu-eich-sgiliau-cyfrifiadurol",
+    "href": "chapters/intro.cy.html#datblygu-eich-sgiliau-cyfrifiadurol",
+    "title": "Cyn i chi ddechrau",
+    "section": "Datblygu eich sgiliau cyfrifiadurol",
+    "text": "Datblygu eich sgiliau cyfrifiadurol\nY ffordd fwyaf effeithiol o ddysgu GIS yw ei ddefnyddio’n weithredol. Mae’r ymarferion ymarferol wedi’u cynllunio i’ch tywys trwy’r swyddogaethau mwyaf cyffredin yn QGIS, gan eich helpu i feithrin sgiliau a chreu canlyniadau y gallwch eu defnyddio yn eich gwaith cwrs, prosiectau neu draethawd hir.\nDyma fy awgrymiadau ar gyfer dysgu QGIS:\n\nDisgwyliwch wneud camgymeriadau a bod angen ailadrodd camau. Bydd yr ailadrodd hwn yn eich helpu i gofio prosesau. Gall QGIS hongian neu chwalu o bryd i’w gilydd. Dysgwch sut i adfer yn gyflym trwy arbed yn aml a chadw golwg ar eich cynnydd.\nArbedwch eich gwaith yn rheolaidd a gwyddoch yn union ble mae wedi’i storio. Cadwch strwythur ffolderi taclus a rhesymegol, a gwnewch gopïau o waith sydd wedi cymryd amser hir i’w gyflawni. Mae GIS yn creu llawer o ffeiliau, a bydd trefniadaeth dda yn arbed amser ac yn atal colli data.\nArchwiliwch y feddalwedd yn hytrach na dilyn cyfarwyddiadau yn unig. Byddwch yn feiddgar a chliciwch drwy ddewislenni, rhowch gynnig ar offer, ac arbrofwch. Byddwch yn dysgu’n gyflymach drwy ddarganfod nodweddion eich hun. Bydd yr ymarferion ymarferol yn disgwyl i chi ddarganfod rhai pethau drosoch eich hun.\nGofynnwch am gymorth pan fo angen. Mae cymorth ar gael trwy fideos demos Canvas, cyd-ddisgyblion, arddangoswyr, ac adnoddau ar-lein (gweler Cael cymorth). Rhaid cwblhau gwaith cwrs yn unigol, ond anogir cydweithio ar ddatrys problemau.\n\nByddwch chi’n meistroli QGIS mewn dim o dro.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#hanfodion-qgis",
+    "href": "chapters/intro.cy.html#hanfodion-qgis",
+    "title": "Cyn i chi ddechrau",
+    "section": "Hanfodion QGIS",
+    "text": "Hanfodion QGIS\n\nFfenestri\nMae gan QGIS ddau brif fan gwaith: y Canfas Map a’r Cynllun Argraffu. Gallwch hefyd agor Tablau Priodoleddau drwy’r GUI i weld a golygu data sy’n gysylltiedig â nodweddion map. Mae angen i chi ddod yn gyfarwydd ag agor a rhyngweithio â’r prif elfennau rhaglen hyn.\n\n\n\nY Cynfas Map (top), Cynllun Argraffu (gwaelod), a Thabl Priodoleddau (dde) ar gyfer prosiect diweddar i gyd ar un sgrin.\n\n\n\n\nHaenau\nMae haen yn set ddata o un math — pwyntiau, llinellau, polygonau, neu raster — sy’n aml yn cael ei storio gyda nifer o ffeiliau cysylltiedig. Mae haenau’n cael eu cyfuno i greu mapiau neu’n cael eu prosesu i gynhyrchu haenau newydd. Mae trefn haenau yn bwysig oherwydd gall haenau uwch guddio rhai is.\n\n\nProsiectau\nMae ffeil prosiect QGIS (.qgz) yn storio cyfeiriadau at eich data a’ch gosodiadau arddangos, nid y data ei hun. Rwy’n argymell dechrau prosiect newydd pan fydd ffocws daearyddol eich gwaith yn newid neu pan fyddwch chi’n symud ymlaen i aseiniad newydd. Felly mae prosiectau’n cynnwys dolenni rhithwir i’r holl ffeiliau haen ddata rydych chi wedi’u llwytho, yn ogystal â chyfarwyddiadau i’r feddalwedd ynghylch sut y dylent ymddangos. Mae hyn yn arwain at dri ystyriaeth bwysig:\n\nByddai copïo neu drosglwyddo prosiect QGIS o un cyfrifiadur i’r llall yn gofyn am gopïo ffeil y prosiect a yr holl haenau data cysylltiedig mewn ffordd sy’n cynnal y llwybrau ffeiliau cymharol. Mae hyn weithiau’n anodd ei gyflawni. Os byddwch chi’n newid amgylchedd eich cyfrifiadur (e.e. o system y Brifysgol i’ch gliniadur), mae’n aml yn haws copïo’r holl ffeiliau haen a dechrau prosiect newydd o’r dechrau — agor a threfnu pob un o’r ffeiliau haen eto.\nBydd symud neu ailenwi haenau data (neu’r ffolderi sy’n eu cynnwys) yn golygu na all prosiect QGIS ddod o hyd iddynt mwyach ac felly bydd yn methu â’u hagor. Mae’n bosibl adfer o’r sefyllfa hon - ond gwell ei hosgoi. Bydd pob ffeil ddata ar y gyriant L: yn aros lle maen nhw. Gwnewch yn siŵr bod pob ffeil ddata rydych chi’n ei rhoi ar eich OneDrive (neu ffon gof neu ddisg gliniadur) wedi’i henwi’n synhwyrol ac wedi’i gosod mewn strwythur ffolderi priodol fel nad ydych chi’n eu symud, eu hailenwi na’u dileu ar ddamwain. Mae’n debyg y byddwch chi’n cynhyrchu cannoedd lawer o ffeiliau data trwy eu lawrlwytho (e.e. o’r rhyngrwyd), eu copïo (e.e. o’r gyriant L:), neu greu haenau wrth brosesu GIS.\nPan fyddwch chi’n creu haen GIS newydd, er enghraifft drwy gyflawni swyddogaeth geobrosesu ar haen sy’n bodoli eisoes, fel arfer byddwch chi’n cael y dewis o greu haen dros dro neu gadw’r haen newydd ar ddisg. Mae creu haenau dros dro yn ffordd gyflym o archwilio a chadarnhau mai’r allbwn yw’r hyn yr oeddech chi ei eisiau. Fodd bynnag, ni fydd yr haenau hyn ar gael mwyach pan fyddwch chi’n cau’r prosiect oni bai eich bod chi’n eu gwneud yn barhaol. Rwy’n argymell defnyddio haenau dros dro ar gyfer arbrofi, a dewis enw parhaol, lleoliad, a math data ar gyfer unrhyw haen y bydd ei hangen arnoch chi yn ddiweddarach.\n\nYn gyffredinol, rhowch flaenoriaeth i gadw eich ffeiliau haen ddata — maent fel arfer yn fwy gwerthfawr na ffeil y prosiect ei hun.\n\n\nAtegion\nMae’r gosodiad sylfaenol o QGIS yn ddigonol at y rhan fwyaf o ddibenion, fodd bynnag mae’r ymarferion ymarferol GIS yma’n mynd ychydig y tu hwnt i’r swyddogaeth sylfaenol hon. Mae llawer o ychwanegiadau QGIS wedi’u datblygu trwy ddatblygu meddalwedd Ffynhonnell Agored ac wedi’u gwneud ar gael am ddim trwy’r rhyngwyneb Ategion:\nPrif Ddewislen &gt; Ategynnau &gt; Rheoli a gosod Ategynnau\nMae ategion wedi’u gosod yn rhan y defnyddiwr o storfa’r cyfrifiadur felly nid oes angen unrhyw freintiau gweinyddwr arnynt. Fe’ch anogir i archwilio’r holl ategion sydd ar gael. Bydd yr ymarferion canlynol yn egluro pryd mae angen gosod rhai ategion (ar system y Brifysgol a/neu ar eich cyfrifiadur eich hun).",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#ystyriaethau-allweddol",
+    "href": "chapters/intro.cy.html#ystyriaethau-allweddol",
+    "title": "Cyn i chi ddechrau",
+    "section": "Ystyriaethau allweddol",
+    "text": "Ystyriaethau allweddol\n\nArgraffu mapiau\nYn aml, mae lliwiau printiedig yn edrych yn wahanol i’r lliwiau a welwch ar y sgrin. Os oes angen i chi argraffu map — er enghraifft, i’w gynnwys mewn traethawd neu draethawd hir — gwiriwch bob amser fod y lliwiau a ddewisoch yn gweithio’n dda ar bapur. Y ffordd orau yw argraffu copi prawf, ei archwilio’n ofalus i wneud yn siŵr bod holl elfennau’r map yn glir ac yn wahaniaethadwy, ac addasu’r lliwiau os oes angen. Efallai y bydd angen i chi ailadrodd y broses hon ychydig o weithiau i gael y canlyniad rydych chi ei eisiau. Yn ffodus, cyflwynir yr holl waith cwrs GEG276 (a’r rhan fwyaf o aseiniadau mewn modiwlau eraill) ar-lein, felly anaml y mae argraffu yn hanfodol.\nFel arfer, ni all argraffwyr argraffu’n syth at ymylon y papur chwaith. Os ydych chi’n bwriadu argraffu’n uniongyrchol o QGIS, gadewch o leiaf 0.5 cm o ymyl o amgylch eich map i osgoi torri manylion pwysig i ffwrdd.\n\n\nDefnyddio tryloywder\nGall tryloywder helpu i gyfuno sawl haen heb golli manylion pwysig, ond gall hefyd wneud lliwiau map yn anghyson â’r allwedd. Osgowch dryloywder rhannol mewn mapiau terfynol ar gyfer gwaith cwrs oni bai ei fod yn ychwanegu ystyr hanfodol. Dylai lliwiau yn yr allwedd gyd-fynd yn union â’r rhai yn y map.\n\n\nMathau o ffeiliau GIS\nMae sawl math o ffeiliau GIS. Ar gyfer data raster, rwy’n argymell eu cadw fel GeoTIFF (.tif neu .tiff). Ar gyfer data fector (pwyntiau, llinellau neu bolygonau), rwy’n argymell eu cadw fel GeoPackage (.gpkg). Mae’n debyg y byddwch yn dod ar draws Shapefiles fel fformat ar gyfer storio data fector. Mae’r fformat hwn wedi bod o gwmpas ers y 90au ac mae’n parhau i gael ei ddefnyddio’n eang heddiw. Rwy’n argymell defnyddio GeoPackages yn lle hynny am ddau brif reswm:\n\nMae ffeil siâp yn storio data fel nifer o ffeiliau (rhwng 3 a 16!) sydd â’r un enw ond estyniadau gwahanol (.shp, .shx, .dbf…). Os ydych chi’n ailenwi neu’n rhannu ffeil siâp, mae angen i chi wneud yn siŵr eich bod chi’n ailenwi pob ffeil ac yn rhannu pob ffeil er mwyn i’r fersiwn newydd weithio’n gywir.\nDim ond pwynt, llinell, neu bolygon y gall ffeil siâp fod. Gall GeoPackage storio sawl math o ddata.\n\n\n\nffynonellau data GIS\nDefnyddiwch ffynonellau dibynadwy ar gyfer data GIS. Yn y DU, mae Arolwg Ordnans yn darparu setiau data awdurdodol, ac mae rhai ohonynt am ddim trwy OS OpenData{targ et=“_blank”}. Fel myfyriwr Prifysgol Abertawe, gallwch hefyd gael mynediad at ddata OS premiwm trwy EDINA Digimap.\nMae prosiectau data agored fel OpenStreetMap yn cynnig dewisiadau amgen am ddim, sy’n cael eu diweddaru’n barhaus, a ddefnyddir yn helaeth mewn ymchwil a phrosiectau cymunedol. Mae’r data hwn yn gwella’n barhaus o ran ansawdd a chwmpas a gall unrhyw un gymryd rhan yn y prosiect. Rwyf wedi dewis defnyddio ffynonellau Data Agored yn unig ar gyfer yr ymarferion ymarferol a’r prosiect fel nad oes unrhyw gyfyngiadau ar rannu data.\n\n\nAddasu’r Cynfas Map (uwch)\nOs ydych chi fel fi ac yn hoffi rhyngwyneb minimalistaidd a chlir i weithio ag ef, gallwch addasu Cynfas Map QGIS i raddau helaeth. Os ydych chi am wneud hyn, rwy’n argymell eich bod chi’n archwilio Dogfennaeth QGIS yn eich amser eich hun yma. Ond byddwch yn ofalus — efallai y byddwch chi’n cael gwared ar offer neu ddewislenni penodol sy’n hanfodol ar gyfer cwblhau’r cwrs hwn. Felly rwy’n argymell eich bod chi’n arbrofi gydag addasu ar ôl i chi gwblhau’r cwrs yn unig.\n.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/intro.cy.html#sec-gethelp",
+    "href": "chapters/intro.cy.html#sec-gethelp",
+    "title": "Cyn i chi ddechrau",
+    "section": "Cael cymorth",
+    "text": "Cael cymorth\nAm wybodaeth gyffredinol, cyfeiriwch at wefan Canvas GEG276. Bydd yr holl ddogfennau sy’n gysylltiedig â’r cwrs yn cael eu postio yno, ac efallai y byddaf yn defnyddio’r Bwrdd Trafod Canvas i rannu gwybodaeth ychwanegol. Os na chewch yr hyn rydych chi’n chwilio amdano, mae croeso i chi anfon e-bost ataf. Os byddaf yn derbyn ymholiad - y gallai’r ateb iddo fod yn ddefnyddiol i bob myfyriwr, byddaf yn postio ateb trwy e-bost neu’r Bwrdd Trafod.\nYn aml, gellir datrys problemau penodol i feddalwedd drwy chwilio ar Google a gofyn i AI. Gall teipio QGIS a disgrifiad o’ch problem arwain at ateb yn aml. Mae safleoedd a arweinir gan y gymuned fel StackExchange yn arbennig o ddefnyddiol ar gyfer cael cymorth. Mae llawlyfr QGIS, Fforwm QGIS, a phrif wefan QGIS i gyd yn ffynonellau gwerthfawr hefyd.\n\n\n\n\nDikilitas, K., a/ac I. N. Fructuoso. 2023. ‘Conceptual framework for flexible learning design: the context of flipped classroom’. Learning Design for Flexible Education, rhif. 2022-1-ES01-KA220-HED-000085250: 1–46. https://kudos.dfo.no/documents/77155/files/37244.pdf.\n\n\nGraser, Anita, Tim Sutton, a/ac Marco Bernasocchi. 2025. ‘The QGIS project: Spatial without compromise’. Patterns 6 (7): 101265. https://doi.org/https://doi.org/10.1016/j.patter.2025.101265.",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html",
+    "href": "chapters/e01.cy.html",
+    "title": "1  Getting started with GIS",
+    "section": "",
+    "text": "1.1  Starting up\nTo master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the rest of this module and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#starting-up",
+    "href": "chapters/e01.cy.html#starting-up",
+    "title": "1  Getting started with GIS",
+    "section": "",
+    "text": "Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it’ll appear in File Explorer under your OneDrive section\nLaunch QGIS. This could be on a University computer, via a remote desktop, or on your own computer\nFrom the menu bar, click Project &gt; New. Find the shortcut icon to create a new project\nAdd your first vector layer in QGIS. From the menu bar, click Layer &gt; Add Layer &gt; Add Vector Layer...\nClick the Browse icon () and navigate to the folder where the data is stored, i.e. GEG276\nOpen the British_Isles_land_polygons folder and click on the corresponding .gpkg vector layer\nClick Open &gt; Add &gt; Close. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the Layers panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#navigation",
+    "href": "chapters/e01.cy.html#navigation",
+    "title": "1  Getting started with GIS",
+    "section": "1.2  Navigation",
+    "text": "1.2  Navigation\n\nUse the Map Navigation Toolbar to explore this dataset by panning and zooming\n\n\n\n\n\n\n\nTry using the mouse scroll wheel as a shortcut\nMake yourself familiar with navigating around the Map Canvas by losing yourself! Pan and zoom until you can’t see the British Isles layer anymore\nOnce lost, right-click on the layer in the Layers panel and click Zoom to Layer(s) to easily return to view that layer",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#sec-properties",
+    "href": "chapters/e01.cy.html#sec-properties",
+    "title": "1  Getting started with GIS",
+    "section": "1.3  Adjusting style properties",
+    "text": "1.3  Adjusting style properties\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Properties... &gt; Symbology. A useful shortcut to Properties is to double-click the layer\nClick Simple Fill and experiment with changing the layer symbology’s colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer\n\n\n\n\n\n\n\nFrom the menu bar, click Project &gt; Save and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#measuring-geospatial-objects",
+    "href": "chapters/e01.cy.html#measuring-geospatial-objects",
+    "title": "1  Getting started with GIS",
+    "section": "1.4  Measuring geospatial objects",
+    "text": "1.4  Measuring geospatial objects\n\nClick the drop-down arrow next to the Measure icon to select the appropriate tool for measuring:\n\nThe length of Great Britain (in miles)\nThe approximate area of the Isle of Man (in square kilometres)\n\n\n\n\n\n\n\n\nUse left-click to add points, and right-click to stop taking the length / area measurements\nShare your answers on Menti! Being able to measure geographic features is a fundamental objective of GIS analysis",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#exploring-the-attribute-table",
+    "href": "chapters/e01.cy.html#exploring-the-attribute-table",
+    "title": "1  Getting started with GIS",
+    "section": "1.5  Exploring the Attribute Table",
+    "text": "1.5  Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table\n\n\n\n\n\n\n\nTipThe Attribute Table\n\n\n\nAn attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area.\n\n\n\nArrange the Map Canvas and attribute table windows so that you can see both on screen at once. To understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles. Can you name the seventh-largest? If so, submit it on Menti!\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\nReport your result on Menti!\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#arranging-layers",
+    "href": "chapters/e01.cy.html#arranging-layers",
+    "title": "1  Getting started with GIS",
+    "section": "1.6  Arranging layers",
+    "text": "1.6  Arranging layers\n\nAdd the Wales_Principal_Areas.gpkg layer in the UK_Boundaries folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the Layers panel\nAdjust the style of this layer and explore its attribute table\nExperiment with switching layer visibility on or off using the tick boxes in the Layer panel (). This becomes essential when managing multiple layers in a project\nChange the order of the layers by dragging each upwards or downwards in the layer panel\n\n\n\n\n\n\n\nTipBoundary disputes\n\n\n\nNotice how the seaward political (Principal Area) boundary of Wales goes beyond the coastline (Land Polygons). This is because the physical land boundary is generally classified according to the mean high water mark, while administrative boundaries are normally classified according to the mean low water mark. That’s Geography!\n\n\n\nMove Wales_Principle_Areas to the top of the Layers panel\nOpen the layer’s Symbology window\nUse the drop-down menu to change the symbology source from Single Symbol to Categorized\n\n\n\n\n\n\n\nUse the Value drop-down menu to select the attribute name\nClick Classify &gt; OK. How colourful!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#labelling-layers",
+    "href": "chapters/e01.cy.html#labelling-layers",
+    "title": "1  Getting started with GIS",
+    "section": "1.7  Labelling layers",
+    "text": "1.7  Labelling layers\n\nSelect Wales_Principal_Areas layer in the Layers panel\nFrom the menu bar, click Layer &gt; Labelling. Find the shortcuts to this window (hint - check out Properties...)\nUse the drop-down menu to change the labelling source from No Labels to Single Labels\n\n\n\n\n\n\n\nChange the Value drop-down menu to label the Wales Principle Area polygons according to their English or Welsh names\n\n\n\n\n\n\n\nExperiment with modifying the labels by:\n\nChanging the text style () e.g. style and size\nChanging the label format () e.g. wrapping and orientation\nAdding a text buffer ()\nChanging the label placement ()\nPlaying around with other options. You are in complete control!\nHave you saved your project recently?\n\n\n\n\n\n\n\n\nTipSmart labelling\n\n\n\nNow that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the Labelling window and you are encouraged to experiment.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#adding-and-filtering-data",
+    "href": "chapters/e01.cy.html#adding-and-filtering-data",
+    "title": "1  Getting started with GIS",
+    "section": "1.8  Adding and filtering data",
+    "text": "1.8  Adding and filtering data\n\nAdd the vector layer Wales_operational_windfarms.gpkg to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales\nExamine the attribute table\nAdjust the layer’s style, noting that point data is represented in a different way to polygon data\nLabel the wind farms by their name or by their generation capacity\nAdd the vector layer gis_osm_roads_free_1.gpkg, which is in the folder British_Isles_geofabrik &gt; wales. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display\nOnce again, for this layer:\n\nExamine the attribute table\nExperiment with different styles for line data\nTry labelling the roads with the attribute ref (i.e. the road number). See how these labels are displayed as you zoom in and out of the map\n\nThere is a lot of data here! So let’s subset it. There are many ways to make subsets of data layers to select only the data you need or that you want to display. To filter the data universally:\n\nRight-click on the roads layer and click Filter...\nThis tool allows you to easily see all the unique values contained in each field (or column) of the attribute table. Click fclass &gt; All. You can now see all the unique classes of road in the vector layer\nUnder Provider Specific Filter Expression, type \"fclass\" IN ('primary', 'trunk', 'motorway'). Make sure of precise punctuation and spacing\nClick OK. Your map should now only display roads classed as primary and secondary. A funnel icon () has also appeared next to the layer in name in the `Layers’ panel, to remind you a filter has been applied\nExperiment with the filter to see which combinations of data you can display\nWhen you have finished, click Clear &gt; OK to remove the filter and close the tool\n\nTo filter the data by defining what is presented in the map:\n\nOpen the layer’s Symbology window\nUse the Categorized option to categorise the road symbology according to the fclass attribute\nDelete all the road classes except primary, trunk, and motorway. See if you can make this task easier for yourself by using the Shift and Ctrl keys…\nDouble-click the line symbol per category to choose a suitable symbology for these remaining roads (e.g. thick red for primary, very thick light blue for motorway)\n\nAdd the gis_osm_waterways_free_1.gpkg vector layer in the British_Isles_geofabrik &gt; wales folders. What colour would be best for these?",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#adding-external-data",
+    "href": "chapters/e01.cy.html#adding-external-data",
+    "title": "1  Getting started with GIS",
+    "section": "1.9  Adding external data",
+    "text": "1.9  Adding external data\n\nNavigate to datamap.gov.wales\nSearch for “Wales Coast Path” and click on the link\nUnder Select spatial data format, choose OFC Geopackage and click Download\nMove the downloaded file to your OneDrive\nOpen the layer in QGIS and explore it\nTry searching for and downloading other GIS data files from DataMapWales, geofabrik.de, or any another source\nWhen you’ve found a juicy dataset, report it on Menti\n\n\n\n\n\n\n\nTipDissertation ideas\n\n\n\nSearching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e01.cy.html#have-you-finished",
+    "href": "chapters/e01.cy.html#have-you-finished",
+    "title": "1  Getting started with GIS",
+    "section": "1.10  Have you finished?",
+    "text": "1.10  Have you finished?\n\nCongratulations! You’ve learned the basics of QGIS. Make sure that you’ve understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.\n\n\n\n\n\n\n\nNoteLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nBe able to create a new QGIS project, add vector layers, change their style and navigate around them.\nUnderstand how to re-order layers, switch layer visibility on and off, and remove layers.\nAppreciate the relationship between GIS layers and attribute tables, and be able to label features.\nKnow how to download data for use in QGIS.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html",
+    "href": "chapters/e02.cy.html",
+    "title": "2  Composing maps in QGIS",
+    "section": "",
+    "text": "2.1  Creating a print layout\nCommunication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and the final product represents your “Map 1”. assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html#creating-a-print-layout",
+    "href": "chapters/e02.cy.html#creating-a-print-layout",
+    "title": "2  Composing maps in QGIS",
+    "section": "",
+    "text": "Launch QGIS and create a new project\nImport the British_Isles_land_polygons.gpkg, Wales_border.gpkg, and Wales_Principal_Areas.gpkg layers (the latter two are in the UK_Boundaries folder)\nLabel the Principal Areas of Wales in Welsh or English\nClick Project &gt; New Print Layout... (and find the shortcuts to this window)\nGive the print layout an appropriate title\n\n\n\n\n\n\n\nTipMultiple layouts\n\n\n\nYou can create more than one print layout. Use Project &gt; Layout Manager... to easily access and organise layouts associated with your particular QGIS project.\n\n\n\nArrange the Map Canvas and Print Layout windows so you can see both at once. Subsequent instructions refer to the Print Layout window unless otherwise stated\nChange the page orientation to A4 portrait:\n\nRight‑click on the blank print layout\nClick Page Properties...\n\n\n\n\n\n\n\nChange Size to A4\nChange Orientation to Portrait",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html#sec-mapitem",
+    "href": "chapters/e02.cy.html#sec-mapitem",
+    "title": "2  Composing maps in QGIS",
+    "section": "2.2  Adding and adjusting a map item",
+    "text": "2.2  Adding and adjusting a map item\n\nClick Add Item &gt; Add Map (look for the shortcut)\nDraw a map onto the print layout. Map 1 should now appear under the Item tab\n\n\n\n\n\n\n\nAdjust the map using the squares around the edges\nSelect Map 1\nSet Scale to 1000000 (i.e. 1:1,000,000)\nUse the Move item content () and Select/Move item () tools, and adjust the Scale value, to compose the map so that all of Wales is visible\nExperiment with making fine adjustments to the scale by holding down the Ctrl key and scrolling the mouse wheel\nOnce you’re satisfied with the scaling, framing, and position, freeze the view in place by checking the box under the lock icon () for Map 1 in the Items panel\nIn the Map Canvas window, adjust layer styles:\n\nChoose colours, border widths, and fonts that emphasise Wales and the difference between the outline of Wales (physical coast) and Principal Areas boundaries (non‑physical political construct)\n\nTo force the Print Layout to reflect changes, select either:\n\nThe Refresh icon () in the Print Layout window\nThe Update Map Preview icon () under Item Properties in the Map Canvas window\n\nEnsure Map 1 is still selected\nClick on the Item Properties tab and add a Frame\nModify the frame’s background colour appropriate for representing the ocean\n\n\n\n\n\n\n\nTipModifying layers\n\n\n\nYou can modify the Layout and Item Properties of any item selected in the Item window. Note how the options under Layout and Item Properties tab update depending on what item you’ve selected. Remember that: (i) Order matters - the order in which map items are listed is how they are also stacked on top of one another in the print layout, and (ii) some layer properties (e.g. layer order, style, labeling) are controlled in the Map Canvas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html#adding-a-scale-bar-north-arrow-and-grid",
+    "href": "chapters/e02.cy.html#adding-a-scale-bar-north-arrow-and-grid",
+    "title": "2  Composing maps in QGIS",
+    "section": "2.3  Adding a scale bar, north arrow, and grid",
+    "text": "2.3  Adding a scale bar, north arrow, and grid\n\nAdd a scale bar:\n\nClick Add Item &gt; Add Scale Bar\nClick on the map to place it (you can move it later)\nSelect the scale bar under Items\nClick the Item Properties tab\nAdjust the scale bar’s properties, notably Style, Scalebar units, Segments, Frame, and Background\n\nAdd a north arrow:\n\nClick Add Item &gt; Add North Arrow\nClick on the map to place it (you can move it later)\nSelect the north arrow under Items\nClick the Item Properties tab\nUnder SVG Images, search arrow and choose a suitable north arrow\nAdjust the north arrow’s properties, notably Fill color and Stroke color\n\nAdd a grid (aka graticule):\n\nSelect Map 1 under Items\nClick the Item Properties tab\nExpand Grids\nClick Add a new grid ()\nClick Grid 1 &gt; Modify Grid...\nSet CRS to EPSG:4326 - WGS 84\nSet X and Y intervals to 1 degrees\nCheck Draw Coordinates\nAdjust the grid’s properties, notably Grid type, Frame, and Draw Coordinates. Can you adjust the labels for readability, soften the gridlines, and reduce unnecessary trailing zeros?\n\n\n\n\n\n\n\n\nTipReadjustments needed\n\n\n\nYou may find that some of the map items - notably the coordinates - are now beyond the edge of the page. These will be lost when the map is exported. In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see Section 2.2). Check how using guides can aid you in aligning map items perfectly on the page.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html#adding-labels-and-a-legend",
+    "href": "chapters/e02.cy.html#adding-labels-and-a-legend",
+    "title": "2  Composing maps in QGIS",
+    "section": "2.4  Adding labels, and a legend",
+    "text": "2.4  Adding labels, and a legend\n\nAdd a map title label:\n\nClick Add Item &gt; Add Label\nClick on the map to place it (you can move it later)\nSelect the label under Items\nClick the Item Properties tab\nAdjust the label’s properties, notably Main Properties, Font, Rotation, Frame, and Background\n\nAdd a short caption label. See FAQ for how to have both bold and normal text in the caption at once\nAdd a legend:\n\nClick Add Item &gt; Add Legend\nClick on the map to place it (you can move it later)\nSelect the legend under Items\nClick the Item Properties tab\nUncheck Auto update to enable modifications to the legend\nExperiment with the legend toolbar icons () to improve the legend\nAdjust the legend’s properties, notably Arrangement, Fonts and Text Formatting, Columns, Symbol, Spacing, Frame, and Background",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html#adding-raster-data",
+    "href": "chapters/e02.cy.html#adding-raster-data",
+    "title": "2  Composing maps in QGIS",
+    "section": "2.5  Adding raster data",
+    "text": "2.5  Adding raster data\n\nAdd your first raster layer in QGIS. From the menu bar, click Layer &gt; Add Layer &gt; Add Raster Layer...\nClick the Browse icon () and navigate to the folder where the data is stored, i.e. GEG276\nOpen the Wales_mean_windspeed folder and click on any of the .tif raster layers\nClick Open &gt; Add &gt; Close\nOpen the layer’s Properties...\nUnder Render type, select Singleband pseudocolor\nUnder Color ramp, select an appropriate colour ramp for the data (or pick one you just really like!)\nClick OK\nPlay around with Wales Principal Areas and the windspeed data - by adjusting the order of layers in the Layers panel, and by modifying the Properties... of each layer - so that both are visible at the same time. Hint: modifying Fill or Transparency properties may do nicely…\n\n\n\n\n\n\n\nImportantReadjustments needed\n\n\n\nAvoid semi‑transparent symbology that breaks the link between map colours and legend colours.\n\n\n\nIn the Print Layout window, select Map 1 and click Update Map Preview under the Item Properties tab\nIf the colour scale for the raster layer does not appear in the legend, add it\nExperiment with improving the aesthetics of the updated legend\nSelect Map 1 from the Items panel\nUnder Item Properties, check the Lock layers and Lock styles for layers to prevent further changes to the map. Uncheck if you need to make edits",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html#adding-an-inset-map",
+    "href": "chapters/e02.cy.html#adding-an-inset-map",
+    "title": "2  Composing maps in QGIS",
+    "section": "2.6  Adding an inset map",
+    "text": "2.6  Adding an inset map\n\nAdd a second map (see Section 2.2) to provide an inset showing the British Isles (e.g. at a scale of 1:20,000,000).\nModify:\n\nWhich layers should be displayed (by turning visibility on and off, or changing layer order)\nTheir symbology (see Section 1.3);\n\n\n\n\n\n\n\n\nTipModifying layers\n\n\n\nPlace emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note that, because your map of Wales is locked, it’s not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.\n\n\n\nSelect Map 1 from the Items panel\nUnder Item Properties, expand the Overviews tab\nClick Add a new overview ()\nClick Overview 1\nSet the Map frame to your Wales map\nAdjust the Frame style to draw a hollow rectangle with a thick line, to easily show the main map’s extent\nExperiment further, especially with Fill color, Stroke color, and Join style\n\n\n\n\n\n\n\nTipKeeping things tidy\n\n\n\nProjects can get rapidly out of control when multiple layers are used to build a map. It’s important to remove redundant layers and label items appropriately. E.g. try renaming Map 1 to Main, and Map 2 to Inset. This will help when you need to revisit and adjust your maps.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e02.cy.html#exporting-your-map",
+    "href": "chapters/e02.cy.html#exporting-your-map",
+    "title": "2  Composing maps in QGIS",
+    "section": "2.7  Exporting your map",
+    "text": "2.7  Exporting your map\n\nEnsure each map item has Lock layers checked. This helps ensure the chosen map scale (1:1,000,000) reflects real‑world distances\nClick Layout &gt; Export as PDF... &gt; Save, and save in a suitable location\nSet PDF Export Options as follows for best results:\n\n☑ Always export a vectors\nAppend georeferece information\nExport RDF metadata (title, author, etc.)\nText export: Always Export Text as Paths\nImage compression: Lossless\nCreate Geospatial PDF\n☑ Disable tiled raster layer exports\n☑ Simplify geometries to reduce output file size\n\nClick Save. Congratulations - you’ve created your first QGIS map assignment. Now make any revisions to be able to submit the best Map 1 that you can!\n\n\n\n\n\n\n\nNoteLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nBe familiar with the QGIS Map Layout and its relationship to the QGIS Project window.\nKnow how to add and arrange essential map features and adjust their properties to make a map attractive.\nKnow how to configure multiple map items, legends, grids, scales and labels in a map layout.\nBe able to export a map layout for inclusion in a document or presentation.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html",
+    "href": "chapters/e03.cy.html",
+    "title": "3  Geocoding and population",
+    "section": "",
+    "text": "3.1  Postcode point locations\nThe location and density of the human population underpin how society is organised. GIS helps you understand population density, proximity to features, and assign data to addresses. Postcodes link human activity to physical locations.\nYou will find data for this exercise on the L: drive under College of Science/Geography/GEG276. Read alongside GIS_guide_to_practical_exercises.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocoding and population</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#postcode-point-locations",
+    "href": "chapters/e03.cy.html#postcode-point-locations",
+    "title": "3  Geocoding and population",
+    "section": "",
+    "text": "Launch QGIS, create a new project and open Wales_Principal_Areas.\nOpen Wales_headcounts_at_postcodes_2021. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.\nInvestigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.\nUsing attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.\nUnder Layer Properties → Symbology, change from Single Symbol to Graduated. Set Column to Total (population 2021), choose Method = Size, then Classify and Apply. Point sizes should now reflect population per postcode.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocoding and population</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#finding-headcount-statistics",
+    "href": "chapters/e03.cy.html#finding-headcount-statistics",
+    "title": "3  Geocoding and population",
+    "section": "3.2  Finding headcount statistics",
+    "text": "3.2  Finding headcount statistics\n\nFrom Vector → Analysis Tools → Basic Statistics For Fields, compute statistics for the Total attribute in Wales_headcounts_at_postcodes_2021. Consider each value presented. What was the registered population of Wales in 2021?\nOpen the 2011 dataset (same folder) and calculate the percentage population change in Wales between 2011 and 2021. Close the 2011 dataset.\nSelect the Swansea polygon from Wales_Principal_Areas in the Project window (highlighted yellow).\nOpen Vector → Research Tools → Select By Location. Select features from Wales_headcounts_at_postcodes_2021 that are within Wales_Principal_Areas, ticking Selected features only to select only Swansea. Run to select all postcode points within Swansea.\nUse Basic Statistics again to find the 2021 Total population of Swansea. Tick Selected features only. Compare to Cardiff. Optionally find Swansea’s 10‑year population change.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocoding and population</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#population-density",
+    "href": "chapters/e03.cy.html#population-density",
+    "title": "3  Geocoding and population",
+    "section": "3.3  Population density",
+    "text": "3.3  Population density\n\nOpen the Processing Toolbox and run Interpolation → Heatmap (Kernel Density Estimation). Point Layer: Wales_headcounts_at_postcodes_2021; Radius: 500; Pixel size X/Y: 100; Advanced → Weight from field: Total. This creates a raster population density layer.\nUnder Layer Properties, experiment with symbology for the density raster: Singleband gray or Singleband pseudocolor using different ramps. It may help to switch off the 2021 point layer while experimenting.\nVary the Radius and change the weighting field to see how the map changes. Save your project.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocoding and population</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#geocoding-new-addresses",
+    "href": "chapters/e03.cy.html#geocoding-new-addresses",
+    "title": "3  Geocoding and population",
+    "section": "3.4  Geocoding new addresses",
+    "text": "3.4  Geocoding new addresses\n\nCompile a CSV of Tesco stores in the Swansea area with columns for postcode and name (use the Tesco store locator). Include at least 7 stores with unique postcodes.\nInstall the MMQGIS plugin (Plugins → Manage and Install Plugins).\nUnderstand that geocoding uses a postcode database to attach coordinates to postcode‑referenced data (as used to build the headcounts dataset).\nFrom MMQGIS → Geocode → Geocode CSV with Web Service, select your CSV as Input, set the postcode column as Address Field, choose OpenStreetMap/Nominatim as Web Service, and choose output files on OneDrive for both Output Layer and Not Found Output List. The output is a Shapefile. If errors occur, try the provided CSV in wales_tesco_postcodes. Label stores by name.\nReproject the new layer to OSGB. Use Layer → Save As…, set CRS to EPSG:27700 OSGB 1936, Format = GeoPackage, and save to OneDrive. The appearance is the same but the CRS now matches other layers.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocoding and population</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#simple-catchments",
+    "href": "chapters/e03.cy.html#simple-catchments",
+    "title": "3  Geocoding and population",
+    "section": "3.5  Simple catchments",
+    "text": "3.5  Simple catchments\n\nCreate buffers to approximate walking distance: Vector → Geoprocessing Tools → Buffer. Input: your OSGB Tesco layer; Distance: 500 m; tick Dissolve buffer results.\nUsing selection by location and Basic Statistics, find the total number of people registered to postcodes within 500 m of Tesco stores.\nExperiment with other buffer distances and compare other supermarket chains.\n(Optional) Find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE).\nNote that these skills are vital for the wind farm projects.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nUnderstand the nature and distribution of UK postcode points in Wales.\nVary symbol size or colour for points based on attributes.\nSelect from point data based on containment within polygons.\nCalculate statistics from full tables or selections.\nCreate a heatmap and choose raster presentation styles.\nCreate buffers and count population in simple catchments.\nInstall and use QGIS plugins.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocoding and population</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html",
+    "href": "chapters/e04.cy.html",
+    "title": "4  Combining vector layers",
+    "section": "",
+    "text": "4.1  Investigating your map tile\nCreating spatial and thematic subsets of vector layers is essential GIS practice and a key step in preparing for the wind farm Project. Before you begin, familiarise yourself with the wind farm Project instructions.\nYou will find data for this exercise on the L: drive under College of Science/Geography/GEG276. Read alongside GIS_guide_to_practical_exercises.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#investigating-your-map-tile",
+    "href": "chapters/e04.cy.html#investigating-your-map-tile",
+    "title": "4  Combining vector layers",
+    "section": "",
+    "text": "Launch QGIS, create a new project, and open layer Wales_border from UK_Boundaries.\nFrom Wales_map_tiles, open the layer corresponding to your assigned OS map tile to see where your wind farm project will focus.\nCalculate the area of your 20 × 20 km map tile (square metres) and its perimeter (metres).\nOpen the attribute table for your map tile. This layer has one polygon. Open the Field Calculator and explore $area and $perimeter. Values differ slightly from expectations due to Earth curvature and projection distortion.\nUsing prior methods, calculate the number of people living within your polygon at the 2021 Census. Compute population density for your tile.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#clipping-polygon-and-point-layers",
+    "href": "chapters/e04.cy.html#clipping-polygon-and-point-layers",
+    "title": "4  Combining vector layers",
+    "section": "4.2  Clipping polygon and point layers",
+    "text": "4.2  Clipping polygon and point layers\n\nOpen layers in Wales_protected_areas. Investigate what “protected area” means and explore attribute tables. Save your project regularly.\nClip these layers to your map tile using Vector → Geoprocessing Tools → Clip. Input: the dataset to clip; Overlay: your map tile polygon. Choose Save to File, GeoPackage format, sensible names, and folder structure. Examine the new clipped layer.\nClip each protected area dataset relevant to your tile. Save clipped layers with appropriate filenames.\nMerge protected area layers with Vector → Data Management Tools → Merge Vector Layers to create a single protected‑areas layer. Alternatives include Union or MMQGIS → Merge.\nDissolve internal boundaries with Vector → Geoprocessing Tools → Dissolve. Save to disk. Use the field calculator to find total protected area and percentage of your tile.\nUsing prior data, clip existing or planned wind farms to your map tile. Save your work.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#clipping-line-layers-and-adding-buffers",
+    "href": "chapters/e04.cy.html#clipping-line-layers-and-adding-buffers",
+    "title": "4  Combining vector layers",
+    "section": "4.3  Clipping line layers and adding buffers",
+    "text": "4.3  Clipping line layers and adding buffers\n\nFrom British_Isles_geofabrik/wales, open waterways, water, railways, and roads. Explore attributes.\nClip each of these layers to your tile. Name outputs sensibly.\nReview wind farm Project constraints (e.g., distances from transport links and water bodies).\nCreate buffers with Vector → Geoprocessing Tools → Buffer for each transport and water layer. Dissolve boundaries (during or after) and optionally clip buffers to the tile polygon.\nCreate buffers for existing/planned wind farms if appropriate. Name layers carefully and organise files.\nMerge buffered layers if helpful.\nConsider merging clipped layers before buffering as an alternative workflow.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#selecting-elements-by-attribute",
+    "href": "chapters/e04.cy.html#selecting-elements-by-attribute",
+    "title": "4  Combining vector layers",
+    "section": "4.4  Selecting elements by attribute",
+    "text": "4.4  Selecting elements by attribute\n\nOpen gis_osm_landuse_a_free_1 (landuse) and clip to your map tile.\nExamine the attribute table. Open Select by expression, expand Fields and Values, choose fclass, and list unique values. Decide which classes are relevant (e.g., residential, forest).\nUse Select by expression to select features, e.g. \"fclass\" = 'residential'.\nSave selected features to a new layer (Layer → Save As or Export → Save Selected Features As). Name and store methodically.\nRepeat for other relevant landuse classes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#taking-stock-of-planning-constraints",
+    "href": "chapters/e04.cy.html#taking-stock-of-planning-constraints",
+    "title": "4  Combining vector layers",
+    "section": "4.5  Taking stock of planning constraints",
+    "text": "4.5  Taking stock of planning constraints\n\nReview the layers that represent areas unsuitable for wind farm development because of their position within, or proximity to, man‑made or natural features.\nExplore unconstrained areas large enough for a wind farm. Use subsequent exercises to evaluate the best site.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nCalculate area and perimeter of a polygon using the Field Calculator.\nClip point, line, and polygon vector layers.\nCreate and dissolve buffers around point, line, and polygon layers.\nSelect and save subsets from a vector layer by attribute.\nBuild layers that represent your tile’s wind farm planning constraints.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html",
+    "href": "chapters/e05.cy.html",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "",
+    "text": "5.1  Investigating the topography of Wales\nDigital Elevation Models (DEMs) describe land surface height in a grid and are a special case of continuous geospatial data, widely available as raster datasets at various spatial resolutions. GIS provides tools to handle DEMs.\nYou will find data for this exercise on the L: drive in the usual place. Read alongside GIS_guide_to_practical_exercises.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#investigating-the-topography-of-wales",
+    "href": "chapters/e05.cy.html#investigating-the-topography-of-wales",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "",
+    "text": "Open the raster layer SRTM_Wales_DEM_25m.tif (from Wales_DSM). This DEM is derived from Space Shuttle data (2000) at 25 m resolution.\nIn Layer Properties, experiment with Singleband pseudocolor. Adjust colour ramps, Min/Max, and mode/classes.\nUnder Color ramp, Create new color ramp → cpt‑city. Explore topography styles and experiment with Min/Max, mode (continuous/equal interval), and classes.\nInstall the Value Tool plugin and enable it (View → Panels → Value Tool Panel). Use it to interrogate raster values and find the heights of Snowdon and Pen y Fan. Validate heights using external sources.\nOpen Wales_operational_wind farms and observe that wind farms are often on coasts or high ground.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#examining-the-topography-of-your-map-tile",
+    "href": "chapters/e05.cy.html#examining-the-topography-of-your-map-tile",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.2  Examining the topography of your map tile",
+    "text": "5.2  Examining the topography of your map tile\n\nSubset the DEM to your map tile via Raster → Extraction → Clip Raster by Mask Layer. Input: Wales DEM; Mask layer: your map tile. Save with a sensible name on OneDrive.\nExplore your subset with suitable palettes and ranges. Identify the highest point and, if possible, its name.\nOpen View → New 3D Map View. Configure: Terrain type = DEM (Raster Layer); Elevation = your clipped DEM; Vertical scale = 4; Tile resolution = 64 px. Explore in 3D and experiment with settings. Add other layers if useful.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#slope-aspect-and-hillshade",
+    "href": "chapters/e05.cy.html#slope-aspect-and-hillshade",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.3  Slope, aspect and hillshade",
+    "text": "5.3  Slope, aspect and hillshade\n\nCreate a slope image (Raster → Analysis → Slope). Ensure slope is in degrees. Identify areas of highest slope and explain why.\nCreate an aspect image (Raster → Analysis → Aspect). Because 1° and 359° are near‑equivalents, choose a cyclic CPT (e.g., wave from cpt‑city → QGIS).\nCreate a hillshade (Raster → Analysis → Hillshade). Combine with your DEM by placing hillshade above the DEM with ~50% opacity and a grayscale to enhance relief.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#classifying-raster-data",
+    "href": "chapters/e05.cy.html#classifying-raster-data",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.4  Classifying raster data",
+    "text": "5.4  Classifying raster data\n\nOpen Raster Calculator and classify slopes &gt; 6° as unsuitable. For example, if your slope layer is SS68_slope.tif, use an expression like \"SS68_slope@1\" &gt; 6 with Select Layer Extent and output SS68_slope_classified. Pixels with value 1 are unsuitable (slope &gt; 6°), 0 otherwise.\nAdjust transparency of the classified slope image and inspect unsuitable areas.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#converting-to-vector-polygons",
+    "href": "chapters/e05.cy.html#converting-to-vector-polygons",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.5  Converting to vector polygons",
+    "text": "5.5  Converting to vector polygons\n\nVectorise the classified raster (Raster → Conversion → Polygonize). Input: your classified slope layer (slope &lt; 6° suitable).\nUnder Layer Properties, set Categorized symbology on field DN to distinguish suitable (0) and unsuitable (1) polygons.\nUse Select by Expression (DN = 1) to select unsuitable polygons and Export → Save Selected Features As to create a constraint layer.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#wind-speeds",
+    "href": "chapters/e05.cy.html#wind-speeds",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.6  Wind speeds",
+    "text": "5.6  Wind speeds\n\nOpen raster Wales_wind-speed_50m.tif from Wales_mean_windspeed and choose an appropriate palette (see the description_and_data_source.txt file for details).\nClip the wind speed raster to your tile and visualise with a suitable palette.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#putting-it-all-together",
+    "href": "chapters/e05.cy.html#putting-it-all-together",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.7  Putting it all together",
+    "text": "5.7  Putting it all together\n\nReopen your constraint layers from Exercise 4 alongside your polygonised slope constraint. With the wind speed layer beneath constraints, explore where development may be permitted and optimal (high wind, large areas).\nDesign Map 3 of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location and justify why.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nVisualise, clip, and extract values from raster data.\nCreate DEM products (slope, aspect, hillshade).\nClassify a raster layer and create polygons from the classification.\nRecognise wind speed variation and identify the best wind farm location.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e06.cy.html",
+    "href": "chapters/e06.cy.html",
+    "title": "6  Wind farm area polygon, viewshed, and impact",
+    "section": "",
+    "text": "6.1  Starting point\nThis exercise assumes that you have followed Exercises 04 and 05, created wind farm planning constraints for a 20 × 20 km map tile in Wales (protected areas, transport, housing, water, topography), and investigated wind speed. Data are on the L: drive under College of Science/Geography/GEG276. Read alongside GIS_guide_to_practical_exercises and the wind farm Project instructions on Canvas.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wind farm area polygon, viewshed, and impact</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e06.cy.html#starting-point",
+    "href": "chapters/e06.cy.html#starting-point",
+    "title": "6  Wind farm area polygon, viewshed, and impact",
+    "section": "",
+    "text": "Prepare a QGIS project including vector constraint layers and a wind speed raster. From Maps 2 and 3, choose the single optimum unconstrained location in your tile for a wind farm (sufficiently large, with high wind). Verify suitability with OpenStreetMap XYZ Tiles. Use the Measure tool to confirm a narrowest dimension &gt; 150 m.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wind farm area polygon, viewshed, and impact</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e06.cy.html#wind-farm-polygon-creation",
+    "href": "chapters/e06.cy.html#wind-farm-polygon-creation",
+    "title": "6  Wind farm area polygon, viewshed, and impact",
+    "section": "6.2  wind farm polygon creation",
+    "text": "6.2  wind farm polygon creation\n\nCreate a new GeoPackage polygon layer (Layer → Create Layer → New GeoPackage Layer). Choose a sensible name and location, Geometry type = polygon, CRS = EPSG:27700. Right‑click the layer and Toggle Editing.\nAdd a polygon feature (Edit → Add Polygon Feature). Left‑click to draw vertices, right‑click to finish, and enter an ID (e.g., 1). Use the mouse wheel/middle button to navigate as you edit.\nImprove the polygon shape with editing tools as needed (e.g., Vertex Tool).\nToggle off editing and save changes.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wind farm area polygon, viewshed, and impact</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e06.cy.html#how-big-is-your-wind-farm",
+    "href": "chapters/e06.cy.html#how-big-is-your-wind-farm",
+    "title": "6  Wind farm area polygon, viewshed, and impact",
+    "section": "6.3  How big is your wind farm?",
+    "text": "6.3  How big is your wind farm?\n\nCalculate polygon area using the Field Calculator. Create a new field area (Decimal/real) and use $area. Open the attribute table to read the area (m²) and convert to km². A 2 MW turbine needs ~0.5 km². Estimate potential turbine count. Ensure narrowest width ≥ 150 m to be viable.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wind farm area polygon, viewshed, and impact</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e06.cy.html#creating-a-viewshed",
+    "href": "chapters/e06.cy.html#creating-a-viewshed",
+    "title": "6  Wind farm area polygon, viewshed, and impact",
+    "section": "6.4  Creating a viewshed",
+    "text": "6.4  Creating a viewshed\n\nInstall the Visibility Analysis plugin.\nCreate a centroid point for your wind farm polygon (Vector → Geometry Tools → Centroids). This point represents the wind farm location for viewshed analysis.\nIn the Processing Toolbox, run Visibility Analysis → Create Viewpoints. Set Observer locations = wind farm centroid; DEM = your tile DEM; Radius of analysis = 10 km; Observer height = 50 m; Target height = 2 m. Save the output viewpoint layer.\nRun Visibility Analysis → Analysis → Viewshed using the viewpoint layer and your tile DEM. Explore and understand the result.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wind farm area polygon, viewshed, and impact</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e06.cy.html#calculating-impact",
+    "href": "chapters/e06.cy.html#calculating-impact",
+    "title": "6  Wind farm area polygon, viewshed, and impact",
+    "section": "6.5  Calculating impact",
+    "text": "6.5  Calculating impact\n\nVectorise your viewshed (see Exercise 05) to create polygons representing areas within 10 km from which the wind farm is visible. Use select‑by‑value and save selected features.\nUsing methods from Exercise 03, calculate the total number of people registered at postcodes within line‑of‑sight. If errors about “invalid geometry” occur, buffer the visibility polygon by 1 m and retry.\nDesign Map 4 to present the wind farm location/extent and its visual impact. Focus on population and visibility; you do not need to repeat earlier context maps.\nComment in your CW4 caption on how well your analysis captures potential impact if your wind farm lies near the tile edge.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nCreate and edit a vector layer in QGIS.\nCreate a new polygon layer to represent a proposed wind farm location.\nCalculate the area of a vector polygon and estimate turbine capacity.\nCreate a viewshed using an observer/target and a DEM.\nQuantify population within sight of the proposed wind farm and its proportion of the tile population.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wind farm area polygon, viewshed, and impact</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/faq.cy.html",
+    "href": "chapters/faq.cy.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "How can I arrange map items perfectly on the print layout?\nHere are some of the commonly-occurring issues that come up during this course and how to resolve them.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "chapters/faq.cy.html#sec-guides",
+    "href": "chapters/faq.cy.html#sec-guides",
+    "title": "FAQ",
+    "section": "",
+    "text": "NoteHow can I arrange map items perfectly on the print layout?\n\n\n\n\n\nUse Guides",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "chapters/faq.cy.html#sec-font",
+    "href": "chapters/faq.cy.html#sec-font",
+    "title": "FAQ",
+    "section": "How can I make “Fig. 1.” bold, keeping the rest of the text normal?",
+    "text": "How can I make “Fig. 1.” bold, keeping the rest of the text normal?\n\n\n\n\n\n\nNoteHow can I make “Fig. 1.” bold, keeping the rest of the text normal?\n\n\n\n\n\nCheck Render as HTML and wrap the target text in  and  tags.\nFig. 1. Wales principal areas.\n\n\n\n\n\n\n\n\n\nNoteOne of my panels (Layers, Items, Item Properties) has gone missing, how do I get it back?\n\n\n\n\n\nView -&gt; relevant panels. Sometimes missing, not on default",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "chapters/references.cy.html",
+    "href": "chapters/references.cy.html",
+    "title": "References",
+    "section": "",
+    "text": "Dikilitas, K., and I. N. Fructuoso. 2023. “Conceptual Framework\nfor Flexible Learning Design: The Context of Flipped Classroom.”\nLearning Design for Flexible Education, nos.\n2022-1-ES01-KA220-HED-000085250: 1–46. https://kudos.dfo.no/documents/77155/files/37244.pdf.\n\n\nGraser, Anita, Tim Sutton, and Marco Bernasocchi. 2025. “The QGIS\nProject: Spatial Without Compromise.” Patterns 6 (7):\n101265. https://doi.org/https://doi.org/10.1016/j.patter.2025.101265.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

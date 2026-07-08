@@ -1,0 +1,61 @@
+# Wind farm area polygon, viewshed, and impact {#sec-e06}
+
+> **Dates of practical:** 20th and 27th November and 11th December 2025
+
+This exercise assumes that you have followed Exercises 04 and 05, created wind farm planning constraints for a 20 × 20 km map tile in Wales (protected areas, transport, housing, water, topography), and investigated wind speed. Data are on the **L:** drive under `College of Science/Geography/GEG276`. Read alongside **GIS_guide_to_practical_exercises** and the wind farm Project instructions on Canvas.
+
+::: {.callout-note}
+## Learning aims
+
+Create and edit a polygon to represent a wind farm, calculate its area, create a viewshed, and count the population living within view of the proposed wind farm.
+:::
+
+## <input type="checkbox"> Starting point
+
+(@) Prepare a QGIS project including vector constraint layers and a wind speed raster. From Maps 2 and 3, choose the single optimum unconstrained location in your tile for a wind farm (sufficiently large, with high wind). Verify suitability with OpenStreetMap XYZ Tiles. Use the Measure tool to confirm a narrowest dimension > 150 m.
+
+## <input type="checkbox"> wind farm polygon creation
+
+(@) Create a new GeoPackage polygon layer (**Layer → Create Layer → New GeoPackage Layer**). Choose a sensible name and location, **Geometry type** = polygon, **CRS** = EPSG:27700. Right‑click the layer and **Toggle Editing**.
+
+(@) Add a polygon feature (**Edit → Add Polygon Feature**). Left‑click to draw vertices, right‑click to finish, and enter an ID (e.g., 1). Use the mouse wheel/middle button to navigate as you edit.
+
+(@) Improve the polygon shape with editing tools as needed (e.g., **Vertex Tool**).
+
+(@) Toggle off editing and save changes.
+
+## <input type="checkbox"> How big is your wind farm?
+
+(@) Calculate polygon area using the **Field Calculator**. Create a new field `area` (Decimal/real) and use `$area`. Open the attribute table to read the area (m²) and convert to km². A 2 MW turbine needs ~0.5 km². Estimate potential turbine count. Ensure narrowest width ≥ 150 m to be viable.
+
+## <input type="checkbox"> Creating a viewshed
+
+(@) Install the **Visibility Analysis** plugin.
+
+(@) Create a centroid point for your wind farm polygon (**Vector → Geometry Tools → Centroids**). This point represents the wind farm location for viewshed analysis.
+
+(@) In the **Processing Toolbox**, run **Visibility Analysis → Create Viewpoints**. Set Observer locations = wind farm centroid; DEM = your tile DEM; Radius of analysis = 10 km; Observer height = 50 m; Target height = 2 m. Save the output viewpoint layer.
+
+(@) Run **Visibility Analysis → Analysis → Viewshed** using the viewpoint layer and your tile DEM. Explore and understand the result.
+
+## <input type="checkbox"> Calculating impact
+
+(@) Vectorise your viewshed (see Exercise 05) to create polygons representing areas within 10 km from which the wind farm is visible. Use select‑by‑value and save selected features.
+
+(@) Using methods from Exercise 03, calculate the total number of people registered at postcodes within line‑of‑sight. If errors about “invalid geometry” occur, buffer the visibility polygon by 1 m and retry.
+
+(@) Design **Map 4** to present the wind farm location/extent and its visual impact. Focus on population and visibility; you do not need to repeat earlier context maps.
+
+(@) Comment in your CW4 caption on how well your analysis captures potential impact if your wind farm lies near the tile edge.
+
+::: {.callout-tip}
+# Learning outcomes
+
+By the end of this exercise you should:
+
+1. Create and edit a vector layer in QGIS.
+2. Create a new polygon layer to represent a proposed wind farm location.
+3. Calculate the area of a vector polygon and estimate turbine capacity.
+4. Create a viewshed using an observer/target and a DEM.
+5. Quantify population within sight of the proposed wind farm and its proportion of the tile population.
+:::

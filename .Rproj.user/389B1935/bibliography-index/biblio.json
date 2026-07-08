@@ -1,0 +1,69 @@
+{
+    "sources": [
+        {
+            "ISSN": "978-82-8439-173-1",
+            "URL": "https://kudos.dfo.no/documents/77155/files/37244.pdf",
+            "author": [
+                {
+                    "family": "Dikilitas",
+                    "given": "K."
+                },
+                {
+                    "family": "Fructuoso",
+                    "given": "I. N."
+                }
+            ],
+            "container-title": "Learning Design for Flexible Education",
+            "id": "Dikilitas2023",
+            "issue": "2022-1-ES01-KA220-HED-000085250",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "page": "1-46",
+            "publisher": "University of Stavanger",
+            "title": "Conceptual framework for flexible learning design: The context of flipped classroom",
+            "title-short": "Conceptual framework for flexible learning design",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "https://doi.org/10.1016/j.patter.2025.101265",
+            "ISSN": "2666-3899",
+            "author": [
+                {
+                    "family": "Graser",
+                    "given": "Anita"
+                },
+                {
+                    "family": "Sutton",
+                    "given": "Tim"
+                },
+                {
+                    "family": "Bernasocchi",
+                    "given": "Marco"
+                }
+            ],
+            "container-title": "Patterns",
+            "id": "Graser2025",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "page": "101265",
+            "title": "The QGIS project: Spatial without compromise",
+            "title-short": "The QGIS project",
+            "type": "article-journal",
+            "volume": "6"
+        }
+    ],
+    "project_biblios": [
+        "bib/references.bib"
+    ]
+}

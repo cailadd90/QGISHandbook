@@ -1,0 +1,78 @@
+# Elevation, slope, and wind speed {#sec-e05}
+
+> **Dates of practical:** 6th and 13th November 2025
+
+Digital Elevation Models (DEMs) describe land surface height in a grid and are a special case of continuous geospatial data, widely available as raster datasets at various spatial resolutions. GIS provides tools to handle DEMs.
+
+You will find data for this exercise on the **L:** drive in the usual place. Read alongside **GIS_guide_to_practical_exercises**.
+
+::: {.callout-note}
+## Learning aims
+
+Visualise DEMs and wind speed data; subset, classify and vectorize; create slope and aspect images. These steps are vital for the wind farm Project.
+:::
+
+## <input type="checkbox"> Investigating the topography of Wales
+
+(@) Open the raster layer `SRTM_Wales_DEM_25m.tif` (from `Wales_DSM`). This DEM is derived from Space Shuttle data (2000) at 25 m resolution.
+
+(@) In **Layer Properties**, experiment with **Singleband pseudocolor**. Adjust colour ramps, Min/Max, and mode/classes.
+
+(@) Under **Color ramp**, **Create new color ramp → cpt‑city**. Explore topography styles and experiment with Min/Max, mode (continuous/equal interval), and classes.
+
+(@) Install the **Value Tool** plugin and enable it (View → Panels → Value Tool Panel). Use it to interrogate raster values and find the heights of Snowdon and Pen y Fan. Validate heights using external sources.
+
+(@) Open `Wales_operational_wind farms` and observe that wind farms are often on coasts or high ground.
+
+## <input type="checkbox"> Examining the topography of your map tile
+
+(@) Subset the DEM to your map tile via **Raster → Extraction → Clip Raster by Mask Layer**. Input: Wales DEM; Mask layer: your map tile. Save with a sensible name on OneDrive.
+
+(@) Explore your subset with suitable palettes and ranges. Identify the highest point and, if possible, its name.
+
+(@) Open **View → New 3D Map View**. Configure: Terrain type = **DEM (Raster Layer)**; Elevation = your clipped DEM; Vertical scale = 4; Tile resolution = 64 px. Explore in 3D and experiment with settings. Add other layers if useful.
+
+## <input type="checkbox"> Slope, aspect and hillshade
+
+(@) Create a slope image (**Raster → Analysis → Slope**). Ensure slope is in **degrees**. Identify areas of highest slope and explain why.
+
+(@) Create an aspect image (**Raster → Analysis → Aspect**). Because 1° and 359° are near‑equivalents, choose a cyclic CPT (e.g., wave from cpt‑city → QGIS).
+
+(@) Create a hillshade (**Raster → Analysis → Hillshade**). Combine with your DEM by placing hillshade above the DEM with ~50% opacity and a grayscale to enhance relief.
+
+## <input type="checkbox"> Classifying raster data
+
+(@) Open **Raster Calculator** and classify slopes > 6° as unsuitable. For example, if your slope layer is `SS68_slope.tif`, use an expression like `"SS68_slope@1" > 6` with **Select Layer Extent** and output `SS68_slope_classified`. Pixels with value 1 are unsuitable (slope > 6°), 0 otherwise.
+
+(@) Adjust transparency of the classified slope image and inspect unsuitable areas.
+
+## <input type="checkbox"> Converting to vector polygons
+
+(@) Vectorise the classified raster (**Raster → Conversion → Polygonize**). Input: your classified slope layer (slope < 6° suitable).
+
+(@) Under **Layer Properties**, set **Categorized** symbology on field `DN` to distinguish suitable (0) and unsuitable (1) polygons.
+
+(@) Use **Select by Expression** (DN = 1) to select unsuitable polygons and **Export → Save Selected Features As** to create a constraint layer.
+
+## <input type="checkbox"> Wind speeds
+
+(@) Open raster `Wales_wind-speed_50m.tif` from `Wales_mean_windspeed` and choose an appropriate palette (see the `description_and_data_source.txt` file for details).
+
+(@) Clip the wind speed raster to your tile and visualise with a suitable palette.
+
+## <input type="checkbox"> Putting it all together
+
+(@) Reopen your constraint layers from Exercise 4 alongside your polygonised slope constraint. With the wind speed layer beneath constraints, explore where development may be permitted and optimal (high wind, large areas).
+
+(@) Design **Map 3** of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location and justify why.
+
+::: {.callout-tip}
+# Learning outcomes
+
+By the end of this exercise you should:
+
+1. Visualise, clip, and extract values from raster data.
+2. Create DEM products (slope, aspect, hillshade).
+3. Classify a raster layer and create polygons from the classification.
+4. Recognise wind speed variation and identify the best wind farm location.
+:::
