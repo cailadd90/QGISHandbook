@@ -1,13 +1,16 @@
 project:
   type: book
   output-dir: docs
-  
-book:
-  title:    'QGIS Handbook'
-  subtitle: 'GEG276: Introduction to Geographic Information Systems'
-  author: 
-    - 'Cai Ladd & Adrian Luckman'
 
+book:
+  title: 'QGIS Handbook'
+  subtitle: 'GEG276: Introduction to Geographic Information Systems'
+  author:
+    - 'Cai Ladd'
+    - 'Adrian Luckman'
+  site-url: 'https://cailadd90.github.io/QGISHandbook/'
+  sidebar:
+    logo: chapters/figs/Cover.png
   chapters:
     - index.qmd
     - chapters/intro.qmd
@@ -20,7 +23,6 @@ book:
     - chapters/faq.qmd
     - chapters/references.qmd
 
-cover-image:  figs/Cover.png
 bibliography: bib/references.bib
 
 format:
@@ -29,14 +31,16 @@ format:
 
 babelquarto:
   languagecodes:
-  - name: en
-    text: "Version in English"
-  - name: cy
-    text: "Fersiwn yn y Gymraeg"
+    - name: en
+      text: "English"
+    - name: cy
+      text: "Cymraeg"
   mainlanguage: 'en'
   languages: ['cy']
-title-es: title in en
-description-es: description in en
-abstract-es: abstract in en
-author-es: author in en
+
+title-cy: 'Llawlyfr QGIS'
+subtitle-cy: 'GEG276: Cyflwyniad i Systemau Gwybodaeth Ddaearyddol'
+author-cy:
+  - 'Cai Ladd'
+  - 'Adrian Luckman'
 lang: en
