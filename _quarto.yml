@@ -28,6 +28,8 @@ bibliography: bib/references.bib
 format:
   html:
     theme: cosmo
+    css: styles.css
+    include-after-body: remove-appendices.js
 
 babelquarto:
   languagecodes:
