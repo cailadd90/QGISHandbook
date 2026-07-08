@@ -1,4 +1,4 @@
-# Getting started with GIS {#sec-e01}
+# Getting started {#sec-e01}
 
 > **Date of practical:** 2nd October 2025
 

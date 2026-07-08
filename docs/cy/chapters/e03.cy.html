@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>3  Geocoding and population – Llawlyfr QGIS</title>
+<title>3  Geocodio a phoblogaeth – Llawlyfr QGIS</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/e03.cy.html"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/e03.cy.html"><span class="chapter-number">3</span>  <span class="chapter-title">Geocodio a phoblogaeth</span></a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -106,37 +106,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/e01.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Getting started with GIS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Dechrau arni</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/e02.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps in QGIS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Dylunio mapiau</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/e03.cy.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocodio a phoblogaeth</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/e04.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Cyfuno haenau fector</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/e05.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Elevation, slope, and wind speed</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Uchder, llethr, a chyflymder gwynt</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/e06.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Wind farm area polygon, viewshed, and impact</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Polygon ardal fferm wynt, golygfa, ac effaith</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/references.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Cyfeirnodau</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-e03" class="quarto-section-identifier"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></h1>
+<h1 class="title"><span id="sec-e03" class="quarto-section-identifier"><span class="chapter-number">3</span>  <span class="chapter-title">Geocodio a phoblogaeth</span></span></h1>
 </div>
 
 
@@ -667,13 +667,13 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../chapters/e02.cy.html" class="pagination-link" aria-label="Composing maps in QGIS">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps in QGIS</span></span>
+      <a href="../chapters/e02.cy.html" class="pagination-link" aria-label="Dylunio mapiau">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>  <span class="chapter-title">Dylunio mapiau</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/e04.cy.html" class="pagination-link" aria-label="Combining vector layers">
-        <span class="nav-page-text"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/e04.cy.html" class="pagination-link" aria-label="Cyfuno haenau fector">
+        <span class="nav-page-text"><span class="chapter-number">4</span>  <span class="chapter-title">Cyfuno haenau fector</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

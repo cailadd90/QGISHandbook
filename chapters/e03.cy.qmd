@@ -1,4 +1,4 @@
-# Geocoding and population {#sec-e03}
+# Geocodio a phoblogaeth {#sec-e03}
 
 > **Date of practical:** 16th October 2025
 

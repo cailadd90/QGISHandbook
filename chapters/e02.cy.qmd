@@ -1,4 +1,4 @@
-# Composing maps in QGIS {#sec-e02}
+# Dylunio mapiau {#sec-e02}
 
 > **Date of practical:** 9th October 2025
 

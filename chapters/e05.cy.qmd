@@ -1,4 +1,4 @@
-# Elevation, slope, and wind speed {#sec-e05}
+# Uchder, llethr, a chyflymder gwynt {#sec-e05}
 
 > **Dates of practical:** 6th and 13th November 2025
 

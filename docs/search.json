@@ -112,191 +112,191 @@
   {
     "objectID": "chapters/e01.html",
     "href": "chapters/e01.html",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "",
     "text": "1.1  Starting up\nTo master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the rest of this module and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#starting-up",
     "href": "chapters/e01.html#starting-up",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "",
     "text": "Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it’ll appear in File Explorer under your OneDrive section\nLaunch QGIS. This could be on a University computer, via a remote desktop, or on your own computer\nFrom the menu bar, click Project &gt; New. Find the shortcut icon to create a new project\nAdd your first vector layer in QGIS. From the menu bar, click Layer &gt; Add Layer &gt; Add Vector Layer...\nClick the Browse icon () and navigate to the folder where the data is stored, i.e. GEG276\nOpen the British_Isles_land_polygons folder and click on the corresponding .gpkg vector layer\nClick Open &gt; Add &gt; Close. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the Layers panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#navigation",
     "href": "chapters/e01.html#navigation",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.2  Navigation",
     "text": "1.2  Navigation\n\nUse the Map Navigation Toolbar to explore this dataset by panning and zooming\n\n\n\n\n\n\n\nTry using the mouse scroll wheel as a shortcut\nMake yourself familiar with navigating around the Map Canvas by losing yourself! Pan and zoom until you can’t see the British Isles layer anymore\nOnce lost, right-click on the layer in the Layers panel and click Zoom to Layer(s) to easily return to view that layer",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#sec-properties",
     "href": "chapters/e01.html#sec-properties",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.3  Adjusting style properties",
     "text": "1.3  Adjusting style properties\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Properties... &gt; Symbology. A useful shortcut to Properties is to double-click the layer\nClick Simple Fill and experiment with changing the layer symbology’s colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer\n\n\n\n\n\n\n\nFrom the menu bar, click Project &gt; Save and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#measuring-geospatial-objects",
     "href": "chapters/e01.html#measuring-geospatial-objects",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.4  Measuring geospatial objects",
     "text": "1.4  Measuring geospatial objects\n\nClick the drop-down arrow next to the Measure icon to select the appropriate tool for measuring:\n\nThe length of Great Britain (in miles)\nThe approximate area of the Isle of Man (in square kilometres)\n\n\n\n\n\n\n\n\nUse left-click to add points, and right-click to stop taking the length / area measurements\nShare your answers on Menti! Being able to measure geographic features is a fundamental objective of GIS analysis",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#exploring-the-attribute-table",
     "href": "chapters/e01.html#exploring-the-attribute-table",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.5  Exploring the Attribute Table",
     "text": "1.5  Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table\n\n\n\n\n\n\n\nTipThe Attribute Table\n\n\n\nAn attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area.\n\n\n\nArrange the Map Canvas and attribute table windows so that you can see both on screen at once. To understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles. Can you name the seventh-largest? If so, submit it on Menti!\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\nReport your result on Menti!\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#arranging-layers",
     "href": "chapters/e01.html#arranging-layers",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.6  Arranging layers",
     "text": "1.6  Arranging layers\n\nAdd the Wales_Principal_Areas.gpkg layer in the UK_Boundaries folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the Layers panel\nAdjust the style of this layer and explore its attribute table\nExperiment with switching layer visibility on or off using the tick boxes in the Layer panel (). This becomes essential when managing multiple layers in a project\nChange the order of the layers by dragging each upwards or downwards in the layer panel\n\n\n\n\n\n\n\nTipBoundary disputes\n\n\n\nNotice how the seaward political (Principal Area) boundary of Wales goes beyond the coastline (Land Polygons). This is because the physical land boundary is generally classified according to the mean high water mark, while administrative boundaries are normally classified according to the mean low water mark. That’s Geography!\n\n\n\nMove Wales_Principle_Areas to the top of the Layers panel\nOpen the layer’s Symbology window\nUse the drop-down menu to change the symbology source from Single Symbol to Categorized\n\n\n\n\n\n\n\nUse the Value drop-down menu to select the attribute name\nClick Classify &gt; OK. How colourful!",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#labelling-layers",
     "href": "chapters/e01.html#labelling-layers",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.7  Labelling layers",
     "text": "1.7  Labelling layers\n\nSelect Wales_Principal_Areas layer in the Layers panel\nFrom the menu bar, click Layer &gt; Labelling. Find the shortcuts to this window (hint - check out Properties...)\nUse the drop-down menu to change the labelling source from No Labels to Single Labels\n\n\n\n\n\n\n\nChange the Value drop-down menu to label the Wales Principle Area polygons according to their English or Welsh names\n\n\n\n\n\n\n\nExperiment with modifying the labels by:\n\nChanging the text style () e.g. style and size\nChanging the label format () e.g. wrapping and orientation\nAdding a text buffer ()\nChanging the label placement ()\nPlaying around with other options. You are in complete control!\nHave you saved your project recently?\n\n\n\n\n\n\n\n\nTipSmart labelling\n\n\n\nNow that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the Labelling window and you are encouraged to experiment.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#adding-and-filtering-data",
     "href": "chapters/e01.html#adding-and-filtering-data",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.8  Adding and filtering data",
     "text": "1.8  Adding and filtering data\n\nAdd the vector layer Wales_operational_windfarms.gpkg to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales\nExamine the attribute table\nAdjust the layer’s style, noting that point data is represented in a different way to polygon data\nLabel the wind farms by their name or by their generation capacity\nAdd the vector layer gis_osm_roads_free_1.gpkg, which is in the folder British_Isles_geofabrik &gt; wales. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display\nOnce again, for this layer:\n\nExamine the attribute table\nExperiment with different styles for line data\nTry labelling the roads with the attribute ref (i.e. the road number). See how these labels are displayed as you zoom in and out of the map\n\nThere is a lot of data here! So let’s subset it. There are many ways to make subsets of data layers to select only the data you need or that you want to display. To filter the data universally:\n\nRight-click on the roads layer and click Filter...\nThis tool allows you to easily see all the unique values contained in each field (or column) of the attribute table. Click fclass &gt; All. You can now see all the unique classes of road in the vector layer\nUnder Provider Specific Filter Expression, type \"fclass\" IN ('primary', 'trunk', 'motorway'). Make sure of precise punctuation and spacing\nClick OK. Your map should now only display roads classed as primary and secondary. A funnel icon () has also appeared next to the layer in name in the `Layers’ panel, to remind you a filter has been applied\nExperiment with the filter to see which combinations of data you can display\nWhen you have finished, click Clear &gt; OK to remove the filter and close the tool\n\nTo filter the data by defining what is presented in the map:\n\nOpen the layer’s Symbology window\nUse the Categorized option to categorise the road symbology according to the fclass attribute\nDelete all the road classes except primary, trunk, and motorway. See if you can make this task easier for yourself by using the Shift and Ctrl keys…\nDouble-click the line symbol per category to choose a suitable symbology for these remaining roads (e.g. thick red for primary, very thick light blue for motorway)\n\nAdd the gis_osm_waterways_free_1.gpkg vector layer in the British_Isles_geofabrik &gt; wales folders. What colour would be best for these?",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#adding-external-data",
     "href": "chapters/e01.html#adding-external-data",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.9  Adding external data",
     "text": "1.9  Adding external data\n\nNavigate to datamap.gov.wales\nSearch for “Wales Coast Path” and click on the link\nUnder Select spatial data format, choose OFC Geopackage and click Download\nMove the downloaded file to your OneDrive\nOpen the layer in QGIS and explore it\nTry searching for and downloading other GIS data files from DataMapWales, geofabrik.de, or any another source\nWhen you’ve found a juicy dataset, report it on Menti\n\n\n\n\n\n\n\nTipDissertation ideas\n\n\n\nSearching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e01.html#have-you-finished",
     "href": "chapters/e01.html#have-you-finished",
-    "title": "1  Getting started with GIS",
+    "title": "1  Getting started",
     "section": "1.10  Have you finished?",
     "text": "1.10  Have you finished?\n\nCongratulations! You’ve learned the basics of QGIS. Make sure that you’ve understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.\n\n\n\n\n\n\n\nNoteLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nBe able to create a new QGIS project, add vector layers, change their style and navigate around them.\nUnderstand how to re-order layers, switch layer visibility on and off, and remove layers.\nAppreciate the relationship between GIS layers and attribute tables, and be able to label features.\nKnow how to download data for use in QGIS.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with GIS</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html",
     "href": "chapters/e02.html",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "",
     "text": "2.1  Creating a print layout\nCommunication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and the final product represents your “Map 1”. assignment.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html#creating-a-print-layout",
     "href": "chapters/e02.html#creating-a-print-layout",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "",
     "text": "Launch QGIS and create a new project\nImport the British_Isles_land_polygons.gpkg, Wales_border.gpkg, and Wales_Principal_Areas.gpkg layers (the latter two are in the UK_Boundaries folder)\nLabel the Principal Areas of Wales in Welsh or English\nClick Project &gt; New Print Layout... (and find the shortcuts to this window)\nGive the print layout an appropriate title\n\n\n\n\n\n\n\nTipMultiple layouts\n\n\n\nYou can create more than one print layout. Use Project &gt; Layout Manager... to easily access and organise layouts associated with your particular QGIS project.\n\n\n\nArrange the Map Canvas and Print Layout windows so you can see both at once. Subsequent instructions refer to the Print Layout window unless otherwise stated\nChange the page orientation to A4 portrait:\n\nRight‑click on the blank print layout\nClick Page Properties...\n\n\n\n\n\n\n\nChange Size to A4\nChange Orientation to Portrait",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html#sec-mapitem",
     "href": "chapters/e02.html#sec-mapitem",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "2.2  Adding and adjusting a map item",
     "text": "2.2  Adding and adjusting a map item\n\nClick Add Item &gt; Add Map (look for the shortcut)\nDraw a map onto the print layout. Map 1 should now appear under the Item tab\n\n\n\n\n\n\n\nAdjust the map using the squares around the edges\nSelect Map 1\nSet Scale to 1000000 (i.e. 1:1,000,000)\nUse the Move item content () and Select/Move item () tools, and adjust the Scale value, to compose the map so that all of Wales is visible\nExperiment with making fine adjustments to the scale by holding down the Ctrl key and scrolling the mouse wheel\nOnce you’re satisfied with the scaling, framing, and position, freeze the view in place by checking the box under the lock icon () for Map 1 in the Items panel\nIn the Map Canvas window, adjust layer styles:\n\nChoose colours, border widths, and fonts that emphasise Wales and the difference between the outline of Wales (physical coast) and Principal Areas boundaries (non‑physical political construct)\n\nTo force the Print Layout to reflect changes, select either:\n\nThe Refresh icon () in the Print Layout window\nThe Update Map Preview icon () under Item Properties in the Map Canvas window\n\nEnsure Map 1 is still selected\nClick on the Item Properties tab and add a Frame\nModify the frame’s background colour appropriate for representing the ocean\n\n\n\n\n\n\n\nTipModifying layers\n\n\n\nYou can modify the Layout and Item Properties of any item selected in the Item window. Note how the options under Layout and Item Properties tab update depending on what item you’ve selected. Remember that: (i) Order matters - the order in which map items are listed is how they are also stacked on top of one another in the print layout, and (ii) some layer properties (e.g. layer order, style, labeling) are controlled in the Map Canvas.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html#adding-a-scale-bar-north-arrow-and-grid",
     "href": "chapters/e02.html#adding-a-scale-bar-north-arrow-and-grid",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "2.3  Adding a scale bar, north arrow, and grid",
     "text": "2.3  Adding a scale bar, north arrow, and grid\n\nAdd a scale bar:\n\nClick Add Item &gt; Add Scale Bar\nClick on the map to place it (you can move it later)\nSelect the scale bar under Items\nClick the Item Properties tab\nAdjust the scale bar’s properties, notably Style, Scalebar units, Segments, Frame, and Background\n\nAdd a north arrow:\n\nClick Add Item &gt; Add North Arrow\nClick on the map to place it (you can move it later)\nSelect the north arrow under Items\nClick the Item Properties tab\nUnder SVG Images, search arrow and choose a suitable north arrow\nAdjust the north arrow’s properties, notably Fill color and Stroke color\n\nAdd a grid (aka graticule):\n\nSelect Map 1 under Items\nClick the Item Properties tab\nExpand Grids\nClick Add a new grid ()\nClick Grid 1 &gt; Modify Grid...\nSet CRS to EPSG:4326 - WGS 84\nSet X and Y intervals to 1 degrees\nCheck Draw Coordinates\nAdjust the grid’s properties, notably Grid type, Frame, and Draw Coordinates. Can you adjust the labels for readability, soften the gridlines, and reduce unnecessary trailing zeros?\n\n\n\n\n\n\n\n\nTipReadjustments needed\n\n\n\nYou may find that some of the map items - notably the coordinates - are now beyond the edge of the page. These will be lost when the map is exported. In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see Section 2.2). Check how using guides can aid you in aligning map items perfectly on the page.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html#adding-labels-and-a-legend",
     "href": "chapters/e02.html#adding-labels-and-a-legend",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "2.4  Adding labels, and a legend",
     "text": "2.4  Adding labels, and a legend\n\nAdd a map title label:\n\nClick Add Item &gt; Add Label\nClick on the map to place it (you can move it later)\nSelect the label under Items\nClick the Item Properties tab\nAdjust the label’s properties, notably Main Properties, Font, Rotation, Frame, and Background\n\nAdd a short caption label. See FAQ for how to have both bold and normal text in the caption at once\nAdd a legend:\n\nClick Add Item &gt; Add Legend\nClick on the map to place it (you can move it later)\nSelect the legend under Items\nClick the Item Properties tab\nUncheck Auto update to enable modifications to the legend\nExperiment with the legend toolbar icons () to improve the legend\nAdjust the legend’s properties, notably Arrangement, Fonts and Text Formatting, Columns, Symbol, Spacing, Frame, and Background",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html#adding-raster-data",
     "href": "chapters/e02.html#adding-raster-data",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "2.5  Adding raster data",
     "text": "2.5  Adding raster data\n\nAdd your first raster layer in QGIS. From the menu bar, click Layer &gt; Add Layer &gt; Add Raster Layer...\nClick the Browse icon () and navigate to the folder where the data is stored, i.e. GEG276\nOpen the Wales_mean_windspeed folder and click on any of the .tif raster layers\nClick Open &gt; Add &gt; Close\nOpen the layer’s Properties...\nUnder Render type, select Singleband pseudocolor\nUnder Color ramp, select an appropriate colour ramp for the data (or pick one you just really like!)\nClick OK\nPlay around with Wales Principal Areas and the windspeed data - by adjusting the order of layers in the Layers panel, and by modifying the Properties... of each layer - so that both are visible at the same time. Hint: modifying Fill or Transparency properties may do nicely…\n\n\n\n\n\n\n\nImportantReadjustments needed\n\n\n\nAvoid semi‑transparent symbology that breaks the link between map colours and legend colours.\n\n\n\nIn the Print Layout window, select Map 1 and click Update Map Preview under the Item Properties tab\nIf the colour scale for the raster layer does not appear in the legend, add it\nExperiment with improving the aesthetics of the updated legend\nSelect Map 1 from the Items panel\nUnder Item Properties, check the Lock layers and Lock styles for layers to prevent further changes to the map. Uncheck if you need to make edits",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html#adding-an-inset-map",
     "href": "chapters/e02.html#adding-an-inset-map",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "2.6  Adding an inset map",
     "text": "2.6  Adding an inset map\n\nAdd a second map (see Section 2.2) to provide an inset showing the British Isles (e.g. at a scale of 1:20,000,000).\nModify:\n\nWhich layers should be displayed (by turning visibility on and off, or changing layer order)\nTheir symbology (see Section 1.3);\n\n\n\n\n\n\n\n\nTipModifying layers\n\n\n\nPlace emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note that, because your map of Wales is locked, it’s not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.\n\n\n\nSelect Map 1 from the Items panel\nUnder Item Properties, expand the Overviews tab\nClick Add a new overview ()\nClick Overview 1\nSet the Map frame to your Wales map\nAdjust the Frame style to draw a hollow rectangle with a thick line, to easily show the main map’s extent\nExperiment further, especially with Fill color, Stroke color, and Join style\n\n\n\n\n\n\n\nTipKeeping things tidy\n\n\n\nProjects can get rapidly out of control when multiple layers are used to build a map. It’s important to remove redundant layers and label items appropriately. E.g. try renaming Map 1 to Main, and Map 2 to Inset. This will help when you need to revisit and adjust your maps.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
     "objectID": "chapters/e02.html#exporting-your-map",
     "href": "chapters/e02.html#exporting-your-map",
-    "title": "2  Composing maps in QGIS",
+    "title": "2  Composing maps",
     "section": "2.7  Exporting your map",
     "text": "2.7  Exporting your map\n\nEnsure each map item has Lock layers checked. This helps ensure the chosen map scale (1:1,000,000) reflects real‑world distances\nClick Layout &gt; Export as PDF... &gt; Save, and save in a suitable location\nSet PDF Export Options as follows for best results:\n\n☑ Always export a vectors\nAppend georeferece information\nExport RDF metadata (title, author, etc.)\nText export: Always Export Text as Paths\nImage compression: Lossless\nCreate Geospatial PDF\n☑ Disable tiled raster layer exports\n☑ Simplify geometries to reduce output file size\n\nClick Save. Congratulations - you’ve created your first QGIS map assignment. Now make any revisions to be able to submit the best Map 1 that you can!\n\n\n\n\n\n\n\nNoteLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nBe familiar with the QGIS Map Layout and its relationship to the QGIS Project window.\nKnow how to add and arrange essential map features and adjust their properties to make a map attractive.\nKnow how to configure multiple map items, legends, grids, scales and labels in a map layout.\nBe able to export a map layout for inclusion in a document or presentation.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps in QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
   },
   {
