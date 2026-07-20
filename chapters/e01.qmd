@@ -10,26 +10,28 @@ To master QGIS, one must start with the basics. This exercise introduces the fou
 To become familiar with the Quantum GIS (QGIS) environment for visualising and processing geospatial data. You will learn how to open various types of data layer, adjust the way they look, explore their attributes, and select features for further analysis. 
 :::
 
-## <input type="checkbox"> Starting up
+## Starting up
 
 (@) **Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you
 Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it'll appear in File Explorer under your OneDrive section**
 
 (@) Launch `QGIS`. This could be on a University computer, via a remote desktop, or on your own computer
 
-(@) From the menu bar, click `Project` > `New`. Find the shortcut icon to create a new project
+(@) From the menu bar, click `Project` → `New`. Find the shortcut icon to create a new project
 
-(@) Add your first vector layer in QGIS. From the menu bar, click `Layer` > `Add Layer` > `Add Vector Layer...`
+(@) Add your first vector layer in QGIS. From the menu bar, click `Layer` → `Add Layer` → `Add Vector Layer...`
 
-(@) Click the `Browse` icon (![](figs/Browse.png){width=3%}) and navigate to the folder where the data is stored, i.e. **`GEG276`**
+(@) Click the `Browse` icon (![](figs/Browse.png){width=3%}) 
+
+(@) Navigate to the folder where the data is stored, i.e. **`GEG276`**
 
 (@) Open the `British_Isles_land_polygons` folder and click on the corresponding `.gpkg` vector layer
 
-(@) Click `Open` > `Add` > `Close`. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the `Layers` panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas
+(@) Click `Open` → `Add` → `Close`. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the `Layers` panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas
 
 ![](figs/Layers.png){fig-align='center' width=50%}
 
-## <input type="checkbox"> Navigation
+## Navigation
 
 (@) Use the `Map Navigation Toolbar` to explore this dataset by panning and zooming
 
@@ -41,17 +43,17 @@ Open the folder and click Sync in the top toolbar. This will download and sync t
 
 (@) Once lost, right-click on the layer in the `Layers` panel and click `Zoom to Layer(s)` to easily return to view that layer
 
-## <input type="checkbox"> Adjusting style properties {#sec-properties}
+## Adjusting style properties {#sec-properties}
 
-(@) From the `Layers` panel, right-click on `British_Isles_land_polygons` and click `Properties...` > `Symbology`. A useful shortcut to `Properties` is to double-click the layer
+(@) From the `Layers` panel, right-click on `British_Isles_land_polygons` and click `Properties...` → `Symbology`. A useful shortcut to `Properties` is to double-click the layer
 
 (@) Click `Simple Fill` and experiment with changing the layer symbology's colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer
 
 ![](figs/SimpleFill.png){fig-align='center' width=25%}
 
-(@) From the menu bar, click `Project` > `Save` and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!
+(@) From the menu bar, click `Project` → `Save` and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!
 
-## <input type="checkbox"> Measuring geospatial objects
+## Measuring geospatial objects
 
 (@) Click the drop-down arrow next to the `Measure` icon to select the appropriate tool for measuring:
   
@@ -64,7 +66,7 @@ Open the folder and click Sync in the top toolbar. This will download and sync t
 
 (@) Share your answers on Menti! Being able to measure geographic features is a fundamental objective of GIS analysis
 
-## <input type="checkbox"> Exploring the Attribute Table
+## Exploring the Attribute Table {#sec-attrib}
 
 (@) From the `Layers` panel, right-click on `British_Isles_land_polygons` and click `Open Attribute Table`
 
@@ -94,7 +96,7 @@ An attribute table is a fundamental part of all GIS datasets. Each row of the ta
 
 (@) Click the `Deselect features` icon (![](figs/Deselect.png){width=3%}) to deselect the current selection. These functions will be very useful later on
 
-## <input type="checkbox"> Arranging layers 
+## Arranging layers 
 
 (@) Add the `Wales_Principal_Areas.gpkg` layer in the `UK_Boundaries` folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the `Layers` panel
 
@@ -120,13 +122,13 @@ Notice how the seaward political (Principal Area) boundary of Wales goes beyond 
 
 (@) Use the `Value` drop-down menu to select the attribute `name`
 
-(@) Click `Classify` > `OK`. How colourful!
+(@) Click `Classify` → `OK`. How colourful!
 
-## <input type="checkbox"> Labelling layers
+## Labelling layers
 
 (@) Select `Wales_Principal_Areas layer` in the `Layers` panel
 
-(@) From the menu bar, click `Layer` > `Labelling`. Find the shortcuts to this window (hint - check out `Properties...`) 
+(@) From the menu bar, click `Layer` → `Labelling`. Find the shortcuts to this window (hint - check out `Properties...`) 
 
 (@) Use the drop-down menu to change the labelling source from `No Labels` to `Single Labels`
 
@@ -151,7 +153,7 @@ Notice how the seaward political (Principal Area) boundary of Wales goes beyond 
 Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the `Labelling` window and you are encouraged to experiment.
 :::
 
-## <input type="checkbox"> Adding and filtering data
+## Adding and filtering data
 
 (@) Add the vector layer `Wales_operational_windfarms.gpkg` to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales
 
@@ -161,7 +163,7 @@ Now that the Principal Areas have been labelled, zoom out. Notice how QGIS choos
 
 (@) Label the wind farms by their name or by their generation capacity
 
-(@) Add the vector layer `gis_osm_roads_free_1.gpkg`, which is in the folder `British_Isles_geofabrik` > `wales`. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display
+(@) Add the vector layer `gis_osm_roads_free_1.gpkg`, which is in the folder `British_Isles_geofabrik` → `wales`. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display
 
 (@) Once again, for this layer:
 
@@ -172,11 +174,11 @@ Now that the Principal Areas have been labelled, zoom out. Notice how QGIS choos
 (@) There is a lot of data here! So let's subset it. There are many ways to make subsets of data layers to select only the data you need or that you want to display. To filter the data universally: 
 
     i. Right-click on the roads layer and click `Filter...`
-    ii. This tool allows you to easily see all the unique values contained in each field (or column) of the attribute table. Click `fclass` > `All`. You can now see all the unique classes of road in the vector layer
+    ii. This tool allows you to easily see all the unique values contained in each field (or column) of the attribute table. Click `fclass` → `All`. You can now see all the unique classes of road in the vector layer
     iii. Under `Provider Specific Filter Expression`, type `"fclass" IN ('primary', 'trunk', 'motorway')`. Make sure of precise punctuation and spacing
     iv. Click `OK`. Your map should now only display roads classed as primary and secondary. A funnel icon (![](figs/Filter.png){width=3%}) has also appeared next to the layer in name in the `Layers' panel, to remind you a filter has been applied
     v. Experiment with the filter to see which combinations of data you can display
-    vi. When you have finished, click `Clear` > `OK` to remove the filter and close the tool
+    vi. When you have finished, click `Clear` → `OK` to remove the filter and close the tool
 
 (@) To filter the data by defining what is presented in the map:
 
@@ -185,9 +187,9 @@ Now that the Principal Areas have been labelled, zoom out. Notice how QGIS choos
     iii. Delete all the road classes except `primary`, `trunk`, and `motorway`. See if you can make this task easier for yourself by using the `Shift` and `Ctrl` keys...
     iv. Double-click the line symbol per category to choose a suitable symbology for these remaining roads (e.g. thick red for primary, very thick light blue for motorway)
 
-(@) Add the `gis_osm_waterways_free_1.gpkg` vector layer in the  `British_Isles_geofabrik` > `wales` folders. What colour would be best for these?
+(@) Add the `gis_osm_waterways_free_1.gpkg` vector layer in the  `British_Isles_geofabrik` → `wales` folders. What colour would be best for these?
 
-## <input type="checkbox"> Adding external data
+## Adding external data
 
 (@) Navigate to [datamap.gov.wales](https://datamap.gov.wales/){target='_blank'}
 
@@ -209,17 +211,18 @@ Now that the Principal Areas have been labelled, zoom out. Notice how QGIS choos
 Searching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon
 :::
 
-## <input type="checkbox"> Have you finished? 
+## Have you finished? 
 
 (@) Congratulations! You've learned the basics of QGIS. Make sure that you've understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.
 
 ::: {.callout-note}
 # Learning outcomes
 
-By the end of this exercise you should: 
+By the end of this exercise you should be able to: 
 
-1. Be able to create a new QGIS project, add vector layers, change their style and navigate around them. 
-2. Understand how to re-order layers, switch layer visibility on and off, and remove layers. 
-3. Appreciate the relationship between GIS layers and attribute tables, and be able to label features. 
-4. Know how to download data for use in QGIS.
+1. Create and manage a QGIS project by adding vector layers from various sources and using the navigation tools to pan, zoom, and return to a layer's extent
+2. Adjust the appearance of spatial data through symbology, layer ordering, and labelling to build a clear, readable map
+3. Explore the attribute table to understand how features relate to their attributes, sorting records and selecting features reciprocally between table and map canvas
+4. Measure and filter geographic data by obtaining lengths and areas, converting between units, and subsetting layers using filter expressions and categorised symbology
+5. Appreciate how cartographic and administrative conventions shape spatial representation, from automated label placement to the way boundaries are drawn
 :::

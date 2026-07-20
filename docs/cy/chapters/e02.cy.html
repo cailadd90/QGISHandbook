@@ -163,13 +163,16 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Cynnwys</h2>
    
   <ul>
-<li><a href="#creating-a-print-layout" id="toc-creating-a-print-layout" class="nav-link active" data-scroll-target="#creating-a-print-layout"><span class="header-section-number">2.1</span> <input type="checkbox"> Creating a print layout</a></li>
-  <li><a href="#sec-mapitem" id="toc-sec-mapitem" class="nav-link" data-scroll-target="#sec-mapitem"><span class="header-section-number">2.2</span> <input type="checkbox"> Adding and adjusting a map item</a></li>
-  <li><a href="#adding-a-scale-bar-north-arrow-and-grid" id="toc-adding-a-scale-bar-north-arrow-and-grid" class="nav-link" data-scroll-target="#adding-a-scale-bar-north-arrow-and-grid"><span class="header-section-number">2.3</span> <input type="checkbox"> Adding a scale bar, north arrow, and grid</a></li>
-  <li><a href="#adding-labels-and-a-legend" id="toc-adding-labels-and-a-legend" class="nav-link" data-scroll-target="#adding-labels-and-a-legend"><span class="header-section-number">2.4</span> <input type="checkbox"> Adding labels, and a legend</a></li>
-  <li><a href="#adding-raster-data" id="toc-adding-raster-data" class="nav-link" data-scroll-target="#adding-raster-data"><span class="header-section-number">2.5</span> <input type="checkbox"> Adding raster data</a></li>
-  <li><a href="#adding-an-inset-map" id="toc-adding-an-inset-map" class="nav-link" data-scroll-target="#adding-an-inset-map"><span class="header-section-number">2.6</span> <input type="checkbox"> Adding an inset map</a></li>
-  <li><a href="#exporting-your-map" id="toc-exporting-your-map" class="nav-link" data-scroll-target="#exporting-your-map"><span class="header-section-number">2.7</span> <input type="checkbox"> Exporting your map</a></li>
+<li><a href="#nodau-dysgu" id="toc-nodau-dysgu" class="nav-link active" data-scroll-target="#nodau-dysgu"><span class="header-section-number">2.1</span> Nodau dysgu</a></li>
+  <li><a href="#creu-cynllun-argraffu" id="toc-creu-cynllun-argraffu" class="nav-link" data-scroll-target="#creu-cynllun-argraffu"><span class="header-section-number">2.2</span> <input type="checkbox"> Creu cynllun argraffu</a></li>
+  <li><a href="#sec-mapitem" id="toc-sec-mapitem" class="nav-link" data-scroll-target="#sec-mapitem"><span class="header-section-number">2.3</span> <input type="checkbox"> Ychwanegu ac addasu eitem map</a></li>
+  <li><a href="#ychwanegu-bar-graddfa-saeth-ogleddol-a-grid" id="toc-ychwanegu-bar-graddfa-saeth-ogleddol-a-grid" class="nav-link" data-scroll-target="#ychwanegu-bar-graddfa-saeth-ogleddol-a-grid"><span class="header-section-number">2.4</span> <input type="checkbox"> Ychwanegu bar graddfa, saeth ogleddol, a grid</a></li>
+  <li><a href="#ychwanegu-labeli-ac-allwedd" id="toc-ychwanegu-labeli-ac-allwedd" class="nav-link" data-scroll-target="#ychwanegu-labeli-ac-allwedd"><span class="header-section-number">2.5</span> <input type="checkbox"> Ychwanegu labeli, ac allwedd</a></li>
+  <li><a href="#ychwanegu-data-raster" id="toc-ychwanegu-data-raster" class="nav-link" data-scroll-target="#ychwanegu-data-raster"><span class="header-section-number">2.6</span> <input type="checkbox"> Ychwanegu data raster</a></li>
+  <li><a href="#addasiadau-sydd-eu-hangen-1" id="toc-addasiadau-sydd-eu-hangen-1" class="nav-link" data-scroll-target="#addasiadau-sydd-eu-hangen-1"><span class="header-section-number">3</span> Addasiadau sydd eu hangen</a></li>
+  <li><a href="#ychwanegu-map-mewnosodiad" id="toc-ychwanegu-map-mewnosodiad" class="nav-link" data-scroll-target="#ychwanegu-map-mewnosodiad"><span class="header-section-number">3.1</span> <input type="checkbox"> Ychwanegu map mewnosodiad</a></li>
+  <li><a href="#allforio-eich-map" id="toc-allforio-eich-map" class="nav-link" data-scroll-target="#allforio-eich-map"><span class="header-section-number">3.2</span> <input type="checkbox"> Allforio eich map</a></li>
+  <li><a href="#canlyniadau-dysgu" id="toc-canlyniadau-dysgu" class="nav-link" data-scroll-target="#canlyniadau-dysgu"><span class="header-section-number">4</span> Canlyniadau dysgu</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -189,30 +192,20 @@ ul.task-list li input[type="checkbox"] {
 
 
 </header><blockquote class="blockquote">
-<p><strong>Date of practical:</strong> 9th October 2025</p>
+<p><strong>Dyddiad yr ymarfer:</strong> 9 Hydref 2025</p>
 </blockquote>
-<p>Communication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and the final product represents your “Map 1”. assignment.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning aims
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To create functionally complete maps in QGIS for print or digital output. You will learn how to create a 1:1,000,000 scale map of Wales illustrating mean wind speed and county boundaries.</p>
-</div>
-</div>
-<section id="creating-a-print-layout" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="creating-a-print-layout">
-<span class="header-section-number">2.1</span> <input type="checkbox"> Creating a print layout</h2>
+<p>Mae cyfathrebu data a chysyniadau daearyddol drwy fapiau yn sgil sylfaenol i wyddonwyr gofodol. Mae creu mapiau yn gofyn am y gallu i’w gwneud yn gyflawn, yn gywir ac yn ymarferol, a’r ddawn i’w gwneud yn ddiddorol ac yn ddeniadol. Mae’r ymarfer hwn yn cyflwyno ffenestr Cynllun Argraffu QGIS, ac mae’r cynnyrch terfynol yn cynrychioli eich aseiniad “Map 1”.</p>
+<section id="nodau-dysgu" class="level2 nodyn-galwad" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="nodau-dysgu">
+<span class="header-section-number">2.1</span> Nodau dysgu</h2>
+<p>Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. Byddwch yn dysgu sut i greu map graddfa 1:1,000,000 o Gymru sy’n dangos cyflymder cymedrig y gwynt a ffiniau siroedd.</p>
+</section><section id="creu-cynllun-argraffu" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="creu-cynllun-argraffu">
+<span class="header-section-number">2.2</span> <input type="checkbox"> Creu cynllun argraffu</h2>
 <ol class="example" type="1">
-<li><p>Launch QGIS and create a new project</p></li>
-<li><p>Import the <code>British_Isles_land_polygons.gpkg</code>, <code>Wales_border.gpkg</code>, and <code>Wales_Principal_Areas.gpkg</code> layers (the latter two are in the <code>UK_Boundaries</code> folder)</p></li>
-<li><p>Label the Principal Areas of Wales in Welsh or English</p></li>
-<li><p>Click <code>Project</code> &gt; <code>New Print Layout...</code> (and find the shortcuts to this window)</p></li>
-<li><p>Give the print layout an appropriate title</p></li>
+<li><p>Lansio QGIS a chreu prosiect newydd</p></li>
+<li><p>Mewnforio’r haenau <code>British_Isles_land_polygons.gpkg</code>, <code>Wales_border.gpkg</code>, a <code>Wales_Principal_Areas.gpkg</code> (mae’r ddau olaf yn y ffolder <code>UK_Boundaries</code>)</p></li>
+<li><p>Labelwch Brif Ardaloedd Cymru yn y Gymraeg neu’r Saesneg</p></li>
+<li><p>Cliciwch <code>Prosiect</code> &gt; <code>Cynllun Argraffu Newydd...</code> (a dewch o hyd i’r llwybrau byr i’r ffenestr hon)</p></li>
+<li><p>Rhowch deitl priodol i’r cynllun print</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -220,66 +213,58 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Multiple layouts
+<span class="screen-reader-only">Tip</span>Cynlluniau lluosog
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can create more than one print layout. Use <code>Project</code> &gt; <code>Layout Manager...</code> to easily access and organise layouts associated with your particular QGIS project.</p>
+<p>Gallwch greu mwy nag un cynllun argraffu. Defnyddiwch <code>Project</code> &gt; <code>Layout Manager...</code> i gael mynediad hawdd at gynlluniau sy’n gysylltiedig â’ch prosiect QGIS penodol a’u trefnu.</p>
 </div>
 </div>
 <ol start="6" class="example" type="1">
-<li><p>Arrange the Map Canvas and Print Layout windows so you can see both at once. Subsequent instructions refer to the Print Layout window unless otherwise stated</p></li>
-<li>
-<p>Change the page orientation to A4 portrait:</p>
+<li><p>Trefnwch ffenestri Cynfas y Map a’r Cynllun Argraffu fel y gallwch weld y ddau ar unwaith. Mae cyfarwyddiadau dilynol yn cyfeirio at y ffenestr Cynllun Argraffu oni nodir yn wahanol.</p></li>
+<li><p>Newid cyfeiriadedd y dudalen i bortread A4:</p></li>
+</ol>
 <ol type="i">
-<li>Right‑click on the blank print layout</li>
-<li>Click <code>Page Properties...</code>
+<li>Cliciwch ar y dde ar y cynllun argraffu gwag</li>
+<li>Cliciwch ar <code>Priodweddau Tudalen...</code>
 </li>
 </ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="figs/PageProperties.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
-</figure>
-</div>
+<p><img src="figs/PageProperties.png" class="img-fluid" data-ffig-alinio="canol" data-lled="25%"></p>
 <ol start="3" type="i">
-<li>Change <code>Size</code> to <code>A4</code>
+<li>Newidiwch <code>Maint</code> i <code>A4</code>
 </li>
-<li>Change <code>Orientation</code> to <code>Portrait</code>
+<li>Newid <code>Cyfeiriadedd</code> i <code>Portread</code>
 </li>
-</ol>
-</li>
-</ol></section><section id="sec-mapitem" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="sec-mapitem">
-<span class="header-section-number">2.2</span> <input type="checkbox"> Adding and adjusting a map item</h2>
+</ol></section><section id="sec-mapitem" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="sec-mapitem">
+<span class="header-section-number">2.3</span> <input type="checkbox"> Ychwanegu ac addasu eitem map</h2>
 <ol start="8" class="example" type="1">
-<li><p>Click <code>Add Item</code> &gt; <code>Add Map</code> (look for the shortcut)</p></li>
-<li><p>Draw a map onto the print layout. <code>Map 1</code> should now appear under the <code>Item</code> tab</p></li>
+<li><p>Cliciwch <code>Ychwanegu Eitem</code> &gt; <code>Ychwanegu Map</code> (chwiliwch am y llwybr byr)</p></li>
+<li><p>Lluniwch fap ar y cynllun argraffu. Dylai <code>Map 1</code> ymddangos nawr o dan y tab <code>Eitem</code></p></li>
 </ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="figs/Item.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
-</figure>
-</div>
+<p><img src="ffigiau/Eitem.png" class="img-fluid" data-alinio-ffig="canol" data-lled="25%"></p>
 <ol start="10" class="example" type="1">
-<li><p>Adjust the map using the squares around the edges</p></li>
-<li><p>Select <code>Map 1</code></p></li>
-<li><p>Set <code>Scale</code> to <code>1000000</code> (i.e. 1:1,000,000)</p></li>
-<li><p>Use the <code>Move item content</code> (<img src="figs/MoveItemContent.png" class="img-fluid" style="width:3.0%">) and <code>Select/Move item</code> (<img src="figs/SelectMoveItem.png" class="img-fluid" style="width:3.0%">) tools, and adjust the <code>Scale</code> value, to compose the map so that all of Wales is visible</p></li>
-<li><p>Experiment with making fine adjustments to the scale by holding down the <code>Ctrl</code> key and scrolling the mouse wheel</p></li>
-<li><p>Once you’re satisfied with the scaling, framing, and position, freeze the view in place by checking the box under the lock icon (<img src="figs/LockCheck.png" class="img-fluid" style="width:3.0%">) for <code>Map 1</code> in the <code>Items</code> panel</p></li>
-<li>
-<p>In the Map Canvas window, adjust layer styles:</p>
-<ol type="i">
-<li>Choose colours, border widths, and fonts that emphasise Wales and the difference between the outline of Wales (physical coast) and Principal Areas boundaries (non‑physical political construct)</li>
+<li><p>Addaswch y map gan ddefnyddio’r sgwariau o amgylch yr ymylon</p></li>
+<li><p>Dewiswch <code>Map 1</code></p></li>
+<li><p>Gosodwch <code>Scale</code> i <code>1000000</code> (h.y. 1:1,000,000)</p></li>
+<li><p>Defnyddiwch yr offer <code>Symud cynnwys eitem</code> (<img src="figs/MoveItemContent.png" class="img-fluid" style="width:3.0%">) a <code>Dewis/Symud eitem</code> (<img src="figs/SelectMoveItem.png" class="img-fluid" style="width:3.0%">), ac addaswch y gwerth <code>Graddfa</code>, i gyfansoddi’r map fel bod Cymru gyfan yn weladwy.</p></li>
+<li><p>Arbrofwch gyda gwneud addasiadau manwl i’r raddfa drwy ddal yr allwedd <code>Ctrl</code> i lawr a sgrolio olwyn y llygoden</p></li>
+<li><p>Unwaith y byddwch chi’n fodlon â’r graddfa, y fframio, a’r lleoliad, rhewch yr olygfa yn ei lle drwy dicio’r blwch o dan yr eicon clo (<img src="figs/LockCheck.png" class="img-fluid" style="width:3.0%">) ar gyfer <code>Map 1</code> yn y panel <code>Eitemau</code></p></li>
+<li><p>Yn ffenestr y Canfas Map, addaswch arddulliau haen:</p></li>
 </ol>
-</li>
-<li>
-<p>To force the Print Layout to reflect changes, select either:</p>
 <ol type="i">
-<li>The <code>Refresh</code> icon (<img src="figs/RefreshView.png" class="img-fluid" style="width:3.0%">) in the Print Layout window</li>
-<li>The <code>Update Map Preview</code> icon (<img src="figs/RefreshView.png" class="img-fluid" style="width:3.0%">) under <code>Item Properties</code> in the Map Canvas window</li>
+<li>Dewiswch liwiau, lledau ffiniau, a ffontiau sy’n pwysleisio Cymru a’r gwahaniaeth rhwng amlinelliad Cymru (arfordir ffisegol) a ffiniau’r Prif Ardaloedd ( adeiladwaith gwleidyddol anffisegol )</li>
 </ol>
-</li>
-<li><p>Ensure <code>Map 1</code> is still selected</p></li>
-<li><p>Click on the <code>Item Properties</code> tab and add a <code>Frame</code></p></li>
-<li><p>Modify the frame’s background colour appropriate for representing the ocean</p></li>
+<ol start="17" class="example" type="1">
+<li>I orfodi’r Cynllun Argraffu i adlewyrchu newidiadau, dewiswch naill ai:</li>
+</ol>
+<ol type="i">
+<li>Yr eicon <code>Adnewyddu</code> (<img src="figs/RefreshView.png" class="img-fluid" style="width:3.0%">) yn y ffenestr Cynllun Argraffu</li>
+<li>Yr eicon <code>Diweddaru Rhagolwg Map</code> (<img src="figs/RefreshView.png" class="img-fluid" style="width:3.0%">) o dan <code>Priodweddau Eitem</code> yn ffenestr y Canfas Map</li>
+</ol>
+<ol start="18" class="example" type="1">
+<li><p>Sicrhewch fod <code>Map 1</code> wedi’i ddewis o hyd</p></li>
+<li><p>Cliciwch ar y tab <code>Priodweddau Eitem</code> ac ychwanegwch <code>Ffrâm</code></p></li>
+<li><p>Addaswch liw cefndir y ffrâm yn briodol ar gyfer cynrychioli’r cefnfor</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -287,62 +272,63 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Modifying layers
+<span class="screen-reader-only">Tip</span>Addasu haenau
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can modify the <code>Layout</code> and <code>Item Properties</code> of any item selected in the <code>Item</code> window. Note how the options under <code>Layout</code> and <code>Item Properties</code> tab update depending on what item you’ve selected. Remember that: (i) Order matters - the order in which map items are listed is how they are also stacked on top of one another in the print layout, and (ii) some layer properties (e.g. layer order, style, labeling) are controlled in the Map Canvas.</p>
+<p>Gallwch addasu <code>Layout</code> a <code>Item Properties</code> unrhyw eitem a ddewisir yn y ffenestr <code>Item</code>. Nodwch sut mae’r opsiynau o dan y tab <code>Layout</code> a <code>Item Properties</code> yn diweddaru yn dibynnu ar ba eitem rydych chi wedi’i dewis. Cofiwch: (i) Mae trefn yn bwysig - y drefn y mae eitemau map wedi’u rhestru yw sut maen nhw hefyd wedi’u pentyrru ar ben ei gilydd yn y cynllun argraffu, a (ii) mae rhai priodweddau haen (e.e. trefn haen, arddull, labelu) yn cael eu rheoli yn y Map Canvas.</p>
 </div>
 </div>
-</section><section id="adding-a-scale-bar-north-arrow-and-grid" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="adding-a-scale-bar-north-arrow-and-grid">
-<span class="header-section-number">2.3</span> <input type="checkbox"> Adding a scale bar, north arrow, and grid</h2>
+</section><section id="ychwanegu-bar-graddfa-saeth-ogleddol-a-grid" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="ychwanegu-bar-graddfa-saeth-ogleddol-a-grid">
+<span class="header-section-number">2.4</span> <input type="checkbox"> Ychwanegu bar graddfa, saeth ogleddol, a grid</h2>
 <ol start="21" class="example" type="1">
-<li>
-<p>Add a scale bar:</p>
+<li>Ychwanegu bar graddfa:</li>
+</ol>
 <ol type="i">
-<li>Click <code>Add Item</code> &gt; <code>Add Scale Bar</code>
+<li>Cliciwch <code>Ychwanegu Eitem</code> &gt; <code>Ychwanegu Bar Graddfa</code>
 </li>
-<li>Click on the map to place it (you can move it later)</li>
-<li>Select the scale bar under <code>Items</code>
+<li>Cliciwch ar y map i’w osod (gallwch ei symud yn ddiweddarach)</li>
+<li>Dewiswch y bar graddfa o dan <code>Eitemau</code>
 </li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Adjust the scale bar’s properties, notably <code>Style</code>, <code>Scalebar units</code>, <code>Segments</code>, <code>Frame</code>, and <code>Background</code>
+<li>Cliciwch y tab <code>Priodweddau Eitem</code>
+</li>
+<li>Addasu priodweddau’r bar graddfa, yn enwedig <code>Arddull</code>, <code>Unedau'r bar graddfa</code>, <code>Segmentau</code>, <code>Ffrâm</code>, a <code>Cefndir</code>
 </li>
 </ol>
-</li>
-<li>
-<p>Add a north arrow:</p>
+<ol start="22" class="example" type="1">
+<li>Ychwanegu saeth gogleddol:</li>
+</ol>
 <ol type="i">
-<li>Click <code>Add Item</code> &gt; <code>Add North Arrow</code>
+<li>Cliciwch <code>Ychwanegu Eitem</code> &gt; <code>Ychwanegu Saeth y Gogledd</code>
 </li>
-<li>Click on the map to place it (you can move it later)</li>
-<li>Select the north arrow under <code>Items</code>
+<li>Cliciwch ar y map i’w osod (gallwch ei symud yn ddiweddarach)</li>
+<li>Dewiswch y saeth ogleddol o dan <code>Eitemau</code>
 </li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Under <code>SVG Images</code>, search <code>arrow</code> and choose a suitable north arrow</li>
-<li>Adjust the north arrow’s properties, notably <code>Fill color</code> and <code>Stroke color</code>
+<li>Cliciwch y tab <code>Priodweddau Eitem</code>
+</li>
+<li>O dan <code>SVG Images</code>, chwiliwch am <code>arrow</code> a dewiswch saeth ogleddol addas</li>
+<li>Addasu priodweddau saeth y gogledd, yn enwedig <code>Lliw llenwi</code> a <code>Lliw strôc</code>
 </li>
 </ol>
-</li>
-<li>
-<p>Add a grid (aka graticule):</p>
-<ol type="i">
-<li>Select <code>Map 1</code> under <code>Items</code>
-</li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Expand <code>Grids</code>
-</li>
-<li>Click <code>Add a new grid</code> (<img src="figs/AddANewGrid.png" class="img-fluid" style="width:3.0%">)</li>
-<li>Click <code>Grid 1</code> &gt; <code>Modify Grid...</code>
-</li>
-<li>Set <code>CRS</code> to <code>EPSG:4326 - WGS 84</code>
-</li>
-<li>Set <code>X</code> and <code>Y</code> intervals to <code>1</code> degrees</li>
-<li>Check <code>Draw Coordinates</code>
-</li>
-<li>Adjust the grid’s properties, notably <code>Grid type</code>, <code>Frame</code>, and <code>Draw Coordinates</code>. Can you adjust the labels for readability, soften the gridlines, and reduce unnecessary trailing zeros?</li>
+<ol start="23" class="example" type="1">
+<li>Ychwanegu grid (aka graticule):</li>
 </ol>
+<ol type="i">
+<li>Dewiswch <code>Map 1</code> o dan <code>Eitemau</code>
 </li>
+<li>Cliciwch y tab <code>Priodweddau Eitem</code>
+</li>
+<li>Ehangu <code>Gridiau</code>
+</li>
+<li>Cliciwch ar <code>Ychwanegu grid newydd</code> (<img src="figs/AddANewGrid.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Cliciwch <code>Grid 1</code> &gt; <code>Addasu Grid...</code>
+</li>
+<li>Gosodwch <code>CRS</code> i <code>EPSG:4326 - WGS 84</code>
+</li>
+<li>Gosodwch y cyfyngau <code>X</code> ac <code>Y</code> i <code>1</code> gradd</li>
+<li>Gwiriwch <code>Lluniwch Gyfesurynnau</code>
+</li>
+<li>Addaswch briodweddau’r grid, yn enwedig <code>Math o grid</code>, <code>Ffrâm</code>, a <code>Cyfesurynnau Lluniadu</code>. Allwch chi addasu’r labeli er mwyn eu gwneud yn ddarllenadwy, meddalu’r llinellau grid, a lleihau seroau diangen ar ôl?</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -350,88 +336,76 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Readjustments needed
+<span class="screen-reader-only">Tip</span>Addasiadau sydd eu hangen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You may find that some of the map items - notably the coordinates - are now beyond the edge of the page. These will be lost when the map is exported. In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.2</span></a>). Check how using <a href="faq.cy.html#sec-guides">guides</a> can aid you in aligning map items perfectly on the page.</p>
+<p>Efallai y byddwch yn gweld bod rhai o eitemau’r map - yn enwedig y cyfesurynnau - bellach y tu hwnt i ymyl y dudalen. Bydd y rhain yn cael eu colli pan fydd y map yn cael ei allforio. Yn yr achosion hyn, bydd angen i chi addasu maint y map o bryd i’w gilydd wrth i chi arbrofi gyda’r ffordd orau o drefnu eitemau map a’r capsiwn (gweler <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.3</span></a>). Gwiriwch sut y gall defnyddio <a href="faq.cy.html#sec-guides">canllawiau</a> eich cynorthwyo i alinio eitemau map yn berffaith ar y dudalen.</p>
 </div>
 </div>
-</section><section id="adding-labels-and-a-legend" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="adding-labels-and-a-legend">
-<span class="header-section-number">2.4</span> <input type="checkbox"> Adding labels, and a legend</h2>
+</section><section id="ychwanegu-labeli-ac-allwedd" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="ychwanegu-labeli-ac-allwedd">
+<span class="header-section-number">2.5</span> <input type="checkbox"> Ychwanegu labeli, ac allwedd</h2>
 <ol start="24" class="example" type="1">
-<li>
-<p>Add a map title label:</p>
+<li>Ychwanegu label teitl map:</li>
+</ol>
 <ol type="i">
-<li>Click <code>Add Item</code> &gt; <code>Add Label</code>
+<li>Cliciwch <code>Ychwanegu Eitem</code> &gt; <code>Ychwanegu Label</code>
 </li>
-<li>Click on the map to place it (you can move it later)</li>
-<li>Select the label under <code>Items</code>
+<li>Cliciwch ar y map i’w osod (gallwch ei symud yn ddiweddarach)</li>
+<li>Dewiswch y label o dan <code>Eitemau</code>
 </li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Adjust the label’s properties, notably <code>Main Properties</code>, <code>Font</code>, <code>Rotation</code>, <code>Frame</code>, and <code>Background</code>
+<li>Cliciwch y tab <code>Priodweddau Eitem</code>
+</li>
+<li>Addasu priodweddau’r label, yn enwedig <code>Priodweddau Prif</code>, <code>Ffont</code>, <code>Cylchdroi</code>, <code>Ffrâm</code>, a <code>Cefndir</code>
 </li>
 </ol>
-</li>
-<li><p>Add a short caption label. See <a href="@sec-font">FAQ</a> for how to have both bold and normal text in the caption at once</p></li>
-<li>
-<p>Add a legend:</p>
-<ol type="i">
-<li>Click <code>Add Item</code> &gt; <code>Add Legend</code>
-</li>
-<li>Click on the map to place it (you can move it later)</li>
-<li>Select the legend under <code>Items</code>
-</li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Uncheck <code>Auto update</code> to enable modifications to the legend</li>
-<li>Experiment with the legend toolbar icons (<img src="figs/LegendMenu.png" class="img-fluid" style="width:25.0%">) to improve the legend</li>
-<li>Adjust the legend’s properties, notably <code>Arrangement</code>, <code>Fonts and Text Formatting</code>, <code>Columns</code>, <code>Symbol</code>, <code>Spacing</code>, <code>Frame</code>, and <code>Background</code>
-</li>
+<ol start="25" class="example" type="1">
+<li><p>Ychwanegu label capsiwn byr. Gweler <a href="@sec-font">Cwestiynau Cyffredin</a> am sut i gael testun trwm a thestun arferol yn y capsiwn ar unwaith.</p></li>
+<li><p>Ychwanegu allwedd:</p></li>
 </ol>
+<ol type="i">
+<li>Cliciwch <code>Ychwanegu Eitem</code> &gt; <code>Ychwanegu Allwedd</code>
 </li>
-</ol></section><section id="adding-raster-data" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="adding-raster-data">
-<span class="header-section-number">2.5</span> <input type="checkbox"> Adding raster data</h2>
+<li>Cliciwch ar y map i’w osod (gallwch ei symud yn ddiweddarach)</li>
+<li>Dewiswch yr allwedd o dan <code>Eitemau</code>
+</li>
+<li>Cliciwch y tab <code>Priodweddau Eitem</code>
+</li>
+<li>Dad-diciwch <code>Diweddaru'n awtomatig</code> i alluogi addasiadau i’r allwedd</li>
+<li>Arbrofwch gyda’r eiconau bar offer allwedd (<img src="figs/LegendMenu.png" class="img-fluid" style="width:25.0%">) i wella’r allwedd</li>
+<li>Addaswch briodweddau’r allwedd, yn enwedig <code>Trefniant</code>, <code>Ffontiau a Fformatio Testun</code>, <code>Colofnau</code>, <code>Symbol</code>, <code>Bylchau</code>, <code>Ffrâm</code>, a <code>Cefndir</code>
+</li>
+</ol></section><section id="ychwanegu-data-raster" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="ychwanegu-data-raster">
+<span class="header-section-number">2.6</span> <input type="checkbox"> Ychwanegu data raster</h2>
 <ol start="27" class="example" type="1">
-<li><p>Add your first raster layer in QGIS. From the menu bar, click <code>Layer</code> &gt; <code>Add Layer</code> &gt; <code>Add Raster Layer...</code></p></li>
-<li><p>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) and navigate to the folder where the data is stored, i.e. <strong><code>GEG276</code></strong></p></li>
-<li><p>Open the <code>Wales_mean_windspeed</code> folder and click on any of the <code>.tif</code> raster layers</p></li>
-<li><p>Click <code>Open</code> &gt; <code>Add</code> &gt; <code>Close</code></p></li>
-<li><p>Open the layer’s <code>Properties...</code></p></li>
-<li><p>Under <code>Render type</code>, select <code>Singleband pseudocolor</code></p></li>
-<li><p>Under <code>Color ramp</code>, select an appropriate colour ramp for the data (or pick one you just really like!)</p></li>
-<li><p>Click <code>OK</code></p></li>
-<li><p>Play around with Wales Principal Areas and the windspeed data - by adjusting the order of layers in the <code>Layers</code> panel, and by modifying the <code>Properties...</code> of each layer - so that both are visible at the same time. Hint: modifying <code>Fill</code> or <code>Transparency</code> properties may do nicely…</p></li>
+<li><p>Ychwanegwch eich haen raster gyntaf yn QGIS. O’r bar dewislen, cliciwch ar <code>Haen</code> &gt; <code>Ychwanegu Haen</code> &gt; <code>Ychwanegu Haen Raster...</code></p></li>
+<li><p>Cliciwch yr eicon <code>Pori</code> (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) ac ewch i’r ffolder lle mae’r data wedi’i storio, h.y. <strong><code>GEG276</code></strong></p></li>
+<li><p>Agorwch y ffolder <code>Wales_mean_windspeed</code> a chliciwch ar unrhyw un o’r haenau raster <code>.tif</code></p></li>
+<li><p>Cliciwch <code>Agor</code> &gt; <code>Ychwanegu</code> &gt; <code>Cau</code></p></li>
+<li><p>Agorwch <code>Priodweddau...</code> yr haen</p></li>
+<li><p>O dan <code>Math o rendro</code>, dewiswch <code>Ffugolliw band sengl</code></p></li>
+<li><p>O dan <code>Ramp lliw</code>, dewiswch ramp lliw priodol ar gyfer y data (neu dewiswch un rydych chi’n ei hoffi’n fawr!)</p></li>
+<li><p>Cliciwch <code>Iawn</code></p></li>
+<li><p>Chwaraewch o gwmpas gyda Phrif Ardaloedd Cymru a’r data cyflymder gwynt - trwy addasu trefn yr haenau yn y panel <code>Haenau</code>, a thrwy addasu <code>Priodweddau...</code> pob haen - fel bod y ddau yn weladwy ar yr un pryd. Awgrym: gallai addasu priodweddau <code>Llenwi</code> neu <code>Tryloywder</code> fod yn dda…</p></li>
+</ol></section><section id="addasiadau-sydd-eu-hangen-1" class="level1 callout-pwysig" data-number="3"><h1 data-number="3">
+<span class="header-section-number">3</span> Addasiadau sydd eu hangen</h1>
+<p>Osgowch symboleg lled - dryloyw sy’n torri’r cysylltiad rhwng lliwiau map a lliwiau’r allwedd.</p>
+</section><ol start="36" class="example" type="1">
+<li><p>Yn y ffenestr Cynllun Argraffu, dewiswch <code>Map 1</code> a chliciwch ar <code>Diweddaru Rhagolwg Map</code> o dan y tab <code>Priodweddau Eitem</code></p></li>
+<li><p>Os nad yw’r raddfa lliw ar gyfer yr haen raster yn ymddangos yn yr allwedd, ychwanegwch hi</p></li>
+<li><p>Arbrofi gyda gwella estheteg yr allwedd wedi’i diweddaru</p></li>
+<li><p>Dewiswch <code>Map 1</code> o’r panel <code>Eitemau</code></p></li>
+<li><p>O dan <code>Priodweddau Eitem</code>, ticiwch y <code>Cloi haenau</code> a <code>Cloi arddulliau ar gyfer haenau</code> i atal newidiadau pellach i’r map. Dad-diciwch os oes angen i chi wneud golygiadau</p></li>
 </ol>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Readjustments needed
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Avoid semi‑transparent symbology that breaks the link between map colours and legend colours.</p>
-</div>
-</div>
-<ol start="36" class="example" type="1">
-<li><p>In the Print Layout window, select <code>Map 1</code> and click <code>Update Map Preview</code> under the <code>Item Properties</code> tab</p></li>
-<li><p>If the colour scale for the raster layer does not appear in the legend, add it</p></li>
-<li><p>Experiment with improving the aesthetics of the updated legend</p></li>
-<li><p>Select <code>Map 1</code> from the <code>Items</code> panel</p></li>
-<li><p>Under <code>Item Properties</code>, check the <code>Lock layers</code> and <code>Lock styles for layers</code> to prevent further changes to the map. Uncheck if you need to make edits</p></li>
-</ol></section><section id="adding-an-inset-map" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="adding-an-inset-map">
-<span class="header-section-number">2.6</span> <input type="checkbox"> Adding an inset map</h2>
+<section id="ychwanegu-map-mewnosodiad" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="ychwanegu-map-mewnosodiad">
+<span class="header-section-number">3.1</span> <input type="checkbox"> Ychwanegu map mewnosodiad</h2>
 <ol start="41" class="example" type="1">
-<li><p>Add a second map (see <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.2</span></a>) to provide an inset showing the British Isles (e.g. at a scale of 1:20,000,000).</p></li>
-<li>
-<p>Modify:</p>
-<ol type="i">
-<li>Which layers should be displayed (by turning visibility on and off, or changing layer order)</li>
-<li>Their symbology (see <a href="e01.cy.html#sec-properties" class="quarto-xref"><span>Section 1.3</span></a>);</li>
+<li><p>Ychwanegwch ail fap (gweler <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.3</span></a>) i ddarparu mewnosodiad sy’n dangos Ynysoedd Prydain (e.e. ar raddfa o 1:20,000,000).</p></li>
+<li><p>Addasu:</p></li>
 </ol>
-</li>
+<ol type="i">
+<li>Pa haenau y dylid eu harddangos (drwy droi gwelededd ymlaen ac i ffwrdd, neu newid trefn yr haenau)</li>
+<li>Eu symboleg (gweler <a href="e01.cy.html#sec-properties" class="quarto-xref"><span>Section 2.3</span></a>);</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -439,21 +413,21 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Modifying layers
+<span class="screen-reader-only">Tip</span>Addasu haenau
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Place emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note that, because your map of Wales is locked, it’s not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.</p>
+<p>Rhowch bwyslais ar ychydig o haenau yn unig, wedi’u cyflwyno’n syml, sy’n ddefnyddiol ar y raddfa hon. Ceisiwch fod yn finimalaidd er mwyn osgoi gwneud y map yn anniben. Nodwch, oherwydd bod eich map o Gymru wedi’i gloi, nad yw’n cael ei effeithio gan newidiadau yng ngwelededd yr haen na’r symbolaeth sy’n cael ei gwneud ar gyfer y mewnosodiad. Dyma lle mae pŵer cloi haenau.</p>
 </div>
 </div>
 <ol start="43" class="example" type="1">
-<li><p>Select <code>Map 1</code> from the <code>Items</code> panel</p></li>
-<li><p>Under <code>Item Properties</code>, expand the <code>Overviews</code> tab</p></li>
-<li><p>Click <code>Add a new overview</code> (<img src="figs/E02_AddANewGrid.png" class="img-fluid" style="width:3.0%">)</p></li>
-<li><p>Click <code>Overview 1</code></p></li>
-<li><p>Set the <code>Map frame</code> to your Wales map</p></li>
-<li><p>Adjust the <code>Frame style</code> to draw a hollow rectangle with a thick line, to easily show the main map’s extent</p></li>
-<li><p>Experiment further, especially with <code>Fill color</code>, <code>Stroke color</code>, and <code>Join style</code></p></li>
+<li><p>Dewiswch <code>Map 1</code> o’r panel <code>Eitemau</code></p></li>
+<li><p>O dan <code>Priodweddau Eitem</code>, ehangwch y tab <code>Trosolwg</code></p></li>
+<li><p>Cliciwch <code>Ychwanegu trosolwg newydd</code> (<img src="figs/E02_AddANewGrid.png" class="img-fluid" style="width:3.0%">)</p></li>
+<li><p>Cliciwch ar <code>Trosolwg 1</code></p></li>
+<li><p>Gosodwch y <code>Ffrâm Map</code> i’ch map o Gymru</p></li>
+<li><p>Addaswch yr <code>Arddull Ffrâm</code> i lunio petryal gwag gyda llinell drwchus, er mwyn dangos maint y prif fap yn hawdd</p></li>
+<li><p>Arbrofwch ymhellach, yn enwedig gyda <code>Lliw llenwi</code>, <code>Lliw strôc</code>, ac <code>Arddull ymuno</code></p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -461,57 +435,43 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Keeping things tidy
+<span class="screen-reader-only">Tip</span>Cadw pethau’n daclus
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Projects can get rapidly out of control when multiple layers are used to build a map. It’s important to remove redundant layers and label items appropriately. E.g. try renaming <code>Map 1</code> to <code>Main</code>, and <code>Map 2</code> to <code>Inset</code>. This will help when you need to revisit and adjust your maps.</p>
+<p>Gall prosiectau fynd allan o reolaeth yn gyflym pan ddefnyddir sawl haen i adeiladu map. Mae’n bwysig cael gwared ar haenau diangen a labelu eitemau’n briodol. E.e. ceisiwch ailenwi <code>Map 1</code> i <code>Main</code>, a <code>Map 2</code> i <code>Inset</code>. Bydd hyn o gymorth pan fydd angen i chi ail-ymweld â’ch mapiau a’u haddasu.</p>
 </div>
 </div>
-</section><section id="exporting-your-map" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="exporting-your-map">
-<span class="header-section-number">2.7</span> <input type="checkbox"> Exporting your map</h2>
+</section><section id="allforio-eich-map" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="allforio-eich-map">
+<span class="header-section-number">3.2</span> <input type="checkbox"> Allforio eich map</h2>
 <ol start="50" class="example" type="1">
-<li><p>Ensure each map item has <code>Lock layers</code> checked. This helps ensure the chosen map scale (1:1,000,000) reflects real‑world distances</p></li>
-<li><p>Click <code>Layout</code> &gt; <code>Export as PDF...</code> &gt; <code>Save</code>, and save in a suitable location</p></li>
-<li>
-<p>Set <code>PDF Export Options</code> as follows for best results:</p>
+<li><p>Sicrhewch fod <code>Cloi haenau</code> wedi’i dicio ar bob eitem map. Mae hyn yn helpu i sicrhau bod y raddfa map a ddewiswyd (1:1,000,000) yn adlewyrchu pellteroedd y byd go iawn .</p></li>
+<li><p>Cliciwch <code>Layout</code> &gt; <code>Allforio fel PDF...</code> &gt; <code>Cadw</code>, a chadwch mewn lleoliad addas</p></li>
+<li><p>Gosodwch <code>Dewisiadau Allforio PDF</code> fel a ganlyn am y canlyniadau gorau:</p></li>
+</ol>
 <ul>
-<li>☑ Always export a vectors</li>
-<li><label><input type="checkbox">Append georeferece information</label></li>
-<li><label><input type="checkbox">Export RDF metadata (title, author, etc.)</label></li>
-<li>Text export: <code>Always Export Text as Paths</code>
+<li>Allforio fectorau bob amser</li>
+<li>Ychwanegu gwybodaeth geogyfeirio</li>
+<li>Allforio metadata RDF (teitl, awdur, ac ati)</li>
+<li>Allforio testun: <code>Allforio Testun fel Llwybrau Bob Amser</code>
 </li>
-<li>Image compression: <code>Lossless</code>
+<li>Cywasgu delwedd: <code>Di-golled</code>
 </li>
-<li><label><input type="checkbox">Create Geospatial PDF</label></li>
-<li>☑ Disable tiled raster layer exports</li>
-<li>☑ Simplify geometries to reduce output file size</li>
+<li>Creu PDF Daearyddol</li>
+<li>Analluogi allforion haen raster teils</li>
+<li>Symleiddio geometregau i leihau maint ffeil allbwn</li>
 </ul>
-</li>
-<li><p>Click <code>Save</code>. Congratulations - you’ve created your first QGIS map assignment. Now make any revisions to be able to submit the best Map 1 that you can!</p></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning outcomes
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>By the end of this exercise you should:</p>
+<ol start="53" class="example" type="1">
+<li>Cliciwch ar <code>Cadw</code>. Llongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr gwnewch unrhyw ddiwygiadau er mwyn gallu cyflwyno’r Map 1 gorau y gallwch chi!</li>
+</ol></section><section id="canlyniadau-dysgu" class="level1 nodyn-galwad" data-number="4"><h1 data-number="4">
+<span class="header-section-number">4</span> Canlyniadau dysgu</h1>
+<p>Erbyn diwedd yr ymarfer hwn dylech chi:</p>
 <ol type="1">
-<li>Be familiar with the QGIS Map Layout and its relationship to the QGIS Project window.</li>
-<li>Know how to add and arrange essential map features and adjust their properties to make a map attractive.</li>
-<li>Know how to configure multiple map items, legends, grids, scales and labels in a map layout.</li>
-<li>Be able to export a map layout for inclusion in a document or presentation.</li>
-</ol>
-</div>
-</div>
-
-
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<li>Byddwch yn gyfarwydd â Chynllun Map QGIS a’i berthynas â ffenestr Prosiect QGIS.</li>
+<li>Gwybod sut i ychwanegu a threfnu nodweddion map hanfodol ac addasu eu priodweddau i wneud map yn ddeniadol.</li>
+<li>Gwybod sut i ffurfweddu nifer o eitemau map, chwedlau, gridiau, graddfeydd a labeli mewn cynllun map.</li>
+<li>Gallu allforio cynllun map i’w gynnwys mewn dogfen neu gyflwyniad.</li>
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();

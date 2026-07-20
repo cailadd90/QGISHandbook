@@ -159,11 +159,13 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#postcode-point-locations" id="toc-postcode-point-locations" class="nav-link active" data-scroll-target="#postcode-point-locations"><span class="header-section-number">3.1</span> <input type="checkbox"> Postcode point locations</a></li>
-  <li><a href="#finding-headcount-statistics" id="toc-finding-headcount-statistics" class="nav-link" data-scroll-target="#finding-headcount-statistics"><span class="header-section-number">3.2</span> <input type="checkbox"> Finding headcount statistics</a></li>
-  <li><a href="#population-density" id="toc-population-density" class="nav-link" data-scroll-target="#population-density"><span class="header-section-number">3.3</span> <input type="checkbox"> Population density</a></li>
-  <li><a href="#geocoding-new-addresses" id="toc-geocoding-new-addresses" class="nav-link" data-scroll-target="#geocoding-new-addresses"><span class="header-section-number">3.4</span> <input type="checkbox"> Geocoding new addresses</a></li>
-  <li><a href="#simple-catchments" id="toc-simple-catchments" class="nav-link" data-scroll-target="#simple-catchments"><span class="header-section-number">3.5</span> <input type="checkbox"> Simple catchments</a></li>
+<li><a href="#exploring-postcode-locations" id="toc-exploring-postcode-locations" class="nav-link active" data-scroll-target="#exploring-postcode-locations"><span class="header-section-number">3.1</span> Exploring postcode locations</a></li>
+  <li><a href="#sec-stats4fields" id="toc-sec-stats4fields" class="nav-link" data-scroll-target="#sec-stats4fields"><span class="header-section-number">3.2</span> Finding headcount statistics</a></li>
+  <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Select by location</a></li>
+  <li><a href="#creating-a-heatmap" id="toc-creating-a-heatmap" class="nav-link" data-scroll-target="#creating-a-heatmap"><span class="header-section-number">3.4</span> Creating a heatmap</a></li>
+  <li><a href="#geocoding-new-addresses" id="toc-geocoding-new-addresses" class="nav-link" data-scroll-target="#geocoding-new-addresses"><span class="header-section-number">3.5</span> Geocoding new addresses</a></li>
+  <li><a href="#exporting-vector-layers" id="toc-exporting-vector-layers" class="nav-link" data-scroll-target="#exporting-vector-layers"><span class="header-section-number">3.6</span> Exporting vector layers</a></li>
+  <li><a href="#using-buffers-as-simple-catchments" id="toc-using-buffers-as-simple-catchments" class="nav-link" data-scroll-target="#using-buffers-as-simple-catchments"><span class="header-section-number">3.7</span> Using buffers as simple catchments</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -185,8 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </header><blockquote class="blockquote">
 <p><strong>Date of practical:</strong> 16th October 2025</p>
 </blockquote>
-<p>The location and density of the human population underpin how society is organised. GIS helps you understand population density, proximity to features, and assign data to addresses. Postcodes link human activity to physical locations.</p>
-<p>You will find data for this exercise on the <strong>L:</strong> drive under <code>College of Science/Geography/GEG276</code>. Read alongside <strong>GIS_guide_to_practical_exercises</strong>.</p>
+<p>The location and density of the human population underpin how society is organised. GIS helps one understand human systems, by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -197,47 +198,36 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments.</p>
+<p>To examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments.</p>
 </div>
 </div>
-<section id="postcode-point-locations" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="postcode-point-locations">
-<span class="header-section-number">3.1</span> <input type="checkbox"> Postcode point locations</h2>
+<section id="exploring-postcode-locations" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="exploring-postcode-locations">
+<span class="header-section-number">3.1</span> Exploring postcode locations</h2>
 <ol class="example" type="1">
-<li><p>Launch QGIS, create a new project and open <code>Wales_Principal_Areas</code>.</p></li>
-<li><p>Open <code>Wales_headcounts_at_postcodes_2021</code>. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.</p></li>
-<li><p>Investigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.</p></li>
-<li><p>Using attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.</p></li>
-<li><p>Under <strong>Layer Properties → Symbology</strong>, change from <strong>Single Symbol</strong> to <strong>Graduated</strong>. Set <strong>Column</strong> to <code>Total</code> (population 2021), choose <strong>Method</strong> = <strong>Size</strong>, then <strong>Classify</strong> and <strong>Apply</strong>. Point sizes should now reflect population per postcode.</p></li>
-</ol></section><section id="finding-headcount-statistics" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="finding-headcount-statistics">
-<span class="header-section-number">3.2</span> <input type="checkbox"> Finding headcount statistics</h2>
-<ol start="6" class="example" type="1">
-<li><p>From <strong>Vector → Analysis Tools → Basic Statistics For Fields</strong>, compute statistics for the <code>Total</code> attribute in <code>Wales_headcounts_at_postcodes_2021</code>. Consider each value presented. What was the registered population of Wales in 2021?</p></li>
-<li><p>Open the 2011 dataset (same folder) and calculate the percentage population change in Wales between 2011 and 2021. Close the 2011 dataset.</p></li>
-<li><p>Select the Swansea polygon from <code>Wales_Principal_Areas</code> in the Project window (highlighted yellow).</p></li>
-<li><p>Open <strong>Vector → Research Tools → Select By Location</strong>. Select features from <code>Wales_headcounts_at_postcodes_2021</code> that <strong>are within</strong> <code>Wales_Principal_Areas</code>, ticking <strong>Selected features only</strong> to select only Swansea. Run to select all postcode points within Swansea.</p></li>
-<li><p>Use <strong>Basic Statistics</strong> again to find the 2021 <code>Total</code> population of Swansea. Tick <strong>Selected features only</strong>. Compare to Cardiff. Optionally find Swansea’s 10‑year population change.</p></li>
-</ol></section><section id="population-density" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="population-density">
-<span class="header-section-number">3.3</span> <input type="checkbox"> Population density</h2>
-<ol start="11" class="example" type="1">
-<li><p>Open the <strong>Processing Toolbox</strong> and run <strong>Interpolation → Heatmap (Kernel Density Estimation)</strong>. Point Layer: <code>Wales_headcounts_at_postcodes_2021</code>; Radius: <code>500</code>; Pixel size X/Y: <code>100</code>; Advanced → <strong>Weight from field</strong>: <code>Total</code>. This creates a raster population density layer.</p></li>
-<li><p>Under <strong>Layer Properties</strong>, experiment with symbology for the density raster: <strong>Singleband gray</strong> or <strong>Singleband pseudocolor</strong> using different ramps. It may help to switch off the 2021 point layer while experimenting.</p></li>
-<li><p>Vary the <strong>Radius</strong> and change the weighting field to see how the map changes. Save your project.</p></li>
-</ol></section><section id="geocoding-new-addresses" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="geocoding-new-addresses">
-<span class="header-section-number">3.4</span> <input type="checkbox"> Geocoding new addresses</h2>
+<li><p>Launch QGIS and create a new project</p></li>
+<li><p>Import the <code>Wales_Principal_Areas.gpkg</code> layer</p></li>
+<li><p>Import the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer. This dataset contains the number of households and people registered at each postcode (taken from the 2021 Census), combined with coordinates from OS OpenData</p></li>
+<li><p>Investigate the attribute table and explore how these points are distributed</p></li>
+<li><p>Using the attribute table, examine areas of very high and very low density and discuss with your neighbour why these spatial patterns may exist</p></li>
+<li><p>Using attribute table selection and skills from Chapter 1 (<a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>), find postcodes with the greatest number of people in the Cardiff (<code>CF</code>), Swansea (<code>SA</code>) and Aberystwyth (<code>SY</code>) areas</p></li>
+<li><p>Use <a href="https://www.google.com/maps" target="_blank">Google Maps</a> to search for these postcodes, and discuss with your neighbour why these locations have such high population counts</p></li>
+<li><p>Save your project!</p></li>
+<li><p>Open the headcounts layer’s <code>Symbology</code> window</p></li>
+<li><p>Use the drop-down menu to change the symbology source from <code>Single Symbol</code> to <code>Graduated</code></p></li>
+<li><p>Set <code>Value</code> to <code>Total</code> (i.e. the UK population in 2021)</p></li>
+<li><p>Set <code>Method</code> to <code>Size</code></p></li>
+<li><p>Click <code>Classify</code> → <code>OK</code>. Point sizes should now reflect population per postcode</p></li>
+</ol></section><section id="sec-stats4fields" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-stats4fields">
+<span class="header-section-number">3.2</span> Finding headcount statistics</h2>
 <ol start="14" class="example" type="1">
-<li><p>Compile a CSV of Tesco stores in the Swansea area with columns for <code>postcode</code> and <code>name</code> (use the Tesco store locator). Include at least 7 stores with unique postcodes.</p></li>
-<li><p>Install the <strong>MMQGIS</strong> plugin (<strong>Plugins → Manage and Install Plugins</strong>).</p></li>
-<li><p>Understand that geocoding uses a postcode database to attach coordinates to postcode‑referenced data (as used to build the headcounts dataset).</p></li>
-<li><p>From <strong>MMQGIS → Geocode → Geocode CSV with Web Service</strong>, select your CSV as <strong>Input</strong>, set the postcode column as <strong>Address Field</strong>, choose <strong>OpenStreetMap/Nominatim</strong> as Web Service, and choose output files on OneDrive for both <strong>Output Layer</strong> and <strong>Not Found Output List</strong>. The output is a Shapefile. If errors occur, try the provided CSV in <code>wales_tesco_postcodes</code>. Label stores by name.</p></li>
-<li><p>Reproject the new layer to OSGB. Use <strong>Layer → Save As…</strong>, set <strong>CRS</strong> to <strong>EPSG:27700 OSGB 1936</strong>, <strong>Format</strong> = <strong>GeoPackage</strong>, and save to OneDrive. The appearance is the same but the CRS now matches other layers.</p></li>
-</ol></section><section id="simple-catchments" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="simple-catchments">
-<span class="header-section-number">3.5</span> <input type="checkbox"> Simple catchments</h2>
-<ol start="19" class="example" type="1">
-<li><p>Create buffers to approximate walking distance: <strong>Vector → Geoprocessing Tools → Buffer</strong>. Input: your OSGB Tesco layer; Distance: <code>500 m</code>; tick <strong>Dissolve buffer results</strong>.</p></li>
-<li><p>Using selection by location and Basic Statistics, find the total number of people registered to postcodes within 500 m of Tesco stores.</p></li>
-<li><p>Experiment with other buffer distances and compare other supermarket chains.</p></li>
-<li><p>(Optional) Find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE).</p></li>
-<li><p>Note that these skills are vital for the wind farm projects.</p></li>
+<li><p>Click <code>Vector</code> → <code>Analysis Tools</code> → <code>Basic Statistics For Fields...</code></p></li>
+<li><p>Set <code>Input layer</code> to the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer</p></li>
+<li><p>Set <code>Field to calcualate statics on</code> to <code>Total</code></p></li>
+<li><p>Click <code>Run</code>. Results are presented under the <code>Log</code> tab, and can be viewed in the <code>Results Viewer</code>. Double-clicking <code>Statiscs</code> will open the results in a web browser</p></li>
+<li><p>Consider what each value means, then discuss with your neighbour what the registered population of Wales in 2021 was (a sense check on google may help!)</p></li>
+<li><p>Click <code>Close</code></p></li>
+<li><p>Calculate the percentage population change in Wales between 2011 and 2021. Show off by being first to tell your neighbour the result</p></li>
+<li><p>Right-click on the <code>2011</code> census headcount layer and click <code>Remove Layer...</code></p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -245,19 +235,204 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Learning outcomes
+<span class="screen-reader-only">Tip</span>Keeping things tidy
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>By the end of this exercise you should:</p>
+<p>It’s good practice to remove layers once you’re done with them, to avoid your project becoming too cluttered and confusing.</p>
+</div>
+</div>
+</section><section id="sec-selectlocation" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sec-selectlocation">
+<span class="header-section-number">3.3</span> Select by location</h2>
+<ol start="22" class="example" type="1">
+<li>
+<p>Calculate basic statistics on a subset of data in a particular location:</p>
+<ol type="i">
+<li>Select the Swansea county polygon from <code>Wales_Principal_Areas</code> (forgotten how to do this? Check <a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>)</li>
+<li>Click <code>Vector</code> → <code>Research Tools</code> → <code>Select By Location...</code>
+</li>
+<li>Set <code>Select features from</code> as <code>Wales_headcounts_at_postcodes_2021</code>
+</li>
+<li>Check <code>are within</code>
+</li>
+<li>Set <code>By comparing to the features from</code> to <code>Wales_Principal_Areas</code>
+</li>
+<li>Check <code>Selected features only</code>. This ensures only postcodes in Swansea are selected</li>
+<li>Click <code>Run</code>
+</li>
+<li>If done correctly, you’ll see all postcode centroids in Swansea county have been selected (highlighted yellow)</li>
+</ol>
+</li>
+<li><p>Use the <code>Basic Statistics For Fields...</code> tool to find the 2021 <code>Total</code> population of Swansea. <strong>Make sure <code>Selected features only</code> is checked this time</strong></p></li>
+<li><p>Calculate the 2021 population of Cardiff county, and calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results</p></li>
+</ol></section><section id="creating-a-heatmap" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-heatmap">
+<span class="header-section-number">3.4</span> Creating a heatmap</h2>
+<ol start="25" class="example" type="1">
+<li><p>Click <code>Processing</code> → <code>Toolbox</code> or find the the shortcut (<img src="figs/ProcessingToolbox.png" class="img-fluid quarto-figure quarto-figure-center" style="width:25.0%">)</p></li>
+<li><p>Click the drop-down arrow next to <code>Interpolation</code></p></li>
+<li><p>Double-click <code>Heatmap (Kernel Density Estimation)</code></p></li>
+<li>
+<p>Generate a raster heatmap of population density across Wales:</p>
+<ol type="i">
+<li>Set <code>Point layer</code> to <code>Wales_headcounts_at_postcodes_2021</code>
+</li>
+<li>Set <code>Radius</code> to <code>500</code> metres</li>
+<li>Set <code>Pixel size X</code> and <code>Pixel size Y</code> to <code>100</code>
+</li>
+<li>Set <code>Weight from field</code> to <code>Total</code>
+</li>
+</ol>
+</li>
+<li><p>Experiment with the raster layer’s symbology (see <a href="e02.html#sec-rasterdata" class="quarto-xref"><span>Section 2.5</span></a>). It may help to hide the 2021 point layer and clear any selections from the principal areas polygons whilst you do this</p></li>
+<li><p>Experiment with changing the <code>Radius</code> to see how the heatmap changes</p></li>
+<li><p>Saved your project recently?</p></li>
+</ol></section><section id="geocoding-new-addresses" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="geocoding-new-addresses">
+<span class="header-section-number">3.5</span> Geocoding new addresses</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>What’s geocoding?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Let’s do some geocoding by plotting where your local Tesco stores are located!</p>
+</div>
+</div>
+<ol start="32" class="example" type="1">
+<li><p>Navigate to the <a href="https://www.tesco.com/store-locator/" target="_blank">Tesco store locator</a></p></li>
+<li><p>Search for stores in the <code>Swansea</code> area</p></li>
+<li><p>Open <code>Excel</code></p></li>
+<li><p>Populate a spreadsheet with the <code>Store</code> name and <code>Postcode</code> of the first seven stores from the website</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/TescoSpreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="36" class="example" type="1">
+<li><p>Save the spreadsheet in a <code>.csv</code> format (<code>UTF-8</code>)</p></li>
+<li><p>In QGIS, select <code>Plugins</code> → <code>Manage and Install Plugins...</code></p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The power of plugins
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Plugins are written by QGIS developers and other independent developers who want to extend the core functionality of the software. It is this community-led innovating that makes QGIS such a powerful tool.</p>
+</div>
+</div>
+<ol start="38" class="example" type="1">
+<li><p>Search for <code>mmqgis</code></p></li>
+<li><p>Click <code>Install Plugin</code></p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/mmqgis.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="40" class="example" type="1">
+<li>
+<p>Use the <code>MMQGIS</code> tool to attach coordinates to postcode data:</p>
+<ol type="i">
+<li>Click <code>MMQGIS</code> → <code>Geocode</code> → <code>Geocode CSV with Web Service</code>
+</li>
+<li>Set <code>Input CSV File</code> as your .csv file</li>
+<li>Set <code>Address</code> as your postcode column</li>
+<li>Set <code>Web Service</code> as <code>OpenStreetMap / Nominatim</code>
+</li>
+<li>Set <code>Output File Name</code> to your <code>Downloads</code> folder</li>
+<li>Set <code>Not Found Output List</code> to your <code>Downloads</code> folder</li>
+<li>Click <code>Apply</code>
+</li>
+<li>Wait until <code>Geocoded 7 of 7</code> appears beneath the tool and check the postcodes appear in the correct places</li>
+<li>Click <code>Close</code>
+</li>
+</ol>
+</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/Geocode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Temporary output
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s common in QGIS to create temporary layers, check they’re displaying as intended, then save the output to somewhere more sensible. This is especially true if several steps are needed to create the intended output. Saving these temporary layers to your <code>Downloads</code> folder is a good idea, as you can eventually empty this folder without glogging up valuable space on your OneDrive account with junk data.</p>
+</div>
+</div>
+</section><section id="exporting-vector-layers" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="exporting-vector-layers">
+<span class="header-section-number">3.6</span> Exporting vector layers</h2>
+<p>Modify the temporary vector layer and save in a sensible location:</p>
+<pre><code>i. From the `Layers` panel, right-click on `temp1` and click `Export` → `Save Features As...`
+ii. Set `Format` to `GeoPackage`
+iii. Select a suitable location to save the geopackage 
+iv. Set 'Layer name' as something sensible, e.g. the same as the file name
+v. Set `CRS` to `EPSG:27700`
+vi. Under `Select fields to export and their export options`, you can decide what information should appear in the attribute table. Keep things tidy by only including the store name and postcode
+vii. Click `OK`</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/SaveVectorLayerAs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="41" class="example" type="1">
+<li><p>The layer should appear in the <code>Layers</code> panel. Open its attribute table. Does what you’ve just done make conceptual sense? If not - ask!</p></li>
+<li><p>Remove the <code>temp1</code> layer from your project</p></li>
+</ol></section><section id="using-buffers-as-simple-catchments" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="using-buffers-as-simple-catchments">
+<span class="header-section-number">3.7</span> Using buffers as simple catchments</h2>
+<ol start="43" class="example" type="1">
+<li>
+<p>Create buffers around each postcode point to approximate walking distance from the Tescos store:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Geoprocessing Tools</code> → <code>Buffer...</code>
+</li>
+<li>Set <code>Input layer</code> as your Tesco stores layer (which should now have <code>[EPSG:27700]</code> after the layer name)</li>
+<li>Set <code>Distance</code> to <code>500</code> metres</li>
+<li>Check <code>Dissolve result</code>
+</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/Buffer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="44" class="example" type="1">
+<li><p>Using <code>Select by Location</code> (see <a href="#sec-selectlocation" class="quarto-xref"><span>Section 3.3</span></a>) and <code>Basic Statistics</code> (see <a href="#sec-stats4fields" class="quarto-xref"><span>Section 3.2</span></a>), find the total number of people registered to postcodes within 500 m of Tesco stores</p></li>
+<li><p>For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE).</p></li>
+</ol>
+<p>The skills you’ve learned here are vital for the wind farm project.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning outcomes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this exercise you should be able to:</p>
 <ol type="1">
-<li>Understand the nature and distribution of UK postcode points in Wales.</li>
-<li>Vary symbol size or colour for points based on attributes.</li>
-<li>Select from point data based on containment within polygons.</li>
-<li>Calculate statistics from full tables or selections.</li>
-<li>Create a heatmap and choose raster presentation styles.</li>
-<li>Create buffers and count population in simple catchments.</li>
-<li>Install and use QGIS plugins.</li>
+<li>Explore postcode-linked census data through the attribute table, examining and explaining spatial patterns of high and low population density</li>
+<li>Visualise population density using graduated symbology and kernel density (heatmap) estimation</li>
+<li>Geocode addresses from postcodes using a plugin and web service, and export the result as a properly projected vector layer</li>
+<li>Calculate population statistics for defined areas and catchments — combining <code>Select by Location</code>, <code>Buffer</code>, and <code>Basic Statistics for Fields</code> tools</li>
+<li>Appreciate how postcodes link human activity to physical location, and the value of tidy, well-projected data and temporary layers in a GIS workflow</li>
 </ol>
 </div>
 </div>
