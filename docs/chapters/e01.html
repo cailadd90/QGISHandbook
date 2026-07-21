@@ -162,11 +162,11 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="#starting-up" id="toc-starting-up" class="nav-link active" data-scroll-target="#starting-up"><span class="header-section-number">1.1</span> Starting up</a></li>
   <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation"><span class="header-section-number">1.2</span> Navigation</a></li>
   <li><a href="#sec-properties" id="toc-sec-properties" class="nav-link" data-scroll-target="#sec-properties"><span class="header-section-number">1.3</span> Adjusting style properties</a></li>
-  <li><a href="#measuring-geospatial-objects" id="toc-measuring-geospatial-objects" class="nav-link" data-scroll-target="#measuring-geospatial-objects"><span class="header-section-number">1.4</span> Measuring geospatial objects</a></li>
+  <li><a href="#sec-measuring" id="toc-sec-measuring" class="nav-link" data-scroll-target="#sec-measuring"><span class="header-section-number">1.4</span> Measuring geospatial objects</a></li>
   <li><a href="#sec-attrib" id="toc-sec-attrib" class="nav-link" data-scroll-target="#sec-attrib"><span class="header-section-number">1.5</span> Exploring the Attribute Table</a></li>
   <li><a href="#arranging-layers" id="toc-arranging-layers" class="nav-link" data-scroll-target="#arranging-layers"><span class="header-section-number">1.6</span> Arranging layers</a></li>
   <li><a href="#labelling-layers" id="toc-labelling-layers" class="nav-link" data-scroll-target="#labelling-layers"><span class="header-section-number">1.7</span> Labelling layers</a></li>
-  <li><a href="#adding-and-filtering-data" id="toc-adding-and-filtering-data" class="nav-link" data-scroll-target="#adding-and-filtering-data"><span class="header-section-number">1.8</span> Adding and filtering data</a></li>
+  <li><a href="#sec-filter" id="toc-sec-filter" class="nav-link" data-scroll-target="#sec-filter"><span class="header-section-number">1.8</span> Adding and filtering data</a></li>
   <li><a href="#adding-external-data" id="toc-adding-external-data" class="nav-link" data-scroll-target="#adding-external-data"><span class="header-section-number">1.9</span> Adding external data</a></li>
   <li><a href="#have-you-finished" id="toc-have-you-finished" class="nav-link" data-scroll-target="#have-you-finished"><span class="header-section-number">1.10</span> Have you finished?</a></li>
   </ul></nav>
@@ -245,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <ol start="15" class="example" type="1">
 <li>From the menu bar, click <code>Project</code> → <code>Save</code> and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!</li>
-</ol></section><section id="measuring-geospatial-objects" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="measuring-geospatial-objects">
+</ol></section><section id="sec-measuring" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="sec-measuring">
 <span class="header-section-number">1.4</span> Measuring geospatial objects</h2>
 <ol start="16" class="example" type="1">
 <li>
@@ -386,14 +386,14 @@ ul.task-list li input[type="checkbox"] {
 <p>Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the <code>Labelling</code> window and you are encouraged to experiment.</p>
 </div>
 </div>
-</section><section id="adding-and-filtering-data" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="adding-and-filtering-data">
+</section><section id="sec-filter" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-filter">
 <span class="header-section-number">1.8</span> Adding and filtering data</h2>
 <ol start="38" class="example" type="1">
 <li><p>Add the vector layer <code>Wales_operational_windfarms.gpkg</code> to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales</p></li>
 <li><p>Examine the attribute table</p></li>
 <li><p>Adjust the layer’s style, noting that point data is represented in a different way to polygon data</p></li>
 <li><p>Label the wind farms by their name or by their generation capacity</p></li>
-<li><p>Add the vector layer <code>gis_osm_roads_free_1.gpkg</code>, which is in the folder <code>British_Isles_geofabrik</code> → <code>wales</code>. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display</p></li>
+<li><p>Add the vector layer <code>gis_osm_roads_free_1.gpkg</code>, which is in the folder <code>British_Isles_geofabrik</code> → <code>wales</code>, to your project. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display</p></li>
 <li>
 <p>Once again, for this layer:</p>
 <ol type="i">
@@ -431,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Search for “Wales Coast Path” and click on the link</p></li>
 <li><p>Under <code>Select spatial data format</code>, choose <code>OFC Geopackage</code> and click <code>Download</code></p></li>
 <li><p>Move the downloaded file to your OneDrive</p></li>
-<li><p>Open the layer in QGIS and explore it</p></li>
+<li><p>Add the layer to your project and explore it</p></li>
 <li><p>Try searching for and downloading other GIS data files from DataMapWales, geofabrik.de, or any another source</p></li>
 <li><p>When you’ve found a juicy dataset, report it on Menti</p></li>
 </ol>

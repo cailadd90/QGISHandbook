@@ -14,7 +14,7 @@ To create functionally complete maps in QGIS for print or digital output. You wi
 
 (@) Launch QGIS and create a new project
 
-(@) Import the `British_Isles_land_polygons.gpkg`, `Wales_border.gpkg`, and `Wales_Principal_Areas.gpkg` layers (the latter two are in the `UK_Boundaries` folder)
+(@) Add the `British_Isles_land_polygons.gpkg`, `Wales_border.gpkg`, and `Wales_Principal_Areas.gpkg` layers to your project (the latter two are in the `UK_Boundaries` folder)
 
 (@) Label the Principal Areas of Wales in Welsh or English
 

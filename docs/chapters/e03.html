@@ -161,11 +161,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
 <li><a href="#exploring-postcode-locations" id="toc-exploring-postcode-locations" class="nav-link active" data-scroll-target="#exploring-postcode-locations"><span class="header-section-number">3.1</span> Exploring postcode locations</a></li>
   <li><a href="#sec-stats4fields" id="toc-sec-stats4fields" class="nav-link" data-scroll-target="#sec-stats4fields"><span class="header-section-number">3.2</span> Finding headcount statistics</a></li>
-  <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Select by location</a></li>
+  <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Selecting by location</a></li>
   <li><a href="#creating-a-heatmap" id="toc-creating-a-heatmap" class="nav-link" data-scroll-target="#creating-a-heatmap"><span class="header-section-number">3.4</span> Creating a heatmap</a></li>
   <li><a href="#geocoding-new-addresses" id="toc-geocoding-new-addresses" class="nav-link" data-scroll-target="#geocoding-new-addresses"><span class="header-section-number">3.5</span> Geocoding new addresses</a></li>
-  <li><a href="#exporting-vector-layers" id="toc-exporting-vector-layers" class="nav-link" data-scroll-target="#exporting-vector-layers"><span class="header-section-number">3.6</span> Exporting vector layers</a></li>
-  <li><a href="#using-buffers-as-simple-catchments" id="toc-using-buffers-as-simple-catchments" class="nav-link" data-scroll-target="#using-buffers-as-simple-catchments"><span class="header-section-number">3.7</span> Using buffers as simple catchments</a></li>
+  <li><a href="#sec-export" id="toc-sec-export" class="nav-link" data-scroll-target="#sec-export"><span class="header-section-number">3.6</span> Exporting vector layers</a></li>
+  <li><a href="#sec-buffers" id="toc-sec-buffers" class="nav-link" data-scroll-target="#sec-buffers"><span class="header-section-number">3.7</span> Using buffers as simple catchments</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -205,8 +205,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="header-section-number">3.1</span> Exploring postcode locations</h2>
 <ol class="example" type="1">
 <li><p>Launch QGIS and create a new project</p></li>
-<li><p>Import the <code>Wales_Principal_Areas.gpkg</code> layer</p></li>
-<li><p>Import the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer. This dataset contains the number of households and people registered at each postcode (taken from the 2021 Census), combined with coordinates from OS OpenData</p></li>
+<li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer to your project</p></li>
+<li><p>Add the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer to your project. This dataset contains the number of households and people registered at each postcode (taken from the 2021 Census), combined with coordinates from OS OpenData</p></li>
 <li><p>Investigate the attribute table and explore how these points are distributed</p></li>
 <li><p>Using the attribute table, examine areas of very high and very low density and discuss with your neighbour why these spatial patterns may exist</p></li>
 <li><p>Using attribute table selection and skills from Chapter 1 (<a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>), find postcodes with the greatest number of people in the Cardiff (<code>CF</code>), Swansea (<code>SA</code>) and Aberystwyth (<code>SY</code>) areas</p></li>
@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Click <code>Vector</code> → <code>Analysis Tools</code> → <code>Basic Statistics For Fields...</code></p></li>
 <li><p>Set <code>Input layer</code> to the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer</p></li>
 <li><p>Set <code>Field to calcualate statics on</code> to <code>Total</code></p></li>
-<li><p>Click <code>Run</code>. Results are presented under the <code>Log</code> tab, and can be viewed in the <code>Results Viewer</code>. Double-clicking <code>Statiscs</code> will open the results in a web browser</p></li>
+<li><p>Click <code>Run</code>. Results are presented under the <code>Log</code> tab, and can be viewed in the <code>Results Viewer</code>. Double-clicking <code>Statistics</code> will open the results in a web browser</p></li>
 <li><p>Consider what each value means, then discuss with your neighbour what the registered population of Wales in 2021 was (a sense check on google may help!)</p></li>
 <li><p>Click <code>Close</code></p></li>
 <li><p>Calculate the percentage population change in Wales between 2011 and 2021. Show off by being first to tell your neighbour the result</p></li>
@@ -243,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section><section id="sec-selectlocation" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sec-selectlocation">
-<span class="header-section-number">3.3</span> Select by location</h2>
+<span class="header-section-number">3.3</span> Selecting by location</h2>
 <ol start="22" class="example" type="1">
 <li>
 <p>Calculate basic statistics on a subset of data in a particular location:</p>
@@ -264,11 +264,12 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </li>
 <li><p>Use the <code>Basic Statistics For Fields...</code> tool to find the 2021 <code>Total</code> population of Swansea. <strong>Make sure <code>Selected features only</code> is checked this time</strong></p></li>
-<li><p>Calculate the 2021 population of Cardiff county, and calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results</p></li>
+<li><p>Calculate the 2021 population of Cardiff county</p></li>
+<li><p>Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results</p></li>
 </ol></section><section id="creating-a-heatmap" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-heatmap">
 <span class="header-section-number">3.4</span> Creating a heatmap</h2>
-<ol start="25" class="example" type="1">
-<li><p>Click <code>Processing</code> → <code>Toolbox</code> or find the the shortcut (<img src="figs/ProcessingToolbox.png" class="img-fluid quarto-figure quarto-figure-center" style="width:25.0%">)</p></li>
+<ol start="26" class="example" type="1">
+<li><p>Click <code>Processing</code> → <code>Toolbox</code> or find the the shortcut (<img src="figs/ProcessingToolbox.png" class="img-fluid" style="width:3.0%">)</p></li>
 <li><p>Click the drop-down arrow next to <code>Interpolation</code></p></li>
 <li><p>Double-click <code>Heatmap (Kernel Density Estimation)</code></p></li>
 <li>
@@ -301,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Let’s do some geocoding by plotting where your local Tesco stores are located!</p>
 </div>
 </div>
-<ol start="32" class="example" type="1">
+<ol start="33" class="example" type="1">
 <li><p>Navigate to the <a href="https://www.tesco.com/store-locator/" target="_blank">Tesco store locator</a></p></li>
 <li><p>Search for stores in the <code>Swansea</code> area</p></li>
 <li><p>Open <code>Excel</code></p></li>
@@ -311,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/TescoSpreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="36" class="example" type="1">
+<ol start="37" class="example" type="1">
 <li><p>Save the spreadsheet in a <code>.csv</code> format (<code>UTF-8</code>)</p></li>
 <li><p>In QGIS, select <code>Plugins</code> → <code>Manage and Install Plugins...</code></p></li>
 </ol>
@@ -328,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Plugins are written by QGIS developers and other independent developers who want to extend the core functionality of the software. It is this community-led innovating that makes QGIS such a powerful tool.</p>
 </div>
 </div>
-<ol start="38" class="example" type="1">
+<ol start="39" class="example" type="1">
 <li><p>Search for <code>mmqgis</code></p></li>
 <li><p>Click <code>Install Plugin</code></p></li>
 </ol>
@@ -336,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/mmqgis.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="40" class="example" type="1">
+<ol start="41" class="example" type="1">
 <li>
 <p>Use the <code>MMQGIS</code> tool to attach coordinates to postcode data:</p>
 <ol type="i">
@@ -373,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
 <p>It’s common in QGIS to create temporary layers, check they’re displaying as intended, then save the output to somewhere more sensible. This is especially true if several steps are needed to create the intended output. Saving these temporary layers to your <code>Downloads</code> folder is a good idea, as you can eventually empty this folder without glogging up valuable space on your OneDrive account with junk data.</p>
 </div>
 </div>
-</section><section id="exporting-vector-layers" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="exporting-vector-layers">
+</section><section id="sec-export" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="sec-export">
 <span class="header-section-number">3.6</span> Exporting vector layers</h2>
 <p>Modify the temporary vector layer and save in a sensible location:</p>
 <pre><code>i. From the `Layers` panel, right-click on `temp1` and click `Export` → `Save Features As...`
@@ -387,12 +388,12 @@ vii. Click `OK`</code></pre>
 <figure class="figure"><p><img src="figs/SaveVectorLayerAs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="41" class="example" type="1">
+<ol start="42" class="example" type="1">
 <li><p>The layer should appear in the <code>Layers</code> panel. Open its attribute table. Does what you’ve just done make conceptual sense? If not - ask!</p></li>
 <li><p>Remove the <code>temp1</code> layer from your project</p></li>
-</ol></section><section id="using-buffers-as-simple-catchments" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="using-buffers-as-simple-catchments">
+</ol></section><section id="sec-buffers" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-buffers">
 <span class="header-section-number">3.7</span> Using buffers as simple catchments</h2>
-<ol start="43" class="example" type="1">
+<ol start="44" class="example" type="1">
 <li>
 <p>Create buffers around each postcode point to approximate walking distance from the Tescos store:</p>
 <ol type="i">
@@ -411,9 +412,9 @@ vii. Click `OK`</code></pre>
 <figure class="figure"><p><img src="figs/Buffer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="44" class="example" type="1">
+<ol start="45" class="example" type="1">
 <li><p>Using <code>Select by Location</code> (see <a href="#sec-selectlocation" class="quarto-xref"><span>Section 3.3</span></a>) and <code>Basic Statistics</code> (see <a href="#sec-stats4fields" class="quarto-xref"><span>Section 3.2</span></a>), find the total number of people registered to postcodes within 500 m of Tesco stores</p></li>
-<li><p>For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE).</p></li>
+<li><p>For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE). Hint: see <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a></p></li>
 </ol>
 <p>The skills you’ve learned here are vital for the wind farm project.</p>
 <div class="callout callout-style-default callout-note callout-titled">

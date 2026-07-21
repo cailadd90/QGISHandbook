@@ -53,7 +53,7 @@ Open the folder and click Sync in the top toolbar. This will download and sync t
 
 (@) From the menu bar, click `Project` → `Save` and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!
 
-## Measuring geospatial objects
+## Measuring geospatial objects {#sec-measuring}
 
 (@) Click the drop-down arrow next to the `Measure` icon to select the appropriate tool for measuring:
   
@@ -153,7 +153,7 @@ Notice how the seaward political (Principal Area) boundary of Wales goes beyond 
 Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the `Labelling` window and you are encouraged to experiment.
 :::
 
-## Adding and filtering data
+## Adding and filtering data {#sec-filter}
 
 (@) Add the vector layer `Wales_operational_windfarms.gpkg` to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales
 
@@ -163,7 +163,7 @@ Now that the Principal Areas have been labelled, zoom out. Notice how QGIS choos
 
 (@) Label the wind farms by their name or by their generation capacity
 
-(@) Add the vector layer `gis_osm_roads_free_1.gpkg`, which is in the folder `British_Isles_geofabrik` → `wales`. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display
+(@) Add the vector layer `gis_osm_roads_free_1.gpkg`, which is in the folder `British_Isles_geofabrik` → `wales`, to your project. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display
 
 (@) Once again, for this layer:
 
@@ -199,7 +199,7 @@ Now that the Principal Areas have been labelled, zoom out. Notice how QGIS choos
 
 (@) Move the downloaded file to your OneDrive
 
-(@) Open the layer in QGIS and explore it
+(@) Add the layer to your project and explore it
 
 (@) Try searching for and downloading other GIS data files from DataMapWales, geofabrik.de, or any another source
 

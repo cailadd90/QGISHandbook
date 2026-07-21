@@ -159,11 +159,22 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#investigating-your-map-tile" id="toc-investigating-your-map-tile" class="nav-link active" data-scroll-target="#investigating-your-map-tile"><span class="header-section-number">4.1</span> <input type="checkbox"> Investigating your map tile</a></li>
-  <li><a href="#clipping-polygon-and-point-layers" id="toc-clipping-polygon-and-point-layers" class="nav-link" data-scroll-target="#clipping-polygon-and-point-layers"><span class="header-section-number">4.2</span> <input type="checkbox"> Clipping polygon and point layers</a></li>
-  <li><a href="#clipping-line-layers-and-adding-buffers" id="toc-clipping-line-layers-and-adding-buffers" class="nav-link" data-scroll-target="#clipping-line-layers-and-adding-buffers"><span class="header-section-number">4.3</span> <input type="checkbox"> Clipping line layers and adding buffers</a></li>
-  <li><a href="#selecting-elements-by-attribute" id="toc-selecting-elements-by-attribute" class="nav-link" data-scroll-target="#selecting-elements-by-attribute"><span class="header-section-number">4.4</span> <input type="checkbox"> Selecting elements by attribute</a></li>
-  <li><a href="#taking-stock-of-planning-constraints" id="toc-taking-stock-of-planning-constraints" class="nav-link" data-scroll-target="#taking-stock-of-planning-constraints"><span class="header-section-number">4.5</span> <input type="checkbox"> Taking stock of planning constraints</a></li>
+<li><a href="#investigating-your-map-tile" id="toc-investigating-your-map-tile" class="nav-link active" data-scroll-target="#investigating-your-map-tile"><span class="header-section-number">4.1</span> Investigating your map tile</a></li>
+  <li><a href="#map-tiles" id="toc-map-tiles" class="nav-link" data-scroll-target="#map-tiles"><span class="header-section-number">4.2</span> Map tiles</a></li>
+  <li>
+<a href="#clip" id="toc-clip" class="nav-link" data-scroll-target="#clip"><span class="header-section-number">4.3</span> Clip</a>
+  <ul class="collapse">
+<li><a href="#sec-merge" id="toc-sec-merge" class="nav-link" data-scroll-target="#sec-merge"><span class="header-section-number">4.3.1</span> Merge</a></li>
+  </ul>
+</li>
+  <li><a href="#the-dissolve-tool" id="toc-the-dissolve-tool" class="nav-link" data-scroll-target="#the-dissolve-tool"><span class="header-section-number">4.4</span> The Dissolve tool</a></li>
+  <li><a href="#sec-dissolve" id="toc-sec-dissolve" class="nav-link" data-scroll-target="#sec-dissolve"><span class="header-section-number">4.4.1</span> Dissolve</a></li>
+  <li><a href="#being-efficient" id="toc-being-efficient" class="nav-link" data-scroll-target="#being-efficient"><span class="header-section-number">4.5</span> Being efficient</a></li>
+  <li><a href="#efficient-filing" id="toc-efficient-filing" class="nav-link" data-scroll-target="#efficient-filing"><span class="header-section-number">4.6</span> Efficient filing</a></li>
+  <li><a href="#clipping-line-layers-and-adding-buffers" id="toc-clipping-line-layers-and-adding-buffers" class="nav-link" data-scroll-target="#clipping-line-layers-and-adding-buffers"><span class="header-section-number">4.7</span> Clipping line layers and adding buffers</a></li>
+  <li><a href="#selecting-elements-by-attribute" id="toc-selecting-elements-by-attribute" class="nav-link" data-scroll-target="#selecting-elements-by-attribute"><span class="header-section-number">4.8</span> Selecting elements by attribute</a></li>
+  <li><a href="#singles-or-multiples" id="toc-singles-or-multiples" class="nav-link" data-scroll-target="#singles-or-multiples"><span class="header-section-number">5</span> Singles or multiples?</a></li>
+  <li><a href="#taking-stock-of-planning-constraints" id="toc-taking-stock-of-planning-constraints" class="nav-link" data-scroll-target="#taking-stock-of-planning-constraints"><span class="header-section-number">5.1</span> Taking stock of planning constraints</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -185,8 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </header><blockquote class="blockquote">
 <p><strong>Dates of practical:</strong> 23rd and 30th October 2025</p>
 </blockquote>
-<p>Creating spatial and thematic subsets of vector layers is essential GIS practice and a key step in preparing for the wind farm Project. Before you begin, familiarise yourself with the wind farm Project instructions.</p>
-<p>You will find data for this exercise on the <strong>L:</strong> drive under <code>College of Science/Geography/GEG276</code>. Read alongside <strong>GIS_guide_to_practical_exercises</strong>.</p>
+<p>Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm. This practical is a key step in preparing for the wind farm project.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -197,49 +207,172 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers.</p>
+<p>To clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers.</p>
 </div>
 </div>
 <section id="investigating-your-map-tile" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="investigating-your-map-tile">
-<span class="header-section-number">4.1</span> <input type="checkbox"> Investigating your map tile</h2>
+<span class="header-section-number">4.1</span> Investigating your map tile</h2>
 <ol class="example" type="1">
-<li><p>Launch QGIS, create a new project, and open layer <code>Wales_border</code> from <code>UK_Boundaries</code>.</p></li>
-<li><p>From <code>Wales_map_tiles</code>, open the layer corresponding to your assigned OS map tile to see where your wind farm project will focus.</p></li>
-<li><p>Calculate the area of your 20 × 20 km map tile (square metres) and its perimeter (metres).</p></li>
-<li><p>Open the attribute table for your map tile. This layer has one polygon. Open the <strong>Field Calculator</strong> and explore <code>$area</code> and <code>$perimeter</code>. Values differ slightly from expectations due to Earth curvature and projection distortion.</p></li>
-<li><p>Using prior methods, calculate the number of people living within your polygon at the 2021 Census. Compute population density for your tile.</p></li>
-</ol></section><section id="clipping-polygon-and-point-layers" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="clipping-polygon-and-point-layers">
-<span class="header-section-number">4.2</span> <input type="checkbox"> Clipping polygon and point layers</h2>
-<ol start="6" class="example" type="1">
-<li><p>Open layers in <code>Wales_protected_areas</code>. Investigate what “protected area” means and explore attribute tables. Save your project regularly.</p></li>
-<li><p>Clip these layers to your map tile using <strong>Vector → Geoprocessing Tools → Clip</strong>. Input: the dataset to clip; Overlay: your map tile polygon. Choose <strong>Save to File</strong>, <strong>GeoPackage</strong> format, sensible names, and folder structure. Examine the new clipped layer.</p></li>
-<li><p>Clip each protected area dataset relevant to your tile. Save clipped layers with appropriate filenames.</p></li>
-<li><p>Merge protected area layers with <strong>Vector → Data Management Tools → Merge Vector Layers</strong> to create a single protected‑areas layer. Alternatives include <strong>Union</strong> or <strong>MMQGIS → Merge</strong>.</p></li>
-<li><p>Dissolve internal boundaries with <strong>Vector → Geoprocessing Tools → Dissolve</strong>. Save to disk. Use the field calculator to find total protected area and percentage of your tile.</p></li>
-<li><p>Using prior data, clip existing or planned wind farms to your map tile. Save your work.</p></li>
-</ol></section><section id="clipping-line-layers-and-adding-buffers" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="clipping-line-layers-and-adding-buffers">
-<span class="header-section-number">4.3</span> <input type="checkbox"> Clipping line layers and adding buffers</h2>
+<li><p>Launch QGIS and create a new project</p></li>
+<li><p>From the <code>UK_Boundaries</code> folder, add the <code>Wales_border.gpkg</code> layer to your project</p></li>
+<li><p>From the <code>Wales_map_tiles</code> folder, add your assigned OS map tile to your project. This layer is where your wind farm project will focus</p></li>
+</ol></section><section id="map-tiles" class="level2 callout-hint" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="map-tiles">
+<span class="header-section-number">4.2</span> Map tiles</h2>
+<p>Your assigned map tiles can be found <a href="https://www.tesco.com/store-locator/" target="_blank">here</a>.</p>
+</section><ol start="4" class="example" type="1">
+<li><p>Calculate the area of your map tile in square kilometres. Need reminding of how to do this? See <a href="e01.html#sec-measuring" class="quarto-xref"><span>Section 1.4</span></a></p></li>
+<li><p>Calculate the perimeter of your map tile in kilometres</p></li>
+<li><p>Open the attribute table for your map tile. This layer has one polygon, so there’s only one row in the table</p></li>
+<li><p>Open the Field Calculator (<img src="figs/FieldCalculator.png" class="img-fluid" style="width:3.0%">). The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions.</p></li>
+<li>
+<p>Calculate the area of your tile:</p>
+<ol type="i">
+<li>In <code>Output field name</code> type <code>Area</code>
+</li>
+<li>Set <code>Output field type</code> as <code>Decimal number (real)</code>
+</li>
+<li>In the central panel, expand the <code>Geometry</code> drop-down menu</li>
+<li>Double-click <code>$area</code>
+</li>
+<li>Click <code>OK</code>
+</li>
+</ol>
+</li>
+<li><p>Calculate the <code>$perimeter</code> of your map tile. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas</p></li>
+<li><p>From everything you learnt in <a href="e03.html" class="quarto-xref"><span>Chapter 3</span></a>, calculate the number of people living within your polygon at the 2021 Census</p></li>
+<li><p>Using the area measurement you calculated above, compute population density for your tile</p></li>
+</ol>
+<section id="clip" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="clip">
+<span class="header-section-number">4.3</span> Clip</h2>
 <ol start="12" class="example" type="1">
-<li><p>From <code>British_Isles_geofabrik/wales</code>, open <code>waterways</code>, <code>water</code>, <code>railways</code>, and <code>roads</code>. Explore attributes.</p></li>
-<li><p>Clip each of these layers to your tile. Name outputs sensibly.</p></li>
-<li><p>Review wind farm Project constraints (e.g., distances from transport links and water bodies).</p></li>
-<li><p>Create buffers with <strong>Vector → Geoprocessing Tools → Buffer</strong> for each transport and water layer. Dissolve boundaries (during or after) and optionally clip buffers to the tile polygon.</p></li>
-<li><p>Create buffers for existing/planned wind farms if appropriate. Name layers carefully and organise files.</p></li>
-<li><p>Merge buffered layers if helpful.</p></li>
-<li><p>Consider merging clipped layers before buffering as an alternative workflow.</p></li>
-</ol></section><section id="selecting-elements-by-attribute" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="selecting-elements-by-attribute">
-<span class="header-section-number">4.4</span> <input type="checkbox"> Selecting elements by attribute</h2>
+<li><p>Add all the layers in the <code>Wales_protected_areas</code> folder to your project</p></li>
+<li><p>Explore these layers and their attributes. Is it obvious what is meant by ‘protected areas’? Find more information about these datasets <a href="https://en.wikipedia.org/wiki/Protected_areas_of_Wales" target="_blank">here</a>.</p></li>
+<li><p>Save your project!</p></li>
+<li>
+<p>Clip each protected area layer so they appear within your map tile:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Geoprocessing Tools</code> → <code>Clip...</code>
+</li>
+<li>Set <code>Input layer</code> to one of the protected areas layers - let’s start with <code>NRW_AONB</code>
+</li>
+<li>Set <code>Overlay layer</code> to your map tile</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Temporary scratch layers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’ll now see a new layer called <code>Clipped</code> with a memory chip icon (<img src="figs/TempScratchLayer.png" class="img-fluid" style="width:3.0%">) next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, shall we make it permanent? Well, we want to clip all the protected areas layers to the map tile, then combine into a single ‘protected areas’ layer (see steps below). So it’s fine to amass these temporary layers to get to the final desired layer, then remove them all without saving ‘junk’ data. This came up in the last exercise (see <span class="quarto-unresolved-ref">?sec-tempout</span>).</p>
+</div>
+</div>
+<ol start="16" class="example" type="1">
+<li><p>Rename the <code>Clipped</code> layer to something more intuitive (e.g. <code>NRW_AONB_Clipped</code>). It is important to rename temporary layers as you go, otherwise you’ll inevitably get confused over which layers represent what</p></li>
+<li><p>Clip the remaining protected area datasets to your map tile. You only need to clip those layers that actually have features in your area, so inspect the layers first to find out if this is the case</p></li>
+</ol>
+<section id="sec-merge" class="level3" data-number="4.3.1"><h3 data-number="4.3.1" class="anchored" data-anchor-id="sec-merge">
+<span class="header-section-number">4.3.1</span> Merge</h3>
+<ol start="18" class="example" type="1">
+<li>
+<p>Merge the clipped layer to create a single ‘protected area’ layer:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Data Management Tools</code> → <code>Merge Vector Layers...</code>
+</li>
+<li>Under <code>Input layers</code>, click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) and check all the clipped layers</li>
+<li>Click <code>OK</code>
+</li>
+<li>Set <code>Destination CRS</code> to <code>EPSG27700</code>
+</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+</li>
+</ol></section></section><section id="the-dissolve-tool" class="level2 callout-hint" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="the-dissolve-tool">
+<span class="header-section-number">4.4</span> The Dissolve tool</h2>
+<p>Combining polygons often leaves behind boundaries within the output which no longer represent the new polygon edge. These may even complicate further processing steps. It is good practice to remove these internal boundaries using the <code>Dissolve</code> tool.</p>
+</section><section id="sec-dissolve" class="level3" data-number="4.4.1"><h3 data-number="4.4.1" class="anchored" data-anchor-id="sec-dissolve">
+<span class="header-section-number">4.4.1</span> Dissolve</h3>
 <ol start="19" class="example" type="1">
-<li><p>Open <code>gis_osm_landuse_a_free_1</code> (landuse) and clip to your map tile.</p></li>
-<li><p>Examine the attribute table. Open <strong>Select by expression</strong>, expand <strong>Fields and Values</strong>, choose <code>fclass</code>, and list unique values. Decide which classes are relevant (e.g., <code>residential</code>, <code>forest</code>).</p></li>
-<li><p>Use <strong>Select by expression</strong> to select features, e.g. <code>"fclass" = 'residential'</code>.</p></li>
-<li><p>Save selected features to a new layer (<strong>Layer → Save As</strong> or <strong>Export → Save Selected Features As</strong>). Name and store methodically.</p></li>
-<li><p>Repeat for other relevant landuse classes.</p></li>
-</ol></section><section id="taking-stock-of-planning-constraints" class="level2" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="taking-stock-of-planning-constraints">
-<span class="header-section-number">4.5</span> <input type="checkbox"> Taking stock of planning constraints</h2>
-<ol start="24" class="example" type="1">
-<li><p>Review the layers that represent areas unsuitable for wind farm development because of their position within, or proximity to, man‑made or natural features.</p></li>
-<li><p>Explore unconstrained areas large enough for a wind farm. Use subsequent exercises to evaluate the best site.</p></li>
+<li>
+<p>Dissolve internal boundaries of the merged layer:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Geoprocessing Tools</code> → <code>Dissolve...</code>
+</li>
+<li>Under <code>Input layer</code>, select your merged layer</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+</li>
+<li><p>Now we have the final product derived from a series of processing steps, it’s time to export the layer. Remind yourself of how to do this here: <a href="e03.html#sec-export" class="quarto-xref"><span>Section 3.6</span></a></p></li>
+<li><p>Use the field calculator to find total protected area. Calculate percentage of your tile. No canvas quiz this time - this might be a useful piece of information to present in a caption!</p></li>
+</ol></section><section id="being-efficient" class="level2 callout-hint" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="being-efficient">
+<span class="header-section-number">4.5</span> Being efficient</h2>
+<p>Why not merge everything first, then clip and dissolve? Whilst that’s easier for us, it’s harder for the PC to merge multiple large-scale datasets. Clipping each layer individually then merging is actually more efficient for the PC. This means runtimes are faster.</p>
+</section><ol start="22" class="example" type="1">
+<li><p>Locate and add the operational (existing or planned) wind farms layer to your project</p></li>
+<li><p>Clip this layer to your map tile. Note that there may be none in your map tile</p></li>
+<li><p>Have you been saving your project?</p></li>
+</ol>
+<section id="efficient-filing" class="level2 callout-hint" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="efficient-filing">
+<span class="header-section-number">4.6</span> Efficient filing</h2>
+<p>This is a good time to remind you to be careful and tidy about where to save GIS output – you will be generating many files for this project and a hierarchical folder structure and carefully named layers is highly recommended. Be methodical in how you name layers and where you put them – you will need to find and use them later on.</p>
+</section><section id="clipping-line-layers-and-adding-buffers" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="clipping-line-layers-and-adding-buffers">
+<span class="header-section-number">4.7</span> Clipping line layers and adding buffers</h2>
+<ol start="25" class="example" type="1">
+<li><p>From the <code>British_Isles_geofabrik/wales</code> folder, add the <code>gis_osm_waterways_free_1.gpkg</code>, <code>gis_osm_water_a_free_1.gpkg</code>, <code>gis_osm_railways_free_1.gpkg</code>, and <code>gis_osm_roads_free_1.gpkg</code> layers to your project</p></li>
+<li><p>Explore these layers’ attributes</p></li>
+<li><p>Clip each of these layers to your tile. This time, try saving each clipped layer directly to your OneDrive account. It is up to you whether you prefer saving output directly, or if you’d rather create temporary layers to inspect before making them permanet.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/SaveToFile.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
+</figure>
+</div>
+<ol start="28" class="example" type="1">
+<li>
+<p>Review the Windfarm Project instructions and <span class="quarto-unresolved-ref">?sec-constraints</span> and begin to:</p>
+<ol type="i">
+<li>
+<span class="quarto-unresolved-ref">?sec-addlayers</span> all the necessary layers to your project</li>
+<li>Use <span class="quarto-unresolved-ref">?sec-buffer</span> to find which parts of your map tile should not be built upon</li>
+<li>
+<span class="quarto-unresolved-ref">?sec-clip</span>, <a href="#sec-merge" class="quarto-xref"><span>Section 4.3.1</span></a>, and <a href="#sec-dissolve" class="quarto-xref"><span>Section 4.4.1</span></a> any orginial or modified layer as required</li>
+<li>
+<span class="quarto-unresolved-ref">?sec-save</span> your layers in sensible, well-organised file structure</li>
+</ol>
+</li>
+</ol>
+<p>Think carefully about the order in which you buffer, clip, dissolve, merge etc. Would clipping at the end of your workflow remove trailing bits generated by your buffer, for example (:egg:)? Experimentation is encouraged! You will find efficient and inefficient ways of doing things, and your learning really develops when you play around, mess up, and try again.</p>
+</section><section id="selecting-elements-by-attribute" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="selecting-elements-by-attribute">
+<span class="header-section-number">4.8</span> Selecting elements by attribute</h2>
+<ol start="29" class="example" type="1">
+<li><p>From the <code>British_Isles_geofabrik/wales</code> folder, add the <code>gis_osm_landuse_a_free_1.gpkg</code> layer to your project</p></li>
+<li><p>Clip the layer to your map tile</p></li>
+<li><p>Open the layer’s attribute table</p></li>
+<li><p>Click <code>Select features using an expression</code> (<img src="figs/SelectByExpression.png" class="img-fluid" style="width:3.0%">)</p></li>
+<li><p>Expand <code>Fields and Values</code></p></li>
+<li><p>Click <code>fclass</code> → <code>All Unique</code>. All unique categories in the <code>fclass</code> layer (i.e. all the unique land use classes) are now listed</p></li>
+<li><p>Decide which classes are relevant (again, refer to <span class="quarto-unresolved-ref">?sec-constraits</span>)</p></li>
+<li><p>Under <code>Expression</code>, type <code>"fclass" = 'residential'</code>. You can also double-click on the fields, values, and symbols (e.g. <img src="figs/Equals2.png" class="img-fluid" style="width:3.0%">) names to build the expression</p></li>
+<li><p>Click <code>OK</code></p></li>
+</ol></section><section id="singles-or-multiples" class="level1 callout-hint" data-number="5"><h1 data-number="5">
+<span class="header-section-number">5</span> Singles or multiples?</h1>
+<p>You may recognise this type of coding - you did in <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a> (<code>"fclass" IN ('primary', 'trunk', 'motorway'</code>). Well, the logic is the same. But reflect carefully on whether extracting all layers into a single ‘landuse’ layer is helpful, or if you want to be able to distinguish between the different layers. Review the windfarm project conditions carefully to decide.</p>
+</section><ol start="38" class="example" type="1">
+<li><p>Export the selected polygons (remember to use the <code>Save Selected Features As...</code> option). Name and store methodically.</p></li>
+<li><p>Repeat for all other relevant land use classes.</p></li>
+</ol>
+<section id="taking-stock-of-planning-constraints" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="taking-stock-of-planning-constraints">
+<span class="header-section-number">5.1</span> Taking stock of planning constraints</h2>
+<ol start="40" class="example" type="1">
+<li>By this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -251,13 +384,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>By the end of this exercise you should:</p>
+<p>By the end of this exercise you should be able to:</p>
 <ol type="1">
-<li>Calculate area and perimeter of a polygon using the Field Calculator.</li>
-<li>Clip point, line, and polygon vector layers.</li>
-<li>Create and dissolve buffers around point, line, and polygon layers.</li>
-<li>Select and save subsets from a vector layer by attribute.</li>
-<li>Build layers that represent your tile’s wind farm planning constraints.</li>
+<li>Use the field calculator to derive geometric attributes (area, perimeter) and compute values such as population density for a map tile.</li>
+<li>Clip features from large vector datasets to a defined area of interest, retaining only the data relevant to the analysis.</li>
+<li>Combine multiple clipped layers into a single dataset by merging and dissolving internal boundaries to produce clean output.</li>
+<li>Create dissolved buffers around line and polygon features to represent zones of constraint or proximity.</li>
+<li>Select features by attribute using expressions, and organise the resulting layers methodically within a well-structured file system.</li>
 </ol>
 </div>
 </div>
