@@ -1,6 +1,6 @@
 # Dechrau arni {#sec-e01}
 
-> **Dyddiad yr ymarfer:** 2 Hydref 2025
+> **Dyddiad yr ymarfer:** 2il Hydref 2026
 
 I feistroli QGIS, rhaid dechrau gyda'r pethau sylfaenol. Mae'r ymarfer hwn yn cyflwyno'r sgiliau sylfaenol a fydd yn sail i weddill y modiwl hwn a thu hwnt - gan gynnwys eich traethawd hir. Cymerwch eich amser, gofynnwch gwestiynau, a gwnewch yn siŵr eich bod yn hyderus gyda phob cam cyn symud ymlaen.
 

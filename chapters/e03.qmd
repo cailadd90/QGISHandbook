@@ -54,6 +54,14 @@ To examine the distribution of postcode reference points within Wales, visualise
 
 (@) Calculate the percentage population change in Wales between 2011 and 2021. Show off by being first to tell your neighbour the result
 
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q1.Rmd", edir = "exercises")
+```
+
 (@) Right-click on the `2011` census headcount layer and click `Remove Layer...`
 
 ::: {.callout-tip}

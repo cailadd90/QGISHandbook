@@ -1,0 +1,14 @@
+Question
+========
+Beth oedd poblogaeth gofrestredig Cymru yn 2021? *(Rhowch y rhif heb goma.)*
+
+Solution
+========
+Poblogaeth gofrestredig Cymru yn 2021 oedd 3,107,400.
+
+Meta-information
+================
+extype: num
+exsolution: 3107400
+extol: 0
+exname: E03_Q1_cy

@@ -1,52 +1,48 @@
 project:
   type: book
   output-dir: docs
-
 book:
-  title: 'QGIS Handbook'
+  title: QGIS Handbook
   subtitle: 'GEG276: Introduction to Geographic Information Systems'
   author:
-    - 'Cai Ladd'
-    - 'Adrian Luckman'
-  site-url: 'https://cailadd90.github.io/QGISHandbook/'
+  - Cai Ladd
+  - Adrian Luckman
+  site-url: https://cailadd90.github.io/QGISHandbook/
   sidebar:
     logo: chapters/figs/Cover.png
   chapters:
-    - index.qmd
-    - chapters/intro.qmd
-    - chapters/e01.qmd
-    - chapters/e02.qmd
-    - chapters/e03.qmd
-    - chapters/e04.qmd
-    - chapters/e05.qmd
-    - chapters/e06.qmd
-    - chapters/faq.qmd
-    - chapters/references.qmd
-
+  - index.qmd
+  - chapters/intro.qmd
+  - chapters/e01.qmd
+  - chapters/e02.qmd
+  - chapters/e03.qmd
+  - chapters/e04.qmd
+  - chapters/e05.qmd
+  - chapters/e06.qmd
+  - chapters/faq.qmd
+  - chapters/references.qmd
 bibliography: bib/references.bib
-
 format:
   html:
     theme: cosmo
-
+    css: webex.css
+    include-after-body: webex.js
 babelquarto:
   languagecodes:
-    - name: en
-      text: "English"
-    - name: cy
-      text: "Cymraeg"
-  mainlanguage: 'en'
-  languages: ['cy']
-
-title-cy: 'Llawlyfr QGIS'
+  - name: en
+    text: English
+  - name: cy
+    text: Cymraeg
+  mainlanguage: en
+  languages: cy
+title-cy: Llawlyfr QGIS
 subtitle-cy: 'GEG276: Cyflwyniad i Systemau Gwybodaeth Ddaearyddol'
 author-cy:
-  - 'Cai Ladd'
-  - 'Adrian Luckman'
+- Cai Ladd
+- Adrian Luckman
 lang: en
 language:
   cy:
-    toc-title-document: "Cynnwys"
-    title-block-author-single: "Awdur"
-    title-block-author-plural: "Awduron"
-
+    toc-title-document: Cynnwys
+    title-block-author-single: Awdur
+    title-block-author-plural: Awduron

@@ -59,7 +59,7 @@ Os nad yw'r gosodiad yn gweithio'r tro cyntaf, ailadroddwch y camau'n ofalus i g
 
 :::
 
-## Mynediad i'r data
+## Mynediad i'r data {#sec-data}
 
 Mae'r holl setiau data sydd eu hangen arnoch ar gyfer y sesiynau ymarferol a'r prosiect terfynol wedi'u darparu ar y gyriant L:Common Student:
 

@@ -1,6 +1,12 @@
+
+```{r}
+#| include: false
+library(exams2forms)
+```
+
 # Getting started {#sec-e01}
 
-> **Date of practical:** 2nd October 2025
+> **Date of practical:** 2nd October 2026
 
 To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the development of your wind farm project and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.
 
@@ -12,22 +18,19 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
 
 ## Starting up
 
-(@) **Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you
-Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it'll appear in File Explorer under your OneDrive section**
+(@) Follow the steps [here](@sec-data) to access all the datasets you need for the practicals and the final project 
 
 (@) Launch `QGIS`. This could be on a University computer, via a remote desktop, or on your own computer
 
 (@) From the menu bar, click `Project` → `New`. Find the shortcut icon to create a new project
 
-(@) Add your first vector layer in QGIS. From the menu bar, click `Layer` → `Add Layer` → `Add Vector Layer...`
+(@) Add your first vector layer in QGIS:
 
-(@) Click the `Browse` icon (![](figs/Browse.png){width=3%}) 
-
-(@) Navigate to the folder where the data is stored, i.e. **`GEG276`**
-
-(@) Open the `British_Isles_land_polygons` folder and click on the corresponding `.gpkg` vector layer
-
-(@) Click `Open` → `Add` → `Close`. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the `Layers` panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas
+    i. From the menu bar, click `Layer` → `Add Layer` → `Add Vector Layer...`
+    ii. Click the `Browse` icon (![](figs/Browse.png){width=3%}) 
+    iii. Navigate to the folder where the data is stored, i.e. **`GEG276`**
+    iv. Open the `British_Isles_land_polygons` folder and click on the corresponding `.gpkg` vector layer
+    v. Click `Open` → `Add` → `Close`. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the `Layers` panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas
 
 ![](figs/Layers.png){fig-align='center' width=50%}
 
@@ -39,9 +42,7 @@ Open the folder and click Sync in the top toolbar. This will download and sync t
 
 (@) Try using the mouse scroll wheel as a shortcut
 
-(@) Make yourself familiar with navigating around the Map Canvas by losing yourself! Pan and zoom until you can't see the British Isles layer anymore
-
-(@) Once lost, right-click on the layer in the `Layers` panel and click `Zoom to Layer(s)` to easily return to view that layer
+(@) Make yourself familiar with navigating around the Map Canvas by losing yourself! Pan and zoom until you can't see the British Isles layer anymore. Once lost, right-click on the layer in the `Layers` panel and click `Zoom to Layer(s)` to easily return to view that layer
 
 ## Adjusting style properties {#sec-properties}
 
@@ -50,6 +51,8 @@ Open the folder and click Sync in the top toolbar. This will download and sync t
 (@) Click `Simple Fill` and experiment with changing the layer symbology's colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer
 
 ![](figs/SimpleFill.png){fig-align='center' width=25%}
+
+(@) Click `Apply` → `OK` when you've finished editing the layer's symbology
 
 (@) From the menu bar, click `Project` → `Save` and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!
 
@@ -66,6 +69,10 @@ Open the folder and click Sync in the top toolbar. This will download and sync t
 
 (@) Share your answers on Menti! Being able to measure geographic features is a fundamental objective of GIS analysis
 
+The EPSG code for the British National Grid is `r forms_num(27700, tol = 50)`.
+
+Which projection type preserves area? `r forms_string("equal-area")`
+
 ## Exploring the Attribute Table {#sec-attrib}
 
 (@) From the `Layers` panel, right-click on `British_Isles_land_polygons` and click `Open Attribute Table`
@@ -76,7 +83,9 @@ Open the folder and click Sync in the top toolbar. This will download and sync t
 An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: `fid` (field identifier) and `Area`.
 :::
 
-(@) Arrange the Map Canvas and attribute table windows so that you can see both on screen at once. To understand how the attribute table corresponds with the vector layer:
+(@) Click the `Dock Attribute Table` icon (![](figs/DockAttributeTable.png){width=3%}) so that you can see both the Map Canvas and Attribute Table on screen at once
+
+(@) To understand how the attribute table corresponds with the vector layer:
 
     i. Sort the attribute table according to each polygon's area by clicking the `Area` column title. Repeated clicks will sort by ascending or descending the values
     ii. Click a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow

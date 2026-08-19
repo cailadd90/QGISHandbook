@@ -12,17 +12,17 @@ There are a number of ways to access QGIS:
 
 QGIS can be accessed from any computer around campus:
 
-(@) Use the ZenWorks window to navigate to `Science → Geography` 
+1. Use the ZenWorks window to navigate to `Science → Geography` 
 
-(@) Double-click the `QGIS` icon
+2. Double-click the `QGIS` icon
 
 ## Personal computer
 
 QGIS is free, open-source software available for Windows, Mac, and Linux. This means you’re not limited to using University computers. You can install it on your own machine and work wherever and whenever you like:
 
-(@) Download and install QGIS [here](https://www.qgis.org/download/){target='_blank'}
+1. Download and install QGIS [here](https://www.qgis.org/download/){target='_blank'}
 
-(@) Double-click on the downloaded folder to start the installation. For Mac users, right-click on the folder and click `Open` to start the installation
+2. Double-click on the downloaded folder to start the installation. For Mac users, right-click on the folder and click `Open` to start the installation
 
 ::: callout-tip
 I recommend installing the `Long Term Release` version of QGIS which, in theory, has fewer bugs in it. Download `Latest Release` for the most up-to-date features.
@@ -59,7 +59,14 @@ If the setup doesn't work the first time, repeat the steps carefully to confirm 
 
 :::
 
-## Accessing the data
+## Accessing the data {#sec-data}
+
+(@) **Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you
+Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it'll appear in File Explorer under your OneDrive section**
+
+![](figs/OneDriveSettings.png){fig-align='center' width=50%}
+
+<!--
 
 All the datasets you need for the practicals and the final project are provided on the Student Common L:drive:
 
@@ -72,6 +79,8 @@ If you prefer to work on your own computer, you will need to copy these datasets
 2. **Download from Google Drive:** Copy the relevant files using the link [here](https://drive.google.com/drive/folders/1n8jng_fFgCJ22vY-W9khlk4hEdKQg-CP?usp=sharing){target='_blank'}. 
 
 To save time and space, only download or copy the data you need for each exercise rather than transferring everything at once.
+
+-->
 
 ## Data storage
 

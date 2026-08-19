@@ -50,8 +50,8 @@
     ]
   },
   {
-    "objectID": "chapters/intro.cy.html#mynediad-ir-data",
-    "href": "chapters/intro.cy.html#mynediad-ir-data",
+    "objectID": "chapters/intro.cy.html#sec-data",
+    "href": "chapters/intro.cy.html#sec-data",
     "title": "Cyn i chi ddechrau",
     "section": "Mynediad i’r data",
     "text": "Mynediad i’r data\nMae’r holl setiau data sydd eu hangen arnoch ar gyfer y sesiynau ymarferol a’r prosiect terfynol wedi’u darparu ar y gyriant L:Common Student:\nL:/Coleg Gwyddoniaeth/Daearyddiaeth/GEG276\nOs yw’n well gennych weithio ar eich cyfrifiadur eich hun, bydd angen i chi gopïo’r setiau data hyn i’ch cyfrifiadur personol. Gallwch wneud hyn mewn un o ddwy ffordd:\n\nTrosglwyddo o’r gyriant L: Defnyddiwch ddyfais storio USB neu wasanaeth storio cwmwl fel Microsoft OneDrive neu Google Drive i gopïo’r ffeiliau perthnasol o’r gyriant L.\nLawrlwytho o Google Drive: Copïwch y ffeiliau perthnasol gan ddefnyddio’r ddolen yma.\n\nEr mwyn arbed amser a lle, dim ond lawrlwythwch neu gopïwch y data sydd ei angen arnoch ar gyfer pob ymarfer corff yn hytrach na throsglwyddo popeth ar unwaith.",
@@ -334,7 +334,7 @@
     "href": "chapters/e03.cy.html#postcode-point-locations",
     "title": "3  Geocodio a phoblogaeth",
     "section": "",
-    "text": "Launch QGIS, create a new project and open Wales_Principal_Areas.\nOpen Wales_headcounts_at_postcodes_2021. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.\nInvestigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.\nUsing attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.\nUnder Layer Properties → Symbology, change from Single Symbol to Graduated. Set Column to Total (population 2021), choose Method = Size, then Classify and Apply. Point sizes should now reflect population per postcode.",
+    "text": "Launch QGIS, create a new project and open Wales_Principal_Areas.\nOpen Wales_headcounts_at_postcodes_2021. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.\n\n\n\nBeth oedd poblogaeth gofrestredig Cymru yn 2021? (Rhowch y rhif heb goma.)\n\n\n\nPoblogaeth gofrestredig Cymru yn 2021 oedd 3,107,400.\n\n\n\nInvestigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.\nUsing attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.\nUnder Layer Properties → Symbology, change from Single Symbol to Graduated. Set Column to Total (population 2021), choose Method = Size, then Classify and Apply. Point sizes should now reflect population per postcode.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
     ]

@@ -18,6 +18,15 @@ Examine the distribution of postcode reference points within Wales, visualise po
 
 (@) Open `Wales_headcounts_at_postcodes_2021`. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.
 
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q1.cy.Rmd", edir = "exercises")
+```
+
+
 (@) Investigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.
 
 (@) Using attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.
