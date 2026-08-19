@@ -179,7 +179,7 @@ div.csl-indent {
    
   <ul>
 <li><a href="#accessing-qgis" id="toc-accessing-qgis" class="nav-link active" data-scroll-target="#accessing-qgis">Accessing QGIS</a></li>
-  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The data</a></li>
+  <li><a href="#accessing-the-data" id="toc-accessing-the-data" class="nav-link" data-scroll-target="#accessing-the-data">Accessing the data</a></li>
   <li><a href="#data-storage" id="toc-data-storage" class="nav-link" data-scroll-target="#data-storage">Data storage</a></li>
   <li><a href="#watch-your-storage-space" id="toc-watch-your-storage-space" class="nav-link" data-scroll-target="#watch-your-storage-space">Watch your storage space</a></li>
   <li><a href="#gis-software-options" id="toc-gis-software-options" class="nav-link" data-scroll-target="#gis-software-options">GIS software options</a></li>
@@ -187,7 +187,7 @@ div.csl-indent {
   <li>
 <a href="#qgis-basics" id="toc-qgis-basics" class="nav-link" data-scroll-target="#qgis-basics">QGIS basics</a>
   <ul class="collapse">
-<li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+<li><a href="#windows-panels-and-toolbars" id="toc-windows-panels-and-toolbars" class="nav-link" data-scroll-target="#windows-panels-and-toolbars">Windows, panels, and toolbars</a></li>
   <li><a href="#layers" id="toc-layers" class="nav-link" data-scroll-target="#layers">Layers</a></li>
   <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects">Projects</a></li>
   <li><a href="#plugins" id="toc-plugins" class="nav-link" data-scroll-target="#plugins">Plugins</a></li>
@@ -222,25 +222,30 @@ div.csl-indent {
   
 
 
-</header><p>This guide is your companion to the <em>Introduction to GIS</em> practical exercises. It will help you build practical skills, avoid common pitfalls, and make the most of your time in the computer lab. You can work at your own pace, but it is important to attend all scheduled computer practicals. These sessions are your chance to share your progress, ask questions, and clear up misunderstandings in a supportive, flipped-learning environment <span class="citation" data-cites="Dikilitas2023">(<a href="references.html#ref-Dikilitas2023" role="doc-biblioref">Dikilitas and Fructuoso 2023</a>)</span>.</p>
-<p>By following the advice in this chapter, you will be better prepared to complete the exercises efficiently and confidently.</p>
+</header><p>This chapter will help you build practical skills, avoid common pitfalls, and make the most of your time in the computer lab. You can work at your own pace, but it is important to attend all scheduled computer practicals. These sessions are your chance to share your progress, ask questions, and clear up misunderstandings in a supportive, flipped-learning environment <span class="citation" data-cites="Dikilitas2023">(<a href="references.html#ref-Dikilitas2023" role="doc-biblioref">Dikilitas and Fructuoso 2023</a>)</span>. By the end of this chapter, you’ll be better prepared to complete the exercises efficiently and confidently.</p>
 <section id="accessing-qgis" class="level2"><h2 class="anchored" data-anchor-id="accessing-qgis">Accessing QGIS</h2>
-<p>Software and data is provided through the Open Access computer network, which you can access in-person in one of the labs around campus, or via a virtual desktop on any computer with Remote Desktop Protocol installed (standard for most Windows PCs, available for most Macs and Linux computers). See elsewhere for instructions on how to access the virtual desktop, which will need Multi-Factor Authentication via a Smartphone App.</p>
+<p>There are a number of ways to access QGIS:</p>
 <div class="tabset-margin-container"></div>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist">
-<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">University PC</a></li>
-<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Personal PC</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">University computer</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Personal computer</a></li>
 <li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Remote Desktop</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Applications are provided through the ZenWorks folder on your desktop. You will find QGIS (and ArcGIS) in the <code>Science &gt; Geography</code> area. We use the latest stable release of QGIS.</p>
+<p>QGIS can be accessed from any computer around campus:</p>
+<ol class="example" type="1">
+<li><p>Use the ZenWorks window to navigate to <code>Science → Geography</code></p></li>
+<li><p>Double-click the <code>QGIS</code> icon</p></li>
+</ol>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>QGIS is free, open-source software available for Windows, Mac, and Linux. This means you’re not limited to using University computers — you can install it on your own machine and work wherever and whenever you like.</p>
-<p>Download and install QGIS from the official website <a href="https://www.qgis.org/download/" target="_blank">here</a>.</p>
-<p>Follow the links to the QGIS Standalone Installer for your operating system.</p>
+<p>QGIS is free, open-source software available for Windows, Mac, and Linux. This means you’re not limited to using University computers. You can install it on your own machine and work wherever and whenever you like:</p>
+<ol start="3" class="example" type="1">
+<li><p>Download and install QGIS <a href="https://www.qgis.org/download/" target="_blank">here</a></p></li>
+<li><p>Double-click on the downloaded folder to start the installation. For Mac users, right-click on the folder and click <code>Open</code> to start the installation</p></li>
+</ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -251,7 +256,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you want the most up-to-date features, choose the <strong>Latest Release</strong>. If you prefer your setup to match the version installed on University computers, choose the <strong>Long Term Release (LTR)</strong>.</p>
+<p>I recommend installing the <code>Long Term Release</code> version of QGIS which, in theory, has fewer bugs in it. Download <code>Latest Release</code> for the most up-to-date features.</p>
 </div>
 </div>
 </div>
@@ -292,7 +297,7 @@ Note
 </div>
 </div>
 </div>
-</section><section id="the-data" class="level2"><h2 class="anchored" data-anchor-id="the-data">The data</h2>
+</section><section id="accessing-the-data" class="level2"><h2 class="anchored" data-anchor-id="accessing-the-data">Accessing the data</h2>
 <p>All the datasets you need for the practicals and the final project are provided on the Student Common L:drive:</p>
 <p><code>L:/College of Science/Geography/GEG276</code></p>
 <p>If you prefer to work on your own computer, you will need to copy these datasets to your personal computer. You can do this in one of two ways:</p>
@@ -304,88 +309,77 @@ Note
 </section><section id="data-storage" class="level2"><h2 class="anchored" data-anchor-id="data-storage">Data storage</h2>
 <p>Swansea University provides secure storage through OneDrive and network drives. These appear the same no matter which University computer you log into, and you can also access OneDrive from your own devices. I have two key tips for you:</p>
 <ul>
-<li><p><strong>Always save your work to OneDrive.</strong> This keeps it safe from accidental loss and accessible wherever you are. Avoid storing coursework on the <strong>local C: drive</strong> — files saved there are only available on that one machine and may be deleted automatically overnight.</p></li>
-<li><p><strong>Be organised.</strong> Create a clear folder structure for your GIS work and name files logically. GIS projects can generate hundreds of files; staying tidy will save you time and frustration later.</p></li>
+<li><p><strong>Always save your work to OneDrive.</strong> This keeps it safe from accidental loss and accessible wherever you are. Avoid storing coursework on the local C: drive. Files saved there are only available on that one machine and may be deleted automatically overnight.</p></li>
+<li><p><strong>Be organised.</strong> Create a clear folder structure for your GIS work and name files logically. GIS projects can generate hundreds of files. Staying tidy will save you time and frustration later.</p></li>
 </ul></section><section id="watch-your-storage-space" class="level2"><h2 class="anchored" data-anchor-id="watch-your-storage-space">Watch your storage space</h2>
 <p>If your disk space becomes full, QGIS and other software can crash. To remedy this:</p>
 <ol type="1">
-<li><p>Check space in the desktop notification panel or by right-clicking the drive in Windows Explorer and selecting <strong>Properties</strong>.</p></li>
-<li><p>Delete temporary or unwanted files to free up space.</p></li>
+<li><p>Check available space by right-clicking your OneDrive network in Windows Explorer and clicking <code>Properties</code></p></li>
+<li><p>Delete temporary or unwanted files to free up space</p></li>
 </ol>
-<p>If problems persist — for example, if you can’t log in, access software, or save files — make a <strong>Service Centre</strong> request <a href="https://swanseauniversity.service-now.com/sp?id=sc_cat_item&amp;sys_id=3f1dd0320a0a0b99000a53f7604a2ef9" target="_blank">here</a>.</p>
+<p>If problems persist (e.g. you can’t log in, access software, or save files), make a Service Centre request <a href="https://swanseauniversity.service-now.com/sp?id=sc_cat_item&amp;sys_id=3f1dd0320a0a0b99000a53f7604a2ef9" target="_blank">here</a>.</p>
 </section><section id="gis-software-options" class="level2"><h2 class="anchored" data-anchor-id="gis-software-options">GIS software options</h2>
 <p>Two software applications presently dominate the GIS market, each with benefits and drawbacks:</p>
 <ol type="1">
 <li>
-<strong>ESRI ArcGIS:</strong> ArcGIS is a suite of programs, including ArcMap (standard GIS) and ArcScene (3D GIS). It has been the industry leader for decades and is widely used by professionals.</li>
+<strong>ESRI ArcGIS Pro.</strong> ArcGIS Pro has been the industry leader for decades and is widely used by professionals.</li>
 </ol>
 <p style="margin-left: 2em;">
-<strong>Pros:</strong> Well established, feature-rich, and supported by extensive online documentation.<br><strong>Cons:</strong> Can feel unintuitive, prone to occasional bugs, and expensive outside education.
+<strong>Pros:</strong> Well established, feature-rich, and supported by extensive online documentation.<br><strong>Cons:</strong> Software is licensed and expensive.
 </p>
 <ol start="2" type="1">
 <li>
-<strong>QGIS (Quantum GIS):</strong> QGIS is a single, open-source application that has grown rapidly in popularity, especially in the public sector.</li>
+<strong>QGIS (Quantum GIS).</strong> QGIS is an open-source application that has grown rapidly in popularity, especially in the public sector.</li>
 </ol>
 <p style="margin-left: 2em;">
 <strong>Pros:</strong> Free to install, open source, and increasingly competitive with ArcGIS.<br><strong>Cons:</strong> Still lacks some advanced functions and may be less common in certain job markets.
 </p>
-<p>As a Geography Department, we’ve chosen to teach you <strong>QGIS</strong>. Why? Because it combines the power and flexibility of professional GIS with the accessibility and freedom of open-source software.</p>
+<p>As a Geography Department, we’ve chosen to teach you <code>QGIS</code>. Why? Because it combines the power and flexibility of professional GIS with the accessibility and freedom of open-source software.</p>
 <p>QGIS is free to install on your own computer, meaning you can practise and experiment anywhere, anytime, without relying on campus labs or expensive licences. It has a clean, intuitive interface that many beginners find easier to learn than ArcGIS, yet it still offers advanced tools used by professionals around the world.</p>
-<p>Beyond the classroom, QGIS is rapidly gaining ground in government, consultancy, and research sectors, particularly where budgets are tight and data-sharing is important <span class="citation" data-cites="Graser2025">(<a href="references.html#ref-Graser2025" role="doc-biblioref">Graser et al. 2025</a>)</span>. Its open-source nature means new features and plugins are added by a global community of GIS experts — so you’re learning with a platform that’s evolving at the cutting edge.</p>
-<p>Installing it now gives you a career-ready skillset, the ability to collaborate internationally without licence barriers, and the confidence that you can always access a powerful GIS toolkit long after graduation. You can download it <a href="https://www.qgis.org/download/" target="_blank">here</a>.</p>
-<!-- If you become keen on GIS and see a future in it for you, I recommend that you try to get the best of both worlds by exploring ArcGIS as well as QGIS, perhaps by also trying to complete the practical exercises in ArcGIS. -->
+<p>Beyond the classroom, QGIS is rapidly gaining ground in government, consultancy, and research sectors, particularly where budgets are tight and data-sharing is important <span class="citation" data-cites="Graser2025">(<a href="references.html#ref-Graser2025" role="doc-biblioref">Graser et al. 2025</a>)</span>. Its open-source nature means new features and plugins are added by a global community of GIS experts. You’re therefore learning with a platform that’s evolving at the cutting edge.</p>
+<p>Mastering QGIS now gives you a career-ready skillset, the ability to collaborate internationally without licence barriers, and the confidence that you can always access a powerful GIS toolkit long after graduation.</p>
 </section><section id="developing-your-computer-skills" class="level2"><h2 class="anchored" data-anchor-id="developing-your-computer-skills">Developing your computer skills</h2>
-<p>The most effective way to learn GIS is to use it actively. The practical exercises are designed to guide you through the most common functions in QGIS, helping you build skills and create results you can use in your coursework, projects, or dissertation.</p>
+<p>The most effective way to learn GIS is to use it. The practical exercises are designed to guide you through the most common functions in QGIS, helping you build skills and create results you can use in your coursework, projects, or dissertation.</p>
 <p>Here are my protips for learning QGIS:</p>
 <ol type="1">
-<li><p><strong>Expect to make mistakes and need to repeat steps.</strong> This repetition will help you remember processes. QGIS can occasionally hang or crash. Learn to recover quickly by saving often and keeping track of your progress.</p></li>
+<li><p><strong>Expect to make mistakes and repeat steps.</strong> This repetition will help you remember processes. QGIS can occasionally hang or crash. Learn to recover quickly by saving often and keeping track of your progress.</p></li>
 <li><p><strong>Save your work regularly and know exactly where it is stored.</strong> Keep a tidy, logical folder structure, and make copies of work that has taken a long time to achieve. GIS creates many files, and good organisation will save time and prevent data loss.</p></li>
-<li><p><strong>Explore the software rather than only following instructions.</strong> Be bold and click through menus, try tools, and experiment. You will learn faster by discovering features yourself. <em>The practical exercises will expect you to find some things out for yourself.</em></p></li>
-<li><p><strong>Ask for help when needed.</strong> Support is available through Canvas video demos, classmates, demonstrators, and online resources (see <a href="#sec-gethelp">Getting help</a>). <strong>Coursework must be completed individually,</strong> but collaboration on problem-solving is encouraged.</p></li>
-</ol>
-<p>You’ll master QGIS in no time.</p>
-</section><section id="qgis-basics" class="level2"><h2 class="anchored" data-anchor-id="qgis-basics">QGIS basics</h2>
-<section id="windows" class="level3"><h3 class="anchored" data-anchor-id="windows">Windows</h3>
-<p>QGIS has two main workspaces: the <strong>Map Canvas</strong> and the <strong>Print Layout</strong>. You can also open <strong>Attribute Tables</strong> via the <strong>GUI</strong> to view and edit data linked to map features. You need to become familiar with opening and interacting with these main program elements.</p>
+<li><p><strong>Explore the software rather than only following instructions.</strong> Be bold and click through menus, try tools, and experiment. You will learn faster by discovering features yourself. The practical exercises will expect you to find some things out for yourself.</p></li>
+<li><p><strong>Ask for help when needed.</strong> Support is available through Canvas video demos, classmates, demonstrators, and online resources. Coursework must be completed individually, but collaboration on problem-solving is encouraged.</p></li>
+</ol></section><section id="qgis-basics" class="level2"><h2 class="anchored" data-anchor-id="qgis-basics">QGIS basics</h2>
+<section id="windows-panels-and-toolbars" class="level3"><h3 class="anchored" data-anchor-id="windows-panels-and-toolbars">Windows, panels, and toolbars</h3>
+<p>QGIS has two main windows: the <code>Map Canvas</code> and <code>Print Layout</code>. Within each window, you can open a number of toolbars (located along the top or left of each window by default) and panels (such as the <code>Attribute Table</code> to view and edit data linked to map features). You need to become familiar with opening and interacting with these main program elements.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/Windows.png" class="img-fluid figure-img"></p>
-<figcaption>The Map Canvas (top), Print Layout (bottom), and Attributes Table (right) for a recent project all on one screen.</figcaption></figure>
+<figcaption>The Map Canvas (top) and Print Layout (bottom) windows, with toolbars along the top (both windows) and left (Print Layout window only) of each window, and a series of panels which are either docked or floating (e.g. an Attributes Table (right)).</figcaption></figure>
 </div>
 </section><section id="layers" class="level3"><h3 class="anchored" data-anchor-id="layers">Layers</h3>
-<p>A layer is a dataset of a single type — points, lines, polygons, or raster — often stored with multiple associated files. Layers are combined to create maps or are processed to produce new layers. Layer order matters because higher layers can hide lower ones.</p>
+<p>A layer is a dataset of a single type — vector or raster — loaded into QGIS from (often multiple associated) files saved on your network. Layers are combined to create maps or are processed to produce new layers. Layer order matters because higher layers can hide lower ones.</p>
 </section><section id="projects" class="level3"><h3 class="anchored" data-anchor-id="projects">Projects</h3>
-<p>A QGIS project file (<code>.qgz</code>) stores references to your data and display settings, <strong>not the data itself.</strong> I recommend starting a new project when the geographic focus of your work changes or when you move onto a new assignment. Projects therefore contain virtual links to all of the data layer files that you have loaded, as well as instructions to the software as to how they should appear. This leads to three important considerations:</p>
+<p>A QGIS project file (<code>.qgz</code>) stores references to your data and display settings, but doesn’t store the data itself. Projects therefore contain virtual links to all of the data files you’ve loaded, as well as instructions to the software as to how they should be displayed. This leads to three important considerations:</p>
 <ol type="1">
-<li><p>Copying or transferring a QGIS project from one computer to another would require copying the project file <strong>and</strong> all associated data layers in such a way as to maintain the relative file paths. This is sometimes difficult to achieve. If you change your computer environment (e.g. from the University system to your laptop), it is often easier simply to copy all of the layer files and start a new project from scratch — opening and arranging each of the layer files again.</p></li>
-<li><p>Moving or renaming data layers (or the folders that contain them) will mean a QGIS project can no longer find them and so will fail to open them. It is possible to recover from this situation — but better to avoid it. All data files on the L: drive will remain where they are. Make sure that all data files that you put on your OneDrive (or memory stick or laptop disk) are named sensibly and placed in an appropriate folder structure so that you don’t accidentally move, rename, or delete them. You will probably generate many hundreds of data files by downloading (e.g. from the internet), copying (e.g. from the L: drive), or creating layers in the course of GIS processing.</p></li>
-<li><p>When you create a new GIS layer, for instance by performing a geoprocessing function on an existing layer, you are normally presented with the option of creating a temporary layer or saving the new layer to disk. Creating temporary layers is a quick way of exploring and confirming the output is what you wanted. However, these layers will no longer be available when you close the project unless you make them permanent. I recommend that use temporary layers for experimentation, and choose a permanent name, location, and data type for any layer that you will need later on.</p></li>
-</ol>
-<p>In general, prioritise saving your data layer files — they are usually more valuable than the project file itself.</p>
-</section><section id="plugins" class="level3"><h3 class="anchored" data-anchor-id="plugins">Plugins</h3>
-<p>The basic installation of QGIS is adequate for most purposes, however the GIS practical exercises here go a bit beyond this basic functionality. Many QGIS add-ons have been developed through Open Source software development and made freely available through the Plugins interface:</p>
-<p><code>Main Menu &gt; Plugins &gt; Manage and install Plugins</code></p>
-<p>Plugins are installed in the user part of the computer storage so require no administrator privileges. You are encouraged to explore all available plugins. The following exercises will explain when certain Plugins need to be installed (on the University system and/or on your own computer).</p>
-<!--  -->
+<li><p><strong>Moving QGIS projects.</strong> Copying or transferring a QGIS project from one computer to another would require copying the project file and all associated data layers in such a way as to maintain the relative file paths (the path to your data the QGIS project needs to load them). This is sometimes difficult to achieve. If you change your computer environment (e.g. from the University system to your laptop), it is often easier simply to copy all of the layer files and start a new project from scratch.</p></li>
+<li><p><strong>Moving or renaming data layers.</strong> Changing data layers (or the folders that contain them) will mean a QGIS project can no longer find them and so will fail to open them. It is possible to recover from this situation, but it’s easier to avoid in the first place. All data files on the master OneDrive will remain where they are. Make sure that all data files that you put on your OneDrive (or memory stick or laptop disk) are named sensibly and placed in an appropriate folder structure so that you don’t accidentally move, rename, or delete them. You will probably generate many hundreds of data files by downloading (e.g. from the internet), copying (e.g. from OneDrive), or creating layers in the course of GIS processing.</p></li>
+<li><p><strong>Working with temporary layers.</strong> When you create a new GIS layer (e.g. by performing a geoprocessing function on an existing layer), you are normally presented with the option of creating a temporary layer or saving the new layer to disk. Creating temporary layers is a quick way of exploring and confirming the output is what you wanted. However, these layers will no longer be available when you close the project unless you make them permanent. I recommend that use temporary layers for experimentation, and choose a permanent name, location, and data type for any layer that you will need later on.</p></li>
+</ol></section><section id="plugins" class="level3"><h3 class="anchored" data-anchor-id="plugins">Plugins</h3>
+<p>The basic installation of QGIS is adequate for most purposes, however the GIS practical exercises here go a bit beyond this basic functionality. Many QGIS add-ons have been developed through open source software development and made freely available through the <code>Plugins</code> interface. Plugins are installed in the user part of the computer storage so require no administrator privileges. You are encouraged to explore all available plugins. The practical exercises will explain when certain plugins need to be installed.</p>
 </section></section><section id="key-considerations" class="level2"><h2 class="anchored" data-anchor-id="key-considerations">Key considerations</h2>
 <section id="printing-maps" class="level3"><h3 class="anchored" data-anchor-id="printing-maps">Printing maps</h3>
-<p>Printed colours often look different from the colours you see on screen. If you need to print a map — for example, to include in an essay or dissertation — always check that your chosen colours work well on paper. The best way is to print a test copy, inspect it closely to make sure all map elements are clear and distinguishable, and adjust the colours if necessary. You may need to repeat this process a few times to get the result you want. Fortunately, all GEG276 coursework (and most assignments in other modules) is submitted online, so printing is rarely essential.</p>
-<p>Printers also usually cannot print right to the edges of the paper. If you plan to print directly from QGIS, leave at least a 0.5 cm margin around your map to avoid cutting off important details.</p>
+<p>Printed colours often look different from the colours you see on screen. If you need to print a map, always check that your chosen colours work well on paper. The best way to check this is to print a test copy, inspect it closely to make sure all map elements are clear and distinguishable, and adjust the colours if necessary. You may need to repeat this process a few times to get the result you want. Fortunately, all GEG276 coursework (and most assignments in other modules) is submitted online, so printing is rarely essential. Printers also usually cannot print right to the edges of the paper. If you plan to print directly from QGIS, leave at least a 0.5 cm margin around your map to avoid cutting off important details.</p>
 </section><section id="using-transparency" class="level3"><h3 class="anchored" data-anchor-id="using-transparency">Using transparency</h3>
 <p>Transparency can help combine multiple layers without losing important details, but it can also make map colours inconsistent with the legend. Avoid partial transparency in final maps for coursework unless it adds essential meaning. Colours in the legend should match those in the map exactly.</p>
 </section><section id="gis-file-types" class="level3"><h3 class="anchored" data-anchor-id="gis-file-types">GIS file types</h3>
-<p>There are several GIS file types. For raster data, I recommend saving them as <strong>GeoTIFF</strong> (<code>.tif</code> or <code>.tiff</code>). For vector data (points, lines or polygons), I recommend saving them as <strong>GeoPackage</strong> (<code>.gpkg</code>). You will likely come across Shapefiles as a format for storing vector data. This format has been around since the 90s and remains in wide use today. I recommend using GeoPackages instead for two main reasons:</p>
+<p>There are several GIS file types. For raster data, I recommend saving them as GeoTIFF (<code>.tif</code>). For vector data (points, lines, or polygons), I recommend saving them as GeoPackage (<code>.gpkg</code>). You will likely come across Shapefiles as a format for storing vector data. This format has been around since the 90s and remains in wide use today. I recommend using GeoPackages instead for two reasons:</p>
 <ol type="1">
-<li><p>A shapefile stores data as a number of files (between 3 and 16!) which have the same name but different extensions (<code>.shp</code>, <code>.shx</code>, <code>.dbf</code>…). If you rename or share a shapefile, you need to make sure that you rename all files and share all files for the new version to work correctly.</p></li>
-<li><p>A shapefile can only be a point, line, or polygon. A GeoPackage can store multiple data types.</p></li>
+<li><p><strong>Efficient storage.</strong> A shapefile stores data as a number of files (between 3 and 16!) which have the same name but different extensions (<code>.shp</code>, <code>.shx</code>, <code>.dbf</code>…). If you rename or share a shapefile, you need to make sure that you rename all files and share all files for the new version to work correctly.</p></li>
+<li><p><strong>Flexible storage.</strong> A shapefile can only be a point, line, or polygon per file. A GeoPackage can store multiple data types.</p></li>
 </ol></section><section id="gis-data-sources" class="level3"><h3 class="anchored" data-anchor-id="gis-data-sources">GIS data sources</h3>
-<p>Use reputable sources for GIS data. In the UK, Ordnance Survey provides authoritative datasets, some of which are free via <a href="https://www.ordnancesurvey.co.uk/opendatadownload/products.html" target="_blank">OS OpenData</a>. As a Swansea University student, you can also access premium OS data through <a href="https://digimap.edina.ac.uk/" target="_blank">EDINA Digimap</a>.</p>
-<p>Open data projects like <a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a> offer free, continuously updated alternatives that are widely used in research and community projects. These data are continuously improving in quality and coverage and anyone can get involved in the project. I’ve chosen to use only Open Data sources for the practical exercises and project so that there are no restrictions on sharing data.</p>
+<p>Use reputable sources for GIS data. In the UK, Ordnance Survey (OS) provides authoritative datasets, some of which are free via <a href="https://www.ordnancesurvey.co.uk/opendatadownload/products.html" target="_blank">OS OpenData</a>. As a Swansea University student, you can also access premium OS data through <a href="https://digimap.edina.ac.uk/" target="_blank">EDINA Digimap</a>. Open data projects like <a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a> offer free, continuously updated alternatives that are widely used in research and community projects. These data are continuously improving in quality and coverage and anyone can get involved in the project. I’ve chosen to use only Open Data sources for the practical exercises and project so that there are no restrictions on sharing data.</p>
 </section><section id="customising-the-map-canvas-advanced" class="level3"><h3 class="anchored" data-anchor-id="customising-the-map-canvas-advanced">Customising the Map Canvas (advanced)</h3>
-<p>If you’re like me and you like a nice minimalist and clear interface to work with, one can customise the QGIS Map Canvas to a high degree. If you wish to do this, I recommend you explore the QGIS Documentation at your leisure <a href="https://docs.qgis.org/3.40/en/docs/user_manual/introduction/qgis_configuration.html" target="_blank">here</a>. <strong>But be careful</strong> — you may end up removing particular tools or menus that are essential for the completion of this course. So I recommend you only experiment with customisation after you’ve completed the course.</p>
-<p><img src="figs/CleanGUI.png" class="img-fluid quarto-figure quarto-figure-center" alt="Here’s how I’ve customised my Map Canvas so only key tools I use regularly are visible — giving me more realestate to visualise my data">.</p>
+<p>If you’re like me and you like a nice minimalist and clear interface to work with, one can customise the QGIS Map Canvas to a high degree. If you wish to do this, I recommend you explore the QGIS Documentation at your leisure <a href="https://docs.qgis.org/3.40/en/docs/user_manual/introduction/qgis_configuration.html" target="_blank">here</a>. <strong>But be careful!</strong> You may end up removing particular tools or menus that are essential for the completion of this course. So I recommend you only experiment with customisation after you’ve completed the course.</p>
 </section></section><section id="sec-gethelp" class="level2"><h2 class="anchored" data-anchor-id="sec-gethelp">Getting help</h2>
-<p>For general information, please refer to the GEG276 Canvas site. All documents associated with the course will be posted there, and I may use the Canvas Discussion Board to share extra information. If you don’t find what you’re looking for, feel free to email me. If I receive a query — the answer to which may be useful to all students, I will post a reply via email or the Discussion Board.</p>
-<p>Software-specific problems can often be solved by Googling and asking AI. typing <code>QGIS</code> and a description of your problem can often lead to a solution. Community-led sites like <a href="https://gis.stackexchange.com/" target="_blank">StackExchange</a> are especially useful for getting help. The <a href="https://www.qgis.org/en/docs/index.html" target="_blank">QGIS manual</a>, <a href="http://www.qgisforum.com/" target="_blank">QGIS Forum</a>, and the main <a href="http://qgis.uk/" target="_blank">QGIS</a> website are all valuable sources too.</p>
+<p>For general information, please refer to the GEG276 Canvas site. All documents associated with the course will be posted there, and I may use the Canvas Discussion Board to share extra information. If you don’t find what you’re looking for, feel free to email me. If I receive a query (the answer to which may be useful to all students), I will post a reply via email or the Discussion Board.</p>
+<p>Software-specific problems can often be solved by Googling and asking AI. Typing <code>QGIS</code> and a description of your problem can often lead to a solution. Community-led sites like <a href="https://gis.stackexchange.com/" target="_blank">StackExchange</a> are especially useful for getting help. The <a href="https://www.qgis.org/en/docs/index.html" target="_blank">QGIS manual</a>, <a href="http://www.qgisforum.com/" target="_blank">QGIS Forum</a>, and the main <a href="http://qgis.uk/" target="_blank">QGIS</a> website are all valuable sources too.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">

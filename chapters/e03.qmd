@@ -2,7 +2,7 @@
 
 > **Date of practical:** 16th October 2025
 
-The location and density of the human population underpin how society is organised. GIS helps one understand human systems, by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information.
+The location and density of the human population underpin how society is organised. GIS helps one understand human systems, by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project.
 
 ::: {.callout-note}
 ## Learning aims
@@ -84,7 +84,6 @@ It's good practice to remove layers once you're done with them, to avoid your pr
 ## Creating a heatmap
 
 (@) Click `Processing` → `Toolbox` or find the the shortcut (![](figs/ProcessingToolbox.png){width=3%})
-
 
 (@) Click the drop-down arrow next to `Interpolation`
 

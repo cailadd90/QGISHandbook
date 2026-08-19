@@ -159,13 +159,21 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#investigating-the-topography-of-wales" id="toc-investigating-the-topography-of-wales" class="nav-link active" data-scroll-target="#investigating-the-topography-of-wales"><span class="header-section-number">5.1</span> <input type="checkbox"> Investigating the topography of Wales</a></li>
-  <li><a href="#examining-the-topography-of-your-map-tile" id="toc-examining-the-topography-of-your-map-tile" class="nav-link" data-scroll-target="#examining-the-topography-of-your-map-tile"><span class="header-section-number">5.2</span> <input type="checkbox"> Examining the topography of your map tile</a></li>
-  <li><a href="#slope-aspect-and-hillshade" id="toc-slope-aspect-and-hillshade" class="nav-link" data-scroll-target="#slope-aspect-and-hillshade"><span class="header-section-number">5.3</span> <input type="checkbox"> Slope, aspect and hillshade</a></li>
-  <li><a href="#classifying-raster-data" id="toc-classifying-raster-data" class="nav-link" data-scroll-target="#classifying-raster-data"><span class="header-section-number">5.4</span> <input type="checkbox"> Classifying raster data</a></li>
-  <li><a href="#converting-to-vector-polygons" id="toc-converting-to-vector-polygons" class="nav-link" data-scroll-target="#converting-to-vector-polygons"><span class="header-section-number">5.5</span> <input type="checkbox"> Converting to vector polygons</a></li>
-  <li><a href="#wind-speeds" id="toc-wind-speeds" class="nav-link" data-scroll-target="#wind-speeds"><span class="header-section-number">5.6</span> <input type="checkbox"> Wind speeds</a></li>
-  <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together"><span class="header-section-number">5.7</span> <input type="checkbox"> Putting it all together</a></li>
+<li><a href="#sec-addrast" id="toc-sec-addrast" class="nav-link active" data-scroll-target="#sec-addrast"><span class="header-section-number">5.1</span> Adding rasters</a></li>
+  <li><a href="#inspecting-rasters" id="toc-inspecting-rasters" class="nav-link" data-scroll-target="#inspecting-rasters"><span class="header-section-number">5.2</span> Inspecting rasters</a></li>
+  <li><a href="#sec-cliprast" id="toc-sec-cliprast" class="nav-link" data-scroll-target="#sec-cliprast"><span class="header-section-number">5.3</span> Clipping rasters</a></li>
+  <li>
+<a href="#viewing-maps-in-3d" id="toc-viewing-maps-in-3d" class="nav-link" data-scroll-target="#viewing-maps-in-3d"><span class="header-section-number">5.4</span> Viewing maps in 3D</a>
+  <ul class="collapse">
+<li><a href="#deriving-a-slope-raster" id="toc-deriving-a-slope-raster" class="nav-link" data-scroll-target="#deriving-a-slope-raster"><span class="header-section-number">5.4.1</span> Deriving a slope raster</a></li>
+  </ul>
+</li>
+  <li><a href="#deriving-an-aspect-raster" id="toc-deriving-an-aspect-raster" class="nav-link" data-scroll-target="#deriving-an-aspect-raster"><span class="header-section-number">5.5</span> Deriving an aspect raster</a></li>
+  <li><a href="#deriving-a-hillshade-raster" id="toc-deriving-a-hillshade-raster" class="nav-link" data-scroll-target="#deriving-a-hillshade-raster"><span class="header-section-number">5.6</span> Deriving a hillshade raster</a></li>
+  <li><a href="#classifying-raster-data" id="toc-classifying-raster-data" class="nav-link" data-scroll-target="#classifying-raster-data"><span class="header-section-number">5.7</span> Classifying raster data</a></li>
+  <li><a href="#converting-to-vector-polygons" id="toc-converting-to-vector-polygons" class="nav-link" data-scroll-target="#converting-to-vector-polygons"><span class="header-section-number">5.8</span> Converting to vector polygons</a></li>
+  <li><a href="#wind-speeds" id="toc-wind-speeds" class="nav-link" data-scroll-target="#wind-speeds"><span class="header-section-number">5.9</span> Wind speeds</a></li>
+  <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together"><span class="header-section-number">5.10</span> Putting it all together</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -187,8 +195,8 @@ ul.task-list li input[type="checkbox"] {
 </header><blockquote class="blockquote">
 <p><strong>Dates of practical:</strong> 6th and 13th November 2025</p>
 </blockquote>
-<p>Digital Elevation Models (DEMs) describe land surface height in a grid and are a special case of continuous geospatial data, widely available as raster datasets at various spatial resolutions. GIS provides tools to handle DEMs.</p>
-<p>You will find data for this exercise on the <strong>L:</strong> drive in the usual place. Read alongside <strong>GIS_guide_to_practical_exercises</strong>.</p>
+<p>Elevation is a key determinant of many geographical processes. The height of the land determines whether the coast is above or below sea level. Mountain and valley slopes determine water flow and microclimates. Biomes are often restricted to particular altitudes. Digital Elevation Models (DEMs) describe land surface height in a grid, and are a special case of continuous geospatial data widely available as raster datasets at various spatial resolutions. QGIS has several tools to inspect and manipulate DEMs, which are necessary for the wind farm project.</p>
+<p><strong>This exercise will guide you through the requirements for making Map 3</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -199,50 +207,210 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Visualise DEMs and wind speed data; subset, classify and vectorize; create slope and aspect images. These steps are vital for the wind farm Project.</p>
+<p>To visualise DEMs and wind speed data, subset, classify and vectorize, and create slope and aspect images. These steps are vital for the wind farm project.</p>
 </div>
 </div>
-<section id="investigating-the-topography-of-wales" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="investigating-the-topography-of-wales">
-<span class="header-section-number">5.1</span> <input type="checkbox"> Investigating the topography of Wales</h2>
+<section id="sec-addrast" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="sec-addrast">
+<span class="header-section-number">5.1</span> Adding rasters</h2>
 <ol class="example" type="1">
-<li><p>Open the raster layer <code>SRTM_Wales_DEM_25m.tif</code> (from <code>Wales_DSM</code>). This DEM is derived from Space Shuttle data (2000) at 25 m resolution.</p></li>
-<li><p>In <strong>Layer Properties</strong>, experiment with <strong>Singleband pseudocolor</strong>. Adjust colour ramps, Min/Max, and mode/classes.</p></li>
-<li><p>Under <strong>Color ramp</strong>, <strong>Create new color ramp → cpt‑city</strong>. Explore topography styles and experiment with Min/Max, mode (continuous/equal interval), and classes.</p></li>
-<li><p>Install the <strong>Value Tool</strong> plugin and enable it (View → Panels → Value Tool Panel). Use it to interrogate raster values and find the heights of Snowdon and Pen y Fan. Validate heights using external sources.</p></li>
-<li><p>Open <code>Wales_operational_wind farms</code> and observe that wind farms are often on coasts or high ground.</p></li>
-</ol></section><section id="examining-the-topography-of-your-map-tile" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="examining-the-topography-of-your-map-tile">
-<span class="header-section-number">5.2</span> <input type="checkbox"> Examining the topography of your map tile</h2>
+<li><p>Launch QGIS and create a new project</p></li>
+<li><p>From the <code>Wales_DEM</code> folder, add the <code>SRTM_Wales_DEM_25m.tif</code> layer to your project. This DEM is derived from the <a href="https://www.earthdata.nasa.gov/data/instruments/srtm" target="_blank">Shuttle Radar Topography Mission</a>, which scanned nearly 80% of Earth’s land surfaces in 2000 to generate a DEM at 25 m resolution.</p></li>
+<li><p>From the layer’s symbology (<code>Properties...</code> → <code>Symbology</code>), experiment with the <code>Singleband pseudocolor</code> render type (see <a href="e02.html#sec-rasterdata" class="quarto-xref"><span>Section 2.5</span></a>)</p></li>
+<li><p>Click the drop-down arrow to the right of the <code>Color ramp</code></p></li>
+<li><p>Click <code>Create New Color Ramp</code></p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/CreateNewColorRamp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
 <ol start="6" class="example" type="1">
-<li><p>Subset the DEM to your map tile via <strong>Raster → Extraction → Clip Raster by Mask Layer</strong>. Input: Wales DEM; Mask layer: your map tile. Save with a sensible name on OneDrive.</p></li>
-<li><p>Explore your subset with suitable palettes and ranges. Identify the highest point and, if possible, its name.</p></li>
-<li><p>Open <strong>View → New 3D Map View</strong>. Configure: Terrain type = <strong>DEM (Raster Layer)</strong>; Elevation = your clipped DEM; Vertical scale = 4; Tile resolution = 64 px. Explore in 3D and experiment with settings. Add other layers if useful.</p></li>
-</ol></section><section id="slope-aspect-and-hillshade" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="slope-aspect-and-hillshade">
-<span class="header-section-number">5.3</span> <input type="checkbox"> Slope, aspect and hillshade</h2>
-<ol start="9" class="example" type="1">
-<li><p>Create a slope image (<strong>Raster → Analysis → Slope</strong>). Ensure slope is in <strong>degrees</strong>. Identify areas of highest slope and explain why.</p></li>
-<li><p>Create an aspect image (<strong>Raster → Analysis → Aspect</strong>). Because 1° and 359° are near‑equivalents, choose a cyclic CPT (e.g., wave from cpt‑city → QGIS).</p></li>
-<li><p>Create a hillshade (<strong>Raster → Analysis → Hillshade</strong>). Combine with your DEM by placing hillshade above the DEM with ~50% opacity and a grayscale to enhance relief.</p></li>
-</ol></section><section id="classifying-raster-data" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="classifying-raster-data">
-<span class="header-section-number">5.4</span> <input type="checkbox"> Classifying raster data</h2>
-<ol start="12" class="example" type="1">
-<li><p>Open <strong>Raster Calculator</strong> and classify slopes &gt; 6° as unsuitable. For example, if your slope layer is <code>SS68_slope.tif</code>, use an expression like <code>"SS68_slope@1" &gt; 6</code> with <strong>Select Layer Extent</strong> and output <code>SS68_slope_classified</code>. Pixels with value 1 are unsuitable (slope &gt; 6°), 0 otherwise.</p></li>
-<li><p>Adjust transparency of the classified slope image and inspect unsuitable areas.</p></li>
-</ol></section><section id="converting-to-vector-polygons" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="converting-to-vector-polygons">
-<span class="header-section-number">5.5</span> <input type="checkbox"> Converting to vector polygons</h2>
-<ol start="14" class="example" type="1">
-<li><p>Vectorise the classified raster (<strong>Raster → Conversion → Polygonize</strong>). Input: your classified slope layer (slope &lt; 6° suitable).</p></li>
-<li><p>Under <strong>Layer Properties</strong>, set <strong>Categorized</strong> symbology on field <code>DN</code> to distinguish suitable (0) and unsuitable (1) polygons.</p></li>
-<li><p>Use <strong>Select by Expression</strong> (DN = 1) to select unsuitable polygons and <strong>Export → Save Selected Features As</strong> to create a constraint layer.</p></li>
-</ol></section><section id="wind-speeds" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="wind-speeds">
-<span class="header-section-number">5.6</span> <input type="checkbox"> Wind speeds</h2>
-<ol start="17" class="example" type="1">
-<li><p>Open raster <code>Wales_wind-speed_50m.tif</code> from <code>Wales_mean_windspeed</code> and choose an appropriate palette (see the <code>description_and_data_source.txt</code> file for details).</p></li>
-<li><p>Clip the wind speed raster to your tile and visualise with a suitable palette.</p></li>
-</ol></section><section id="putting-it-all-together" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="putting-it-all-together">
-<span class="header-section-number">5.7</span> <input type="checkbox"> Putting it all together</h2>
+<li><p>Under <code>Please select color ramp type:</code>, select <code>Catalog: cpt‑city</code>. This ‘city’ of Colour Palette Tables (CPTs) is a repository of colour tables designed to creatively present raster data</p></li>
+<li><p>Explore the <code>Topography</code> theme</p></li>
+<li>
+<p>Experiment with adjusting:</p>
+<ol type="i">
+<li>The <code>Color ramp</code>
+</li>
+<li>
+<code>Min / max</code> under the <code>Min / Max Value Settings</code> drop-down menu iii.<code>Mode</code> (<code>Continuous</code>, <code>Equal Interval</code>, and <code>Quantile</code>)</li>
+</ol>
+</li>
+<li><p>Click <code>OK</code></p></li>
+</ol></section><section id="inspecting-rasters" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="inspecting-rasters">
+<span class="header-section-number">5.2</span> Inspecting rasters</h2>
+<ol start="10" class="example" type="1">
+<li><p>Install the <code>Value Tool</code></p></li>
+<li><p>Click the <code>Value Tool</code> icon (<img src="figs/ValueTool.png" class="img-fluid" style="width:3.0%">). This tool allows you to interrogate data values as you pass the cursor over rasters</p></li>
+<li><p>Find the heights of Yr Wyddfa (Eryri) and Pen y Fan (Bannau Brycheiniog). Check your heights against those on Google</p></li>
+<li><p>Add the <code>Wales_operational_windfarms.gpkg</code> layer to your project</p></li>
+<li><p>Reflect on where these wind farms are located. How do their locations correlate with elevation?</p></li>
+</ol></section><section id="sec-cliprast" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="sec-cliprast">
+<span class="header-section-number">5.3</span> Clipping rasters</h2>
+<ol start="15" class="example" type="1">
+<li>
+<p>Clip the DEM to your map tile:</p>
+<ol type="i">
+<li>Click <code>Raster</code> → <code>Extraction</code> → <code>Clip Raster by Mask Layer...</code>
+</li>
+<li>Set <code>Input layer</code> to <code>SRTM_Wales_DEM_25m</code>
+</li>
+<li>Set<code>Mask layer</code> to your map tile. You can access layers even if they aren’t loaded in your project using the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) next to <code>Clipped (mask)</code> and enter a sensible file name (e.g. SH22_DEM) and location on your OneDrive account to save the clipped raster</li>
+<li>Click <code>Save</code> → <code>Run</code> → <code>Close</code>
+</li>
+<li>Have you saved your project recently?</li>
+</ol>
+</li>
+<li><p>Explore your map tile’s DEM using a suitable colour palette and different <code>Min / max</code> ranges</p></li>
+<li><p>Identify the highest point in your clipped DEM and, if possible, its name by Googling</p></li>
+<li><p>Here’s an opportunity to keep your project clutter-free. Remove the <code>SRTM_Wales_DEM_25m</code> and <code>Wales_operational_windfarms</code> layers from your project</p></li>
+</ol></section><section id="viewing-maps-in-3d" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="viewing-maps-in-3d">
+<span class="header-section-number">5.4</span> Viewing maps in 3D</h2>
 <ol start="19" class="example" type="1">
-<li><p>Reopen your constraint layers from Exercise 4 alongside your polygonised slope constraint. With the wind speed layer beneath constraints, explore where development may be permitted and optimal (high wind, large areas).</p></li>
-<li><p>Design <strong>Map 3</strong> of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location and justify why.</p></li>
+<li>
+<p>View the clipped DEM in 3D:</p>
+<ol type="i">
+<li>Click <code>View</code> → <code>3D Map Views</code> → <code>New 3D Map View</code>
+</li>
+<li>Click the <code>Configure...</code> icon (<img src="figs/Configure.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Click <code>Terrain</code>
+</li>
+<li>Set <code>Type</code> to <code>DEM (Raster Layer)</code>
+</li>
+<li>Set <code>Elevation</code> to your clipped DEM</li>
+<li>Set <code>Vertical scale</code> to <code>4</code>
+</li>
+<li>Set <code>Tile resolution</code> to <code>64 px</code>
+</li>
+<li>Click <code>OK</code>
+</li>
+<li>Use the mouse (by scrolling and holding down the click on the scroller) to explore the 3D map</li>
+<li>Experiment with different values of <code>Vertical scale</code> and <code>Tile resolution</code>
+</li>
+<li>Add other layers to see them plotted in 3D</li>
+</ol>
+</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/3DConfiguration.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<section id="deriving-a-slope-raster" class="level3" data-number="5.4.1"><h3 data-number="5.4.1" class="anchored" data-anchor-id="deriving-a-slope-raster">
+<span class="header-section-number">5.4.1</span> Deriving a slope raster</h3>
+<p>Slope (gradient of the land surface) is fundamental properties of the land surface topography and can enlighten many geophysical processes such erosion.</p>
+<ol start="20" class="example" type="1">
+<li>
+<p>Derive a slope raster from a DEM:</p>
+<ol type="i">
+<li>Click <code>Raster</code> → <code>Analysis</code> → <code>Slope...</code>
+</li>
+<li>Set <code>Input layer</code> as your clipped DEM</li>
+<li>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) next to <code>Slope</code> to save the slope raster somewhere sensible</li>
+<li>Click <code>Save</code> → <code>Run</code> → <code>Close</code>
+</li>
+<li>Use the layer’s legend to identify the steepest areas. Why are they there?</li>
+</ol>
+</li>
+</ol></section></section><section id="deriving-an-aspect-raster" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="deriving-an-aspect-raster">
+<span class="header-section-number">5.5</span> Deriving an aspect raster</h2>
+<p>Aspect (compass direction towards which the gradient faces) is fundamental properties of the land surface topography and can enlighten many geophysical processes such as insolation.</p>
+<ol start="21" class="example" type="1">
+<li>
+<p>Derive an aspect raster from a DEM:</p>
+<ol type="i">
+<li>Click <code>Raster</code> → <code>Analysis</code> → <code>Aspect...</code>
+</li>
+<li>Set <code>Input layer</code> as your clipped DEM</li>
+<li>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) next to <code>Aspect</code> to save the aspect raster somewhere sensible</li>
+<li>Click <code>Save</code> → <code>Run</code> → <code>Close</code> An aspect of 1° (just East of North) is very close in meaning to an aspect of 359° (just West of North), yet they are at the opposite ends of the decimal geographic coordinate numerical range. A colour palette table with the same colour for both ends of the value range would make it easier to interpret your aspect layer</li>
+<li>Navigate to the <code>cpt‑city</code> colour Palette Tables (CPTs) (see <a href="#sec-addrast" class="quarto-xref"><span>Section 5.1</span></a>)</li>
+<li>Click the <code>All by author</code> tab</li>
+<li>In the <code>Name</code> window, click <code>grass</code>
+</li>
+<li>In the <code>GRASS colour ramps</code> window, click <code>aspect</code> Click <code>OK</code> → <code>OK</code>
+</li>
+</ol>
+</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/AspectCPT.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</section><section id="deriving-a-hillshade-raster" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="deriving-a-hillshade-raster">
+<span class="header-section-number">5.6</span> Deriving a hillshade raster</h2>
+<p>Hill-shading simulates the effect of light falling on a surface by combining slope, aspect and a solar illumination direction. This approach is commonly used to visualize topography in maps and figures.</p>
+<ol start="22" class="example" type="1">
+<li>
+<p>Derive a hillshade raster from a DEM:</p>
+<ol type="i">
+<li>Click <code>Raster</code> → <code>Analysis</code> → <code>Hillshade...</code>
+</li>
+<li>Set <code>Input layer</code> as your clipped DEM</li>
+<li>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) next to <code>Hillshade</code> to save the aspect raster somewhere sensible</li>
+<li>Click <code>Save</code> → <code>Run</code> → <code>Close</code>
+</li>
+<li>From the <code>Layers</code> panel, turn off layer visibilities or arrange layers so that your hillshade layer is above your DEM layer</li>
+<li>Change the hillshade transparency to 50%</li>
+<li>Change the symology of your DEM to something intuitive for land height (e.g. <code>Greens</code>)</li>
+</ol>
+<p>Experiment with <code>Z factor</code> (probably no more than 5) Experiment with <code>Azimuth of the light</code> Experiment with <code>Altitude of the light</code></p>
+</li>
+</ol>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<pre><code>This is a rare example where making a layer semi-transparent can be useful. The effect is often used to make maps visually engaging</code></pre>
+</div>
+</div>
+</div>
+</section><section id="classifying-raster-data" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="classifying-raster-data">
+<span class="header-section-number">5.7</span> Classifying raster data</h2>
+<p>Use the raster calculator to perform cell-by-cell operations, such as to find parts of a raster layer within a specified range of values. One of the constraints for building a windfarm is that the land surface slope should be no more than 6 degrees. This is simply because greater slopes are less stable and not normally viable to build on. Build an expression in the raster calculator as follows:</p>
+<pre><code>i. Click `Raster` → `Raster Calculator...` 
+ii. Under `Raster Bands`, double-click on the slope raster name you created earlier
+iii. In the `Raster Calculation Expression` window, add `&lt;6`
+iv. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Output layer` to save the classified slope raster somewhere sensible
+v. Click `OK`
+
+The output raster has two values; `0` (black) and `1` (white). Given you instructed the raster calculator to identify areas of the raster that are less than 6°, what do you think these colours represent? If one can build on a slope only on land less than 6°, which colour represents suitable areas to bulid wind farms?</code></pre>
+</section><section id="converting-to-vector-polygons" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="converting-to-vector-polygons">
+<span class="header-section-number">5.8</span> Converting to vector polygons</h2>
+<p>Vector polygons can be created from raster layers so that they can be combined with other vector constraints such as those created in <a href="e04.html">chapter 4</a>.</p>
+<section id="polygonize" class="level4" data-number="5.8.0.1"><h4 data-number="5.8.0.1" class="anchored" data-anchor-id="polygonize">
+<span class="header-section-number">5.8.0.1</span> Polygonize</h4>
+<ol start="23" class="example" type="1">
+<li>
+<p>Convert raster classifications to vector polygons:</p>
+<ol type="i">
+<li>Click <code>Raster</code> → <code>Conversion</code> → <code>Polygonize (Raster to Vector)...</code>
+</li>
+<li>Set <code>Input layer</code> as your classified slope layer</li>
+<li>Set <code>Name of the field to create</code> as <code>Suitable</code>
+</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+</li>
+<li><p>Polygons now demarcate the areas that are suitable (slope &lt; 6°) or unsuitable (slope &gt; 6°) for building upon. Open the attribute table to explore which is which. Think binary; under the ‘Suitable’ column, 1s represent ‘yes’, 0s represent ‘no’</p></li>
+<li><p>Visualise the suitable and unsuitable areas for construction in the symbology (see <a href="e01.html#sec-catvec" class="quarto-xref"><span>Section 1.6.0.1</span></a>)</p></li>
+<li><p>Select the ‘unsuitable’ polygons (Suitable = 0) using <code>Select features using an expression</code> (see <a href="e04.html#sec-selexpress" class="quarto-xref"><span>Section 4.8</span></a>)</p></li>
+<li><p>Export the selected polygons (remember to use the <code>Save Selected Features As...</code> option). Name and store sensibly</p></li>
+</ol></section></section><section id="wind-speeds" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="wind-speeds">
+<span class="header-section-number">5.9</span> Wind speeds</h2>
+<ol start="28" class="example" type="1">
+<li><p>From the <code>Wales_mean_windspeed</code> folder, add the <code>Wales_wind-speed_50m.tif</code> layer to your project</p></li>
+<li><p>Read over the <code>description_and_data_source.txt</code> file in the <code>Wales_mean_windspeed</code> folder for details about the data. Note; description_and_data_source.txt files appear with every dataset you use</p></li>
+<li><p>Clip the wind speed raster to your tile and save it somewhere sensible (see <a href="#sec-cliprast" class="quarto-xref"><span>Section 5.3</span></a>)</p></li>
+<li><p>Visualise the data using a suitable colour palette</p></li>
+</ol></section><section id="putting-it-all-together" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="putting-it-all-together">
+<span class="header-section-number">5.10</span> Putting it all together</h2>
+<ol start="32" class="example" type="1">
+<li><p>Reopen your constraint layers project from Exercise 4, and add your polygonised slope constraint</p></li>
+<li><p>With the wind speed layer beneath constraints, explore where development may be permitted and optimal. you can explore not just where building a windfarm may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area</p></li>
+<li><p>Design Map 3 of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -254,12 +422,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>By the end of this exercise you should:</p>
+<p>By the end of this exercise you should be able to:</p>
 <ol type="1">
-<li>Visualise, clip, and extract values from raster data.</li>
-<li>Create DEM products (slope, aspect, hillshade).</li>
-<li>Classify a raster layer and create polygons from the classification.</li>
-<li>Recognise wind speed variation and identify the best wind farm location.</li>
+<li>Visualise raster elevation data using pseudocolour ramps, cpt-city palettes, and min/max scaling, and interrogate cell values directly with the Value Tool.</li>
+<li>Clip raster layers to an area of interest and explore the resulting surface in three dimensions.</li>
+<li>Derive slope, aspect, and hillshade rasters from a DEM, and explain what each reveals about surface topography and geophysical process.</li>
+<li>Classify raster data with the raster calculator to identify areas meeting a defined threshold, and convert the result to vector polygons for combination with other constraint layers.</li>
+<li>Appreciate how elevation, slope, and wind speed interact to determine site suitability, integrating raster-derived constraints into a justified development decision.</li>
 </ol>
 </div>
 </div>

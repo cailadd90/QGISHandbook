@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#being-efficient" id="toc-being-efficient" class="nav-link" data-scroll-target="#being-efficient"><span class="header-section-number">4.5</span> Being efficient</a></li>
   <li><a href="#efficient-filing" id="toc-efficient-filing" class="nav-link" data-scroll-target="#efficient-filing"><span class="header-section-number">4.6</span> Efficient filing</a></li>
   <li><a href="#clipping-line-layers-and-adding-buffers" id="toc-clipping-line-layers-and-adding-buffers" class="nav-link" data-scroll-target="#clipping-line-layers-and-adding-buffers"><span class="header-section-number">4.7</span> Clipping line layers and adding buffers</a></li>
-  <li><a href="#selecting-elements-by-attribute" id="toc-selecting-elements-by-attribute" class="nav-link" data-scroll-target="#selecting-elements-by-attribute"><span class="header-section-number">4.8</span> Selecting elements by attribute</a></li>
+  <li><a href="#sec-selexpress" id="toc-sec-selexpress" class="nav-link" data-scroll-target="#sec-selexpress"><span class="header-section-number">4.8</span> Selecting elements by attribute</a></li>
   <li><a href="#singles-or-multiples" id="toc-singles-or-multiples" class="nav-link" data-scroll-target="#singles-or-multiples"><span class="header-section-number">5</span> Singles or multiples?</a></li>
   <li><a href="#taking-stock-of-planning-constraints" id="toc-taking-stock-of-planning-constraints" class="nav-link" data-scroll-target="#taking-stock-of-planning-constraints"><span class="header-section-number">5.1</span> Taking stock of planning constraints</a></li>
   </ul></nav>
@@ -196,7 +196,8 @@ ul.task-list li input[type="checkbox"] {
 </header><blockquote class="blockquote">
 <p><strong>Dates of practical:</strong> 23rd and 30th October 2025</p>
 </blockquote>
-<p>Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm. This practical is a key step in preparing for the wind farm project.</p>
+<p>Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm.</p>
+<p><strong>This exercise will guide you through the requirements for making Map 2</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -223,6 +224,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Calculate the area of your map tile in square kilometres. Need reminding of how to do this? See <a href="e01.html#sec-measuring" class="quarto-xref"><span>Section 1.4</span></a></p></li>
 <li><p>Calculate the perimeter of your map tile in kilometres</p></li>
 <li><p>Open the attribute table for your map tile. This layer has one polygon, so there’s only one row in the table</p></li>
+</ol>
+<section id="sec-fieldcalc" class="level4" data-number="4.2.0.1"><h4 data-number="4.2.0.1" class="anchored" data-anchor-id="sec-fieldcalc">
+<span class="header-section-number">4.2.0.1</span> Field calculator</h4>
+<ol start="7" class="example" type="1">
 <li><p>Open the Field Calculator (<img src="figs/FieldCalculator.png" class="img-fluid" style="width:3.0%">). The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions.</p></li>
 <li>
 <p>Calculate the area of your tile:</p>
@@ -241,8 +246,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Calculate the <code>$perimeter</code> of your map tile. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas</p></li>
 <li><p>From everything you learnt in <a href="e03.html" class="quarto-xref"><span>Chapter 3</span></a>, calculate the number of people living within your polygon at the 2021 Census</p></li>
 <li><p>Using the area measurement you calculated above, compute population density for your tile</p></li>
-</ol>
-<section id="clip" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="clip">
+</ol></section><section id="clip" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="clip">
 <span class="header-section-number">4.3</span> Clip</h2>
 <ol start="12" class="example" type="1">
 <li><p>Add all the layers in the <code>Wales_protected_areas</code> folder to your project</p></li>
@@ -350,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol>
 <p>Think carefully about the order in which you buffer, clip, dissolve, merge etc. Would clipping at the end of your workflow remove trailing bits generated by your buffer, for example (:egg:)? Experimentation is encouraged! You will find efficient and inefficient ways of doing things, and your learning really develops when you play around, mess up, and try again.</p>
-</section><section id="selecting-elements-by-attribute" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="selecting-elements-by-attribute">
+</section><section id="sec-selexpress" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="sec-selexpress">
 <span class="header-section-number">4.8</span> Selecting elements by attribute</h2>
 <ol start="29" class="example" type="1">
 <li><p>From the <code>British_Isles_geofabrik/wales</code> folder, add the <code>gis_osm_landuse_a_free_1.gpkg</code> layer to your project</p></li>

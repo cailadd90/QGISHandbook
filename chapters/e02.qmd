@@ -2,7 +2,9 @@
 
 > **Date of practical:** 9th October 2025
 
-Communication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and the final product represents your "Map 1". assignment.
+Communication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and is how you generate the maps for your wind farm project.
+
+**This exercise will guide you through the requirements for making Map 1**
 
 ::: {.callout-note}
 ## Learning aims

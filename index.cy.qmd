@@ -1,14 +1,14 @@
 # Cyflwyniad {.unnumbered}
 
-Mae System Gwybodaeth Ddaearyddol (GIS) yn ffordd bwerus o weithio gyda gwybodaeth sydd ynghlwm wrth leoliadau ar y Ddaear. Mae'r math hwn o wybodaeth — a elwir yn aml yn ddata *geofodol* — yn cynnwys unrhyw beth sydd â chyfeiriad daearyddol, fel cyfesurynnau, cyfeiriadau, neu nodweddion map. Mae GIS yn caniatáu ichi storio, gweld, dadansoddi a chyflwyno'r data hwn fel y gallwch ddeall patrymau a pherthnasoedd gofodol.
+Mae System Gwybodaeth Ddaearyddol (GIS) yn ffordd bwerus o weithio gyda gwybodaeth sydd wedi'i chysylltu â lleoliadau ar y Ddaear. Mae'r math hwn o wybodaeth, a elwir yn aml yn ddata *geofodol*, yn cynnwys unrhyw beth sydd â chyfeiriad daearyddol, fel cyfesurynnau, cyfeiriadau, neu nodweddion map. Mae GIS yn caniatáu ichi storio, gweld, dadansoddi a chyflwyno'r data hwn er mwyn ddeall patrymau a pherthnasoedd gofodol.
 
-Yn y cwrs hwn, byddwch yn dysgu sut i ddefnyddio GIS i ddatrys problem yn y byd go iawn: penderfynu ble i adeiladu fferm wynt. Trwy gyfres o ymarferion ymarferol, byddwch yn dwyn ynghyd lawer o setiau data gwahanol — gan gynnwys defnydd tir, ardaloedd gwarchodedig, topograffeg, a chyflymder gwynt cyfartalog — i nodi'r lleoliad mwyaf addas ar gyfer fferm wynt newydd mewn rhan o dirwedd Cymru.
+Yn y cwrs hwn, byddwch yn dysgu sut i ddefnyddio GIS i ddatrys problem yn y byd go iawn: penderfynu ble i adeiladu fferm wynt. Trwy gyfres o ymarferion ymarferol, byddwch yn clymu lawer o setiau data gwahanol i'w gilydd, gan gynnwys defnydd tir, ardaloedd gwarchodedig, topograffeg, a chyflymder cyfartalog y gwynt, er mwyn nodi'r lleoliad mwyaf addas ar gyfer fferm wynt newydd mewn rhan o dirwedd Cymru.
 
 Erbyn diwedd y cwrs, byddwch yn gallu:
 
-* Llwytho, archwilio a rheoli gwahanol fathau o ddata geofodol.
+* Llwytho, archwilio, a rheoli gwahanol fathau o ddata geofodol.
 * Creu mapiau a delweddiadau gan ddefnyddio QGIS.
-* Dadansoddi data gofodol i asesu addasrwydd ar gyfer datblygu.
+* Dadansoddi data gofodol i asesu addasrwydd ar gyfer datblygiad.
 * Cymhwyso cyfyngiadau cynllunio ac amgylcheddol cyffredin i senarios byd go iawn.
 
-Gellir defnyddio'r sgiliau a gewch yma hefyd ar gyfer ystod eang o gwestiynau eraill, o nodi parthau perygl llifogydd i gynllunio llwybrau trafnidiaeth trefol neu fapio cynefinoedd bywyd gwyllt — unrhyw le lle mae lleoliad yn bwysig.
+Gellir defnyddio'r sgiliau yma ar gyfer ystod eang o gwestiynau eraill, o nodi parthau perygl llifogydd i gynllunio llwybrau trafnidiaeth drefol neu fapio cynefinoedd bywyd gwyllt — unrhyw le lle mae lleoliad yn bwysig.

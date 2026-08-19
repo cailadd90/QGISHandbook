@@ -190,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 </header><blockquote class="blockquote">
 <p><strong>Date of practical:</strong> 2nd October 2025</p>
 </blockquote>
-<p>To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the rest of this module and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.</p>
+<p>To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the development of your wind farm project and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -316,6 +316,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Adjust the style of this layer and explore its attribute table</p></li>
 <li><p>Experiment with switching layer visibility on or off using the tick boxes in the <code>Layer</code> panel (<img src="figs/CheckLayer.png" class="img-fluid" style="width:3.0%">). This becomes essential when managing multiple layers in a project</p></li>
 <li><p>Change the order of the layers by dragging each upwards or downwards in the layer panel</p></li>
+<li><p>Move <code>Wales_Principle_Areas</code> to the top of the <code>Layers</code> panel</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -330,21 +331,19 @@ ul.task-list li input[type="checkbox"] {
 <p>Notice how the seaward political (Principal Area) boundary of Wales goes beyond the coastline (Land Polygons). This is because the physical land boundary is generally classified according to the mean high water mark, while administrative boundaries are normally classified according to the mean low water mark. That’s Geography!</p>
 </div>
 </div>
-<ol start="28" class="example" type="1">
-<li><p>Move <code>Wales_Principle_Areas</code> to the top of the <code>Layers</code> panel</p></li>
-<li><p>Open the layer’s <code>Symbology</code> window</p></li>
-<li><p>Use the drop-down menu to change the symbology source from <code>Single Symbol</code> to <code>Categorized</code></p></li>
-</ol>
+<section id="sec-catvec" class="level4" data-number="1.6.0.1"><h4 data-number="1.6.0.1" class="anchored" data-anchor-id="sec-catvec">
+<span class="header-section-number">1.6.0.1</span> Categorise vectors</h4>
+<pre><code>i. Open the layer's `Symbology` window
+ii. Use the drop-down menu to change the symbology source from `Single Symbol` to `Categorized`</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/SymbologySource.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
 </figure>
 </div>
-<ol start="31" class="example" type="1">
-<li><p>Use the <code>Value</code> drop-down menu to select the attribute <code>name</code></p></li>
-<li><p>Click <code>Classify</code> → <code>OK</code>. How colourful!</p></li>
-</ol></section><section id="labelling-layers" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="labelling-layers">
+<pre><code>iii. Use the `Value` drop-down menu to select the attribute `name`
+iv. Click `Classify` → `OK`. How colourful!</code></pre>
+</section></section><section id="labelling-layers" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="labelling-layers">
 <span class="header-section-number">1.7</span> Labelling layers</h2>
-<ol start="33" class="example" type="1">
+<ol start="29" class="example" type="1">
 <li><p>Select <code>Wales_Principal_Areas layer</code> in the <code>Layers</code> panel</p></li>
 <li><p>From the menu bar, click <code>Layer</code> → <code>Labelling</code>. Find the shortcuts to this window (hint - check out <code>Properties...</code>)</p></li>
 <li><p>Use the drop-down menu to change the labelling source from <code>No Labels</code> to <code>Single Labels</code></p></li>
@@ -353,14 +352,14 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/LabellingSource.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
-<ol start="36" class="example" type="1">
+<ol start="32" class="example" type="1">
 <li>Change the <code>Value</code> drop-down menu to label the Wales Principle Area polygons according to their English or Welsh names</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/LabelValue.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
-<ol start="37" class="example" type="1">
+<ol start="33" class="example" type="1">
 <li>
 <p>Experiment with modifying the labels by:</p>
 <ol type="i">
@@ -388,7 +387,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section><section id="sec-filter" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-filter">
 <span class="header-section-number">1.8</span> Adding and filtering data</h2>
-<ol start="38" class="example" type="1">
+<ol start="34" class="example" type="1">
 <li><p>Add the vector layer <code>Wales_operational_windfarms.gpkg</code> to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales</p></li>
 <li><p>Examine the attribute table</p></li>
 <li><p>Adjust the layer’s style, noting that point data is represented in a different way to polygon data</p></li>
@@ -426,7 +425,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Add the <code>gis_osm_waterways_free_1.gpkg</code> vector layer in the <code>British_Isles_geofabrik</code> → <code>wales</code> folders. What colour would be best for these?</p></li>
 </ol></section><section id="adding-external-data" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="adding-external-data">
 <span class="header-section-number">1.9</span> Adding external data</h2>
-<ol start="47" class="example" type="1">
+<ol start="43" class="example" type="1">
 <li><p>Navigate to <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a></p></li>
 <li><p>Search for “Wales Coast Path” and click on the link</p></li>
 <li><p>Under <code>Select spatial data format</code>, choose <code>OFC Geopackage</code> and click <code>Download</code></p></li>
@@ -450,7 +449,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section><section id="have-you-finished" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="have-you-finished">
 <span class="header-section-number">1.10</span> Have you finished?</h2>
-<ol start="54" class="example" type="1">
+<ol start="50" class="example" type="1">
 <li>Congratulations! You’ve learned the basics of QGIS. Make sure that you’ve understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">

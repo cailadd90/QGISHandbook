@@ -2,77 +2,203 @@
 
 > **Dates of practical:** 6th and 13th November 2025
 
-Digital Elevation Models (DEMs) describe land surface height in a grid and are a special case of continuous geospatial data, widely available as raster datasets at various spatial resolutions. GIS provides tools to handle DEMs.
+Elevation is a key determinant of many geographical processes. The height of the land determines whether the coast is above or below sea level. Mountain and valley slopes determine water flow and microclimates. Biomes are often restricted to particular altitudes. Digital Elevation Models (DEMs) describe land surface height in a grid, and are a special case of continuous geospatial data widely available as raster datasets at various spatial resolutions. QGIS has several tools to inspect and manipulate DEMs, which are necessary for the wind farm project.
 
-You will find data for this exercise on the **L:** drive in the usual place. Read alongside **GIS_guide_to_practical_exercises**.
+**This exercise will guide you through the requirements for making Map 3**
 
 ::: {.callout-note}
 ## Learning aims
 
-Visualise DEMs and wind speed data; subset, classify and vectorize; create slope and aspect images. These steps are vital for the wind farm Project.
+To visualise DEMs and wind speed data, subset, classify and vectorize, and create slope and aspect images. These steps are vital for the wind farm project.
 :::
 
-## <input type="checkbox"> Investigating the topography of Wales
+## Adding rasters {#sec-addrast}
 
-(@) Open the raster layer `SRTM_Wales_DEM_25m.tif` (from `Wales_DSM`). This DEM is derived from Space Shuttle data (2000) at 25 m resolution.
+(@) Launch QGIS and create a new project
 
-(@) In **Layer Properties**, experiment with **Singleband pseudocolor**. Adjust colour ramps, Min/Max, and mode/classes.
+(@) From the `Wales_DEM` folder, add the `SRTM_Wales_DEM_25m.tif` layer to your project. This DEM is derived from the [Shuttle Radar Topography Mission](https://www.earthdata.nasa.gov/data/instruments/srtm){target='_blank'}, which scanned nearly 80% of Earth's land surfaces in 2000 to generate a DEM at 25 m resolution.
 
-(@) Under **Color ramp**, **Create new color ramp → cpt‑city**. Explore topography styles and experiment with Min/Max, mode (continuous/equal interval), and classes.
+(@) From the layer's symbology (`Properties...` → `Symbology`), experiment with the `Singleband pseudocolor` render type (see @sec-rasterdata)
 
-(@) Install the **Value Tool** plugin and enable it (View → Panels → Value Tool Panel). Use it to interrogate raster values and find the heights of Snowdon and Pen y Fan. Validate heights using external sources.
+(@) Click the drop-down arrow to the right of the `Color ramp`
 
-(@) Open `Wales_operational_wind farms` and observe that wind farms are often on coasts or high ground.
+(@) Click `Create New Color Ramp`
 
-## <input type="checkbox"> Examining the topography of your map tile
+![](figs/CreateNewColorRamp.png){fig-align='center' width=50%}
 
-(@) Subset the DEM to your map tile via **Raster → Extraction → Clip Raster by Mask Layer**. Input: Wales DEM; Mask layer: your map tile. Save with a sensible name on OneDrive.
+(@) Under `Please select color ramp type:`, select `Catalog: cpt‑city`. This 'city' of Colour Palette Tables (CPTs) is a repository of colour tables designed to creatively present raster data
 
-(@) Explore your subset with suitable palettes and ranges. Identify the highest point and, if possible, its name.
+(@) Explore the  `Topography` theme
 
-(@) Open **View → New 3D Map View**. Configure: Terrain type = **DEM (Raster Layer)**; Elevation = your clipped DEM; Vertical scale = 4; Tile resolution = 64 px. Explore in 3D and experiment with settings. Add other layers if useful.
+(@) Experiment with adjusting:
 
-## <input type="checkbox"> Slope, aspect and hillshade
+    i. The `Color ramp`
+    ii. `Min / max` under the `Min / Max Value Settings` drop-down menu
+    iii.`Mode` (`Continuous`, `Equal Interval`, and `Quantile`)
 
-(@) Create a slope image (**Raster → Analysis → Slope**). Ensure slope is in **degrees**. Identify areas of highest slope and explain why.
+(@) Click `OK`
 
-(@) Create an aspect image (**Raster → Analysis → Aspect**). Because 1° and 359° are near‑equivalents, choose a cyclic CPT (e.g., wave from cpt‑city → QGIS).
+## Inspecting rasters
 
-(@) Create a hillshade (**Raster → Analysis → Hillshade**). Combine with your DEM by placing hillshade above the DEM with ~50% opacity and a grayscale to enhance relief.
+(@) Install the `Value Tool`
 
-## <input type="checkbox"> Classifying raster data
+(@) Click the `Value Tool` icon (![](figs/ValueTool.png){width=3%}). This tool allows you to interrogate data values as you pass the cursor over rasters
 
-(@) Open **Raster Calculator** and classify slopes > 6° as unsuitable. For example, if your slope layer is `SS68_slope.tif`, use an expression like `"SS68_slope@1" > 6` with **Select Layer Extent** and output `SS68_slope_classified`. Pixels with value 1 are unsuitable (slope > 6°), 0 otherwise.
+(@) Find the heights of Yr Wyddfa (Eryri) and Pen y Fan (Bannau Brycheiniog). Check your heights against those on Google
 
-(@) Adjust transparency of the classified slope image and inspect unsuitable areas.
+(@) Add the `Wales_operational_windfarms.gpkg` layer to your project
 
-## <input type="checkbox"> Converting to vector polygons
+(@) Reflect on where these wind farms are located. How do their locations correlate with elevation?
 
-(@) Vectorise the classified raster (**Raster → Conversion → Polygonize**). Input: your classified slope layer (slope < 6° suitable).
+## Clipping rasters {#sec-cliprast}
 
-(@) Under **Layer Properties**, set **Categorized** symbology on field `DN` to distinguish suitable (0) and unsuitable (1) polygons.
+(@) Clip the DEM to your map tile:
 
-(@) Use **Select by Expression** (DN = 1) to select unsuitable polygons and **Export → Save Selected Features As** to create a constraint layer.
+    i. Click `Raster` → `Extraction` → `Clip Raster by Mask Layer...`
+    ii. Set `Input layer` to `SRTM_Wales_DEM_25m`
+    iii. Set` Mask layer` to your map tile. You can access layers even if they aren't loaded in your project using the `Browse` icon (![](figs/Browse.png){width=3%})
+    iv. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Clipped (mask)` and enter a sensible file name (e.g. SH22_DEM) and location on your OneDrive account to save the clipped raster
+    v. Click `Save` → `Run` → `Close`
+    vi. Have you saved your project recently?
 
-## <input type="checkbox"> Wind speeds
+(@) Explore your map tile's DEM using a suitable colour palette and different `Min / max` ranges
 
-(@) Open raster `Wales_wind-speed_50m.tif` from `Wales_mean_windspeed` and choose an appropriate palette (see the `description_and_data_source.txt` file for details).
+(@) Identify the highest point in your clipped DEM and, if possible, its name by Googling
 
-(@) Clip the wind speed raster to your tile and visualise with a suitable palette.
+(@) Here's an opportunity to keep your project clutter-free. Remove the `SRTM_Wales_DEM_25m` and `Wales_operational_windfarms` layers from your project
 
-## <input type="checkbox"> Putting it all together
+## Viewing maps in 3D
 
-(@) Reopen your constraint layers from Exercise 4 alongside your polygonised slope constraint. With the wind speed layer beneath constraints, explore where development may be permitted and optimal (high wind, large areas).
+(@)  View the clipped DEM in 3D:
 
-(@) Design **Map 3** of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location and justify why.
+    i. Click `View` → `3D Map Views` → `New 3D Map View`
+    ii. Click the `Configure...` icon (![](figs/Configure.png){width=3%})
+    iii. Click `Terrain`
+    iv. Set `Type` to `DEM (Raster Layer)`
+    v. Set `Elevation` to your clipped DEM
+    vi. Set `Vertical scale` to `4`
+    vii. Set `Tile resolution` to `64 px`
+    viii. Click `OK`
+    ix. Use the mouse (by scrolling and holding down the click on the scroller) to explore the 3D map
+    x. Experiment with different values of `Vertical scale` and `Tile resolution`
+    xi. Add other layers to see them plotted in 3D
+
+![](figs/3DConfiguration.png){fig-align='center' width=50%}
+
+### Deriving a slope raster
+
+Slope (gradient of the land surface) is fundamental properties of the land surface topography and can enlighten many geophysical processes such erosion.
+
+(@) Derive a slope raster from a DEM:
+
+    i. Click `Raster` → `Analysis` → `Slope...`
+    ii. Set `Input layer` as your clipped DEM
+    iii. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Slope` to save the slope raster somewhere sensible
+    iv. Click `Save` → `Run` → `Close`
+    v. Use the layer's legend to identify the steepest areas. Why are they there?
+
+## Deriving an aspect raster
+
+Aspect (compass direction towards which the gradient faces) is fundamental properties of the land surface topography and can enlighten many geophysical processes such as insolation.
+
+(@) Derive an aspect raster from a DEM:
+
+    i. Click `Raster` → `Analysis` → `Aspect...`
+    ii. Set `Input layer` as your clipped DEM
+    iii. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Aspect` to save the aspect raster somewhere sensible
+    iv. Click `Save` → `Run` → `Close`
+    An aspect of 1° (just East of North) is very close in meaning to an aspect of 359° (just West of North), yet they are at the opposite ends of the decimal geographic coordinate  numerical range. A colour palette table with the same colour for both ends of the value range would make it easier to interpret your aspect layer
+    v. Navigate to the `cpt‑city` colour Palette Tables (CPTs) (see @sec-addrast)
+    vi. Click the `All by author` tab
+    vii. In the `Name` window, click `grass`
+    viii. In the `GRASS colour ramps` window, click `aspect`
+    Click `OK` → `OK`
+
+![](figs/AspectCPT.png){fig-align='center' width=50%}
+
+## Deriving a hillshade raster
+
+Hill-shading simulates the effect of light falling on a surface by combining slope, aspect and a solar illumination direction. This approach is commonly used to visualize topography in maps and figures.
+
+(@) Derive a hillshade raster from a DEM:
+
+    i. Click `Raster` → `Analysis` → `Hillshade...`
+    ii. Set `Input layer` as your clipped DEM
+    iii. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Hillshade` to save the aspect raster somewhere sensible
+    iv. Click `Save` → `Run` → `Close`
+    v. From the `Layers` panel, turn off layer visibilities or arrange layers so that your hillshade layer is above your DEM layer
+    vi. Change the hillshade transparency to 50%
+    vii. Change the symology of your DEM to something intuitive for land height (e.g. `Greens`)
+
+    Experiment with `Z factor` (probably no more than 5)
+    Experiment with `Azimuth of the light`
+    Experiment with `Altitude of the light`
+
+::: {.callout-note appearance="simple" icon=false}
+
+    This is a rare example where making a layer semi-transparent can be useful. The effect is often used to make maps visually engaging
+:::
+
+## Classifying raster data
+
+Use the raster calculator to perform cell-by-cell operations, such as to find parts of a raster layer within a specified range of values. One of the constraints for building a windfarm is that the land surface slope should be no more than 6 degrees. This is simply because greater slopes are less stable and not normally viable to build on. Build an expression in the raster calculator as follows:
+
+    i. Click `Raster` → `Raster Calculator...` 
+    ii. Under `Raster Bands`, double-click on the slope raster name you created earlier
+    iii. In the `Raster Calculation Expression` window, add `<6`
+    iv. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Output layer` to save the classified slope raster somewhere sensible
+    v. Click `OK`
+    
+    The output raster has two values; `0` (black) and `1` (white). Given you instructed the raster calculator to identify areas of the raster that are less than 6°, what do you think these colours represent? If one can build on a slope only on land less than 6°, which colour represents suitable areas to bulid wind farms?
+
+## Converting to vector polygons
+
+Vector polygons can be created from raster layers so that they can be combined with other vector constraints such as those created in [chapter 4](#sec-e04).
+
+#### Polygonize
+
+(@) Convert raster classifications to vector polygons:
+
+    i. Click `Raster` → `Conversion` → `Polygonize (Raster to Vector)...`
+    ii. Set `Input layer` as your classified slope layer
+    iii. Set `Name of the field to create` as `Suitable`
+    iv. Click `Run` → `Close`
+
+(@) Polygons now demarcate the areas that are suitable (slope < 6°) or unsuitable (slope > 6°) for building upon. Open the attribute table to explore which is which. Think binary; under the 'Suitable' column, 1s represent 'yes', 0s represent 'no'
+
+(@) Visualise the suitable and unsuitable areas for construction in the symbology (see @sec-catvec)
+
+(@) Select the 'unsuitable' polygons (Suitable = 0) using `Select features using an expression` (see @sec-selexpress)
+
+(@) Export the selected polygons (remember to use the `Save Selected Features As...` option). Name and store sensibly
+
+## Wind speeds
+
+(@) From the `Wales_mean_windspeed` folder, add the `Wales_wind-speed_50m.tif` layer to your project
+
+(@) Read over the `description_and_data_source.txt` file in the `Wales_mean_windspeed` folder for details about the data. Note; description_and_data_source.txt files appear with every dataset you use
+
+(@) Clip the wind speed raster to your tile and save it somewhere sensible (see @sec-cliprast)
+
+(@) Visualise the data using a suitable colour palette
+
+## Putting it all together
+
+(@) Reopen your constraint layers project from Exercise 4, and add your polygonised slope constraint
+
+(@) With the wind speed layer beneath constraints, explore where development may be permitted and optimal.  you can explore not just where building a windfarm
+may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area
+
+(@) Design Map 3 of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why
 
 ::: {.callout-tip}
 # Learning outcomes
 
-By the end of this exercise you should:
+By the end of this exercise you should be able to:
 
-1. Visualise, clip, and extract values from raster data.
-2. Create DEM products (slope, aspect, hillshade).
-3. Classify a raster layer and create polygons from the classification.
-4. Recognise wind speed variation and identify the best wind farm location.
+1. Visualise raster elevation data using pseudocolour ramps, cpt-city palettes, and min/max scaling, and interrogate cell values directly with the Value Tool.
+2. Clip raster layers to an area of interest and explore the resulting surface in three dimensions.
+3. Derive slope, aspect, and hillshade rasters from a DEM, and explain what each reveals about surface topography and geophysical process.
+4. Classify raster data with the raster calculator to identify areas meeting a defined threshold, and convert the result to vector polygons for combination with other constraint layers.
+5. Appreciate how elevation, slope, and wind speed interact to determine site suitability, integrating raster-derived constraints into a justified development decision.
 :::

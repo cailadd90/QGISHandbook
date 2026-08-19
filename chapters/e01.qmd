@@ -2,7 +2,7 @@
 
 > **Date of practical:** 2nd October 2025
 
-To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the rest of this module and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.
+To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the development of your wind farm project and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.
 
 ::: {.callout-note}
 # Learning aims
@@ -106,23 +106,23 @@ An attribute table is a fundamental part of all GIS datasets. Each row of the ta
 
 (@) Change the order of the layers by dragging each upwards or downwards in the layer panel
 
+(@) Move `Wales_Principle_Areas` to the top of the `Layers` panel
+
 ::: {.callout-tip}
 # Boundary disputes
 
 Notice how the seaward political (Principal Area) boundary of Wales goes beyond the coastline (Land Polygons). This is because the physical land boundary is generally classified according to the mean high water mark, while administrative boundaries are normally classified according to the mean low water mark. That's Geography!
 :::
 
-(@) Move `Wales_Principle_Areas` to the top of the `Layers` panel
+#### Categorise vectors {#sec-catvec}
 
-(@) Open the layer's `Symbology` window
-
-(@) Use the drop-down menu to change the symbology source from `Single Symbol` to `Categorized`
+    i. Open the layer's `Symbology` window
+    ii. Use the drop-down menu to change the symbology source from `Single Symbol` to `Categorized`
 
 ![](figs/SymbologySource.png){fig-align='center' width=25%}
 
-(@) Use the `Value` drop-down menu to select the attribute `name`
-
-(@) Click `Classify` → `OK`. How colourful!
+    iii. Use the `Value` drop-down menu to select the attribute `name`
+    iv. Click `Classify` → `OK`. How colourful!
 
 ## Labelling layers
 
