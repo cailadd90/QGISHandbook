@@ -11,6 +11,6 @@ The approximate area of the Isle of Man was 571 square kilometres
 Meta-information
 ================
 extype: num
-exsolution: 603
+exsolution: 571
 extol: 50
-exname: E01_Q1
+exname: E01_Q2

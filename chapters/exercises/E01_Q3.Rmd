@@ -1,0 +1,15 @@
+Question
+========
+Can you name the seventh-largest island of the British Isles?
+
+Solution
+========
+The seventh-largest island of the British Isles was **^(Angelsey|Ynys Mon|Ynys Môn)$**.
+
+
+
+Meta-information
+================
+extype: string
+exsolution: ^(Angelsey|Ynys Mon|Ynys Môn)$
+exname: E01_Q3
