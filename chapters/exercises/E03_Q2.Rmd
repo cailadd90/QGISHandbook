@@ -1,14 +1,14 @@
 Question
 ========
-How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? *(Enter the number without commas)*
+How many people lived in the most populous postcode in the Swansea (SA) area in 2021? *(Enter the number without commas)*
 
 Solution
 ========
-The most populous postcode in the Cardiff (CF) area in 2021 was 1,593.
+The most populous postcode in the Swansea (SA) area in 2021 was 1,922.
 
 Meta-information
 ================
 extype: num
-exsolution: 1593
+exsolution: 1922
 extol: 0
 exname: E03_Q2

@@ -1,0 +1,14 @@
+Question
+========
+What was the percentage change in the population of Swansea county between 2011 and 2021? *(Enter the number without commas)*
+
+Solution
+========
+The percentage change in the population of Swansea county between 2011 and 2021 was -0.2.
+
+Meta-information
+================
+extype: num
+exsolution: -0.2
+extol: 1
+exname: E03_Q9

@@ -1,0 +1,23 @@
+Question
+========
+Match each postcode area to the feature in that postcode that had the highest registered population in 2021. *(Enter the number without commas)*
+
+Solution
+========
+Cardiff (CF) = Prison
+
+Swansea (SA) = Student halls
+
+Aberystwyth (SY) = Student halls
+
+Other Incorrect Match Options:
+•	Hospital
+•	Shopping centre
+•	Council office
+
+Meta-information
+================
+extype: num
+exsolution: 1593
+extol: 0
+exname: E03_Q4

@@ -18,7 +18,7 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
 
 ## Starting up
 
-(@) Follow the steps [here](@sec-data) to access all the datasets you need for the practicals and the final project 
+(@) Follow the steps [here]@sec-data to access all the datasets you need for the practicals and the final project 
 
 (@) Launch `QGIS`. This could be on a University computer, via a remote desktop, or on your own computer
 

@@ -20,11 +20,41 @@ To examine the distribution of postcode reference points within Wales, visualise
 
 (@) Investigate the attribute table and explore how these points are distributed
 
-(@) Using the attribute table, examine areas of very high and very low density and discuss with your neighbour why these spatial patterns may exist
-
 (@) Using attribute table selection and skills from Chapter 1 (@sec-attrib), find postcodes with the greatest number of people in the Cardiff (`CF`), Swansea (`SA`) and Aberystwyth (`SY`) areas 
 
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q1.Rmd", edir = "exercises")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q2.Rmd", edir = "exercises")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q3.Rmd", edir = "exercises")
+```
+
 (@) Use [Google Maps](https://www.google.com/maps){target='_blank'} to search for these postcodes, and discuss with your neighbour why these locations have such high population counts
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q4.Rmd", edir = "exercises")
+```
 
 (@) Save your project!
 
@@ -50,6 +80,14 @@ To examine the distribution of postcode reference points within Wales, visualise
 
 (@) Consider what each value means, then discuss with your neighbour what the registered population of Wales in 2021 was (a sense check on google may help!)
 
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q5.Rmd", edir = "exercises")
+```
+
 (@) Click `Close`
 
 (@) Calculate the percentage population change in Wales between 2011 and 2021. Show off by being first to tell your neighbour the result
@@ -59,7 +97,7 @@ To examine the distribution of postcode reference points within Wales, visualise
 #| message: false
 #| results: asis
 library(exams2forms)
-exams2forms("E03_Q1.Rmd", edir = "exercises")
+exams2forms("E03_Q6.Rmd", edir = "exercises")
 ```
 
 (@) Right-click on the `2011` census headcount layer and click `Remove Layer...`
@@ -85,9 +123,33 @@ It's good practice to remove layers once you're done with them, to avoid your pr
 
 (@) Use the `Basic Statistics For Fields...` tool to find the 2021 `Total` population of Swansea. **Make sure `Selected features only` is checked this time** 
 
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q7.Rmd", edir = "exercises")
+```
+
 (@) Calculate the 2021 population of Cardiff county
 
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q8.Rmd", edir = "exercises")
+```
+
 (@) Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q9.Rmd", edir = "exercises")
+```
 
 ## Creating a heatmap
 
@@ -197,6 +259,14 @@ Modify the temporary vector layer and save in a sensible location:
 (@) Using `Select by Location` (see @sec-selectlocation) and `Basic Statistics` (see @sec-stats4fields), find the total number of people registered to postcodes within 500 m of Tesco stores
 
 (@) For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE). Hint: see @sec-filter
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E03_Q10.Rmd", edir = "exercises")
+```
 
 The skills you've learned here are vital for the wind farm project.
 

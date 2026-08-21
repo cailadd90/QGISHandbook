@@ -1,0 +1,14 @@
+Question
+========
+How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? *(Enter the number without commas)*
+
+Solution
+========
+The most populous postcode in the Aberystwyth (SY) area in 2021 was 820.
+
+Meta-information
+================
+extype: num
+exsolution: 820
+extol: 0
+exname: E03_Q3
