@@ -208,9 +208,51 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer to your project</p></li>
 <li><p>Add the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer to your project. This dataset contains the number of households and people registered at each postcode (taken from the 2021 Census), combined with coordinates from OS OpenData</p></li>
 <li><p>Investigate the attribute table and explore how these points are distributed</p></li>
-<li><p>Using the attribute table, examine areas of very high and very low density and discuss with your neighbour why these spatial patterns may exist</p></li>
 <li><p>Using attribute table selection and skills from Chapter 1 (<a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>), find postcodes with the greatest number of people in the Cardiff (<code>CF</code>), Swansea (<code>SA</code>) and Aberystwyth (<code>SY</code>) areas</p></li>
-<li><p>Use <a href="https://www.google.com/maps" target="_blank">Google Maps</a> to search for these postcodes, and discuss with your neighbour why these locations have such high population counts</p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-f861a5e7db1005ec792f4d2cf98a4685" data-tol="0" size="20" data-answer="PRoHBFgGR2o="></p>
+</div>
+<div class="webex-solution">
+<p>The most populous postcode in the Cardiff (CF) area in 2021 was 1,593.</p>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>How many people lived in the most populous postcode in the Swansea (SA) area in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-1cf3b1717f8f450b55d66c5a56b89150" data-tol="0" size="20" data-answer="akFXClADFWw="></p>
+</div>
+<div class="webex-solution">
+<p>The most populous postcode in the Swansea (SA) area in 2021 was 1,922.</p>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-c04135c8f2296a96394937e9e13f4d01" data-tol="0" size="20" data-answer="OBIMAwMXPg=="></p>
+</div>
+<div class="webex-solution">
+<p>The most populous postcode in the Aberystwyth (SY) area in 2021 was 820.</p>
+</div>
+</div>
+<ol start="6" class="example" type="1">
+<li>Use <a href="https://www.google.com/maps" target="_blank">Google Maps</a> to search for these postcodes, and discuss with your neighbour why these locations have such high population counts</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Match each postcode area to the feature in that postcode that had the highest registered population in 2021. <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-c5c24cc9ac2f20a6a01d3e609f713699" data-tol="0" size="20" data-answer="OBdSBw1QQWQ="></p>
+</div>
+<div class="webex-solution">
+<p>Cardiff (CF) = Prison</p>
+<p>Swansea (SA) = Student halls</p>
+<p>Aberystwyth (SY) = Student halls</p>
+<p>Other Incorrect Match Options: • Hospital • Shopping centre • Council office</p>
+</div>
+</div>
+<ol start="7" class="example" type="1">
 <li><p>Save your project!</p></li>
 <li><p>Open the headcounts layer’s <code>Symbology</code> window</p></li>
 <li><p>Use the drop-down menu to change the symbology source from <code>Single Symbol</code> to <code>Graduated</code></p></li>
@@ -219,25 +261,36 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Click <code>Classify</code> → <code>OK</code>. Point sizes should now reflect population per postcode</p></li>
 </ol></section><section id="sec-stats4fields" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-stats4fields">
 <span class="header-section-number">3.2</span> Finding headcount statistics</h2>
-<ol start="14" class="example" type="1">
+<ol start="13" class="example" type="1">
 <li><p>Click <code>Vector</code> → <code>Analysis Tools</code> → <code>Basic Statistics For Fields...</code></p></li>
 <li><p>Set <code>Input layer</code> to the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer</p></li>
 <li><p>Set <code>Field to calcualate statics on</code> to <code>Total</code></p></li>
 <li><p>Click <code>Run</code>. Results are presented under the <code>Log</code> tab, and can be viewed in the <code>Results Viewer</code>. Double-clicking <code>Statistics</code> will open the results in a web browser</p></li>
 <li><p>Consider what each value means, then discuss with your neighbour what the registered population of Wales in 2021 was (a sense check on google may help!)</p></li>
-<li><p>Click <code>Close</code></p></li>
-<li><p>Calculate the percentage population change in Wales between 2011 and 2021. Show off by being first to tell your neighbour the result</p></li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What was the registered population of Wales in 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-c501f98897e58473de702f2d3950c8ee" data-tol="0" size="20" data-answer="OBcDAFYODAgJFTg="></p>
+<p><input class="webex-solveme nospaces" id="webex-8d6d77c5d1052a7a4a476d46c46c8390" data-tol="0" size="20" data-answer="Y0YFVQcAVwVUE20="></p>
 </div>
 <div class="webex-solution">
 <p>The registered population of Wales in 2021 was 3,107,400.</p>
 </div>
 </div>
-<ol start="21" class="example" type="1">
+<ol start="18" class="example" type="1">
+<li><p>Click <code>Close</code></p></li>
+<li><p>Calculate the percentage population change in Wales between 2011 and 2021. Show off by being first to tell your neighbour the result</p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the percentage change in the population of Wales between 2011 and 2021?</p>
+<p><input class="webex-solveme nospaces" id="webex-81228f302d49ddfb7e1c49ea836e5660" data-tol="1" size="20" data-answer="YxMDEGU="></p>
+</div>
+<div class="webex-solution">
+<p>The percentage change in the population of Wales between 2011 and 2021 was 1%.</p>
+</div>
+</div>
+<ol start="20" class="example" type="1">
 <li>Right-click on the <code>2011</code> census headcount layer and click <code>Remove Layer...</code>
 </li>
 </ol>
@@ -256,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section><section id="sec-selectlocation" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sec-selectlocation">
 <span class="header-section-number">3.3</span> Selecting by location</h2>
-<ol start="22" class="example" type="1">
+<ol start="21" class="example" type="1">
 <li>
 <p>Calculate basic statistics on a subset of data in a particular location:</p>
 <ol type="i">
@@ -276,11 +329,43 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </li>
 <li><p>Use the <code>Basic Statistics For Fields...</code> tool to find the 2021 <code>Total</code> population of Swansea. <strong>Make sure <code>Selected features only</code> is checked this time</strong></p></li>
-<li><p>Calculate the 2021 population of Cardiff county</p></li>
-<li><p>Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results</p></li>
-</ol></section><section id="creating-a-heatmap" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-heatmap">
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the total population of Swansea county in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-9271eaae3aa6c88c66c381fc91f84bd4" data-tol="0" size="20" data-answer="YhAFAl1VVVIRPA=="></p>
+</div>
+<div class="webex-solution">
+<p>The total population of Swansea county in 2021 was 238,447.</p>
+</div>
+</div>
+<ol start="23" class="example" type="1">
+<li>Calculate the 2021 population of Cardiff county</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the total population of Cardiff county in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-c15c4694de653640ff2c15c1687d94b4" data-tol="0" size="20" data-answer="OBMGVQYFDAJGOA=="></p>
+</div>
+<div class="webex-solution">
+<p>The total population of Cardiff county in 2021 was 362,356.</p>
+</div>
+</div>
+<ol start="24" class="example" type="1">
+<li>Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the percentage change in the population of Swansea county between 2011 and 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-2090129d44d04aac8cfa2276fb1e5187" data-tol="1" size="20" data-answer="aRIUAB8AGzk="></p>
+</div>
+<div class="webex-solution">
+<p>The percentage change in the population of Swansea county between 2011 and 2021 was -0.2.</p>
+</div>
+</div>
+</section><section id="creating-a-heatmap" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-heatmap">
 <span class="header-section-number">3.4</span> Creating a heatmap</h2>
-<ol start="26" class="example" type="1">
+<ol start="25" class="example" type="1">
 <li><p>Click <code>Processing</code> → <code>Toolbox</code> or find the the shortcut (<img src="figs/ProcessingToolbox.png" class="img-fluid" style="width:3.0%">)</p></li>
 <li><p>Click the drop-down arrow next to <code>Interpolation</code></p></li>
 <li><p>Double-click <code>Heatmap (Kernel Density Estimation)</code></p></li>
@@ -314,7 +399,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Let’s do some geocoding by plotting where your local Tesco stores are located!</p>
 </div>
 </div>
-<ol start="33" class="example" type="1">
+<ol start="32" class="example" type="1">
 <li><p>Navigate to the <a href="https://www.tesco.com/store-locator/" target="_blank">Tesco store locator</a></p></li>
 <li><p>Search for stores in the <code>Swansea</code> area</p></li>
 <li><p>Open <code>Excel</code></p></li>
@@ -324,7 +409,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/TescoSpreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="37" class="example" type="1">
+<ol start="36" class="example" type="1">
 <li><p>Save the spreadsheet in a <code>.csv</code> format (<code>UTF-8</code>)</p></li>
 <li><p>In QGIS, select <code>Plugins</code> → <code>Manage and Install Plugins...</code></p></li>
 </ol>
@@ -341,7 +426,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Plugins are written by QGIS developers and other independent developers who want to extend the core functionality of the software. It is this community-led innovating that makes QGIS such a powerful tool.</p>
 </div>
 </div>
-<ol start="39" class="example" type="1">
+<ol start="38" class="example" type="1">
 <li><p>Search for <code>mmqgis</code></p></li>
 <li><p>Click <code>Install Plugin</code></p></li>
 </ol>
@@ -349,7 +434,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/mmqgis.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="41" class="example" type="1">
+<ol start="40" class="example" type="1">
 <li>
 <p>Use the <code>MMQGIS</code> tool to attach coordinates to postcode data:</p>
 <ol type="i">
@@ -400,12 +485,12 @@ vii. Click `OK`</code></pre>
 <figure class="figure"><p><img src="figs/SaveVectorLayerAs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="42" class="example" type="1">
+<ol start="41" class="example" type="1">
 <li><p>The layer should appear in the <code>Layers</code> panel. Open its attribute table. Does what you’ve just done make conceptual sense? If not - ask!</p></li>
 <li><p>Remove the <code>temp1</code> layer from your project</p></li>
 </ol></section><section id="sec-buffers" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-buffers">
 <span class="header-section-number">3.7</span> Using buffers as simple catchments</h2>
-<ol start="44" class="example" type="1">
+<ol start="43" class="example" type="1">
 <li>
 <p>Create buffers around each postcode point to approximate walking distance from the Tescos store:</p>
 <ol type="i">
@@ -424,10 +509,19 @@ vii. Click `OK`</code></pre>
 <figure class="figure"><p><img src="figs/Buffer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="45" class="example" type="1">
+<ol start="44" class="example" type="1">
 <li><p>Using <code>Select by Location</code> (see <a href="#sec-selectlocation" class="quarto-xref"><span>Section 3.3</span></a>) and <code>Basic Statistics</code> (see <a href="#sec-stats4fields" class="quarto-xref"><span>Section 3.2</span></a>), find the total number of people registered to postcodes within 500 m of Tesco stores</p></li>
 <li><p>For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE). Hint: see <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a></p></li>
 </ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-8aa196185a689662eba9d0822ab4df74" data-tol="0" size="20" data-answer="Y0NSAwACARpo"></p>
+</div>
+<div class="webex-solution">
+<p>The total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE) was 32,940.</p>
+</div>
+</div>
 <p>The skills you’ve learned here are vital for the wind farm project.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">

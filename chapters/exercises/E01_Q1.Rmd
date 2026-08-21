@@ -1,0 +1,14 @@
+Question
+========
+What is the distance between the extreme cardinal points of mainland Great Britain (in miles)? *(Enter the number without commas)*
+
+Solution
+========
+The distance between the extreme cardinal points of mainland Great Britain was 603 miles.
+
+Meta-information
+================
+extype: num
+exsolution: 603
+extol: 0
+exname: E01_Q1

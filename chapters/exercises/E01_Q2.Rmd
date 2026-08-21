@@ -1,0 +1,16 @@
+Question
+========
+What is the approximate area of the Isle of Man (in square kilometres)? *(Enter the number without commas)*
+
+Solution
+========
+The approximate area of the Isle of Man was 571 square kilometres
+
+
+
+Meta-information
+================
+extype: num
+exsolution: 603
+extol: 50
+exname: E01_Q1
