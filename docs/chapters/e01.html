@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="starting-up" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="starting-up">
 <span class="header-section-number">1.1</span> Starting up</h2>
 <ol class="example" type="1">
-<li><p>Follow the steps [here]<a href="intro.html#sec-data" class="quarto-xref"><span>Section 2</span></a> to access all the datasets you need for the practicals and the final project</p></li>
+<li><p>Follow the steps <a href="intro.html#sec-data">here</a> to access all the datasets you need for the practicals and the final project</p></li>
 <li><p>Launch <code>QGIS</code>. This could be on a University computer, via a remote desktop, or on your own computer</p></li>
 <li><p>From the menu bar, click <code>Project</code> → <code>New</code>. Find the shortcut icon to create a new project</p></li>
 <li>
@@ -242,23 +242,28 @@ ul.task-list li input[type="checkbox"] {
 </ol></section><section id="sec-properties" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="sec-properties">
 <span class="header-section-number">1.3</span> Adjusting style properties</h2>
 <ol start="8" class="example" type="1">
-<li><p>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Properties...</code> → <code>Symbology</code>. A useful shortcut to <code>Properties</code> is to double-click the layer</p></li>
-<li><p>Click <code>Simple Fill</code> and experiment with changing the layer symbology’s colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer</p></li>
+<li>
+<p>To adjust a layer’s symbology:</p>
+<ol type="i">
+<li>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Properties...</code> → <code>Symbology</code>. A useful shortcut to <code>Properties</code> is to double-click the layer</li>
+<li>Click <code>Simple Fill</code> and experiment with changing the layer symbology’s colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer</li>
+</ol>
+</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/SimpleFill.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
 </figure>
 </div>
-<ol start="10" class="example" type="1">
-<li><p>Click <code>Apply</code> → <code>OK</code> when you’ve finished editing the layer’s symbology</p></li>
-<li><p>From the menu bar, click <code>Project</code> → <code>Save</code> and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!</p></li>
+<pre><code>iii. Click `Apply` → `OK` when you've finished editing the layer's symbology</code></pre>
+<ol start="9" class="example" type="1">
+<li>From the menu bar, click <code>Project</code> → <code>Save</code> and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!</li>
 </ol></section><section id="sec-measuring" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="sec-measuring">
 <span class="header-section-number">1.4</span> Measuring geospatial objects</h2>
-<ol start="12" class="example" type="1">
+<ol start="10" class="example" type="1">
 <li>
 <p>Click the drop-down arrow next to the <code>Measure</code> icon to select the appropriate tool for measuring:</p>
 <ol type="i">
-<li>The length of Great Britain (in miles)</li>
+<li>The distance between the extreme cardinal points of mainland Great Britain (in miles)</li>
 <li>The approximate area of the Isle of Man (in square kilometres)</li>
 </ol>
 </li>
@@ -267,32 +272,31 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/MeasureDropdown.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
-<ol start="13" class="example" type="1">
-<li><p>Use left-click to add points, and right-click to stop taking the length / area measurements</p></li>
-<li><p>Share your answers on Menti! Being able to measure geographic features is a fundamental objective of GIS analysis</p></li>
+<ol start="11" class="example" type="1">
+<li>Use left-click to add points, and right-click to stop taking the length / area measurements</li>
 </ol>
-<p>The EPSG code for the British National Grid is <input class="webex-solveme nospaces" id="webex-0ab7b5ed41340211a3b78d88cb6fa5e6" data-tol="50" size="5" data-answer="a0NQAFUFVUZp">.</p>
-<p>Which projection type preserves area? <input class="webex-solveme nospaces" id="webex-af5218dc33a8cde4d209078d3127014e" size="10" data-answer="OkRQQ0RZCE5SQQRZQTk="></p>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What is the distance between the extreme cardinal points of mainland Great Britain (in miles)? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-18184fabbbbbd29182c5701c5314253a" data-tol="0" size="20" data-answer="ahoHCAdEPA=="></p>
+</div>
+<div class="webex-solution">
+<p>The distance between the extreme cardinal points of mainland Great Britain was 603 miles.</p>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What is the approximate area of the Isle of Man (in square kilometres)? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-209215bb1a0eae051918d1e96efa4809" data-tol="50" size="20" data-answer="aRIMBQAXPw=="></p>
+</div>
+<div class="webex-solution">
+<p>The approximate area of the Isle of Man was 571 square kilometres</p>
+</div>
+</div>
 </section><section id="sec-attrib" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="sec-attrib">
 <span class="header-section-number">1.5</span> Exploring the Attribute Table</h2>
-<ol start="15" class="example" type="1">
-<li>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Open Attribute Table</code>
-</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>The Attribute Table
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: <code>fid</code> (field identifier) and <code>Area</code>.</p>
-</div>
-</div>
-<ol start="16" class="example" type="1">
+<ol start="12" class="example" type="1">
+<li><p>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Open Attribute Table</code>. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: <code>fid</code> (field identifier) and <code>Area</code></p></li>
 <li><p>Click the <code>Dock Attribute Table</code> icon (<img src="figs/DockAttributeTable.png" class="img-fluid" style="width:3.0%">) so that you can see both the Map Canvas and Attribute Table on screen at once</p></li>
 <li>
 <p>To understand how the attribute table corresponds with the vector layer:</p>
@@ -307,8 +311,19 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/SortAttributeTable.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="18" class="example" type="1">
-<li><p>Repeat the step above to explore the ten largest islands of the British Isles. Can you name the seventh-largest? If so, submit it on Menti!</p></li>
+<ol start="15" class="example" type="1">
+<li>Repeat the step above to explore the ten largest islands of the British Isles</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Can you name the seventh-largest island of the British Isles?</p>
+<p><input class="webex-solveme" id="webex-148c10cf711d8435f483c296576af5c8" size="30" data-answer="ahZmS3BeBANbQlQdRG1dTBUUdVwNTmBYTEQWLKWBDREVFmU="></p>
+</div>
+<div class="webex-solution">
+<p>The seventh-largest island of the British Isles was <strong>^(Angelsey|Ynys Mon|Ynys Môn)$</strong>.</p>
+</div>
+</div>
+<ol start="16" class="example" type="1">
 <li>
 <p>You can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:</p>
 <ol type="i">
@@ -316,61 +331,66 @@ ul.task-list li input[type="checkbox"] {
 <li>Select (highlight in yellow) the Isle of Wight</li>
 <li>In the attribute table, click the <code>Move selection to top</code> icon (<img src="figs/MoveSelection.png" class="img-fluid" style="width:3.0%">) to move the selected line of the table to the top</li>
 <li>Read the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)</li>
-<li>Report your result on Menti!</li>
 </ol>
 </li>
-<li><p>Click the <code>Deselect features</code> icon (<img src="figs/Deselect.png" class="img-fluid" style="width:3.0%">) to deselect the current selection. These functions will be very useful later on</p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What is the precise area of the Isle of Wight (in square kilometres)? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-05688001e78697218ca4c0578c1cc31b" data-tol="0" size="20" data-answer="axcFAAoSbQ=="></p>
+</div>
+<div class="webex-solution">
+<p>The precise area of the Isle of Wight was 382 square kilometres.</p>
+</div>
+</div>
+<ol start="17" class="example" type="1">
+<li>Click the <code>Deselect features</code> icon (<img src="figs/Deselect.png" class="img-fluid" style="width:3.0%">) to deselect the current selection. These functions will be very useful later on</li>
 </ol></section><section id="arranging-layers" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="arranging-layers">
 <span class="header-section-number">1.6</span> Arranging layers</h2>
-<ol start="21" class="example" type="1">
+<ol start="18" class="example" type="1">
 <li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer in the <code>UK_Boundaries</code> folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the <code>Layers</code> panel</p></li>
 <li><p>Adjust the style of this layer and explore its attribute table</p></li>
 <li><p>Experiment with switching layer visibility on or off using the tick boxes in the <code>Layer</code> panel (<img src="figs/CheckLayer.png" class="img-fluid" style="width:3.0%">). This becomes essential when managing multiple layers in a project</p></li>
 <li><p>Change the order of the layers by dragging each upwards or downwards in the layer panel</p></li>
-<li><p>Move <code>Wales_Principle_Areas</code> to the top of the <code>Layers</code> panel</p></li>
+<li><p>Move <code>Wales_Principle_Areas</code> to the top of the <code>Layers</code> panel. Notice how the seaward political (Principal Area) boundary of Wales goes beyond the coastline (Land Polygons). This is because the physical land boundary is generally classified according to the mean high water mark, while administrative boundaries are normally classified according to the mean low water mark. That’s Geography!</p></li>
+<li>
+<p>To categorise the layer’s symbology:</p>
+<ol type="i">
+<li>Open the layer’s <code>Symbology</code> window</li>
+<li>Use the drop-down menu to change the symbology source from <code>Single Symbol</code> to <code>Categorized</code>
+</li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Boundary disputes
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Notice how the seaward political (Principal Area) boundary of Wales goes beyond the coastline (Land Polygons). This is because the physical land boundary is generally classified according to the mean high water mark, while administrative boundaries are normally classified according to the mean low water mark. That’s Geography!</p>
-</div>
-</div>
-<section id="sec-catvec" class="level4" data-number="1.6.0.1"><h4 data-number="1.6.0.1" class="anchored" data-anchor-id="sec-catvec">
-<span class="header-section-number">1.6.0.1</span> Categorise vectors</h4>
-<pre><code>i. Open the layer's `Symbology` window
-ii. Use the drop-down menu to change the symbology source from `Single Symbol` to `Categorized`</code></pre>
+</li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/SymbologySource.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
 </figure>
 </div>
 <pre><code>iii. Use the `Value` drop-down menu to select the attribute `name`
 iv. Click `Classify` → `OK`. How colourful!</code></pre>
-</section></section><section id="labelling-layers" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="labelling-layers">
+</section><section id="labelling-layers" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="labelling-layers">
 <span class="header-section-number">1.7</span> Labelling layers</h2>
-<ol start="26" class="example" type="1">
-<li><p>Select <code>Wales_Principal_Areas layer</code> in the <code>Layers</code> panel</p></li>
-<li><p>From the menu bar, click <code>Layer</code> → <code>Labelling</code>. Find the shortcuts to this window (hint - check out <code>Properties...</code>)</p></li>
-<li><p>Use the drop-down menu to change the labelling source from <code>No Labels</code> to <code>Single Labels</code></p></li>
+<ol start="24" class="example" type="1">
+<li>
+<p>To label layers:</p>
+<ol type="i">
+<li>Select <code>Wales_Principal_Areas</code> layer in the <code>Layers</code> panel</li>
+<li>From the menu bar, click <code>Layer</code> → <code>Labeling</code>. Find the shortcuts to this window (hint - check out <code>Properties...</code>)</li>
+<li>Use the drop-down menu to change the labelling source from <code>No Labels</code> to <code>Single Labels</code>
+</li>
+</ol>
+</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/LabellingSource.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
-<ol start="29" class="example" type="1">
-<li>Change the <code>Value</code> drop-down menu to label the Wales Principle Area polygons according to their English or Welsh names</li>
-</ol>
+<pre><code>iv. Change the `Value` drop-down menu to label the Wales Principle Area polygons according to their English or Welsh names </code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/LabelValue.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
-<ol start="30" class="example" type="1">
+<ol start="25" class="example" type="1">
 <li>
 <p>Experiment with modifying the labels by:</p>
 <ol type="i">
@@ -382,23 +402,10 @@ iv. Click `Classify` → `OK`. How colourful!</code></pre>
 <li>Have you saved your project recently?</li>
 </ol>
 </li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Smart labelling
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the <code>Labelling</code> window and you are encouraged to experiment.</p>
-</div>
-</div>
-</section><section id="sec-filter" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-filter">
+<li><p>Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the <code>Labelling</code> window and you are encouraged to experiment.</p></li>
+</ol></section><section id="sec-filter" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-filter">
 <span class="header-section-number">1.8</span> Adding and filtering data</h2>
-<ol start="31" class="example" type="1">
+<ol start="27" class="example" type="1">
 <li><p>Add the vector layer <code>Wales_operational_windfarms.gpkg</code> to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales</p></li>
 <li><p>Examine the attribute table</p></li>
 <li><p>Adjust the layer’s style, noting that point data is represented in a different way to polygon data</p></li>
@@ -409,7 +416,6 @@ iv. Click `Classify` → `OK`. How colourful!</code></pre>
 <ol type="i">
 <li>Examine the attribute table</li>
 <li>Experiment with different styles for line data</li>
-<li>Try labelling the roads with the attribute <code>ref</code> (i.e. the road number). See how these labels are displayed as you zoom in and out of the map</li>
 </ol>
 </li>
 <li>
@@ -420,8 +426,15 @@ iv. Click `Classify` → `OK`. How colourful!</code></pre>
 <li>This tool allows you to easily see all the unique values contained in each field (or column) of the attribute table. Click <code>fclass</code> → <code>All</code>. You can now see all the unique classes of road in the vector layer</li>
 <li>Under <code>Provider Specific Filter Expression</code>, type <code>"fclass" IN ('primary', 'trunk', 'motorway')</code>. Make sure of precise punctuation and spacing</li>
 <li>Click <code>OK</code>. Your map should now only display roads classed as primary and secondary. A funnel icon (<img src="figs/Filter.png" class="img-fluid" style="width:3.0%">) has also appeared next to the layer in name in the `Layers’ panel, to remind you a filter has been applied</li>
-<li>Experiment with the filter to see which combinations of data you can display</li>
-<li>When you have finished, click <code>Clear</code> → <code>OK</code> to remove the filter and close the tool</li>
+</ol>
+</li>
+<li><p>Label the roads with the attribute <code>ref</code> (i.e. the road number). See how these labels are displayed as you zoom in and out of the map</p></li>
+<li>
+<p>To remove the filter:</p>
+<ol type="i">
+<li>Click the funnel icon (<img src="figs/Filter.png" class="img-fluid" style="width:3.0%">) next to the roads layer</li>
+<li>CLick <code>Clear</code> → <code>OK</code>
+</li>
 </ol>
 </li>
 <li>
@@ -429,38 +442,23 @@ iv. Click `Classify` → `OK`. How colourful!</code></pre>
 <ol type="i">
 <li>Open the layer’s <code>Symbology</code> window</li>
 <li>Use the <code>Categorized</code> option to categorise the road symbology according to the <code>fclass</code> attribute</li>
-<li>Delete all the road classes except <code>primary</code>, <code>trunk</code>, and <code>motorway</code>. See if you can make this task easier for yourself by using the <code>Shift</code> and <code>Ctrl</code> keys…</li>
+<li>Delete all the road classes except <code>primary</code>, <code>trunk</code>, and <code>motorway</code> using the <code>Delete</code> icon (<img src="figs/Delete.png" class="img-fluid" style="width:3.0%">). See if you can make this task easier for yourself by using the <code>Shift</code> and <code>Ctrl</code> keys…</li>
 <li>Double-click the line symbol per category to choose a suitable symbology for these remaining roads (e.g. thick red for primary, very thick light blue for motorway)</li>
 </ol>
 </li>
-<li><p>Add the <code>gis_osm_waterways_free_1.gpkg</code> vector layer in the <code>British_Isles_geofabrik</code> → <code>wales</code> folders. What colour would be best for these?</p></li>
+<li><p>Add the <code>gis_osm_waterways_free_1.gpkg</code> vector layer in the <code>British_Isles_geofabrik</code> → <code>wales</code> folders. What colour would be best for this layer?</p></li>
 </ol></section><section id="adding-external-data" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="adding-external-data">
 <span class="header-section-number">1.9</span> Adding external data</h2>
-<ol start="40" class="example" type="1">
+<ol start="38" class="example" type="1">
 <li><p>Navigate to <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a></p></li>
 <li><p>Search for “Wales Coast Path” and click on the link</p></li>
 <li><p>Under <code>Select spatial data format</code>, choose <code>OFC Geopackage</code> and click <code>Download</code></p></li>
 <li><p>Move the downloaded file to your OneDrive</p></li>
 <li><p>Add the layer to your project and explore it</p></li>
-<li><p>Try searching for and downloading other GIS data files from DataMapWales, geofabrik.de, or any another source</p></li>
-<li><p>When you’ve found a juicy dataset, report it on Menti</p></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Dissertation ideas
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Searching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon</p>
-</div>
-</div>
-</section><section id="have-you-finished" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="have-you-finished">
+<li><p>Try searching for and downloading other GIS data files from <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a>, <a href="https://geofabrik.de/">geofabrik.de</a>, or any another source. Searching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon</p></li>
+</ol></section><section id="have-you-finished" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="have-you-finished">
 <span class="header-section-number">1.10</span> Have you finished?</h2>
-<ol start="47" class="example" type="1">
+<ol start="44" class="example" type="1">
 <li>Congratulations! You’ve learned the basics of QGIS. Make sure that you’ve understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
