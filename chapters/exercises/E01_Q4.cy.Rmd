@@ -1,6 +1,6 @@
 Question
 ========
-What is the precise area of the Isle of Wight (in square kilometres)?
+What is the precise area of the Isle of Wight (in square kilometres)? *(Enter the number without commas)*
 
 Solution
 ========

@@ -1,6 +1,6 @@
 Question
 ========
-What is the approximate area of the Isle of Man (in square kilometres)?
+What is the approximate area of the Isle of Man (in square kilometres)? *(Enter the number without commas)*
 
 Solution
 ========

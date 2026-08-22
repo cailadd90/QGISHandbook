@@ -1,6 +1,6 @@
 Question
 ========
-What is the distance between the extreme cardinal points of mainland Great Britain (in miles)?
+What is the distance between the extreme cardinal points of mainland Great Britain (in miles)? *(Enter the number without commas)*
 
 Solution
 ========

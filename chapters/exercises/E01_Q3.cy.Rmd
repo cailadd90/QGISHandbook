@@ -4,13 +4,12 @@ Can you name the seventh-largest island of the British Isles?
 
 Solution
 ========
-The seventh-largest island of the British Isles was *Ynys Môn* / **Anglesey**.
+The seventh-largest island of the British Isles was **^(Angelsey|Ynys Mon|Ynys Môn)$**.
 
 
 
 Meta-information
 ================
 extype: string
-exsolution: (?i)(Anglesey|Ynys Mon|Ynys Môn)
-exstringtype: regex
+exsolution: ^(Angelsey|Ynys Mon|Ynys Môn)$
 exname: E01_Q3
