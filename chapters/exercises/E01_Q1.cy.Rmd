@@ -2,13 +2,21 @@ Question
 ========
 Beth yw'r pellter rhwng pwyntiau cardinal eithaf Prydain Fawr (mewn milltiroedd)?
 
+##ANSWER1##
+
+Beth yw arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)?
+
+##ANSWER2##
+
 Solution
 ========
-Y pellter rhwng pwyntiau cardinal eithaf Prydain Fawr oedd 603 milltir.
+- Y pellter rhwng pwyntiau cardinal eithaf Prydain Fawr oedd 603 milltir.
+- Arwynebedd bras Ynys Manaw oedd 571 cilomedr sgwâr.
 
 Meta-information
 ================
-extype: num
-exsolution: 603
-extol: 0
 exname: E01_Q1.cy
+extype: cloze
+exclozetype: num|num
+exsolution: 603|571
+extol: 0|50

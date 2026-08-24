@@ -1,7 +1,5 @@
 # Cyfansoddi mapiau {#sec-e02}
 
-> **Dyddiad yr ymarfer:** 9 Hydref 2025
-
 Mae cyfathrebu data a chysyniadau daearyddol drwy fapiau yn sgil sylfaenol i wyddonwyr gofodol. Mae creu mapiau yn gofyn am y gallu i'w gwneud yn gyflawn, yn gywir ac yn ymarferol, a'r ddawn i'w gwneud yn ddiddorol ac yn ddeniadol. Mae'r ymarfer hwn yn cyflwyno y ffenestr Print Layout QGIS, er mwyn cynhyrchu'r mapiau ar gyfer eich prosiect fferm wynt.
 
 ::: {.nodyn-galwad}

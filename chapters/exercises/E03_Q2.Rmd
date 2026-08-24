@@ -1,14 +1,42 @@
 Question
 ========
-How many people lived in the most populous postcode in the Swansea (SA) area in 2021? *(Enter the number without commas)*
+
+Which feature at the most populous postcode area explained the high population count?
+
+**SA:** ##ANSWER1##
+
+**CF:** ##ANSWER2##
+
+**SY:** ##ANSWER3##
+
+Answerlist
+----------
+* Student halls
+* Prison
+* Hospital
+* Military barracks
+* Care home
+* Student halls
+* Prison
+* Hospital
+* Military barracks
+* Care home
+* Student halls
+* Prison
+* Hospital
+* Military barracks
+* Care home
 
 Solution
 ========
-The most populous postcode in the Swansea (SA) area in 2021 was 1,922.
+
+- SA1 8EN is the postcode for Swansea University's Bay Campus student accommodation.
+- CF35 6AP is the postcode for HM Prison Parc in Bridgend.
+- SY23 3TE is the postcode for Aberystwth University's Penglais student village.
 
 Meta-information
 ================
-extype: num
-exsolution: 1922
-extol: 0
+extype: cloze
+exclozetype: schoice|schoice|schoice
+exsolution: 10000|01000|10000
 exname: E03_Q2

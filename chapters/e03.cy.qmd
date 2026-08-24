@@ -1,7 +1,5 @@
 # Geocodio a phoblogaeth {#sec-e03}
 
-> **Date of practical:** 16th October 2025
-
 The location and density of the human population underpin how society is organised. GIS helps you understand population density, proximity to features, and assign data to addresses. Postcodes link human activity to physical locations.
 
 You will find data for this exercise on the **L:** drive under `College of Science/Geography/GEG276`. Read alongside **GIS_guide_to_practical_exercises**.
@@ -17,15 +15,6 @@ Examine the distribution of postcode reference points within Wales, visualise po
 (@) Launch QGIS, create a new project and open `Wales_Principal_Areas`.
 
 (@) Open `Wales_headcounts_at_postcodes_2021`. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-library(exams2forms)
-exams2forms("E03_Q1.cy.Rmd", edir = "exercises")
-```
-
 
 (@) Investigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.
 

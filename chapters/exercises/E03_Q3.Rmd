@@ -1,14 +1,22 @@
 Question
 ========
-How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? *(Enter the number without commas)*
+What was the registered population of Wales in 2021? *(Enter the number without commas)*
+
+##ANSWER1##
+
+What was the percentage change in the population of Wales between 2011 and 2021?
+
+##ANSWER2##
 
 Solution
 ========
-The most populous postcode in the Aberystwyth (SY) area in 2021 was 820.
+- The registered population of Wales in 2021 was 3,107,400.
+- The percentage change in the population of Wales between 2011 and 2021 was 1%.
 
 Meta-information
 ================
-extype: num
-exsolution: 820
-extol: 0
+extype: cloze
+exclozetype: num|num
+exsolution: 3107400|1
+extol: 0|1
 exname: E03_Q3

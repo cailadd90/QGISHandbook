@@ -1,14 +1,24 @@
 Question
 ========
-Beth yw arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)?
+Allwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?
+
+Answerlist
+----------
+* Ynys Môn
+* Ynys Enlli
+* Skye
+* Islay
+* Lewis a Harris
 
 Solution
 ========
-Arwynebedd bras Ynys Manaw oedd 571 cilomedr sgwâr.
+
+Ynys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.
 
 Meta-information
 ================
-extype: num
-exsolution: 571
-extol: 50
+
+extype: schoice
+exsolution: 10000
 exname: E01_Q2.cy
+exshuffle: TRUE

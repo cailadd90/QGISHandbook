@@ -1,16 +1,25 @@
 Question
 ========
-What is the approximate area of the Isle of Man (in square kilometres)?
+
+Can you name the seventh-largest island of the British Isles?
+
+Answerlist
+----------
+* Ynys Môn / Anglesey
+* Ynys Enlli / Bardsey
+* Skye
+* Islay
+* Lewis and Harris
 
 Solution
 ========
-The approximate area of the Isle of Man was 571 square kilometres.
 
-
+The seventh-largest island of the British Isles is Ynys Môn / Anglesey.
 
 Meta-information
 ================
-extype: num
-exsolution: 571
-extol: 50
+
+extype: schoice
+exsolution: 10000
 exname: E01_Q2
+exshuffle: TRUE

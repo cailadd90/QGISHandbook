@@ -1,7 +1,5 @@
 # Wind farm area polygon, viewshed, and impact {#sec-e06}
 
-> **Dates of practical:** 20th and 27th November and 11th December 2025
-
 This exercise is all about applying the skills you've gained over the past five exercises, to cement your GIS skills and successfully complete the wind farm project. You will also create a new polygon to represent your wind farm location, and create viewsheds to identify who may be impacted by the wind farm development. 
 
 **This exercise will guide you through the requirements for making Map 4**

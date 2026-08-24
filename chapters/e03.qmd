@@ -1,8 +1,6 @@
 # Geocoding and population {#sec-e03}
 
-> **Date of practical:** 16th October 2025
-
-The location and density of the human population underpin how society is organised. GIS helps one understand human systems, by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project.
+The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project.
 
 ::: {.callout-note}
 ## Learning aims
@@ -30,30 +28,14 @@ library(exams2forms)
 exams2forms("E03_Q1.Rmd", edir = "exercises")
 ```
 
+(@) Use [Google Maps](https://www.google.com/maps){target='_blank'} to search for these postcodes and discover why these locations have such high population counts
+
 ```{r}
 #| echo: false
 #| message: false
 #| results: asis
 library(exams2forms)
 exams2forms("E03_Q2.Rmd", edir = "exercises")
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-library(exams2forms)
-exams2forms("E03_Q3.Rmd", edir = "exercises")
-```
-
-(@) Use [Google Maps](https://www.google.com/maps){target='_blank'} to search for these postcodes, and discuss with your neighbour why these locations have such high population counts
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-library(exams2forms)
-exams2forms("E03_Q4.Rmd", edir = "exercises")
 ```
 
 (@) Save your project!
@@ -78,26 +60,12 @@ exams2forms("E03_Q4.Rmd", edir = "exercises")
 
 (@) Click `Run`. Results are presented under the `Log` tab, and can be viewed in the `Results Viewer`. Double-clicking `Statistics` will open the results in a web browser
 
-(@) Consider what each value means, then discuss with your neighbour what the registered population of Wales in 2021 was (a sense check on google may help!)
-
 ```{r}
 #| echo: false
 #| message: false
 #| results: asis
 library(exams2forms)
-exams2forms("E03_Q5.Rmd", edir = "exercises")
-```
-
-(@) Click `Close`
-
-(@) Calculate the percentage population change in Wales between 2011 and 2021. Show off by being first to tell your neighbour the result
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-library(exams2forms)
-exams2forms("E03_Q6.Rmd", edir = "exercises")
+exams2forms("E03_Q3.Rmd", edir = "exercises")
 ```
 
 (@) Right-click on the `2011` census headcount layer and click `Remove Layer...`
@@ -123,23 +91,7 @@ It's good practice to remove layers once you're done with them, to avoid your pr
 
 (@) Use the `Basic Statistics For Fields...` tool to find the 2021 `Total` population of Swansea. **Make sure `Selected features only` is checked this time** 
 
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-library(exams2forms)
-exams2forms("E03_Q7.Rmd", edir = "exercises")
-```
-
 (@) Calculate the 2021 population of Cardiff county
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-library(exams2forms)
-exams2forms("E03_Q8.Rmd", edir = "exercises")
-```
 
 (@) Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results
 
@@ -148,7 +100,7 @@ exams2forms("E03_Q8.Rmd", edir = "exercises")
 #| message: false
 #| results: asis
 library(exams2forms)
-exams2forms("E03_Q9.Rmd", edir = "exercises")
+exams2forms("E03_Q4.Rmd", edir = "exercises")
 ```
 
 ## Creating a heatmap
@@ -265,7 +217,7 @@ Modify the temporary vector layer and save in a sensible location:
 #| message: false
 #| results: asis
 library(exams2forms)
-exams2forms("E03_Q10.Rmd", edir = "exercises")
+exams2forms("E03_Q5.Rmd", edir = "exercises")
 ```
 
 The skills you've learned here are vital for the wind farm project.

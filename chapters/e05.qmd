@@ -1,7 +1,5 @@
 # Elevation, slope, and wind speed {#sec-e05}
 
-> **Dates of practical:** 6th and 13th November 2025
-
 Elevation is a key determinant of many geographical processes. The height of the land determines whether the coast is above or below sea level. Mountain and valley slopes determine water flow and microclimates. Biomes are often restricted to particular altitudes. Digital Elevation Models (DEMs) describe land surface height in a grid, and are a special case of continuous geospatial data widely available as raster datasets at various spatial resolutions. QGIS has several tools to inspect and manipulate DEMs, which are necessary for the wind farm project.
 
 **This exercise will guide you through the requirements for making Map 3**

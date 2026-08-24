@@ -1,23 +1,27 @@
 Question
 ========
-Match each postcode area to the feature in that postcode that had the highest registered population in 2021. *(Enter the number without commas)*
+What was the total population of Swansea county in 2021? *(Enter the number without commas)*
+
+##ANSWER1##
+
+What was the total population of Cardiff county in 2021? *(Enter the number without commas)*
+
+##ANSWER2##
+
+What was the percentage change in the population of Swansea county between 2011 and 2021? *(Enter the number without commas)*
+
+##ANSWER3##
 
 Solution
 ========
-Cardiff (CF) = Prison
-
-Swansea (SA) = Student halls
-
-Aberystwyth (SY) = Student halls
-
-Other Incorrect Match Options:
-•	Hospital
-•	Shopping centre
-•	Council office
+- The total population of Swansea county in 2021 was 238,447.
+- The total population of Cardiff county in 2021 was 362,356.
+- The percentage change in the population of Swansea county between 2011 and 2021 was -0.2.
 
 Meta-information
 ================
-extype: num
-exsolution: 1593
-extol: 0
+extype: cloze
+exclozetype: num|num|num
+exsolution: 238447|362356|-0.2
+extol: 0|0|1
 exname: E03_Q4

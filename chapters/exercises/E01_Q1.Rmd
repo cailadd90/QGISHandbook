@@ -1,14 +1,25 @@
 Question
 ========
-What is the distance between the extreme cardinal points of Great Britain (in miles)?
+
+What is the distance between the extreme cardinal points of Great Britain (in miles)? 
+
+##ANSWER1##
+
+What is the approximate area of the Isle of Man (in square kilometres)?
+
+##ANSWER2##
 
 Solution
 ========
-The distance between the extreme cardinal points of Great Britain was 603 miles.
+
+- The distance between the extreme cardinal points of Great Britain was 603 miles.
+- The approximate area of the Isle of Man was 571 square kilometres.
 
 Meta-information
 ================
-extype: num
-exsolution: 603
-extol: 0
+
 exname: E01_Q1
+extype: cloze
+exclozetype: num|num
+exsolution: 603|571
+extol: 0|50

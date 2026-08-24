@@ -6,8 +6,6 @@ library(exams2forms)
 
 # Dechrau arni {#sec-e01}
 
-> **Dyddiad yr ymarfer:** 2 Hydref 2026
-
 I feistroli QGIS, rhaid dechrau gyda'r pethau sylfaenol. Mae'r ymarfer hwn yn cyflwyno'r sgiliau sylfaenol a fydd yn sail i ddatblygu eich prosiect fferm wynt a thu hwnt - gan gynnwys eich traethawd hir. Cymerwch eich amser, gofynnwch gwestiynau, a gwnewch yn siŵr eich bod yn hyderus gyda phob cam cyn symud ymlaen.
 
 ::: {.callout-note}
@@ -52,8 +50,6 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
     ii. Cliciwch `Simple Fill` ac arbrofwch gyda newid lliwiau, arddulliau, a lledau symbolaeth yr haen. Mae gennych reolaeth lwyr dros sut mae haenau fector yn ymddangos. Wrth ddylunio map, ystyriwch yn ofalus sut i ddewis arddull briodol ar gyfer pob haen.
     iii. Cliciwch `Apply` → `OK` pan fyddwch wedi gorffen golygu symboleg yr haen
 
-![](figs/SimpleFill.png){fig-align='center' width=25%}
-
 (@) O'r bar dewislen, cliciwch `Project` → `Save` a chadwch eich prosiect mewn lleoliad addas. Dewch o hyd i'r llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
 
 ## Mesur gwrthrychau geo-ofodol {#sec-mesuring}
@@ -73,14 +69,6 @@ ii. Arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)
 #| results: asis
 library(exams2forms)
 exams2forms("E01_Q1.cy.Rmd", edir = "exercises")
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| results: asis
-library(exams2forms)
-exams2forms("E01_Q2.cy.Rmd", edir = "exercises")
 ```
 
 ## Archwilio'r Attribute Table {#sec-attribut}
@@ -104,7 +92,7 @@ exams2forms("E01_Q2.cy.Rmd", edir = "exercises")
 #| message: false
 #| results: asis
 library(exams2forms)
-exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
+exams2forms("E01_Q2.cy.Rmd", edir = "exercises")
 ```
 
 (@) Gallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:
@@ -119,7 +107,7 @@ exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
 #| message: false
 #| results: asis
 library(exams2forms)
-exams2forms("E01_Q4.cy.Rmd", edir = "exercises")
+exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
 ```
 
 (@) Cliciwch yr eicon `Deselect feature` (![](figs/Deselect.png){width=3%}) i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.

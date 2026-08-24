@@ -1,14 +1,14 @@
 Question
 ========
-What was the registered population of Wales in 2021? *(Enter the number without commas)*
+What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? *(Enter the number without commas)*
 
 Solution
 ========
-The registered population of Wales in 2021 was 3,107,400.
+The total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE) was 32,940.
 
 Meta-information
 ================
 extype: num
-exsolution: 3107400 
+exsolution: 32940
 extol: 0
 exname: E03_Q5

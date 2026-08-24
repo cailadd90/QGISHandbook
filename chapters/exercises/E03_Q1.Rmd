@@ -2,13 +2,26 @@ Question
 ========
 How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? *(Enter the number without commas)*
 
+##ANSWER1##
+
+How many people lived in the most populous postcode in the Swansea (SA) area in 2021? *(Enter the number without commas)*
+
+##ANSWER2##
+
+How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? *(Enter the number without commas)*
+
+##ANSWER3##
+
 Solution
 ========
-The most populous postcode in the Cardiff (CF) area in 2021 was 1,593.
+- The most populous postcode in the Cardiff area (CF35 6AP) in 2021 was 1,593.
+- The most populous postcode in the Swansea area (SA1 8EN) in 2021 was 1,922.
+- The most populous postcode in the Aberystwyth area (SY23 3TE) in 2021 was 820.
 
 Meta-information
 ================
-extype: num
-exsolution: 1593
-extol: 0
+extype: cloze
+exclozetype: num|num|num
+exsolution: 1593|1922|820
+extol: 0|0|0
 exname: E03_Q1

@@ -1,25 +1,16 @@
 Question
 ========
-
-Can you name the seventh-largest island of the British Isles?
-
-Answerlist
-----------
-* Ynys Môn / Anglesey
-* Ynys Enlli / Bardsey
-* Skye
-* Islay
-* Lewis and Harris
+What is the precise area of the Isle of Wight (in square kilometres)?
 
 Solution
 ========
+The precise area of the Isle of Wight was 382 square kilometres.
 
-The seventh-largest island of the British Isles is Ynys Môn / Anglesey.
+
 
 Meta-information
 ================
-
-extype: schoice
-exsolution: 10000
+extype: num
+exsolution: 382
+extol: 0
 exname: E01_Q3
-exshuffle: TRUE
