@@ -20,7 +20,7 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
 
 (@) Dilynwch y camau [yma](#sec-data) i gael mynediad at yr holl setiau data sydd eu hangen arnoch ar gyfer y sesiynau ymarferol a'r prosiect terfynol
 
-(@) Lansio `QGIS`. Gallai hyn fod ar gyfrifiadur Prifysgol, drwy'r remote desktop, neu ar eich cyfrifiadur eich hun
+(@) Lansiwch `QGIS`. Gallai hyn fod ar gyfrifiadur Prifysgol, drwy'r remote desktop, neu ar eich cyfrifiadur eich hun
 
 (@) O'r bar dewislen, cliciwch `Project` → `New`. Dewch o hyd i'r eicon llwybr byr i greu prosiect newydd
 

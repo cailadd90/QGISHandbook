@@ -1,242 +1,208 @@
-# Dylunio mapiau {#sec-e02}
+# Cyfansoddi mapiau {#sec-e02}
 
 > **Dyddiad yr ymarfer:** 9 Hydref 2025
 
-Mae cyfathrebu data a chysyniadau daearyddol drwy fapiau yn sgil sylfaenol i wyddonwyr gofodol. Mae creu mapiau yn gofyn am y gallu i'w gwneud yn gyflawn, yn gywir ac yn ymarferol, a'r ddawn i'w gwneud yn ddiddorol ac yn ddeniadol. Mae'r ymarfer hwn yn cyflwyno ffenestr Cynllun Argraffu QGIS, ac mae'r cynnyrch terfynol yn cynrychioli eich aseiniad "Map 1".
+Mae cyfathrebu data a chysyniadau daearyddol drwy fapiau yn sgil sylfaenol i wyddonwyr gofodol. Mae creu mapiau yn gofyn am y gallu i'w gwneud yn gyflawn, yn gywir ac yn ymarferol, a'r ddawn i'w gwneud yn ddiddorol ac yn ddeniadol. Mae'r ymarfer hwn yn cyflwyno y ffenestr Print Layout QGIS, er mwyn cynhyrchu'r mapiau ar gyfer eich prosiect fferm wynt.
 
 ::: {.nodyn-galwad}
 ## Nodau dysgu
 
-Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. Byddwch yn dysgu sut i greu map graddfa 1:1,000,000 o Gymru sy'n dangos cyflymder cymedrig y gwynt a ffiniau siroedd.
+Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. Byddwch yn dysgu sut i greu map graddfa 1:1,000,000 o Gymru sy'n dangos cyflymder cymedrig y gwynt a ffiniau sirol sy'n angenrheidiol ar gyfer gwneud Map 1.
 :::
 
-## <input type="checkbox"> Creu cynllun argraffu
+## Creu cynllun argraffu
 
-(@) Lansio QGIS a chreu prosiect newydd
+(@) Lansiwch QGIS a chreuwch prosiect newydd
 
-(@) Mewnforio'r haenau `British_Isles_land_polygons.gpkg`, `Wales_border.gpkg`, a `Wales_Principal_Areas.gpkg` (mae'r ddau olaf yn y ffolder `UK_Boundaries`)
+(@) Ychwanegwch yr haenau `British_Isles_land_polygons.gpkg`, `Wales_border.gpkg`, a `Wales_Principal_Areas.gpkg` at eich prosiect (mae'r ddau olaf yn y ffolder `UK_Boundaries`)
 
-(@) Labelwch Brif Ardaloedd Cymru yn y Gymraeg neu'r Saesneg
+(@) Labelwch Awdurdodau Unedol Cymru yn y Gymraeg neu'r Saesneg
 
-(@) Cliciwch `Prosiect` > `Cynllun Argraffu Newydd...` (a dewch o hyd i'r llwybrau byr i'r ffenestr hon)
+(@) I greu Print Layout:
 
-(@) Rhowch deitl priodol i'r cynllun print
+    i. Cliciwch `Project` → `New Print Layout...` (a dewch o hyd i'r llwybrau byr i'r ffenestr hon)
+    ii. Rhowch deitl priodol i'r cynllun print
+    iii. Cliciwch `Project` → `Layout Manager...`. Gallwch weld yma'r Print Layout sydd bellach wedi'i gadw yn eich prosiect. Gallwch greu mwy nag un gosodiad argraffu fesul prosiect. Defnyddiwch y panel hwn i gael mynediad at a threfnu cynlluniau
+    iv. Cliciwch `Close`
 
-::: {.callout-tip}
-# Cynlluniau lluosog
+(@) Newidwch gogwydd a maint y dudalen, fel ei bod yn ffitio ar ddogfen bortread A4 gyda lle oddi tano i gynnwys capsiwn (gweler @sec-WP):
 
-Gallwch greu mwy nag un cynllun argraffu. Defnyddiwch `Project` > `Layout Manager...` i gael mynediad hawdd at gynlluniau sy'n gysylltiedig â'ch prosiect QGIS penodol a'u trefnu.
-:::
+    i. De-gliciwch y gosodiad argraffu gwag
+    ii. Cliciwch `Page Properties...`
+    iii. Newidiwch `Size` i `Custom`
+    iv. Lleihewch `Height` y map (e.e. i `270`)
+    v. Newidwch `Orientation` i `Portrait`
 
-(@) Trefnwch ffenestri Cynfas y Map a'r Cynllun Argraffu fel y gallwch weld y ddau ar unwaith. Mae cyfarwyddiadau dilynol yn cyfeirio at y ffenestr Cynllun Argraffu oni nodir yn wahanol.
+## Ychwanegu ac addasu eitem map {#sec-mapitem}
 
-(@) Newid cyfeiriadedd y dudalen i bortread A4:
+(@) Cliciwch `Add Item` → `Add Map` (chwiliwch am y llwybr byr)
 
-i. Cliciwch ar y dde ar y cynllun argraffu gwag
-ii. Cliciwch ar `Priodweddau Tudalen...`
-    
-![](figs/PageProperties.png){ffig-alinio='canol' lled=25%}
-    
-iii. Newidiwch `Maint` i `A4`
-iv. Newid `Cyfeiriadedd` i `Portread`
+(@) Lluniwch fap ar y gosodiad argraffu. Dylai `Map 1` ymddangos nawr o dan y tab `Items`
 
-## <input type="checkbox"> Ychwanegu ac addasu eitem map {#sec-mapitem}
+![](figs/Item.png){fig-align='center' width=25%}
 
-(@) Cliciwch `Ychwanegu Eitem` > `Ychwanegu Map` (chwiliwch am y llwybr byr)
+(@) Os oes angen, addaswch y map gan ddefnyddio'r sgwariau ar ffiniau'r map fel ei fod yn ffitio'n fwy cyfforddus ar y dudalen
 
-(@) Lluniwch fap ar y cynllun argraffu. Dylai `Map 1` ymddangos nawr o dan y tab `Eitem`
-
-![](ffigiau/Eitem.png){alinio-ffig='canol' lled=25%}
-
-(@) Addaswch y map gan ddefnyddio'r sgwariau o amgylch yr ymylon
-
-(@) Dewiswch `Map 1`
+(@) Dewiswch `Map 1` o'r panel `Items`
 
 (@) Gosodwch `Scale` i `1000000` (h.y. 1:1,000,000)
 
-(@) Defnyddiwch yr offer `Symud cynnwys eitem` (![](figs/MoveItemContent.png){width=3%}) a `Dewis/Symud eitem` (![](figs/SelectMoveItem.png){width=3%}), ac addaswch y gwerth `Graddfa`, i gyfansoddi'r map fel bod Cymru gyfan yn weladwy.
+(@) Defnyddiwch yr offer `Move item content` (![](figs/MoveItemContent.png){width=3%}) a `Select/Move item` (![](figs/SelectMoveItem.png){width=3%}), ac addaswch y gwerth `Scale`, i gyfansoddi'r map fel bod Cymru gyfan yn weladwy
 
-(@) Arbrofwch gyda gwneud addasiadau manwl i'r raddfa drwy ddal yr allwedd `Ctrl` i lawr a sgrolio olwyn y llygoden
+(@) Arbrofwch gyda gwneud addasiadau manwl i'r raddfa drwy ddal yr allwedd `Ctrl` (windows) neu'r allwedd `Command` (mac) a sgrolio olwyn y llygoden
 
-(@) Unwaith y byddwch chi'n fodlon â'r graddfa, y fframio, a'r lleoliad, rhewch yr olygfa yn ei lle drwy dicio'r blwch o dan yr eicon clo (![](figs/LockCheck.png){width=3%}) ar gyfer `Map 1` yn y panel `Eitemau`
+(@) Pan fyddwch chi'n hapus â'r raddfa, y fframio, a'r lleoliad, rhewch yr olygfa yn ei lle drwy dicio'r blwch o dan yr eicon clo (![](figs/LockCheck.png){width=3%}) ar gyfer `Map 1` yn y panel `Items`
 
-(@) Yn ffenestr y Canfas Map, addaswch arddulliau haen:
+(@) O ffenestr y Map Canvas, addaswch arddulliau'r haenau:
 
-i. Dewiswch liwiau, lledau ffiniau, a ffontiau sy'n pwysleisio Cymru a'r gwahaniaeth rhwng amlinelliad Cymru (arfordir ffisegol) a ffiniau'r Prif Ardaloedd ( adeiladwaith gwleidyddol anffisegol )
+    i. Dewiswch liwiau, lledau ffiniau, a ffontiau sy'n pwysleisio Cymru a'r gwahaniaeth rhwng amlinelliad Cymru (arfordir ffisegol) a ffiniau'r Prif Ardaloedd (adeiladwaith gwleidyddol anffisegol)
 
-(@) I orfodi'r Cynllun Argraffu i adlewyrchu newidiadau, dewiswch naill ai:
+(@) Diweddarwch y Print Layout i adlewyrchu eich newidiadau gan ddefnyddio un o'r ddau opsiwn hyn:
 
-i. Yr eicon `Adnewyddu` (![](figs/RefreshView.png){width=3%}) yn y ffenestr Cynllun Argraffu
-ii. Yr eicon `Diweddaru Rhagolwg Map` (![](figs/RefreshView.png){width=3%}) o dan `Priodweddau Eitem` yn ffenestr y Canfas Map
+    i. Cliciwch yr eicon `Refresh` (![](figs/RefreshView.png){width=3%}) yn y ffenestr Print Layout
+    ii. Cliciwch yr eicon `Update Map Preview` (![](figs/RefreshView.png){width=3%}) o dan `Item Properties` yn ffenestr Map Canvas 
 
-(@) Sicrhewch fod `Map 1` wedi'i ddewis o hyd
+(@) Cliciwch ar y tab `Item Properties` a ticiwch `Frame`
 
-(@) Cliciwch ar y tab `Priodweddau Eitem` ac ychwanegwch `Ffrâm`
+(@) Addaswch liw `Background` y ffrâm yn briodol ar gyfer cynrychioli'r cefnfor
 
-(@) Addaswch liw cefndir y ffrâm yn briodol ar gyfer cynrychioli'r cefnfor
+(@) Gallwch addasu y `Layout` a `Item Properties` o unrhyw eitem a ddewisir yn y ffenestr `Item`. Nodwch sut mae'r opsiynau o dan y tab `Layout` a `Item Properties` yn diweddaru yn dibynnu ar ba eitem rydych chi wedi'i dewis. Cofiwch:
 
-::: {.callout-tip}
-# Addasu haenau
+    i. Y drefn y rhestrir eitemau map yw sut maen nhw hefyd wedi'u pentyrru ar ben ei gilydd yn y gosodiad argraffu
+    ii. Mae rhai priodweddau haen (e.e. trefn haen, arddull, labelu) yn cael eu rheoli yn y Map Canvas
 
-Gallwch addasu `Layout` a `Item Properties` unrhyw eitem a ddewisir yn y ffenestr `Item`. Nodwch sut mae'r opsiynau o dan y tab `Layout` a `Item Properties` yn diweddaru yn dibynnu ar ba eitem rydych chi wedi'i dewis. Cofiwch: (i) Mae trefn yn bwysig - y drefn y mae eitemau map wedi'u rhestru yw sut maen nhw hefyd wedi'u pentyrru ar ben ei gilydd yn y cynllun argraffu, a (ii) mae rhai priodweddau haen (e.e. trefn haen, arddull, labelu) yn cael eu rheoli yn y Map Canvas.
-:::
+## Ychwanegu bar graddfa, saeth ogleddol, a grid
 
-## <input type="checkbox"> Ychwanegu bar graddfa, saeth ogleddol, a grid
+(@) O'r ffenestr Print Layout, ychwanegwch far graddfa:
 
-(@) Ychwanegu bar graddfa:
+    i. Cliciwch `Add Item` → `Add Scale Bar`
+    ii. Llusgwch a gollwngwch ar y map i'w osod (gallwch ei symud nes ymlaen)
+    iii. Dewiswch y bar graddfa o'r panel `Items`
+    iv. Cliciwch y tab `Item Properties`
+    v. Addaswch priodweddau'r bar graddfa, yn enwedig `Style`, `Scalebar units`, `Segments`, `Frame`, a `Background`
 
-i. Cliciwch `Ychwanegu Eitem` > `Ychwanegu Bar Graddfa`
-ii. Cliciwch ar y map i'w osod (gallwch ei symud yn ddiweddarach)
-iii. Dewiswch y bar graddfa o dan `Eitemau`
-iv. Cliciwch y tab `Priodweddau Eitem`
-v. Addasu priodweddau'r bar graddfa, yn enwedig `Arddull`, `Unedau'r bar graddfa`, `Segmentau`, `Ffrâm`, a `Cefndir`
+(@) Ychwanegwch saeth gogleddol:
 
-(@) Ychwanegu saeth gogleddol:
+    i. Cliciwch `Add Item` → `Add North Arrow`
+    ii. Llusgwch a gollwngwch ar y map i'w osod (gallwch ei symud nes ymlaen)
+    iii. Dewiswch y saeth ogleddol o'r panel `Items`
+    iv. Cliciwch y tab `Item Properties`
+    v. O dan `SVG Images`, chwiliwch am `arrow` a dewiswch saeth ogleddol addas
+    vi. Addaswch priodweddau saeth y gogledd, yn enwedig `Fill color` a `Stroke color`
 
-i. Cliciwch `Ychwanegu Eitem` > `Ychwanegu Saeth y Gogledd`
-ii. Cliciwch ar y map i'w osod (gallwch ei symud yn ddiweddarach)
-iii. Dewiswch y saeth ogleddol o dan `Eitemau`
-iv. Cliciwch y tab `Priodweddau Eitem`
-v. O dan `SVG Images`, chwiliwch am `arrow` a dewiswch saeth ogleddol addas
-vi. Addasu priodweddau saeth y gogledd, yn enwedig `Lliw llenwi` a `Lliw strôc`
+(@) Ychwanegwch grid (hy graticule):
 
-(@) Ychwanegu grid (aka graticule):
+    i. Dewiswch `Map 1` o'r panel `Items`
+    ii. Cliciwch y tab `Item Properties`
+    iii. Ehangwch `Grids`
+    iv. Cliciwch `Add a new grid` (![](figs/AddANewGrid.png){width=3%})
+    v. Cliciwch `Grid 1` → `Modify Grid...`
+    vi. Gosodwch `CRS` i `EPSG:4326 - WGS 84`
+    vii. Gosodwch y cyfyngau `X` ac `Y` i `1` gradd
+    viii. Gwiriwch `Draw Coordinates`
+    ix. Addaswch briodweddau'r grid, yn enwedig `Grid type`, `Frame`, a `Draw Coordinates`. Allwch chi addasu'r labeli er mwyn gwneud nhw'n ddarllenadwy, meddalu'r llinellau grid, a gwaredu seroau diangen?
 
-i. Dewiswch `Map 1` o dan `Eitemau`
-ii. Cliciwch y tab `Priodweddau Eitem`
-iii. Ehangu `Gridiau`
-iv. Cliciwch ar `Ychwanegu grid newydd` (![](figs/AddANewGrid.png){width=3%})
-v. Cliciwch `Grid 1` > `Addasu Grid...`
-vi. Gosodwch `CRS` i `EPSG:4326 - WGS 84`
-vii. Gosodwch y cyfyngau `X` ac `Y` i `1` gradd
-viii. Gwiriwch `Lluniwch Gyfesurynnau`
-ix. Addaswch briodweddau'r grid, yn enwedig `Math o grid`, `Ffrâm`, a `Cyfesurynnau Lluniadu`. Allwch chi addasu'r labeli er mwyn eu gwneud yn ddarllenadwy, meddalu'r llinellau grid, a lleihau seroau diangen ar ôl?
+(@) Weithiau sylwer bod rhai o eitemau'r map, yn enwedig y cyfesurynnau, bellach y tu hwnt i ymyl y dudalen. Bydd rhain yn cael eu colli pan fydd y map yn cael ei allforio! Yn yr achosion hyn, bydd angen i chi addasu maint y map wrth i chi arbrofi gyda'r ffordd orau o drefnu eitemau map a'r capsiwn (gweler @sec-mapitem). Gwiriwch sut y gall defnyddio [Tywyslinellau](#sec-guides) i'ch cynorthwyo i alinio eitemau map yn berffaith ar y dudalen
 
-::: {.callout-tip}
-# Addasiadau sydd eu hangen
+## Ychwanegu labeli ac allwedd
 
-Efallai y byddwch yn gweld bod rhai o eitemau'r map - yn enwedig y cyfesurynnau - bellach y tu hwnt i ymyl y dudalen. Bydd y rhain yn cael eu colli pan fydd y map yn cael ei allforio. Yn yr achosion hyn, bydd angen i chi addasu maint y map o bryd i'w gilydd wrth i chi arbrofi gyda'r ffordd orau o drefnu eitemau map a'r capsiwn (gweler @sec-mapitem). Gwiriwch sut y gall defnyddio [canllawiau](#sec-guides) eich cynorthwyo i alinio eitemau map yn berffaith ar y dudalen.
-:::
+(@) Ychwanegwch label teitl map:
 
-## <input type="checkbox"> Ychwanegu labeli, ac allwedd
+    i. Cliciwch `Add Item` → `Add Label`
+    ii. Llusgwch a gollwngwch ar y map i'w osod (gallwch ei symud nes ymlaen)
+    iii. Dewiswch y label o'r panel `Items`
+    iv. Cliciwch y tab `Item Properties`
+    v. Addaswch priodweddau'r label, yn enwedig `Main Properties`, `Font`, `Rotation`, `Frame`, a `Background`
 
-(@) Ychwanegu label teitl map:
+(@) Ychwanegwch allwedd:
 
-i. Cliciwch `Ychwanegu Eitem` > `Ychwanegu Label`
-ii. Cliciwch ar y map i'w osod (gallwch ei symud yn ddiweddarach)
-iii. Dewiswch y label o dan `Eitemau`
-iv. Cliciwch y tab `Priodweddau Eitem`
-v. Addasu priodweddau'r label, yn enwedig `Priodweddau Prif`, `Ffont`, `Cylchdroi`, `Ffrâm`, a `Cefndir`
+    i. Cliciwch `Add Item` → `Add Legend`
+    ii. Llusgwch a gollwngwch ar y map i'w osod (gallwch ei symud nes ymlaen)
+    iii. Dewiswch yr allwedd o'r panel `Items`
+    iv. Cliciwch y tab `Item Properties`
+    v. Dad-diciwch `Auto update` i alluogi addasiadau i'r allwedd
+    vi. Arbrofwch gyda'r eiconau bar offer yr allwedd (![](figs/LegendMenu.png){width=25%}) i wella'r allwedd
+    vii. Addaswch briodweddau'r allwedd, yn enwedig `Arrangement`, `Fonts and Text Formatting`, `Columns`, `Symbol`, `Spacing`, `Frame`, a `Background`
 
-(@) Ychwanegu label capsiwn byr. Gweler [Cwestiynau Cyffredin](@sec-font) am sut i gael testun trwm a thestun arferol yn y capsiwn ar unwaith.
+## Ychwanegu data raster {#sec-rasterdata}
 
-(@) Ychwanegu allwedd:
+(@) Ychwanegwch eich haen raster gyntaf yn QGIS:
 
-i. Cliciwch `Ychwanegu Eitem` > `Ychwanegu Allwedd`
-ii. Cliciwch ar y map i'w osod (gallwch ei symud yn ddiweddarach)
-iii. Dewiswch yr allwedd o dan `Eitemau`
-iv. Cliciwch y tab `Priodweddau Eitem`
-v. Dad-diciwch `Diweddaru'n awtomatig` i alluogi addasiadau i'r allwedd
-vi. Arbrofwch gyda'r eiconau bar offer allwedd (![](figs/LegendMenu.png){width=25%}) i wella'r allwedd
-vii. Addaswch briodweddau'r allwedd, yn enwedig `Trefniant`, `Ffontiau a Fformatio Testun`, `Colofnau`, `Symbol`, `Bylchau`, `Ffrâm`, a `Cefndir`
+    i. O'r bar dewislen yn y Map Canvas, cliciwch `Layer` → `Add Layer` → `Add Raster Layer...`
+    ii. Cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%}) ac llywiwch i'r ffolder lle mae'r data wedi'i storio, h.y. **`GEG276`**
+    iii. Agorwch y ffolder `Wales_mean_windspeed` a chliciwch ar unrhyw un o'r haenau raster `.tif`
+    iv. Cliciwch `Open` → `Add` → `Close`
 
-## <input type="checkbox"> Ychwanegu data raster
+(@) Newidwch ramp lliw'r haen raster:
 
-(@) Ychwanegwch eich haen raster gyntaf yn QGIS. O'r bar dewislen, cliciwch ar `Haen` > `Ychwanegu Haen` > `Ychwanegu Haen Raster...`
+    i. I'r haen, agorwch `Properties...` → `Symbology`
+    ii. Defnyddiwch y cwymplen `Render type` i ddewis `Singleband pseudocolor`
+    iii. O dan `Color ramp`, dewiswch ramp lliw priodol ar gyfer y data (neu dewiswch un i chi wir yn hoffi!)
+    iv. Cliciwch `OK`
 
-(@) Cliciwch yr eicon `Pori` (![](figs/Browse.png){width=3%}) ac ewch i'r ffolder lle mae'r data wedi'i storio, h.y. **`GEG276`**
+(@) Addaswch y drefn a newidiwch briodweddau'r haenau Prif Ardaloedd Cymru a chyflymder gwynt fel bod y ddau yn weladwy ar yr un pryd. Awgrym: efallai y bydd addasu priodweddau `Fill` neu `Transparency` yn gweithio'n dda, ond byddwch yn ofalus i beidio â thorri'r cysylltiad rhwng lliwiau'r map a'r allwedd.
 
-(@) Agorwch y ffolder `Wales_mean_windspeed` a chliciwch ar unrhyw un o'r haenau raster `.tif`
-
-(@) Cliciwch `Agor` > `Ychwanegu` > `Cau`
-
-(@) Agorwch `Priodweddau...` yr haen
-
-(@) O dan `Math o rendro`, dewiswch `Ffugolliw band sengl`
-
-(@) O dan `Ramp lliw`, dewiswch ramp lliw priodol ar gyfer y data (neu dewiswch un rydych chi'n ei hoffi'n fawr!)
-
-(@) Cliciwch `Iawn`
-
-(@) Chwaraewch o gwmpas gyda Phrif Ardaloedd Cymru a'r data cyflymder gwynt - trwy addasu trefn yr haenau yn y panel `Haenau`, a thrwy addasu `Priodweddau...` pob haen - fel bod y ddau yn weladwy ar yr un pryd. Awgrym: gallai addasu priodweddau `Llenwi` neu `Tryloywder` fod yn dda...
-
-::: {.callout-pwysig}
-# Addasiadau sydd eu hangen
-
-Osgowch symboleg lled - dryloyw sy'n torri'r cysylltiad rhwng lliwiau map a lliwiau'r allwedd.
-:::
-
-(@) Yn y ffenestr Cynllun Argraffu, dewiswch `Map 1` a chliciwch ar `Diweddaru Rhagolwg Map` o dan y tab `Priodweddau Eitem`
+(@) Yn y ffenestr Print Layout, dewiswch `Map 1` a chliciwch `Update Map Preview` o dan y tab `Item Properties`
 
 (@) Os nad yw'r raddfa lliw ar gyfer yr haen raster yn ymddangos yn yr allwedd, ychwanegwch hi
 
-(@) Arbrofi gyda gwella estheteg yr allwedd wedi'i diweddaru
+(@) Arbrofi gyda gwella estheteg yr allwedd diweddaraf
 
-(@) Dewiswch `Map 1` o'r panel `Eitemau`
+(@) Dewiswch `Map 1` o'r panel `Items`
 
-(@) O dan `Priodweddau Eitem`, ticiwch y `Cloi haenau` a `Cloi arddulliau ar gyfer haenau` i atal newidiadau pellach i'r map. Dad-diciwch os oes angen i chi wneud golygiadau
+(@) O dan `Item Propertie`, ticiwch y `Lock layers` a `Lock styles for layers` i atal newidiadau pellach i'r map. Dad-diciwch os oes angen i chi wneud golygiadau
 
-## <input type="checkbox"> Ychwanegu map mewnosodiad
+## Ychwanegu map mewnosodiad
 
-(@) Ychwanegwch ail fap (gweler @sec-mapitem) i ddarparu mewnosodiad sy'n dangos Ynysoedd Prydain (e.e. ar raddfa o 1:20,000,000).
+(@) Ychwanegwch ail fap i ddangos Ynysoedd Prydain (gweler @sec-mapitem)
 
-(@) Addasu:
+(@) Addaswch yr ail fap hwn i greu map mewnosod effeithiol sy'n darparu cyd-destun daearyddol ar gyfer y prif fap:
 
-i. Pa haenau y dylid eu harddangos (drwy droi gwelededd ymlaen ac i ffwrdd, neu newid trefn yr haenau)
-ii. Eu symboleg (gweler @sec-properties);
-
-::: {.callout-tip}
-# Addasu haenau
-
-Rhowch bwyslais ar ychydig o haenau yn unig, wedi'u cyflwyno'n syml, sy'n ddefnyddiol ar y raddfa hon. Ceisiwch fod yn finimalaidd er mwyn osgoi gwneud y map yn anniben. Nodwch, oherwydd bod eich map o Gymru wedi'i gloi, nad yw'n cael ei effeithio gan newidiadau yng ngwelededd yr haen na'r symbolaeth sy'n cael ei gwneud ar gyfer y mewnosodiad. Dyma lle mae pŵer cloi haenau.
-:::
-
-(@) Dewiswch `Map 1` o'r panel `Eitemau`
-
-(@) O dan `Priodweddau Eitem`, ehangwch y tab `Trosolwg`
-
-(@) Cliciwch `Ychwanegu trosolwg newydd` (![](figs/E02_AddANewGrid.png){width=3%})
-
-(@) Cliciwch ar `Trosolwg 1`
-
-(@) Gosodwch y `Ffrâm Map` i'ch map o Gymru
-
-(@) Addaswch yr `Arddull Ffrâm` i lunio petryal gwag gyda llinell drwchus, er mwyn dangos maint y prif fap yn hawdd
-
-(@) Arbrofwch ymhellach, yn enwedig gyda `Lliw llenwi`, `Lliw strôc`, ac `Arddull ymuno`
+    i. Addaswch y map mewnosod fel bod Ynysoedd Prydain i gyd yn weladwy
+    ii. Addaswch pa haenau y dylid eu harddangos drwy droi gwelededd haenau ymlaen ac i ffwrdd neu newid trefn yr haenau
+    iii. Addaswch symboleg yr haenau
 
 ::: {.callout-tip}
-# Cadw pethau'n daclus
+# Mae graddfa'n bwysig
 
-Gall prosiectau fynd allan o reolaeth yn gyflym pan ddefnyddir sawl haen i adeiladu map. Mae'n bwysig cael gwared ar haenau diangen a labelu eitemau'n briodol. E.e. ceisiwch ailenwi `Map 1` i `Main`, a `Map 2` i `Inset`. Bydd hyn o gymorth pan fydd angen i chi ail-ymweld â'ch mapiau a'u haddasu.
+Rhowch bwyslais ar ychydig o haenau yn unig, wedi'u cyflwyno'n syml, sy'n ddefnyddiol ar y raddfa hon. Ceisiwch fod yn finimalaidd er mwyn osgoi gwneud y map yn anniben. Nodwch: oherwydd bod eich map o Gymru (Map 1) wedi'i gloi, dydy hi ddim yn cael ei effeithio gan newidiadau yng ngwelededd a symbolaeth i'r haenau sy'n ymddangos yn y mewnosodiad. Dyma bŵer cloi haenau.
 :::
 
-## <input type="checkbox"> Allforio eich map
+(@) Ychwanegwch ddangosydd arwynebedd ar eich prif fap i'w gysylltu â'r map mewnosodiad:
 
-(@) Sicrhewch fod `Cloi haenau` wedi'i dicio ar bob eitem map. Mae hyn yn helpu i sicrhau bod y raddfa map a ddewiswyd (1:1,000,000) yn adlewyrchu pellteroedd y byd go iawn .
+    i. Dewiswch eich map mewnosod (`Map 2`) o'r panel `Items`
+    ii. O dan `Item Properties`, ehangwch y tab `Overviews`
+    iii. Cliciwch `Add a new overview` (![](figs/E02_AddANewGrid.png){width=3%})
+    iv. Cliciwch `Overview 1`
+    v. Gosodwch y `Map frame` i'ch prif fap (`Map 1`)
+    vi. Addaswch y `Frame style` i lunio petryal gwag gyda llinell drwchus, er mwyn dangos arwynebedd y prif fap yn hawdd
+    vii. Arbrofwch ymhellach, yn enwedig gyda `Fill color`, `Stroke color`, a `Join style`
 
-(@) Cliciwch `Layout` > `Allforio fel PDF...` > `Cadw`, a chadwch mewn lleoliad addas
+(@) Gall prosiectau fynd allan o reolaeth yn gyflym pan ddefnyddir sawl haen i adeiladu map. Mae'n bwysig cael gwared ar haenau diangen a labelu eitemau'n briodol. E.e. ceisiwch ailenwi `Map 1` i `Prif`, a `Map 2` i `Mewnosodiad`. Bydd hyn o gymorth pan fydd angen i chi ail-ymweld â'ch mapiau a'u haddasu.
 
-(@) Gosodwch `Dewisiadau Allforio PDF` fel a ganlyn am y canlyniadau gorau:
+## Allforio eich map
 
-- Allforio fectorau bob amser
-- Ychwanegu gwybodaeth geogyfeirio
-- Allforio metadata RDF (teitl, awdur, ac ati)
-- Allforio testun: `Allforio Testun fel Llwybrau Bob Amser`
-- Cywasgu delwedd: `Di-golled`
-- Creu PDF Daearyddol
-- Analluogi allforion haen raster teils
-- Symleiddio geometregau i leihau maint ffeil allbwn
+(@) Gwnewch yn siŵr bod `Lock layers` wedi'i dicio ar y ddau fap fel bod eich fformatio wedi'i gofnodi yn y mapiau a allforiwyd
 
-(@) Cliciwch ar `Cadw`. Llongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr gwnewch unrhyw ddiwygiadau er mwyn gallu cyflwyno'r Map 1 gorau y gallwch chi!
+(@) I allforio eich map fel delwedd:
+
+    i. Cliciwch `Layout` → `Export as Image...` 
+    ii. Dewiswch leoliad addas i gadw'r map
+    iii. Gosodwch fformat y ddelwedd i `PNG (.png)`
+    iv. Cliciwch `Save`
+    v. Gosodwch `Export resolution` i `300 dpi` (mae 300 dpi yn addas ar gyfer gweld ar sgrin, mae 600 dpi yn well ar gyfer argraffu)
+    vi. Cliciwch `Save`
+    
+(@) Llongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr, gwnewch unrhyw adolygiadau (gan gynnwys uchder y map) er mwyn gallu cyflwyno'r Map 1 gorau y gallwch chi!
 
 ::: {.nodyn-galwad}
 # Canlyniadau dysgu
 
-Erbyn diwedd yr ymarfer hwn dylech chi:
+Erbyn diwedd yr ymarfer hwn dylech chi allu:
 
-1. Byddwch yn gyfarwydd â Chynllun Map QGIS a'i berthynas â ffenestr Prosiect QGIS.
-2. Gwybod sut i ychwanegu a threfnu nodweddion map hanfodol ac addasu eu priodweddau i wneud map yn ddeniadol.
-3. Gwybod sut i ffurfweddu nifer o eitemau map, chwedlau, gridiau, graddfeydd a labeli mewn cynllun map.
-4. Gallu allforio cynllun map i'w gynnwys mewn dogfen neu gyflwyniad.
+1. Creu cynllun argraffu wedi'i raddio yn QGIS, gan osod maint a chyfeiriadedd y dudalen a fframio eitem map ar raddfa sefydlog
+2. Ychwanegwch ddodrefn hanfodol map cyflawn — bar graddfa, saeth gogledd, graticwl, teitl, capsiwn, ac allwedd — ac addaswch eu priodweddau er mwyn eglurder
+3. Integreiddio data raster a fector mewn un cynllun, gan gymhwyso rendro ffug-liw a rheoli trefn a thryloywder haenau fel bod y ddau yn parhau i fod yn ddarllenadwy
+4. Adeiladu map mewnosod gan ddefnyddio haenau cloedig a ffrâm trosolwg i osod y prif fap yn ei gyd-destun daearyddol ehangach
+5. Allforio map sy'n barod i'w argraffu i PDF gyda gosodiadau fector, testun a chywasgu priodol, a gwerthfawrogi sut mae cloi haenau yn cadw cyfanrwydd graddfa
 :::

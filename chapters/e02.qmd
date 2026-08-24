@@ -25,7 +25,7 @@ To create functionally complete maps in QGIS for print or digital output. You wi
     iii. Click `Project` → `Layout Manager...`. You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts
     iv. Click `Close`
 
-(@) Change the page orientation and size, so it fits onto an A4 portrait document with space beneath to fit a caption (see @sec-WP):
+(@) Change the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption (see @sec-WP):
 
     i. Right‑click on the blank print layout
     ii. Click `Page Properties...`
@@ -102,7 +102,7 @@ To create functionally complete maps in QGIS for print or digital output. You wi
     viii. Check `Draw Coordinates`
     ix. Adjust the grid's properties, notably `Grid type`, `Frame`, and `Draw Coordinates`. Can you adjust the labels for readability, soften the gridlines, and reduce unnecessary trailing zeros?
 
-(@) You may find that some of the map items, notably the coordinates, are now beyond the edge of the page. These will be lost when the map is exported! In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see @sec-mapitem). Check how using [Guides](#sec-guides) can aid you in aligning map items perfectly on the page.
+(@) You may find that some of the map items, notably the coordinates, are now beyond the edge of the page. These will be lost when the map is exported! In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see @sec-mapitem). Check how using [Guides](#sec-guides) can aid you in aligning map items perfectly on the page
 
 ## Adding labels and a legend
 
@@ -165,7 +165,7 @@ To create functionally complete maps in QGIS for print or digital output. You wi
 ::: {.callout-tip}
 # Scale matters
 
-Place emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note that, because your map of Wales is locked, it's not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.
+Place emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note: because your map of Wales (Map 1) is locked, it's not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.
 :::
 
 (@) Add an extent indicator on your main map to connect it to the inset map:
