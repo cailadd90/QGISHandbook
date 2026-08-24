@@ -1,157 +1,178 @@
+
+```{r}
+#| include: false
+library(exams2forms)
+```
+
 # Dechrau arni {#sec-e01}
 
-> **Dyddiad yr ymarfer:** 2il Hydref 2026
+> **Dyddiad yr ymarfer:** 2 Hydref 2026
 
-I feistroli QGIS, rhaid dechrau gyda'r pethau sylfaenol. Mae'r ymarfer hwn yn cyflwyno'r sgiliau sylfaenol a fydd yn sail i weddill y modiwl hwn a thu hwnt - gan gynnwys eich traethawd hir. Cymerwch eich amser, gofynnwch gwestiynau, a gwnewch yn siŵr eich bod yn hyderus gyda phob cam cyn symud ymlaen.
+I feistroli QGIS, rhaid dechrau gyda'r pethau sylfaenol. Mae'r ymarfer hwn yn cyflwyno'r sgiliau sylfaenol a fydd yn sail i ddatblygu eich prosiect fferm wynt a thu hwnt - gan gynnwys eich traethawd hir. Cymerwch eich amser, gofynnwch gwestiynau, a gwnewch yn siŵr eich bod yn hyderus gyda phob cam cyn symud ymlaen.
 
-::: {.nodyn-galwad}
+::: {.callout-note}
 # Nodau dysgu
 
 I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phrosesu data geo-ofodol. Byddwch yn dysgu sut i agor gwahanol fathau o haen ddata, addasu'r ffordd maen nhw'n edrych, archwilio eu priodoleddau, a dewis nodweddion i'w dadansoddi ymhellach.
 :::
 
-## <input type="checkbox"> Cychwyn
+## Dechrau
 
-(@) **Gwiriwch fod hyn yn gweithio: Ewch i OneDrive ar y we (onedrive.live.com neu'ch porth gwaith/ysgol). Llywiwch i Rhannu yn y bar ochr chwith, yna dewch o hyd i'r ffolder a rennir gyda chi.
-Agorwch y ffolder a chliciwch ar Syncio yn y bar offer uchaf. Bydd hyn yn lawrlwytho ac yn syncio'r ffolder i'ch cyfrifiadur, a bydd yn ymddangos yn File Explorer o dan eich adran OneDrive**
+(@) Dilynwch y camau [yma](#sec-data) i gael mynediad at yr holl setiau data sydd eu hangen arnoch ar gyfer y sesiynau ymarferol a'r prosiect terfynol
 
-(@) Lansio `QGIS`. Gallai hyn fod ar gyfrifiadur Prifysgol, drwy benbwrdd o bell, neu ar eich cyfrifiadur eich hun
+(@) Lansio `QGIS`. Gallai hyn fod ar gyfrifiadur Prifysgol, drwy'r remote desktop, neu ar eich cyfrifiadur eich hun
 
-(@) O'r bar dewislen, cliciwch ar `Prosiect` > `Newydd`. Dewch o hyd i'r eicon llwybr byr i greu prosiect newydd
+(@) O'r bar dewislen, cliciwch `Prosiect` → `Newydd`. Dewch o hyd i'r eicon llwybr byr i greu prosiect newydd
 
-(@) Ychwanegwch eich haen fector gyntaf yn QGIS. O'r bar dewislen, cliciwch ar `Haen` > `Ychwanegu Haen` > `Ychwanegu Haen Fector...`
+(@) Ychwanegwch eich haen fector gyntaf yn QGIS:
 
-(@) Cliciwch yr eicon `Pori` (![](figs/Browse.png){width=3%}) ac ewch i'r ffolder lle mae'r data wedi'i storio, h.y. **`GEG276`**
+    i. O'r bar dewislen, cliciwch `Layer` → `Add Layer` → `Add Vector Layer...`
+    ii. Cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%})
+    iii. Llywiwch i'r ffolder lle mae'r data wedi'i storio, h.y. `GEG276`
+    iv. Agorwch y ffolder `British_Isles_land_polygons` a chliciwch yr haen fector `.gpkg` gyfatebol
+    v. Cliciwch `Open` → `Add` → `Close`. Mae'r set ddata hon o'r prosiect OpenStreetMap yn cynnwys polygonau sy'n cynrychioli'r nifer o ynysoedd sy'n ffurfio Ynysoedd Prydain. Sylwch fod yr haen bellach wedi'i rhestru o dan y panel `Layers`. Gallwch hefyd lusgo a gollwng setiau data o'r porwr yn syth i'r Map Canvas.
 
-(@) Agorwch y ffolder `British_Isles_land_polygons` a chliciwch ar yr haen fector `.gpkg` gyfatebol
+![](figs/Layers.png){fig-align='center' width=50%}
 
-(@) Cliciwch `Agor` > `Ychwanegu` > `Cau`. Mae'r set ddata hon o'r prosiect OpenStreetMap yn cynnwys polygonau sy'n cynrychioli'r nifer o ynysoedd sy'n ffurfio Ynysoedd Prydain. Sylwch fod yr haen bellach wedi'i rhestru o dan y panel `Haenau`. Gallwch hefyd lusgo a gollwng setiau data o'r porwr yn syth i'r Cynfas Map.
+## Llywio
 
-![](ffigiau/Haenau.png){alinio-ffig='canol' lled=50%}
+(@) Defnyddiwch y `Map Navigation Toolbar` i archwilio'r set ddata hon drwy symud a chwyddo
 
-## <input type="checkbox"> Llywio
-
-(@) Defnyddiwch y `Bar Offer Llywio Map` i archwilio'r set ddata hon drwy symud a chwyddo
-
-![](figs/MapNavigationToolbar.png){ffig-alinio='canol' lled=50%}
+![](figs/MapNavigationToolbar.png){fig-align='center' width=50%}
 
 (@) Rhowch gynnig ar ddefnyddio olwyn sgrolio'r llygoden fel llwybr byr
 
-(@) Ymgyfarwyddwch â llywio o amgylch y Cynfas Map trwy golli'ch hun! Paniwch a chwyddo nes na allwch weld haen Ynysoedd Prydain mwyach
+(@) Ymgyfarwyddwch â llywio o gwmpas y Map Canvas drwy golli'ch hun! Paniwch a chwyddwch tan na allwch weld yr haen Ynysoedd Prydain mwyach. Ar ôl colli'ch hun, de-gliciwch yr haen yn y panel `Layers` a chliciwch `Zoom to Layer(s)` i ddychwelyd yn hawdd yn ôl i'r haen honno.
 
-(@) Ar ôl colli, cliciwch ar y dde ar yr haen yn y panel `Haenau` a chliciwch ar `Chwyddo i Haen(au)` i ddychwelyd yn hawdd i weld yr haen honno.
+## Addasu priodweddau arddull {#sec-properties}
 
-## <input type="checkbox"> Addasu priodweddau arddull {#sec-properties}
+(@) I addasu symbolaeth haen:
 
-(@) O'r panel `Haenau`, cliciwch ar y dde ar `Polygonau_Ynysoedd_Prydeinig` a chliciwch ar `Priodweddau...` > `Symboleg`. Llwybr byr defnyddiol i `Priodweddau` yw clicio ddwywaith ar yr haen.
+    i. O'r panel `Layers`, de-cliciwch `British_Isles_land_polygons` a chliciwch `Properties...` → `Symbology`. Llwybr byr defnyddiol i `Properties` yw dwbl-glicio'r haen.
+    ii. Cliciwch `Simple Fill` ac arbrofwch gyda newid lliwiau, arddulliau, a lledau symbolaeth yr haen. Mae gennych reolaeth lwyr dros sut mae haenau fector yn ymddangos. Wrth ddylunio map, ystyriwch yn ofalus sut i ddewis arddull briodol ar gyfer pob haen.
 
-(@) Cliciwch ar `Simple Fill` ac arbrofwch gyda newid lliwiau, arddulliau a lledau symbolaeth yr haen. Mae gennych reolaeth lwyr dros sut mae haenau fector yn ymddangos. Wrth ddylunio map, ystyriwch yn ofalus sut i ddewis arddull briodol ar gyfer pob haen
+![](figs/SimpleFill.png){fig-align='center' width=25%}
 
-![](figs/SimpleFill.png){ffig-alinio='canol' lled=25%}
+    iii. Cliciwch `Apply` → `OK` pan fyddwch wedi gorffen golygu symboleg yr haen
 
-(@) O'r bar dewislen, cliciwch ar `Prosiect` > `Cadw` a chadwch eich prosiect i leoliad addas. Dewch o hyd i'r llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
+(@) O'r bar dewislen, cliciwch `Prosiect` → `Cadw` a chadwch eich prosiect mewn lleoliad addas. Dewch o hyd i'r llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
 
-## <input type="checkbox"> Mesur gwrthrychau geo-ofodol
+## Mesur gwrthrychau geo-ofodol {#sec-mesuring}
 
-(@) Cliciwch y saeth ostwng wrth ymyl yr eicon `Mesur` i ddewis yr offeryn priodol ar gyfer mesur:
-  
-i. Hyd Prydain Fawr (mewn milltiroedd)
+(@) Cliciwch y saeth ostwng wrth ymyl yr eicon `Measure` i ddewis yr offeryn priodol ar gyfer mesur:
+
+i. Y pellter rhwng pwyntiau cardinal eithaf Prydain Fawr (mewn milltiroedd)
 ii. Arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)
 
-![](figs/MeasureDropdown.png){ffig-alinio='canol' lled=30%}
+![](figs/MeasureDropdown.png){fig-align='center' width=30%}
 
-(@) Defnyddiwch y clic chwith i ychwanegu pwyntiau, a chlic dde i roi'r gorau i gymryd y mesuriadau hyd / arwynebedd
+(@) Defnyddiwch chwith-glic i ychwanegu pwyntiau, a dde-glic i offen gymryd y mesuriadau hyd / arwynebedd
 
-(@) Rhannwch eich atebion ar Menti! Mae gallu mesur nodweddion daearyddol yn amcan sylfaenol o ddadansoddi GIS
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E01_Q1.cy.Rmd", edir = "exercises")
+```
 
-## <input type="checkbox"> Archwilio'r Tabl Priodoleddau
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E01_Q2.cy.Rmd", edir = "exercises")
+```
 
-(@) O'r panel `Haenau`, cliciwch ar y dde ar `Polygonau_Ynysoedd_Prydeinig` a chliciwch ar `Agor Tabl Priodoleddau`
+## Archwilio'r Attribute Table {#sec-attribut}
 
-::: {.callout-tip}
-# Y Tabl Priodoleddau {#sec-attrib}
+(@) O'r panel `Layers`, de-gliciwch `British_Isles_land_polygons` a chliciwch `Open Attribute Table`. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o'r tabl yn cyfateb i un nodwedd (e.e. polygon) o'r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o'r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: `fid` (dynodwr maes) ac `Area`
 
-Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o'r tabl yn cyfateb i un nodwedd (e.e. polygon) o'r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o'r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: `fid` (dynodwr maes) ac `Arwynebedd`.
-:::
+(@) Cliciwch yr eicon `Dock Attribute Table` (![](figs/DockAttributeTable.png){width=3%}) fel y gallwch weld y Map Canvas a'r Attribute Table ar y sgrin ar unwaith.
 
-(@) Trefnwch ffenestri'r Canfas Map a'r tabl priodoleddau fel y gallwch weld y ddau ar y sgrin ar unwaith. I ddeall sut mae'r tabl priodoleddau'n cyfateb i'r haen fector:
+(@) I ddeall sut mae'r tabl priodoleddau'n cyfateb â'r haen fector:
 
-i. Trefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn `Arwynebedd`. Bydd cliciau dro ar ôl tro yn trefnu'r gwerthoedd yn ôl esgyn neu ddisgyn.
-ii. Cliciwch ar rif rhes i ddewis y polygon y mae'n cyfateb iddo. Mae'r polygon a ddewiswyd yn y Canfas Map bellach wedi'i amlygu'n felyn.
-iii. Cliciwch yr eicon `Chwyddo map i'r rhesi a ddewiswyd` yn y gornel dde uchaf (![](figs/ZoomToSelection.png){width=3%}) i chwyddo i'r polygon a ddewiswyd yn y Cynfas Map
+    i. Trefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn `Area`. Bydd cliciau ychwanegol yn trefnu'r gwerthoedd i fod yn esgynnol neu ddisgynnol.
+    ii. Cliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae'r polygon a ddewiswyd yn y Map Canvas bellach wedi'i amlygu'n felyn.
+    iii. Cliciwch yr eicon `Zoom map to the selected rows` yn y gornel dde uchaf (![](figs/ZoomToSelection.png){width=3%}) i chwyddo i'r polygon a ddewiswyd yn y Map Canvas
 
-![](figs/SortAttributeTable.png){ffig-alinio='canol' lled=50%}
+![](figs/SortAttributeTable.png){fig-align='center' width=50%}
 
-(@) Ailadroddwch y cam uchod i archwilio deg ynys fwyaf Ynysoedd Prydain. Allwch chi enwi'r seithfed fwyaf? Os felly, cyflwynwch ef ar Menti!
+(@) Ailadroddwch y cam uchod i archwilio'r deg ynys fwyaf Ynysoedd Prydain
 
-(@) Gallwch hefyd ddewis nodweddion yn y Canfas Map i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
+```
 
-i. Cliciwch yr eicon `Dewis Nodweddion` (![](figs/Select.png){width=3%})
-ii. Dewiswch (amlygwch mewn melyn) Ynys Wyth
-iii. Yn y tabl priodoleddau, cliciwch yr eicon `Symud y detholiad i'r brig` (![](figs/MoveSelection.png){width=3%}) i symud y llinell a ddewiswyd o'r tabl i'r brig
-iv. Darllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a'i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)
-v. Adroddwch eich canlyniad ar Menti!
+(@) Gallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:
 
-(@) Cliciwch yr eicon `Dad-ddewis nodweddion` (![](figs/Deselect.png){width=3%}) i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.
+    i. Cliciwch yr eicon `Select Features` (![](figs/Select.png){width=3%})
+    ii. Dewiswch (amlygwch mewn melyn) Ynys Wyth
+    iii. Yn y tabl priodoleddau, cliciwch yr eicon `Move selection to top` (![](figs/MoveSelection.png){width=3%}) i symud y llinell a ddewiswyd o'r tabl i'r brig
+    iv. Darllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a'i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)
 
-## <input type="checkbox"> Trefnu haenau
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E01_Q4.cy.Rmd", edir = "exercises")
+```
 
-(@) Ychwanegwch yr haen `Wales_Principal_Areas.gpkg` yn y ffolder `UK_Boundaries` i'ch prosiect. Mae'r set ddata hon yn cynnwys polygonau sy'n cynrychioli Prif Ardaloedd (a elwir hefyd yn siroedd) Cymru. Noder y bydd yr haen hon hefyd yn ymddangos yn y panel `Haenau`
+(@) Cliciwch yr eicon `Deselect feature` (![](figs/Deselect.png){width=3%}) i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.
+
+## Trefnu haenau
+
+(@) Ychwanegwch yr haen `Wales_Principal_Areas.gpkg` yn y ffolder `UK_Boundaries` i'ch prosiect. Mae'r set ddata hon yn cynnwys polygonau sy'n cynrychioli awdurdodau unedol (a elwir hefyd yn siroedd) Cymru. Noder y bydd yr haen hon hefyd yn ymddangos yn y panel `Layers`
 
 (@) Addaswch arddull yr haen hon ac archwiliwch ei thabl priodoleddau
 
-(@) Arbrofwch gyda newid gwelededd haen ymlaen neu i ffwrdd gan ddefnyddio'r blychau ticio yn y panel `Haen` (![](figs/CheckLayer.png){width=3%}). Daw hyn yn hanfodol wrth reoli haenau lluosog mewn prosiect
+(@) Arbrofwch gyda troi gwelededd yr haen ymlaen ac i ffwrdd gan ddefnyddio'r blychau ticio yn y panel `Layers` (![](figs/CheckLayer.png){width=3%}). Daw hyn yn hanfodol wrth reoli haenau lluosog mewn prosiect
 
-(@) Newidiwch drefn yr haenau drwy lusgo pob un i fyny neu i lawr yn y panel haenau
+(@) Newidiwch drefn yr haenau drwy lusgo un i fyny neu i lawr yn y panel haenau
 
-::: {.callout-tip}
-# Anghydfodau ynghylch ffiniau
+(@) Symudwch `Wales_Principle_Areas` i frig y panel `Layers`. Sylwch sut mae ffin wleidyddol (awdurdodau unedol) Cymru yn mynd y tu hwnt i'r arfordir (Polygonau Tir). Mae hyn oherwydd bod y ffin tir ffisegol fel arfer yn cael ei dosbarthu yn ôl y marc dŵr uchel cymedrig, tra bod ffiniau gweinyddol fel arfer yn cael eu dosbarthu yn ôl y marc distyll cymedrig. Dyna Ddaearyddiaeth!
 
-Sylwch sut mae ffin wleidyddol (Prif Ardal) Cymru tua'r môr yn mynd y tu hwnt i'r arfordir (Polygonau Tir). Mae hyn oherwydd bod y ffin tir ffisegol fel arfer yn cael ei dosbarthu yn ôl y marc penllanw cymedrig, tra bod ffiniau gweinyddol fel arfer yn cael eu dosbarthu yn ôl y marc distyll cymedrig. Dyna Ddaearyddiaeth!
-:::
+(@) I gategoreiddio symboleg yr haen:
 
-(@) Symudwch `Ardaloedd_Egwyddor_Wales` i frig y panel `Haenau`
+    i. Agorwch ffenestr `Symbology` yr haen
+    ii. Defnyddiwch y cwymplen i newid ffynhonnell y symboleg o `Single Symbo` i `Categorized`
 
-(@) Agor ffenestr `Symboleg` yr haen
+![](figs/SymbologySource.png){fig-align='center' width=25%}
 
-(@) Defnyddiwch y ddewislen ostwng i newid ffynhonnell y symboleg o `Symbol Sengl` i `Wedi'i Gategoreiddio`
+    iii. Defnyddiwch y ddewislen `Value` i ddewis y priodoledd `name`
+    iv. Cliciwch `Classify` → `OK`. Dyna liwgar!
 
-![](ffigs/SymbologySource.png){ffig-alinio='canol' lled=25%}
+## Labelu haenau
 
-(@) Defnyddiwch y ddewislen ostwng `Gwerth` i ddewis y priodoledd `enw`
+(@) I labelu haenau:
 
-(@) Cliciwch `Dosbarthu` > `Iawn`. Mor lliwgar!
+    i. Dewiswch yr haen `Wales_Principal_Areas` o'r panel `Layers`
+    ii. O'r bar dewislen, cliciwch `Layer` → `Labeling`. Dewch o hyd i'r llwybr byr i'r ffenestr hon (awgrym - edrychwch yn `Properties...`)
+    iii. Defnyddiwch y cwymplen i newid y ffynhonnell labelu o `No Labels` i `Single Labels`
 
-## <input type="checkbox"> Labelu haenau
+![](figs/LabellingSource.png){fig-align='center' width=30%}
 
-(@) Dewiswch yr haen `Wales_Principal_Areas` yn y panel `Layers`
+    iv. Newidiwch y cwymplen `Value` i labelu polygonau Awdurdodau Unedol Cymru yn ôl eu henwau Cymraeg neu Saesneg
 
-(@) O'r bar dewislen, cliciwch ar `Haen` > `Labelu`. Dewch o hyd i'r llwybrau byr i'r ffenestr hon (awgrym - edrychwch ar `Priodweddau...`)
-
-(@) Defnyddiwch y ddewislen ostwng i newid y ffynhonnell labelu o `Dim Labeli` i `Labeli Sengl`
-
-![](figs/LabelingSource.png){ffig-alinio='canol' lled=30%}
-
-(@) Newidiwch y ddewislen ostwng `Gwerth` i labelu polygonau Prif Ardal Cymru yn ôl eu henwau Saesneg neu Gymraeg
-
-![](figs/LabelValue.png){alinio-ffig='canol' lled=30%}
+![](figs/LabelValue.png){fig-align='center' width=30%}
 
 (@) Arbrofwch gyda newid y labeli drwy:
 
-i. Newid arddull y testun (![](figs/TextStyle.png){width=3%}) e.e. arddull a maint
-ii. Newid fformat y label (![](figs/TextFormatting.png){width=3%}) e.e. lapio a chyfeiriadedd
-iii. Ychwanegu byffer testun (![](figs/TextBuffer.png){width=3%})
-iv. Newid lleoliad y label (![](figs/LabelPlacement.png){width=3%})
-v. Chwarae o gwmpas gyda dewisiadau eraill. Rydych chi mewn rheolaeth lwyr!
-vi. Ydych chi wedi cadw eich prosiect yn ddiweddar?
+    i. Newid arddull y testun (![](figs/TextStyle.png){width=3%}) e.e. arddull a maint
+    ii. Newid fformat y label (![](figs/TextFormatting.png){width=3%}) e.e. lapio a chyfeiriadedd
+    iii. Ychwanegu byffer testun (![](figs/TextBuffer.png){width=3%})
+    iv. Newid lleoliad y label (![](figs/LabelPlacement.png){width=3%})
+    v. Chwarae o gwmpas gyda dewisiadau eraill. Rydych chi mewn rheolaeth lwyr!
+    vi. Ydych chi wedi cadw eich prosiect yn ddiweddar?
 
-::: {.callout-tip}
-# Labelu clyfar
+(@) Nawr bod y Prif Ardaloedd wedi'u labelu, chwyddwch allan. Sylwch sut mae QGIS yn dewis gosod a newid maint y labeli er mwyn sicrhau i fod nhw'n parhau i fod yn weladwy, ond yn diffodd rhai ohonynt i osgoi testun sy'n gorgyffwrdd. Mae hwn yn rhan sylfaenol o ddylunio mapiau ac mae QGIS yn ceisio optimeiddio darllenadwyedd. Gallwch reoli'r ymddygiad hwn trwy'r ffenestr `Labeling` ac fe'ch anogir i arbrofi.
 
-Nawr bod y Prif Ardaloedd wedi'u labelu, chwyddo allan. Sylwch sut mae QGIS yn dewis gosod a newid maint y labeli fel eu bod yn parhau i fod yn weladwy, ond yn diffodd rhai ohonynt i osgoi testun sy'n gorgyffwrdd. Mae hwn yn rhan sylfaenol o ddylunio mapiau ac mae QGIS yn ceisio optimeiddio darllenadwyedd. Gallwch reoli'r ymddygiad hwn trwy'r ffenestr `Labelu` ac fe'ch anogir i arbrofi.
-:::
-
-## <input type="checkbox"> Ychwanegu a hidlo data
+## Ychwanegu a hidlo data {#sec-filter}
 
 (@) Ychwanegwch yr haen fector `Wales_operational_windfarms.gpkg` at eich prosiect. Daw'r data hyn o Gronfa Ddata Cynllunio Ynni Adnewyddadwy'r DU ac maent yn cynrychioli lleoliad ffermydd gwynt gweithredol ledled Cymru.
 
@@ -161,65 +182,62 @@ Nawr bod y Prif Ardaloedd wedi'u labelu, chwyddo allan. Sylwch sut mae QGIS yn d
 
 (@) Labelwch y ffermydd gwynt wrth eu henw neu wrth eu capasiti cynhyrchu
 
-(@) Ychwanegwch yr haen fector `gis_osm_roads_free_1.gpkg`, sydd yn y ffolder `British_Isles_geofabrik` > `wales`. Mae'r data hyn yn rhan o brosiect Map Strydoedd Agored ac yn cynrychioli pob ffordd yng Nghymru. Mae hon yn set ddata fawr a gall gymryd amser i'w llwytho a'i harddangos.
+(@) Ychwanegwch yr haen fector `gis_osm_roads_free_1.gpkg`, sydd yn y ffolder `British_Isles_geofabrik` → `wales`, at eich prosiect. Mae'r data hyn yn rhan o brosiect OpenStreetMap ac yn cynrychioli pob ffordd yng Nghymru. Mae hon yn set ddata fawr a gall gymryd amser i'w llwytho a'i harddangos.
 
 (@) Unwaith eto, ar gyfer yr haen hon:
 
-i. Archwiliwch y tabl priodoleddau
-ii. Arbrofi gyda gwahanol arddulliau ar gyfer data llinell
-iii. Rhowch gynnig ar labelu'r ffyrdd gyda'r priodoledd `ref` (h.y. rhif y ffordd). Gweler sut mae'r labeli hyn yn cael eu harddangos wrth i chi chwyddo i mewn ac allan o'r map.
+    i. Archwiliwch y tabl priodoleddau
+    ii. Arbrofwch gyda gwahanol arddulliau ar gyfer y data llinell
 
-(@) Mae llawer o ddata yma! Felly gadewch i ni ei is-rannu. Mae yna lawer o ffyrdd o wneud is-setiau o haenau data i ddewis dim ond y data sydd ei angen arnoch neu yr hoffech ei arddangos. I hidlo'r data yn gyffredinol:
+(@) Mae llawer o ddata yma! Felly gadewch i ni ei is-setio. Mae yna lawer o ffyrdd o wneud is-setiau o haenau data i ddewis dim ond y data sydd ei angen arnoch neu yr hoffech ei arddangos. I hidlo'r data yn gyffredinol:
 
-i. Cliciwch ar y dde ar yr haen ffyrdd a chliciwch ar `Hidlo...`
-ii. Mae'r offeryn hwn yn caniatáu ichi weld yn hawdd yr holl werthoedd unigryw sydd ym mhob maes (neu golofn) o'r tabl priodoleddau. Cliciwch `fclass` > `Pawb`. Gallwch nawr weld yr holl ddosbarthiadau unigryw o ffyrdd yn yr haen fector.
-iii. O dan `Mynegiant Hidlo Penodol i Ddarparwyr`, teipiwch `"fclass" IN ('primary', 'trunk', 'motorway')`. Gwnewch yn siŵr bod atalnodi a bylchau manwl gywir
-iv. Cliciwch ar `Iawn`. Dylai eich map nawr ddangos ffyrdd sydd wedi'u dosbarthu fel rhai cynradd ac eilaidd yn unig. Mae eicon twndis (![](figs/Filter.png){width=3%}) hefyd wedi ymddangos wrth ymyl yr haen o'i henw yn y panel `Haenau', i'ch atgoffa bod hidlydd wedi'i gymhwyso.
-v. Arbrofwch gyda'r hidlydd i weld pa gyfuniadau o ddata y gallwch eu harddangos
-vi. Pan fyddwch wedi gorffen, cliciwch ar `Clirio` > `Iawn` i gael gwared ar y hidlydd a chau'r offeryn
+    i. De-gliciwch yr haen ffyrdd a chliciwch `Filter...`
+    ii. Mae'r offeryn hwn yn caniatáu ichi weld yn hawdd yr holl werthoedd unigryw sydd ym mhob maes (neu golofn) o'r tabl priodoleddau. Cliciwch `fclass` → `All`. Gallwch nawr weld yr holl ddosbarthiadau unigryw o ffyrdd yn yr haen fector.
+    iii. O dan `Provider Specific Filter Expression`, teipiwch `"fclass" IN ('primary', 'trunk', 'motorway')`. Gwnewch yn siŵr bod atalnodi a bylchau yn manwl gywir
+    iv. Cliciwch `OK`. Dylai eich map nawr ddangos ffyrdd sydd wedi'u dosbarthu fel rhai cynradd ac eilaidd yn unig. Mae eicon twndis (![](figs/Filter.png){width=3%}) hefyd wedi ymddangos i'r dde o'r enw'r haen yn y panel `Layers', i'ch atgoffa bod hidlydd wedi'i gosod.
+
+(@) Labelwch y ffyrdd gyda'r priodoledd `ref` (h.y. rhif y ffordd). Gweler sut mae'r labeli hyn yn cael eu harddangos wrth i chi chwyddo i mewn ac allan o'r map.
+
+(@) I gael gwared ar y hidlydd:
+
+    i. Cliciwch ar eicon y twndis (![](figs/Filter.png){width=3%}) ger yr haen ffyrdd
+    ii. Cliciwch `Clear` → `OK`
 
 (@) I hidlo'r data drwy ddiffinio'r hyn a gyflwynir yn y map:
 
-i. Agorwch ffenestr `Symboleg` yr haen
-ii. Defnyddiwch yr opsiwn `Categorized` i gategoreiddio symbolaeth y ffordd yn ôl y priodoledd `fclass`
-iii. Dileu'r holl ddosbarthiadau ffyrdd ac eithrio `primary`, `trunk`, a `traway`. Gweld a allwch chi wneud y dasg hon yn haws i chi'ch hun trwy ddefnyddio'r bysellau `Shift` a `Ctrl`...
-iv. Cliciwch ddwywaith ar y symbol llinell fesul categori i ddewis symboleg addas ar gyfer y ffyrdd sy'n weddill hyn (e.e. coch trwchus ar gyfer y prif ffyrdd, glas golau trwchus iawn ar gyfer y draffordd)
+    i. Agorwch ffenestr `Symbology` yr haen
+    ii. Defnyddiwch yr opsiwn `Categorized` i gategoreiddio symbolaeth y ffordd yn ôl y priodoledd `fclass`
+    iii. Dileu pob dosbarth ffordd ac eithrio `primary`, `trunk`, a `motorway` gan ddefnyddio'r eicon `Delete` (![](figs/Delete.png){width=3%}). Gweld os allwch chi wneud y dasg hon yn haws i'ch hun trwy ddefnyddio'r bysellau `Shift` a `Ctrl`...
+    iv. Dwbl-giciwch y symbol llinell fesul categori i ddewis symboleg addas ar gyfer y ffyrdd hyn (e.e. coch trwchus ar gyfer y prif ffyrdd, glas golau trwchus iawn ar gyfer y draffordd)
 
-(@) Ychwanegwch yr haen fector `gis_osm_waterways_free_1.gpkg` yn y ffolderi `British_Isles_geofabrik` > `wales`. Pa liw fyddai orau ar gyfer y rhain?
+(@) Ychwanegwch yr haen fector `gis_osm_waterways_free_1.gpkg` o'r ffolder `British_Isles_geofabrik` → `wales`. Pa liw fyddai orau ar gyfer yr haen hon?
 
-## <input type="checkbox"> Ychwanegu data allanol
+## Ychwanegu data allanol
 
-(@) Llywio i [datamap.llyw.cymru](https://datamap.llyw.cymru/){target='_blank'}
+(@) Llywiwch i [mapdata.llyw.cymru](https://mapdata.llyw.cymru/){target='_blank'}
 
 (@) Chwiliwch am "Llwybr Arfordir Cymru" a chliciwch ar y ddolen
 
-(@) O dan `Dewis fformat data gofodol`, dewiswch `OFC Geopecyn` a chliciwch ar `Lawrlwytho`
+(@) O dan `Dewiswch fformat y data gofodol`, dewiswch `OGC Geopackage` a chliciwch `Lawrlwytho`
 
 (@) Symudwch y ffeil a lawrlwythwyd i'ch OneDrive
 
-(@) Agorwch yr haen yn QGIS a'i harchwilio
+(@) Ychwanegwch yr haen at eich prosiect a'i harchwilio
 
-(@) Rhowch gynnig ar chwilio am ffeiliau data GIS eraill a'u lawrlwytho o DataMapWales, geofabrik.de, neu unrhyw ffynhonnell arall
+(@) Rhowch gynnig ar chwilio am ffeiliau data GIS eraill a'u lawrlwytho o [mapdata.llyw.cymru](https://mapdata.llyw.cymru/){target='_blank'}, [geofabrik.de](https://geofabrik.de/), neu unrhyw ffynhonnell arall. Dylai chwilio am setiau data geo-ofodol ddangos i chi pa mor hawdd y gall fod i ddod o hyd i ddata a'i lawrlwytho o'r rhyngrwyd. Bydd hyn hefyd yn rhoi ysbrydoliaeth ar gyfer syniadau traethawd hir, sydd eisoes ar eich gorwel.
 
-(@) Pan fyddwch chi wedi dod o hyd i set ddata suddlon, rhowch wybod amdani ar Menti
-
-::: {.callout-tip}
-# Syniadau traethawd hir
-
-Dylai chwilio am setiau data geo-ofodol ddangos i chi pa mor hawdd y gall fod i ddod o hyd i ddata a'i lawrlwytho o'r rhyngrwyd. Bydd hyn hefyd yn rhoi ysbrydoliaeth ar gyfer syniadau traethawd hir, sydd bellach ar eich gorwel.
-:::
-
-## <input type="checkbox"> Ydych chi wedi gorffen?
+## Ydych chi wedi gorffen?
 
 (@) Llongyfarchiadau! Rydych chi wedi dysgu hanfodion QGIS. Gwnewch yn siŵr eich bod chi wedi deall yr holl gamau uchod. Ailadroddwch os oes angen, a gofynnwch am gymorth neu gyngor gan yr arddangoswyr. Bydd angen y wybodaeth hon arnoch mewn ymarferion yn y dyfodol ac ar gyfer yr asesiadau.
 
-::: {.nodyn-galwad}
+::: {.callout-note}
 # Canlyniadau dysgu
 
-Erbyn diwedd yr ymarfer hwn dylech chi:
+Erbyn diwedd yr ymarfer hwn dylech chi allu:
 
-1. Gallu creu prosiect QGIS newydd, ychwanegu haenau fector, newid eu harddull a llywio o'u cwmpas.
-2. Deall sut i aildrefnu haenau, troi gwelededd haenau ymlaen ac i ffwrdd, a chael gwared ar haenau.
-3. Gwerthfawrogi'r berthynas rhwng haenau GIS a thablau priodoleddau, a gallu labelu nodweddion.
-4. Gwybod sut i lawrlwytho data i'w ddefnyddio yn QGIS.
+1. Creu a rheoli prosiect QGIS drwy ychwanegu haenau fector o wahanol ffynonellau a defnyddio'r offer llywio i symud, chwyddo, a dychwelyd i hyd a lled haen
+2. Addasu ymddangosiad data gofodol drwy symboleg, trefnu haenau, a labelu i adeiladu map clir a darllenadwy
+3. Archwiliwch y tabl priodoleddau i ddeall sut mae nodweddion yn ymwneud â'u priodoleddau, didoli cofnodion a dewis nodweddion yn gydfuddiannol rhwng y tabl a chynfas map
+4. Mesur a hidlo data daearyddol drwy gael hydoedd ac arwynebeddau, trosi rhwng unedau, ac is-osod haenau gan ddefnyddio mynegiadau hidlo a symboleg wedi'i chategoreiddio
+5. Gwerthfawrogi sut mae confensiynau cartograffig a gweinyddol yn llunio cynrychiolaeth ofodol, o osod labeli awtomataidd i'r ffordd y caiff ffiniau eu llunio
 :::

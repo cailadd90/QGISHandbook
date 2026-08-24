@@ -28,7 +28,7 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
 
     i. From the menu bar, click `Layer` → `Add Layer` → `Add Vector Layer...`
     ii. Click the `Browse` icon (![](figs/Browse.png){width=3%}) 
-    iii. Navigate to the folder where the data is stored, i.e. **`GEG276`**
+    iii. Navigate to the folder where the data is stored, i.e. `GEG276`
     iv. Open the `British_Isles_land_polygons` folder and click on the corresponding `.gpkg` vector layer
     v. Click `Open` → `Add` → `Close`. This dataset from the OpenStreetMap project consists of polygons representing the many islands making up the British Isles. Note the layer is now listed under the `Layers` panel. You can also drag-and-drop datasets from the browser straight into the Map Canvas
 
@@ -61,7 +61,7 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
 
 (@) Click the drop-down arrow next to the `Measure` icon to select the appropriate tool for measuring:
 
-    i. The distance between the extreme cardinal points of mainland Great Britain (in miles)
+    i. The distance between the extreme cardinal points of Great Britain (in miles)
     ii. The approximate area of the Isle of Man (in square kilometres)
 
 ![](figs/MeasureDropdown.png){fig-align='center' width=30%}
@@ -131,7 +131,7 @@ exams2forms("E01_Q4.Rmd", edir = "exercises")
 
 (@) Adjust the style of this layer and explore its attribute table
 
-(@) Experiment with switching layer visibility on or off using the tick boxes in the `Layer` panel (![](figs/CheckLayer.png){width=3%}). This becomes essential when managing multiple layers in a project
+(@) Experiment with switching layer visibility on or off using the tick boxes in the `Layers` panel (![](figs/CheckLayer.png){width=3%}). This becomes essential when managing multiple layers in a project
 
 (@) Change the order of the layers by dragging each upwards or downwards in the layer panel
 
@@ -152,7 +152,7 @@ exams2forms("E01_Q4.Rmd", edir = "exercises")
 (@) To label layers:
 
     i. Select `Wales_Principal_Areas` layer in the `Layers` panel
-    ii. From the menu bar, click `Layer` → `Labeling`. Find the shortcuts to this window (hint - check out `Properties...`) 
+    ii. From the menu bar, click `Layer` → `Labeling`. Find the shortcut to this window (hint - check out `Properties...`) 
     iii. Use the drop-down menu to change the labelling source from `No Labels` to `Single Labels`
 
 ![](figs/LabellingSource.png){fig-align='center' width=30%}
@@ -170,7 +170,7 @@ exams2forms("E01_Q4.Rmd", edir = "exercises")
     v. Playing around with other options. You are in complete control!
     vi. Have you saved your project recently?
 
-(@) Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the `Labelling` window and you are encouraged to experiment.
+(@) Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the `Labeling` window and you are encouraged to experiment.
 
 ## Adding and filtering data {#sec-filter}
 
@@ -182,7 +182,7 @@ exams2forms("E01_Q4.Rmd", edir = "exercises")
 
 (@) Label the wind farms by their name or by their generation capacity
 
-(@) Add the vector layer `gis_osm_roads_free_1.gpkg`, which is in the folder `British_Isles_geofabrik` → `wales`, to your project. These data form part of the Open Street Map project and represent all roads in Wales. This is a large dataset and may take time to load and display
+(@) Add the vector layer `gis_osm_roads_free_1.gpkg`, which is in the folder `British_Isles_geofabrik` → `wales`, to your project. These data form part of the OpenStreetMap project and represent all roads in Wales. This is a large dataset and may take time to load and display
 
 (@) Once again, for this layer:
 
@@ -218,7 +218,7 @@ exams2forms("E01_Q4.Rmd", edir = "exercises")
 
 (@) Search for "Wales Coast Path" and click on the link
 
-(@) Under `Select spatial data format`, choose `OFC Geopackage` and click `Download`
+(@) Under `Select spatial data format`, choose `OGC Geopackage` and click `Download`
 
 (@) Move the downloaded file to your OneDrive
 

@@ -1,15 +1,24 @@
 Question
 ========
-Can you name the seventh-largest island of the British Isles?
+Allwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?
+
+Answerlist
+----------
+* Ynys Môn
+* Ynys Enlli
+* Skye
+* Islay
+* Lewis a Harris
 
 Solution
 ========
-The seventh-largest island of the British Isles was **^(Angelsey|Ynys Mon|Ynys Môn)$**.
 
-
+Ynys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.
 
 Meta-information
 ================
-extype: string
-exsolution: ^(Angelsey|Ynys Mon|Ynys Môn)$
-exname: E01_Q3
+
+extype: schoice
+exsolution: 10000
+exname: E01_Q3.cy
+exshuffle: TRUE

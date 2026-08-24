@@ -1,16 +1,25 @@
 Question
 ========
+
 Can you name the seventh-largest island of the British Isles?
+
+Answerlist
+----------
+* Ynys Môn / Anglesey
+* Ynys Enlli / Bardsey
+* Skye
+* Islay
+* Lewis and Harris
 
 Solution
 ========
-The seventh-largest island of the British Isles was *Ynys Môn* / **Anglesey**.
 
-
+The seventh-largest island of the British Isles is Ynys Môn / Anglesey.
 
 Meta-information
 ================
-extype: string
-exsolution: (?i)(Anglesey|Ynys Mon|Ynys Môn)
-exstringtype: regex
+
+extype: schoice
+exsolution: 10000
 exname: E01_Q3
+exshuffle: TRUE
