@@ -4,12 +4,10 @@
 
 Communication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and is how you generate the maps for your wind farm project.
 
-**This exercise will guide you through the requirements for making Map 1**
-
 ::: {.callout-note}
 ## Learning aims
 
-To create functionally complete maps in QGIS for print or digital output. You will learn how to create a 1:1,000,000 scale map of Wales illustrating mean wind speed and county boundaries.
+To create functionally complete maps in QGIS for print or digital output. You will learn how to create a 1:1,000,000 scale map of Wales illustrating mean wind speed and county boundaries necessary for making Map 1.
 :::
 
 ## Creating a print layout
@@ -20,91 +18,81 @@ To create functionally complete maps in QGIS for print or digital output. You wi
 
 (@) Label the Principal Areas of Wales in Welsh or English
 
-(@) Click `Project` → `New Print Layout...` (and find the shortcuts to this window)
+(@) To create a Print Layout:
 
-(@) Give the print layout an appropriate title
+    i. Click `Project` → `New Print Layout...` (and find the shortcuts to this window)
+    ii. Give the print layout an appropriate title
+    iii. Click `Project` → `Layout Manager...`. You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts
+    iv. Click `Close`
 
-::: {.callout-tip}
-# Multiple layouts
-
-You can create more than one print layout. Use `Project` → `Layout Manager...` to easily access and organise layouts associated with your particular QGIS project.
-:::
-
-(@) Arrange the Map Canvas and Print Layout windows so you can see both at once. Subsequent instructions refer to the Print Layout window unless otherwise stated
-
-(@) Change the page orientation to A4 portrait:
+(@) Change the page orientation and size, so it fits onto an A4 portrait document with space beneath to fit a caption (see @sec-WP):
 
     i. Right‑click on the blank print layout
     ii. Click `Page Properties...`
-    
-    ![](figs/PageProperties.png){fig-align='center' width=25%}
-    
-    iii. Change `Size` to `A4`
-    iv. Change `Orientation` to `Portrait`
+    iii. Change `Size` to `Custom`
+    iv. Reduce the map `Height` (e.g. to `270`)
+    v. Change `Orientation` to `Portrait`
 
 ## Adding and adjusting a map item {#sec-mapitem}
 
 (@) Click `Add Item` → `Add Map` (look for the shortcut) 
 
-(@) Draw a map onto the print layout. `Map 1` should now appear under the `Item` tab
+(@) Draw a map onto the print layout. `Map 1` should now appear under the `Items` tab
 
 ![](figs/Item.png){fig-align='center' width=25%}
 
-(@) Adjust the map using the squares around the edges
+(@) If necessary, adjust the map using the squares on the map boundaries so it fits more comfortably on the page
 
-(@) Select `Map 1` 
+(@) Select `Map 1` from the `Items` panel
 
 (@) Set `Scale` to `1000000` (i.e. 1:1,000,000)
 
 (@) Use the `Move item content` (![](figs/MoveItemContent.png){width=3%}) and `Select/Move item` (![](figs/SelectMoveItem.png){width=3%}) tools, and adjust the `Scale` value, to compose the map so that all of Wales is visible
 
-(@) Experiment with making fine adjustments to the scale by holding down the `Ctrl` key and scrolling the mouse wheel 
+(@) Experiment with making fine adjustments to the scale by holding down the `Ctrl` key (windows) or `Command` key (mac) and scrolling the mouse wheel 
 
 (@) Once you're satisfied with the scaling, framing, and position, freeze the view in place by checking the box under the lock icon (![](figs/LockCheck.png){width=3%}) for `Map 1` in the `Items` panel
 
-(@) In the Map Canvas window, adjust layer styles:
+(@) From the Map Canvas window, adjust layer styles:
 
     i. Choose colours, border widths, and fonts that emphasise Wales and the difference between the outline of Wales (physical coast) and Principal Areas boundaries (non‑physical political construct)
 
-(@) To force the Print Layout to reflect changes, select either:
+(@) Update the Print Layout to reflect your changes using one of these two options:
 
-    i. The `Refresh` icon (![](figs/RefreshView.png){width=3%}) in the Print Layout window
-    ii. The `Update Map Preview` icon (![](figs/RefreshView.png){width=3%}) under `Item Properties` in the Map Canvas window
+    i. Click the `Refresh` icon (![](figs/RefreshView.png){width=3%}) in the Print Layout window
+    ii. Click the `Update Map Preview` icon (![](figs/RefreshView.png){width=3%}) under `Item Properties` in the Map Canvas window
 
-(@) Ensure `Map 1` is still selected
+(@) Click on the `Item Properties` tab and check `Frame` 
 
-(@) Click on the `Item Properties` tab and add a `Frame` 
+(@) Modify the frame's `Background` colour appropriate for representing the ocean
 
-(@) Modify the frame's background colour appropriate for representing the ocean
+(@) You can modify the `Layout` and `Item Properties` of any item selected in the `Item` window. Note how the options under `Layout` and `Item Properties` tab update depending on what item you've selected. Remember that:
 
-::: {.callout-tip}
-# Modifying layers
-
-You can modify the `Layout` and `Item Properties` of any item selected in the `Item` window. Note how the options under `Layout` and `Item Properties` tab update depending on what item you've selected. Remember that: (i) Order matters - the order in which map items are listed is how they are also stacked on top of one another in the print layout, and (ii) some layer properties (e.g. layer order, style, labeling) are controlled in the Map Canvas.
-:::
+    i. The order in which map items are listed is how they are also stacked on top of one another in the print layout
+    ii. Some layer properties (e.g. layer order, style, labeling) are controlled in the Map Canvas
 
 ## Adding a scale bar, north arrow, and grid
 
-(@) Add a scale bar:
+(@) From the Print Layout window, add a scale bar:
 
     i. Click `Add Item` → `Add Scale Bar`
-    ii. Click on the map to place it (you can move it later)
-    iii. Select the scale bar under `Items`
+    ii. Drag and drop on the map to place it (you can move it later)
+    iii. Select the scale bar from the `Items` panel
     iv. Click the `Item Properties` tab
     v.  Adjust the scale bar's properties, notably `Style`, `Scalebar units`, `Segments`, `Frame`, and `Background`
 
 (@) Add a north arrow: 
 
     i. Click `Add Item` → `Add North Arrow`
-    ii. Click on the map to place it (you can move it later)
-    iii. Select the north arrow under `Items`
+    ii. Drag and drop on the map to place it (you can move it later)
+    iii. Select the north arrow from the `Items` panel
     iv. Click the `Item Properties` tab
     v. Under `SVG Images`, search `arrow` and choose a suitable north arrow
     vi. Adjust the north arrow's properties, notably `Fill color` and `Stroke color`
 
 (@) Add a grid (aka graticule):
 
-    i. Select `Map 1` under `Items`
+    i. Select `Map 1` from the `Items` panel
     ii. Click the `Item Properties` tab
     iii. Expand `Grids`
     iv. Click `Add a new grid` (![](figs/AddANewGrid.png){width=3%})
@@ -114,29 +102,23 @@ You can modify the `Layout` and `Item Properties` of any item selected in the `I
     viii. Check `Draw Coordinates`
     ix. Adjust the grid's properties, notably `Grid type`, `Frame`, and `Draw Coordinates`. Can you adjust the labels for readability, soften the gridlines, and reduce unnecessary trailing zeros?
 
-::: {.callout-tip}
-# Readjustments needed
-
-You may find that some of the map items - notably the coordinates - are now beyond the edge of the page. These will be lost when the map is exported. In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see @sec-mapitem). Check how using [guides](#sec-guides) can aid you in aligning map items perfectly on the page.
-:::
+(@) You may find that some of the map items, notably the coordinates, are now beyond the edge of the page. These will be lost when the map is exported! In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see @sec-mapitem). Check how using [Guides](#sec-guides) can aid you in aligning map items perfectly on the page.
 
 ## Adding labels and a legend
 
 (@) Add a map title label:
 
     i. Click `Add Item` → `Add Label`
-    ii. Click on the map to place it (you can move it later)
-    iii. Select the label under `Items`
+    ii. Drag and drop on the map to place it (you can move it later)
+    iii. Select the label from the `Items` panel
     iv. Click the `Item Properties` tab
     v.  Adjust the label's properties, notably `Main Properties`, `Font`, `Rotation`, `Frame`, and `Background`
-
-(@) Add a short caption label. See [FAQ](@sec-font) for how to have both bold and normal text in the caption at once
 
 (@) Add a legend:
 
     i. Click `Add Item` → `Add Legend`
-    ii. Click on the map to place it (you can move it later)
-    iii. Select the legend under `Items`
+    ii. Drag and drop on the map to place it (you can move it later)
+    iii. Select the legend from the `Items` panel
     iv. Click the `Item Properties` tab
     v. Uncheck `Auto update` to enable modifications to the legend 
     vi. Experiment with the legend toolbar icons (![](figs/LegendMenu.png){width=25%}) to improve the legend
@@ -144,29 +126,21 @@ You may find that some of the map items - notably the coordinates - are now beyo
 
 ## Adding raster data {#sec-rasterdata}
 
-(@) Add your first raster layer in QGIS. From the menu bar, click `Layer` → `Add Layer` → `Add Raster Layer...`
+(@) Add your first raster layer in QGIS:
 
-(@) Click the `Browse` icon (![](figs/Browse.png){width=3%}) and navigate to the folder where the data is stored, i.e. **`GEG276`**
+    i. From the menu bar in the Map Canvas, click `Layer` → `Add Layer` → `Add Raster Layer...`
+    ii. Click the `Browse` icon (![](figs/Browse.png){width=3%}) and navigate to the folder where the data is stored, i.e. **`GEG276`**
+    iii. Open the `Wales_mean_windspeed` folder and click on any of the `.tif` raster layers
+    iv. Click `Open` → `Add` → `Close`
 
-(@) Open the `Wales_mean_windspeed` folder and click on any of the `.tif` raster layers
+(@) Change the raster layer's colour ramp:
 
-(@) Click `Open` → `Add` → `Close`
+    i. Open the layer's `Properties...` → `Symbology`
+    ii. Use the `Render type` drop-down menu to select `Singleband pseudocolor`
+    iii. Under `Color ramp`, select an appropriate colour ramp for the data (or pick one you just really like!)
+    iv. Click `OK`
 
-(@) Open the layer's `Properties...`
-
-(@) Under `Render type`, select `Singleband pseudocolor`
-
-(@) Under `Color ramp`, select an appropriate colour ramp for the data (or pick one you just really like!)
-
-(@) Click `OK`
-
-(@) Play around with Wales Principal Areas and the windspeed data - by adjusting the order of layers in the `Layers` panel, and by modifying the `Properties...` of each layer - so that both are visible at the same time. Hint: modifying `Fill` or `Transparency` properties may do nicely...
-
-::: {.callout-important}
-# Transparency warning
-
-Avoid semi‑transparent symbology that breaks the link between map colours and legend colours.
-:::
+(@) Adjust the order and modify the properties of the Wales Principal Areas and windspeed layers so both are visible at the same time. Hint: modifying `Fill` or `Transparency` properties may do nicely, but be careful to not break the link between the map and legend colours
 
 (@) In the Print Layout window, select `Map 1` and click `Update Map Preview` under the `Item Properties` tab
 
@@ -180,12 +154,13 @@ Avoid semi‑transparent symbology that breaks the link between map colours and 
 
 ## Adding an inset map
 
-(@) Add a second map (see @sec-mapitem) to provide an inset showing the British Isles (e.g. at a scale of 1:20,000,000). 
+(@) Add a second map to provide an inset showing the British Isles  (see @sec-mapitem) 
 
-(@) Modify:
+(@) Modify this second map to create an effective inset map that provides geographic context for the main map:
 
-    i. Which layers should be displayed (by turning visibility on and off, or changing layer order) 
-    ii. Their symbology (see @sec-properties); 
+    i. Adjust the inset map so the whole of the British Isles are visible
+    ii. Modify which layers should be displayed by turning layer visibility on and off or changing the layer order
+    iii. Modify the layers' symbology
 
 ::: {.callout-tip}
 # Scale matters
@@ -193,44 +168,32 @@ Avoid semi‑transparent symbology that breaks the link between map colours and 
 Place emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note that, because your map of Wales is locked, it's not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.
 :::
 
-(@) Select `Map 1` from the `Items` panel
+(@) Add an extent indicator on your main map to connect it to the inset map:
 
-(@) Under `Item Properties`, expand the `Overviews` tab
+    i. Select your inset map (`Map 2`) from the `Items` panel
+    ii. Under `Item Properties`, expand the `Overviews` tab
+    iii. Click `Add a new overview` (![](figs/E02_AddANewGrid.png){width=3%})
+    iv. Click `Overview 1`
+    v. Set the `Map frame` to your main map (`Map 1`)
+    vi. Adjust the `Frame style` to draw a hollow rectangle with a thick line, to easily show the main map’s extent
+    vii. Experiment further, especially with `Fill color`, `Stroke color`, and `Join style`
 
-(@) Click `Add a new overview` (![](figs/E02_AddANewGrid.png){width=3%})
-
-(@) Click `Overview 1`
-
-(@) Set the `Map frame` to your Wales map
-
-(@) Adjust the `Frame style` to draw a hollow rectangle with a thick line, to easily show the main map’s extent
-
-(@) Experiment further, especially with `Fill color`, `Stroke color`, and `Join style`
-
-::: {.callout-tip}
-# Keeping things tidy
-
-Projects can get rapidly out of control when multiple layers are used to build a map. It's important to remove redundant layers and label items appropriately. E.g. try renaming `Map 1` to `Main`, and `Map 2` to `Inset`. This will help when you need to revisit and adjust your maps.
-:::
+(@) Projects can get rapidly out of control when multiple layers are used to build a map. It's important to remove redundant layers and label items appropriately. E.g. try renaming `Map 1` to `Main`, and `Map 2` to `Inset`. This will help when you need to revisit and adjust your maps
 
 ## Exporting your map
 
-(@) Ensure each map item has `Lock layers` checked. This helps ensure the chosen map scale (1:1,000,000) reflects real‑world distances
+(@) Ensure both maps have `Lock layers` checked so that your formatting is captured in the exported maps
 
-(@) Click `Layout` → `Export as PDF...` → `Save`, and save in a suitable location
+(@) To export your map as an image:
 
-(@) Set `PDF Export Options` as follows for best results:
-
-    - &#x2611; Always export a vectors
-    - &#x2610; Append georeferece information
-    - &#x2610; Export RDF metadata (title, author, etc.)
-    - Text export: `Always Export Text as Paths`
-    - Image compression: `Lossless`
-    - &#x2610; Create Geospatial PDF
-    - &#x2611; Disable tiled raster layer exports
-    - &#x2611; Simplify geometries to reduce output file size
-
-(@) Click `Save`. Congratulations - you've created your first QGIS map assignment. Now make any revisions to be able to submit the best Map 1 that you can! 
+    i. Click `Layout` → `Export as Image...` 
+    ii. Select a suitable location to save the map
+    iii. Set the image format to `PNG (.png)`
+    iv. Click `Save`
+    v. Set `Export resolution` to `300 dpi` (300 dpi is suitable for viewing on a screen, 600 dpi is better for printing)
+    vi. Click `Save`
+    
+(@) Congratulations - you've created your first QGIS map assignment. Now make any revisions (including the map height) to be able to submit the best Map 1 that you can! 
 
 ::: {.callout-note}
 # Learning outcomes

@@ -38,7 +38,7 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
 
 (@) Use the `Map Navigation Toolbar` to explore this dataset by panning and zooming
 
-![](figs/MapNavigationToolbar.png){fig-align='center' width=50%}
+![](figs/MapNavigationToolbar.png){fig-align='center' width=25%}
 
 (@) Try using the mouse scroll wheel as a shortcut
 
@@ -50,10 +50,9 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
 
     i. From the `Layers` panel, right-click on `British_Isles_land_polygons` and click `Properties...` → `Symbology`. A useful shortcut to `Properties` is to double-click the layer
     ii. Click `Simple Fill` and experiment with changing the layer symbology's colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer
+    iii. Click `Apply` → `OK` when you've finished editing the layer's symbology
 
 ![](figs/SimpleFill.png){fig-align='center' width=25%}
-
-    iii. Click `Apply` → `OK` when you've finished editing the layer's symbology
 
 (@) From the menu bar, click `Project` → `Save` and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!
 
@@ -64,7 +63,7 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
     i. The distance between the extreme cardinal points of Great Britain (in miles)
     ii. The approximate area of the Isle of Man (in square kilometres)
 
-![](figs/MeasureDropdown.png){fig-align='center' width=30%}
+![](figs/MeasureDropdown.png){fig-align='center' width=25%}
 
 (@) Use left-click to add points, and right-click to stop taking the length / area measurements
 
@@ -141,9 +140,6 @@ exams2forms("E01_Q4.Rmd", edir = "exercises")
 
     i. Open the layer's `Symbology` window
     ii. Use the drop-down menu to change the symbology source from `Single Symbol` to `Categorized`
-
-![](figs/SymbologySource.png){fig-align='center' width=25%}
-
     iii. Use the `Value` drop-down menu to select the attribute `name`
     iv. Click `Classify` → `OK`. How colourful!
 
@@ -154,12 +150,7 @@ exams2forms("E01_Q4.Rmd", edir = "exercises")
     i. Select `Wales_Principal_Areas` layer in the `Layers` panel
     ii. From the menu bar, click `Layer` → `Labeling`. Find the shortcut to this window (hint - check out `Properties...`) 
     iii. Use the drop-down menu to change the labelling source from `No Labels` to `Single Labels`
-
-![](figs/LabellingSource.png){fig-align='center' width=30%}
-
     iv. Change the `Value` drop-down menu to label the Wales Principle Area polygons according to their English or Welsh names 
-
-![](figs/LabelValue.png){fig-align='center' width=30%}
 
 (@) Experiment with modifying the labels by:
 

@@ -22,7 +22,7 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
 
 (@) Lansio `QGIS`. Gallai hyn fod ar gyfrifiadur Prifysgol, drwy'r remote desktop, neu ar eich cyfrifiadur eich hun
 
-(@) O'r bar dewislen, cliciwch `Prosiect` → `Newydd`. Dewch o hyd i'r eicon llwybr byr i greu prosiect newydd
+(@) O'r bar dewislen, cliciwch `Project` → `New`. Dewch o hyd i'r eicon llwybr byr i greu prosiect newydd
 
 (@) Ychwanegwch eich haen fector gyntaf yn QGIS:
 
@@ -38,7 +38,7 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
 
 (@) Defnyddiwch y `Map Navigation Toolbar` i archwilio'r set ddata hon drwy symud a chwyddo
 
-![](figs/MapNavigationToolbar.png){fig-align='center' width=50%}
+![](figs/MapNavigationToolbar.png){fig-align='center' width=25%}
 
 (@) Rhowch gynnig ar ddefnyddio olwyn sgrolio'r llygoden fel llwybr byr
 
@@ -50,12 +50,11 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
 
     i. O'r panel `Layers`, de-cliciwch `British_Isles_land_polygons` a chliciwch `Properties...` → `Symbology`. Llwybr byr defnyddiol i `Properties` yw dwbl-glicio'r haen.
     ii. Cliciwch `Simple Fill` ac arbrofwch gyda newid lliwiau, arddulliau, a lledau symbolaeth yr haen. Mae gennych reolaeth lwyr dros sut mae haenau fector yn ymddangos. Wrth ddylunio map, ystyriwch yn ofalus sut i ddewis arddull briodol ar gyfer pob haen.
+    iii. Cliciwch `Apply` → `OK` pan fyddwch wedi gorffen golygu symboleg yr haen
 
 ![](figs/SimpleFill.png){fig-align='center' width=25%}
 
-    iii. Cliciwch `Apply` → `OK` pan fyddwch wedi gorffen golygu symboleg yr haen
-
-(@) O'r bar dewislen, cliciwch `Prosiect` → `Cadw` a chadwch eich prosiect mewn lleoliad addas. Dewch o hyd i'r llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
+(@) O'r bar dewislen, cliciwch `Project` → `Save` a chadwch eich prosiect mewn lleoliad addas. Dewch o hyd i'r llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
 
 ## Mesur gwrthrychau geo-ofodol {#sec-mesuring}
 
@@ -64,7 +63,7 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
 i. Y pellter rhwng pwyntiau cardinal eithaf Prydain Fawr (mewn milltiroedd)
 ii. Arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)
 
-![](figs/MeasureDropdown.png){fig-align='center' width=30%}
+![](figs/MeasureDropdown.png){fig-align='center' width=25%}
 
 (@) Defnyddiwch chwith-glic i ychwanegu pwyntiau, a dde-glic i offen gymryd y mesuriadau hyd / arwynebedd
 
@@ -140,10 +139,7 @@ exams2forms("E01_Q4.cy.Rmd", edir = "exercises")
 (@) I gategoreiddio symboleg yr haen:
 
     i. Agorwch ffenestr `Symbology` yr haen
-    ii. Defnyddiwch y cwymplen i newid ffynhonnell y symboleg o `Single Symbo` i `Categorized`
-
-![](figs/SymbologySource.png){fig-align='center' width=25%}
-
+    ii. Defnyddiwch y cwymplen i newid ffynhonnell y symboleg o `Single Symbol` i `Categorized`
     iii. Defnyddiwch y ddewislen `Value` i ddewis y priodoledd `name`
     iv. Cliciwch `Classify` → `OK`. Dyna liwgar!
 
@@ -154,12 +150,7 @@ exams2forms("E01_Q4.cy.Rmd", edir = "exercises")
     i. Dewiswch yr haen `Wales_Principal_Areas` o'r panel `Layers`
     ii. O'r bar dewislen, cliciwch `Layer` → `Labeling`. Dewch o hyd i'r llwybr byr i'r ffenestr hon (awgrym - edrychwch yn `Properties...`)
     iii. Defnyddiwch y cwymplen i newid y ffynhonnell labelu o `No Labels` i `Single Labels`
-
-![](figs/LabellingSource.png){fig-align='center' width=30%}
-
     iv. Newidiwch y cwymplen `Value` i labelu polygonau Awdurdodau Unedol Cymru yn ôl eu henwau Cymraeg neu Saesneg
-
-![](figs/LabelValue.png){fig-align='center' width=30%}
 
 (@) Arbrofwch gyda newid y labeli drwy:
 
