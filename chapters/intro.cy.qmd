@@ -61,17 +61,15 @@ Os nad yw'r gosodiad yn gweithio'r tro cyntaf, ailadroddwch y camau'n ofalus i g
 
 ## Mynediad i'r data {#sec-data}
 
-Mae'r holl setiau data sydd eu hangen arnoch ar gyfer y sesiynau ymarferol a'r prosiect terfynol wedi'u darparu ar y gyriant L:Common Student:
+(@) Ewch i'r ffolder ar OneDrive lle mae'r data wedi'i storio [yma](https://swanseauniversity-my.sharepoint.com/:f:/g/personal/c_j_t_ladd_swansea_ac_uk/IgC2dkNTfg8nSorMFBg8ZQcvARb4y8V27mGxtNPNwpvvh68){target='_blank'}
 
-`L:/Coleg Gwyddoniaeth/Daearyddiaeth/GEG276`
+(@) Cliciwch yr eicon `Settings` yn y gornel top-dde
 
-Os yw'n well gennych weithio ar eich cyfrifiadur eich hun, bydd angen i chi gopïo'r setiau data hyn i'ch cyfrifiadur personol. Gallwch wneud hyn mewn un o ddwy ffordd:
+(@) Cliciwch `Sync this OneDrive`
 
-1. **Trosglwyddo o'r gyriant L:** Defnyddiwch ddyfais storio USB neu wasanaeth storio cwmwl fel Microsoft OneDrive neu Google Drive i gopïo'r ffeiliau perthnasol o'r gyriant L.
+![](figs/OneDriveSettings.png){fig-align='center' width=50%}
 
-2. **Lawrlwytho o Google Drive:** Copïwch y ffeiliau perthnasol gan ddefnyddio'r ddolen [yma](https://drive.google.com/drive/folders/1n8jng_fFgCJ22vY-W9khlk4hEdKQg-CP?usp=sharing){target='_blank'}.
-
-Er mwyn arbed amser a lle, dim ond lawrlwythwch neu gopïwch y data sydd ei angen arnoch ar gyfer pob ymarfer corff yn hytrach na throsglwyddo popeth ar unwaith.
+(@) Efallai y bydd angen i chi aros am funud, ond dylai'r ffolder fod yn hygyrch drwy eich porwr yn fuan
 
 ## Storio data
 

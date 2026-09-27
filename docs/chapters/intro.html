@@ -5,17 +5,20 @@
 <link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/intro.cy.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Before you begin – QGIS Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -47,9 +50,9 @@ div.csl-indent {
 <link href="../chapters/e01.html" rel="next">
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -132,30 +135,6 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../chapters/e02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Elevation, slope, and wind speed</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Wind farm area polygon, viewshed, and impact</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -299,12 +278,17 @@ Note
 </div>
 </section><section id="sec-data" class="level2"><h2 class="anchored" data-anchor-id="sec-data">Accessing the data</h2>
 <ol class="example" type="1">
-<li><strong>Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it’ll appear in File Explorer under your OneDrive section</strong></li>
+<li><p>Navigate to the folder on OneDrive where the data is stored <a href="https://swanseauniversity-my.sharepoint.com/:f:/g/personal/c_j_t_ladd_swansea_ac_uk/IgC2dkNTfg8nSorMFBg8ZQcvARb4y8V27mGxtNPNwpvvh68" target="_blank">here</a></p></li>
+<li><p>Click the <code>Settings</code> icon in the top-right corner</p></li>
+<li><p>Click <code>Sync this OneDrive</code></p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/OneDriveSettings.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
+<ol start="4" class="example" type="1">
+<li>You may need to wait a minute, but eventually the folder should be accessible via your browser</li>
+</ol>
 <!--
 
 All the datasets you need for the practicals and the final project are provided on the Student Common L:drive:
@@ -319,8 +303,7 @@ If you prefer to work on your own computer, you will need to copy these datasets
 
 To save time and space, only download or copy the data you need for each exercise rather than transferring everything at once.
 
--->
-</section><section id="data-storage" class="level2"><h2 class="anchored" data-anchor-id="data-storage">Data storage</h2>
+--></section><section id="data-storage" class="level2"><h2 class="anchored" data-anchor-id="data-storage">Data storage</h2>
 <p>Swansea University provides secure storage through OneDrive and network drives. These appear the same no matter which University computer you log into, and you can also access OneDrive from your own devices. I have two key tips for you:</p>
 <ul>
 <li><p><strong>Always save your work to OneDrive.</strong> This keeps it safe from accidental loss and accessible wherever you are. Avoid storing coursework on the local C: drive. Files saved there are only available on that one machine and may be deleted automatically overnight.</p></li>

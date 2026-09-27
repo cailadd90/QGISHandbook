@@ -5,17 +5,20 @@
 <link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e01.cy.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>1  Getting started – QGIS Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -28,9 +31,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../chapters/e02.html" rel="next">
 <link href="../chapters/intro.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -113,30 +116,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../chapters/e02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Elevation, slope, and wind speed</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Wind farm area polygon, viewshed, and impact</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -269,9 +248,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What is the distance between the extreme cardinal points of Great Britain (in miles)?</p>
-<p><input class="webex-solveme nospaces" id="webex-1e55c8b2ab88a3d678d193347138a2af" data-tol="0" size="20" data-answer="akcDBVAaPw=="></p>
+<p><input class="webex-solveme nospaces" id="webex-2c7863e7905e3ebc42a37ea26b8e5428" data-tol="0" size="20" data-answer="aUEBCAUROA=="></p>
 <p>What is the approximate area of the Isle of Man (in square kilometres)?</p>
-<p><input class="webex-solveme nospaces" id="webex-41ee959d189cef89d40325acdfefaf06" data-tol="50" size="20" data-answer="bxNQUggXZA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-504093a5029695cf991b3076dd59f7d1" data-tol="50" size="20" data-answer="bhIBBwgRPA=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -304,8 +283,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Can you name the seventh-largest island of the British Isles?</p>
-<div id="webex-090a08b64612c9a0bd077e2584f2d9c0" class="webex-radiogroup" data-answer="awgcURwITgYYBmw=">
-<label><input type="radio" autocomplete="off" name="090a08b64612c9a0bd077e2584f2d9c0"><span>Ynys Môn / Anglesey</span></label><label><input type="radio" autocomplete="off" name="090a08b64612c9a0bd077e2584f2d9c0"><span>Skye</span></label><label><input type="radio" autocomplete="off" name="090a08b64612c9a0bd077e2584f2d9c0"><span>Ynys Enlli / Bardsey</span></label><label><input type="radio" autocomplete="off" name="090a08b64612c9a0bd077e2584f2d9c0"><span>Lewis and Harris</span></label><label><input type="radio" autocomplete="off" name="090a08b64612c9a0bd077e2584f2d9c0"><span>Islay</span></label>
+<div id="webex-78f9dca931ff82f9b89b074b66c3669b" class="webex-radiogroup" data-answer="bAhKCEhTTQkfATs=">
+<label><input type="radio" autocomplete="off" name="78f9dca931ff82f9b89b074b66c3669b"><span>Skye</span></label><label><input type="radio" autocomplete="off" name="78f9dca931ff82f9b89b074b66c3669b"><span>Ynys Môn / Anglesey</span></label><label><input type="radio" autocomplete="off" name="78f9dca931ff82f9b89b074b66c3669b"><span>Ynys Enlli / Bardsey</span></label><label><input type="radio" autocomplete="off" name="78f9dca931ff82f9b89b074b66c3669b"><span>Lewis and Harris</span></label><label><input type="radio" autocomplete="off" name="78f9dca931ff82f9b89b074b66c3669b"><span>Islay</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -326,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What is the precise area of the Isle of Wight (in square kilometres)?</p>
-<p><input class="webex-solveme nospaces" id="webex-05b05a3bfcf66c0732da3a3ea76b1f7b" data-tol="0" size="20" data-answer="axdRCAdDbg=="></p>
+<p><input class="webex-solveme nospaces" id="webex-a19686124a787bb382fb25ddf39bdcc0" data-tol="0" size="20" data-answer="OhMKDgoUbA=="></p>
 </div>
 <div class="webex-solution">
 <p>The precise area of the Isle of Wight was 382 square kilometres.</p>

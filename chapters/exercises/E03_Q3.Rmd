@@ -4,7 +4,7 @@ What was the registered population of Wales in 2021? *(Enter the number without 
 
 ##ANSWER1##
 
-What was the percentage change in the population of Wales between 2011 and 2021?
+What was the percentage change in the population of Wales between 2011 and 2021? *(Can you use the 2011 data in the Wales_headcounts_at_postcodes folder to work this out?)*
 
 ##ANSWER2##
 

@@ -5,17 +5,20 @@
 <link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e01.cy.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>1  Dechrau arni – Llawlyfr QGIS</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -28,9 +31,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../chapters/e02.cy.html" rel="next">
 <link href="../chapters/intro.cy.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -113,30 +116,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../chapters/e02.cy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Cyfansoddi mapiau</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e03.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocodio a phoblogaeth</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e04.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Cyfuno haenau fector</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e05.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Uchder, llethr, a chyflymder gwynt</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e06.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Polygon ardal fferm wynt, golygfa, ac effaith</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -271,9 +250,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Beth yw’r pellter rhwng pwyntiau cardinal eithaf Prydain Fawr (mewn milltiroedd)?</p>
-<p><input class="webex-solveme nospaces" id="webex-9882ada29a3c50b99071572b679fdcc8" data-tol="0" size="20" data-answer="YhoOAlJGPA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-619ea5c7480b6df01d8c17acd4ab9469" data-tol="0" size="20" data-answer="bRMPVVIXPg=="></p>
 <p>Beth yw arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)?</p>
-<p><input class="webex-solveme nospaces" id="webex-7e40d0f406f2fe298b9d8672950323d3" data-tol="50" size="20" data-answer="bEcBB1USOw=="></p>
+<p><input class="webex-solveme nospaces" id="webex-9c6e2fa71d82164a73ac58f71239ceca" data-tol="50" size="20" data-answer="YkEDUgNEPA=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -306,8 +285,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Allwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?</p>
-<div id="webex-a1ef2579019d036749a0499e4a0737e0" class="webex-radiogroup" data-answer="OgFJVh4FGwkcAGQ=">
-<label><input type="radio" autocomplete="off" name="a1ef2579019d036749a0499e4a0737e0"><span>Lewis a Harris</span></label><label><input type="radio" autocomplete="off" name="a1ef2579019d036749a0499e4a0737e0"><span>Islay</span></label><label><input type="radio" autocomplete="off" name="a1ef2579019d036749a0499e4a0737e0"><span>Ynys Enlli</span></label><label><input type="radio" autocomplete="off" name="a1ef2579019d036749a0499e4a0737e0"><span>Skye</span></label><label><input type="radio" autocomplete="off" name="a1ef2579019d036749a0499e4a0737e0"><span>Ynys Môn</span></label>
+<div id="webex-d1557fba448397b985d78691980b1122" class="webex-radiogroup" data-answer="PwEZBRtWTlEYBWU=">
+<label><input type="radio" autocomplete="off" name="d1557fba448397b985d78691980b1122"><span>Skye</span></label><label><input type="radio" autocomplete="off" name="d1557fba448397b985d78691980b1122"><span>Lewis a Harris</span></label><label><input type="radio" autocomplete="off" name="d1557fba448397b985d78691980b1122"><span>Islay</span></label><label><input type="radio" autocomplete="off" name="d1557fba448397b985d78691980b1122"><span>Ynys Enlli</span></label><label><input type="radio" autocomplete="off" name="d1557fba448397b985d78691980b1122"><span>Ynys Môn</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -328,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Beth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?</p>
-<p><input class="webex-solveme nospaces" id="webex-3eed8e8af2901eaaee8cc507b2572b56" data-tol="0" size="20" data-answer="aEdWXApHZQ=="></p>
+<p><input class="webex-solveme nospaces" id="webex-d6a2f4e9bf881efda5b7a1611b00ed31" data-tol="0" size="20" data-answer="PxRSClQWOA=="></p>
 </div>
 <div class="webex-solution">
 <p>Union arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.</p>

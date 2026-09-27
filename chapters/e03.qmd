@@ -1,6 +1,6 @@
 # Geocoding and population {#sec-e03}
 
-The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project.
+The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project...
 
 ::: {.callout-note}
 ## Learning aims
@@ -40,25 +40,24 @@ exams2forms("E03_Q2.Rmd", edir = "exercises")
 
 (@) Save your project!
 
-(@) Open the headcounts layer's `Symbology` window
+(@) As well as being able to classify points by a category from the attribute table (like we did in @sec-filter), points can be graduated by a continuous variable based on size or colour size. This can be a very effective visualization technique. To graduate by size:
 
-(@) Use the drop-down menu to change the symbology source from `Single Symbol` to `Graduated`
-
-(@) Set `Value` to `Total` (i.e. the UK population in 2021)
-
-(@) Set `Method` to `Size`
-
-(@) Click `Classify` → `OK`. Point sizes should now reflect population per postcode
+    i. Open the headcounts layer's `Symbology` window
+    ii. Use the drop-down menu to change the symbology source from `Single Symbol` to `Graduated`
+    iii. Set `Value` to `Total` (i.e. the UK population in 2021)
+    iv. Set `Method` to `Size`
+    v. Click `Classify` → `OK`
 
 ## Finding headcount statistics {#sec-stats4fields}
 
-(@) Click `Vector` → `Analysis Tools` → `Basic Statistics For Fields...`
+(@) CARRY ON FROM HERE - JUSTIFICATION FOR WHY THIS STEP IS USEFUL.. QGIS can easily  especially useful function of GIS is to   is useful to be able to derive statistical information from attributes of all features in a geospatial dataset or from selections of a dataset. This is a powerful tool to derive population statsics from your map tile and windfarm location. To derive statistical information from the attributes of features in a geospatial dataset:
 
-(@) Set `Input layer` to the `Wales_headcounts_at_postcodes_2021.gpkg` layer
-
-(@) Set `Field to calcualate statics on` to `Total`
-
-(@) Click `Run`. Results are presented under the `Log` tab, and can be viewed in the `Results Viewer`. Double-clicking `Statistics` will open the results in a web browser
+    i. Click `Vector` → `Analysis Tools` → `Basic Statistics For Fields...`
+    ii. Set `Input layer` to the `Wales_headcounts_at_postcodes_2021.gpkg` layer
+    iii. Set `Field to calcualate statics on` to `Total`
+    iv. Click `Run`. Results are presented under the `Log` tab, and can be viewed in the `Results Viewer` by double-clicking the `Statistics report` object
+    
+(@) Use `Basic Statistics For Fields...` to determine population sizes and change
 
 ```{r}
 #| echo: false
@@ -68,13 +67,7 @@ library(exams2forms)
 exams2forms("E03_Q3.Rmd", edir = "exercises")
 ```
 
-(@) Right-click on the `2011` census headcount layer and click `Remove Layer...`
-
-::: {.callout-tip}
-# Keeping things tidy
-
-It's good practice to remove layers once you're done with them, to avoid your project becoming too cluttered and confusing.
-:::
+(@) Hopefully you used `Wales_headcounts_at_postcodes_2011.gpkg` to answer the second question! If so, right-click on the `2011` census headcount layer and click `Remove Layer...`. It's good practice to remove layers once you're done with them, to avoid your project becoming over-cluttered
 
 ## Selecting by location {#sec-selectlocation}
 

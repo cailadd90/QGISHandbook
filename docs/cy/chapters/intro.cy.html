@@ -5,17 +5,20 @@
 <link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/intro.cy.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Cyn i chi ddechrau – Llawlyfr QGIS</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -47,9 +50,9 @@ div.csl-indent {
 <link href="../chapters/e01.cy.html" rel="next">
 <link href="../index.cy.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -132,30 +135,6 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../chapters/e02.cy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Cyfansoddi mapiau</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e03.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocodio a phoblogaeth</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e04.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Cyfuno haenau fector</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e05.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Uchder, llethr, a chyflymder gwynt</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/e06.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Polygon ardal fferm wynt, golygfa, ac effaith</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -271,15 +250,18 @@ div.csl-indent {
 </section>
 </div>
 <section id="sec-data" class="level2"><h2 class="anchored" data-anchor-id="sec-data">Mynediad i’r data</h2>
-<p>Mae’r holl setiau data sydd eu hangen arnoch ar gyfer y sesiynau ymarferol a’r prosiect terfynol wedi’u darparu ar y gyriant L:Common Student:</p>
-<p><code>L:/Coleg Gwyddoniaeth/Daearyddiaeth/GEG276</code></p>
-<p>Os yw’n well gennych weithio ar eich cyfrifiadur eich hun, bydd angen i chi gopïo’r setiau data hyn i’ch cyfrifiadur personol. Gallwch wneud hyn mewn un o ddwy ffordd:</p>
-<ol type="1">
-<li><p><strong>Trosglwyddo o’r gyriant L:</strong> Defnyddiwch ddyfais storio USB neu wasanaeth storio cwmwl fel Microsoft OneDrive neu Google Drive i gopïo’r ffeiliau perthnasol o’r gyriant L.</p></li>
-<li><p><strong>Lawrlwytho o Google Drive:</strong> Copïwch y ffeiliau perthnasol gan ddefnyddio’r ddolen <a href="https://drive.google.com/drive/folders/1n8jng_fFgCJ22vY-W9khlk4hEdKQg-CP?usp=sharing" target="_blank">yma</a>.</p></li>
+<ol start="5" class="example" type="1">
+<li><p>Ewch i’r ffolder ar OneDrive lle mae’r data wedi’i storio <a href="https://swanseauniversity-my.sharepoint.com/:f:/g/personal/c_j_t_ladd_swansea_ac_uk/IgC2dkNTfg8nSorMFBg8ZQcvARb4y8V27mGxtNPNwpvvh68" target="_blank">yma</a></p></li>
+<li><p>Cliciwch yr eicon <code>Settings</code> yn y gornel top-dde</p></li>
+<li><p>Cliciwch <code>Sync this OneDrive</code></p></li>
 </ol>
-<p>Er mwyn arbed amser a lle, dim ond lawrlwythwch neu gopïwch y data sydd ei angen arnoch ar gyfer pob ymarfer corff yn hytrach na throsglwyddo popeth ar unwaith.</p>
-</section><section id="storio-data" class="level2"><h2 class="anchored" data-anchor-id="storio-data">Storio data</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/OneDriveSettings.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="8" class="example" type="1">
+<li>Efallai y bydd angen i chi aros am funud, ond dylai’r ffolder fod yn hygyrch drwy eich porwr yn fuan</li>
+</ol></section><section id="storio-data" class="level2"><h2 class="anchored" data-anchor-id="storio-data">Storio data</h2>
 <p>Mae Prifysgol Abertawe yn darparu storfa ddiogel drwy OneDrive a gyriannau rhwydwaith. Mae’r rhain yn ymddangos yr un fath ni heb ots pa gyfrifiadur Prifysgol rydych chi’n mewngofnodi iddo, a gallwch hefyd gael mynediad at OneDrive o’ch dyfeisiau eich hun. Mae gen i ddau awgrym allweddol i chi:</p>
 <ul>
 <li><p><strong>Cadwch eich gwaith i OneDrive bob amser.</strong> Mae hyn yn ei gadw’n ddiogel rhag colli’n ddamweiniol ac yn hygyrch lle bynnag yr ydych. Osgowch storio gwaith cwrs ar yriant C: lleol. Dim ond ar y peiriant hwnnw y mae ffeiliau a gedwir yno ar gael a gallant gael eu dileu’n awtomatig dros nos.</p></li>

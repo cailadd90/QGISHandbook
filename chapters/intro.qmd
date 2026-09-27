@@ -61,10 +61,15 @@ If the setup doesn't work the first time, repeat the steps carefully to confirm 
 
 ## Accessing the data {#sec-data}
 
-(@) **Check this works: Go to OneDrive on the web (onedrive.live.com or your work/school portal). Navigate to Shared in the left sidebar, then find the folder shared with you
-Open the folder and click Sync in the top toolbar. This will download and sync the folder to your PC, and it'll appear in File Explorer under your OneDrive section**
+(@) Navigate to the folder on OneDrive where the data is stored [here](https://swanseauniversity-my.sharepoint.com/:f:/g/personal/c_j_t_ladd_swansea_ac_uk/IgC2dkNTfg8nSorMFBg8ZQcvARb4y8V27mGxtNPNwpvvh68){target='_blank'}
+
+(@) Click the `Settings` icon in the top-right corner
+
+(@) Click `Sync this OneDrive`
 
 ![](figs/OneDriveSettings.png){fig-align='center' width=50%}
+
+(@) You may need to wait a minute, but eventually the folder should be accessible via your browser
 
 <!--
 

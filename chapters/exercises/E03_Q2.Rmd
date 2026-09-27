@@ -3,11 +3,11 @@ Question
 
 Which feature at the most populous postcode area explained the high population count?
 
-**SA:** ##ANSWER1##
+Swansea (SA): ##ANSWER1##
 
-**CF:** ##ANSWER2##
+Cardiff (CF): ##ANSWER2##
 
-**SY:** ##ANSWER3##
+Aberystwyth (SY): ##ANSWER3##
 
 Answerlist
 ----------
