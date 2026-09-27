@@ -7,7 +7,7 @@ Bydd y bennod hon yn eich helpu i feithrin sgiliau ymarferol, osgoi peryglon cyf
 
 Mae nifer o ffyrdd o gael mynediad at QGIS:
 
-::: set-tabiau-panel
+::: panel-tabset
 ## Cyfrifiadur prifysgol
 
 Gellir cael mynediad at QGIS o unrhyw gyfrifiadur o amgylch y campws:
@@ -24,7 +24,7 @@ Mae QGIS yn feddalwedd cod agored am ddim sydd ar gael ar gyfer Windows, Mac, a 
 
 (@) Dwbl-gliciwch ar y ffolder a lawrlwythwyd i gychwyn y gosodiad. I ddefnyddwyr Mac, de-gliciwch ar y ffolder a chliciwch `Open` i gychwyn y gosodiad.
 
-::: awgrym-galwad
+::: callout-tip
 Rwy'n argymell gosod y fersiwn `Long Term Release` o QGIS sydd, mewn theori, â llai o fygiau ynddi. Lawrlwythwch `Latest Release` am y nodweddion mwyaf cyfredol.
 :::
 
@@ -32,7 +32,7 @@ Rwy'n argymell gosod y fersiwn `Long Term Release` o QGIS sydd, mewn theori, â 
 
 Mae'r **Bwrdd Gwaith o Bell** yn caniatáu ichi fewngofnodi i un o gyfrifiaduron Mynediad Agored y Brifysgol o'ch cartref. Ar ôl cysylltu, bydd gennych yr un mynediad at feddalwedd a data ag y byddech pe baech ar y campws yn gorfforol — gan gynnwys gyriant Cyffredin y Myfyrwyr (`L:/Coleg y Gwyddorau/Daearyddiaeth/GEG276`).
 
-::: nodyn-galwad-allan
+::: callout-tip
 Mae nifer y cysylltiadau Penbwrdd o Bell ar yr un pryd wedi'i gapio, felly efallai na fyddwch bob amser yn gallu mewngofnodi.
 :::
 
