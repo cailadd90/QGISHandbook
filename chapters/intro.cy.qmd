@@ -28,35 +28,6 @@ Mae QGIS yn feddalwedd cod agored am ddim sydd ar gael ar gyfer Windows, Mac, a 
 Rwy'n argymell gosod y fersiwn `Long Term Release` o QGIS sydd, mewn theori, â llai o fygiau ynddi. Lawrlwythwch `Latest Release` am y nodweddion mwyaf cyfredol.
 :::
 
-## Remote Desktop
-
-Mae'r **Bwrdd Gwaith o Bell** yn caniatáu ichi fewngofnodi i un o gyfrifiaduron Mynediad Agored y Brifysgol o'ch cartref. Ar ôl cysylltu, bydd gennych yr un mynediad at feddalwedd a data ag y byddech pe baech ar y campws yn gorfforol — gan gynnwys gyriant Cyffredin y Myfyrwyr (`L:/Coleg y Gwyddorau/Daearyddiaeth/GEG276`).
-
-::: callout-tip
-Mae nifer y cysylltiadau Penbwrdd o Bell ar yr un pryd wedi'i gapio, felly efallai na fyddwch bob amser yn gallu mewngofnodi.
-:::
-
-Mae defnyddio'r Penbwrdd o Bell yn gofyn am:
-
-* Dilysu Aml-Ffactor (MFA); ail gam diogelwch yn ogystal â'ch cyfrinair.
-* Yr ap Microsoft Authenticator wedi'i osod ar ffôn clyfar.
-* Mynediad VPN (gweler canllawiau TG y Brifysgol).
-
-I sefydlu MFA ar gyfer Penbwrdd o Bell:
-
-1. Lawrlwythwch yr **Ap Dilysu Microsoft** o'ch siop apiau.
-2. Ewch i'r [hwb MyUni](https://myuni.swansea.ac.uk/){target='_blank'}.
-a mewngofnodi.
-3. Cliciwch **Fy Apiau**.
-4. Dewiswch **Diogelu fy Nghyfrif** (gwaelod ar y dde).
-5. Dewiswch **Ychwanegu dull** (uwchben eich rhif ffôn).
-6. Gosodwch **Ap Dilysu** fel eich dull dilysu diofyn.
-7. Rhowch y cod a anfonwyd atoch drwy neges destun.
-8. Cliciwch **Nesaf** i barhau.
-9. Sganiwch y cod QR a ddangosir ar y sgrin gyda'ch Ap Dilysu.
-
-Os nad yw'r gosodiad yn gweithio'r tro cyntaf, ailadroddwch y camau'n ofalus i gadarnhau bod pob cam wedi'i gwblhau. Os ydych chi'n dal i gael problemau, dilynwch y tiwtorialau ar-lein yn [Remote PC Access Service](https://myuni.swansea.ac.uk/it-services/remote-pc-access-service/){target='_blank'} a [Account Enquiry and MFA Setup](https://myuni.swansea.ac.uk/it-services/account-enquiry/){target='_blank'}, gofynnwch am gymorth gan y tîm TG gan ddefnyddio'r [Wasanaeth Ganolfan](https://swanseauniversity.service-now.com/sp?id=sc_cat_item&sys_id=3f1dd0320a0a0b99000a53f7604a2ef9){target='_blank'}, neu cysylltwch â mi am arweiniad.
-
 :::
 
 ## Mynediad i'r data {#sec-data}
