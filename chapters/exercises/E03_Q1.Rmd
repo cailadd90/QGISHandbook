@@ -1,14 +1,14 @@
 Question
 ========
-How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? *(Enter the number without commas)*
+How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? *(don't use commas)*
 
 ##ANSWER1##
 
-How many people lived in the most populous postcode in the Swansea (SA) area in 2021? *(Enter the number without commas)*
+How many people lived in the most populous postcode in the Swansea (SA) area in 2021? *(don't use commas)*
 
 ##ANSWER2##
 
-How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? *(Enter the number without commas)*
+How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? *(don't use commas)*
 
 ##ANSWER3##
 

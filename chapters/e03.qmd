@@ -2,7 +2,7 @@
 
 > **Date of practical:** 16th October 2026
 
-The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project...
+The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project.
 
 ::: {.callout-note}
 ## Learning aims
@@ -20,7 +20,7 @@ To examine the distribution of postcode reference points within Wales, visualise
 
 (@) Investigate the attribute table and explore how these points are distributed
 
-(@) Using attribute table selection and skills from Chapter 1 (@sec-attrib), find postcodes with the greatest number of people in the Cardiff (`CF`), Swansea (`SA`) and Aberystwyth (`SY`) areas 
+(@) Using attribute table selection and skills from Chapter 1 (@sec-attrib), find postcodes with the greatest number of people in the Cardiff (`CF`), Swansea (`SA`) and Aberystwyth (`SY`) areas to answer the following:
 
 ```{r}
 #| echo: false
@@ -30,7 +30,7 @@ library(exams2forms)
 exams2forms("E03_Q1.Rmd", edir = "exercises")
 ```
 
-(@) Use [Google Maps](https://www.google.com/maps){target='_blank'} to search for these postcodes and discover why these locations have such high population counts
+(@) Use [Google Maps](https://www.google.com/maps){target='_blank'} to search for these postcodes to answer the following:
 
 ```{r}
 #| echo: false
@@ -42,7 +42,7 @@ exams2forms("E03_Q2.Rmd", edir = "exercises")
 
 (@) Save your project!
 
-(@) As well as being able to classify points by a category from the attribute table (like we did in @sec-filter), points can be graduated by a continuous variable based on size or colour size. This can be a very effective visualization technique. To graduate by size:
+(@) As well as being able to classify points by a category from the attribute table (as you did in @sec-filter), points can be graduated by a continuous variable based on size or colour size. This can be a very effective visualization technique. To graduate by size:
 
     i. Open the headcounts layer's `Symbology` window
     ii. Use the drop-down menu to change the symbology source from `Single Symbol` to `Graduated`
@@ -59,7 +59,7 @@ exams2forms("E03_Q2.Rmd", edir = "exercises")
     iii. Set `Field to calcualate statics on` to `Total`
     iv. Click `Run`. Results are presented under the `Log` tab, and can be viewed in the `Results Viewer` by double-clicking the `Statistics report` object
     
-(@) Use `Basic Statistics For Fields...` to determine population sizes and change
+(@) Use `Basic Statistics For Fields...` to answer the following:
 
 ```{r}
 #| echo: false
@@ -71,7 +71,7 @@ exams2forms("E03_Q3.Rmd", edir = "exercises")
 
 (@) Hopefully you used `Wales_headcounts_at_postcodes_2011.gpkg` to answer the second question! If so, right-click on the `2011` census headcount layer and click `Remove Layer...`. It's good practice to remove layers once you're done with them, to avoid your project becoming over-cluttered
 
-## Selecting by location {#sec-selectlocation}
+## Statistics by location {#sec-selectlocation}
 
 (@) Calculate basic statistics on a subset of data in a particular location:
 
@@ -88,7 +88,7 @@ exams2forms("E03_Q3.Rmd", edir = "exercises")
 
 (@) Calculate the 2021 population of Cardiff county
 
-(@) Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results
+(@) Calculate the percentage population change in Swansea county between 2011 and 2021 to answer the following:
 
 ```{r}
 #| echo: false
@@ -195,7 +195,7 @@ Modify the temporary vector layer and save in a sensible location:
 
 (@) Using `Select by Location` (see @sec-selectlocation) and `Basic Statistics` (see @sec-stats4fields), find the total number of people registered to postcodes within 500 m of Tesco stores
 
-(@) For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE). Hint: see @sec-filter
+(@) For the final challenge, answer the following (hint: see @sec-filter):
 
 ```{r}
 #| echo: false

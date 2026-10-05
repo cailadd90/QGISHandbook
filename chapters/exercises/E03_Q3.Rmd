@@ -1,6 +1,6 @@
 Question
 ========
-What was the registered population of Wales in 2021? *(Enter the number without commas)*
+What was the registered population of Wales in 2021? *(don't use commas)*
 
 ##ANSWER1##
 

@@ -1,92 +1,92 @@
-# Cwestiynau Cyffredin {#sec-faq .unnumbered}
+# FAQ {#sec-faq .unnumbered}
 
-Dyma rai o'r problemau cyffredin sy'n codi yn ystod y cwrs hwn a sut i'w datrys.
+Here are some of the commonly-occurring issues that come up during this course and how to resolve them.
 
-::: {.callout-note collapse="true" icon=false} 
-### Nid yw fy map allforiedig yn edrych fel oedden i’n ddisgwyl
+::: {.callout-note collapse="true" icon=false}
+### My exported map doesn't look as I expect
 
-Pan fyddwch chi'n argraffu neu allforio map o QGIS, nid yw'r feddalwedd yn anfon yn union be sy’n weladwy yn y Print Layout i'r argraffydd. Mae QGIS yn cyfeirio at osodiadau'r eitemau map i ddiffinio beth sy'n cael ei argraffu a sut y dylai ymddangos. Os gwnaethoch chi newidiadau i un o’r eitemau map ers i chi adnewyddu'r sgrin ddiwethaf, efallai na fydd y map yn cael ei argraffu fel oeddech chi'n ddisgwyl. Bydd gwneud haen yn weladwy mewn un eitem map yn ei gwneud yn weladwy'n awtomatig (wrth argraffu neu adnewyddu) mewn un arall oni bai eich bod chi'n dewis cloi'r haenau.
+When you come to print or export a map from QGIS, the software does not simply send what is visible in the Print Layout to the printer. Instead, QGIS refers to the map item settings to define what is printed and how it should appear. If you made changes to one part of the composition since you last refreshed the screen, the map might not be printed as you expect. Making a layer visible in one map item will automatically make it visible (on printing or refreshing) in another unless you choose to lock the layers.
 
-I wneud yn siŵr eich bod chi'n argraffu neu'n allforio’n union yr hyn oeddech chi'n bwriadu, ar gyfer pob eitem map:
+To make sure that you print or export only what you intend to, for each map item:
 
-1. Cyfansoddwch yr eitem map gan ddefnyddio'r haenau sydd eu hangen arnoch a'u priodweddau fel y dewiswch
-2. Ticiwch y bocs `lock layers for map item` sydd o dan y tab `Item Properties`
-3. Adnewyddwch y sgrin (`Golygfa > Adnewyddu`) i wneud yn siŵr bod popeth yn edrych fel y ddymunwch
-4. Dim ond wedyn y dylech chi argraffu neu allforio
-:::
-
-::: {.callout-note collapse="true" icon=false} 
-### Nid yw fy attributes table yn edrych fel dwi’n disgwyl
-
-Mae'n debyg bod golwg yr attributes table wedi newid o 'table' i 'form' trwy gamgymeriad. I'w newid yn ôl, cliciwch yr eicon `Switch to table view` (![](figs/SwitchToTableView.png){width=3%})
-:::
-
-::: {.callout-note collapse="true" icon=false} 
-### Mae'r ffenestr "Handle Bad Layers" yn ymddangos pan dwi’n agor prosiect
-
-Os, pan fyddwch chi'n agor prosiect sy'n bodoli eisoes, ydych chi'n cael neges yn dweud 'Handle Bad Layers', yna ni all eich prosiect QGIS gysylltu â rhai neu'r holl haenau data rydych chi wedi'u hagor o'r blaen. Gall hyn ddigwydd os byddwch chi'n symud neu'n dileu ffeiliau data sy'n rhan o'ch prosiect yn anfwriadol. Yr unig ffordd i adfer yw rhoi pethau yn ôl fel yr oeddent, neu ailagor y 'Bad Layers'.
-
-Rheswm posibl arall am 'Bad Layers' yw bod OneDrive wedi methu cysylltu'n gywir â'ch cyfrifiadur pan wnaethoch chi fewngofnodi. Yr ateb gorau yw allgofnodi ac mewngofnodi eto.
+1. Compose the map item using the layers you need and their properties as you choose
+2. Check the tickbox `lock layers for map item` which you will find under the `Item Properties` tab
+3. Refresh the screen (`View` → `Refresh`) to make sure that everything looks as you want it to
+4. Only then should you print or export
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### Rwy'n cael y gwall "One or more input features have invalid geometry"
+### My attributes table doesn't look as I expect
 
-‘Invalid geometry’ yw pan fydd haen fector yn torri, fel pan fydd ffin polygon yn croesi ei hun neu pan fydd gan linell hyd sero. Gall geometregau annilys ymddangos wrth drin haenau e.e. clipio ffyrdd i’ch deilsen map.
-
-I ddatrys ‘invalid geometries’:
-
-1. Gwnewch yn siŵr bod y `Processing Toolbox` yn weladwy drwy glicio ar yr eicon cocsen (![](figs/ProcessingToolbox.png){width=3%})
-2. Chwiliwch am `fix geometries`
-3. Dwbl-gliciwch ar `Fix geometries`
-4. O dan y cwymplen `Input layer`, dewiswch yr haen fector tramgwyddus
-5. Cliciwch `Run` → `Close`
-
-Bydd haen newydd yn cael ei chreu, sy'n edrych yn union yr un fath â'r haen wreiddiol, gyda'r geometregau toredig wedi'u datrys. Gallwch nawr fwrw ymlaen â'ch llif gwaith gwreiddiol.
+It's likely the attributes table view has been changed from 'table' to 'form' by mistake. To switch it back, click the `Switch to table view` icon (![](figs/SwitchToTableView.png){width=3%})
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### Mae fy newislen "Processing" ar goll
+### The "Handle Bad Layers" window appears when I open a project 
 
-Mae'r ddewislen ‘Processing’ yn ategyn QGIS, felly mae'n debygol bod yr ategyn ar goll yn eich prosiect.
+If, when you open an existing project, you are presented with a message saying 'Handle Bad Layers', then your QGIS project cannot connect to some or all of the data layers that you have opened previously. This can happen if you inadvertently move or delete data files that are part of your project. The only way to recover is to put things back as they were, or to re-open the 'Bad Layers'.
 
-I'w ychwanegu yn ôl i mewn:
-
-1. Cliciwch ar `Plugins` → `Manage and Install Plugins...`
-2. Chwiliwch am `processing`
-3. Ticiwch y blwch ger `Processing`
-4. Cliciwch `Close`
-
-Dylai'r ddewislen 'Processing' nawr fod yn weladwy.
+Another possible cause for 'Bad Layers' is that OneDrive did not connect properly to your computer when you logged in. The best solution is to log out and in again.
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### Ni chadwyd fy ngwaith
+### I'm getting the error "One or more input features have invalid geometry"
 
-Y tri rheswm mwyaf tebygol yw:
+Invalid geometry is when a vector layer breaks, such as when a polygon boundary crosses itself or a line has zero length. Invalid geometries can creep in when manipulating layers e.g. cropping roads to your map tile. 
 
-1. Fe wnaethoch chi allgofnodi o'ch cyfrifiadur cyn i OneDrive gael amser i gysoni ffeiliau'n gywir (h.y. symud eich data o'r cyfrifiadur i'r cwmwl). Gwnewch yn siŵr bob amser bod tic bach wrth ymyl eich ffeil yn y porwr i gadarnhau bod y ffeil wedi'i gysoni'n gywir.
-2. Fe wnaethoch chi gadw'r data yn 'lleol' (h.y. ar y cyfrifiadur) yn hytrach nag ar eich OneDrive. *Efallai* byddwch chi'n gallu adfer eich ffeiliau os byddwch chi'n dychwelyd i'r union gyfrifiadur roeddech chi'n ei ddefnyddio, ac yna'n cadw'r data ar eich OneDrive. Ond, mae cyfrifiaduron y Brifysgol yn cael eu dileu bob dydd Gwener - felly byddwch yn gyflym!
-3. Rydych chi wedi cadw'r data ar eich OneDrive, ond allwch chi ddim cofio ble. Ceisiwch ddod o hyd i'r ffeiliau o dan yr eicon 'Recent' ar eich porwr, yna cadwch nhw yn rhywle mwy synhwyrol.
+To resolve invalid geometries:
+
+1. Ensure the `Processing Toolbox` is visible by clicking the cog icon (![](figs/ProcessingToolbox.png){width=3%})
+2. Search for `fix geometries`
+3. Double-click on `Fix geometries`
+4. Under the `Input layer` drop-down, select the offending vector layer
+5. Click `Run` → `Close`
+
+A new layer will be created, which looks identical to the original layer, with the broken geometries resolved. You can now proceed with your original workflow.
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### Sut alla i drefnu eitemau map yn berffaith ar y print layout?
+### My "Processing" menu is missing
 
-Defnyddiwch 'guides'. Mae'r rhain yn caniatáu ichi snapio eitemau map (e.e. ymyl map) ar y llinell, gan alinio popeth yn berffaith.
+The 'Processing' menu is a QGIS plugin, so it's likely the plugin is missing on your project. 
 
-I ychwanegu tywyslinellau:
+To add it back in:
 
-1. Cliciwch y tab `Guides`, neu cliciwch `View` → `Show Guides` os nad ydyn nhw'n weladwy
-2. Cliciwch yr eicon `Add new guide` (![](figs/AddANewGrid.png){width=3%})
-3. Gosodwch bellter y tywyslinell, a fydd mewn mm o'r brig (tywyslinellau llorweddol) neu o'r chwith (tywyslinellau fertigol)
+1. Click `Plugins` → `Manage and Install Plugins...`
+2. Search for `processing`
+3. Check the box next to `Processing`
+4. Click `Close`
+
+The 'Processing' menu should now be visible.
 :::
 
-::: {.callout-note collapse="true" icon=false} 
-### Mae un o fy mhaneli ar goll, sut alla i ei gael yn ôl?
+::: {.callout-note collapse="true" icon=false}
+### My work didn't save
 
-Os oes panel neu far offer ar goll:
+The three most likely reasons are: 
 
-1. Cliciwch `View` → `Panels` or `Toolbars`
-2. Dewiswch y panel/bar offer perthnasol
+1. You logged out of your PC before OneDrive had time to sync files correctly (i.e. move your data from the PC to the cloud). Always ensure there is a small tick next to your file in the browser window to confirm the file has been synced correctly. 
+2. You saved the data 'locally' (i.e. on the PC) rather than on your OneDrive. You *may* be able to recover your files if you return to the exact PC you were using, and then save the data on your OneDrive. However, University PCs are wiped every Friday - so be quick!
+3. You have saved the data on your OneDrive, but you can't remember where. Try finding the files under the 'Recent' icon on your browser, then save them somewhere more sensible.
+:::
+
+::: {.callout-note collapse="true" icon=false}
+### How can I arrange map items perfectly on the print layout?
+
+Use 'guides'. These allow you snap map items (e.g. the edge of a map) onto the line, aligning everything perfectly.
+
+To add guides:
+
+1. Click the `Guides` tab, or click `View` → `Show Guides` if they're not visible
+2. Click the `Add new guide` icon (![](figs/AddANewGrid.png){width=3%})
+3. Set the guide distance, which will be in mm from the top (horizontal guides) or left (vertical guides)
+:::
+
+::: {.callout-note collapse="true" icon=false}
+### One of my panels is missing, how do I get it back?
+
+If a panel or toolbar is missing:
+
+1. Click `View` → `Panels` or `Toolbars`
+2. Select the relevant panel/toolbar
 :::

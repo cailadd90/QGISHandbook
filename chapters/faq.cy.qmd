@@ -1,76 +1,92 @@
-# FAQ {#sec-faq .unnumbered}
+# Cwestiynau Cyffredin {#sec-faq .unnumbered}
 
 Dyma rai o'r problemau cyffredin sy'n codi yn ystod y cwrs hwn a sut i'w datrys.
 
-::: {.callout-note collapse="true" icon=false}
+::: {.callout-note collapse="true" icon=false} 
 ### Nid yw fy map allforiedig yn edrych fel oedden i’n ddisgwyl
 
-When you come to print or export a map from QGIS, the software does not simply send what is visible in the Print Layout to the printer. Instead, QGIS refers to the map item settings to define what is printed and how it should appear. If you made changes to one part of the composition since you last refreshed the screen, the map might not be printed as you expect. Making a layer visible in one map item will automatically make it visible (on printing or refreshing) in another unless you choose to lock the layers.
+Pan fyddwch chi'n argraffu neu allforio map o QGIS, nid yw'r feddalwedd yn anfon yn union be sy’n weladwy yn y Print Layout i'r argraffydd. Mae QGIS yn cyfeirio at osodiadau'r eitemau map i ddiffinio beth sy'n cael ei argraffu a sut y dylai ymddangos. Os gwnaethoch chi newidiadau i un o’r eitemau map ers i chi adnewyddu'r sgrin ddiwethaf, efallai na fydd y map yn cael ei argraffu fel oeddech chi'n ddisgwyl. Bydd gwneud haen yn weladwy mewn un eitem map yn ei gwneud yn weladwy'n awtomatig (wrth argraffu neu adnewyddu) mewn un arall oni bai eich bod chi'n dewis cloi'r haenau.
 
-To make sure that you print or export only what you intend to, for each map item:
+I wneud yn siŵr eich bod chi'n argraffu neu'n allforio’n union yr hyn oeddech chi'n bwriadu, ar gyfer pob eitem map:
 
-1. Compose the map item using the layers you need and their properties as you choose.
+1. Cyfansoddwch yr eitem map gan ddefnyddio'r haenau sydd eu hangen arnoch a'u priodweddau fel y dewiswch
+2. Ticiwch y bocs `lock layers for map item` sydd o dan y tab `Item Properties`
+3. Adnewyddwch y sgrin (`Golygfa > Adnewyddu`) i wneud yn siŵr bod popeth yn edrych fel y ddymunwch
+4. Dim ond wedyn y dylech chi argraffu neu allforio
+:::
 
-2. Check the tickbox `lock layers for map item` which you will find under the `Item Properties` tab.
+::: {.callout-note collapse="true" icon=false} 
+### Nid yw fy attributes table yn edrych fel dwi’n disgwyl
 
-3. Refresh the screen (`View > Refresh`) to make sure that everything looks as you want it to.
+Mae'n debyg bod golwg yr attributes table wedi newid o 'table' i 'form' trwy gamgymeriad. I'w newid yn ôl, cliciwch yr eicon `Switch to table view` (![](figs/SwitchToTableView.png){width=3%})
+:::
 
-4. Only then should you print or export.
+::: {.callout-note collapse="true" icon=false} 
+### Mae'r ffenestr "Handle Bad Layers" yn ymddangos pan dwi’n agor prosiect
+
+Os, pan fyddwch chi'n agor prosiect sy'n bodoli eisoes, ydych chi'n cael neges yn dweud 'Handle Bad Layers', yna ni all eich prosiect QGIS gysylltu â rhai neu'r holl haenau data rydych chi wedi'u hagor o'r blaen. Gall hyn ddigwydd os byddwch chi'n symud neu'n dileu ffeiliau data sy'n rhan o'ch prosiect yn anfwriadol. Yr unig ffordd i adfer yw rhoi pethau yn ôl fel yr oeddent, neu ailagor y 'Bad Layers'.
+
+Rheswm posibl arall am 'Bad Layers' yw bod OneDrive wedi methu cysylltu'n gywir â'ch cyfrifiadur pan wnaethoch chi fewngofnodi. Yr ateb gorau yw allgofnodi ac mewngofnodi eto.
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### My attributes table doesn't look as I expect
+### Rwy'n cael y gwall "One or more input features have invalid geometry"
 
-asdf
+‘Invalid geometry’ yw pan fydd haen fector yn torri, fel pan fydd ffin polygon yn croesi ei hun neu pan fydd gan linell hyd sero. Gall geometregau annilys ymddangos wrth drin haenau e.e. clipio ffyrdd i’ch deilsen map.
+
+I ddatrys ‘invalid geometries’:
+
+1. Gwnewch yn siŵr bod y `Processing Toolbox` yn weladwy drwy glicio ar yr eicon cocsen (![](figs/ProcessingToolbox.png){width=3%})
+2. Chwiliwch am `fix geometries`
+3. Dwbl-gliciwch ar `Fix geometries`
+4. O dan y cwymplen `Input layer`, dewiswch yr haen fector tramgwyddus
+5. Cliciwch `Run` → `Close`
+
+Bydd haen newydd yn cael ei chreu, sy'n edrych yn union yr un fath â'r haen wreiddiol, gyda'r geometregau toredig wedi'u datrys. Gallwch nawr fwrw ymlaen â'ch llif gwaith gwreiddiol.
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### The "Handle Bad Layers" window appears when I open a project 
-* If, when you open an existing project, you are presented with a table saying “Handle Bad Layers”, then your QGIS project cannot connect to some or all of the data layers that you have opened previously. This can happen if you inadvertently move or delete data files that are part of your project. The only way to recover is to put things back as they were, or to re-open the ‘Bad Layers’.
+### Mae fy newislen "Processing" ar goll
 
-* Another possible cause for ‘Bad Layers’ is that OneDrive or the L:drive did not connect properly to your computer when you logged in, and the best solution is to log out and in again.
+Mae'r ddewislen ‘Processing’ yn ategyn QGIS, felly mae'n debygol bod yr ategyn ar goll yn eich prosiect.
+
+I'w ychwanegu yn ôl i mewn:
+
+1. Cliciwch ar `Plugins` → `Manage and Install Plugins...`
+2. Chwiliwch am `processing`
+3. Ticiwch y blwch ger `Processing`
+4. Cliciwch `Close`
+
+Dylai'r ddewislen 'Processing' nawr fod yn weladwy.
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### I'm getting the error "One or more input features have invalid geometry"
+### Ni chadwyd fy ngwaith
 
-asdf
+Y tri rheswm mwyaf tebygol yw:
+
+1. Fe wnaethoch chi allgofnodi o'ch cyfrifiadur cyn i OneDrive gael amser i gysoni ffeiliau'n gywir (h.y. symud eich data o'r cyfrifiadur i'r cwmwl). Gwnewch yn siŵr bob amser bod tic bach wrth ymyl eich ffeil yn y porwr i gadarnhau bod y ffeil wedi'i gysoni'n gywir.
+2. Fe wnaethoch chi gadw'r data yn 'lleol' (h.y. ar y cyfrifiadur) yn hytrach nag ar eich OneDrive. *Efallai* byddwch chi'n gallu adfer eich ffeiliau os byddwch chi'n dychwelyd i'r union gyfrifiadur roeddech chi'n ei ddefnyddio, ac yna'n cadw'r data ar eich OneDrive. Ond, mae cyfrifiaduron y Brifysgol yn cael eu dileu bob dydd Gwener - felly byddwch yn gyflym!
+3. Rydych chi wedi cadw'r data ar eich OneDrive, ond allwch chi ddim cofio ble. Ceisiwch ddod o hyd i'r ffeiliau o dan yr eicon 'Recent' ar eich porwr, yna cadwch nhw yn rhywle mwy synhwyrol.
 :::
 
 ::: {.callout-note collapse="true" icon=false}
-### My 'Processing' menu is missing
+### Sut alla i drefnu eitemau map yn berffaith ar y print layout?
 
-* If that doesn’t work, explore the Plugins dialog to make sure that the basic processing tools are ‘activated’ (search on “Processing”)
+Defnyddiwch 'guides'. Mae'r rhain yn caniatáu ichi snapio eitemau map (e.e. ymyl map) ar y llinell, gan alinio popeth yn berffaith.
+
+I ychwanegu tywyslinellau:
+
+1. Cliciwch y tab `Guides`, neu cliciwch `View` → `Show Guides` os nad ydyn nhw'n weladwy
+2. Cliciwch yr eicon `Add new guide` (![](figs/AddANewGrid.png){width=3%})
+3. Gosodwch bellter y tywyslinell, a fydd mewn mm o'r brig (tywyslinellau llorweddol) neu o'r chwith (tywyslinellau fertigol)
 :::
 
-::: {.callout-note collapse="true" icon=false}
-### My work didn't save
+::: {.callout-note collapse="true" icon=false} 
+### Mae un o fy mhaneli ar goll, sut alla i ei gael yn ôl?
 
-asdf
+Os oes panel neu far offer ar goll:
+
+1. Cliciwch `View` → `Panels` or `Toolbars`
+2. Dewiswch y panel/bar offer perthnasol
 :::
-
-## How can I arrange map items perfectly on the print layout?{#sec-guides}
-
-::: {.callout-note collapse="true" icon=false}
-### How can I arrange map items perfectly on the print layout?
-
-Use `Guides`
-:::
-
-## How can I make "Fig. 1." bold, keeping the rest of the text normal?{#sec-font}
-
-::: {.callout-note collapse="true" icon=false}
-### How can I make "Fig. 1." bold, keeping the rest of the text normal?
-
-Check `Render as HTML` and wrap the target text in <b> and </b> tags. 
-
-<span style="font-family: Cantarell; font-size: 24pt"><b>Fig. 1.</b>&nbsp;Wales principal areas.</span>
-
-:::
-
-::: {.callout-note collapse="true" icon=false}
-### One of my panels (Layers, Items, Item Properties) has gone missing, how do I get it back?
-
-View -> relevant panels. Sometimes missing, not on default
-:::
-

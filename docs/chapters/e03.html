@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cwestiynau Cyffredin</span></a>
+ <span class="menu-text">FAQ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
 <li><a href="#exploring-postcode-locations" id="toc-exploring-postcode-locations" class="nav-link active" data-scroll-target="#exploring-postcode-locations"><span class="header-section-number">3.1</span> Exploring postcode locations</a></li>
   <li><a href="#sec-stats4fields" id="toc-sec-stats4fields" class="nav-link" data-scroll-target="#sec-stats4fields"><span class="header-section-number">3.2</span> Finding headcount statistics</a></li>
-  <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Selecting by location</a></li>
+  <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Statistics by location</a></li>
   <li><a href="#creating-a-population-density-heatmap" id="toc-creating-a-population-density-heatmap" class="nav-link" data-scroll-target="#creating-a-population-density-heatmap"><span class="header-section-number">3.4</span> Creating a population density heatmap</a></li>
   <li><a href="#geocoding-new-addresses" id="toc-geocoding-new-addresses" class="nav-link" data-scroll-target="#geocoding-new-addresses"><span class="header-section-number">3.5</span> Geocoding new addresses</a></li>
   <li><a href="#sec-export" id="toc-sec-export" class="nav-link" data-scroll-target="#sec-export"><span class="header-section-number">3.6</span> Exporting vector layers</a></li>
@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 </header><blockquote class="blockquote">
 <p><strong>Date of practical:</strong> 16th October 2026</p>
 </blockquote>
-<p>The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project…</p>
+<p>The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -193,16 +193,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer to your project</p></li>
 <li><p>Add the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer to your project. This dataset contains the number of households and people registered at each postcode (taken from the 2021 Census), combined with coordinates from OS OpenData</p></li>
 <li><p>Investigate the attribute table and explore how these points are distributed</p></li>
-<li><p>Using attribute table selection and skills from Chapter 1 (<a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>), find postcodes with the greatest number of people in the Cardiff (<code>CF</code>), Swansea (<code>SA</code>) and Aberystwyth (<code>SY</code>) areas</p></li>
+<li><p>Using attribute table selection and skills from Chapter 1 (<a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>), find postcodes with the greatest number of people in the Cardiff (<code>CF</code>), Swansea (<code>SA</code>) and Aberystwyth (<code>SY</code>) areas to answer the following:</p></li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-6220431b8d6f6eeb4438108687f04d90" data-tol="0" size="20" data-answer="bRADBQ0AEz8="></p>
-<p>How many people lived in the most populous postcode in the Swansea (SA) area in 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-dad35df46d95fcfbed0788cadb367667" data-tol="0" size="20" data-answer="P0NVCgdWRGk="></p>
-<p>How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-d56aeacaa3dda5e19e82b5d3da354401" data-tol="0" size="20" data-answer="PxcOU1VDPg=="></p>
+<p>How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? <em>(don’t use commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-2f408313e7583beaf4c20ed74e956321" data-tol="0" size="20" data-answer="aUQFBQEAE24="></p>
+<p>How many people lived in the most populous postcode in the Swansea (SA) area in 2021? <em>(don’t use commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-0e24647b4d82d3a112fe91d98248dfe7" data-tol="0" size="20" data-answer="a0cDDQQGFT8="></p>
+<p>How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? <em>(don’t use commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-e1ee90adbfabce827d15252739308975" data-tol="0" size="20" data-answer="PhNdVwkSPA=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -213,24 +213,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <ol start="6" class="example" type="1">
-<li>Use <a href="https://www.google.com/maps" target="_blank">Google Maps</a> to search for these postcodes and discover why these locations have such high population counts</li>
+<li>Use <a href="https://www.google.com/maps" target="_blank">Google Maps</a> to search for these postcodes to answer the following:</li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which feature at the most populous postcode area explained the high population count?</p>
-<p>Swansea (SA): <select class="webex-select" id="webex-bcbdf6291a12656f5f10a43e78bdf2b5" data-answer="OVJOVEoGHgkdUWw="><option value="blank"></option>
+<p>Swansea (SA): <select class="webex-select" id="webex-fd18e796c3d78989c96200ab9ae7a7ec" data-answer="PVUdCEkHFQZPAzk="><option value="blank"></option>
 <option>Student halls</option>
 <option>Prison</option>
 <option>Hospital</option>
 <option>Military barracks</option>
 <option>Care home</option></select></p>
-<p>Cardiff (CF): <select class="webex-select" id="webex-df58d22f710b5fe1f6a195c42c601301" data-answer="P1YZCUgCHlYbAW0="><option value="blank"></option>
+<p>Cardiff (CF): <select class="webex-select" id="webex-db1923d4e7e8db7f546e2bd033ebb612" data-answer="P1IdCB4DSARJBzg="><option value="blank"></option>
 <option>Student halls</option>
 <option>Prison</option>
 <option>Hospital</option>
 <option>Military barracks</option>
 <option>Care home</option></select></p>
-<p>Aberystwyth (SY): <select class="webex-select" id="webex-eae280aa7946689c268f76e5a592dc12" data-answer="PlBJAhQATVEbCWk="><option value="blank"></option>
+<p>Aberystwyth (SY): <select class="webex-select" id="webex-8f71b92c6b5c1657c5f410faa87311fa" data-answer="Y1cbAU4JHlMaUmg="><option value="blank"></option>
 <option>Student halls</option>
 <option>Prison</option>
 <option>Hospital</option>
@@ -248,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
 <ol start="7" class="example" type="1">
 <li><p>Save your project!</p></li>
 <li>
-<p>As well as being able to classify points by a category from the attribute table (like we did in <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a>), points can be graduated by a continuous variable based on size or colour size. This can be a very effective visualization technique. To graduate by size:</p>
+<p>As well as being able to classify points by a category from the attribute table (as you did in <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a>), points can be graduated by a continuous variable based on size or colour size. This can be a very effective visualization technique. To graduate by size:</p>
 <ol type="i">
 <li>Open the headcounts layer’s <code>Symbology</code> window</li>
 <li>Use the drop-down menu to change the symbology source from <code>Single Symbol</code> to <code>Graduated</code>
@@ -274,14 +274,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Click <code>Run</code>. Results are presented under the <code>Log</code> tab, and can be viewed in the <code>Results Viewer</code> by double-clicking the <code>Statistics report</code> object</li>
 </ol>
 </li>
-<li><p>Use <code>Basic Statistics For Fields...</code> to determine population sizes and change</p></li>
+<li><p>Use <code>Basic Statistics For Fields...</code> to answer the following:</p></li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>What was the registered population of Wales in 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-5075d009741a0f950d23f277e20383dc" data-tol="0" size="20" data-answer="bhIEBFQHBAkHFmw="></p>
+<p>What was the registered population of Wales in 2021? <em>(don’t use commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-c2ca5991bdeec6fd0b21b67bb38099f8" data-tol="0" size="20" data-answer="OBBQUAUODQFSRjg="></p>
 <p>What was the percentage change in the population of Wales between 2011 and 2021? <em>(Can you use the 2011 data in the Wales_headcounts_at_postcodes folder to work this out?)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-8ab625e6e4fc0d070072d3a11272386e" data-tol="1" size="20" data-answer="Y0NTFG8="></p>
+<p><input class="webex-solveme nospaces" id="webex-240eeb39584f0c6c649fd98d555a9261" data-tol="1" size="20" data-answer="aRYBRzg="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -293,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 <ol start="11" class="example" type="1">
 <li>Hopefully you used <code>Wales_headcounts_at_postcodes_2011.gpkg</code> to answer the second question! If so, right-click on the <code>2011</code> census headcount layer and click <code>Remove Layer...</code>. It’s good practice to remove layers once you’re done with them, to avoid your project becoming over-cluttered</li>
 </ol></section><section id="sec-selectlocation" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sec-selectlocation">
-<span class="header-section-number">3.3</span> Selecting by location</h2>
+<span class="header-section-number">3.3</span> Statistics by location</h2>
 <ol start="12" class="example" type="1">
 <li>
 <p>Calculate basic statistics on a subset of data in a particular location:</p>
@@ -315,16 +315,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><p>Use the <code>Basic Statistics For Fields...</code> tool to find the 2021 <code>Total</code> population of Swansea. <strong>Make sure <code>Selected features only</code> is checked this time</strong></p></li>
 <li><p>Calculate the 2021 population of Cardiff county</p></li>
-<li><p>Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results</p></li>
+<li><p>Calculate the percentage population change in Swansea county between 2011 and 2021 to answer the following:</p></li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What was the total population of Swansea county in 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-93d8a0f97f2a5a5adfa87af39999c1f8" data-tol="0" size="20" data-answer="YhFWC1kEUg4VOw=="></p>
+<p><input class="webex-solveme nospaces" id="webex-0d79f21d1ecf942dc4a79d77f259810f" data-tol="0" size="20" data-answer="a0YFCl4GBVMTOA=="></p>
 <p>What was the total population of Cardiff county in 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-5b47cf468ebcf63182fbf8b622218540" data-tol="0" size="20" data-answer="bkAHAVFVAQAaOA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-02a86ea9792e98189332f54d26f35f22" data-tol="0" size="20" data-answer="axBSDgRWVA8VZA=="></p>
 <p>What was the percentage change in the population of Swansea county between 2011 and 2021? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-a551ecdd147fdea3a46e469cbe25edb4" data-tol="1" size="20" data-answer="OhcYAUtRRjk="></p>
+<p><input class="webex-solveme nospaces" id="webex-15f8dfb14e0b15e8fd6effe36aada5e8" data-tol="1" size="20" data-answer="ahdLCEpUQGw="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -485,12 +485,12 @@ vii. Click `OK`</code></pre>
 </div>
 <ol start="25" class="example" type="1">
 <li><p>Using <code>Select by Location</code> (see <a href="#sec-selectlocation" class="quarto-xref"><span>Section 3.3</span></a>) and <code>Basic Statistics</code> (see <a href="#sec-stats4fields" class="quarto-xref"><span>Section 3.2</span></a>), find the total number of people registered to postcodes within 500 m of Tesco stores</p></li>
-<li><p>For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE). Hint: see <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a></p></li>
+<li><p>For the final challenge, answer the following (hint: see <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a>):</p></li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? <em>(Enter the number without commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-0943485cea31a8d47e01a88c5a116aae" data-tol="0" size="20" data-answer="axsHAQ0MBUE4"></p>
+<p>What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? <em>(don’t use commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-bff9928acc86d6941b4b4693a27d06b4" data-tol="0" size="20" data-answer="OURVCwAGCEM+"></p>
 </div>
 <div class="webex-solution">
 <p>The total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE) was 32,940.</p>
@@ -1526,8 +1526,8 @@ window.onload = function() {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/faq.html" class="pagination-link" aria-label="Cwestiynau Cyffredin">
-        <span class="nav-page-text">Cwestiynau Cyffredin</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/faq.html" class="pagination-link" aria-label="FAQ">
+        <span class="nav-page-text">FAQ</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

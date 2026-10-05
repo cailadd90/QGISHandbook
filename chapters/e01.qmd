@@ -60,14 +60,14 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
 
 ## Measuring geospatial objects {#sec-measuring}
 
-(@) Click the drop-down arrow next to the `Measure` icon to select the appropriate tool for measuring:
-
-    i The distance between the two furthest points on Great Britain (in miles)?
-    ii. The approximate area of the Isle of Man (in square kilometres)
+(@) Click the drop-down arrow next to the `Measure` icon to select the appropriate tool. 
 
 ![](figs/MeasureDropdown.png){fig-align='center' width=25%}
 
-(@) Use left-click to add points, and right-click to stop taking the length / area measurements
+Answer the following:
+
+    i The distance between the two furthest points on Great Britain (in miles)?
+    ii. The approximate area of the Isle of Man (in square kilometres)
 
 ```{r}
 #| echo: false

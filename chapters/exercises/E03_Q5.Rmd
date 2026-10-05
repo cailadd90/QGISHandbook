@@ -1,6 +1,6 @@
 Question
 ========
-What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? *(Enter the number without commas)*
+What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? *(don't use commas)*
 
 Solution
 ========
