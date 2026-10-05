@@ -1,9 +1,9 @@
 # FAQ {#sec-faq .unnumbered}
 
-Here are some of the commonly-occurring issues that come up during this course and how to resolve them.
+Dyma rai o'r problemau cyffredin sy'n codi yn ystod y cwrs hwn a sut i'w datrys.
 
 ::: {.callout-note collapse="true" icon=false}
-### My exported map doesn't look as I expect
+### Nid yw fy map allforiedig yn edrych fel oedden i’n ddisgwyl
 
 When you come to print or export a map from QGIS, the software does not simply send what is visible in the Print Layout to the printer. Instead, QGIS refers to the map item settings to define what is printed and how it should appear. If you made changes to one part of the composition since you last refreshed the screen, the map might not be printed as you expect. Making a layer visible in one map item will automatically make it visible (on printing or refreshing) in another unless you choose to lock the layers.
 
