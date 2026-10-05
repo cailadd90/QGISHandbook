@@ -102,7 +102,7 @@ Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. 
     viii. Gwiriwch `Draw Coordinates`
     ix. Addaswch briodweddau'r grid, yn enwedig `Grid type`, `Frame`, a `Draw Coordinates`. Allwch chi addasu'r labeli er mwyn gwneud nhw'n ddarllenadwy, meddalu'r llinellau grid, a gwaredu seroau diangen?
 
-(@) Weithiau sylwer bod rhai o eitemau'r map, yn enwedig y cyfesurynnau, bellach y tu hwnt i ymyl y dudalen. Bydd rhain yn cael eu colli pan fydd y map yn cael ei allforio! Yn yr achosion hyn, bydd angen i chi addasu maint y map wrth i chi arbrofi gyda'r ffordd orau o drefnu eitemau map a'r capsiwn (gweler [Adran 2.3](#sec-mapitem). Gwiriwch sut y gall defnyddio [Tywyslinellau](#sec-guides) i'ch cynorthwyo i alinio eitemau map yn berffaith ar y dudalen
+(@) Weithiau sylwer bod rhai o eitemau'r map, yn enwedig y cyfesurynnau, bellach y tu hwnt i ymyl y dudalen. Bydd rhain yn cael eu colli pan fydd y map yn cael ei allforio! Yn yr achosion hyn, bydd angen i chi addasu maint y map wrth i chi arbrofi gyda'r ffordd orau o drefnu eitemau map a'r capsiwn (gweler [Adran 2.3](#sec-mapitem). Gwiriwch sut y gall defnyddio tywyslinellau i'ch cynorthwyo i alinio eitemau map yn berffaith ar y dudalen (gweler [FAQ](#sec-faq)).
 
 ## Ychwanegu labeli ac allwedd
 
@@ -195,7 +195,7 @@ Rhowch bwyslais ar ychydig o haenau yn unig, wedi'u cyflwyno'n syml, sy'n ddefny
     
 (@) Llongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr, gwnewch unrhyw adolygiadau (gan gynnwys uchder y map) er mwyn gallu cyflwyno'r Map 1 gorau y gallwch chi!
 
-::: {.nodyn-galwad}
+::: {.callout-note}
 # Canlyniadau dysgu
 
 Erbyn diwedd yr ymarfer hwn dylech chi allu:
