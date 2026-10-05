@@ -84,11 +84,7 @@ exams2forms("E03_Q3.Rmd", edir = "exercises")
     vii. Click `Run`
     viii. If done correctly, you'll see all postcode centroids in Swansea county have been selected (highlighted yellow)
 
-(@) Use the `Basic Statistics For Fields...` tool to find the 2021 `Total` population of Swansea. **Make sure `Selected features only` is checked this time** 
-
-(@) Calculate the 2021 population of Cardiff county
-
-(@) Calculate the percentage population change in Swansea county between 2011 and 2021 to answer the following:
+(@) Use the `Basic Statistics For Fields...` tool to answer the following (**make sure `Selected features only` is checked this time**):
 
 ```{r}
 #| echo: false
@@ -141,8 +137,6 @@ exams2forms("E03_Q4.Rmd", edir = "exercises")
     v. Click `Install Plugin`
     vi. Click `Close`
 
-![](figs/mmqgis.png){fig-align='center' width=50%}
-
 (@) Use the `MMQGIS` tool to attach coordinates to postcode data:
 
     i. Click `MMQGIS` → `Geocode` → `Geocode CSV with Web Service`
@@ -154,8 +148,6 @@ exams2forms("E03_Q4.Rmd", edir = "exercises")
     vii. Click `Apply`
     viii. Wait until `Geocoded 7 of 7` appears beneath the tool and check the postcodes appear in the correct places
     ix. Click `Close`
-    
-![](figs/Geocode.png){fig-align='center' width=50%}
 
 ::: {.callout-important} 
 # Temporary output {#sec-tempout}
@@ -175,8 +167,6 @@ Modify the temporary vector layer and save in a sensible location:
     vi. Under `Select fields to export and their export options`, you can decide what information should appear in the attribute table. Keep things tidy by only including the store name and postcode
     vii. Click `OK`
 
-![](figs/SaveVectorLayerAs.png){fig-align='center' width=50%}
-
 (@) The layer should appear in the `Layers` panel. Open its attribute table. Does what you've just done make conceptual sense? If not - ask!
 
 (@) Remove the `temp1` layer from your project
@@ -191,8 +181,6 @@ Modify the temporary vector layer and save in a sensible location:
     iv. Check `Dissolve result`
     v. Click `Run` → `Close`
 
-![](figs/Buffer.png){fig-align='center' width=50%}
-
 (@) Using `Select by Location` (see @sec-selectlocation) and `Basic Statistics` (see @sec-stats4fields), find the total number of people registered to postcodes within 500 m of Tesco stores
 
 (@) For the final challenge, answer the following (hint: see @sec-filter):
@@ -205,8 +193,6 @@ library(exams2forms)
 exams2forms("E03_Q5.Rmd", edir = "exercises")
 ```
 
-(@) The skills you've learned here are vital for the wind farm project.
-
 ::: {.callout-note}
 # Learning outcomes
 
@@ -216,5 +202,5 @@ By the end of this exercise you should be able to:
 2. Visualise population density using graduated symbology and kernel density (heatmap) estimation
 3. Geocode addresses from postcodes using a plugin and web service, and export the result as a properly projected vector layer
 4. Calculate population statistics for defined areas and catchments — combining `Select by Location`, `Buffer`, and `Basic Statistics for Fields` tools
-5. Appreciate how postcodes link human activity to physical location, and the value of tidy, well-projected data and temporary layers in a GIS workflow
+5. Appreciate how postcodes link human activity to physical location, and the value of tidy, well-projected data and temporary layers in a GIS workflow - and your windfarm project
 :::
