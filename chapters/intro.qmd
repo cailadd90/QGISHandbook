@@ -34,11 +34,7 @@ I recommend installing the `Long Term Release` version of QGIS which, in theory,
 
 (@) Navigate to the folder on OneDrive where the data is stored [here](https://swanseauniversity-my.sharepoint.com/:f:/g/personal/c_j_t_ladd_swansea_ac_uk/IgC2dkNTfg8nSorMFBg8ZQcvARb4y8V27mGxtNPNwpvvh68){target='_blank'}
 
-(@) Click the `Settings` icon in the top-right corner
-
-(@) Click `Sync this OneDrive`
-
-![](figs/OneDriveSettings.png){fig-align='center' width=50%}
+(@) Click the `Sync` icon (![](figs/Sync.png){width=3%})
 
 (@) You may need to wait a minute, but eventually the folder should be accessible via your browser
 

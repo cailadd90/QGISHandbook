@@ -166,7 +166,10 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the development of your wind farm project and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.</p>
+</header><blockquote class="blockquote">
+<p><strong>Date of practical:</strong> 2nd October 2026</p>
+</blockquote>
+<p>To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the development of your wind farm project and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -226,14 +229,16 @@ ul.task-list li input[type="checkbox"] {
 <li>Click <code>Apply</code> → <code>OK</code> when you’ve finished editing the layer’s symbology</li>
 </ol>
 </li>
-<li><p>From the menu bar, click <code>Project</code> → <code>Save</code> and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!</p></li>
+<li><p>From the menu bar, click <code>Project</code> → <code>Save</code></p></li>
+<li><p>Use a sensible location and filing system on your OneDrive account to save your project and any data you generate. I recommend navigating to <code>Documents</code> and creating a <code>GEG276</code> folder. You can create sub-folders within this too</p></li>
+<li><p>Find the <code>Save</code> shortcut. Remember to save regularly from now on!</p></li>
 </ol></section><section id="sec-measuring" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="sec-measuring">
 <span class="header-section-number">1.4</span> Measuring geospatial objects</h2>
-<ol start="10" class="example" type="1">
+<ol start="12" class="example" type="1">
 <li>
 <p>Click the drop-down arrow next to the <code>Measure</code> icon to select the appropriate tool for measuring:</p>
-<ol type="i">
-<li>The distance between the extreme cardinal points of Great Britain (in miles)</li>
+<p>i The distance between the two furthest points on Great Britain (in miles)?</p>
+<ol start="2" type="i">
 <li>The approximate area of the Isle of Man (in square kilometres)</li>
 </ol>
 </li>
@@ -242,26 +247,26 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/MeasureDropdown.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
 </figure>
 </div>
-<ol start="11" class="example" type="1">
+<ol start="13" class="example" type="1">
 <li>Use left-click to add points, and right-click to stop taking the length / area measurements</li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>What is the distance between the extreme cardinal points of Great Britain (in miles)?</p>
-<p><input class="webex-solveme nospaces" id="webex-7880c5bd915f326c1189a6c3ad08bf2f" data-tol="0" size="20" data-answer="bBoOAFAXPw=="></p>
+<p>What is the distance between the two furthest points on Great Britain (in miles)?</p>
+<p><input class="webex-solveme nospaces" id="webex-b22610675689120c953e62dd62bb494a" data-tol="3" size="20" data-answer="ORAEBgISaw=="></p>
 <p>What is the approximate area of the Isle of Man (in square kilometres)?</p>
-<p><input class="webex-solveme nospaces" id="webex-e8f5baedb2ea6d0af8ced98bb4a7dd99" data-tol="50" size="20" data-answer="PhpTAlNDOA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-636d74f1c54d8a85c0908be3238aaa01" data-tol="50" size="20" data-answer="bREDUwYWOw=="></p>
 </div>
 <div class="webex-solution">
 <ul>
-<li>The distance between the extreme cardinal points of Great Britain was 603 miles.</li>
+<li>The distance between the two furthest points on Great Britain was 603 miles.</li>
 <li>The approximate area of the Isle of Man was 571 square kilometres.</li>
 </ul>
 </div>
 </div>
 </section><section id="sec-attrib" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="sec-attrib">
 <span class="header-section-number">1.5</span> Exploring the Attribute Table</h2>
-<ol start="12" class="example" type="1">
+<ol start="14" class="example" type="1">
 <li><p>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Open Attribute Table</code>. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: <code>fid</code> (field identifier) and <code>Area</code></p></li>
 <li><p>Click the <code>Dock Attribute Table</code> icon (<img src="figs/DockAttributeTable.png" class="img-fluid" style="width:3.0%">) so that you can see both the Map Canvas and Attribute Table on screen at once</p></li>
 <li>
@@ -277,21 +282,21 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/SortAttributeTable.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="15" class="example" type="1">
+<ol start="17" class="example" type="1">
 <li>Repeat the step above to explore the ten largest islands of the British Isles</li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Can you name the seventh-largest island of the British Isles?</p>
-<div id="webex-3389493e550a88562962db108b24474f" class="webex-radiogroup" data-answer="aAMUCBgJH1UZBW0=">
-<label><input type="radio" autocomplete="off" name="3389493e550a88562962db108b24474f"><span>Islay</span></label><label><input type="radio" autocomplete="off" name="3389493e550a88562962db108b24474f"><span>Ynys Môn / Anglesey</span></label><label><input type="radio" autocomplete="off" name="3389493e550a88562962db108b24474f"><span>Skye</span></label><label><input type="radio" autocomplete="off" name="3389493e550a88562962db108b24474f"><span>Ynys Enlli / Bardsey</span></label><label><input type="radio" autocomplete="off" name="3389493e550a88562962db108b24474f"><span>Lewis and Harris</span></label>
+<div id="webex-700292e0241a8402877372311f8cdb71" class="webex-radiogroup" data-answer="bAAcAhUDSQAeBGw=">
+<label><input type="radio" autocomplete="off" name="700292e0241a8402877372311f8cdb71"><span>Ynys Enlli / Bardsey</span></label><label><input type="radio" autocomplete="off" name="700292e0241a8402877372311f8cdb71"><span>Lewis and Harris</span></label><label><input type="radio" autocomplete="off" name="700292e0241a8402877372311f8cdb71"><span>Ynys Môn / Anglesey</span></label><label><input type="radio" autocomplete="off" name="700292e0241a8402877372311f8cdb71"><span>Islay</span></label><label><input type="radio" autocomplete="off" name="700292e0241a8402877372311f8cdb71"><span>Skye</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>The seventh-largest island of the British Isles is Ynys Môn / Anglesey.</p>
 </div>
 </div>
-<ol start="16" class="example" type="1">
+<ol start="18" class="example" type="1">
 <li>
 <p>You can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:</p>
 <ol type="i">
@@ -305,17 +310,17 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What is the precise area of the Isle of Wight (in square kilometres)?</p>
-<p><input class="webex-solveme nospaces" id="webex-7a30503ae3f5f64b55410c0918f7b1e2" data-tol="0" size="20" data-answer="bEMACAcSbg=="></p>
+<p><input class="webex-solveme nospaces" id="webex-bc33e0c7f67d401c8b8768019bd01e82" data-tol="0" size="20" data-answer="OUEAC1cSPg=="></p>
 </div>
 <div class="webex-solution">
 <p>The precise area of the Isle of Wight was 382 square kilometres.</p>
 </div>
 </div>
-<ol start="17" class="example" type="1">
+<ol start="19" class="example" type="1">
 <li>Click the <code>Deselect features</code> icon (<img src="figs/Deselect.png" class="img-fluid" style="width:3.0%">) to deselect the current selection. These functions will be very useful later on</li>
 </ol></section><section id="arranging-layers" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="arranging-layers">
 <span class="header-section-number">1.6</span> Arranging layers</h2>
-<ol start="18" class="example" type="1">
+<ol start="20" class="example" type="1">
 <li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer in the <code>UK_Boundaries</code> folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the <code>Layers</code> panel</p></li>
 <li><p>Adjust the style of this layer and explore its attribute table</p></li>
 <li><p>Experiment with switching layer visibility on or off using the tick boxes in the <code>Layers</code> panel (<img src="figs/CheckLayer.png" class="img-fluid" style="width:3.0%">). This becomes essential when managing multiple layers in a project</p></li>
@@ -334,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="labelling-layers" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="labelling-layers">
 <span class="header-section-number">1.7</span> Labelling layers</h2>
-<ol start="24" class="example" type="1">
+<ol start="26" class="example" type="1">
 <li>
 <p>To label layers:</p>
 <ol type="i">
@@ -359,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the <code>Labeling</code> window and you are encouraged to experiment.</p></li>
 </ol></section><section id="sec-filter" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-filter">
 <span class="header-section-number">1.8</span> Adding and filtering data</h2>
-<ol start="27" class="example" type="1">
+<ol start="29" class="example" type="1">
 <li><p>Add the vector layer <code>Wales_operational_windfarms.gpkg</code> to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales</p></li>
 <li><p>Examine the attribute table</p></li>
 <li><p>Adjust the layer’s style, noting that point data is represented in a different way to polygon data</p></li>
@@ -395,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
 <p>To filter the data by defining what is presented in the map:</p>
 <ol type="i">
 <li>Open the layer’s <code>Symbology</code> window</li>
-<li>Use the <code>Categorized</code> option to categorise the road symbology according to the <code>fclass</code> attribute</li>
+<li>Use the <code>Categorized</code> option to categorise the road symbology according to the <code>fclass</code> attribute (remember to click <code>Classify</code>!)</li>
 <li>Delete all the road classes except <code>primary</code>, <code>trunk</code>, and <code>motorway</code> using the <code>Delete</code> icon (<img src="figs/Delete.png" class="img-fluid" style="width:3.0%">). See if you can make this task easier for yourself by using the <code>Shift</code> and <code>Ctrl</code> keys…</li>
 <li>Double-click the line symbol per category to choose a suitable symbology for these remaining roads (e.g. thick red for primary, very thick light blue for motorway)</li>
 </ol>
@@ -403,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Add the <code>gis_osm_waterways_free_1.gpkg</code> vector layer in the <code>British_Isles_geofabrik</code> → <code>wales</code> folders. What colour would be best for this layer?</p></li>
 </ol></section><section id="adding-external-data" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="adding-external-data">
 <span class="header-section-number">1.9</span> Adding external data</h2>
-<ol start="38" class="example" type="1">
+<ol start="40" class="example" type="1">
 <li><p>Navigate to <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a></p></li>
 <li><p>Search for “Wales Coast Path” and click on the link</p></li>
 <li><p>Under <code>Select spatial data format</code>, choose <code>OGC Geopackage</code> and click <code>Download</code></p></li>
@@ -412,7 +417,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Try searching for and downloading other GIS data files from <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a>, <a href="https://geofabrik.de/">geofabrik.de</a>, or any another source. Searching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon</p></li>
 </ol></section><section id="have-you-finished" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="have-you-finished">
 <span class="header-section-number">1.10</span> Have you finished?</h2>
-<ol start="44" class="example" type="1">
+<ol start="46" class="example" type="1">
 <li>Congratulations! You’ve learned the basics of QGIS. Make sure that you’ve understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">

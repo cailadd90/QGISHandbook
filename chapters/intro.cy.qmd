@@ -34,11 +34,7 @@ Rwy'n argymell gosod y fersiwn `Long Term Release` o QGIS sydd, mewn theori, â 
 
 (@) Ewch i'r ffolder ar OneDrive lle mae'r data wedi'i storio [yma](https://swanseauniversity-my.sharepoint.com/:f:/g/personal/c_j_t_ladd_swansea_ac_uk/IgC2dkNTfg8nSorMFBg8ZQcvARb4y8V27mGxtNPNwpvvh68){target='_blank'}
 
-(@) Cliciwch yr eicon `Settings` yn y gornel top-dde
-
-(@) Cliciwch `Sync this OneDrive`
-
-![](figs/OneDriveSettings.png){fig-align='center' width=50%}
+(@) Cliciwch yr eicon `Sync` (![](figs/Sync.png){width=3%})
 
 (@) Efallai y bydd angen i chi aros am funud, ond dylai'r ffolder fod yn hygyrch drwy eich porwr yn fuan
 

@@ -6,6 +6,8 @@ library(exams2forms)
 
 # Getting started {#sec-e01}
 
+> **Date of practical:** 2nd October 2026
+
 To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the development of your wind farm project and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.
 
 ::: {.callout-note}
@@ -50,13 +52,17 @@ To become familiar with the Quantum GIS (QGIS) environment for visualising and p
     ii. Click `Simple Fill` and experiment with changing the layer symbology's colours, styles, and widths. You have complete control over how vector layers appear. When designing a map, consider carefully how to choose an appropriate style for each layer
     iii. Click `Apply` → `OK` when you've finished editing the layer's symbology
 
-(@) From the menu bar, click `Project` → `Save` and save your project to a suitable location. Find the shortcut. Remember to save regularly from now on!
+(@) From the menu bar, click `Project` → `Save` 
+
+(@) Use a sensible location and filing system on your OneDrive account to save your project and any data you generate. I recommend navigating to `Documents` and creating a `GEG276` folder. You can create sub-folders within this too
+
+(@) Find the `Save` shortcut. Remember to save regularly from now on!
 
 ## Measuring geospatial objects {#sec-measuring}
 
 (@) Click the drop-down arrow next to the `Measure` icon to select the appropriate tool for measuring:
 
-    i. The distance between the extreme cardinal points of Great Britain (in miles)
+    i The distance between the two furthest points on Great Britain (in miles)?
     ii. The approximate area of the Isle of Man (in square kilometres)
 
 ![](figs/MeasureDropdown.png){fig-align='center' width=25%}
@@ -185,7 +191,7 @@ exams2forms("E01_Q3.Rmd", edir = "exercises")
 (@) To filter the data by defining what is presented in the map:
 
     i. Open the layer's `Symbology` window
-    ii. Use the `Categorized` option to categorise the road symbology according to the `fclass` attribute
+    ii. Use the `Categorized` option to categorise the road symbology according to the `fclass` attribute (remember to click `Classify`!)
     iii. Delete all the road classes except `primary`, `trunk`, and `motorway` using the `Delete` icon (![](figs/Delete.png){width=3%}). See if you can make this task easier for yourself by using the `Shift` and `Ctrl` keys...
     iv. Double-click the line symbol per category to choose a suitable symbology for these remaining roads (e.g. thick red for primary, very thick light blue for motorway)
 

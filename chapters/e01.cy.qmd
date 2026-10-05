@@ -6,6 +6,8 @@ library(exams2forms)
 
 # Dechrau arni {#sec-e01}
 
+> **Dyddiad yr ymarferol:** 2il Hydref 2026
+
 I feistroli QGIS, rhaid dechrau gyda'r pethau sylfaenol. Mae'r ymarfer hwn yn cyflwyno'r sgiliau sylfaenol a fydd yn sail i ddatblygu eich prosiect fferm wynt a thu hwnt - gan gynnwys eich traethawd hir. Cymerwch eich amser, gofynnwch gwestiynau, a gwnewch yn siŵr eich bod yn hyderus gyda phob cam cyn symud ymlaen.
 
 ::: {.callout-note}
@@ -50,15 +52,19 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
     ii. Cliciwch `Simple Fill` ac arbrofwch gyda newid lliwiau, arddulliau, a lledau symbolaeth yr haen. Mae gennych reolaeth lwyr dros sut mae haenau fector yn ymddangos. Wrth ddylunio map, ystyriwch yn ofalus sut i ddewis arddull briodol ar gyfer pob haen.
     iii. Cliciwch `Apply` → `OK` pan fyddwch wedi gorffen golygu symboleg yr haen
 
-(@) O'r bar dewislen, cliciwch `Project` → `Save` a chadwch eich prosiect mewn lleoliad addas. Dewch o hyd i'r llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
+(@) O'r bar dewislen, cliciwch `Project` → `Save` 
+
+(@) Defnyddiwch leoliad a system ffeilio synhwyrol ar eich cyfrif OneDrive i gadw eich prosiect ac unrhyw ddata rydych chi'n ei gynhyrchu. Rwy'n argymell mynd i `Documents` a chreu ffolder o'r enw `GEG276`. Gallwch greu is-ffolderi o fewn hwn hefyd
+
+(@) Dewch o hyd i'r `Save` llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
 
 ## Mesur gwrthrychau geo-ofodol {#sec-mesuring}
 
 (@) Cliciwch y saeth ostwng wrth ymyl yr eicon `Measure` i ddewis yr offeryn priodol ar gyfer mesur:
 
-i. Y pellter rhwng pwyntiau cardinal eithaf Prydain Fawr (mewn milltiroedd)
-ii. Arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)
-
+    i. Y pellter rhwng y ddau bwynt pellaf ym Mhrydain Fawr (mewn milltiroedd)
+    ii. Arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)
+    
 ![](figs/MeasureDropdown.png){fig-align='center' width=25%}
 
 (@) Defnyddiwch chwith-glic i ychwanegu pwyntiau, a dde-glic i offen gymryd y mesuriadau hyd / arwynebedd
@@ -185,7 +191,7 @@ exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
 (@) I hidlo'r data drwy ddiffinio'r hyn a gyflwynir yn y map:
 
     i. Agorwch ffenestr `Symbology` yr haen
-    ii. Defnyddiwch yr opsiwn `Categorized` i gategoreiddio symbolaeth y ffordd yn ôl y priodoledd `fclass`
+    ii. Defnyddiwch yr opsiwn `Categorized` i gategoreiddio symbolaeth y ffordd yn ôl y priodoledd `fclass` (cofiwch clicio `Classify`!)
     iii. Dileu pob dosbarth ffordd ac eithrio `primary`, `trunk`, a `motorway` gan ddefnyddio'r eicon `Delete` (![](figs/Delete.png){width=3%}). Gweld os allwch chi wneud y dasg hon yn haws i'ch hun trwy ddefnyddio'r bysellau `Shift` a `Ctrl`...
     iv. Dwbl-giciwch y symbol llinell fesul categori i ddewis symboleg addas ar gyfer y ffyrdd hyn (e.e. coch trwchus ar gyfer y prif ffyrdd, glas golau trwchus iawn ar gyfer y draffordd)
 
