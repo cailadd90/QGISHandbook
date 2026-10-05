@@ -34,7 +34,7 @@
     "href": "chapters/intro.html#sec-data",
     "title": "Before you begin",
     "section": "Accessing the data",
-    "text": "Accessing the data\n\nNavigate to the folder on OneDrive where the data is stored here\nClick the Sync icon ()\nYou may need to wait a minute, but eventually the folder should be accessible via your browser",
+    "text": "Accessing the data\n\nNavigate to the folder on OneDrive where the data is stored here\nClick the Sync icon\n\n\n\n\n\n\n\nYou may need to wait a minute, but eventually the folder should be accessible via your browser",
     "crumbs": [
       "Before you begin"
     ]
@@ -164,7 +164,7 @@
     "href": "chapters/e01.html#sec-attrib",
     "title": "1  Getting started",
     "section": "1.5 Exploring the Attribute Table",
-    "text": "1.5 Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area\nClick the Dock Attribute Table icon () so that you can see both the Map Canvas and Attribute Table on screen at once\nTo understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles\n\n\n\nCan you name the seventh-largest island of the British Isles?\n\nYnys Enlli / BardseyLewis and HarrisYnys Môn / AngleseyIslaySkye\n\n\n\nThe seventh-largest island of the British Isles is Ynys Môn / Anglesey.\n\n\n\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\n\n\n\n\nWhat is the precise area of the Isle of Wight (in square kilometres)?\n\n\n\nThe precise area of the Isle of Wight was 382 square kilometres.\n\n\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
+    "text": "1.5 Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area\nClick the Dock Attribute Table icon () so that you can see both the Map Canvas and Attribute Table on screen at once\nTo understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles\n\n\n\nCan you name the seventh-largest island of the British Isles?\n\nIslayYnys Enlli / BardseyLewis and HarrisYnys Môn / AngleseySkye\n\n\n\nThe seventh-largest island of the British Isles is Ynys Môn / Anglesey.\n\n\n\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\n\n\n\n\nWhat is the precise area of the Isle of Wight (in square kilometres)?\n\n\n\nThe precise area of the Isle of Wight was 382 square kilometres.\n\n\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
@@ -234,7 +234,7 @@
     "href": "chapters/e02.html#creating-a-print-layout",
     "title": "2  Composing maps",
     "section": "",
-    "text": "Launch QGIS and create a new project\nAdd the British_Isles_land_polygons.gpkg, Wales_border.gpkg, and Wales_Principal_Areas.gpkg layers to your project (the latter two are in the UK_Boundaries folder)\nLabel the Principal Areas of Wales in Welsh or English\nTo create a Print Layout:\n\nClick Project → New Print Layout... (and find the shortcuts to this window)\nGive the print layout an appropriate title\nClick Project → Layout Manager.... You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts\nClick Close\n\nChange the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption (see ?sec-WP):\n\nRight‑click on the blank print layout\nClick Page Properties...\nChange Size to Custom\nReduce the map Height (e.g. to 270)\nChange Orientation to Portrait",
+    "text": "Launch QGIS and create a new project\nAdd the British_Isles_land_polygons.gpkg, Wales_border.gpkg, and Wales_Principal_Areas.gpkg layers to your project (the latter two are in the UK_Boundaries folder)\nLabel the Principal Areas of Wales in Welsh or English\nTo create a Print Layout:\n\nClick Project → New Print Layout... (and find the shortcuts to this window)\nGive the print layout an appropriate title\nClick Project → Layout Manager.... You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts\nClick Close\n\nChange the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption:\n\nRight‑click on the blank print layout\nClick Page Properties...\nChange Size to Custom\nReduce the map Height (e.g. to 270)\nChange Orientation to Portrait",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
@@ -304,17 +304,7 @@
     "href": "chapters/faq.html",
     "title": "FAQ",
     "section": "",
-    "text": "How can I arrange map items perfectly on the print layout?\nHere are some of the commonly-occurring issues that come up during this course and how to resolve them.",
-    "crumbs": [
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "chapters/faq.html#sec-guides",
-    "href": "chapters/faq.html#sec-guides",
-    "title": "FAQ",
-    "section": "",
-    "text": "NoteHow can I arrange map items perfectly on the print layout?\n\n\n\n\n\nUse Guides",
+    "text": "Here are some of the commonly-occurring issues that come up during this course and how to resolve them.",
     "crumbs": [
       "FAQ"
     ]

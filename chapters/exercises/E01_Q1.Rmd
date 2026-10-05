@@ -1,7 +1,7 @@
 Question
 ========
 
-What is the distance between the two furthest points on Great Britain (in miles)? 
+What is the distance between the two furthest points on Great Britain (in miles)?
 
 ##ANSWER1##
 

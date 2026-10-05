@@ -49,10 +49,8 @@ asdf
 asdf
 :::
 
-## How can I arrange map items perfectly on the print layout?{#sec-guides}
-
-::: {.callout-note collapse="true" icon=false}
-### How can I arrange map items perfectly on the print layout?
+::: {#sec-guides}
+::: {.callout-note collapse="true" icon=false title="How can I arrange map items perfectly on the print layout?"}
 
 Use `Guides`
 :::

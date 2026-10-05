@@ -1,5 +1,7 @@
 # Composing maps {#sec-e02}
 
+> **Date of practical:** 9th October 2026
+
 Communication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and is how you generate the maps for your wind farm project.
 
 ::: {.callout-note}
@@ -23,7 +25,7 @@ To create functionally complete maps in QGIS for print or digital output. You wi
     iii. Click `Project` → `Layout Manager...`. You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts
     iv. Click `Close`
 
-(@) Change the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption (see @sec-WP):
+(@) Change the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption:
 
     i. Right‑click on the blank print layout
     ii. Click `Page Properties...`

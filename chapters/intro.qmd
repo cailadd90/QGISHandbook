@@ -34,25 +34,11 @@ I recommend installing the `Long Term Release` version of QGIS which, in theory,
 
 (@) Navigate to the folder on OneDrive where the data is stored [here](https://swanseauniversity-my.sharepoint.com/:f:/g/personal/c_j_t_ladd_swansea_ac_uk/IgC2dkNTfg8nSorMFBg8ZQcvARb4y8V27mGxtNPNwpvvh68){target='_blank'}
 
-(@) Click the `Sync` icon (![](figs/Sync.png){width=3%})
+(@) Click the `Sync` icon
+
+![](figs/Sync.png){fig-align='center' width=25%}
 
 (@) You may need to wait a minute, but eventually the folder should be accessible via your browser
-
-<!--
-
-All the datasets you need for the practicals and the final project are provided on the Student Common L:drive:
-
-`L:/College of Science/Geography/GEG276`
-
-If you prefer to work on your own computer, you will need to copy these datasets to your personal computer. You can do this in one of two ways:
-
-1. **Transfer from the L:drive:** Use a USB storage device or a cloud storage service such as Microsoft OneDrive or Google Drive to copy the relevant files from the L:drive.
-
-2. **Download from Google Drive:** Copy the relevant files using the link [here](https://drive.google.com/drive/folders/1n8jng_fFgCJ22vY-W9khlk4hEdKQg-CP?usp=sharing){target='_blank'}. 
-
-To save time and space, only download or copy the data you need for each exercise rather than transferring everything at once.
-
--->
 
 ## Data storage
 
