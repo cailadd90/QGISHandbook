@@ -5,7 +5,7 @@ Elevation is a key determinant of many geographical processes. The height of the
 **This exercise will guide you through the requirements for making Map 3**
 
 ::: {.callout-note}
-## Learning aims
+## Learning objectives
 
 To visualise DEMs and wind speed data, subset, classify and vectorize, and create slope and aspect images. These steps are vital for the wind farm project.
 :::

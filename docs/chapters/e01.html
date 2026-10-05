@@ -182,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning aims
+<span class="screen-reader-only">Note</span>Learning objectives
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -241,21 +241,27 @@ ul.task-list li input[type="checkbox"] {
 </ol></section><section id="sec-measuring" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="sec-measuring">
 <span class="header-section-number">1.4</span> Measuring geospatial objects</h2>
 <ol start="12" class="example" type="1">
-<li>Click the drop-down arrow next to the <code>Measure</code> icon to select the appropriate tool.</li>
+<li>
+<p>Click the drop-down arrow next to the <code>Measure</code> icon to select the appropriate tool to measure:</p>
+<p>i The distance between the two furthest points on Great Britain (in miles)?</p>
+<ol start="2" type="i">
+<li>The approximate area of the Isle of Man (in square kilometres)</li>
+</ol>
+</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/MeasureDropdown.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
 </figure>
 </div>
-<p>Answer the following:</p>
-<pre><code>i The distance between the two furthest points on Great Britain (in miles)?
-ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
+<ol start="13" class="example" type="1">
+<li>Use left-click to add points, and right-click to stop taking the length / area measurements</li>
+</ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What is the distance between the two furthest points on Great Britain (in miles)?</p>
-<p><input class="webex-solveme nospaces" id="webex-b8f07145b42c6e522a3fcab205431389" data-tol="3" size="20" data-answer="ORpQAAQTaQ=="></p>
+<p><input class="webex-solveme nospaces" id="webex-7ea8c91ace544866cd29b423f5a995ad" data-tol="3" size="20" data-answer="bEdXCFAbbA=="></p>
 <p>What is the approximate area of the Isle of Man (in square kilometres)?</p>
-<p><input class="webex-solveme nospaces" id="webex-12c6af58c6c4065b8c556184bc33f8da" data-tol="50" size="20" data-answer="ahBWAVBEaA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-15a173c5bc012035ab93dbc83ca91dc2" data-tol="50" size="20" data-answer="ahdUBgYRPg=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -266,7 +272,7 @@ ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
 </div>
 </section><section id="sec-attrib" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="sec-attrib">
 <span class="header-section-number">1.5</span> Exploring the Attribute Table</h2>
-<ol start="13" class="example" type="1">
+<ol start="14" class="example" type="1">
 <li><p>From the <code>Layers</code> panel, right-click on <code>British_Isles_land_polygons</code> and click <code>Open Attribute Table</code>. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: <code>fid</code> (field identifier) and <code>Area</code></p></li>
 <li><p>Click the <code>Dock Attribute Table</code> icon (<img src="figs/DockAttributeTable.png" class="img-fluid" style="width:3.0%">) so that you can see both the Map Canvas and Attribute Table on screen at once</p></li>
 <li>
@@ -282,21 +288,21 @@ ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
 <figure class="figure"><p><img src="figs/SortAttributeTable.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="16" class="example" type="1">
+<ol start="17" class="example" type="1">
 <li>Repeat the step above to explore the ten largest islands of the British Isles</li>
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Can you name the seventh-largest island of the British Isles?</p>
-<div id="webex-62f29d047fd9e0c2909bfb580cc33285" class="webex-radiogroup" data-answer="bQJKAhVVHAQbVjk=">
-<label><input type="radio" autocomplete="off" name="62f29d047fd9e0c2909bfb580cc33285"><span>Islay</span></label><label><input type="radio" autocomplete="off" name="62f29d047fd9e0c2909bfb580cc33285"><span>Skye</span></label><label><input type="radio" autocomplete="off" name="62f29d047fd9e0c2909bfb580cc33285"><span>Ynys Môn / Anglesey</span></label><label><input type="radio" autocomplete="off" name="62f29d047fd9e0c2909bfb580cc33285"><span>Lewis and Harris</span></label><label><input type="radio" autocomplete="off" name="62f29d047fd9e0c2909bfb580cc33285"><span>Ynys Enlli / Bardsey</span></label>
+<div id="webex-06070fd996bb0d13776d61b193040368" class="webex-radiogroup" data-answer="awccBxxWSAkVBj8=">
+<label><input type="radio" autocomplete="off" name="06070fd996bb0d13776d61b193040368"><span>Ynys Môn / Anglesey</span></label><label><input type="radio" autocomplete="off" name="06070fd996bb0d13776d61b193040368"><span>Islay</span></label><label><input type="radio" autocomplete="off" name="06070fd996bb0d13776d61b193040368"><span>Ynys Enlli / Bardsey</span></label><label><input type="radio" autocomplete="off" name="06070fd996bb0d13776d61b193040368"><span>Skye</span></label><label><input type="radio" autocomplete="off" name="06070fd996bb0d13776d61b193040368"><span>Lewis and Harris</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>The seventh-largest island of the British Isles is Ynys Môn / Anglesey.</p>
 </div>
 </div>
-<ol start="17" class="example" type="1">
+<ol start="18" class="example" type="1">
 <li>
 <p>You can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:</p>
 <ol type="i">
@@ -310,17 +316,17 @@ ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What is the precise area of the Isle of Wight (in square kilometres)?</p>
-<p><input class="webex-solveme nospaces" id="webex-799e1d55860d1e97e522539dafdc1594" data-tol="0" size="20" data-answer="bBsKXQNGaA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-6974da443ee56a20e84c6ffa2612e013" data-tol="1" size="20" data-answer="bRsEDFZDaQ=="></p>
 </div>
 <div class="webex-solution">
 <p>The precise area of the Isle of Wight was 382 square kilometres.</p>
 </div>
 </div>
-<ol start="18" class="example" type="1">
+<ol start="19" class="example" type="1">
 <li>Click the <code>Deselect features</code> icon (<img src="figs/Deselect.png" class="img-fluid" style="width:3.0%">) to deselect the current selection. These functions will be very useful later on</li>
 </ol></section><section id="arranging-layers" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="arranging-layers">
 <span class="header-section-number">1.6</span> Arranging layers</h2>
-<ol start="19" class="example" type="1">
+<ol start="20" class="example" type="1">
 <li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer in the <code>UK_Boundaries</code> folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the <code>Layers</code> panel</p></li>
 <li><p>Adjust the style of this layer and explore its attribute table</p></li>
 <li><p>Experiment with switching layer visibility on or off using the tick boxes in the <code>Layers</code> panel (<img src="figs/CheckLayer.png" class="img-fluid" style="width:3.0%">). This becomes essential when managing multiple layers in a project</p></li>
@@ -339,7 +345,7 @@ ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
 </li>
 </ol></section><section id="labelling-layers" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="labelling-layers">
 <span class="header-section-number">1.7</span> Labelling layers</h2>
-<ol start="25" class="example" type="1">
+<ol start="26" class="example" type="1">
 <li>
 <p>To label layers:</p>
 <ol type="i">
@@ -364,7 +370,7 @@ ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
 <li><p>Now that the Principal Areas have been labelled, zoom out. Notice how QGIS chooses to place and resize the labels so that they remain visible, but switches some of them off to avoid overlapping text. This is a fundamental part of map design and QGIS tries to optimize readability. You can control this behavior through the <code>Labeling</code> window and you are encouraged to experiment.</p></li>
 </ol></section><section id="sec-filter" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-filter">
 <span class="header-section-number">1.8</span> Adding and filtering data</h2>
-<ol start="28" class="example" type="1">
+<ol start="29" class="example" type="1">
 <li><p>Add the vector layer <code>Wales_operational_windfarms.gpkg</code> to your project. These data are from the UK Renewable Energy Planning Database and represent the location of operational wind farms across Wales</p></li>
 <li><p>Examine the attribute table</p></li>
 <li><p>Adjust the layer’s style, noting that point data is represented in a different way to polygon data</p></li>
@@ -408,7 +414,7 @@ ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
 <li><p>Add the <code>gis_osm_waterways_free_1.gpkg</code> vector layer in the <code>British_Isles_geofabrik</code> → <code>wales</code> folders. What colour would be best for this layer?</p></li>
 </ol></section><section id="adding-external-data" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="adding-external-data">
 <span class="header-section-number">1.9</span> Adding external data</h2>
-<ol start="39" class="example" type="1">
+<ol start="40" class="example" type="1">
 <li><p>Navigate to <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a></p></li>
 <li><p>Search for “Wales Coast Path” and click on the link</p></li>
 <li><p>Under <code>Select spatial data format</code>, choose <code>OGC Geopackage</code> and click <code>Download</code></p></li>
@@ -417,7 +423,7 @@ ii. The approximate area of the Isle of Man (in square kilometres)</code></pre>
 <li><p>Try searching for and downloading other GIS data files from <a href="https://datamap.gov.wales/" target="_blank">datamap.gov.wales</a>, <a href="https://geofabrik.de/">geofabrik.de</a>, or any another source. Searching for geospatial datasets should show you how easy it can be to find and download data from the internet. This will also provide inspiration for dissertation ideas, which is now on your horizon</p></li>
 </ol></section><section id="have-you-finished" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="have-you-finished">
 <span class="header-section-number">1.10</span> Have you finished?</h2>
-<ol start="45" class="example" type="1">
+<ol start="46" class="example" type="1">
 <li>Congratulations! You’ve learned the basics of QGIS. Make sure that you’ve understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">

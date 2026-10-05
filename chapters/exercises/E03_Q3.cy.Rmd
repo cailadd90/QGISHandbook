@@ -1,0 +1,22 @@
+Question
+========
+Beth oedd poblogaeth gofrestredig Cymru yn 2021? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER1##
+
+Beth oedd y newid canrannol ym mhoblogaeth Cymru rhwng 2011 a 2021?
+
+##ANSWER2##
+
+Solution
+========
+- Roedd poblogaeth gofrestredig Cymru yn 2021 yn 3,107,400.
+- Y newid canrannol ym mhoblogaeth Cymru rhwng 2011 a 2021 oedd 1%.
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num
+exsolution: 3107400|1
+extol: 0|1
+exname: E03_Q3.cy

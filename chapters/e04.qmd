@@ -5,7 +5,7 @@ Creating spatial and thematic subsets of vector layers is essential GIS practice
 **This exercise will guide you through the requirements for making Map 2**
 
 ::: {.callout-note}
-## Learning aims
+## Learning objectives
 
 To clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers.
 :::

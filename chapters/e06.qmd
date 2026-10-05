@@ -5,7 +5,7 @@ This exercise is all about applying the skills you've gained over the past five 
 **This exercise will guide you through the requirements for making Map 4**
 
 ::: {.callout-note}
-## Learning aims
+## Learning objectives
 
 Create and edit a polygon to represent a wind farm, calculate its area, create a viewshed, and count the population living within view of the proposed wind farm.
 :::

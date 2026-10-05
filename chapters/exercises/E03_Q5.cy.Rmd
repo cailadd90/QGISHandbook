@@ -1,0 +1,14 @@
+Question
+========
+Beth oedd cyfanswm y nifer o bobl a oedd wedi cofrestru yn 2021 o fewn 2 km i Gampws Singleton (SA2 8PQ) a Champws y Bae (SA1 8QE) Prifysgol Abertawe? *(peidiwch â defnyddio atalnodau)*
+
+Solution
+========
+Cyfanswm y nifer o bobl a oedd wedi cofrestru yn 2021 o fewn 2 km i Gampws Singleton (SA2 8PQ) a Champws y Bae (SA1 8QE) Prifysgol Abertawe oedd 32,940.
+
+Meta-information
+================
+extype: num
+exsolution: 32940
+extol: 0
+exname: E03_Q5.cy

@@ -1,0 +1,42 @@
+Question
+========
+
+Pa nodwedd yn yr ardal cod post â'r boblogaeth fwyaf a esboniodd y nifer uchel o bobl?
+
+Abertawe (SA): ##ANSWER1##
+
+Caerdydd (CF): ##ANSWER2##
+
+Aberystwyth (SY): ##ANSWER3##
+
+Answerlist
+----------
+* Llety myfyrwyr
+* Carchar
+* Ysbyty
+* Barics milwrol
+* Cartref gofal
+* Llety myfyrwyr
+* Carchar
+* Ysbyty
+* Barics milwrol
+* Cartref gofal
+* Llety myfyrwyr
+* Carchar
+* Ysbyty
+* Barics milwrol
+* Cartref gofal
+
+Solution
+========
+
+- SA1 8EN yw'r cod post ar gyfer llety myfyrwyr Campws y Bae, Prifysgol Abertawe.
+- CF35 6AP yw'r cod post ar gyfer Carchar Parc EF ym Mhen-y-bont ar Ogwr.
+- SY23 3TE yw'r cod post ar gyfer pentref myfyrwyr Penglais, Prifysgol Aberystwyth.
+
+Meta-information
+================
+extype: cloze
+exclozetype: schoice|schoice|schoice
+exsolution: 10000|01000|10000
+exname: E03_Q2.cy

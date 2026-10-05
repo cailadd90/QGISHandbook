@@ -5,7 +5,7 @@
 Mae cyfathrebu data a chysyniadau daearyddol drwy fapiau yn sgil sylfaenol i wyddonwyr gofodol. Mae creu mapiau yn gofyn am y gallu i'w gwneud yn gyflawn, yn gywir ac yn ymarferol, a'r ddawn i'w gwneud yn ddiddorol ac yn ddeniadol. Mae'r ymarfer hwn yn cyflwyno y ffenestr Print Layout QGIS, er mwyn cynhyrchu'r mapiau ar gyfer eich prosiect fferm wynt.
 
 ::: {.callout-note}
-## Nodau dysgu
+## Amcanion dysgu
 
 Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. Byddwch yn dysgu sut i greu map graddfa 1:1,000,000 o Gymru sy'n dangos cyflymder cymedrig y gwynt a ffiniau sirol sy'n angenrheidiol ar gyfer gwneud Map 1.
 :::

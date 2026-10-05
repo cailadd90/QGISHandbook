@@ -12,5 +12,5 @@ Meta-information
 ================
 extype: num
 exsolution: 382
-extol: 0
+extol: 1
 exname: E01_Q3

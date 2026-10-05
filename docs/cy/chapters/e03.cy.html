@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/faq.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cwestiynau Cyffredin</span></a>
+ <span class="menu-text">FAQ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,11 +148,13 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Cynnwys</h2>
    
   <ul>
-<li><a href="#postcode-point-locations" id="toc-postcode-point-locations" class="nav-link active" data-scroll-target="#postcode-point-locations"><span class="header-section-number">3.1</span> <input type="checkbox"> Postcode point locations</a></li>
-  <li><a href="#finding-headcount-statistics" id="toc-finding-headcount-statistics" class="nav-link" data-scroll-target="#finding-headcount-statistics"><span class="header-section-number">3.2</span> <input type="checkbox"> Finding headcount statistics</a></li>
-  <li><a href="#population-density" id="toc-population-density" class="nav-link" data-scroll-target="#population-density"><span class="header-section-number">3.3</span> <input type="checkbox"> Population density</a></li>
-  <li><a href="#geocoding-new-addresses" id="toc-geocoding-new-addresses" class="nav-link" data-scroll-target="#geocoding-new-addresses"><span class="header-section-number">3.4</span> <input type="checkbox"> Geocoding new addresses</a></li>
-  <li><a href="#simple-catchments" id="toc-simple-catchments" class="nav-link" data-scroll-target="#simple-catchments"><span class="header-section-number">3.5</span> <input type="checkbox"> Simple catchments</a></li>
+<li><a href="#archwilio-lleoliadau-cod-post" id="toc-archwilio-lleoliadau-cod-post" class="nav-link active" data-scroll-target="#archwilio-lleoliadau-cod-post"><span class="header-section-number">3.1</span> Archwilio lleoliadau cod post</a></li>
+  <li><a href="#sec-stats4fields" id="toc-sec-stats4fields" class="nav-link" data-scroll-target="#sec-stats4fields"><span class="header-section-number">3.2</span> Darganfod ystadegau headcount</a></li>
+  <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Ystadegau yn ôl lleoliad</a></li>
+  <li><a href="#creu-gresmap-dwysedd-poblogaeth" id="toc-creu-gresmap-dwysedd-poblogaeth" class="nav-link" data-scroll-target="#creu-gresmap-dwysedd-poblogaeth"><span class="header-section-number">3.4</span> Creu gresmap dwysedd poblogaeth</a></li>
+  <li><a href="#geocodio-cyfeiriadau-newydd" id="toc-geocodio-cyfeiriadau-newydd" class="nav-link" data-scroll-target="#geocodio-cyfeiriadau-newydd"><span class="header-section-number">3.5</span> Geocodio cyfeiriadau newydd</a></li>
+  <li><a href="#sec-export" id="toc-sec-export" class="nav-link" data-scroll-target="#sec-export"><span class="header-section-number">3.6</span> Allforio haenau fector</a></li>
+  <li><a href="#sec-buffers" id="toc-sec-buffers" class="nav-link" data-scroll-target="#sec-buffers"><span class="header-section-number">3.7</span> Defnyddio byfferau fel dalgylchoedd syml</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -171,79 +173,337 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>The location and density of the human population underpin how society is organised. GIS helps you understand population density, proximity to features, and assign data to addresses. Postcodes link human activity to physical locations.</p>
-<p>You will find data for this exercise on the <strong>L:</strong> drive under <code>College of Science/Geography/GEG276</code>. Read alongside <strong>GIS_guide_to_practical_exercises</strong>.</p>
+</header><blockquote class="blockquote">
+<p><strong>Dyddiad yr ymarfer:</strong> 16eg Hydref 2026</p>
+</blockquote>
+<p>Mae lleoliad a dwysedd y boblogaeth ddynol yn sail i sut mae cymdeithas wedi’i threfnu. Mae GIS yn helpu i ddeall systemau dynol trwy gyfrifo pethau fel dwysedd poblogaeth, agosrwydd at nodweddion, a neilltuo data i gyfeiriadau. Yn y DU, mae codau post wedi’u datblygu fel ffordd o gysylltu gweithgaredd dynol â lleoliadau ffisegol er mwyn cynorthwyo llywodraethu. Mae’r ymarfer hwn yn archwilio sut y gellir defnyddio codau post i gasglu gwybodaeth ddefnyddiol ar lefel y boblogaeth, a sut y gellir defnyddio QGIS i echdynnu gwybodaeth - ychwanegiad gwerthfawr ar gyfer eich prosiect fferm wynt.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning aims
+<span class="screen-reader-only">Note</span>Amcanion dysgu
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments.</p>
+<p>I archwilio dosbarthiad pwyntiau cod post yng Nghymru, archwilio dwysedd poblogaeth, geogodio nodweddion newydd ar fap, a chyfrif poblogaethau o fewn dalgylchoedd syml. Bydd y gallu i echdynnu gwybodaeth o ddata geo-ofodol yn hanfodol ar gyfer capsiynau eich map.</p>
 </div>
 </div>
-<section id="postcode-point-locations" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="postcode-point-locations">
-<span class="header-section-number">3.1</span> <input type="checkbox"> Postcode point locations</h2>
+<section id="archwilio-lleoliadau-cod-post" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="archwilio-lleoliadau-cod-post">
+<span class="header-section-number">3.1</span> Archwilio lleoliadau cod post</h2>
 <ol class="example" type="1">
-<li><p>Launch QGIS, create a new project and open <code>Wales_Principal_Areas</code>.</p></li>
-<li><p>Open <code>Wales_headcounts_at_postcodes_2021</code>. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.</p></li>
-<li><p>Investigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.</p></li>
-<li><p>Using attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.</p></li>
-<li><p>Under <strong>Layer Properties → Symbology</strong>, change from <strong>Single Symbol</strong> to <strong>Graduated</strong>. Set <strong>Column</strong> to <code>Total</code> (population 2021), choose <strong>Method</strong> = <strong>Size</strong>, then <strong>Classify</strong> and <strong>Apply</strong>. Point sizes should now reflect population per postcode.</p></li>
-</ol></section><section id="finding-headcount-statistics" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="finding-headcount-statistics">
-<span class="header-section-number">3.2</span> <input type="checkbox"> Finding headcount statistics</h2>
-<ol start="6" class="example" type="1">
-<li><p>From <strong>Vector → Analysis Tools → Basic Statistics For Fields</strong>, compute statistics for the <code>Total</code> attribute in <code>Wales_headcounts_at_postcodes_2021</code>. Consider each value presented. What was the registered population of Wales in 2021?</p></li>
-<li><p>Open the 2011 dataset (same folder) and calculate the percentage population change in Wales between 2011 and 2021. Close the 2011 dataset.</p></li>
-<li><p>Select the Swansea polygon from <code>Wales_Principal_Areas</code> in the Project window (highlighted yellow).</p></li>
-<li><p>Open <strong>Vector → Research Tools → Select By Location</strong>. Select features from <code>Wales_headcounts_at_postcodes_2021</code> that <strong>are within</strong> <code>Wales_Principal_Areas</code>, ticking <strong>Selected features only</strong> to select only Swansea. Run to select all postcode points within Swansea.</p></li>
-<li><p>Use <strong>Basic Statistics</strong> again to find the 2021 <code>Total</code> population of Swansea. Tick <strong>Selected features only</strong>. Compare to Cardiff. Optionally find Swansea’s 10‑year population change.</p></li>
-</ol></section><section id="population-density" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="population-density">
-<span class="header-section-number">3.3</span> <input type="checkbox"> Population density</h2>
-<ol start="11" class="example" type="1">
-<li><p>Open the <strong>Processing Toolbox</strong> and run <strong>Interpolation → Heatmap (Kernel Density Estimation)</strong>. Point Layer: <code>Wales_headcounts_at_postcodes_2021</code>; Radius: <code>500</code>; Pixel size X/Y: <code>100</code>; Advanced → <strong>Weight from field</strong>: <code>Total</code>. This creates a raster population density layer.</p></li>
-<li><p>Under <strong>Layer Properties</strong>, experiment with symbology for the density raster: <strong>Singleband gray</strong> or <strong>Singleband pseudocolor</strong> using different ramps. It may help to switch off the 2021 point layer while experimenting.</p></li>
-<li><p>Vary the <strong>Radius</strong> and change the weighting field to see how the map changes. Save your project.</p></li>
-</ol></section><section id="geocoding-new-addresses" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="geocoding-new-addresses">
-<span class="header-section-number">3.4</span> <input type="checkbox"> Geocoding new addresses</h2>
-<ol start="14" class="example" type="1">
-<li><p>Compile a CSV of Tesco stores in the Swansea area with columns for <code>postcode</code> and <code>name</code> (use the Tesco store locator). Include at least 7 stores with unique postcodes.</p></li>
-<li><p>Install the <strong>MMQGIS</strong> plugin (<strong>Plugins → Manage and Install Plugins</strong>).</p></li>
-<li><p>Understand that geocoding uses a postcode database to attach coordinates to postcode‑referenced data (as used to build the headcounts dataset).</p></li>
-<li><p>From <strong>MMQGIS → Geocode → Geocode CSV with Web Service</strong>, select your CSV as <strong>Input</strong>, set the postcode column as <strong>Address Field</strong>, choose <strong>OpenStreetMap/Nominatim</strong> as Web Service, and choose output files on OneDrive for both <strong>Output Layer</strong> and <strong>Not Found Output List</strong>. The output is a Shapefile. If errors occur, try the provided CSV in <code>wales_tesco_postcodes</code>. Label stores by name.</p></li>
-<li><p>Reproject the new layer to OSGB. Use <strong>Layer → Save As…</strong>, set <strong>CRS</strong> to <strong>EPSG:27700 OSGB 1936</strong>, <strong>Format</strong> = <strong>GeoPackage</strong>, and save to OneDrive. The appearance is the same but the CRS now matches other layers.</p></li>
-</ol></section><section id="simple-catchments" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="simple-catchments">
-<span class="header-section-number">3.5</span> <input type="checkbox"> Simple catchments</h2>
-<ol start="19" class="example" type="1">
-<li><p>Create buffers to approximate walking distance: <strong>Vector → Geoprocessing Tools → Buffer</strong>. Input: your OSGB Tesco layer; Distance: <code>500 m</code>; tick <strong>Dissolve buffer results</strong>.</p></li>
-<li><p>Using selection by location and Basic Statistics, find the total number of people registered to postcodes within 500 m of Tesco stores.</p></li>
-<li><p>Experiment with other buffer distances and compare other supermarket chains.</p></li>
-<li><p>(Optional) Find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE).</p></li>
-<li><p>Note that these skills are vital for the wind farm projects.</p></li>
+<li><p>Lansiwch QGIS a chreuwch prosiect newydd</p></li>
+<li><p>Ychwanegwch yr haen <code>Wales_Principal_Areas.gpkg</code> at eich prosiect</p></li>
+<li><p>Ychwanegwch yr haen <code>Wales_headcounts_at_postcodes_2021.gpkg</code> at eich prosiect. Mae’r set ddata hon yn cynnwys y nifer o dai a phobl sydd wedi’u cofrestru ym mhob cod post (cymerwyd o’r Cyfrifiad 2021), ynghyd â chyfesurynnau o OS OpenData</p></li>
+<li><p>Ymchwiliwch i’r attributes table ac archwiliwch sut mae’r pwyntiau hyn wedi’u dosbarthu</p></li>
+<li><p>Gan ddefnyddio sgiliau o Ymarfer 1 (<span class="quarto-unresolved-ref">?sec-attrib</span>) i ateb y canlynol:</p></li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Sawl person oedd yn byw yn y cod post â’r boblogaeth fwyaf yn ardal Caerdydd (CF) yn 2021? <em>(peidiwch â defnyddio atalnodau)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-e810d658d6b4ad5197574ad5da7d5a6a" data-tol="0" size="20" data-answer="PhoABV0FF2U="></p>
+<p>Sawl person oedd yn byw yn y cod post â’r boblogaeth fwyaf yn ardal Abertawe (SA) yn 2021? <em>(peidiwch â defnyddio atalnodau)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-0b2c00ff3fbb0f97956a77f77fd4dc69" data-tol="0" size="20" data-answer="a0ADWgICRDs="></p>
+<p>Sawl person oedd yn byw yn y cod post â’r boblogaeth fwyaf yn ardal Aberystwyth (SY) yn 2021? <em>(peidiwch â defnyddio atalnodau)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-e442437011027d158a422df0700924ff" data-tol="0" size="20" data-answer="PhYMAAQRag=="></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>Y cod post â’r boblogaeth fwyaf yn ardal Caerdydd (CF35 6AP) yn 2021 oedd 1,593.</li>
+<li>Y cod post â’r boblogaeth fwyaf yn ardal Abertawe (SA1 8EN) yn 2021 oedd 1,922.</li>
+<li>Y cod post â’r boblogaeth fwyaf yn ardal Aberystwyth (SY23 3TE) yn 2021 oedd 820.</li>
+</ul>
+</div>
+</div>
+<ol start="6" class="example" type="1">
+<li>Defnyddiwch <a href="https://www.google.com/maps" target="_blank">Google Maps</a> i chwilio am y codau post hyn i ateb y canlynol:</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Pa nodwedd yn yr ardal cod post â’r boblogaeth fwyaf a esboniodd y nifer uchel o bobl?</p>
+<p>Abertawe (SA): <select class="webex-select" id="webex-c44357e4b862f2bf6573376ec82c02b3" data-answer="OAUYAxkHSQROCGs="><option value="blank"></option>
+<option>Llety myfyrwyr</option>
+<option>Carchar</option>
+<option>Ysbyty</option>
+<option>Barics milwrol</option>
+<option>Cartref gofal</option></select></p>
+<p>Caerdydd (CF): <select class="webex-select" id="webex-ae6b9f9154ceb100cae194ea664f570b" data-answer="OlUaUxVWFQEZBD4="><option value="blank"></option>
+<option>Llety myfyrwyr</option>
+<option>Carchar</option>
+<option>Ysbyty</option>
+<option>Barics milwrol</option>
+<option>Cartref gofal</option></select></p>
+<p>Aberystwyth (SY): <select class="webex-select" id="webex-3a5e80a86d834f8fc9536f22af93a932" data-answer="aFAZVRQATQgaVGU="><option value="blank"></option>
+<option>Llety myfyrwyr</option>
+<option>Carchar</option>
+<option>Ysbyty</option>
+<option>Barics milwrol</option>
+<option>Cartref gofal</option></select></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>SA1 8EN yw’r cod post ar gyfer llety myfyrwyr Campws y Bae, Prifysgol Abertawe.</li>
+<li>CF35 6AP yw’r cod post ar gyfer Carchar Parc EF ym Mhen-y-bont ar Ogwr.</li>
+<li>SY23 3TE yw’r cod post ar gyfer pentref myfyrwyr Penglais, Prifysgol Aberystwyth.</li>
+</ul>
+</div>
+</div>
+<ol start="7" class="example" type="1">
+<li><p>Cadwch eich prosiect!</p></li>
+<li><p>Yn ogystal â gallu dosbarthu pwyntiau yn ôl categori o’r attributes table (fel y gwnaethoch chi yn <a href="e01.cy.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a>), gellir graddio pwyntiau gan newidyn parhaus yn seiliedig ar faint neu liw. Gall hyn fod yn dechneg ddelweddu effeithiol iawn. I raddio yn ôl maint:</p></li>
+</ol>
+<ol type="i">
+<li>Agorwch ffenestr <code>Symbology</code> yr haen headcounts</li>
+<li>Defnyddiwch y cwymplen i newid ffynhonnell y symboleg o <code>Single Symbol</code> i <code>Graduated</code>
+</li>
+<li>Gosodwch <code>Value</code> i <code>Total</code> (h.y. poblogaeth y DU yn 2021)</li>
+<li>Gosodwch <code>Method</code> i <code>Size</code>
+</li>
+<li>Cliciwch <code>Classify</code> → <code>OK</code>
+</li>
+</ol></section><section id="sec-stats4fields" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-stats4fields">
+<span class="header-section-number">3.2</span> Darganfod ystadegau headcount</h2>
+<ol start="9" class="example" type="1">
+<li>Gweithrediad bwerus GIS yw gallu deillio gwybodaeth ystadegol o oll neu is-set o nodweddion mewn set ddata geo-ofodol. Mae hyn yn berthnasol i gyfrifo ystadegau o’ch teils map a lleoliad eich fferm wynt eich hun. I gyfrifo ystadegau ar headcounts fesul cod post:</li>
+</ol>
+<ol type="i">
+<li>Cliciwch <code>Vector</code> → <code>Analysis Tools</code> → <code>Basic Statistics For Fields...</code>
+</li>
+<li>Gosodwch <code>Input layer</code> i’r haen <code>Wales_headcounts_at_postcodes_2021.gpkg</code>
+</li>
+<li>Gosodwch <code>Field to calcualate statics on</code> i <code>Total</code>
+</li>
+<li>Cliciwch <code>Run</code>. Cyflwynir y canlyniadau o dan y tab <code>Log</code>, a gellir eu gweld yn y <code>Results Viewer</code> drwy dwbl-glicio ar y gwrthrych <code>Statistics report</code>
+</li>
+</ol>
+<ol start="10" class="example" type="1">
+<li>Defnyddiwch <code>Basic Statistics For Fields...</code> i ateb y canlynol:</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Beth oedd poblogaeth gofrestredig Cymru yn 2021? <em>(peidiwch â defnyddio atalnodau)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-cc673d149b4b7bf29d6268c8b58bce90" data-tol="0" size="20" data-answer="OEEFBgNTBQQJQGk="></p>
+<p>Beth oedd y newid canrannol ym mhoblogaeth Cymru rhwng 2011 a 2021?</p>
+<p><input class="webex-solveme nospaces" id="webex-863f033836e1d85002e2528811e04ace" data-tol="1" size="20" data-answer="YxQCRG0="></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>Roedd poblogaeth gofrestredig Cymru yn 2021 yn 3,107,400.</li>
+<li>Y newid canrannol ym mhoblogaeth Cymru rhwng 2011 a 2021 oedd 1%.</li>
+</ul>
+</div>
+</div>
+<ol start="11" class="example" type="1">
+<li>Gobeithio eich bod wedi defnyddio <code>Wales_headcounts_at_postcodes_2011.gpkg</code> i ateb yr ail gwestiwn! Os felly, cliciwch ar y dde ar haen cyfrif <code>2011</code> a chliciwch <code>Remove Layer...</code>. Mae’n arfer da gwaredu haenau ar ôl i chi orffen gyda nhw, er mwyn osgoi i’ch prosiect fynd yn rhy orlawn</li>
+</ol></section><section id="sec-selectlocation" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sec-selectlocation">
+<span class="header-section-number">3.3</span> Ystadegau yn ôl lleoliad</h2>
+<ol start="12" class="example" type="1">
+<li>Cyfrifwch ystadegau sylfaenol ar is-set o ddata mewn lleoliad penodol:</li>
+</ol>
+<ol type="i">
+<li>Dewiswch bolygon Sir Abertawe o <code>Wales_Principal_Areas</code> (wedi anghofio sut i wneud hyn? Gwiriwch <span class="quarto-unresolved-ref">?sec-attrib</span>)</li>
+<li>Cliciwch <code>Vector</code> → <code>Research Tools</code> → <code>Select By Location...</code>
+</li>
+<li>Gosodwch <code>Select features from</code> i <code>Wales_headcounts_at_postcodes_2021</code>
+</li>
+<li>Ticiwch <code>are within</code>
+</li>
+<li>Gosodwch <code>By comparing to the features from</code> i <code>Wales_Principal_Areas</code>
+</li>
+<li>Ticiwch <code>Selected features only</code>. Mae hyn yn sicrhau mai dim ond codau post yn Abertawe sy’n cael eu dewis</li>
+<li>Cliciwch <code>Run</code>
+</li>
+<li>Os caiff ei wneud yn gywir, fe welwch fod pob canolbwynt cod post yn Sir Abertawe wedi’i ddewis (wedi’i amlygu’n felyn)</li>
+</ol>
+<ol start="13" class="example" type="1">
+<li>Defnyddiwch yr offeryn <code>Basic Statistics For Fields...</code> i ateb y canlynol (<strong>gwnewch yn siŵr bod <code>Selected features only</code> wedi’i dicio y tro hwn</strong>):</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Beth oedd cyfanswm poblogaeth Sir Abertawe yn 2021? <em>(peidiwch â defnyddio atalnodau)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-830a54a77108b0d386842fbcbe964dd1" data-tol="0" size="20" data-answer="YxECUg0AVQAVbA=="></p>
+<p>What was the total population of Cardiff county in 2021? <em>(don’t use commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-b24143b8b9398f162bd3b4488ebc2674" data-tol="0" size="20" data-answer="ORAHBwYAVw5AZA=="></p>
+<p>Beth oedd y newid canrannol ym mhoblogaeth Sir Abertawe rhwng 2011 a 2021? <em>(peidiwch â defnyddio atalnodau)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-c4069a08f521465498c781f45278ac90" data-tol="1" size="20" data-answer="OBYdBhdTEmU="></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>Cyfanswm poblogaeth Sir Abertawe yn 2021 oedd 238,447.</li>
+<li>Cyfanswm poblogaeth Sir Caerdydd yn 2021 oedd 362,356.</li>
+<li>Y newid canrannol ym mhoblogaeth Sir Abertawe rhwng 2011 a 2021 oedd -0.2.</li>
+</ul>
+</div>
+</div>
+</section><section id="creu-gresmap-dwysedd-poblogaeth" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creu-gresmap-dwysedd-poblogaeth">
+<span class="header-section-number">3.4</span> Creu gresmap dwysedd poblogaeth</h2>
+<ol start="14" class="example" type="1">
+<li>Mae gwresmap yn offeryn delweddu sy’n defnyddio ramp lliw i ddangos gwerthoedd neu dwysedd data gofodol ar ffurf raster gyda maint picsel penodol. Gall rhain grynhoi data pwynt yn effeithiol - efallai’n fwy effeithiol na graddio pwyntiau yn ôl maint. I greu gwresmap o ddwysedd poblogaeth yn Sir Abertawe:</li>
+</ol>
+<ol type="i">
+<li>Cliciwch <code>Processing</code> → <code>Toolbox</code> neu dewch o hyd i’r llwybr byr (<img src="figs/ProcessingToolbox.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Cliciwch y saeth chwymplen wrth ymyl <code>Interpolation</code>
+</li>
+<li>Dwbl-gliciwch <code>Heatmap (Kernel Density Estimation)</code>
+</li>
+<li>Gosodwch <code>Point layer</code> i <code>Wales_headcounts_at_postcodes_2021</code>
+</li>
+<li>Ticiwch <code>Selected features only</code>
+</li>
+<li>Gosodwch <code>Radius</code> i <code>500</code> metr</li>
+<li>Gosodwch <code>Pixel size X</code> a <code>Pixel size Y</code> i <code>100</code> metr</li>
+<li>Gosodwch <code>Weight from field</code> i <code>Total</code>
+</li>
+<li>Cliciwch <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+<ol start="15" class="example" type="1">
+<li>Arbrofwch gyda:</li>
+</ol>
+<ol type="i">
+<li>Newid symboleg yr haen raster (gweler <a href="e02.cy.html#sec-rasterdata" class="quarto-xref"><span>Section 2.5</span></a>)</li>
+<li>Creu gwresmap newydd gan newid y <code>Radius</code> y tro hwn</li>
+<li>Creu gwresmap newydd ar gyfer Cymru gyfan (Dad-diciwch <code>Selected features only</code>..)</li>
+</ol>
+<ol start="16" class="example" type="1">
+<li>Wedi cadw eich prosiect yn ddiweddar?</li>
+</ol></section><section id="geocodio-cyfeiriadau-newydd" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="geocodio-cyfeiriadau-newydd">
+<span class="header-section-number">3.5</span> Geocodio cyfeiriadau newydd</h2>
+<ol start="17" class="example" type="1">
+<li>Geogodio yw’r broses o drosi cyfeiriad neu enw lle i gyfesurynnau daearyddol, fel lledred a hydred. Mae’n caniatáu i GIS blotio lleoliadau ar fap. Mae offeryn ‘trosi’ o’r fath unwaith eto yn weithrediad pwerus o GIS. Defnyddiwch geogodio i blotio ble mae siopau Tesco lleol Abertawe wedi’u lleoli:</li>
+</ol>
+<ol type="i">
+<li>Llywiwch i’r <a href="https://www.tesco.com/store-locator/" target="_blank">Lleolydd siop Tesco</a>
+</li>
+<li>Chwiliwch am siopau yn ardal ‘Abertawe’</li>
+<li>Agorwch <code>Excel</code>
+</li>
+<li>Llenwch daenlen gydag enw’r ‘Siop’ a’r ‘Cod Post’ ar gyfer y saith siop gyntaf o’r wefan</li>
+<li>Cadwch y daenlen mewn fformat <code>.csv</code> (mae <code>UTF-8</code> yn iawn)</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/TescoSpreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="18" class="example" type="1">
+<li>Nesaf, gosodwch ategyn penodol i wneud y geocodio. Mae ategion yn cael eu hysgrifennu gan ddatblygwyr QGIS a datblygwyr annibynnol eraill sydd eisiau ymestyn swyddogaeth graidd y feddalwedd. Yr arloesi hwn dan arweiniad y gymuned sy’n gwneud QGIS yn offeryn mor bwerus. I osod ategion:</li>
+</ol>
+<ol type="i">
+<li>Dychwelwch i QGIS</li>
+<li>Dewiswch <code>Plugins</code> → <code>Manage and Install Plugins...</code>
+</li>
+<li>Chwiliwch am <code>mmqgis</code>
+</li>
+<li>Dewiswch yr offeryn <code>mmqgis</code>
+</li>
+<li>Cliciwch <code>Install Plugin</code>
+</li>
+<li>Cliciwch <code>Close</code>
+</li>
+</ol>
+<ol start="19" class="example" type="1">
+<li>Defnyddiwch yr offeryn <code>MMQGIS</code> i atodi cyfesurynnau i ddata cod post:</li>
+</ol>
+<ol type="i">
+<li>Cliciwch <code>MMQGIS</code> → <code>Geocode</code> → <code>Geocode CSV with Web Service</code>
+</li>
+<li>Gosodwch <code>Input CSV File</code> fel eich ffeil .csv</li>
+<li>Gosodwch <code>Cyfeiriad</code> fel eich colofn cod post</li>
+<li>Gosodwch <code>Web Service</code> fel <code>OpenStreetMap / Nominatim</code>
+</li>
+<li>Gosodwch <code>Output File Name</code> i’ch ffolder <code>Downloads</code>
+</li>
+<li>Gosodwch <code>Not Found Output List</code> i’ch ffolder <code>Downloads</code>
+</li>
+<li>Cliciwch <code>Apply</code>
+</li>
+<li>Arhoswch nes bod <code>Geocoded 7 of 7</code> yn ymddangos o dan yr offeryn a gwiriwch fod y codau post yn ymddangos yn y lleoedd cywir</li>
+<li>Cliciwch <code>Close</code>
+</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Learning outcomes
+<span class="screen-reader-only">Important</span>Allbwn dros dro
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>By the end of this exercise you should:</p>
+<p>Mae’n gyffredin yn QGIS i greu haenau dros dro, i wirio eu bod yn arddangos fel y bwriadwyd, yna arbed yr allbwn i rywle mwy synhwyrol. Mae hyn yn arbennig o wir os oes sawl cam (ac felly haenau y mae angen eu creu) i gyrraedd yr allbwn terfynol a fwriadwyd. Mae arbed yr haenau dros dro hyn i’ch ffolder ‘Downloads’ yn syniad da, gan y gallwch chi wagio’r ffolder hon yn y pen draw heb rwystro lle gwerthfawr ar eich cyfrif OneDrive gyda data sothach.</p>
+</div>
+</div>
+</section><section id="sec-export" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="sec-export">
+<span class="header-section-number">3.6</span> Allforio haenau fector</h2>
+<ol start="20" class="example" type="1">
+<li>Addaswch yr haen fector dros dro a’i chadw mewn lleoliad synhwyrol:</li>
+</ol>
+<ol type="i">
+<li>O’r panel <code>Layers</code>, dde-gliciwch ar <code>temp1</code>
+</li>
+<li>Cliciwch <code>Export</code> → <code>Save Features As...</code>
+</li>
+<li>Gosodwch <code>Format</code> i <code>GeoPackage</code>
+</li>
+<li>Dewiswch leoliad addas i gadw’r geopackage</li>
+<li>Gosodwch ‘Layer name’ fel rhywbeth synhwyrol, e.e. yr un fath â’r enw ffeil</li>
+<li>Gosodwch <code>CRS</code> i <code>EPSG:27700</code>
+</li>
+<li>O dan <code>Select fields to export and their export options</code>, gallwch benderfynu pa wybodaeth ddylai ymddangos yn y attributes table. Cadwch bethau’n daclus trwy gynnwys enw’r siop a’r cod post yn unig</li>
+<li>Cliciwch <code>OK</code>
+</li>
+</ol>
+<ol start="21" class="example" type="1">
+<li><p>Dylai’r haen ymddangos yn y panel <code>Layers</code>. Agorwch ei attributes table. A yw’r hyn rydych chi newydd ei wneud yn gwneud synnwyr? Os na - gofynnwch!</p></li>
+<li><p>Gwaredwch yr haen <code>temp1</code> o’ch prosiect</p></li>
+</ol></section><section id="sec-buffers" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-buffers">
+<span class="header-section-number">3.7</span> Defnyddio byfferau fel dalgylchoedd syml</h2>
+<ol start="23" class="example" type="1">
+<li>Mae creu byfferau o amgylch nodweddion i’w defnyddio fel dalgylchoedd neu barthau gwaharddedig yn enghraifft bwerus arall o gymhwysiad GIS. Fel enghraifft, darganfyddwch faint o bobl sy’n byw o fewn pellter cerdded i’r siopau Tesco rydych chi wedi’u geogodio. Crëwch fyfferau o amgylch pob pwynt cod post i frasamcanu’r pellter cerdded o’r siop Tesco:</li>
+</ol>
+<ol type="i">
+<li>Cliciwch <code>Vector</code> → <code>Geoprocessing Tools</code> → <code>Buffer...</code>
+</li>
+<li>Gosodwch <code>Input layer</code> fel eich haen siopau Tesco (a ddylai nawr gynnwys <code>[EPSG:27700]</code> ar ôl enw’r haen)</li>
+<li>Gosodwch <code>Distance</code> i <code>500</code> metr</li>
+<li>Ticiwch <code>Dissolve result</code>
+</li>
+<li>Cliciwch <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+<ol start="24" class="example" type="1">
+<li><p>Gan ddefnyddio <code>Select by Location</code> (gweler <a href="#sec-selectlocation" class="quarto-xref"><span>Section 3.3</span></a>) a <code>Basic Statistics</code> (gweler <a href="#sec-stats4fields" class="quarto-xref"><span>Section 3.2</span></a>), dewch o hyd i gyfanswm y bobl sydd wedi’u cofrestru i godau post o fewn 500 m i siopau Tesco</p></li>
+<li><p>Ar gyfer yr her olaf, atebwch y canlynol (awgrym: gweler <a href="e01.cy.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a>):</p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Beth oedd cyfanswm y nifer o bobl a oedd wedi cofrestru yn 2021 o fewn 2 km i Gampws Singleton (SA2 8PQ) a Champws y Bae (SA1 8QE) Prifysgol Abertawe? <em>(peidiwch â defnyddio atalnodau)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-de69ee0f7a3d5751f19fbd41d66096b1" data-tol="0" size="20" data-answer="P0cFC1xRAERq"></p>
+</div>
+<div class="webex-solution">
+<p>Cyfanswm y nifer o bobl a oedd wedi cofrestru yn 2021 o fewn 2 km i Gampws Singleton (SA2 8PQ) a Champws y Bae (SA1 8QE) Prifysgol Abertawe oedd 32,940.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Canlyniadau dysgu
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Erbyn diwedd yr ymarfer hwn dylech chi allu:</p>
 <ol type="1">
-<li>Understand the nature and distribution of UK postcode points in Wales.</li>
-<li>Vary symbol size or colour for points based on attributes.</li>
-<li>Select from point data based on containment within polygons.</li>
-<li>Calculate statistics from full tables or selections.</li>
-<li>Create a heatmap and choose raster presentation styles.</li>
-<li>Create buffers and count population in simple catchments.</li>
-<li>Install and use QGIS plugins.</li>
+<li>Archwilio ddata cyfrifiad sy’n gysylltiedig â chod post drwy’r attributes table, gan archwilio ac egluro patrymau gofodol dwysedd poblogaeth uchel ac isel</li>
+<li>Delweddu dwysedd poblogaeth gan ddefnyddio symboleg raddedig ac amcangyfrif dwysedd kernel (gwresmap)</li>
+<li>Geogodio gyfeiriadau o godau post gan ddefnyddio ategyn a gwasanaeth gwe, ac allforio’r canlyniad fel haen fector wedi’i thaflunnu’n gywir</li>
+<li>Cyfrifo ystadegau poblogaeth ar gyfer ardaloedd a dalgylchoedd diffiniedig gan ddefnyddio’r offer <code>Select by Location</code>, <code>Buffer</code>, a <code>Basic Statistics for Fields</code>
+</li>
+<li>Gwerthfawrogi sut mae codau post yn cysylltu gweithgaredd dynol â lleoliad ffisegol, a gwerth data taclus, deniadol a haenau dros dro mewn llif gwaith GIS - a’ch prosiect fferm wynt</li>
 </ol>
 </div>
 </div>
@@ -1254,8 +1514,8 @@ window.onload = function() {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/faq.cy.html" class="pagination-link" aria-label="Cwestiynau Cyffredin">
-        <span class="nav-page-text">Cwestiynau Cyffredin</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/faq.cy.html" class="pagination-link" aria-label="FAQ">
+        <span class="nav-page-text">FAQ</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

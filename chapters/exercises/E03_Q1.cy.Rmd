@@ -1,0 +1,27 @@
+Question
+========
+Sawl person oedd yn byw yn y cod post â'r boblogaeth fwyaf yn ardal Caerdydd (CF) yn 2021? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER1##
+
+Sawl person oedd yn byw yn y cod post â'r boblogaeth fwyaf yn ardal Abertawe (SA) yn 2021? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER2##
+
+Sawl person oedd yn byw yn y cod post â'r boblogaeth fwyaf yn ardal Aberystwyth (SY) yn 2021? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER3##
+
+Solution
+========
+- Y cod post â'r boblogaeth fwyaf yn ardal Caerdydd (CF35 6AP) yn 2021 oedd 1,593.
+- Y cod post â'r boblogaeth fwyaf yn ardal Abertawe (SA1 8EN) yn 2021 oedd 1,922.
+- Y cod post â'r boblogaeth fwyaf yn ardal Aberystwyth (SY23 3TE) yn 2021 oedd 820.
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num
+exsolution: 1593|1922|820
+extol: 0|0|0
+exname: E03_Q1.cy

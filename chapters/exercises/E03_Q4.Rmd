@@ -1,22 +1,22 @@
 Question
 ========
-What was the total population of Swansea county in 2021? *(don't use commas)*
+What was the total population of Swansea County in 2021? *(don't use commas)*
 
 ##ANSWER1##
 
-What was the total population of Cardiff county in 2021? *(don't use commas)*
+What was the total population of Cardiff County in 2021? *(don't use commas)*
 
 ##ANSWER2##
 
-What was the percentage change in the population of Swansea county between 2011 and 2021? *(don't use commas)*
+What was the percentage change in the population of Swansea County between 2011 and 2021? *(don't use commas)*
 
 ##ANSWER3##
 
 Solution
 ========
-- The total population of Swansea county in 2021 was 238,447.
-- The total population of Cardiff county in 2021 was 362,356.
-- The percentage change in the population of Swansea county between 2011 and 2021 was -0.2.
+- The total population of Swansea County in 2021 was 238,447.
+- The total population of Cardiff County in 2021 was 362,356.
+- The percentage change in the population of Swansea County between 2011 and 2021 was -0.2.
 
 Meta-information
 ================

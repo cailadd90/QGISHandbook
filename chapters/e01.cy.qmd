@@ -11,7 +11,7 @@ library(exams2forms)
 I feistroli QGIS, rhaid dechrau gyda'r pethau sylfaenol. Mae'r ymarfer hwn yn cyflwyno'r sgiliau sylfaenol a fydd yn sail i ddatblygu eich prosiect fferm wynt a thu hwnt - gan gynnwys eich traethawd hir. Cymerwch eich amser, gofynnwch gwestiynau, a gwnewch yn siŵr eich bod yn hyderus gyda phob cam cyn symud ymlaen.
 
 ::: {.callout-note}
-# Nodau dysgu
+# Amcanion dysgu
 
 I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phrosesu data geo-ofodol. Byddwch yn dysgu sut i agor gwahanol fathau o haen ddata, addasu'r ffordd maen nhw'n edrych, archwilio eu priodoleddau, a dewis nodweddion i'w dadansoddi ymhellach.
 :::
@@ -60,7 +60,7 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
 
 ## Mesur gwrthrychau geo-ofodol {#sec-mesuring}
 
-(@) Cliciwch y saeth ostwng wrth ymyl yr eicon `Measure` i ddewis yr offeryn priodol ar gyfer mesur:
+(@) Cliciwch y saeth cwymplen wrth ymyl yr eicon `Measure` i ddewis yr offeryn priodol ar gyfer mesur:
 
     i. Y pellter rhwng y ddau bwynt pellaf ym Mhrydain Fawr (mewn milltiroedd)
     ii. Arwynebedd bras Ynys Manaw (mewn cilometrau sgwâr)

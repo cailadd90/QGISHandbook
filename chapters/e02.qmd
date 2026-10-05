@@ -5,7 +5,7 @@
 Communication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and is how you generate the maps for your wind farm project.
 
 ::: {.callout-note}
-## Learning aims
+## Learning objectives
 
 To create functionally complete maps in QGIS for print or digital output. You will learn how to create a 1:1,000,000 scale map of Wales illustrating mean wind speed and county boundaries necessary for making Map 1.
 :::

@@ -1,4 +1,4 @@
-# Cwestiynau Cyffredin {#sec-faq .unnumbered}
+# FAQ {#sec-faq .unnumbered}
 
 Dyma rai o'r problemau cyffredin sy'n codi yn ystod y cwrs hwn a sut i'w datrys.
 

@@ -5,7 +5,7 @@
 The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project.
 
 ::: {.callout-note}
-## Learning aims
+## Learning objectives
 
 To examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments. The ability to extract information from geospatial data will be essential for your map captions.
 :::
@@ -20,7 +20,7 @@ To examine the distribution of postcode reference points within Wales, visualise
 
 (@) Investigate the attribute table and explore how these points are distributed
 
-(@) Using attribute table selection and skills from Chapter 1 (@sec-attrib), find postcodes with the greatest number of people in the Cardiff (`CF`), Swansea (`SA`) and Aberystwyth (`SY`) areas to answer the following:
+(@) Using skills from Exercise 1 (@sec-attrib) to answer the following:
 
 ```{r}
 #| echo: false
@@ -75,14 +75,14 @@ exams2forms("E03_Q3.Rmd", edir = "exercises")
 
 (@) Calculate basic statistics on a subset of data in a particular location:
 
-    i. Select the Swansea county polygon from `Wales_Principal_Areas` (forgotten how to do this? Check @sec-attrib)
-    ii. Click `Vector` → `Research Tools` →  `Select By Location...`
+    i. Select the Swansea County polygon from `Wales_Principal_Areas` (forgotten how to do this? Check @sec-attrib)
+    ii. Click `Vector` → `Research Tools` → `Select By Location...`
     iii. Set `Select features from` as `Wales_headcounts_at_postcodes_2021` 
     iv. Check `are within`
     v. Set `By comparing to the features from` to `Wales_Principal_Areas`
     vi. Check `Selected features only`. This ensures only postcodes in Swansea are selected
     vii. Click `Run`
-    viii. If done correctly, you'll see all postcode centroids in Swansea county have been selected (highlighted yellow)
+    viii. If done correctly, you'll see all postcode centroids in Swansea County have been selected (highlighted yellow)
 
 (@) Use the `Basic Statistics For Fields...` tool to answer the following (**make sure `Selected features only` is checked this time**):
 
@@ -96,15 +96,15 @@ exams2forms("E03_Q4.Rmd", edir = "exercises")
 
 ## Creating a population density heatmap
 
-(@) A heatmap is a visualisation tool that uses a colour ramp to show the values, density, or intensity of spatial data as a raster with defined pixel size. These can effectively summarise point data - maybe more effectively than graduating points by size. To create a heatmap of population density in Swansea county:
+(@) A heatmap is a visualisation tool that uses a colour ramp to show the values, density, or intensity of spatial data as a raster with defined pixel size. These can effectively summarise point data - maybe more effectively than graduating points by size. To create a heatmap of population density in Swansea County:
 
     i. Click `Processing` → `Toolbox` or find the the shortcut (![](figs/ProcessingToolbox.png){width=3%})
     ii. Click the drop-down arrow next to `Interpolation`
     iii. Double-click `Heatmap (Kernel Density Estimation)`
     iv. Set `Point layer` to `Wales_headcounts_at_postcodes_2021`
-    v. Check `Selected features only`.
+    v. Check `Selected features only`
     vi. Set `Radius` to `500` metres
-    vii. Set `Pixel size X` and `Pixel size Y` to `100`
+    vii. Set `Pixel size X` and `Pixel size Y` to `100` metres
     viii. Set `Weight from field` to `Total`
     ix. Click `Run` → `Close`
 
@@ -118,7 +118,7 @@ exams2forms("E03_Q4.Rmd", edir = "exercises")
 
 ## Geocoding new addresses
 
-(@) Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Such a 'conversion' tool is again a powerful application of GIS. Let's do some geocoding by plotting where Swnasea's local Tesco stores are located:
+(@) Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Such a 'conversion' tool is again a powerful application of GIS. Use geocoding to plot where Swansea's local Tesco stores are located:
 
     i. Navigate to the [Tesco store locator](https://www.tesco.com/store-locator/){target='_blank'}
     ii. Search for stores in the `Swansea` area
@@ -157,15 +157,16 @@ It's common in QGIS to create temporary layers, to check they're displaying as i
 
 ## Exporting vector layers {#sec-export}
 
-Modify the temporary vector layer and save in a sensible location:
+(@) Modify the temporary vector layer and save in a sensible location:
 
-    i. From the `Layers` panel, right-click on `temp1` and click `Export` → `Save Features As...`
-    ii. Set `Format` to `GeoPackage`
-    iii. Select a suitable location to save the geopackage 
-    iv. Set 'Layer name' as something sensible, e.g. the same as the file name
-    v. Set `CRS` to `EPSG:27700`
-    vi. Under `Select fields to export and their export options`, you can decide what information should appear in the attribute table. Keep things tidy by only including the store name and postcode
-    vii. Click `OK`
+    i. From the `Layers` panel, right-click on `temp1` 
+    ii. Click `Export` → `Save Features As...`
+    iii. Set `Format` to `GeoPackage`
+    iv. Select a suitable location to save the geopackage 
+    v. Set 'Layer name' as something sensible, e.g. the same as the file name
+    vi. Set `CRS` to `EPSG:27700`
+    vii. Under `Select fields to export and their export options`, you can decide what information should appear in the attribute table. Keep things tidy by only including the store name and postcode
+    viii. Click `OK`
 
 (@) The layer should appear in the `Layers` panel. Open its attribute table. Does what you've just done make conceptual sense? If not - ask!
 
@@ -201,6 +202,6 @@ By the end of this exercise you should be able to:
 1. Explore postcode-linked census data through the attribute table, examining and explaining spatial patterns of high and low population density
 2. Visualise population density using graduated symbology and kernel density (heatmap) estimation
 3. Geocode addresses from postcodes using a plugin and web service, and export the result as a properly projected vector layer
-4. Calculate population statistics for defined areas and catchments — combining `Select by Location`, `Buffer`, and `Basic Statistics for Fields` tools
+4. Calculate population statistics for defined areas and catchments using `Select by Location`, `Buffer`, and `Basic Statistics for Fields` tools
 5. Appreciate how postcodes link human activity to physical location, and the value of tidy, well-projected data and temporary layers in a GIS workflow - and your windfarm project
 :::

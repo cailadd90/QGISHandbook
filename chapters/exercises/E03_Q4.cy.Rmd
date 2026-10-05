@@ -1,0 +1,27 @@
+Question
+========
+Beth oedd cyfanswm poblogaeth Sir Abertawe yn 2021? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER1##
+
+What was the total population of Cardiff county in 2021? *(don't use commas)*
+
+##ANSWER2##
+
+Beth oedd y newid canrannol ym mhoblogaeth Sir Abertawe rhwng 2011 a 2021? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER3##
+
+Solution
+========
+- Cyfanswm poblogaeth Sir Abertawe yn 2021 oedd 238,447.
+- Cyfanswm poblogaeth Sir Caerdydd yn 2021 oedd 362,356.
+- Y newid canrannol ym mhoblogaeth Sir Abertawe rhwng 2011 a 2021 oedd -0.2.
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num
+exsolution: 238447|362356|-0.2
+extol: 0|0|1
+exname: E03_Q4.cy
