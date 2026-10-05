@@ -1,11 +1,13 @@
 # Geocoding and population {#sec-e03}
 
+> **Date of practical:** 16th October 2026
+
 The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project...
 
 ::: {.callout-note}
 ## Learning aims
 
-To examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments.
+To examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments. The ability to extract information from geospatial data will be essential for your map captions.
 :::
 
 ## Exploring postcode locations
@@ -50,7 +52,7 @@ exams2forms("E03_Q2.Rmd", edir = "exercises")
 
 ## Finding headcount statistics {#sec-stats4fields}
 
-(@) CARRY ON FROM HERE - JUSTIFICATION FOR WHY THIS STEP IS USEFUL.. QGIS can easily  especially useful function of GIS is to   is useful to be able to derive statistical information from attributes of all features in a geospatial dataset or from selections of a dataset. This is a powerful tool to derive population statsics from your map tile and windfarm location. To derive statistical information from the attributes of features in a geospatial dataset:
+(@) A powerful function of GIS is to be able to derive statistical information from the attributes of all or a subset of features in a geospatial dataset. This applies to calculating statistics from your own map tile and windfarm location. To calculate statistics on headcounts per postcode:
 
     i. Click `Vector` → `Analysis Tools` → `Basic Statistics For Fields...`
     ii. Set `Input layer` to the `Wales_headcounts_at_postcodes_2021.gpkg` layer
@@ -96,58 +98,48 @@ library(exams2forms)
 exams2forms("E03_Q4.Rmd", edir = "exercises")
 ```
 
-## Creating a heatmap
+## Creating a population density heatmap
 
-(@) Click `Processing` → `Toolbox` or find the the shortcut (![](figs/ProcessingToolbox.png){width=3%})
+(@) A heatmap is a visualisation tool that uses a colour ramp to show the values, density, or intensity of spatial data as a raster with defined pixel size. These can effectively summarise point data - maybe more effectively than graduating points by size. To create a heatmap of population density in Swansea county:
 
-(@) Click the drop-down arrow next to `Interpolation`
+    i. Click `Processing` → `Toolbox` or find the the shortcut (![](figs/ProcessingToolbox.png){width=3%})
+    ii. Click the drop-down arrow next to `Interpolation`
+    iii. Double-click `Heatmap (Kernel Density Estimation)`
+    iv. Set `Point layer` to `Wales_headcounts_at_postcodes_2021`
+    v. Check `Selected features only`.
+    vi. Set `Radius` to `500` metres
+    vii. Set `Pixel size X` and `Pixel size Y` to `100`
+    viii. Set `Weight from field` to `Total`
+    ix. Click `Run` → `Close`
 
-(@) Double-click `Heatmap (Kernel Density Estimation)`
+(@) Experiment with:
 
-(@) Generate a raster heatmap of population density across Wales:
-
-    i. Set `Point layer` to `Wales_headcounts_at_postcodes_2021`
-    ii. Set `Radius` to `500` metres
-    iii. Set `Pixel size X` and `Pixel size Y` to `100`
-    iv. Set `Weight from field` to `Total`
-
-(@) Experiment with the raster layer's symbology (see @sec-rasterdata). It may help to hide the 2021 point layer and clear any selections from the principal areas polygons whilst you do this
-
-(@) Experiment with changing the `Radius` to see how the heatmap changes
+    i. Changing the raster layer's symbology (see @sec-rasterdata)
+    ii. Creating a new heatmap whilst this time changing the `Radius` 
+    iii. Creating a new heatmap for the whole of Wales (Uncheck `Selected features only`...)
 
 (@) Saved your project recently?
 
 ## Geocoding new addresses
 
-::: {.callout-tip}
-# What's geocoding?
+(@) Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Such a 'conversion' tool is again a powerful application of GIS. Let's do some geocoding by plotting where Swnasea's local Tesco stores are located:
 
-Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Let's do some geocoding by plotting where your local Tesco stores are located!
-:::
-
-(@) Navigate to the [Tesco store locator](https://www.tesco.com/store-locator/){target='_blank'}
-
-(@) Search for stores in the `Swansea` area
-
-(@) Open `Excel` 
-
-(@) Populate a spreadsheet with the `Store` name and `Postcode` of the first seven stores from the website
+    i. Navigate to the [Tesco store locator](https://www.tesco.com/store-locator/){target='_blank'}
+    ii. Search for stores in the `Swansea` area
+    iii. Open `Excel` 
+    iv. Populate a spreadsheet with the `Store` name and `Postcode` of the first seven stores from the website
+    v. Save the spreadsheet in a `.csv` format (`UTF-8` is fine)
 
 ![](figs/TescoSpreadsheet.png){fig-align='center' width=50%}
 
-(@) Save the spreadsheet in a `.csv` format (`UTF-8`)
+(@) Next, install a specific plugin to do the geocoding. Plugins are written by QGIS developers and other independent developers who want to extend the core functionality of the software. It is this community-led innovating that makes QGIS such a powerful tool. To install plugins:
 
-(@) In QGIS, select `Plugins` → `Manage and Install Plugins...` 
-
-::: {.callout-tip}
-# The power of plugins
-
-Plugins are written by QGIS developers and other independent developers who want to extend the core functionality of the software. It is this community-led innovating that makes QGIS such a powerful tool.
-:::
-
-(@) Search for `mmqgis`
-
-(@) Click `Install Plugin`
+    i. Return to QGIS
+    ii. Select `Plugins` → `Manage and Install Plugins...` 
+    iii. Search for `mmqgis`
+    iv. Select the `mmqgis` tool 
+    v. Click `Install Plugin`
+    vi. Click `Close`
 
 ![](figs/mmqgis.png){fig-align='center' width=50%}
 
@@ -168,7 +160,7 @@ Plugins are written by QGIS developers and other independent developers who want
 ::: {.callout-important} 
 # Temporary output {#sec-tempout}
 
-It's common in QGIS to create temporary layers, check they're displaying as intended, then save the output to somewhere more sensible. This is especially true if several steps are needed to create the intended output. Saving these temporary layers to your `Downloads` folder is a good idea, as you can eventually empty this folder without glogging up valuable space on your OneDrive account with junk data.
+It's common in QGIS to create temporary layers, to check they're displaying as intended, then save the output to somewhere more sensible. This is especially true if there are several steps (and therefore layers that need to be created) to get to the final intended output. Saving these temporary layers to your `Downloads` folder is a good idea, as you can eventually empty this folder without clogging up valuable space on your OneDrive account with junk data.
 :::
 
 ## Exporting vector layers {#sec-export}
@@ -191,7 +183,7 @@ Modify the temporary vector layer and save in a sensible location:
 
 ## Using buffers as simple catchments {#sec-buffers}
 
-(@) Create buffers around each postcode point to approximate walking distance from the Tescos store:
+(@) Creating buffers around features to use as catchments or exclusion zones is yet another powerful example of GIS application. As an example, find out how many people live within walking distance of the Tesco stores you have geocoded. Create buffers around each postcode point to approximate walking distance from the Tescos store:
 
     i. Click `Vector` → `Geoprocessing Tools` → `Buffer...` 
     ii. Set `Input layer` as your Tesco stores layer (which should now have `[EPSG:27700]` after the layer name)
@@ -213,7 +205,7 @@ library(exams2forms)
 exams2forms("E03_Q5.Rmd", edir = "exercises")
 ```
 
-The skills you've learned here are vital for the wind farm project.
+(@) The skills you've learned here are vital for the wind farm project.
 
 ::: {.callout-note}
 # Learning outcomes

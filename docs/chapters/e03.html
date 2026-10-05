@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<link rel="alternate" hreflang="en" href="https://cailadd90.github.io/QGISHandbook//chapters/e02.html" />
-<link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e02.cy.html" />
+<link rel="alternate" hreflang="en" href="https://cailadd90.github.io/QGISHandbook//chapters/e03.html" />
+<link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e03.cy.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>2  Composing maps – QGIS Handbook</title>
+<title>3  Geocoding and population – QGIS Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,8 +28,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
-<link href="../chapters/e03.html" rel="next">
-<link href="../chapters/e01.html" rel="prev">
+<link href="../chapters/faq.html" rel="next">
+<link href="../chapters/e02.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/e02.html"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps</span></a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/e03.html"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
         </div>
     <div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle babelquarto-languages-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e02.cy.html" id="language-link-cy">Cymraeg</a></li></ul>
+<button class="btn btn-primary dropdown-toggle babelquarto-languages-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e03.cy.html" id="language-link-cy">Cymraeg</a></li></ul>
 </div>
 <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
@@ -114,13 +114,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/e02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/e02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/e03.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/e03.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></a>
   </div>
 </li>
@@ -144,18 +144,18 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#creating-a-print-layout" id="toc-creating-a-print-layout" class="nav-link active" data-scroll-target="#creating-a-print-layout"><span class="header-section-number">2.1</span> Creating a print layout</a></li>
-  <li><a href="#sec-mapitem" id="toc-sec-mapitem" class="nav-link" data-scroll-target="#sec-mapitem"><span class="header-section-number">2.2</span> Adding and adjusting a map item</a></li>
-  <li><a href="#adding-a-scale-bar-north-arrow-and-grid" id="toc-adding-a-scale-bar-north-arrow-and-grid" class="nav-link" data-scroll-target="#adding-a-scale-bar-north-arrow-and-grid"><span class="header-section-number">2.3</span> Adding a scale bar, north arrow, and grid</a></li>
-  <li><a href="#adding-labels-and-a-legend" id="toc-adding-labels-and-a-legend" class="nav-link" data-scroll-target="#adding-labels-and-a-legend"><span class="header-section-number">2.4</span> Adding labels and a legend</a></li>
-  <li><a href="#sec-rasterdata" id="toc-sec-rasterdata" class="nav-link" data-scroll-target="#sec-rasterdata"><span class="header-section-number">2.5</span> Adding raster data</a></li>
-  <li><a href="#adding-an-inset-map" id="toc-adding-an-inset-map" class="nav-link" data-scroll-target="#adding-an-inset-map"><span class="header-section-number">2.6</span> Adding an inset map</a></li>
-  <li><a href="#exporting-your-map" id="toc-exporting-your-map" class="nav-link" data-scroll-target="#exporting-your-map"><span class="header-section-number">2.7</span> Exporting your map</a></li>
+<li><a href="#exploring-postcode-locations" id="toc-exploring-postcode-locations" class="nav-link active" data-scroll-target="#exploring-postcode-locations"><span class="header-section-number">3.1</span> Exploring postcode locations</a></li>
+  <li><a href="#sec-stats4fields" id="toc-sec-stats4fields" class="nav-link" data-scroll-target="#sec-stats4fields"><span class="header-section-number">3.2</span> Finding headcount statistics</a></li>
+  <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Selecting by location</a></li>
+  <li><a href="#creating-a-population-density-heatmap" id="toc-creating-a-population-density-heatmap" class="nav-link" data-scroll-target="#creating-a-population-density-heatmap"><span class="header-section-number">3.4</span> Creating a population density heatmap</a></li>
+  <li><a href="#geocoding-new-addresses" id="toc-geocoding-new-addresses" class="nav-link" data-scroll-target="#geocoding-new-addresses"><span class="header-section-number">3.5</span> Geocoding new addresses</a></li>
+  <li><a href="#sec-export" id="toc-sec-export" class="nav-link" data-scroll-target="#sec-export"><span class="header-section-number">3.6</span> Exporting vector layers</a></li>
+  <li><a href="#sec-buffers" id="toc-sec-buffers" class="nav-link" data-scroll-target="#sec-buffers"><span class="header-section-number">3.7</span> Using buffers as simple catchments</a></li>
   </ul></nav>
 </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-e02" class="quarto-section-identifier"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps</span></span></h1>
+<h1 class="title"><span id="sec-e03" class="quarto-section-identifier"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></h1>
 </div>
 
 
@@ -170,9 +170,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 </header><blockquote class="blockquote">
-<p><strong>Date of practical:</strong> 9th October 2026</p>
+<p><strong>Date of practical:</strong> 16th October 2026</p>
 </blockquote>
-<p>Communication of geographical data and concepts through maps is a fundamental skill for spatial scientists. Creating maps requires both the ability to make them complete, correct and functional, and the flair to make them interesting and attractive. This exercise introduces the QGIS Print Layout window, and is how you generate the maps for your wind farm project.</p>
+<p>The location and density of the human population underpin how society is organised. GIS helps one understand human systems by calculating things like population density, proximity to features, and assigning data to addresses. In the UK, postcodes have been developed as a means to link human activity to physical locations for aiding governance. This exercise explores how postcodes can be used to gather useful population-level information, and how QGIS can be used to extract information - a valuable addition for your wind farm project…</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -183,248 +183,321 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To create functionally complete maps in QGIS for print or digital output. You will learn how to create a 1:1,000,000 scale map of Wales illustrating mean wind speed and county boundaries necessary for making Map 1.</p>
+<p>To examine the distribution of postcode reference points within Wales, visualise population density, geocode new features onto a map, and count populations within simple catchments. The ability to extract information from geospatial data will be essential for your map captions.</p>
 </div>
 </div>
-<section id="creating-a-print-layout" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="creating-a-print-layout">
-<span class="header-section-number">2.1</span> Creating a print layout</h2>
+<section id="exploring-postcode-locations" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="exploring-postcode-locations">
+<span class="header-section-number">3.1</span> Exploring postcode locations</h2>
 <ol class="example" type="1">
 <li><p>Launch QGIS and create a new project</p></li>
-<li><p>Add the <code>British_Isles_land_polygons.gpkg</code>, <code>Wales_border.gpkg</code>, and <code>Wales_Principal_Areas.gpkg</code> layers to your project (the latter two are in the <code>UK_Boundaries</code> folder)</p></li>
-<li><p>Label the Principal Areas of Wales in Welsh or English</p></li>
+<li><p>Add the <code>Wales_Principal_Areas.gpkg</code> layer to your project</p></li>
+<li><p>Add the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer to your project. This dataset contains the number of households and people registered at each postcode (taken from the 2021 Census), combined with coordinates from OS OpenData</p></li>
+<li><p>Investigate the attribute table and explore how these points are distributed</p></li>
+<li><p>Using attribute table selection and skills from Chapter 1 (<a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>), find postcodes with the greatest number of people in the Cardiff (<code>CF</code>), Swansea (<code>SA</code>) and Aberystwyth (<code>SY</code>) areas</p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-6220431b8d6f6eeb4438108687f04d90" data-tol="0" size="20" data-answer="bRADBQ0AEz8="></p>
+<p>How many people lived in the most populous postcode in the Swansea (SA) area in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-dad35df46d95fcfbed0788cadb367667" data-tol="0" size="20" data-answer="P0NVCgdWRGk="></p>
+<p>How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-d56aeacaa3dda5e19e82b5d3da354401" data-tol="0" size="20" data-answer="PxcOU1VDPg=="></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>The most populous postcode in the Cardiff area (CF35 6AP) in 2021 was 1,593.</li>
+<li>The most populous postcode in the Swansea area (SA1 8EN) in 2021 was 1,922.</li>
+<li>The most populous postcode in the Aberystwyth area (SY23 3TE) in 2021 was 820.</li>
+</ul>
+</div>
+</div>
+<ol start="6" class="example" type="1">
+<li>Use <a href="https://www.google.com/maps" target="_blank">Google Maps</a> to search for these postcodes and discover why these locations have such high population counts</li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Which feature at the most populous postcode area explained the high population count?</p>
+<p>Swansea (SA): <select class="webex-select" id="webex-bcbdf6291a12656f5f10a43e78bdf2b5" data-answer="OVJOVEoGHgkdUWw="><option value="blank"></option>
+<option>Student halls</option>
+<option>Prison</option>
+<option>Hospital</option>
+<option>Military barracks</option>
+<option>Care home</option></select></p>
+<p>Cardiff (CF): <select class="webex-select" id="webex-df58d22f710b5fe1f6a195c42c601301" data-answer="P1YZCUgCHlYbAW0="><option value="blank"></option>
+<option>Student halls</option>
+<option>Prison</option>
+<option>Hospital</option>
+<option>Military barracks</option>
+<option>Care home</option></select></p>
+<p>Aberystwyth (SY): <select class="webex-select" id="webex-eae280aa7946689c268f76e5a592dc12" data-answer="PlBJAhQATVEbCWk="><option value="blank"></option>
+<option>Student halls</option>
+<option>Prison</option>
+<option>Hospital</option>
+<option>Military barracks</option>
+<option>Care home</option></select></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>SA1 8EN is the postcode for Swansea University’s Bay Campus student accommodation.</li>
+<li>CF35 6AP is the postcode for HM Prison Parc in Bridgend.</li>
+<li>SY23 3TE is the postcode for Aberystwth University’s Penglais student village.</li>
+</ul>
+</div>
+</div>
+<ol start="7" class="example" type="1">
+<li><p>Save your project!</p></li>
 <li>
-<p>To create a Print Layout:</p>
+<p>As well as being able to classify points by a category from the attribute table (like we did in <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a>), points can be graduated by a continuous variable based on size or colour size. This can be a very effective visualization technique. To graduate by size:</p>
 <ol type="i">
-<li>Click <code>Project</code> → <code>New Print Layout...</code> (and find the shortcuts to this window)</li>
-<li>Give the print layout an appropriate title</li>
-<li>Click <code>Project</code> → <code>Layout Manager...</code>. You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts</li>
+<li>Open the headcounts layer’s <code>Symbology</code> window</li>
+<li>Use the drop-down menu to change the symbology source from <code>Single Symbol</code> to <code>Graduated</code>
+</li>
+<li>Set <code>Value</code> to <code>Total</code> (i.e. the UK population in 2021)</li>
+<li>Set <code>Method</code> to <code>Size</code>
+</li>
+<li>Click <code>Classify</code> → <code>OK</code>
+</li>
+</ol>
+</li>
+</ol></section><section id="sec-stats4fields" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="sec-stats4fields">
+<span class="header-section-number">3.2</span> Finding headcount statistics</h2>
+<ol start="9" class="example" type="1">
+<li>
+<p>A powerful function of GIS is to be able to derive statistical information from the attributes of all or a subset of features in a geospatial dataset. This applies to calculating statistics from your own map tile and windfarm location. To calculate statistics on headcounts per postcode:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Analysis Tools</code> → <code>Basic Statistics For Fields...</code>
+</li>
+<li>Set <code>Input layer</code> to the <code>Wales_headcounts_at_postcodes_2021.gpkg</code> layer</li>
+<li>Set <code>Field to calcualate statics on</code> to <code>Total</code>
+</li>
+<li>Click <code>Run</code>. Results are presented under the <code>Log</code> tab, and can be viewed in the <code>Results Viewer</code> by double-clicking the <code>Statistics report</code> object</li>
+</ol>
+</li>
+<li><p>Use <code>Basic Statistics For Fields...</code> to determine population sizes and change</p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the registered population of Wales in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-5075d009741a0f950d23f277e20383dc" data-tol="0" size="20" data-answer="bhIEBFQHBAkHFmw="></p>
+<p>What was the percentage change in the population of Wales between 2011 and 2021? <em>(Can you use the 2011 data in the Wales_headcounts_at_postcodes folder to work this out?)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-8ab625e6e4fc0d070072d3a11272386e" data-tol="1" size="20" data-answer="Y0NTFG8="></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>The registered population of Wales in 2021 was 3,107,400.</li>
+<li>The percentage change in the population of Wales between 2011 and 2021 was 1%.</li>
+</ul>
+</div>
+</div>
+<ol start="11" class="example" type="1">
+<li>Hopefully you used <code>Wales_headcounts_at_postcodes_2011.gpkg</code> to answer the second question! If so, right-click on the <code>2011</code> census headcount layer and click <code>Remove Layer...</code>. It’s good practice to remove layers once you’re done with them, to avoid your project becoming over-cluttered</li>
+</ol></section><section id="sec-selectlocation" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="sec-selectlocation">
+<span class="header-section-number">3.3</span> Selecting by location</h2>
+<ol start="12" class="example" type="1">
+<li>
+<p>Calculate basic statistics on a subset of data in a particular location:</p>
+<ol type="i">
+<li>Select the Swansea county polygon from <code>Wales_Principal_Areas</code> (forgotten how to do this? Check <a href="e01.html#sec-attrib" class="quarto-xref"><span>Section 1.5</span></a>)</li>
+<li>Click <code>Vector</code> → <code>Research Tools</code> → <code>Select By Location...</code>
+</li>
+<li>Set <code>Select features from</code> as <code>Wales_headcounts_at_postcodes_2021</code>
+</li>
+<li>Check <code>are within</code>
+</li>
+<li>Set <code>By comparing to the features from</code> to <code>Wales_Principal_Areas</code>
+</li>
+<li>Check <code>Selected features only</code>. This ensures only postcodes in Swansea are selected</li>
+<li>Click <code>Run</code>
+</li>
+<li>If done correctly, you’ll see all postcode centroids in Swansea county have been selected (highlighted yellow)</li>
+</ol>
+</li>
+<li><p>Use the <code>Basic Statistics For Fields...</code> tool to find the 2021 <code>Total</code> population of Swansea. <strong>Make sure <code>Selected features only</code> is checked this time</strong></p></li>
+<li><p>Calculate the 2021 population of Cardiff county</p></li>
+<li><p>Calculate the percentage population change in Swansea county between 2011 and 2021. Show off again by beating your neighbour in finding the results</p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the total population of Swansea county in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-93d8a0f97f2a5a5adfa87af39999c1f8" data-tol="0" size="20" data-answer="YhFWC1kEUg4VOw=="></p>
+<p>What was the total population of Cardiff county in 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-5b47cf468ebcf63182fbf8b622218540" data-tol="0" size="20" data-answer="bkAHAVFVAQAaOA=="></p>
+<p>What was the percentage change in the population of Swansea county between 2011 and 2021? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-a551ecdd147fdea3a46e469cbe25edb4" data-tol="1" size="20" data-answer="OhcYAUtRRjk="></p>
+</div>
+<div class="webex-solution">
+<ul>
+<li>The total population of Swansea county in 2021 was 238,447.</li>
+<li>The total population of Cardiff county in 2021 was 362,356.</li>
+<li>The percentage change in the population of Swansea county between 2011 and 2021 was -0.2.</li>
+</ul>
+</div>
+</div>
+</section><section id="creating-a-population-density-heatmap" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-population-density-heatmap">
+<span class="header-section-number">3.4</span> Creating a population density heatmap</h2>
+<ol start="16" class="example" type="1">
+<li>
+<p>A heatmap is a visualisation tool that uses a colour ramp to show the values, density, or intensity of spatial data as a raster with defined pixel size. These can effectively summarise point data - maybe more effectively than graduating points by size. To create a heatmap of population density in Swansea county:</p>
+<ol type="i">
+<li>Click <code>Processing</code> → <code>Toolbox</code> or find the the shortcut (<img src="figs/ProcessingToolbox.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Click the drop-down arrow next to <code>Interpolation</code>
+</li>
+<li>Double-click <code>Heatmap (Kernel Density Estimation)</code>
+</li>
+<li>Set <code>Point layer</code> to <code>Wales_headcounts_at_postcodes_2021</code>
+</li>
+<li>Check <code>Selected features only</code>.</li>
+<li>Set <code>Radius</code> to <code>500</code> metres</li>
+<li>Set <code>Pixel size X</code> and <code>Pixel size Y</code> to <code>100</code>
+</li>
+<li>Set <code>Weight from field</code> to <code>Total</code>
+</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+</li>
+<li>
+<p>Experiment with:</p>
+<ol type="i">
+<li>Changing the raster layer’s symbology (see <a href="e02.html#sec-rasterdata" class="quarto-xref"><span>Section 2.5</span></a>)</li>
+<li>Creating a new heatmap whilst this time changing the <code>Radius</code>
+</li>
+<li>Creating a new heatmap for the whole of Wales (Uncheck <code>Selected features only</code>…)</li>
+</ol>
+</li>
+<li><p>Saved your project recently?</p></li>
+</ol></section><section id="geocoding-new-addresses" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="geocoding-new-addresses">
+<span class="header-section-number">3.5</span> Geocoding new addresses</h2>
+<ol start="19" class="example" type="1">
+<li>
+<p>Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Such a ‘conversion’ tool is again a powerful application of GIS. Let’s do some geocoding by plotting where Swnasea’s local Tesco stores are located:</p>
+<ol type="i">
+<li>Navigate to the <a href="https://www.tesco.com/store-locator/" target="_blank">Tesco store locator</a>
+</li>
+<li>Search for stores in the <code>Swansea</code> area</li>
+<li>Open <code>Excel</code>
+</li>
+<li>Populate a spreadsheet with the <code>Store</code> name and <code>Postcode</code> of the first seven stores from the website</li>
+<li>Save the spreadsheet in a <code>.csv</code> format (<code>UTF-8</code> is fine)</li>
+</ol>
+</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/TescoSpreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="20" class="example" type="1">
+<li>
+<p>Next, install a specific plugin to do the geocoding. Plugins are written by QGIS developers and other independent developers who want to extend the core functionality of the software. It is this community-led innovating that makes QGIS such a powerful tool. To install plugins:</p>
+<ol type="i">
+<li>Return to QGIS</li>
+<li>Select <code>Plugins</code> → <code>Manage and Install Plugins...</code>
+</li>
+<li>Search for <code>mmqgis</code>
+</li>
+<li>Select the <code>mmqgis</code> tool</li>
+<li>Click <code>Install Plugin</code>
+</li>
 <li>Click <code>Close</code>
 </li>
 </ol>
 </li>
-<li>
-<p>Change the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption:</p>
-<ol type="i">
-<li>Right‑click on the blank print layout</li>
-<li>Click <code>Page Properties...</code>
-</li>
-<li>Change <code>Size</code> to <code>Custom</code>
-</li>
-<li>Reduce the map <code>Height</code> (e.g. to <code>270</code>)</li>
-<li>Change <code>Orientation</code> to <code>Portrait</code>
-</li>
-</ol>
-</li>
-</ol></section><section id="sec-mapitem" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="sec-mapitem">
-<span class="header-section-number">2.2</span> Adding and adjusting a map item</h2>
-<ol start="6" class="example" type="1">
-<li><p>Click <code>Add Item</code> → <code>Add Map</code> (look for the shortcut)</p></li>
-<li><p>Draw a map onto the print layout. <code>Map 1</code> should now appear under the <code>Items</code> tab</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="figs/Item.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
+<figure class="figure"><p><img src="figs/mmqgis.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<ol start="8" class="example" type="1">
-<li><p>If necessary, adjust the map using the squares on the map boundaries so it fits more comfortably on the page</p></li>
-<li><p>Select <code>Map 1</code> from the <code>Items</code> panel</p></li>
-<li><p>Set <code>Scale</code> to <code>1000000</code> (i.e. 1:1,000,000)</p></li>
-<li><p>Use the <code>Move item content</code> (<img src="figs/MoveItemContent.png" class="img-fluid" style="width:3.0%">) and <code>Select/Move item</code> (<img src="figs/SelectMoveItem.png" class="img-fluid" style="width:3.0%">) tools, and adjust the <code>Scale</code> value, to compose the map so that all of Wales is visible</p></li>
-<li><p>Experiment with making fine adjustments to the scale by holding down the <code>Ctrl</code> key (windows) or <code>Command</code> key (mac) and scrolling the mouse wheel</p></li>
-<li><p>Once you’re satisfied with the scaling, framing, and position, freeze the view in place by checking the box under the lock icon (<img src="figs/LockCheck.png" class="img-fluid" style="width:3.0%">) for <code>Map 1</code> in the <code>Items</code> panel</p></li>
+<ol start="21" class="example" type="1">
 <li>
-<p>From the Map Canvas window, adjust layer styles:</p>
+<p>Use the <code>MMQGIS</code> tool to attach coordinates to postcode data:</p>
 <ol type="i">
-<li>Choose colours, border widths, and fonts that emphasise Wales and the difference between the outline of Wales (physical coast) and Principal Areas boundaries (non‑physical political construct)</li>
-</ol>
+<li>Click <code>MMQGIS</code> → <code>Geocode</code> → <code>Geocode CSV with Web Service</code>
 </li>
-<li>
-<p>Update the Print Layout to reflect your changes using one of these two options:</p>
-<ol type="i">
-<li>Click the <code>Refresh</code> icon (<img src="figs/RefreshView.png" class="img-fluid" style="width:3.0%">) in the Print Layout window</li>
-<li>Click the <code>Update Map Preview</code> icon (<img src="figs/RefreshView.png" class="img-fluid" style="width:3.0%">) under <code>Item Properties</code> in the Map Canvas window</li>
-</ol>
+<li>Set <code>Input CSV File</code> as your .csv file</li>
+<li>Set <code>Address</code> as your postcode column</li>
+<li>Set <code>Web Service</code> as <code>OpenStreetMap / Nominatim</code>
 </li>
-<li><p>Click on the <code>Item Properties</code> tab and check <code>Frame</code></p></li>
-<li><p>Modify the frame’s <code>Background</code> colour appropriate for representing the ocean</p></li>
-<li>
-<p>You can modify the <code>Layout</code> and <code>Item Properties</code> of any item selected in the <code>Item</code> window. Note how the options under <code>Layout</code> and <code>Item Properties</code> tab update depending on what item you’ve selected. Remember that:</p>
-<ol type="i">
-<li>The order in which map items are listed is how they are also stacked on top of one another in the print layout</li>
-<li>Some layer properties (e.g. layer order, style, labeling) are controlled in the Map Canvas</li>
-</ol>
+<li>Set <code>Output File Name</code> to your <code>Downloads</code> folder</li>
+<li>Set <code>Not Found Output List</code> to your <code>Downloads</code> folder</li>
+<li>Click <code>Apply</code>
 </li>
-</ol></section><section id="adding-a-scale-bar-north-arrow-and-grid" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="adding-a-scale-bar-north-arrow-and-grid">
-<span class="header-section-number">2.3</span> Adding a scale bar, north arrow, and grid</h2>
-<ol start="19" class="example" type="1">
-<li>
-<p>From the Print Layout window, add a scale bar:</p>
-<ol type="i">
-<li>Click <code>Add Item</code> → <code>Add Scale Bar</code>
-</li>
-<li>Drag and drop on the map to place it (you can move it later)</li>
-<li>Select the scale bar from the <code>Items</code> panel</li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Adjust the scale bar’s properties, notably <code>Style</code>, <code>Scalebar units</code>, <code>Segments</code>, <code>Frame</code>, and <code>Background</code>
+<li>Wait until <code>Geocoded 7 of 7</code> appears beneath the tool and check the postcodes appear in the correct places</li>
+<li>Click <code>Close</code>
 </li>
 </ol>
 </li>
-<li>
-<p>Add a north arrow:</p>
-<ol type="i">
-<li>Click <code>Add Item</code> → <code>Add North Arrow</code>
-</li>
-<li>Drag and drop on the map to place it (you can move it later)</li>
-<li>Select the north arrow from the <code>Items</code> panel</li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Under <code>SVG Images</code>, search <code>arrow</code> and choose a suitable north arrow</li>
-<li>Adjust the north arrow’s properties, notably <code>Fill color</code> and <code>Stroke color</code>
-</li>
 </ol>
-</li>
-<li>
-<p>Add a grid (aka graticule):</p>
-<ol type="i">
-<li>Select <code>Map 1</code> from the <code>Items</code> panel</li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Expand <code>Grids</code>
-</li>
-<li>Click <code>Add a new grid</code> (<img src="figs/AddANewGrid.png" class="img-fluid" style="width:3.0%">)</li>
-<li>Click <code>Grid 1</code> → <code>Modify Grid...</code>
-</li>
-<li>Set <code>CRS</code> to <code>EPSG:4326 - WGS 84</code>
-</li>
-<li>Set <code>X</code> and <code>Y</code> intervals to <code>1</code> degrees</li>
-<li>Check <code>Draw Coordinates</code>
-</li>
-<li>Adjust the grid’s properties, notably <code>Grid type</code>, <code>Frame</code>, and <code>Draw Coordinates</code>. Can you adjust the labels for readability, soften the gridlines, and reduce unnecessary trailing zeros?</li>
-</ol>
-</li>
-<li><p>You may find that some of the map items, notably the coordinates, are now beyond the edge of the page. These will be lost when the map is exported! In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.2</span></a>). Check how using guides can aid you in aligning map items perfectly on the page (see <a href="faq.html">FAQ</a>).</p></li>
-</ol></section><section id="adding-labels-and-a-legend" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="adding-labels-and-a-legend">
-<span class="header-section-number">2.4</span> Adding labels and a legend</h2>
-<ol start="23" class="example" type="1">
-<li>
-<p>Add a map title label:</p>
-<ol type="i">
-<li>Click <code>Add Item</code> → <code>Add Label</code>
-</li>
-<li>Drag and drop on the map to place it (you can move it later)</li>
-<li>Select the label from the <code>Items</code> panel</li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Adjust the label’s properties, notably <code>Main Properties</code>, <code>Font</code>, <code>Rotation</code>, <code>Frame</code>, and <code>Background</code>
-</li>
-</ol>
-</li>
-<li>
-<p>Add a legend:</p>
-<ol type="i">
-<li>Click <code>Add Item</code> → <code>Add Legend</code>
-</li>
-<li>Drag and drop on the map to place it (you can move it later)</li>
-<li>Select the legend from the <code>Items</code> panel</li>
-<li>Click the <code>Item Properties</code> tab</li>
-<li>Uncheck <code>Auto update</code> to enable modifications to the legend</li>
-<li>Experiment with the legend toolbar icons (<img src="figs/LegendMenu.png" class="img-fluid" style="width:25.0%">) to improve the legend</li>
-<li>Adjust the legend’s properties, notably <code>Arrangement</code>, <code>Fonts and Text Formatting</code>, <code>Columns</code>, <code>Symbol</code>, <code>Spacing</code>, <code>Frame</code>, and <code>Background</code>
-</li>
-</ol>
-</li>
-</ol></section><section id="sec-rasterdata" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="sec-rasterdata">
-<span class="header-section-number">2.5</span> Adding raster data</h2>
-<ol start="25" class="example" type="1">
-<li>
-<p>Add your first raster layer in QGIS:</p>
-<ol type="i">
-<li>From the menu bar in the Map Canvas, click <code>Layer</code> → <code>Add Layer</code> → <code>Add Raster Layer...</code>
-</li>
-<li>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) and navigate to the folder where the data is stored, i.e. <strong><code>GEG276</code></strong>
-</li>
-<li>Open the <code>Wales_mean_windspeed</code> folder and click on any of the <code>.tif</code> raster layers</li>
-<li>Click <code>Open</code> → <code>Add</code> → <code>Close</code>
-</li>
-</ol>
-</li>
-<li>
-<p>Change the raster layer’s colour ramp:</p>
-<ol type="i">
-<li>Open the layer’s <code>Properties...</code> → <code>Symbology</code>
-</li>
-<li>Use the <code>Render type</code> drop-down menu to select <code>Singleband pseudocolor</code>
-</li>
-<li>Under <code>Color ramp</code>, select an appropriate colour ramp for the data (or pick one you just really like!)</li>
-<li>Click <code>OK</code>
-</li>
-</ol>
-</li>
-<li><p>Adjust the order and modify the properties of the Wales Principal Areas and windspeed layers so both are visible at the same time. Hint: modifying <code>Fill</code> or <code>Transparency</code> properties may do nicely, but be careful to not break the link between the map and legend colours</p></li>
-<li><p>In the Print Layout window, select <code>Map 1</code> and click <code>Update Map Preview</code> under the <code>Item Properties</code> tab</p></li>
-<li><p>If the colour scale for the raster layer does not appear in the legend, add it</p></li>
-<li><p>Experiment with improving the aesthetics of the updated legend</p></li>
-<li><p>Select <code>Map 1</code> from the <code>Items</code> panel</p></li>
-<li><p>Under <code>Item Properties</code>, check the <code>Lock layers</code> and <code>Lock styles for layers</code> to prevent further changes to the map. Uncheck if you need to make edits</p></li>
-</ol></section><section id="adding-an-inset-map" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="adding-an-inset-map">
-<span class="header-section-number">2.6</span> Adding an inset map</h2>
-<ol start="33" class="example" type="1">
-<li><p>Add a second map to provide an inset showing the British Isles (see <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.2</span></a>)</p></li>
-<li>
-<p>Modify this second map to create an effective inset map that provides geographic context for the main map:</p>
-<ol type="i">
-<li>Adjust the inset map so the whole of the British Isles are visible</li>
-<li>Modify which layers should be displayed by turning layer visibility on and off or changing the layer order</li>
-<li>Modify the layers’ symbology</li>
-</ol>
-</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/Geocode.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Scale matters
+<span class="screen-reader-only">Important</span>Temporary output
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Place emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note: because your map of Wales (Map 1) is locked, it’s not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.</p>
+<p>It’s common in QGIS to create temporary layers, to check they’re displaying as intended, then save the output to somewhere more sensible. This is especially true if there are several steps (and therefore layers that need to be created) to get to the final intended output. Saving these temporary layers to your <code>Downloads</code> folder is a good idea, as you can eventually empty this folder without clogging up valuable space on your OneDrive account with junk data.</p>
 </div>
 </div>
-<ol start="35" class="example" type="1">
+</section><section id="sec-export" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="sec-export">
+<span class="header-section-number">3.6</span> Exporting vector layers</h2>
+<p>Modify the temporary vector layer and save in a sensible location:</p>
+<pre><code>i. From the `Layers` panel, right-click on `temp1` and click `Export` → `Save Features As...`
+ii. Set `Format` to `GeoPackage`
+iii. Select a suitable location to save the geopackage 
+iv. Set 'Layer name' as something sensible, e.g. the same as the file name
+v. Set `CRS` to `EPSG:27700`
+vi. Under `Select fields to export and their export options`, you can decide what information should appear in the attribute table. Keep things tidy by only including the store name and postcode
+vii. Click `OK`</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/SaveVectorLayerAs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="22" class="example" type="1">
+<li><p>The layer should appear in the <code>Layers</code> panel. Open its attribute table. Does what you’ve just done make conceptual sense? If not - ask!</p></li>
+<li><p>Remove the <code>temp1</code> layer from your project</p></li>
+</ol></section><section id="sec-buffers" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sec-buffers">
+<span class="header-section-number">3.7</span> Using buffers as simple catchments</h2>
+<ol start="24" class="example" type="1">
 <li>
-<p>Add an extent indicator on your main map to connect it to the inset map:</p>
+<p>Creating buffers around features to use as catchments or exclusion zones is yet another powerful example of GIS application. As an example, find out how many people live within walking distance of the Tesco stores you have geocoded. Create buffers around each postcode point to approximate walking distance from the Tescos store:</p>
 <ol type="i">
-<li>Select your inset map (<code>Map 2</code>) from the <code>Items</code> panel</li>
-<li>Under <code>Item Properties</code>, expand the <code>Overviews</code> tab</li>
-<li>Click <code>Add a new overview</code> (<img src="figs/E02_AddANewGrid.png" class="img-fluid" style="width:3.0%">)</li>
-<li>Click <code>Overview 1</code>
+<li>Click <code>Vector</code> → <code>Geoprocessing Tools</code> → <code>Buffer...</code>
 </li>
-<li>Set the <code>Map frame</code> to your main map (<code>Map 1</code>)</li>
-<li>Adjust the <code>Frame style</code> to draw a hollow rectangle with a thick line, to easily show the main map’s extent</li>
-<li>Experiment further, especially with <code>Fill color</code>, <code>Stroke color</code>, and <code>Join style</code>
+<li>Set <code>Input layer</code> as your Tesco stores layer (which should now have <code>[EPSG:27700]</code> after the layer name)</li>
+<li>Set <code>Distance</code> to <code>500</code> metres</li>
+<li>Check <code>Dissolve result</code>
+</li>
+<li>Click <code>Run</code> → <code>Close</code>
 </li>
 </ol>
 </li>
-<li><p>Projects can get rapidly out of control when multiple layers are used to build a map. It’s important to remove redundant layers and label items appropriately. E.g. try renaming <code>Map 1</code> to <code>Main</code>, and <code>Map 2</code> to <code>Inset</code>. This will help when you need to revisit and adjust your maps</p></li>
-</ol></section><section id="exporting-your-map" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="exporting-your-map">
-<span class="header-section-number">2.7</span> Exporting your map</h2>
-<ol start="37" class="example" type="1">
-<li><p>Ensure both maps have <code>Lock layers</code> checked so that your formatting is captured in the exported maps</p></li>
-<li>
-<p>To export your map as an image:</p>
-<ol type="i">
-<li>Click <code>Layout</code> → <code>Export as Image...</code>
-</li>
-<li>Select a suitable location to save the map</li>
-<li>Set the image format to <code>PNG (.png)</code>
-</li>
-<li>Click <code>Save</code>
-</li>
-<li>Set <code>Export resolution</code> to <code>300 dpi</code> (300 dpi is suitable for viewing on a screen, 600 dpi is better for printing)</li>
-<li>Click <code>Save</code>
-</li>
 </ol>
-</li>
-<li><p>Congratulations - you’ve created your first QGIS map assignment. Now make any revisions (including the map height) to be able to submit the best Map 1 that you can!</p></li>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/Buffer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="25" class="example" type="1">
+<li><p>Using <code>Select by Location</code> (see <a href="#sec-selectlocation" class="quarto-xref"><span>Section 3.3</span></a>) and <code>Basic Statistics</code> (see <a href="#sec-stats4fields" class="quarto-xref"><span>Section 3.2</span></a>), find the total number of people registered to postcodes within 500 m of Tesco stores</p></li>
+<li><p>For the final challenge - find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE). Hint: see <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a></p></li>
+</ol>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? <em>(Enter the number without commas)</em></p>
+<p><input class="webex-solveme nospaces" id="webex-0943485cea31a8d47e01a88c5a116aae" data-tol="0" size="20" data-answer="axsHAQ0MBUE4"></p>
+</div>
+<div class="webex-solution">
+<p>The total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE) was 32,940.</p>
+</div>
+</div>
+<ol start="27" class="example" type="1">
+<li>The skills you’ve learned here are vital for the wind farm project.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -438,11 +511,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>By the end of this exercise you should be able to:</p>
 <ol type="1">
-<li>Create a scaled print layout in QGIS, setting page size and orientation and framing a map item at a fixed scale</li>
-<li>Add the essential furniture of a complete map — scale bar, north arrow, graticule, title, caption, and legend — and adjust their properties for clarity</li>
-<li>Integrate raster and vector data in a single layout, applying pseudocolour rendering and managing layer order and transparency so both remain legible</li>
-<li>Construct an inset map using locked layers and an overview frame to place the main map in its wider geographic context</li>
-<li>Export a print-ready map to PDF with appropriate vector, text, and compression settings, and appreciate how locking layers preserves scale integrity</li>
+<li>Explore postcode-linked census data through the attribute table, examining and explaining spatial patterns of high and low population density</li>
+<li>Visualise population density using graduated symbology and kernel density (heatmap) estimation</li>
+<li>Geocode addresses from postcodes using a plugin and web service, and export the result as a properly projected vector layer</li>
+<li>Calculate population statistics for defined areas and catchments — combining <code>Select by Location</code>, <code>Buffer</code>, and <code>Basic Statistics for Fields</code> tools</li>
+<li>Appreciate how postcodes link human activity to physical location, and the value of tidy, well-projected data and temporary layers in a GIS workflow</li>
 </ol>
 </div>
 </div>
@@ -1448,13 +1521,13 @@ window.onload = function() {
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../chapters/e01.html" class="pagination-link" aria-label="Getting started">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>  <span class="chapter-title">Getting started</span></span>
+      <a href="../chapters/e02.html" class="pagination-link" aria-label="Composing maps">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/e03.html" class="pagination-link" aria-label="Geocoding and population">
-        <span class="nav-page-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/faq.html" class="pagination-link" aria-label="Cwestiynau Cyffredin">
+        <span class="nav-page-text">Cwestiynau Cyffredin</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

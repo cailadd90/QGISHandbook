@@ -164,7 +164,7 @@
     "href": "chapters/e01.cy.html#sec-attribut",
     "title": "1  Dechrau arni",
     "section": "1.5 Archwilio’r Attribute Table",
-    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nYnys EnlliLewis a HarrisYnys MônIslaySkye\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
+    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nYnys EnlliYnys MônSkyeIslayLewis a Harris\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Dechrau arni</span>"
     ]
@@ -297,6 +297,66 @@
     "text": "2.7 Allforio eich map\n\nGwnewch yn siŵr bod Lock layers wedi’i dicio ar y ddau fap fel bod eich fformatio wedi’i gofnodi yn y mapiau a allforiwyd\nI allforio eich map fel delwedd:\n\nCliciwch Layout → Export as Image...\nDewiswch leoliad addas i gadw’r map\nGosodwch fformat y ddelwedd i PNG (.png)\nCliciwch Save\nGosodwch Export resolution i 300 dpi (mae 300 dpi yn addas ar gyfer gweld ar sgrin, mae 600 dpi yn well ar gyfer argraffu)\nCliciwch Save\n\nLlongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr, gwnewch unrhyw adolygiadau (gan gynnwys uchder y map) er mwyn gallu cyflwyno’r Map 1 gorau y gallwch chi!\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nCreu cynllun argraffu wedi’i raddio yn QGIS, gan osod maint a chyfeiriadedd y dudalen a fframio eitem map ar raddfa sefydlog\nYchwanegwch ddodrefn hanfodol map cyflawn — bar graddfa, saeth gogledd, graticwl, teitl, capsiwn, ac allwedd — ac addaswch eu priodweddau er mwyn eglurder\nIntegreiddio data raster a fector mewn un cynllun, gan gymhwyso rendro ffug-liw a rheoli trefn a thryloywder haenau fel bod y ddau yn parhau i fod yn ddarllenadwy\nAdeiladu map mewnosod gan ddefnyddio haenau cloedig a ffrâm trosolwg i osod y prif fap yn ei gyd-destun daearyddol ehangach\nAllforio map sy’n barod i’w argraffu i PDF gyda gosodiadau fector, testun a chywasgu priodol, a gwerthfawrogi sut mae cloi haenau yn cadw cyfanrwydd graddfa",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cyfansoddi mapiau</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html",
+    "href": "chapters/e03.cy.html",
+    "title": "3  Geocodio a phoblogaeth",
+    "section": "",
+    "text": "3.1  Postcode point locations\nThe location and density of the human population underpin how society is organised. GIS helps you understand population density, proximity to features, and assign data to addresses. Postcodes link human activity to physical locations.\nYou will find data for this exercise on the L: drive under College of Science/Geography/GEG276. Read alongside GIS_guide_to_practical_exercises.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#postcode-point-locations",
+    "href": "chapters/e03.cy.html#postcode-point-locations",
+    "title": "3  Geocodio a phoblogaeth",
+    "section": "",
+    "text": "Launch QGIS, create a new project and open Wales_Principal_Areas.\nOpen Wales_headcounts_at_postcodes_2021. This dataset contains the number of households and people registered at each postcode (Census 2021) combined with coordinates from OS OpenData.\nInvestigate the attribute table and explore spatial distribution of points. Examine areas of very high and very low density and discuss reasons.\nUsing attribute table selection and skills from Exercise 1, find postcodes with the greatest number of people in the Cardiff (CF), Swansea (SA), Newport (NP), and Aberystwyth (SY) areas. Use Google to identify the locations and justify high counts. Save your project.\nUnder Layer Properties → Symbology, change from Single Symbol to Graduated. Set Column to Total (population 2021), choose Method = Size, then Classify and Apply. Point sizes should now reflect population per postcode.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#finding-headcount-statistics",
+    "href": "chapters/e03.cy.html#finding-headcount-statistics",
+    "title": "3  Geocodio a phoblogaeth",
+    "section": "3.2  Finding headcount statistics",
+    "text": "3.2  Finding headcount statistics\n\nFrom Vector → Analysis Tools → Basic Statistics For Fields, compute statistics for the Total attribute in Wales_headcounts_at_postcodes_2021. Consider each value presented. What was the registered population of Wales in 2021?\nOpen the 2011 dataset (same folder) and calculate the percentage population change in Wales between 2011 and 2021. Close the 2011 dataset.\nSelect the Swansea polygon from Wales_Principal_Areas in the Project window (highlighted yellow).\nOpen Vector → Research Tools → Select By Location. Select features from Wales_headcounts_at_postcodes_2021 that are within Wales_Principal_Areas, ticking Selected features only to select only Swansea. Run to select all postcode points within Swansea.\nUse Basic Statistics again to find the 2021 Total population of Swansea. Tick Selected features only. Compare to Cardiff. Optionally find Swansea’s 10‑year population change.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#population-density",
+    "href": "chapters/e03.cy.html#population-density",
+    "title": "3  Geocodio a phoblogaeth",
+    "section": "3.3  Population density",
+    "text": "3.3  Population density\n\nOpen the Processing Toolbox and run Interpolation → Heatmap (Kernel Density Estimation). Point Layer: Wales_headcounts_at_postcodes_2021; Radius: 500; Pixel size X/Y: 100; Advanced → Weight from field: Total. This creates a raster population density layer.\nUnder Layer Properties, experiment with symbology for the density raster: Singleband gray or Singleband pseudocolor using different ramps. It may help to switch off the 2021 point layer while experimenting.\nVary the Radius and change the weighting field to see how the map changes. Save your project.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#geocoding-new-addresses",
+    "href": "chapters/e03.cy.html#geocoding-new-addresses",
+    "title": "3  Geocodio a phoblogaeth",
+    "section": "3.4  Geocoding new addresses",
+    "text": "3.4  Geocoding new addresses\n\nCompile a CSV of Tesco stores in the Swansea area with columns for postcode and name (use the Tesco store locator). Include at least 7 stores with unique postcodes.\nInstall the MMQGIS plugin (Plugins → Manage and Install Plugins).\nUnderstand that geocoding uses a postcode database to attach coordinates to postcode‑referenced data (as used to build the headcounts dataset).\nFrom MMQGIS → Geocode → Geocode CSV with Web Service, select your CSV as Input, set the postcode column as Address Field, choose OpenStreetMap/Nominatim as Web Service, and choose output files on OneDrive for both Output Layer and Not Found Output List. The output is a Shapefile. If errors occur, try the provided CSV in wales_tesco_postcodes. Label stores by name.\nReproject the new layer to OSGB. Use Layer → Save As…, set CRS to EPSG:27700 OSGB 1936, Format = GeoPackage, and save to OneDrive. The appearance is the same but the CRS now matches other layers.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e03.cy.html#simple-catchments",
+    "href": "chapters/e03.cy.html#simple-catchments",
+    "title": "3  Geocodio a phoblogaeth",
+    "section": "3.5  Simple catchments",
+    "text": "3.5  Simple catchments\n\nCreate buffers to approximate walking distance: Vector → Geoprocessing Tools → Buffer. Input: your OSGB Tesco layer; Distance: 500 m; tick Dissolve buffer results.\nUsing selection by location and Basic Statistics, find the total number of people registered to postcodes within 500 m of Tesco stores.\nExperiment with other buffer distances and compare other supermarket chains.\n(Optional) Find the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE).\nNote that these skills are vital for the wind farm projects.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nUnderstand the nature and distribution of UK postcode points in Wales.\nVary symbol size or colour for points based on attributes.\nSelect from point data based on containment within polygons.\nCalculate statistics from full tables or selections.\nCreate a heatmap and choose raster presentation styles.\nCreate buffers and count population in simple catchments.\nInstall and use QGIS plugins.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
     ]
   },
   {
