@@ -28,14 +28,14 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 
 (@) The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions. Calculate the area of your tile:
 
-    i. Open the attributes table for your map tile copy. This layer has one polygon, so there's only one row in the table
+    i. Open the attribute table for your map tile copy. This layer has one polygon, so there's only one row in the table
     ii. Click the `Open field calculator` icon (![](figs/FieldCalculator.png){width=3%})
     iii. In `Output field name` type `Area`
     iv. Set `Output field type` as `Decimal number (real)`
     v. In the middle panel, expand the `Geometry` drop-down menu
     vi. Double-click `$area`
     vii. Click `OK`
-    viii. Click the `Save edits` icon (![](figs/SaveEdits.png){width=3%} )to save the changes to the attributes table
+    viii. Click the `Save edits` icon (![](figs/SaveEdits.png){width=3%} )to save the changes to the attribute table
     ix. Click the `Toggle editing mode` icon (![](figs/ToggleEditingMode.png){width=3%}) to turn off editing mode
 
 (@) Calculate the `$perimeter` of your map tile as well. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas
@@ -130,33 +130,24 @@ name layers and where you put them. You will need to find and use them later on.
 
 (@) Clip the layer to your map tile
 
-(@) Open the layer's attributes table
-
 (@) Select subsets of this data using an expression:
 
-    i. Click `Select features using an expression` (![](figs/SelectByExpression.png){width=3%})
-    ii. Expand `Fields and Values`
-    iii. Click `fclass` → `All Unique`. All unique categories in the `fclass` layer (i.e. all the unique land use classes) are now listed
-    iv. Under `Expression`, type `"fclass" = 'residential'`. You can also double-click on the fields, values, and symbols (e.g. ![](figs/Equals2.png){width=3%}) names to build the expression
-    v. Click `OK`
+    i. Open the layer's attribute table
+    ii. Click `Select features using an expression` (![](figs/SelectByExpression.png){width=3%})
+    iii. Expand `Fields and Values`
+    vi. Click `fclass` → `All Unique`. All unique categories in the `fclass` layer (i.e. all the unique land use classes) are now listed
+    v. Under `Expression`, type `"fclass" = 'residential'`. You can also double-click on the fields, values, and symbols (e.g. ![](figs/Equals2.png){width=3%}) to build the expression
+    vi. Click `Select Features` → `Close`
 
 (@) Export the selected polygons (remember to use the `Save Selected Features As...` option). Name and store methodically
 
 (@) Repeat for all other relevant land use classes (again, refer to [Map 2 constraints and considerations](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'})
 
-::: {.callout-tip}
-## Singles or multiples?
-
-You may recognise this type of coding - you did in @sec-filter (`"fclass" IN ('primary', 'trunk', 'motorway'`). Well, the logic is the same. But reflect carefully on whether extracting all layers into a single 'landuse' layer is helpful, or if you want to be able to distinguish between the different layers. Review the windfarm project conditions carefully to decide.
-:::
-
 ## Taking stock of planning constraints
 
-(@) By this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking
+(@) By this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking. Would clipping your buffers remove trailing bits beyond your map tile? In the same way you created a 'protected areas' layer from AONB, NP, SSSI, etc., can you do the same for transport links and water bodies? Experimentation is encouraged!
 
-(@) As the constraint layers begin to be added, reflect on how you'll convey this information effectively and attractively. Would clipping your buffers remove trailing bits beyond your map tile? In the same way you created a 'protected areas' layer from AONB, NP, SSSI, etc., can you do the same for transport links and water bodies? Experimentation is encouraged!
-
-::: {.callout-tip}
+::: {.callout-note}
 ## Learning outcomes
 
 By the end of this exercise you should be able to:

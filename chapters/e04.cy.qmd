@@ -1,85 +1,160 @@
 # Cyfuno haenau fector {#sec-e04}
 
-> **Dates of practical:** 23rd and 30th October 2025
+> **Dyddiad yr ymarfer:** 23ain a 30ain Hydref 2026
 
-Creating spatial and thematic subsets of vector layers is essential GIS practice and a key step in preparing for the wind farm Project. Before you begin, familiarise yourself with the wind farm Project instructions.
-
-You will find data for this exercise on the **L:** drive under `College of Science/Geography/GEG276`. Read alongside **GIS_guide_to_practical_exercises**.
+Mae creu is-setiau gofodol a thematig o haenau fector yn arfer hanfodol mewn GIS. Trwy drin a chyfuno setiau data gofodol y cynhyrchir gwybodaeth newydd - fel ble i leoli fferm wynt.
 
 ::: {.callout-note}
-## Learning aims
+## Amcanion dysgu
 
-Clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers.
+I docio is-setiau bach o setiau data fector mawr, crëwch byfferau toddedig o amgylch haenau llinell a pholygon, dewiswch is-setiau yn ôl priodoledd, a chyfunwch yr haenau sy'n angenrheidiol ar gyfer gwneud Map 2.
 :::
 
-## <input type="checkbox"> Investigating your map tile
+## Ymchwilio i'ch teils map
 
-(@) Launch QGIS, create a new project, and open layer `Wales_border` from `UK_Boundaries`.
+(@) Lansiwch QGIS a chreuwch prosiect newydd
 
-(@) From `Wales_map_tiles`, open the layer corresponding to your assigned OS map tile to see where your wind farm project will focus.
+(@) O'r ffolder `UK_Boundaries`, ychwanegwch yr haen `Wales_border.gpkg` at eich prosiect
 
-(@) Calculate the area of your 20 × 20 km map tile (square metres) and its perimeter (metres).
+(@) O'r ffolder `Wales_map_tiles`, ychwanegwch eich [teils map OS a neilltuwyd](https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484){target='_blank'} at eich prosiect. Yr haen hon yw lle bydd eich prosiect fferm wynt yn canolbwyntio.
 
-(@) Open the attribute table for your map tile. This layer has one polygon. Open the **Field Calculator** and explore `$area` and `$perimeter`. Values differ slightly from expectations due to Earth curvature and projection distortion.
+(@) Cyfrifwch arwynebedd eich teils map mewn cilometrau sgwâr. Angen atgoffa sut i wneud hyn? Gweler @sec-mesuring
 
-(@) Using prior methods, calculate the number of people living within your polygon at the 2021 Census. Compute population density for your tile.
+(@) Cyfrifwch berimedr eich teils map mewn cilometrau
 
-## <input type="checkbox"> Clipping polygon and point layers
+(@) Y tro hwn, gadewch i QGIS wneud y gwaith trwm trwy gyfrifo arwynebedd a pherimedr i chi gan ddefnyddio'r gyfrifiannell maes. Gan na ellir golygu pob haen meistr ar OneDrive, bydd angen i chi gadw copi o'r teils map i'ch cyfrif OneDrive eich hun yn gyntaf. Ydych chi'n cofio sut i allforio haen? Os na, gweler @sec-export
 
-(@) Open layers in `Wales_protected_areas`. Investigate what “protected area” means and explore attribute tables. Save your project regularly.
+## Defnyddio'r gyfrifiannell maes {#sec-fieldcalc}
 
-(@) Clip these layers to your map tile using **Vector → Geoprocessing Tools → Clip**. Input: the dataset to clip; Overlay: your map tile polygon. Choose **Save to File**, **GeoPackage** format, sensible names, and folder structure. Examine the new clipped layer.
+(@) Mae'r gyfrifiannell maes yn offeryn pwerus sy'n eich galluogi i greu meysydd priodoledd newydd neu ddiweddaru rhai presennol gan ddefnyddio mynegiadau mathemategol, geometrig ac amodol cyflym. Cyfrifwch arwynebedd eich teils:
 
-(@) Clip each protected area dataset relevant to your tile. Save clipped layers with appropriate filenames.
+    i. Agorwch y attribute table ar gyfer eich copi teils map. Mae gan yr haen hon un polygon, felly dim ond un rhes sydd yn y tabl
+    ii. Cliciwch yr eicon `Open field calculator` (![](figs/FieldCalculator.png){width=3%})
+    iii. Yn `Output field name` teipiwch `Area`
+    iv. Gosodwch `Output field type` fel `Decimal number (real)`
+    v. Yn y panel canol, ehangwch y ddewislen ostwng `Geometry`
+    vi. Cliciwch ddwywaith ar `$area`
+    vii. Cliciwch `OK`
+    viii. Cliciwch yr eicon `Save edits` (![](figs/SaveEdits.png){width=3%}) i gadw'r newidiadau i'r tabl priodoleddau
+    ix. Cliciwch yr eicon `Toggle editing mode` (![](figs/ToggleEditingMode.png){width=3%}) i ddiffodd y modd golygu
 
-(@) Merge protected area layers with **Vector → Data Management Tools → Merge Vector Layers** to create a single protected‑areas layer. Alternatives include **Union** or **MMQGIS → Merge**.
+(@) Cyfrifwch `$perimeter` eich teils map hefyd. Nawr bod y gwerthoedd hyn wedi'u cadw yn y tabl priodoleddau, mewn pa unedau maen nhw? Sylwch fod y gwerthoedd ychydig yn wahanol i'r hyn y dylech chi fod wedi'i ddisgwyl. Mae hyn oherwydd bod crymedd y Ddaear yn cyflwyno ystumio bach rhwng ardaloedd go iawn ac ardaloedd wedi'u mapio.
 
-(@) Dissolve internal boundaries with **Vector → Geoprocessing Tools → Dissolve**. Save to disk. Use the field calculator to find total protected area and percentage of your tile.
+(@) O bopeth a ddysgoch yn @sec-e03, cyfrifwch nifer y bobl sy'n byw o fewn eich polygon yng Nghyfrifiad 2021
 
-(@) Using prior data, clip existing or planned wind farms to your map tile. Save your work.
+(@) Gan ddefnyddio'r mesuriad arwynebedd a gyfrifwyd gennych uchod, cyfrifwch ddwysedd poblogaeth ar gyfer eich teils. Gallai hyn fod yn ddarn defnyddiol o wybodaeth i'w gyflwyno mewn capsiwn!
 
-## <input type="checkbox"> Clipping line layers and adding buffers
+## Haenau clipio {#sec-clip}
 
-(@) From `British_Isles_geofabrik/wales`, open `waterways`, `water`, `railways`, and `roads`. Explore attributes.
+(@) Ychwanegwch yr holl haenau yn y ffolder `Wales_protected_areas` at eich prosiect
 
-(@) Clip each of these layers to your tile. Name outputs sensibly.
+(@) Archwiliwch yr haenau hyn a'u priodoleddau. A yw'n amlwg beth a olygir gan 'ardaloedd gwarchodedig'? Dewch o hyd i ragor o wybodaeth am y setiau data hyn [yma](https://cy.wikipedia.org/wiki/Areas_gwarchodedig_o_Wales){target='_blank'}.
 
-(@) Review wind farm Project constraints (e.g., distances from transport links and water bodies).
+(@) Arbedwch eich prosiect!
 
-(@) Create buffers with **Vector → Geoprocessing Tools → Buffer** for each transport and water layer. Dissolve boundaries (during or after) and optionally clip buffers to the tile polygon.
+(@) Torrwch bob haen o ardal warchodedig fel eu bod yn ymddangos o fewn teils eich map:
 
-(@) Create buffers for existing/planned wind farms if appropriate. Name layers carefully and organise files.
+    i. Cliciwch `Vector` → `Geoprocessing Tools` → `Clip...`
+    ii. Gosodwch `Input layer` i un o haenau'r ardaloedd gwarchodedig (e.e. `NRW_AONB`)
+    iii. Gosodwch `Overlay layer` i deilsen eich map
+    iv. Cliciwch `Run` → `Close`
+    
+::: {.rhybudd-galwad-allan}
+## Haenau crafu dros dro
 
-(@) Merge buffered layers if helpful.
+Fe welwch chi nawr haen newydd o'r enw `Clipped` gydag eicon sglodion cof (![](figs/TempScratchLayer.png){width=3%}) wrth ei hymyl. Mae hyn yn golygu bod yr haen yn un dros dro. Os byddwch chi'n cau QGIS nawr, byddwch chi'n colli haenau dros dro. Daeth gwerth a gwendidau haenau dros dro i'r amlwg yn yr ymarfer diwethaf.
+:::
 
-(@) Consider merging clipped layers before buffering as an alternative workflow.
+(@) Cliciwch ar y dde ar yr haen `Clipped` → cliciwch ar `Rename Layer`
 
-## <input type="checkbox"> Selecting elements by attribute
+(@) Ail-enwwch yr haen yn rhywbeth mwy greddfol (e.e. `NRW_AONB_Clipped`). Mae'n bwysig ailenwi haenau dros dro wrth i chi fynd ymlaen, fel arall byddwch chi'n anochel yn drysu ynghylch pa haenau sy'n cynrychioli beth
 
-(@) Open `gis_osm_landuse_a_free_1` (landuse) and clip to your map tile.
+(@) Clipiwch y setiau data ardal warchodedig sy'n weddill i deilsen eich map. Dim ond yr haenau hynny sydd â nodweddion yn eich ardal mewn gwirionedd sydd angen i chi eu clipio, felly archwiliwch yr haenau yn gyntaf i ddarganfod a yw hyn yn wir.
 
-(@) Examine the attribute table. Open **Select by expression**, expand **Fields and Values**, choose `fclass`, and list unique values. Decide which classes are relevant (e.g., `residential`, `forest`).
+## Uno haenau {#sec-merge}
 
-(@) Use **Select by expression** to select features, e.g. `"fclass" = 'residential'`.
+(@) Cyfunwch haen wedi'i thorri i greu un haen 'ardal warchodedig':
 
-(@) Save selected features to a new layer (**Layer → Save As** or **Export → Save Selected Features As**). Name and store methodically.
+    i. Cliciwch `Vector` → `Data Management Tools` → `Merge Vector Layers...`
+    ii. O dan `Input layers`, cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%}) a gwiriwch yr holl haenau sydd wedi'u clipio
+    iii. Cliciwch `OK`
+    iv. Gosodwch `Destination CRS` i `EPSG:27700`
+    v. Cliciwch `Run` → `Close`
 
-(@) Repeat for other relevant landuse classes.
+## Haenau diddymu {#sec-dissolve}
 
-## <input type="checkbox"> Taking stock of planning constraints
+(@) Yn aml, mae cyfuno polygonau yn gadael ffiniau o fewn yr allbwn nad ydynt bellach yn cynrychioli ymyl newydd y polygon. Gall y rhain hyd yn oed gymhlethu camau prosesu pellach. Mae'n arfer da cael gwared ar y ffiniau mewnol hyn gan ddefnyddio'r offeryn `Dissolve`. Diddymu ffiniau mewnol yr haen gyfunedig:
 
-(@) Review the layers that represent areas unsuitable for wind farm development because of their position within, or proximity to, man‑made or natural features.
+    i. Cliciwch `Vector` → `Geoprocessing Tools` → `Dissolve...`
+    ii. Gosodwch `Input layer` i'ch haen gyfunedig
+    iii. Cliciwch `Run` → `Close`
 
-(@) Explore unconstrained areas large enough for a wind farm. Use subsequent exercises to evaluate the best site.
+(@) Nawr bod gennych chi'r cynnyrch terfynol sy'n deillio o gyfres o gamau prosesu, allforiwch yr haen (wedi anghofio sut? gweler @sec-export)
+
+(@) Defnyddiwch y gyfrifiannell maes i ddod o hyd i gyfanswm yr ardal warchodedig. Cyfrifwch ganran eich teils. Gallai hyn fod yn ddarn defnyddiol o wybodaeth i'w gyflwyno mewn capsiwn!
+
+(@) Ydych chi wedi bod yn cadw eich prosiect?
 
 ::: {.callout-tip}
-# Learning outcomes
+## Ffeilio effeithlon
 
-By the end of this exercise you should:
+Mae hwn yn amser da i'ch atgoffa i fod yn ofalus ac yn daclus ynglŷn â ble i gadw allbwn GIS. Byddwch yn cynhyrchu llawer o ffeiliau ar gyfer y prosiect hwn, ac argymhellir yn gryf strwythur ffolderi hierarchaidd a haenau wedi'u henwi'n ofalus. Byddwch yn drefnus yn y ffordd rydych chi
+enwwch yr haenau a ble rydych chi'n eu rhoi. Bydd angen i chi ddod o hyd iddyn nhw a'u defnyddio yn nes ymlaen.
+:::
 
-1. Calculate area and perimeter of a polygon using the Field Calculator.
-2. Clip point, line, and polygon vector layers.
-3. Create and dissolve buffers around point, line, and polygon layers.
-4. Select and save subsets from a vector layer by attribute.
-5. Build layers that represent your tile’s wind farm planning constraints.
+## Haenau byffro
+
+(@) Gwiriwch y [cyfyngiadau Map 2](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'} y mae'n rhaid eu dilyn, gan gynnwys na ddylid gosod fferm wynt o fewn pellteroedd penodol o nodweddion daearyddol allweddol
+
+(@) O'r ffolder `British_Isles_geofabrik/wales`, ychwanegwch yr haenau cyfyngu `gis_osm_waterways_free_1.gpkg`, `gis_osm_water_a_free_1.gpkg`, `gis_osm_railways_free_1.gpkg`, a `gis_osm_roads_free_1.gpkg` at eich prosiect
+
+(@) Ychwanegwch yr haen gyfyngiad `Wales_operational_windfarms.gpkg` at eich prosiect
+
+(@) Archwiliwch briodoleddau'r haenau cyfyngu hyn
+
+(@) Clipiwch bob un o'r haenau cyfyngu hyn i'ch teils (er efallai nad oes yr un yn eich teils map) a'u henwi'n synhwyrol
+
+(@) Mae byfferau yn ffordd ddefnyddiol o farcio ardaloedd sy'n dod o fewn y pellteroedd cyfyngu. Creu byfferau o amgylch y nodweddion sydd newydd eu hychwanegu:
+
+    i. Cliciwch `Vector` → `Geoprocessing Tools` → `Buffer...`
+    ii. Gosodwch `Input layer` i un o'r haenau cyfyngu (e.e. `gis_osm_roads_free_1`)
+    iii. Gosodwch `Distance` i `150` (gweler [Cyfyngiadau Map 2](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'})
+    iv. Gwiriwch `Dissolve result`
+    v. Cliciwch `Run` → `Close`
+
+(@) Creu byfferau o amgylch pob cyswllt trafnidiaeth, corff dŵr, a haenau ffermydd gwynt presennol
+
+## Allforio elfennau penodol o haen {#sec-selexpress}
+
+(@) O'r ffolder `British_Isles_geofabrik/wales`, ychwanegwch yr haen `gis_osm_landuse_a_free_1.gpkg` at eich prosiect
+
+(@) Clipiwch yr haen i deilsen eich map
+
+(@) Dewiswch is-setiau o'r data hwn gan ddefnyddio mynegiant:
+
+    i. Agorwch dabl priodoleddau'r haen
+    ii. Cliciwch `Select features using an expression` (![](figs/SelectByExpression.png){width=3%})
+    iii. Ehangwch `Fields and Values`
+    vi. Cliciwch `fclass` → `All Unique`. Mae pob categori unigryw yn yr haen `fclass` (h.y. yr holl ddosbarthiadau defnydd tir unigryw) bellach wedi'u rhestru
+    v. O dan `Expression`, teipiwch `"fclass" = 'residential'`. Gallwch hefyd glicio ddwywaith ar y meysydd, y gwerthoedd a'r symbolau (e.e. ![](figs/Equals2.png){width=3%}) i adeiladu'r mynegiant
+    vi. Cliciwch `Select Features` → `Close`
+
+(@) Allforiwch y polygonau a ddewiswyd (cofiwch ddefnyddio'r opsiwn `Save Selected Features As...`). Enwch a storiwch yn systematig
+
+(@) Ailadroddwch ar gyfer pob dosbarth defnydd tir perthnasol arall (eto, cyfeiriwch at [Cyfyngiadau ac ystyriaethau Map 2](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'})
+
+## Pwyso a mesur cyfyngiadau cynllunio
+
+(@) Erbyn hyn, dylech gael set o haenau data sydd gyda'i gilydd yn cynrychioli'r rhannau hynny o'ch teils map sy'n anaddas ar gyfer datblygu ffermydd gwynt oherwydd eu lleoliad o fewn, neu agosrwydd at, nodweddion naturiol neu artiffisial y dirwedd. Ystyriwch y ffordd orau o gyflwyno'r rhain ar fap fel rhan o'ch Prosiect. Cofiwch feddwl am y pwrpas a'r gynulleidfa, a'r angen i gyfiawnhau eich meddwl. A fyddai tocio'ch byfferau yn dileu darnau sy'n weddill y tu hwnt i'ch teils map? Yn yr un modd ag y gwnaethoch chi greu haen 'ardaloedd gwarchodedig' o AHNE, Parc Cenedlaethol, SoDdGA, ac ati, a allwch chi wneud yr un peth ar gyfer cysylltiadau trafnidiaeth a chyrff dŵr? Anogir arbrofi!
+
+::: {.callout-note}
+## Canlyniadau dysgu
+
+Erbyn diwedd yr ymarfer hwn dylech chi allu:
+
+1. Defnyddio y gyfrifiannell maes i ddeillio priodoleddau geometrig (arwynebedd, perimedr) a chyfrifo gwerthoedd fel dwysedd poblogaeth ar gyfer teils map.
+2. Clipio nodweddion o setiau data fector mawr i ardal o ddiddordeb diffiniedig, gan gadw dim ond y data sy'n berthnasol i'r dadansoddiad.
+3. Cyfuno nifer o haenau wedi'u clipio yn un set ddata trwy uno a diddymu ffiniau mewnol i gynhyrchu allbwn glân.
+4. Creu byfferau toddedig o amgylch nodweddion llinell a pholygon i gynrychioli parthau cyfyngiad neu agosrwydd.
+5. Dewis nodweddion yn ôl priodoledd gan ddefnyddio mynegiadau, a threfnwch yr haenau sy'n deillio o hyn yn system ffeiliau sydd wedi'i strwythuro'n dda.
 :::

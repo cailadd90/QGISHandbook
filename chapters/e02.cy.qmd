@@ -201,7 +201,7 @@ Rhowch bwyslais ar ychydig o haenau yn unig, wedi'u cyflwyno'n syml, sy'n ddefny
 Erbyn diwedd yr ymarfer hwn dylech chi allu:
 
 1. Creu cynllun argraffu wedi'i raddio yn QGIS, gan osod maint a chyfeiriadedd y dudalen a fframio eitem map ar raddfa sefydlog
-2. Ychwanegwch ddodrefn hanfodol map cyflawn — bar graddfa, saeth gogledd, graticwl, teitl, capsiwn, ac allwedd — ac addaswch eu priodweddau er mwyn eglurder
+2. Ychwanegu ddodrefn hanfodol map cyflawn — bar graddfa, saeth gogledd, graticwl, teitl, capsiwn, ac allwedd — ac addaswch eu priodweddau er mwyn eglurder
 3. Integreiddio data raster a fector mewn un cynllun, gan gymhwyso rendro ffug-liw a rheoli trefn a thryloywder haenau fel bod y ddau yn parhau i fod yn ddarllenadwy
 4. Adeiladu map mewnosod gan ddefnyddio haenau cloedig a ffrâm trosolwg i osod y prif fap yn ei gyd-destun daearyddol ehangach
 5. Allforio map sy'n barod i'w argraffu i PDF gyda gosodiadau fector, testun a chywasgu priodol, a gwerthfawrogi sut mae cloi haenau yn cadw cyfanrwydd graddfa

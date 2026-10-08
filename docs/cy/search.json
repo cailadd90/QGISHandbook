@@ -174,7 +174,7 @@
     "href": "chapters/e01.cy.html#sec-attribut",
     "title": "1  Dechrau arni",
     "section": "1.5 Archwilio’r Attribute Table",
-    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nIslayYnys EnlliYnys MônSkyeLewis a Harris\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
+    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nYnys MônYnys EnlliIslayLewis a HarrisSkye\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Dechrau arni</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "chapters/e01.cy.html#ydych-chi-wedi-gorffen",
     "title": "1  Dechrau arni",
     "section": "1.10 Ydych chi wedi gorffen?",
-    "text": "1.10 Ydych chi wedi gorffen?\n\nLlongyfarchiadau! Rydych chi wedi dysgu hanfodion QGIS. Gwnewch yn siŵr eich bod chi wedi deall yr holl gamau uchod. Ailadroddwch os oes angen, a gofynnwch am gymorth neu gyngor gan yr arddangoswyr. Bydd angen y wybodaeth hon arnoch mewn ymarferion yn y dyfodol ac ar gyfer yr asesiadau.\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nCreu a rheoli prosiect QGIS drwy ychwanegu haenau fector o wahanol ffynonellau a defnyddio’r offer llywio i symud, chwyddo, a dychwelyd i hyd a lled haen\nAddasu ymddangosiad data gofodol drwy symboleg, trefnu haenau, a labelu i adeiladu map clir a darllenadwy\nArchwiliwch y tabl priodoleddau i ddeall sut mae nodweddion yn ymwneud â’u priodoleddau, didoli cofnodion a dewis nodweddion yn gydfuddiannol rhwng y tabl a chynfas map\nMesur a hidlo data daearyddol drwy gael hydoedd ac arwynebeddau, trosi rhwng unedau, ac is-osod haenau gan ddefnyddio mynegiadau hidlo a symboleg wedi’i chategoreiddio\nGwerthfawrogi sut mae confensiynau cartograffig a gweinyddol yn llunio cynrychiolaeth ofodol, o osod labeli awtomataidd i’r ffordd y caiff ffiniau eu llunio",
+    "text": "1.10 Ydych chi wedi gorffen?\n\nLlongyfarchiadau! Rydych chi wedi dysgu hanfodion QGIS. Gwnewch yn siŵr eich bod chi wedi deall yr holl gamau uchod. Ailadroddwch os oes angen, a gofynnwch am gymorth neu gyngor gan yr arddangoswyr. Bydd angen y wybodaeth hon arnoch mewn ymarferion yn y dyfodol ac ar gyfer yr asesiadau.\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nCreu a rheoli prosiect QGIS drwy ychwanegu haenau fector o wahanol ffynonellau a defnyddio’r offer llywio i symud, chwyddo, a dychwelyd i hyd a lled haen\nAddasu ymddangosiad data gofodol drwy symboleg, trefnu haenau, a labelu i adeiladu map clir a darllenadwy\nArchwilo y tabl priodoleddau i ddeall sut mae nodweddion yn ymwneud â’u priodoleddau, didoli cofnodion a dewis nodweddion yn gydfuddiannol rhwng y tabl a chynfas map\nMesur a hidlo data daearyddol drwy gael hydoedd ac arwynebeddau, trosi rhwng unedau, ac is-osod haenau gan ddefnyddio mynegiadau hidlo a symboleg wedi’i chategoreiddio\nGwerthfawrogi sut mae confensiynau cartograffig a gweinyddol yn llunio cynrychiolaeth ofodol, o osod labeli awtomataidd i’r ffordd y caiff ffiniau eu llunio",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Dechrau arni</span>"
     ]
@@ -304,7 +304,7 @@
     "href": "chapters/e02.cy.html#allforio-eich-map",
     "title": "2  Cyfansoddi mapiau",
     "section": "2.7 Allforio eich map",
-    "text": "2.7 Allforio eich map\n\nGwnewch yn siŵr bod Lock layers wedi’i dicio ar y ddau fap fel bod eich fformatio wedi’i gofnodi yn y mapiau a allforiwyd\nI allforio eich map fel delwedd:\n\nCliciwch Layout → Export as Image...\nDewiswch leoliad addas i gadw’r map\nGosodwch fformat y ddelwedd i PNG (.png)\nCliciwch Save\nGosodwch Export resolution i 300 dpi (mae 300 dpi yn addas ar gyfer gweld ar sgrin, mae 600 dpi yn well ar gyfer argraffu)\nCliciwch Save\n\nLlongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr, gwnewch unrhyw adolygiadau (gan gynnwys uchder y map) er mwyn gallu cyflwyno’r Map 1 gorau y gallwch chi!\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nCreu cynllun argraffu wedi’i raddio yn QGIS, gan osod maint a chyfeiriadedd y dudalen a fframio eitem map ar raddfa sefydlog\nYchwanegwch ddodrefn hanfodol map cyflawn — bar graddfa, saeth gogledd, graticwl, teitl, capsiwn, ac allwedd — ac addaswch eu priodweddau er mwyn eglurder\nIntegreiddio data raster a fector mewn un cynllun, gan gymhwyso rendro ffug-liw a rheoli trefn a thryloywder haenau fel bod y ddau yn parhau i fod yn ddarllenadwy\nAdeiladu map mewnosod gan ddefnyddio haenau cloedig a ffrâm trosolwg i osod y prif fap yn ei gyd-destun daearyddol ehangach\nAllforio map sy’n barod i’w argraffu i PDF gyda gosodiadau fector, testun a chywasgu priodol, a gwerthfawrogi sut mae cloi haenau yn cadw cyfanrwydd graddfa",
+    "text": "2.7 Allforio eich map\n\nGwnewch yn siŵr bod Lock layers wedi’i dicio ar y ddau fap fel bod eich fformatio wedi’i gofnodi yn y mapiau a allforiwyd\nI allforio eich map fel delwedd:\n\nCliciwch Layout → Export as Image...\nDewiswch leoliad addas i gadw’r map\nGosodwch fformat y ddelwedd i PNG (.png)\nCliciwch Save\nGosodwch Export resolution i 300 dpi (mae 300 dpi yn addas ar gyfer gweld ar sgrin, mae 600 dpi yn well ar gyfer argraffu)\nCliciwch Save\n\nLlongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr, gwnewch unrhyw adolygiadau (gan gynnwys uchder y map) er mwyn gallu cyflwyno’r Map 1 gorau y gallwch chi!\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nCreu cynllun argraffu wedi’i raddio yn QGIS, gan osod maint a chyfeiriadedd y dudalen a fframio eitem map ar raddfa sefydlog\nYchwanegu ddodrefn hanfodol map cyflawn — bar graddfa, saeth gogledd, graticwl, teitl, capsiwn, ac allwedd — ac addaswch eu priodweddau er mwyn eglurder\nIntegreiddio data raster a fector mewn un cynllun, gan gymhwyso rendro ffug-liw a rheoli trefn a thryloywder haenau fel bod y ddau yn parhau i fod yn ddarllenadwy\nAdeiladu map mewnosod gan ddefnyddio haenau cloedig a ffrâm trosolwg i osod y prif fap yn ei gyd-destun daearyddol ehangach\nAllforio map sy’n barod i’w argraffu i PDF gyda gosodiadau fector, testun a chywasgu priodol, a gwerthfawrogi sut mae cloi haenau yn cadw cyfanrwydd graddfa",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cyfansoddi mapiau</span>"
     ]
@@ -394,57 +394,97 @@
     "href": "chapters/e04.cy.html",
     "title": "4  Cyfuno haenau fector",
     "section": "",
-    "text": "4.1  Investigating your map tile\nCreating spatial and thematic subsets of vector layers is essential GIS practice and a key step in preparing for the wind farm Project. Before you begin, familiarise yourself with the wind farm Project instructions.\nYou will find data for this exercise on the L: drive under College of Science/Geography/GEG276. Read alongside GIS_guide_to_practical_exercises.",
+    "text": "4.1 Ymchwilio i’ch teils map\nMae creu is-setiau gofodol a thematig o haenau fector yn arfer hanfodol mewn GIS. Trwy drin a chyfuno setiau data gofodol y cynhyrchir gwybodaeth newydd - fel ble i leoli fferm wynt.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
     ]
   },
   {
-    "objectID": "chapters/e04.cy.html#investigating-your-map-tile",
-    "href": "chapters/e04.cy.html#investigating-your-map-tile",
+    "objectID": "chapters/e04.cy.html#ymchwilio-ich-teils-map",
+    "href": "chapters/e04.cy.html#ymchwilio-ich-teils-map",
     "title": "4  Cyfuno haenau fector",
     "section": "",
-    "text": "Launch QGIS, create a new project, and open layer Wales_border from UK_Boundaries.\nFrom Wales_map_tiles, open the layer corresponding to your assigned OS map tile to see where your wind farm project will focus.\nCalculate the area of your 20 × 20 km map tile (square metres) and its perimeter (metres).\nOpen the attribute table for your map tile. This layer has one polygon. Open the Field Calculator and explore $area and $perimeter. Values differ slightly from expectations due to Earth curvature and projection distortion.\nUsing prior methods, calculate the number of people living within your polygon at the 2021 Census. Compute population density for your tile.",
+    "text": "Lansiwch QGIS a chreuwch prosiect newydd\nO’r ffolder UK_Boundaries, ychwanegwch yr haen Wales_border.gpkg at eich prosiect\nO’r ffolder Wales_map_tiles, ychwanegwch eich teils map OS a neilltuwyd at eich prosiect. Yr haen hon yw lle bydd eich prosiect fferm wynt yn canolbwyntio.\nCyfrifwch arwynebedd eich teils map mewn cilometrau sgwâr. Angen atgoffa sut i wneud hyn? Gweler Section 1.4\nCyfrifwch berimedr eich teils map mewn cilometrau\nY tro hwn, gadewch i QGIS wneud y gwaith trwm trwy gyfrifo arwynebedd a pherimedr i chi gan ddefnyddio’r gyfrifiannell maes. Gan na ellir golygu pob haen meistr ar OneDrive, bydd angen i chi gadw copi o’r teils map i’ch cyfrif OneDrive eich hun yn gyntaf. Ydych chi’n cofio sut i allforio haen? Os na, gweler Section 3.6",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
     ]
   },
   {
-    "objectID": "chapters/e04.cy.html#clipping-polygon-and-point-layers",
-    "href": "chapters/e04.cy.html#clipping-polygon-and-point-layers",
+    "objectID": "chapters/e04.cy.html#sec-fieldcalc",
+    "href": "chapters/e04.cy.html#sec-fieldcalc",
     "title": "4  Cyfuno haenau fector",
-    "section": "4.2  Clipping polygon and point layers",
-    "text": "4.2  Clipping polygon and point layers\n\nOpen layers in Wales_protected_areas. Investigate what “protected area” means and explore attribute tables. Save your project regularly.\nClip these layers to your map tile using Vector → Geoprocessing Tools → Clip. Input: the dataset to clip; Overlay: your map tile polygon. Choose Save to File, GeoPackage format, sensible names, and folder structure. Examine the new clipped layer.\nClip each protected area dataset relevant to your tile. Save clipped layers with appropriate filenames.\nMerge protected area layers with Vector → Data Management Tools → Merge Vector Layers to create a single protected‑areas layer. Alternatives include Union or MMQGIS → Merge.\nDissolve internal boundaries with Vector → Geoprocessing Tools → Dissolve. Save to disk. Use the field calculator to find total protected area and percentage of your tile.\nUsing prior data, clip existing or planned wind farms to your map tile. Save your work.",
+    "section": "4.2 Defnyddio’r gyfrifiannell maes",
+    "text": "4.2 Defnyddio’r gyfrifiannell maes\n\nMae’r gyfrifiannell maes yn offeryn pwerus sy’n eich galluogi i greu meysydd priodoledd newydd neu ddiweddaru rhai presennol gan ddefnyddio mynegiadau mathemategol, geometrig ac amodol cyflym. Cyfrifwch arwynebedd eich teils:\n\nAgorwch y attribute table ar gyfer eich copi teils map. Mae gan yr haen hon un polygon, felly dim ond un rhes sydd yn y tabl\nCliciwch yr eicon Open field calculator ()\nYn Output field name teipiwch Area\nGosodwch Output field type fel Decimal number (real)\nYn y panel canol, ehangwch y ddewislen ostwng Geometry\nCliciwch ddwywaith ar $area\nCliciwch OK\nCliciwch yr eicon Save edits () i gadw’r newidiadau i’r tabl priodoleddau\nCliciwch yr eicon Toggle editing mode () i ddiffodd y modd golygu\n\nCyfrifwch $perimeter eich teils map hefyd. Nawr bod y gwerthoedd hyn wedi’u cadw yn y tabl priodoleddau, mewn pa unedau maen nhw? Sylwch fod y gwerthoedd ychydig yn wahanol i’r hyn y dylech chi fod wedi’i ddisgwyl. Mae hyn oherwydd bod crymedd y Ddaear yn cyflwyno ystumio bach rhwng ardaloedd go iawn ac ardaloedd wedi’u mapio.\nO bopeth a ddysgoch yn Chapter 3, cyfrifwch nifer y bobl sy’n byw o fewn eich polygon yng Nghyfrifiad 2021\nGan ddefnyddio’r mesuriad arwynebedd a gyfrifwyd gennych uchod, cyfrifwch ddwysedd poblogaeth ar gyfer eich teils. Gallai hyn fod yn ddarn defnyddiol o wybodaeth i’w gyflwyno mewn capsiwn!",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
     ]
   },
   {
-    "objectID": "chapters/e04.cy.html#clipping-line-layers-and-adding-buffers",
-    "href": "chapters/e04.cy.html#clipping-line-layers-and-adding-buffers",
+    "objectID": "chapters/e04.cy.html#sec-clip",
+    "href": "chapters/e04.cy.html#sec-clip",
     "title": "4  Cyfuno haenau fector",
-    "section": "4.3  Clipping line layers and adding buffers",
-    "text": "4.3  Clipping line layers and adding buffers\n\nFrom British_Isles_geofabrik/wales, open waterways, water, railways, and roads. Explore attributes.\nClip each of these layers to your tile. Name outputs sensibly.\nReview wind farm Project constraints (e.g., distances from transport links and water bodies).\nCreate buffers with Vector → Geoprocessing Tools → Buffer for each transport and water layer. Dissolve boundaries (during or after) and optionally clip buffers to the tile polygon.\nCreate buffers for existing/planned wind farms if appropriate. Name layers carefully and organise files.\nMerge buffered layers if helpful.\nConsider merging clipped layers before buffering as an alternative workflow.",
+    "section": "4.3 Haenau clipio",
+    "text": "4.3 Haenau clipio\n\nYchwanegwch yr holl haenau yn y ffolder Wales_protected_areas at eich prosiect\nArchwiliwch yr haenau hyn a’u priodoleddau. A yw’n amlwg beth a olygir gan ‘ardaloedd gwarchodedig’? Dewch o hyd i ragor o wybodaeth am y setiau data hyn yma.\nArbedwch eich prosiect!\nTorrwch bob haen o ardal warchodedig fel eu bod yn ymddangos o fewn teils eich map:\n\nCliciwch Vector → Geoprocessing Tools → Clip...\nGosodwch Input layer i un o haenau’r ardaloedd gwarchodedig (e.e. NRW_AONB)\nGosodwch Overlay layer i deilsen eich map\nCliciwch Run → Close",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
     ]
   },
   {
-    "objectID": "chapters/e04.cy.html#selecting-elements-by-attribute",
-    "href": "chapters/e04.cy.html#selecting-elements-by-attribute",
+    "objectID": "chapters/e04.cy.html#haenau-crafu-dros-dro",
+    "href": "chapters/e04.cy.html#haenau-crafu-dros-dro",
     "title": "4  Cyfuno haenau fector",
-    "section": "4.4  Selecting elements by attribute",
-    "text": "4.4  Selecting elements by attribute\n\nOpen gis_osm_landuse_a_free_1 (landuse) and clip to your map tile.\nExamine the attribute table. Open Select by expression, expand Fields and Values, choose fclass, and list unique values. Decide which classes are relevant (e.g., residential, forest).\nUse Select by expression to select features, e.g. \"fclass\" = 'residential'.\nSave selected features to a new layer (Layer → Save As or Export → Save Selected Features As). Name and store methodically.\nRepeat for other relevant landuse classes.",
+    "section": "4.4 Haenau crafu dros dro",
+    "text": "4.4 Haenau crafu dros dro\nFe welwch chi nawr haen newydd o’r enw Clipped gydag eicon sglodion cof () wrth ei hymyl. Mae hyn yn golygu bod yr haen yn un dros dro. Os byddwch chi’n cau QGIS nawr, byddwch chi’n colli haenau dros dro. Daeth gwerth a gwendidau haenau dros dro i’r amlwg yn yr ymarfer diwethaf.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
     ]
   },
   {
-    "objectID": "chapters/e04.cy.html#taking-stock-of-planning-constraints",
-    "href": "chapters/e04.cy.html#taking-stock-of-planning-constraints",
+    "objectID": "chapters/e04.cy.html#sec-merge",
+    "href": "chapters/e04.cy.html#sec-merge",
     "title": "4  Cyfuno haenau fector",
-    "section": "4.5  Taking stock of planning constraints",
-    "text": "4.5  Taking stock of planning constraints\n\nReview the layers that represent areas unsuitable for wind farm development because of their position within, or proximity to, man‑made or natural features.\nExplore unconstrained areas large enough for a wind farm. Use subsequent exercises to evaluate the best site.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nCalculate area and perimeter of a polygon using the Field Calculator.\nClip point, line, and polygon vector layers.\nCreate and dissolve buffers around point, line, and polygon layers.\nSelect and save subsets from a vector layer by attribute.\nBuild layers that represent your tile’s wind farm planning constraints.",
+    "section": "4.5 Uno haenau",
+    "text": "4.5 Uno haenau\n\nCyfunwch haen wedi’i thorri i greu un haen ‘ardal warchodedig’:\n\nCliciwch Vector → Data Management Tools → Merge Vector Layers...\nO dan Input layers, cliciwch yr eicon Browse () a gwiriwch yr holl haenau sydd wedi’u clipio\nCliciwch OK\nGosodwch Destination CRS i EPSG:27700\nCliciwch Run → Close",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#sec-dissolve",
+    "href": "chapters/e04.cy.html#sec-dissolve",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.6 Haenau diddymu",
+    "text": "4.6 Haenau diddymu\n\nYn aml, mae cyfuno polygonau yn gadael ffiniau o fewn yr allbwn nad ydynt bellach yn cynrychioli ymyl newydd y polygon. Gall y rhain hyd yn oed gymhlethu camau prosesu pellach. Mae’n arfer da cael gwared ar y ffiniau mewnol hyn gan ddefnyddio’r offeryn Dissolve. Diddymu ffiniau mewnol yr haen gyfunedig:\n\nCliciwch Vector → Geoprocessing Tools → Dissolve...\nGosodwch Input layer i’ch haen gyfunedig\nCliciwch Run → Close\n\nNawr bod gennych chi’r cynnyrch terfynol sy’n deillio o gyfres o gamau prosesu, allforiwch yr haen (wedi anghofio sut? gweler Section 3.6)\nDefnyddiwch y gyfrifiannell maes i ddod o hyd i gyfanswm yr ardal warchodedig. Cyfrifwch ganran eich teils. Gallai hyn fod yn ddarn defnyddiol o wybodaeth i’w gyflwyno mewn capsiwn!\nYdych chi wedi bod yn cadw eich prosiect?\n\n\n\n\n\n\n\nTipFfeilio effeithlon\n\n\n\nMae hwn yn amser da i’ch atgoffa i fod yn ofalus ac yn daclus ynglŷn â ble i gadw allbwn GIS. Byddwch yn cynhyrchu llawer o ffeiliau ar gyfer y prosiect hwn, ac argymhellir yn gryf strwythur ffolderi hierarchaidd a haenau wedi’u henwi’n ofalus. Byddwch yn drefnus yn y ffordd rydych chi enwwch yr haenau a ble rydych chi’n eu rhoi. Bydd angen i chi ddod o hyd iddyn nhw a’u defnyddio yn nes ymlaen.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#haenau-byffro",
+    "href": "chapters/e04.cy.html#haenau-byffro",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.7 Haenau byffro",
+    "text": "4.7 Haenau byffro\n\nGwiriwch y cyfyngiadau Map 2 y mae’n rhaid eu dilyn, gan gynnwys na ddylid gosod fferm wynt o fewn pellteroedd penodol o nodweddion daearyddol allweddol\nO’r ffolder British_Isles_geofabrik/wales, ychwanegwch yr haenau cyfyngu gis_osm_waterways_free_1.gpkg, gis_osm_water_a_free_1.gpkg, gis_osm_railways_free_1.gpkg, a gis_osm_roads_free_1.gpkg at eich prosiect\nYchwanegwch yr haen gyfyngiad Wales_operational_windfarms.gpkg at eich prosiect\nArchwiliwch briodoleddau’r haenau cyfyngu hyn\nClipiwch bob un o’r haenau cyfyngu hyn i’ch teils (er efallai nad oes yr un yn eich teils map) a’u henwi’n synhwyrol\nMae byfferau yn ffordd ddefnyddiol o farcio ardaloedd sy’n dod o fewn y pellteroedd cyfyngu. Creu byfferau o amgylch y nodweddion sydd newydd eu hychwanegu:\n\nCliciwch Vector → Geoprocessing Tools → Buffer...\nGosodwch Input layer i un o’r haenau cyfyngu (e.e. gis_osm_roads_free_1)\nGosodwch Distance i 150 (gweler Cyfyngiadau Map 2)\nGwiriwch Dissolve result\nCliciwch Run → Close\n\nCreu byfferau o amgylch pob cyswllt trafnidiaeth, corff dŵr, a haenau ffermydd gwynt presennol",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#sec-selexpress",
+    "href": "chapters/e04.cy.html#sec-selexpress",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.8 Allforio elfennau penodol o haen",
+    "text": "4.8 Allforio elfennau penodol o haen\n\nO’r ffolder British_Isles_geofabrik/wales, ychwanegwch yr haen gis_osm_landuse_a_free_1.gpkg at eich prosiect\nClipiwch yr haen i deilsen eich map\nDewiswch is-setiau o’r data hwn gan ddefnyddio mynegiant:\n\nAgorwch dabl priodoleddau’r haen\nCliciwch Select features using an expression ()\nEhangwch Fields and Values\nCliciwch fclass → All Unique. Mae pob categori unigryw yn yr haen fclass (h.y. yr holl ddosbarthiadau defnydd tir unigryw) bellach wedi’u rhestru\nO dan Expression, teipiwch \"fclass\" = 'residential'. Gallwch hefyd glicio ddwywaith ar y meysydd, y gwerthoedd a’r symbolau (e.e. ) i adeiladu’r mynegiant\nCliciwch Select Features → Close\n\nAllforiwch y polygonau a ddewiswyd (cofiwch ddefnyddio’r opsiwn Save Selected Features As...). Enwch a storiwch yn systematig\nAiladroddwch ar gyfer pob dosbarth defnydd tir perthnasol arall (eto, cyfeiriwch at Cyfyngiadau ac ystyriaethau Map 2)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#pwyso-a-mesur-cyfyngiadau-cynllunio",
+    "href": "chapters/e04.cy.html#pwyso-a-mesur-cyfyngiadau-cynllunio",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.9 Pwyso a mesur cyfyngiadau cynllunio",
+    "text": "4.9 Pwyso a mesur cyfyngiadau cynllunio\n\nErbyn hyn, dylech gael set o haenau data sydd gyda’i gilydd yn cynrychioli’r rhannau hynny o’ch teils map sy’n anaddas ar gyfer datblygu ffermydd gwynt oherwydd eu lleoliad o fewn, neu agosrwydd at, nodweddion naturiol neu artiffisial y dirwedd. Ystyriwch y ffordd orau o gyflwyno’r rhain ar fap fel rhan o’ch Prosiect. Cofiwch feddwl am y pwrpas a’r gynulleidfa, a’r angen i gyfiawnhau eich meddwl. A fyddai tocio’ch byfferau yn dileu darnau sy’n weddill y tu hwnt i’ch teils map? Yn yr un modd ag y gwnaethoch chi greu haen ‘ardaloedd gwarchodedig’ o AHNE, Parc Cenedlaethol, SoDdGA, ac ati, a allwch chi wneud yr un peth ar gyfer cysylltiadau trafnidiaeth a chyrff dŵr? Anogir arbrofi!\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nDefnyddio y gyfrifiannell maes i ddeillio priodoleddau geometrig (arwynebedd, perimedr) a chyfrifo gwerthoedd fel dwysedd poblogaeth ar gyfer teils map.\nClipio nodweddion o setiau data fector mawr i ardal o ddiddordeb diffiniedig, gan gadw dim ond y data sy’n berthnasol i’r dadansoddiad.\nCyfuno nifer o haenau wedi’u clipio yn un set ddata trwy uno a diddymu ffiniau mewnol i gynhyrchu allbwn glân.\nCreu byfferau toddedig o amgylch nodweddion llinell a pholygon i gynrychioli parthau cyfyngiad neu agosrwydd.\nDewis nodweddion yn ôl priodoledd gan ddefnyddio mynegiadau, a threfnwch yr haenau sy’n deillio o hyn yn system ffeiliau sydd wedi’i strwythuro’n dda.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
     ]

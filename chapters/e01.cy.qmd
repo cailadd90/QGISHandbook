@@ -222,7 +222,7 @@ Erbyn diwedd yr ymarfer hwn dylech chi allu:
 
 1. Creu a rheoli prosiect QGIS drwy ychwanegu haenau fector o wahanol ffynonellau a defnyddio'r offer llywio i symud, chwyddo, a dychwelyd i hyd a lled haen
 2. Addasu ymddangosiad data gofodol drwy symboleg, trefnu haenau, a labelu i adeiladu map clir a darllenadwy
-3. Archwiliwch y tabl priodoleddau i ddeall sut mae nodweddion yn ymwneud â'u priodoleddau, didoli cofnodion a dewis nodweddion yn gydfuddiannol rhwng y tabl a chynfas map
+3. Archwilo y tabl priodoleddau i ddeall sut mae nodweddion yn ymwneud â'u priodoleddau, didoli cofnodion a dewis nodweddion yn gydfuddiannol rhwng y tabl a chynfas map
 4. Mesur a hidlo data daearyddol drwy gael hydoedd ac arwynebeddau, trosi rhwng unedau, ac is-osod haenau gan ddefnyddio mynegiadau hidlo a symboleg wedi'i chategoreiddio
 5. Gwerthfawrogi sut mae confensiynau cartograffig a gweinyddol yn llunio cynrychiolaeth ofodol, o osod labeli awtomataidd i'r ffordd y caiff ffiniau eu llunio
 :::

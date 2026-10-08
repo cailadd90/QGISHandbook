@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 <li>
 <p>The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions. Calculate the area of your tile:</p>
 <ol type="i">
-<li>Open the attributes table for your map tile copy. This layer has one polygon, so there’s only one row in the table</li>
+<li>Open the attribute table for your map tile copy. This layer has one polygon, so there’s only one row in the table</li>
 <li>Click the <code>Open field calculator</code> icon (<img src="figs/FieldCalculator.png" class="img-fluid" style="width:3.0%">)</li>
 <li>In <code>Output field name</code> type <code>Area</code>
 </li>
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>Click <code>OK</code>
 </li>
-<li>Click the <code>Save edits</code> icon (<img src="figs/SaveEdits.png" class="img-fluid" style="width:3.0%"> )to save the changes to the attributes table</li>
+<li>Click the <code>Save edits</code> icon (<img src="figs/SaveEdits.png" class="img-fluid" style="width:3.0%"> )to save the changes to the attribute table</li>
 <li>Click the <code>Toggle editing mode</code> icon (<img src="figs/ToggleEditingMode.png" class="img-fluid" style="width:3.0%">) to turn off editing mode</li>
 </ol>
 </li>
@@ -335,48 +335,33 @@ ul.task-list li input[type="checkbox"] {
 <ol start="30" class="example" type="1">
 <li><p>From the <code>British_Isles_geofabrik/wales</code> folder, add the <code>gis_osm_landuse_a_free_1.gpkg</code> layer to your project</p></li>
 <li><p>Clip the layer to your map tile</p></li>
-<li><p>Open the layer’s attributes table</p></li>
 <li>
 <p>Select subsets of this data using an expression:</p>
 <ol type="i">
+<li>Open the layer’s attribute table</li>
 <li>Click <code>Select features using an expression</code> (<img src="figs/SelectByExpression.png" class="img-fluid" style="width:3.0%">)</li>
 <li>Expand <code>Fields and Values</code>
 </li>
 <li>Click <code>fclass</code> → <code>All Unique</code>. All unique categories in the <code>fclass</code> layer (i.e. all the unique land use classes) are now listed</li>
-<li>Under <code>Expression</code>, type <code>"fclass" = 'residential'</code>. You can also double-click on the fields, values, and symbols (e.g. <img src="figs/Equals2.png" class="img-fluid" style="width:3.0%">) names to build the expression</li>
-<li>Click <code>OK</code>
+<li>Under <code>Expression</code>, type <code>"fclass" = 'residential'</code>. You can also double-click on the fields, values, and symbols (e.g. <img src="figs/Equals2.png" class="img-fluid" style="width:3.0%">) to build the expression</li>
+<li>Click <code>Select Features</code> → <code>Close</code>
 </li>
 </ol>
 </li>
 <li><p>Export the selected polygons (remember to use the <code>Save Selected Features As...</code> option). Name and store methodically</p></li>
 <li><p>Repeat for all other relevant land use classes (again, refer to <a href="https://canvas.swansea.ac.uk/courses/69491/assignments/674932" target="_blank">Map 2 constraints and considerations</a>)</p></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Singles or multiples?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You may recognise this type of coding - you did in <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a> (<code>"fclass" IN ('primary', 'trunk', 'motorway'</code>). Well, the logic is the same. But reflect carefully on whether extracting all layers into a single ‘landuse’ layer is helpful, or if you want to be able to distinguish between the different layers. Review the windfarm project conditions carefully to decide.</p>
-</div>
-</div>
-</section><section id="taking-stock-of-planning-constraints" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="taking-stock-of-planning-constraints">
+</ol></section><section id="taking-stock-of-planning-constraints" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="taking-stock-of-planning-constraints">
 <span class="header-section-number">4.8</span> Taking stock of planning constraints</h2>
-<ol start="36" class="example" type="1">
-<li><p>By this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking</p></li>
-<li><p>As the constraint layers begin to be added, reflect on how you’ll convey this information effectively and attractively. Would clipping your buffers remove trailing bits beyond your map tile? In the same way you created a ‘protected areas’ layer from AONB, NP, SSSI, etc., can you do the same for transport links and water bodies? Experimentation is encouraged!</p></li>
+<ol start="35" class="example" type="1">
+<li>By this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking. Would clipping your buffers remove trailing bits beyond your map tile? In the same way you created a ‘protected areas’ layer from AONB, NP, SSSI, etc., can you do the same for transport links and water bodies? Experimentation is encouraged!</li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Learning outcomes
+<span class="screen-reader-only">Note</span>Learning outcomes
 </div>
 </div>
 <div class="callout-body-container callout-body">

@@ -101,7 +101,7 @@ library(exams2forms)
 exams2forms("E01_Q2.Rmd", edir = "exercises")
 ```
 
-(@) You can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:
+(@) You can also select features in the Map Canvas to identify their corresponding attributes in the attribute table:
 
     i. Click the `Select Features` icon (![](figs/Select.png){width=3%})
     ii. Select (highlight in yellow) the Isle of Wight
