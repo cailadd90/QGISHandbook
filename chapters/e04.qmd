@@ -1,13 +1,13 @@
 # Combining vector layers {#sec-e04}
 
-Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm.
+> **Date of practical:** 23rd and 30th October 2026
 
-**This exercise will guide you through the requirements for making Map 2**
+Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm.
 
 ::: {.callout-note}
 ## Learning objectives
 
-To clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers.
+To clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers necessary for making Map 2.
 :::
 
 ## Investigating your map tile
@@ -16,33 +16,29 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 
 (@) From the `UK_Boundaries` folder, add the `Wales_border.gpkg` layer to your project
 
-(@) From the `Wales_map_tiles` folder, add your assigned OS map tile to your project. This layer is where your wind farm project will focus
-
-::: {.callout-hint}
-## Map tiles
-
-Your assigned map tiles can be found [here](https://www.tesco.com/store-locator/){target='_blank'}.
-:::
+(@) From the `Wales_map_tiles` folder, add your [assigned OS map tile](https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484){target='_blank'} to your project. This layer is where your wind farm project will focus
 
 (@) Calculate the area of your map tile in square kilometres. Need reminding of how to do this? See @sec-measuring
 
 (@) Calculate the perimeter of your map tile in kilometres
 
-(@) Open the attribute table for your map tile. This layer has one polygon, so there's only one row in the table
+(@) This time, allow QGIS to do the heavy lifting and calculate area and perimeter for you. Because all master layers on OneDrive cannot be edited, you will need to first export the map tile to your own OneDrive account. Remember how to export a layer? If not, see @sec-export
 
-#### Field calculator {#sec-fieldcalc}
+(@) Open the attribute table for your map tile copy. This layer has one polygon, so there's only one row in the table
 
-(@) Open the Field Calculator (![](figs/FieldCalculator.png){width=3%}). The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions.
+(@) Open the Field Calculator (![](figs/FieldCalculator.png){width=3%})
 
-(@) Calculate the area of your tile:
+(@) The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions. Calculate the area of your tile:
 
     i. In `Output field name` type `Area`
     ii. Set `Output field type` as `Decimal number (real)`
-    iii. In the central panel, expand the `Geometry` drop-down menu
+    iii. In the middle panel, expand the `Geometry` drop-down menu
     iv. Double-click `$area`
     v. Click `OK`
+    vi. Click the `Save edits` icon (![](figs/SaveEdits.png){width=3%} )to save the changes to the attributes table
+    vii. Click the `Toggle editing mode` icon (![](figs/ToggleEditingMode.png){width=3%}) to turn off editing mode
 
-(@) Calculate the `$perimeter` of your map tile. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas
+(@) Calculate the `$perimeter` of your map tile as well. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas
 
 (@) From everything you learnt in @sec-e03, calculate the number of people living within your polygon at the 2021 Census
 
@@ -59,17 +55,19 @@ Your assigned map tiles can be found [here](https://www.tesco.com/store-locator/
 (@) Clip each protected area layer so they appear within your map tile:
 
     i. Click `Vector` → `Geoprocessing Tools` → `Clip...`
-    ii. Set `Input layer` to one of the protected areas layers - let's start with `NRW_AONB`
+    ii. Set `Input layer` to one of the protected areas layers (e.g. `NRW_AONB`)
     iii. Set `Overlay layer` to your map tile
     iv. Click `Run` → `Close`
     
 ::: {.callout-warning}
 ## Temporary scratch layers
 
-You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/TempScratchLayer.png){width=3%}) next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, shall we make it permanent? Well, we want to clip all the protected areas layers to the map tile, then combine into a single 'protected areas' layer (see steps below). So it's fine to amass these temporary layers to get to the final desired layer, then remove them all without saving 'junk' data. This came up in the last exercise (see @sec-tempout).
+You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/TempScratchLayer.png){width=3%}) next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, should you make it permanent? Well, you want to clip all the protected areas layers to the map tile, then combine into a single 'protected areas' layer (see steps below). So it's fine to amass these temporary layers to get to the final desired layer, then remove them all without saving 'junk' data. This came up in the last exercise (see @sec-tempout).
 :::
 
-(@) Rename the `Clipped` layer to something more intuitive (e.g. `NRW_AONB_Clipped`). It is important to rename temporary layers as you go, otherwise you'll inevitably get confused over which layers represent what 
+(@) Right-click the `Clipped` layer → click `Rename Layer`
+
+(@) Rename the layer something more intuitive (e.g. `NRW_AONB_Clipped`). It is important to rename temporary layers as you go, otherwise you'll inevitably get confused over which layers represent what 
 
 (@) Clip the remaining protected area datasets to your map tile. You only need to clip those layers that actually have features in your area, so inspect the layers first to find out if this is the case
 
@@ -83,33 +81,21 @@ You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/Te
     iv. Set `Destination CRS` to `EPSG27700`
     v. Click `Run` → `Close`
 
-::: {.callout-hint}
-## The Dissolve tool
-
-Combining polygons often leaves behind boundaries within the output which no longer represent the new polygon edge. These may even complicate further processing steps. It is good practice to remove these internal boundaries using the `Dissolve` tool.
-:::
-
 ### Dissolve {#sec-dissolve}
 
-(@) Dissolve internal boundaries of the merged layer:
+(@) Combining polygons often leaves behind boundaries within the output which no longer represent the new polygon edge. These may even complicate further processing steps. It is good practice to remove these internal boundaries using the `Dissolve` tool. Dissolve internal boundaries of the merged layer:
 
     i. Click `Vector` → `Geoprocessing Tools` → `Dissolve...`
     ii. Under `Input layer`, select your merged layer
     iii. Click `Run` → `Close`
 
-(@) Now we have the final product derived from a series of processing steps, it's time to export the layer. Remind yourself of how to do this here: @sec-export
+(@) Now we have the final product derived from a series of processing steps, it's time to export the layer (see @sec-export)
 
-(@) Use the field calculator to find total protected area. Calculate percentage of your tile. No canvas quiz this time - this might be a useful piece of information to present in a caption!
-
-::: {.callout-hint}
-## Being efficient
-
-Why not merge everything first, then clip and dissolve? Whilst that's easier for us, it's harder for the PC to merge multiple large-scale datasets. Clipping each layer individually then merging is actually more efficient for the PC. This means runtimes are faster.
-:::
+(@) Use the field calculator to find total protected area. Calculate percentage of your tile. **This might be a useful piece of information to present in a caption!**
 
 (@) Locate and add the operational (existing or planned) wind farms layer to your project
 
-(@) Clip this layer to your map tile. Note that there may be none in your map tile
+(@) Clip this layer to your map tile. There may be none in your map tile
 
 (@) Have you been saving your project?
 
@@ -126,11 +112,11 @@ name layers and where you put them – you will need to find and use them later 
 
 (@) Explore these layers' attributes
 
-(@) Clip each of these layers to your tile. This time, try saving each clipped layer directly to your OneDrive account. It is up to you whether you prefer saving output directly, or if you'd rather create temporary layers to inspect before making them permanet. 
+(@) Clip each of these layers to your tile. This time, try saving each clipped layer directly to your OneDrive account. It is up to you whether you prefer saving output directly, or if you'd rather create temporary layers to inspect before making them permanent
 
 ![](figs/SaveToFile.png){fig-align='center' width=25%}
 
-(@) Review the Windfarm Project instructions and @sec-constraints and begin to:
+(@) Review the [Map 2 constraints and considerations](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'} and begin to:
 
     i. @sec-addlayers all the necessary layers to your project
     ii. Use @sec-buffer to find which parts of your map tile should not be built upon

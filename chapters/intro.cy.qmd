@@ -58,6 +58,16 @@ Os bydd eich lle disg yn llawn, gall QGIS a meddalwedd arall chwalu. I unioni hy
 
 Os yw problemau'n parhau (e.e. ni allwch fewngofnodi, cael mynediad at feddalwedd, na chadw ffeiliau), gwnewch gais i'r Ganolfan Wasanaeth [yma](https://swanseauniversity.service-now.com/sp?id=sc_cat_item&sys_id=3f1dd0320a0a0b99000a53f7604a2ef9){target='_blank'}.
 
+## Cysoni â OneDrive
+
+Ar bob cyfrifiadur rydych chi'n gweithio arno, caiff ffeiliau eu cadw'n lleol i ddechrau, ac yna mae proses gefndir yn eu cysoni â'ch cyfrif cwmwl OneDrive. Bydd y ffeiliau bellach ar gael ar y cyfrifiadur nesaf y byddwch yn ei ddefnyddio. Fodd bynnag, weithiau gall y broses gysoni hon gael ei gohirio. Dyma beth gallwch ei wneud i osgoi hyn:
+
+* Cliciwch yn rheolaidd ar yr eicon cwmwl glas (ar y bar tasgau, yn y gornel dde isaf) i weld sut mae eich ffeiliau'n cysoni
+* Peidiwch byth â mewngofnodi allan o gyfrifiadur nes bod y broses gysoni wedi'i chwblhau
+* Os oes llawer o ffeiliau angen eu cysoni, oediwch y broses a chysoni'r ffeiliau fesul un
+* Os oes ffeil ar agor ac nad yw wedi'i chysoni, caewch y ffeil nes ei bod wedi'i chysoni â OneDrive
+* Os byddwch yn canfod bod ffeiliau ar goll o OneDrive, ewch yn ôl at y cyfrifiadur diwethaf y gweithioch arno a sicrhau bod OneDrive yn cysoni'n gywir oddi yno cyn symud ymlaen
+
 ## Dewisiadau meddalwedd GIS
 
 Ar hyn o bryd mae dau gymhwysiad meddalwedd yn dominyddu'r farchnad GIS, ac mae gan y ddau fanteision ac anfanteision:

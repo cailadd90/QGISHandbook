@@ -58,6 +58,16 @@ If your disk space becomes full, QGIS and other software can crash. To remedy th
 
 If problems persist (e.g. you can’t log in, access software, or save files), make a Service Centre request [here](https://swanseauniversity.service-now.com/sp?id=sc_cat_item&sys_id=3f1dd0320a0a0b99000a53f7604a2ef9){target='_blank'}.
 
+## Synching with OneDrive
+
+On each computer you work on, the files are initially saved locally then a background process synchronizes them to your OneDrive cloud account. The files will now be available on the next computer you use. However, sometimes this synchronization gets held up. Here’s what you can do to avoid this:
+
+* Regularly click on the blue cloud (task manager bar bottom right) to see how well your files are syncing
+* Never log out of a machine until syncing is complete
+* If there are a lot of files that need to syncing, pause them and sync one by one
+* If there is a file that is open and hasn't synced, close the file until it has synced with OneDrive
+* If you find yourself with missing files on OneDrive, revisit the last computer you worked on and make sure that OneDrive syncs correctly from there before moving on
+
 ## GIS software options
 
 Two software applications presently dominate the GIS market, each with benefits and drawbacks:
