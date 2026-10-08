@@ -60,6 +60,16 @@
     ]
   },
   {
+    "objectID": "chapters/intro.html#synching-with-onedrive",
+    "href": "chapters/intro.html#synching-with-onedrive",
+    "title": "Before you begin",
+    "section": "Synching with OneDrive",
+    "text": "Synching with OneDrive\nOn each computer you work on, the files are initially saved locally then a background process synchronizes them to your OneDrive cloud account. The files will now be available on the next computer you use. However, sometimes this synchronization gets held up. Here’s what you can do to avoid this:\n\nRegularly click on the blue cloud (task manager bar bottom right) to see how well your files are syncing\nNever log out of a machine until syncing is complete\nIf there are a lot of files that need to syncing, pause them and sync one by one\nIf there is a file that is open and hasn’t synced, close the file until it has synced with OneDrive\nIf you find yourself with missing files on OneDrive, revisit the last computer you worked on and make sure that OneDrive syncs correctly from there before moving on",
+    "crumbs": [
+      "Before you begin"
+    ]
+  },
+  {
     "objectID": "chapters/intro.html#gis-software-options",
     "href": "chapters/intro.html#gis-software-options",
     "title": "Before you begin",
@@ -164,7 +174,7 @@
     "href": "chapters/e01.html#sec-attrib",
     "title": "1  Getting started",
     "section": "1.5 Exploring the Attribute Table",
-    "text": "1.5 Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area\nClick the Dock Attribute Table icon () so that you can see both the Map Canvas and Attribute Table on screen at once\nTo understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles\n\n\n\nCan you name the seventh-largest island of the British Isles?\n\nIslayYnys Enlli / BardseyYnys Môn / AngleseyLewis and HarrisSkye\n\n\n\nThe seventh-largest island of the British Isles is Ynys Môn / Anglesey.\n\n\n\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\n\n\n\n\nWhat is the precise area of the Isle of Wight (in square kilometres)?\n\n\n\nThe precise area of the Isle of Wight was 382 square kilometres.\n\n\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
+    "text": "1.5 Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area\nClick the Dock Attribute Table icon () so that you can see both the Map Canvas and Attribute Table on screen at once\nTo understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles\n\n\n\nCan you name the seventh-largest island of the British Isles?\n\nYnys Môn / AngleseyIslayYnys Enlli / BardseyLewis and HarrisSkye\n\n\n\nThe seventh-largest island of the British Isles is Ynys Môn / Anglesey.\n\n\n\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attributes table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\n\n\n\n\nWhat is the precise area of the Isle of Wight (in square kilometres)?\n\n\n\nThe precise area of the Isle of Wight was 382 square kilometres.\n\n\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
@@ -377,6 +387,76 @@
     "text": "3.7 Using buffers as simple catchments\n\nCreating buffers around features to use as catchments or exclusion zones is yet another powerful example of GIS application. As an example, find out how many people live within walking distance of the Tesco stores you have geocoded. Create buffers around each postcode point to approximate walking distance from the Tescos store:\n\nClick Vector → Geoprocessing Tools → Buffer...\nSet Input layer as your Tesco stores layer (which should now have [EPSG:27700] after the layer name)\nSet Distance to 500 metres\nCheck Dissolve result\nClick Run → Close\n\nUsing Select by Location (see Section 3.3) and Basic Statistics (see Section 3.2), find the total number of people registered to postcodes within 500 m of Tesco stores\nFor the final challenge, answer the following (hint: see Section 1.8):\n\n\n\nWhat was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? (don’t use commas)\n\n\n\nThe total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE) was 32,940.\n\n\n\n\n\n\n\n\nNoteLearning outcomes\n\n\n\nBy the end of this exercise you should be able to:\n\nExplore postcode-linked census data through the attribute table, examining and explaining spatial patterns of high and low population density\nVisualise population density using graduated symbology and kernel density (heatmap) estimation\nGeocode addresses from postcodes using a plugin and web service, and export the result as a properly projected vector layer\nCalculate population statistics for defined areas and catchments using Select by Location, Buffer, and Basic Statistics for Fields tools\nAppreciate how postcodes link human activity to physical location, and the value of tidy, well-projected data and temporary layers in a GIS workflow - and your windfarm project",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocoding and population</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.html",
+    "href": "chapters/e04.html",
+    "title": "4  Combining vector layers",
+    "section": "",
+    "text": "4.1 Investigating your map tile\nCreating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.html#investigating-your-map-tile",
+    "href": "chapters/e04.html#investigating-your-map-tile",
+    "title": "4  Combining vector layers",
+    "section": "",
+    "text": "Launch QGIS and create a new project\nFrom the UK_Boundaries folder, add the Wales_border.gpkg layer to your project\nFrom the Wales_map_tiles folder, add your assigned OS map tile to your project. This layer is where your wind farm project will focus\nCalculate the area of your map tile in square kilometres. Need reminding of how to do this? See Section 1.4\nCalculate the perimeter of your map tile in kilometres\nThis time, allow QGIS to do the heavy lifting and calculate area and perimeter for you. Because all master layers on OneDrive cannot be edited, you will need to first export the map tile to your own OneDrive account. Remember how to export a layer? If not, see Section 3.6\nOpen the attribute table for your map tile copy. This layer has one polygon, so there’s only one row in the table\nOpen the Field Calculator ()\nThe field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions. Calculate the area of your tile:\n\nIn Output field name type Area\nSet Output field type as Decimal number (real)\nIn the middle panel, expand the Geometry drop-down menu\nDouble-click $area\nClick OK\nClick the Save edits icon ( )to save the changes to the attributes table\nClick the Toggle editing mode icon () to turn off editing mode\n\nCalculate the $perimeter of your map tile as well. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas\nFrom everything you learnt in Chapter 3, calculate the number of people living within your polygon at the 2021 Census\nUsing the area measurement you calculated above, compute population density for your tile",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.html#clip",
+    "href": "chapters/e04.html#clip",
+    "title": "4  Combining vector layers",
+    "section": "4.2 Clip",
+    "text": "4.2 Clip\n\nAdd all the layers in the Wales_protected_areas folder to your project\nExplore these layers and their attributes. Is it obvious what is meant by ‘protected areas’? Find more information about these datasets here.\nSave your project!\nClip each protected area layer so they appear within your map tile:\n\nClick Vector → Geoprocessing Tools → Clip...\nSet Input layer to one of the protected areas layers (e.g. NRW_AONB)\nSet Overlay layer to your map tile\nClick Run → Close\n\n\n\n\n\n\n\n\nWarningTemporary scratch layers\n\n\n\nYou’ll now see a new layer called Clipped with a memory chip icon () next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, should you make it permanent? Well, you want to clip all the protected areas layers to the map tile, then combine into a single ‘protected areas’ layer (see steps below). So it’s fine to amass these temporary layers to get to the final desired layer, then remove them all without saving ‘junk’ data. This came up in the last exercise (see ?sec-tempout).\n\n\n\nRight-click the Clipped layer → click Rename Layer\nRename the layer something more intuitive (e.g. NRW_AONB_Clipped). It is important to rename temporary layers as you go, otherwise you’ll inevitably get confused over which layers represent what\nClip the remaining protected area datasets to your map tile. You only need to clip those layers that actually have features in your area, so inspect the layers first to find out if this is the case\n\n\n4.2.1 Merge\n\nMerge the clipped layer to create a single ‘protected area’ layer:\n\nClick Vector → Data Management Tools → Merge Vector Layers...\nUnder Input layers, click the Browse icon () and check all the clipped layers\nClick OK\nSet Destination CRS to EPSG27700\nClick Run → Close\n\n\n\n\n4.2.2 Dissolve\n\nCombining polygons often leaves behind boundaries within the output which no longer represent the new polygon edge. These may even complicate further processing steps. It is good practice to remove these internal boundaries using the Dissolve tool. Dissolve internal boundaries of the merged layer:\n\nClick Vector → Geoprocessing Tools → Dissolve...\nUnder Input layer, select your merged layer\nClick Run → Close\n\nNow we have the final product derived from a series of processing steps, it’s time to export the layer (see Section 3.6)\nUse the field calculator to find total protected area. Calculate percentage of your tile. This might be a useful piece of information to present in a caption!\nLocate and add the operational (existing or planned) wind farms layer to your project\nClip this layer to your map tile. There may be none in your map tile\nHave you been saving your project?",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.html#efficient-filing",
+    "href": "chapters/e04.html#efficient-filing",
+    "title": "4  Combining vector layers",
+    "section": "4.3 Efficient filing",
+    "text": "4.3 Efficient filing\nThis is a good time to remind you to be careful and tidy about where to save GIS output – you will be generating many files for this project and a hierarchical folder structure and carefully named layers is highly recommended. Be methodical in how you name layers and where you put them – you will need to find and use them later on.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.html#clipping-line-layers-and-adding-buffers",
+    "href": "chapters/e04.html#clipping-line-layers-and-adding-buffers",
+    "title": "4  Combining vector layers",
+    "section": "4.4 Clipping line layers and adding buffers",
+    "text": "4.4 Clipping line layers and adding buffers\n\nFrom the British_Isles_geofabrik/wales folder, add the gis_osm_waterways_free_1.gpkg, gis_osm_water_a_free_1.gpkg, gis_osm_railways_free_1.gpkg, and gis_osm_roads_free_1.gpkg layers to your project\nExplore these layers’ attributes\nClip each of these layers to your tile. This time, try saving each clipped layer directly to your OneDrive account. It is up to you whether you prefer saving output directly, or if you’d rather create temporary layers to inspect before making them permanent\n\n\n\n\n\n\n\nReview the Map 2 constraints and considerations and begin to:\n\n?sec-addlayers all the necessary layers to your project\nUse ?sec-buffer to find which parts of your map tile should not be built upon\n?sec-clip, Section 4.2.1, and Section 4.2.2 any orginial or modified layer as required\n?sec-save your layers in sensible, well-organised file structure\n\n\nThink carefully about the order in which you buffer, clip, dissolve, merge etc. Would clipping at the end of your workflow remove trailing bits generated by your buffer, for example (:egg:)? Experimentation is encouraged! You will find efficient and inefficient ways of doing things, and your learning really develops when you play around, mess up, and try again.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.html#sec-selexpress",
+    "href": "chapters/e04.html#sec-selexpress",
+    "title": "4  Combining vector layers",
+    "section": "4.5 Selecting elements by attribute",
+    "text": "4.5 Selecting elements by attribute\n\nFrom the British_Isles_geofabrik/wales folder, add the gis_osm_landuse_a_free_1.gpkg layer to your project\nClip the layer to your map tile\nOpen the layer’s attribute table\nClick Select features using an expression ()\nExpand Fields and Values\nClick fclass → All Unique. All unique categories in the fclass layer (i.e. all the unique land use classes) are now listed\nDecide which classes are relevant (again, refer to ?sec-constraits)\nUnder Expression, type \"fclass\" = 'residential'. You can also double-click on the fields, values, and symbols (e.g. ) names to build the expression\nClick OK",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.html#taking-stock-of-planning-constraints",
+    "href": "chapters/e04.html#taking-stock-of-planning-constraints",
+    "title": "4  Combining vector layers",
+    "section": "5.1 Taking stock of planning constraints",
+    "text": "5.1 Taking stock of planning constraints\n\nBy this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should be able to:\n\nUse the field calculator to derive geometric attributes (area, perimeter) and compute values such as population density for a map tile.\nClip features from large vector datasets to a defined area of interest, retaining only the data relevant to the analysis.\nCombine multiple clipped layers into a single dataset by merging and dissolving internal boundaries to produce clean output.\nCreate dissolved buffers around line and polygon features to represent zones of constraint or proximity.\nSelect features by attribute using expressions, and organise the resulting layers methodically within a well-structured file system.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
     ]
   },
   {

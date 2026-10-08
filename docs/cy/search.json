@@ -60,6 +60,16 @@
     ]
   },
   {
+    "objectID": "chapters/intro.cy.html#cysoni-â-onedrive",
+    "href": "chapters/intro.cy.html#cysoni-â-onedrive",
+    "title": "Cyn i chi ddechrau",
+    "section": "Cysoni â OneDrive",
+    "text": "Cysoni â OneDrive\nAr bob cyfrifiadur rydych chi’n gweithio arno, caiff ffeiliau eu cadw’n lleol i ddechrau, ac yna mae proses gefndir yn eu cysoni â’ch cyfrif cwmwl OneDrive. Bydd y ffeiliau bellach ar gael ar y cyfrifiadur nesaf y byddwch yn ei ddefnyddio. Fodd bynnag, weithiau gall y broses gysoni hon gael ei gohirio. Dyma beth gallwch ei wneud i osgoi hyn:\n\nCliciwch yn rheolaidd ar yr eicon cwmwl glas (ar y bar tasgau, yn y gornel dde isaf) i weld sut mae eich ffeiliau’n cysoni\nPeidiwch byth â mewngofnodi allan o gyfrifiadur nes bod y broses gysoni wedi’i chwblhau\nOs oes llawer o ffeiliau angen eu cysoni, oediwch y broses a chysoni’r ffeiliau fesul un\nOs oes ffeil ar agor ac nad yw wedi’i chysoni, caewch y ffeil nes ei bod wedi’i chysoni â OneDrive\nOs byddwch yn canfod bod ffeiliau ar goll o OneDrive, ewch yn ôl at y cyfrifiadur diwethaf y gweithioch arno a sicrhau bod OneDrive yn cysoni’n gywir oddi yno cyn symud ymlaen",
+    "crumbs": [
+      "Cyn i chi ddechrau"
+    ]
+  },
+  {
     "objectID": "chapters/intro.cy.html#dewisiadau-meddalwedd-gis",
     "href": "chapters/intro.cy.html#dewisiadau-meddalwedd-gis",
     "title": "Cyn i chi ddechrau",
@@ -164,7 +174,7 @@
     "href": "chapters/e01.cy.html#sec-attribut",
     "title": "1  Dechrau arni",
     "section": "1.5 Archwilio’r Attribute Table",
-    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nLewis a HarrisYnys MônYnys EnlliSkyeIslay\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
+    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nLewis a HarrisYnys MônSkyeYnys EnlliIslay\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Dechrau arni</span>"
     ]
@@ -377,6 +387,66 @@
     "text": "3.7 Defnyddio byfferau fel dalgylchoedd syml\n\nMae creu byfferau o amgylch nodweddion i’w defnyddio fel dalgylchoedd neu barthau gwaharddedig yn enghraifft bwerus arall o gymhwysiad GIS. Fel enghraifft, darganfyddwch faint o bobl sy’n byw o fewn pellter cerdded i’r siopau Tesco rydych chi wedi’u geogodio. Crëwch fyfferau o amgylch pob pwynt cod post i frasamcanu’r pellter cerdded o’r siop Tesco:\n\nCliciwch Vector → Geoprocessing Tools → Buffer...\nGosodwch Input layer fel eich haen siopau Tesco (a ddylai nawr gynnwys [EPSG:27700] ar ôl enw’r haen)\nGosodwch Distance i 500 metr\nTiciwch Dissolve result\nCliciwch Run → Close\n\nGan ddefnyddio Select by Location (gweler Section 3.3) a Basic Statistics (gweler Section 3.2), dewch o hyd i gyfanswm y bobl sydd wedi’u cofrestru i godau post o fewn 500 m i siopau Tesco\nAr gyfer yr her olaf, atebwch y canlynol (awgrym: gweler Section 1.8):\n\n\n\nBeth oedd cyfanswm y nifer o bobl a oedd wedi cofrestru yn 2021 o fewn 2 km i Gampws Singleton (SA2 8PQ) a Champws y Bae (SA1 8QE) Prifysgol Abertawe? (peidiwch â defnyddio atalnodau)\n\n\n\nCyfanswm y nifer o bobl a oedd wedi cofrestru yn 2021 o fewn 2 km i Gampws Singleton (SA2 8PQ) a Champws y Bae (SA1 8QE) Prifysgol Abertawe oedd 32,940.\n\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nArchwilio ddata cyfrifiad sy’n gysylltiedig â chod post drwy’r attributes table, gan archwilio ac egluro patrymau gofodol dwysedd poblogaeth uchel ac isel\nDelweddu dwysedd poblogaeth gan ddefnyddio symboleg raddedig ac amcangyfrif dwysedd kernel (gwresmap)\nGeogodio gyfeiriadau o godau post gan ddefnyddio ategyn a gwasanaeth gwe, ac allforio’r canlyniad fel haen fector wedi’i thaflunnu’n gywir\nCyfrifo ystadegau poblogaeth ar gyfer ardaloedd a dalgylchoedd diffiniedig gan ddefnyddio’r offer Select by Location, Buffer, a Basic Statistics for Fields\nGwerthfawrogi sut mae codau post yn cysylltu gweithgaredd dynol â lleoliad ffisegol, a gwerth data taclus, deniadol a haenau dros dro mewn llif gwaith GIS - a’ch prosiect fferm wynt",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geocodio a phoblogaeth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html",
+    "href": "chapters/e04.cy.html",
+    "title": "4  Cyfuno haenau fector",
+    "section": "",
+    "text": "4.1  Investigating your map tile\nCreating spatial and thematic subsets of vector layers is essential GIS practice and a key step in preparing for the wind farm Project. Before you begin, familiarise yourself with the wind farm Project instructions.\nYou will find data for this exercise on the L: drive under College of Science/Geography/GEG276. Read alongside GIS_guide_to_practical_exercises.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#investigating-your-map-tile",
+    "href": "chapters/e04.cy.html#investigating-your-map-tile",
+    "title": "4  Cyfuno haenau fector",
+    "section": "",
+    "text": "Launch QGIS, create a new project, and open layer Wales_border from UK_Boundaries.\nFrom Wales_map_tiles, open the layer corresponding to your assigned OS map tile to see where your wind farm project will focus.\nCalculate the area of your 20 × 20 km map tile (square metres) and its perimeter (metres).\nOpen the attribute table for your map tile. This layer has one polygon. Open the Field Calculator and explore $area and $perimeter. Values differ slightly from expectations due to Earth curvature and projection distortion.\nUsing prior methods, calculate the number of people living within your polygon at the 2021 Census. Compute population density for your tile.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#clipping-polygon-and-point-layers",
+    "href": "chapters/e04.cy.html#clipping-polygon-and-point-layers",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.2  Clipping polygon and point layers",
+    "text": "4.2  Clipping polygon and point layers\n\nOpen layers in Wales_protected_areas. Investigate what “protected area” means and explore attribute tables. Save your project regularly.\nClip these layers to your map tile using Vector → Geoprocessing Tools → Clip. Input: the dataset to clip; Overlay: your map tile polygon. Choose Save to File, GeoPackage format, sensible names, and folder structure. Examine the new clipped layer.\nClip each protected area dataset relevant to your tile. Save clipped layers with appropriate filenames.\nMerge protected area layers with Vector → Data Management Tools → Merge Vector Layers to create a single protected‑areas layer. Alternatives include Union or MMQGIS → Merge.\nDissolve internal boundaries with Vector → Geoprocessing Tools → Dissolve. Save to disk. Use the field calculator to find total protected area and percentage of your tile.\nUsing prior data, clip existing or planned wind farms to your map tile. Save your work.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#clipping-line-layers-and-adding-buffers",
+    "href": "chapters/e04.cy.html#clipping-line-layers-and-adding-buffers",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.3  Clipping line layers and adding buffers",
+    "text": "4.3  Clipping line layers and adding buffers\n\nFrom British_Isles_geofabrik/wales, open waterways, water, railways, and roads. Explore attributes.\nClip each of these layers to your tile. Name outputs sensibly.\nReview wind farm Project constraints (e.g., distances from transport links and water bodies).\nCreate buffers with Vector → Geoprocessing Tools → Buffer for each transport and water layer. Dissolve boundaries (during or after) and optionally clip buffers to the tile polygon.\nCreate buffers for existing/planned wind farms if appropriate. Name layers carefully and organise files.\nMerge buffered layers if helpful.\nConsider merging clipped layers before buffering as an alternative workflow.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#selecting-elements-by-attribute",
+    "href": "chapters/e04.cy.html#selecting-elements-by-attribute",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.4  Selecting elements by attribute",
+    "text": "4.4  Selecting elements by attribute\n\nOpen gis_osm_landuse_a_free_1 (landuse) and clip to your map tile.\nExamine the attribute table. Open Select by expression, expand Fields and Values, choose fclass, and list unique values. Decide which classes are relevant (e.g., residential, forest).\nUse Select by expression to select features, e.g. \"fclass\" = 'residential'.\nSave selected features to a new layer (Layer → Save As or Export → Save Selected Features As). Name and store methodically.\nRepeat for other relevant landuse classes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e04.cy.html#taking-stock-of-planning-constraints",
+    "href": "chapters/e04.cy.html#taking-stock-of-planning-constraints",
+    "title": "4  Cyfuno haenau fector",
+    "section": "4.5  Taking stock of planning constraints",
+    "text": "4.5  Taking stock of planning constraints\n\nReview the layers that represent areas unsuitable for wind farm development because of their position within, or proximity to, man‑made or natural features.\nExplore unconstrained areas large enough for a wind farm. Use subsequent exercises to evaluate the best site.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nCalculate area and perimeter of a polygon using the Field Calculator.\nClip point, line, and polygon vector layers.\nCreate and dissolve buffers around point, line, and polygon layers.\nSelect and save subsets from a vector layer by attribute.\nBuild layers that represent your tile’s wind farm planning constraints.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cyfuno haenau fector</span>"
     ]
   },
   {

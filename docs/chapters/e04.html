@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="cy" xml:lang="cy">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<link rel="alternate" hreflang="en" href="https://cailadd90.github.io/QGISHandbook//chapters/faq.html" />
-<link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/faq.cy.html" />
+<link rel="alternate" hreflang="en" href="https://cailadd90.github.io/QGISHandbook//chapters/e04.html" />
+<link rel="alternate" hreflang="cy" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e04.cy.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>FAQ – Llawlyfr QGIS</title>
+<title>4  Combining vector layers – QGIS Handbook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,8 +28,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
-<link href="../chapters/references.cy.html" rel="next">
-<link href="../chapters/e04.cy.html" rel="prev">
+<link href="../chapters/faq.html" rel="next">
+<link href="../chapters/e03.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/faq.cy.html">FAQ</a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/e04.html"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../chapters/figs/Cover.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="../chapters/figs/Cover.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Llawlyfr QGIS</a> 
+      <a href="../">QGIS Handbook</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -90,72 +90,84 @@ ul.task-list li input[type="checkbox"] {
         </div>
         </div>
     <div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle babelquarto-languages-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Cymraeg</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://cailadd90.github.io/QGISHandbook//chapters/faq.html" id="language-link-en">English</a></li></ul>
+<button class="btn btn-primary dropdown-toggle babelquarto-languages-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> English</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://cailadd90.github.io/QGISHandbook//cy/chapters/e04.cy.html" id="language-link-cy">Cymraeg</a></li></ul>
 </div>
 <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cyflwyniad</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/intro.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cyn i chi ddechrau</span></a>
+  <a href="../chapters/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Before you begin</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/e01.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Dechrau arni</span></span></a>
+  <a href="../chapters/e01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Getting started</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/e02.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Cyfansoddi mapiau</span></span></a>
+  <a href="../chapters/e02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Composing maps</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/e03.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocodio a phoblogaeth</span></span></a>
+  <a href="../chapters/e03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/e04.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Cyfuno haenau fector</span></span></a>
+  <a href="../chapters/e04.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/faq.cy.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/references.cy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cyfeirnodau</span></a>
+  <a href="../chapters/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Appendices</span></span>
-  </li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#investigating-your-map-tile" id="toc-investigating-your-map-tile" class="nav-link active" data-scroll-target="#investigating-your-map-tile"><span class="header-section-number">4.1</span> Investigating your map tile</a></li>
+  <li>
+<a href="#clip" id="toc-clip" class="nav-link" data-scroll-target="#clip"><span class="header-section-number">4.2</span> Clip</a>
+  <ul class="collapse">
+<li><a href="#sec-merge" id="toc-sec-merge" class="nav-link" data-scroll-target="#sec-merge"><span class="header-section-number">4.2.1</span> Merge</a></li>
+  <li><a href="#sec-dissolve" id="toc-sec-dissolve" class="nav-link" data-scroll-target="#sec-dissolve"><span class="header-section-number">4.2.2</span> Dissolve</a></li>
+  </ul>
+</li>
+  <li><a href="#efficient-filing" id="toc-efficient-filing" class="nav-link" data-scroll-target="#efficient-filing"><span class="header-section-number">4.3</span> Efficient filing</a></li>
+  <li><a href="#clipping-line-layers-and-adding-buffers" id="toc-clipping-line-layers-and-adding-buffers" class="nav-link" data-scroll-target="#clipping-line-layers-and-adding-buffers"><span class="header-section-number">4.4</span> Clipping line layers and adding buffers</a></li>
+  <li><a href="#sec-selexpress" id="toc-sec-selexpress" class="nav-link" data-scroll-target="#sec-selexpress"><span class="header-section-number">4.5</span> Selecting elements by attribute</a></li>
+  <li><a href="#singles-or-multiples" id="toc-singles-or-multiples" class="nav-link" data-scroll-target="#singles-or-multiples"><span class="header-section-number">5</span> Singles or multiples?</a></li>
+  <li><a href="#taking-stock-of-planning-constraints" id="toc-taking-stock-of-planning-constraints" class="nav-link" data-scroll-target="#taking-stock-of-planning-constraints"><span class="header-section-number">5.1</span> Taking stock of planning constraints</a></li>
+  </ul></nav>
+</div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-faq" class="quarto-section-identifier">FAQ</span></h1>
+<h1 class="title"><span id="sec-e04" class="quarto-section-identifier"><span class="chapter-number">4</span>  <span class="chapter-title">Combining vector layers</span></span></h1>
 </div>
 
 
@@ -169,188 +181,200 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>Dyma rai o’r problemau cyffredin sy’n codi yn ystod y cwrs hwn a sut i’w datrys.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+</header><blockquote class="blockquote">
+<p><strong>Date of practical:</strong> 23rd and 30th October 2026</p>
+</blockquote>
+<p>Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Nid yw fy map allforiedig yn edrych fel oedden i’n ddisgwyl
+<span class="screen-reader-only">Note</span>Learning objectives
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Pan fyddwch chi’n argraffu neu allforio map o QGIS, nid yw’r feddalwedd yn anfon yn union be sy’n weladwy yn y Print Layout i’r argraffydd. Mae QGIS yn cyfeirio at osodiadau’r eitemau map i ddiffinio beth sy’n cael ei argraffu a sut y dylai ymddangos. Os gwnaethoch chi newidiadau i un o’r eitemau map ers i chi adnewyddu’r sgrin ddiwethaf, efallai na fydd y map yn cael ei argraffu fel oeddech chi’n ddisgwyl. Bydd gwneud haen yn weladwy mewn un eitem map yn ei gwneud yn weladwy’n awtomatig (wrth argraffu neu adnewyddu) mewn un arall oni bai eich bod chi’n dewis cloi’r haenau.</p>
-<p>I wneud yn siŵr eich bod chi’n argraffu neu’n allforio’n union yr hyn oeddech chi’n bwriadu, ar gyfer pob eitem map:</p>
-<ol type="1">
-<li>Cyfansoddwch yr eitem map gan ddefnyddio’r haenau sydd eu hangen arnoch a’u priodweddau fel y dewiswch</li>
-<li>Ticiwch y bocs <code>lock layers for map item</code> sydd o dan y tab <code>Item Properties</code>
+<p>To clip small subsets from large vector datasets, create dissolved buffers around line and polygon layers, select subsets by attribute, and combine layers necessary for making Map 2.</p>
+</div>
+</div>
+<section id="investigating-your-map-tile" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="investigating-your-map-tile">
+<span class="header-section-number">4.1</span> Investigating your map tile</h2>
+<ol class="example" type="1">
+<li><p>Launch QGIS and create a new project</p></li>
+<li><p>From the <code>UK_Boundaries</code> folder, add the <code>Wales_border.gpkg</code> layer to your project</p></li>
+<li><p>From the <code>Wales_map_tiles</code> folder, add your <a href="https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484" target="_blank">assigned OS map tile</a> to your project. This layer is where your wind farm project will focus</p></li>
+<li><p>Calculate the area of your map tile in square kilometres. Need reminding of how to do this? See <a href="e01.html#sec-measuring" class="quarto-xref"><span>Section 1.4</span></a></p></li>
+<li><p>Calculate the perimeter of your map tile in kilometres</p></li>
+<li><p>This time, allow QGIS to do the heavy lifting and calculate area and perimeter for you. Because all master layers on OneDrive cannot be edited, you will need to first export the map tile to your own OneDrive account. Remember how to export a layer? If not, see <a href="e03.html#sec-export" class="quarto-xref"><span>Section 3.6</span></a></p></li>
+<li><p>Open the attribute table for your map tile copy. This layer has one polygon, so there’s only one row in the table</p></li>
+<li><p>Open the Field Calculator (<img src="figs/FieldCalculator.png" class="img-fluid" style="width:3.0%">)</p></li>
+<li>
+<p>The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions. Calculate the area of your tile:</p>
+<ol type="i">
+<li>In <code>Output field name</code> type <code>Area</code>
 </li>
-<li>Adnewyddwch y sgrin (<code>Golygfa &gt; Adnewyddu</code>) i wneud yn siŵr bod popeth yn edrych fel y ddymunwch</li>
-<li>Dim ond wedyn y dylech chi argraffu neu allforio</li>
+<li>Set <code>Output field type</code> as <code>Decimal number (real)</code>
+</li>
+<li>In the middle panel, expand the <code>Geometry</code> drop-down menu</li>
+<li>Double-click <code>$area</code>
+</li>
+<li>Click <code>OK</code>
+</li>
+<li>Click the <code>Save edits</code> icon (<img src="figs/SaveEdits.png" class="img-fluid" style="width:3.0%"> )to save the changes to the attributes table</li>
+<li>Click the <code>Toggle editing mode</code> icon (<img src="figs/ToggleEditingMode.png" class="img-fluid" style="width:3.0%">) to turn off editing mode</li>
 </ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Nid yw fy attributes table yn edrych fel dwi’n disgwyl
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Mae’n debyg bod golwg yr attributes table wedi newid o ‘table’ i ‘form’ trwy gamgymeriad. I’w newid yn ôl, cliciwch yr eicon <code>Switch to table view</code> (<img src="figs/SwitchToTableView.png" class="img-fluid" style="width:3.0%">)</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Mae’r ffenestr “Handle Bad Layers” yn ymddangos pan dwi’n agor prosiect
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Os, pan fyddwch chi’n agor prosiect sy’n bodoli eisoes, ydych chi’n cael neges yn dweud ‘Handle Bad Layers’, yna ni all eich prosiect QGIS gysylltu â rhai neu’r holl haenau data rydych chi wedi’u hagor o’r blaen. Gall hyn ddigwydd os byddwch chi’n symud neu’n dileu ffeiliau data sy’n rhan o’ch prosiect yn anfwriadol. Yr unig ffordd i adfer yw rhoi pethau yn ôl fel yr oeddent, neu ailagor y ‘Bad Layers’.</p>
-<p>Rheswm posibl arall am ‘Bad Layers’ yw bod OneDrive wedi methu cysylltu’n gywir â’ch cyfrifiadur pan wnaethoch chi fewngofnodi. Yr ateb gorau yw allgofnodi ac mewngofnodi eto.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Rwy’n cael y gwall “One or more input features have invalid geometry”
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>‘Invalid geometry’ yw pan fydd haen fector yn torri, fel pan fydd ffin polygon yn croesi ei hun neu pan fydd gan linell hyd sero. Gall geometregau annilys ymddangos wrth drin haenau e.e. clipio ffyrdd i’ch deilsen map.</p>
-<p>I ddatrys ‘invalid geometries’:</p>
-<ol type="1">
-<li>Gwnewch yn siŵr bod y <code>Processing Toolbox</code> yn weladwy drwy glicio ar yr eicon cocsen (<img src="figs/ProcessingToolbox.png" class="img-fluid" style="width:3.0%">)</li>
-<li>Chwiliwch am <code>fix geometries</code>
 </li>
-<li>Dwbl-gliciwch ar <code>Fix geometries</code>
+<li><p>Calculate the <code>$perimeter</code> of your map tile as well. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas</p></li>
+<li><p>From everything you learnt in <a href="e03.html" class="quarto-xref"><span>Chapter 3</span></a>, calculate the number of people living within your polygon at the 2021 Census</p></li>
+<li><p>Using the area measurement you calculated above, compute population density for your tile</p></li>
+</ol></section><section id="clip" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="clip">
+<span class="header-section-number">4.2</span> Clip</h2>
+<ol start="13" class="example" type="1">
+<li><p>Add all the layers in the <code>Wales_protected_areas</code> folder to your project</p></li>
+<li><p>Explore these layers and their attributes. Is it obvious what is meant by ‘protected areas’? Find more information about these datasets <a href="https://en.wikipedia.org/wiki/Protected_areas_of_Wales" target="_blank">here</a>.</p></li>
+<li><p>Save your project!</p></li>
+<li>
+<p>Clip each protected area layer so they appear within your map tile:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Geoprocessing Tools</code> → <code>Clip...</code>
 </li>
-<li>O dan y cwymplen <code>Input layer</code>, dewiswch yr haen fector tramgwyddus</li>
-<li>Cliciwch <code>Run</code> → <code>Close</code>
+<li>Set <code>Input layer</code> to one of the protected areas layers (e.g. <code>NRW_AONB</code>)</li>
+<li>Set <code>Overlay layer</code> to your map tile</li>
+<li>Click <code>Run</code> → <code>Close</code>
 </li>
 </ol>
-<p>Bydd haen newydd yn cael ei chreu, sy’n edrych yn union yr un fath â’r haen wreiddiol, gyda’r geometregau toredig wedi’u datrys. Gallwch nawr fwrw ymlaen â’ch llif gwaith gwreiddiol.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Mae fy newislen “Processing” ar goll
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Mae’r ddewislen ‘Processing’ yn ategyn QGIS, felly mae’n debygol bod yr ategyn ar goll yn eich prosiect.</p>
-<p>I’w ychwanegu yn ôl i mewn:</p>
-<ol type="1">
-<li>Cliciwch ar <code>Plugins</code> → <code>Manage and Install Plugins...</code>
-</li>
-<li>Chwiliwch am <code>processing</code>
-</li>
-<li>Ticiwch y blwch ger <code>Processing</code>
-</li>
-<li>Cliciwch <code>Close</code>
 </li>
 </ol>
-<p>Dylai’r ddewislen ‘Processing’ nawr fod yn weladwy.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Ni chadwyd fy ngwaith
+<span class="screen-reader-only">Warning</span>Temporary scratch layers
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Y tri rheswm mwyaf tebygol yw:</p>
-<ol type="1">
-<li>Fe wnaethoch chi allgofnodi o’ch cyfrifiadur cyn i OneDrive gael amser i gysoni ffeiliau’n gywir (h.y. symud eich data o’r cyfrifiadur i’r cwmwl). Gwnewch yn siŵr bob amser bod tic bach wrth ymyl eich ffeil yn y porwr i gadarnhau bod y ffeil wedi’i gysoni’n gywir.</li>
-<li>Fe wnaethoch chi gadw’r data yn ‘lleol’ (h.y. ar y cyfrifiadur) yn hytrach nag ar eich OneDrive. <em>Efallai</em> byddwch chi’n gallu adfer eich ffeiliau os byddwch chi’n dychwelyd i’r union gyfrifiadur roeddech chi’n ei ddefnyddio, ac yna’n cadw’r data ar eich OneDrive. Ond, mae cyfrifiaduron y Brifysgol yn cael eu dileu bob dydd Gwener - felly byddwch yn gyflym!</li>
-<li>Rydych chi wedi cadw’r data ar eich OneDrive, ond allwch chi ddim cofio ble. Ceisiwch ddod o hyd i’r ffeiliau o dan yr eicon ‘Recent’ ar eich porwr, yna cadwch nhw yn rhywle mwy synhwyrol.</li>
+<p>You’ll now see a new layer called <code>Clipped</code> with a memory chip icon (<img src="figs/TempScratchLayer.png" class="img-fluid" style="width:3.0%">) next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, should you make it permanent? Well, you want to clip all the protected areas layers to the map tile, then combine into a single ‘protected areas’ layer (see steps below). So it’s fine to amass these temporary layers to get to the final desired layer, then remove them all without saving ‘junk’ data. This came up in the last exercise (see <span class="quarto-unresolved-ref">?sec-tempout</span>).</p>
+</div>
+</div>
+<ol start="17" class="example" type="1">
+<li><p>Right-click the <code>Clipped</code> layer → click <code>Rename Layer</code></p></li>
+<li><p>Rename the layer something more intuitive (e.g. <code>NRW_AONB_Clipped</code>). It is important to rename temporary layers as you go, otherwise you’ll inevitably get confused over which layers represent what</p></li>
+<li><p>Clip the remaining protected area datasets to your map tile. You only need to clip those layers that actually have features in your area, so inspect the layers first to find out if this is the case</p></li>
 </ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Sut alla i drefnu eitemau map yn berffaith ar y print layout?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Defnyddiwch ‘guides’. Mae’r rhain yn caniatáu ichi snapio eitemau map (e.e. ymyl map) ar y llinell, gan alinio popeth yn berffaith.</p>
-<p>I ychwanegu tywyslinellau:</p>
-<ol type="1">
-<li>Cliciwch y tab <code>Guides</code>, neu cliciwch <code>View</code> → <code>Show Guides</code> os nad ydyn nhw’n weladwy</li>
-<li>Cliciwch yr eicon <code>Add new guide</code> (<img src="figs/AddANewGrid.png" class="img-fluid" style="width:3.0%">)</li>
-<li>Gosodwch bellter y tywyslinell, a fydd mewn mm o’r brig (tywyslinellau llorweddol) neu o’r chwith (tywyslinellau fertigol)</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Mae un o fy mhaneli ar goll, sut alla i ei gael yn ôl?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Os oes panel neu far offer ar goll:</p>
-<ol type="1">
-<li>Cliciwch <code>View</code> → <code>Panels</code> or <code>Toolbars</code>
+<section id="sec-merge" class="level3" data-number="4.2.1"><h3 data-number="4.2.1" class="anchored" data-anchor-id="sec-merge">
+<span class="header-section-number">4.2.1</span> Merge</h3>
+<ol start="20" class="example" type="1">
+<li>
+<p>Merge the clipped layer to create a single ‘protected area’ layer:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Data Management Tools</code> → <code>Merge Vector Layers...</code>
 </li>
-<li>Dewiswch y panel/bar offer perthnasol</li>
+<li>Under <code>Input layers</code>, click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) and check all the clipped layers</li>
+<li>Click <code>OK</code>
+</li>
+<li>Set <code>Destination CRS</code> to <code>EPSG27700</code>
+</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
 </ol>
+</li>
+</ol></section><section id="sec-dissolve" class="level3" data-number="4.2.2"><h3 data-number="4.2.2" class="anchored" data-anchor-id="sec-dissolve">
+<span class="header-section-number">4.2.2</span> Dissolve</h3>
+<ol start="21" class="example" type="1">
+<li>
+<p>Combining polygons often leaves behind boundaries within the output which no longer represent the new polygon edge. These may even complicate further processing steps. It is good practice to remove these internal boundaries using the <code>Dissolve</code> tool. Dissolve internal boundaries of the merged layer:</p>
+<ol type="i">
+<li>Click <code>Vector</code> → <code>Geoprocessing Tools</code> → <code>Dissolve...</code>
+</li>
+<li>Under <code>Input layer</code>, select your merged layer</li>
+<li>Click <code>Run</code> → <code>Close</code>
+</li>
+</ol>
+</li>
+<li><p>Now we have the final product derived from a series of processing steps, it’s time to export the layer (see <a href="e03.html#sec-export" class="quarto-xref"><span>Section 3.6</span></a>)</p></li>
+<li><p>Use the field calculator to find total protected area. Calculate percentage of your tile. <strong>This might be a useful piece of information to present in a caption!</strong></p></li>
+<li><p>Locate and add the operational (existing or planned) wind farms layer to your project</p></li>
+<li><p>Clip this layer to your map tile. There may be none in your map tile</p></li>
+<li><p>Have you been saving your project?</p></li>
+</ol></section></section><section id="efficient-filing" class="level2 callout-hint" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="efficient-filing">
+<span class="header-section-number">4.3</span> Efficient filing</h2>
+<p>This is a good time to remind you to be careful and tidy about where to save GIS output – you will be generating many files for this project and a hierarchical folder structure and carefully named layers is highly recommended. Be methodical in how you name layers and where you put them – you will need to find and use them later on.</p>
+</section><section id="clipping-line-layers-and-adding-buffers" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="clipping-line-layers-and-adding-buffers">
+<span class="header-section-number">4.4</span> Clipping line layers and adding buffers</h2>
+<ol start="27" class="example" type="1">
+<li><p>From the <code>British_Isles_geofabrik/wales</code> folder, add the <code>gis_osm_waterways_free_1.gpkg</code>, <code>gis_osm_water_a_free_1.gpkg</code>, <code>gis_osm_railways_free_1.gpkg</code>, and <code>gis_osm_roads_free_1.gpkg</code> layers to your project</p></li>
+<li><p>Explore these layers’ attributes</p></li>
+<li><p>Clip each of these layers to your tile. This time, try saving each clipped layer directly to your OneDrive account. It is up to you whether you prefer saving output directly, or if you’d rather create temporary layers to inspect before making them permanent</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="figs/SaveToFile.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
+</figure>
 </div>
+<ol start="30" class="example" type="1">
+<li>
+<p>Review the <a href="https://canvas.swansea.ac.uk/courses/69491/assignments/674932" target="_blank">Map 2 constraints and considerations</a> and begin to:</p>
+<ol type="i">
+<li>
+<span class="quarto-unresolved-ref">?sec-addlayers</span> all the necessary layers to your project</li>
+<li>Use <span class="quarto-unresolved-ref">?sec-buffer</span> to find which parts of your map tile should not be built upon</li>
+<li>
+<span class="quarto-unresolved-ref">?sec-clip</span>, <a href="#sec-merge" class="quarto-xref"><span>Section 4.2.1</span></a>, and <a href="#sec-dissolve" class="quarto-xref"><span>Section 4.2.2</span></a> any orginial or modified layer as required</li>
+<li>
+<span class="quarto-unresolved-ref">?sec-save</span> your layers in sensible, well-organised file structure</li>
+</ol>
+</li>
+</ol>
+<p>Think carefully about the order in which you buffer, clip, dissolve, merge etc. Would clipping at the end of your workflow remove trailing bits generated by your buffer, for example (:egg:)? Experimentation is encouraged! You will find efficient and inefficient ways of doing things, and your learning really develops when you play around, mess up, and try again.</p>
+</section><section id="sec-selexpress" class="level2" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="sec-selexpress">
+<span class="header-section-number">4.5</span> Selecting elements by attribute</h2>
+<ol start="31" class="example" type="1">
+<li><p>From the <code>British_Isles_geofabrik/wales</code> folder, add the <code>gis_osm_landuse_a_free_1.gpkg</code> layer to your project</p></li>
+<li><p>Clip the layer to your map tile</p></li>
+<li><p>Open the layer’s attribute table</p></li>
+<li><p>Click <code>Select features using an expression</code> (<img src="figs/SelectByExpression.png" class="img-fluid" style="width:3.0%">)</p></li>
+<li><p>Expand <code>Fields and Values</code></p></li>
+<li><p>Click <code>fclass</code> → <code>All Unique</code>. All unique categories in the <code>fclass</code> layer (i.e. all the unique land use classes) are now listed</p></li>
+<li><p>Decide which classes are relevant (again, refer to <span class="quarto-unresolved-ref">?sec-constraits</span>)</p></li>
+<li><p>Under <code>Expression</code>, type <code>"fclass" = 'residential'</code>. You can also double-click on the fields, values, and symbols (e.g. <img src="figs/Equals2.png" class="img-fluid" style="width:3.0%">) names to build the expression</p></li>
+<li><p>Click <code>OK</code></p></li>
+</ol></section><section id="singles-or-multiples" class="level1 callout-hint" data-number="5"><h1 data-number="5">
+<span class="header-section-number">5</span> Singles or multiples?</h1>
+<p>You may recognise this type of coding - you did in <a href="e01.html#sec-filter" class="quarto-xref"><span>Section 1.8</span></a> (<code>"fclass" IN ('primary', 'trunk', 'motorway'</code>). Well, the logic is the same. But reflect carefully on whether extracting all layers into a single ‘landuse’ layer is helpful, or if you want to be able to distinguish between the different layers. Review the windfarm project conditions carefully to decide.</p>
+</section><ol start="40" class="example" type="1">
+<li><p>Export the selected polygons (remember to use the <code>Save Selected Features As...</code> option). Name and store methodically.</p></li>
+<li><p>Repeat for all other relevant land use classes.</p></li>
+</ol>
+<section id="taking-stock-of-planning-constraints" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="taking-stock-of-planning-constraints">
+<span class="header-section-number">5.1</span> Taking stock of planning constraints</h2>
+<ol start="42" class="example" type="1">
+<li>By this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Learning outcomes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this exercise you should be able to:</p>
+<ol type="1">
+<li>Use the field calculator to derive geometric attributes (area, perimeter) and compute values such as population density for a map tile.</li>
+<li>Clip features from large vector datasets to a defined area of interest, retaining only the data relevant to the analysis.</li>
+<li>Combine multiple clipped layers into a single dataset by merging and dissolving internal boundaries to produce clean output.</li>
+<li>Create dissolved buffers around line and polygon features to represent zones of constraint or proximity.</li>
+<li>Select features by attribute using expressions, and organise the resulting layers methodically within a well-structured file system.</li>
+</ol>
 </div>
 </div>
 
 
-
-</main><!-- /main --><script>
+</section></main><!-- /main --><script>
 
 /* definition of content for the buttons */
 const webex_buttons = {check_hidden:          "<b>&check;</b>",
@@ -1023,7 +1047,7 @@ window.onload = function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/cailadd90\.github\.io\/QGISHandbook\/cy");
+        var filterRegex = new RegExp("https:\/\/cailadd90\.github\.io\/QGISHandbook\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1350,13 +1374,13 @@ window.onload = function() {
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../chapters/e04.cy.html" class="pagination-link" aria-label="Cyfuno haenau fector">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>  <span class="chapter-title">Cyfuno haenau fector</span></span>
+      <a href="../chapters/e03.html" class="pagination-link" aria-label="Geocoding and population">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>  <span class="chapter-title">Geocoding and population</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/references.cy.html" class="pagination-link" aria-label="Cyfeirnodau">
-        <span class="nav-page-text">Cyfeirnodau</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/faq.html" class="pagination-link" aria-label="FAQ">
+        <span class="nav-page-text">FAQ</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
