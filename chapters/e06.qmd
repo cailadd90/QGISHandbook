@@ -18,7 +18,7 @@ Create and edit a polygon to represent a wind farm, calculate its area, create a
 
 ## Wind farm polygon creation
 
-#### Create new vector layer
+## Create new vector layer
 
 (@) Create a new GeoPackage vector layer representing your optimal wind farm location:
 
@@ -98,7 +98,7 @@ A 50 m turbine generates about 750kWh . How many turbines will your windfarm sup
 (@) Comment in your CW4 caption on how well your analysis captures potential impact if your wind farm lies near the tile edge.
 
 ::: {.callout-tip}
-# Learning outcomes
+## Learning outcomes
 
 By the end of this exercise you should:
 

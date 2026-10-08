@@ -11,7 +11,7 @@ library(exams2forms)
 To master QGIS, one must start with the basics. This exercise introduces the foundational skills that will underpin the development of your wind farm project and beyond - including your dissertation. Take your time, ask questions, and make sure you are confident with each step before moving on.
 
 ::: {.callout-note}
-# Learning objectives
+## Learning objectives
 
 To become familiar with the Quantum GIS (QGIS) environment for visualising and processing geospatial data. You will learn how to open various types of data layer, adjust the way they look, explore their attributes, and select features for further analysis. 
 :::
@@ -174,7 +174,7 @@ exams2forms("E01_Q3.Rmd", edir = "exercises")
     i. Examine the attribute table
     ii. Experiment with different styles for line data
 
-(@) There is a lot of data here! So let's subset it. There are many ways to make subsets of data layers to select only the data you need or that you want to display. To filter the data universally: 
+(@) There is a lot of data here! So subset it. There are many ways to make subsets of data layers to select only the data you need or that you want to display. To filter the data universally: 
 
     i. Right-click on the roads layer and click `Filter...`
     ii. This tool allows you to easily see all the unique values contained in each field (or column) of the attribute table. Click `fclass` → `All`. You can now see all the unique classes of road in the vector layer
@@ -216,7 +216,7 @@ exams2forms("E01_Q3.Rmd", edir = "exercises")
 (@) Congratulations! You've learned the basics of QGIS. Make sure that you've understood all the steps above. Repeat if necessary, and ask for help or advice from the demonstrators. You will need this knowledge in future exercises and for the assessments.
 
 ::: {.callout-note}
-# Learning outcomes
+## Learning outcomes
 
 By the end of this exercise you should be able to: 
 

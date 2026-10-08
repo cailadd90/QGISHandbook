@@ -83,7 +83,7 @@ To visualise DEMs and wind speed data, subset, classify and vectorize, and creat
 
 ![](figs/3DConfiguration.png){fig-align='center' width=50%}
 
-### Deriving a slope raster
+## Deriving a slope raster
 
 Slope (gradient of the land surface) is fundamental properties of the land surface topography and can enlighten many geophysical processes such erosion.
 
@@ -153,7 +153,7 @@ Use the raster calculator to perform cell-by-cell operations, such as to find pa
 
 Vector polygons can be created from raster layers so that they can be combined with other vector constraints such as those created in [chapter 4](#sec-e04).
 
-#### Polygonize
+## Polygonize
 
 (@) Convert raster classifications to vector polygons:
 
@@ -190,7 +190,7 @@ may be permitted, but where the windiest (best power generation) and largest (mo
 (@) Design Map 3 of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why
 
 ::: {.callout-tip}
-# Learning outcomes
+## Learning outcomes
 
 By the end of this exercise you should be able to:
 

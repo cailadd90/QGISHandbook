@@ -150,7 +150,7 @@ exams2forms("E03_Q4.cy.Rmd", edir = "exercises")
     ix. Cliciwch `Close`
 
 ::: {.callout-important} 
-# Allbwn dros dro {#sec-tempout}
+## Allbwn dros dro {#sec-tempout}
 
 Mae'n gyffredin yn QGIS i greu haenau dros dro, i wirio eu bod yn arddangos fel y bwriadwyd, yna arbed yr allbwn i rywle mwy synhwyrol. Mae hyn yn arbennig o wir os oes sawl cam (ac felly haenau y mae angen eu creu) i gyrraedd yr allbwn terfynol a fwriadwyd. Mae arbed yr haenau dros dro hyn i'ch ffolder 'Downloads' yn syniad da, gan y gallwch chi wagio'r ffolder hon yn y pen draw heb rwystro lle gwerthfawr ar eich cyfrif OneDrive gyda data sothach.
 :::
@@ -195,7 +195,7 @@ exams2forms("E03_Q5.cy.Rmd", edir = "exercises")
 ```
 
 ::: {.callout-note}
-# Canlyniadau dysgu
+## Canlyniadau dysgu
 
 Erbyn diwedd yr ymarfer hwn dylech chi allu:
 

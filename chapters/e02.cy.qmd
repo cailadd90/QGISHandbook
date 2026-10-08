@@ -163,7 +163,7 @@ Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. 
     iii. Addaswch symboleg yr haenau
 
 ::: {.callout-tip}
-# Mae graddfa'n bwysig
+## Mae graddfa'n bwysig
 
 Rhowch bwyslais ar ychydig o haenau yn unig, wedi'u cyflwyno'n syml, sy'n ddefnyddiol ar y raddfa hon. Ceisiwch fod yn finimalaidd er mwyn osgoi gwneud y map yn anniben. Nodwch: oherwydd bod eich map o Gymru (Map 1) wedi'i gloi, dydy hi ddim yn cael ei effeithio gan newidiadau yng ngwelededd a symbolaeth i'r haenau sy'n ymddangos yn y mewnosodiad. Dyma bŵer cloi haenau.
 :::
@@ -196,7 +196,7 @@ Rhowch bwyslais ar ychydig o haenau yn unig, wedi'u cyflwyno'n syml, sy'n ddefny
 (@) Llongyfarchiadau - rydych chi wedi creu eich aseiniad map QGIS cyntaf. Nawr, gwnewch unrhyw adolygiadau (gan gynnwys uchder y map) er mwyn gallu cyflwyno'r Map 1 gorau y gallwch chi!
 
 ::: {.callout-note}
-# Canlyniadau dysgu
+## Canlyniadau dysgu
 
 Erbyn diwedd yr ymarfer hwn dylech chi allu:
 

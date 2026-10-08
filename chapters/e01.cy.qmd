@@ -11,7 +11,7 @@ library(exams2forms)
 I feistroli QGIS, rhaid dechrau gyda'r pethau sylfaenol. Mae'r ymarfer hwn yn cyflwyno'r sgiliau sylfaenol a fydd yn sail i ddatblygu eich prosiect fferm wynt a thu hwnt - gan gynnwys eich traethawd hir. Cymerwch eich amser, gofynnwch gwestiynau, a gwnewch yn siŵr eich bod yn hyderus gyda phob cam cyn symud ymlaen.
 
 ::: {.callout-note}
-# Amcanion dysgu
+## Amcanion dysgu
 
 I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phrosesu data geo-ofodol. Byddwch yn dysgu sut i agor gwahanol fathau o haen ddata, addasu'r ffordd maen nhw'n edrych, archwilio eu priodoleddau, a dewis nodweddion i'w dadansoddi ymhellach.
 :::
@@ -174,7 +174,7 @@ exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
     i. Archwiliwch y tabl priodoleddau
     ii. Arbrofwch gyda gwahanol arddulliau ar gyfer y data llinell
 
-(@) Mae llawer o ddata yma! Felly gadewch i ni ei is-setio. Mae yna lawer o ffyrdd o wneud is-setiau o haenau data i ddewis dim ond y data sydd ei angen arnoch neu yr hoffech ei arddangos. I hidlo'r data yn gyffredinol:
+(@) Mae llawer o ddata yma! Felly crëwch is-set ohono. Mae yna lawer o ffyrdd o wneud is-setiau o haenau data i ddewis dim ond y data sydd ei angen arnoch neu yr hoffech ei arddangos. I hidlo'r data yn gyffredinol:
 
     i. De-gliciwch yr haen ffyrdd a chliciwch `Filter...`
     ii. Mae'r offeryn hwn yn caniatáu ichi weld yn hawdd yr holl werthoedd unigryw sydd ym mhob maes (neu golofn) o'r tabl priodoleddau. Cliciwch `fclass` → `All`. Gallwch nawr weld yr holl ddosbarthiadau unigryw o ffyrdd yn yr haen fector.
@@ -216,7 +216,7 @@ exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
 (@) Llongyfarchiadau! Rydych chi wedi dysgu hanfodion QGIS. Gwnewch yn siŵr eich bod chi wedi deall yr holl gamau uchod. Ailadroddwch os oes angen, a gofynnwch am gymorth neu gyngor gan yr arddangoswyr. Bydd angen y wybodaeth hon arnoch mewn ymarferion yn y dyfodol ac ar gyfer yr asesiadau.
 
 ::: {.callout-note}
-# Canlyniadau dysgu
+## Canlyniadau dysgu
 
 Erbyn diwedd yr ymarfer hwn dylech chi allu:
 

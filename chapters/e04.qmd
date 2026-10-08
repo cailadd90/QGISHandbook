@@ -2,7 +2,7 @@
 
 > **Date of practical:** 23rd and 30th October 2026
 
-Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that we generate new information - such as where to site a wind farm.
+Creating spatial and thematic subsets of vector layers is essential GIS practice. It is through the manipulation and combination of spatial datasets that new information is generated - such as where to site a wind farm.
 
 ::: {.callout-note}
 ## Learning objectives
@@ -42,7 +42,7 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 
 (@) From everything you learnt in @sec-e03, calculate the number of people living within your polygon at the 2021 Census
 
-(@) Using the area measurement you calculated above, compute population density for your tile
+(@) Using the area measurement you calculated above, compute population density for your tile. This might be a useful piece of information to present in a caption!
 
 ## Clipping layers {#sec-clip}
 
@@ -62,7 +62,7 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 ::: {.callout-warning}
 ## Temporary scratch layers
 
-You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/TempScratchLayer.png){width=3%}) next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, should you make it permanent? Well, you want to clip all the protected areas layers to the map tile, then combine into a single 'protected areas' layer (see steps below). So it's fine to amass these temporary layers to get to the final desired layer, then remove them all without saving 'junk' data. This came up in the last exercise (see [here](#sec-tempout)).
+You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/TempScratchLayer.png){width=3%}) next to it. This means the layer is temporary. If you close QGIS now, you will lose temporary layers. The value and vulnerabilities of temporary layers came up in the last exercise.
 :::
 
 (@) Right-click the `Clipped` layer → click `Rename Layer`
@@ -71,96 +71,93 @@ You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/Te
 
 (@) Clip the remaining protected area datasets to your map tile. You only need to clip those layers that actually have features in your area, so inspect the layers first to find out if this is the case
 
-### Merging layers {#sec-merge}
+## Merging layers {#sec-merge}
 
 (@) Merge the clipped layer to create a single 'protected area' layer:
 
     i. Click `Vector` → `Data Management Tools` → `Merge Vector Layers...`
     ii. Under `Input layers`, click the `Browse` icon (![](figs/Browse.png){width=3%}) and check all the clipped layers
     iii. Click `OK`
-    iv. Set `Destination CRS` to `EPSG27700`
+    iv. Set `Destination CRS` to `EPSG:27700`
     v. Click `Run` → `Close`
 
-### Dissolving layers {#sec-dissolve}
+## Dissolving layers {#sec-dissolve}
 
 (@) Combining polygons often leaves behind boundaries within the output which no longer represent the new polygon edge. These may even complicate further processing steps. It is good practice to remove these internal boundaries using the `Dissolve` tool. Dissolve internal boundaries of the merged layer:
 
     i. Click `Vector` → `Geoprocessing Tools` → `Dissolve...`
-    ii. Under `Input layer`, select your merged layer
+    ii. Set `Input layer` to your merged layer
     iii. Click `Run` → `Close`
 
-(@) Now we have the final product derived from a series of processing steps, it's time to export the layer (see @sec-export)
+(@) Now you have the final product derived from a series of processing steps, export the layer (forgotten how? see @sec-export)
 
-(@) Use the field calculator to find total protected area. Calculate percentage of your tile. **This might be a useful piece of information to present in a caption!**
-
-(@) Locate and add the operational (existing or planned) wind farms layer to your project
-
-(@) Clip this layer to your map tile. There may be none in your map tile
+(@) Use the field calculator to find total protected area. Calculate percentage of your tile. This might be a useful piece of information to present in a caption!
 
 (@) Have you been saving your project?
 
-::: {.callout-hint}
+::: {.callout-tip}
 ## Efficient filing
 
-This is a good time to remind you to be careful and tidy about where to save GIS output – you will be generating many files for this project and a hierarchical folder structure and carefully named layers is highly recommended. Be methodical in how you
-name layers and where you put them – you will need to find and use them later on.
+This is a good time to remind you to be careful and tidy about where to save GIS output. You will be generating many files for this project, and a hierarchical folder structure and carefully named layers is highly recommended. Be methodical in how you
+name layers and where you put them. You will need to find and use them later on.
 :::
 
-## Clipping line layers and adding buffers
+## Buffering layers
 
-(@) From the `British_Isles_geofabrik/wales` folder, add the `gis_osm_waterways_free_1.gpkg`, `gis_osm_water_a_free_1.gpkg`, `gis_osm_railways_free_1.gpkg`, and `gis_osm_roads_free_1.gpkg` layers to your project
+(@) Check the [Map 2 constraints](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'} that must be followed, including that windfarm should not be placed within specified distances of key geographic features
 
-(@) Explore these layers' attributes
+(@) From the `British_Isles_geofabrik/wales` folder, add the `gis_osm_waterways_free_1.gpkg`, `gis_osm_water_a_free_1.gpkg`, `gis_osm_railways_free_1.gpkg`, and `gis_osm_roads_free_1.gpkg` constraint layers to your project
 
-(@) Clip each of these layers to your tile. This time, try saving each clipped layer directly to your OneDrive account. It is up to you whether you prefer saving output directly, or if you'd rather create temporary layers to inspect before making them permanent
+(@) Add the `Wales_operational_windfarms.gpkg` constraint layer to your project
 
-![](figs/SaveToFile.png){fig-align='center' width=25%}
+(@) Explore these constraint layers' attributes
 
-(@) Review the [Map 2 constraints and considerations](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'} and begin to:
+(@) Clip each of these constraint layers to your tile (though there may be none in your map tile) and name them sensibly
 
-    i. [Add](#sec-addlayers) all the necessary layers to your project
-    ii. Use [buffers](#sec-buffer) to find which parts of your map tile should not be built upon
-    iii. [Clip](#sec-clip), [merge](#sec-merge), and [dissolve](#sec-dissolve) any orginial or modified layer as required
-    iv. [Export](#sec-export) your layers in a sensible, well-organised file structure on your OneDrive account
+(@) Buffers are a useful way to mark out areas that fall within the constraint distances. Create buffers around the newly added features:
 
-Think carefully about the order in which you buffer, clip, dissolve, merge etc. Would clipping at the end of your workflow remove trailing bits generated by your buffer, for example (:egg:)? Experimentation is encouraged! You will find efficient and inefficient ways of doing things, and your learning really develops when you play around, mess up, and try again.
+    i. Click `Vector` → `Geoprocessing Tools` → `Buffer...`
+    ii. Set `Input layer` to one of the constraint layers (e.g. `gis_osm_roads_free_1`)
+    iii. Set `Distance` to `150` (see [Map 2 constraints](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'})
+    iv. Check `Dissolve result`
+    v. Click `Run` → `Close`
 
-## Selecting elements by attribute {#sec-selexpress}
+(@) Create buffers around all transport link, water body, and existing windfarm layers
+
+## Exporting specific elements from a layer {#sec-selexpress}
 
 (@) From the `British_Isles_geofabrik/wales` folder, add the `gis_osm_landuse_a_free_1.gpkg` layer to your project
 
 (@) Clip the layer to your map tile
 
-(@) Open the layer's attribute table
+(@) Open the layer's attributes table
 
-(@) Click `Select features using an expression` (![](figs/SelectByExpression.png){width=3%})
+(@) Select subsets of this data using an expression:
 
-(@) Expand `Fields and Values`
+    i. Click `Select features using an expression` (![](figs/SelectByExpression.png){width=3%})
+    ii. Expand `Fields and Values`
+    iii. Click `fclass` → `All Unique`. All unique categories in the `fclass` layer (i.e. all the unique land use classes) are now listed
+    iv. Under `Expression`, type `"fclass" = 'residential'`. You can also double-click on the fields, values, and symbols (e.g. ![](figs/Equals2.png){width=3%}) names to build the expression
+    v. Click `OK`
 
-(@) Click `fclass` → `All Unique`. All unique categories in the `fclass` layer (i.e. all the unique land use classes) are now listed
+(@) Export the selected polygons (remember to use the `Save Selected Features As...` option). Name and store methodically
 
-(@) Decide which classes are relevant (again, refer to [Map 2 constraints and considerations](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'})
+(@) Repeat for all other relevant land use classes (again, refer to [Map 2 constraints and considerations](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'})
 
-(@) Under `Expression`, type `"fclass" = 'residential'`. You can also double-click on the fields, values, and symbols (e.g. ![](figs/Equals2.png){width=3%}) names to build the expression
-
-(@) Click `OK`
-
-::: {.callout-hint}
-# Singles or multiples?
+::: {.callout-tip}
+## Singles or multiples?
 
 You may recognise this type of coding - you did in @sec-filter (`"fclass" IN ('primary', 'trunk', 'motorway'`). Well, the logic is the same. But reflect carefully on whether extracting all layers into a single 'landuse' layer is helpful, or if you want to be able to distinguish between the different layers. Review the windfarm project conditions carefully to decide.
 :::
-
-(@) Export the selected polygons (remember to use the `Save Selected Features As...` option). Name and store methodically.
-
-(@) Repeat for all other relevant land use classes.
 
 ## Taking stock of planning constraints
 
 (@) By this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking
 
+(@) As the constraint layers begin to be added, reflect on how you'll convey this information effectively and attractively. Would clipping your buffers remove trailing bits beyond your map tile? In the same way you created a 'protected areas' layer from AONB, NP, SSSI, etc., can you do the same for transport links and water bodies? Experimentation is encouraged!
+
 ::: {.callout-tip}
-# Learning outcomes
+## Learning outcomes
 
 By the end of this exercise you should be able to:
 

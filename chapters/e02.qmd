@@ -163,7 +163,7 @@ To create functionally complete maps in QGIS for print or digital output. You wi
     iii. Modify the layers' symbology
 
 ::: {.callout-tip}
-# Scale matters
+## Scale matters
 
 Place emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note: because your map of Wales (Map 1) is locked, it's not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.
 :::
@@ -196,7 +196,7 @@ Place emphasis on only a few, simply presented layers that are useful at this sc
 (@) Congratulations - you've created your first QGIS map assignment. Now make any revisions (including the map height) to be able to submit the best Map 1 that you can! 
 
 ::: {.callout-note}
-# Learning outcomes
+## Learning outcomes
 
 By the end of this exercise you should be able to: 
 

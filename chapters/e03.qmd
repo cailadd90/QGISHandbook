@@ -150,7 +150,7 @@ exams2forms("E03_Q4.Rmd", edir = "exercises")
     ix. Click `Close`
 
 ::: {.callout-important} 
-# Temporary output {#sec-tempout}
+## Temporary output {#sec-tempout}
 
 It's common in QGIS to create temporary layers, to check they're displaying as intended, then save the output to somewhere more sensible. This is especially true if there are several steps (and therefore layers that need to be created) to get to the final intended output. Saving these temporary layers to your `Downloads` folder is a good idea, as you can eventually empty this folder without clogging up valuable space on your OneDrive account with junk data.
 :::
@@ -195,7 +195,7 @@ exams2forms("E03_Q5.Rmd", edir = "exercises")
 ```
 
 ::: {.callout-note}
-# Learning outcomes
+## Learning outcomes
 
 By the end of this exercise you should be able to: 
 
