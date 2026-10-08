@@ -22,21 +22,21 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 
 (@) Calculate the perimeter of your map tile in kilometres
 
-(@) This time, allow QGIS to do the heavy lifting and calculate area and perimeter for you. Because all master layers on OneDrive cannot be edited, you will need to first export the map tile to your own OneDrive account. Remember how to export a layer? If not, see @sec-export
+(@) This time, allow QGIS to do the heavy lifting by calculating area and perimeter for you using the field calculator. Because all master layers on OneDrive cannot be edited, you will first need to save a copy of the map tile to your own OneDrive account. Remember how to export a layer? If not, see @sec-export
 
-(@) Open the attribute table for your map tile copy. This layer has one polygon, so there's only one row in the table
-
-(@) Open the Field Calculator (![](figs/FieldCalculator.png){width=3%})
+## Using the field calculator {#sec-fieldcalc}
 
 (@) The field calculator is a powerful tool that lets you create new attribute fields or update existing ones using fast mathematical, geometric, and conditional expressions. Calculate the area of your tile:
 
-    i. In `Output field name` type `Area`
-    ii. Set `Output field type` as `Decimal number (real)`
-    iii. In the middle panel, expand the `Geometry` drop-down menu
-    iv. Double-click `$area`
-    v. Click `OK`
-    vi. Click the `Save edits` icon (![](figs/SaveEdits.png){width=3%} )to save the changes to the attributes table
-    vii. Click the `Toggle editing mode` icon (![](figs/ToggleEditingMode.png){width=3%}) to turn off editing mode
+    i. Open the attributes table for your map tile copy. This layer has one polygon, so there's only one row in the table
+    ii. Click the `Open field calculator` icon (![](figs/FieldCalculator.png){width=3%})
+    iii. In `Output field name` type `Area`
+    iv. Set `Output field type` as `Decimal number (real)`
+    v. In the middle panel, expand the `Geometry` drop-down menu
+    vi. Double-click `$area`
+    vii. Click `OK`
+    viii. Click the `Save edits` icon (![](figs/SaveEdits.png){width=3%} )to save the changes to the attributes table
+    ix. Click the `Toggle editing mode` icon (![](figs/ToggleEditingMode.png){width=3%}) to turn off editing mode
 
 (@) Calculate the `$perimeter` of your map tile as well. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas
 
@@ -44,7 +44,7 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 
 (@) Using the area measurement you calculated above, compute population density for your tile
 
-## Clip
+## Clipping layers {#sec-clip}
 
 (@) Add all the layers in the `Wales_protected_areas` folder to your project
 
@@ -62,7 +62,7 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 ::: {.callout-warning}
 ## Temporary scratch layers
 
-You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/TempScratchLayer.png){width=3%}) next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, should you make it permanent? Well, you want to clip all the protected areas layers to the map tile, then combine into a single 'protected areas' layer (see steps below). So it's fine to amass these temporary layers to get to the final desired layer, then remove them all without saving 'junk' data. This came up in the last exercise (see @sec-tempout).
+You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/TempScratchLayer.png){width=3%}) next to it. This means the layer is temporary. If you close QGIS now, you will lose this layer! So, should you make it permanent? Well, you want to clip all the protected areas layers to the map tile, then combine into a single 'protected areas' layer (see steps below). So it's fine to amass these temporary layers to get to the final desired layer, then remove them all without saving 'junk' data. This came up in the last exercise (see [here](#sec-tempout)).
 :::
 
 (@) Right-click the `Clipped` layer → click `Rename Layer`
@@ -71,7 +71,7 @@ You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/Te
 
 (@) Clip the remaining protected area datasets to your map tile. You only need to clip those layers that actually have features in your area, so inspect the layers first to find out if this is the case
 
-### Merge {#sec-merge}
+### Merging layers {#sec-merge}
 
 (@) Merge the clipped layer to create a single 'protected area' layer:
 
@@ -81,7 +81,7 @@ You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/Te
     iv. Set `Destination CRS` to `EPSG27700`
     v. Click `Run` → `Close`
 
-### Dissolve {#sec-dissolve}
+### Dissolving layers {#sec-dissolve}
 
 (@) Combining polygons often leaves behind boundaries within the output which no longer represent the new polygon edge. These may even complicate further processing steps. It is good practice to remove these internal boundaries using the `Dissolve` tool. Dissolve internal boundaries of the merged layer:
 
@@ -118,10 +118,10 @@ name layers and where you put them – you will need to find and use them later 
 
 (@) Review the [Map 2 constraints and considerations](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'} and begin to:
 
-    i. @sec-addlayers all the necessary layers to your project
-    ii. Use @sec-buffer to find which parts of your map tile should not be built upon
-    iii. @sec-clip, @sec-merge, and @sec-dissolve any orginial or modified layer as required
-    iv. @sec-save your layers in sensible, well-organised file structure
+    i. [Add](#sec-addlayers) all the necessary layers to your project
+    ii. Use [buffers](#sec-buffer) to find which parts of your map tile should not be built upon
+    iii. [Clip](#sec-clip), [merge](#sec-merge), and [dissolve](#sec-dissolve) any orginial or modified layer as required
+    iv. [Export](#sec-export) your layers in a sensible, well-organised file structure on your OneDrive account
 
 Think carefully about the order in which you buffer, clip, dissolve, merge etc. Would clipping at the end of your workflow remove trailing bits generated by your buffer, for example (:egg:)? Experimentation is encouraged! You will find efficient and inefficient ways of doing things, and your learning really develops when you play around, mess up, and try again.
 
@@ -139,7 +139,7 @@ Think carefully about the order in which you buffer, clip, dissolve, merge etc. 
 
 (@) Click `fclass` → `All Unique`. All unique categories in the `fclass` layer (i.e. all the unique land use classes) are now listed
 
-(@) Decide which classes are relevant (again, refer to @sec-constraits)
+(@) Decide which classes are relevant (again, refer to [Map 2 constraints and considerations](https://canvas.swansea.ac.uk/courses/69491/assignments/674932){target='_blank'})
 
 (@) Under `Expression`, type `"fclass" = 'residential'`. You can also double-click on the fields, values, and symbols (e.g. ![](figs/Equals2.png){width=3%}) names to build the expression
 

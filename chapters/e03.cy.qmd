@@ -20,7 +20,7 @@ I archwilio dosbarthiad pwyntiau cod post yng Nghymru, archwilio dwysedd pobloga
 
 (@) Ymchwiliwch i'r attributes table ac archwiliwch sut mae'r pwyntiau hyn wedi'u dosbarthu
 
-(@) Gan ddefnyddio sgiliau o Ymarfer 1 (@sec-attrib) i ateb y canlynol:
+(@) Gan ddefnyddio sgiliau o Ymarfer 1 ([Adran 1.5](#sec-attrib)) i ateb y canlynol:
 
 ```{r}
 #| echo: false
@@ -75,7 +75,7 @@ exams2forms("E03_Q3.cy.Rmd", edir = "exercises")
 
 (@) Cyfrifwch ystadegau sylfaenol ar is-set o ddata mewn lleoliad penodol:
 
-    i. Dewiswch bolygon Sir Abertawe o `Wales_Principal_Areas` (wedi anghofio sut i wneud hyn? Gwiriwch @sec-attrib)
+    i. Dewiswch bolygon Sir Abertawe o `Wales_Principal_Areas` (wedi anghofio sut i wneud hyn? Gwiriwch [Adran 1.5](#sec-attrib))
     ii. Cliciwch `Vector` → `Research Tools` → `Select By Location...`
     iii. Gosodwch `Select features from` i `Wales_headcounts_at_postcodes_2021`
     iv. Ticiwch `are within`
