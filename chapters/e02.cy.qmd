@@ -27,11 +27,11 @@ Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. 
 
 (@) Newidwch gogwydd a maint y dudalen, fel ei bod yn ffitio ar ddogfen bortread A4 gyda lle oddi tano i gynnwys capsiwn:
 
-    i. De-gliciwch y gosodiad argraffu gwag
+    i. De-gliciwch y tudalen
     ii. Cliciwch `Page Properties...`
-    iii. Newidiwch `Size` i `Custom`
-    iv. Lleihewch `Height` y map (e.e. i `270`)
-    v. Newidwch `Orientation` i `Portrait`
+    iii. Newidwch `Orientation` i `Portrait`
+    iv. Newidiwch `Size` i `Custom`
+    v. Lleihewch `Height` y map (e.e. i `270`)
 
 ## Ychwanegu ac addasu eitem map {#sec-mapitem}
 
@@ -53,11 +53,11 @@ Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. 
 
 (@) Pan fyddwch chi'n hapus â'r raddfa, y fframio, a'r lleoliad, rhewch yr olygfa yn ei lle drwy dicio'r blwch o dan yr eicon clo (![](figs/LockCheck.png){width=3%}) ar gyfer `Map 1` yn y panel `Items`
 
-(@) O ffenestr y Map Canvas, addaswch arddulliau'r haenau:
+(@) O ffenestr y Map Canvas (h.y. lle mae eich haenau'n cael eu storio), addaswch arddulliau'r haenau:
 
     i. Dewiswch liwiau, lledau ffiniau, a ffontiau sy'n pwysleisio Cymru a'r gwahaniaeth rhwng amlinelliad Cymru (arfordir ffisegol) a ffiniau'r Prif Ardaloedd (adeiladwaith gwleidyddol anffisegol)
 
-(@) Diweddarwch y Print Layout i adlewyrchu eich newidiadau gan ddefnyddio un o'r ddau opsiwn hyn:
+(@) Diweddarwch y Print Layout (h.y. lle rydych chi'n llunio eich map) i adlewyrchu eich newidiadau gan ddefnyddio un o'r ddau opsiwn hyn:
 
     i. Cliciwch yr eicon `Refresh` (![](figs/RefreshView.png){width=3%}) yn y ffenestr Print Layout
     ii. Cliciwch yr eicon `Update Map Preview` (![](figs/RefreshView.png){width=3%}) o dan `Item Properties` yn ffenestr Map Canvas 
@@ -120,7 +120,7 @@ Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. 
     ii. Llusgwch a gollwngwch ar y map i'w osod (gallwch ei symud nes ymlaen)
     iii. Dewiswch yr allwedd o'r panel `Items`
     iv. Cliciwch y tab `Item Properties`
-    v. Dad-diciwch `Auto update` i alluogi addasiadau i'r allwedd
+    v. O dan `Legend Items`, dewiswch `Manual` o'r gwymplen i alluogi addasiadau i'r chwedl
     vi. Arbrofwch gyda'r eiconau bar offer yr allwedd (![](figs/LegendMenu.png){width=25%}) i wella'r allwedd
     vii. Addaswch briodweddau'r allwedd, yn enwedig `Arrangement`, `Fonts and Text Formatting`, `Columns`, `Symbol`, `Spacing`, `Frame`, a `Background`
 

@@ -27,11 +27,11 @@ To create functionally complete maps in QGIS for print or digital output. You wi
 
 (@) Change the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption:
 
-    i. Right‑click on the blank print layout
+    i. Right‑click on the page
     ii. Click `Page Properties...`
-    iii. Change `Size` to `Custom`
-    iv. Reduce the map `Height` (e.g. to `270`)
-    v. Change `Orientation` to `Portrait`
+    iii. Change `Orientation` to `Portrait`
+    iv. Change `Size` to `Custom`
+    v. Reduce the map `Height` (e.g. to `270`)
 
 ## Adding and adjusting a map item {#sec-mapitem}
 
@@ -53,11 +53,11 @@ To create functionally complete maps in QGIS for print or digital output. You wi
 
 (@) Once you're satisfied with the scaling, framing, and position, freeze the view in place by checking the box under the lock icon (![](figs/LockCheck.png){width=3%}) for `Map 1` in the `Items` panel
 
-(@) From the Map Canvas window, adjust layer styles:
+(@) From the Map Canvas window (i.e. where your layers are stored), adjust layer styles:
 
     i. Choose colours, border widths, and fonts that emphasise Wales and the difference between the outline of Wales (physical coast) and Principal Areas boundaries (non‑physical political construct)
 
-(@) Update the Print Layout to reflect your changes using one of these two options:
+(@) Update the Print Layout (i.e. where you're constructing your map) to reflect your changes using one of these two options:
 
     i. Click the `Refresh` icon (![](figs/RefreshView.png){width=3%}) in the Print Layout window
     ii. Click the `Update Map Preview` icon (![](figs/RefreshView.png){width=3%}) under `Item Properties` in the Map Canvas window
@@ -120,7 +120,7 @@ To create functionally complete maps in QGIS for print or digital output. You wi
     ii. Drag and drop on the map to place it (you can move it later)
     iii. Select the legend from the `Items` panel
     iv. Click the `Item Properties` tab
-    v. Uncheck `Auto update` to enable modifications to the legend 
+    v. Under `Legend Items`, select `Manual` from the drop-down menu to enable modifications to the legend
     vi. Experiment with the legend toolbar icons (![](figs/LegendMenu.png){width=25%}) to improve the legend
     vii. Adjust the legend's properties, notably `Arrangement`, `Fonts and Text Formatting`, `Columns`, `Symbol`, `Spacing`, `Frame`, and `Background`
 
