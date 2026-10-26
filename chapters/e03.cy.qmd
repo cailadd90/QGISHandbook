@@ -14,7 +14,7 @@ I archwilio dosbarthiad pwyntiau cod post yng Nghymru, archwilio dwysedd pobloga
 
 (@) Lansiwch QGIS a chreuwch prosiect newydd
 
-(@) Ychwanegwch yr haen `Wales_Principal_Areas.gpkg` at eich prosiect
+(@) Ychwanegwch yr haen `Wales_Principal_Areas.gpkg` at eich prosiect (yn y ffolder `UK_Boundaries`)
 
 (@) Ychwanegwch yr haen `Wales_headcounts_at_postcodes_2021.gpkg` at eich prosiect. Mae'r set ddata hon yn cynnwys y nifer o dai a phobl sydd wedi'u cofrestru ym mhob cod post (cymerwyd o’r Cyfrifiad 2021), ynghyd â chyfesurynnau o OS OpenData
 
@@ -68,8 +68,6 @@ exams2forms("E03_Q2.cy.Rmd", edir = "exercises")
 library(exams2forms)
 exams2forms("E03_Q3.cy.Rmd", edir = "exercises")
 ```
-
-(@) Gobeithio eich bod wedi defnyddio `Wales_headcounts_at_postcodes_2011.gpkg` i ateb yr ail gwestiwn! Os felly, cliciwch ar y dde ar haen cyfrif `2011` a chliciwch `Remove Layer...`. Mae'n arfer da gwaredu haenau ar ôl i chi orffen gyda nhw, er mwyn osgoi i'ch prosiect fynd yn rhy orlawn
 
 ## Ystadegau yn ôl lleoliad {#sec-selectlocation}
 
@@ -162,7 +160,7 @@ Mae'n gyffredin yn QGIS i greu haenau dros dro, i wirio eu bod yn arddangos fel 
     i. O'r panel `Layers`, dde-gliciwch ar `temp1` 
     ii. Cliciwch `Export` → `Save Features As...`
     iii. Gosodwch `Format` i `GeoPackage`
-    iv. Dewiswch leoliad addas i gadw'r geopackage
+    iv. Dewiswch leoliad addas i gadw'r geopackage (cofiwch wneud hyn gan ddefnyddio'r eicon `Browse` (![](figs/Browse.png){width=3%}))
     v. Gosodwch 'Layer name' fel rhywbeth synhwyrol, e.e. yr un fath â'r enw ffeil
     vi. Gosodwch `CRS` i `EPSG:27700`
     vii. O dan `Select fields to export and their export options`, gallwch benderfynu pa wybodaeth ddylai ymddangos yn y attributes table. Cadwch bethau'n daclus trwy gynnwys enw'r siop a'r cod post yn unig

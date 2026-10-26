@@ -14,7 +14,7 @@ To examine the distribution of postcode reference points within Wales, visualise
 
 (@) Launch QGIS and create a new project
 
-(@) Add the `Wales_Principal_Areas.gpkg` layer to your project
+(@) Add the `Wales_Principal_Areas.gpkg` layer to your project (in the `UK_Boundaries` folder)
 
 (@) Add the `Wales_headcounts_at_postcodes_2021.gpkg` layer to your project. This dataset contains the number of households and people registered at each postcode (taken from the 2021 Census), combined with coordinates from OS OpenData
 
@@ -68,8 +68,6 @@ exams2forms("E03_Q2.Rmd", edir = "exercises")
 library(exams2forms)
 exams2forms("E03_Q3.Rmd", edir = "exercises")
 ```
-
-(@) Hopefully you used `Wales_headcounts_at_postcodes_2011.gpkg` to answer the second question! If so, right-click on the `2011` census headcount layer and click `Remove Layer...`. It's good practice to remove layers once you're done with them, to avoid your project becoming over-cluttered
 
 ## Statistics by location {#sec-selectlocation}
 
@@ -162,7 +160,7 @@ It's common in QGIS to create temporary layers, to check they're displaying as i
     i. From the `Layers` panel, right-click on `temp1` 
     ii. Click `Export` → `Save Features As...`
     iii. Set `Format` to `GeoPackage`
-    iv. Select a suitable location to save the geopackage 
+    iv. Select a suitable location to save the geopackage (remember to do this using the `Browse` icon (![](figs/Browse.png){width=3%}))
     v. Set 'Layer name' as something sensible, e.g. the same as the file name
     vi. Set `CRS` to `EPSG:27700`
     vii. Under `Select fields to export and their export options`, you can decide what information should appear in the attribute table. Keep things tidy by only including the store name and postcode
