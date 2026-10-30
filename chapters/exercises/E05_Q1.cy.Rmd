@@ -1,0 +1,22 @@
+Question
+========
+Yn ôl data SRTM, beth yw uchder Yr Wyddfa (y mynydd uchaf yn Eryri)? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER1##
+
+Yn ôl data SRTM, beth yw uchder Pen y Fan (y mynydd uchaf yn y Bannau Brycheiniog)? *(peidiwch â defnyddio atalnodau)*
+
+##ANSWER2##
+
+Solution
+========
+- Uchder Yr Wyddfa oedd 1,063.
+- Uchder Pen y Fan oedd 876.
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num
+exsolution: 1063|876
+extol: 30|30
+exname: E05_Q1

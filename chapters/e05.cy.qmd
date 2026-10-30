@@ -1,78 +1,196 @@
-# Uchder, llethr, a chyflymder gwynt {#sec-e05}
+# Uchder, llethr, a chyflymder y gwynt {#sec-e05}
 
-> **Dates of practical:** 6th and 13th November 2025
+> **Dyddiad yr ymarfer:** 6ed a 13eg Tachwedd 2026
 
-Digital Elevation Models (DEMs) describe land surface height in a grid and are a special case of continuous geospatial data, widely available as raster datasets at various spatial resolutions. GIS provides tools to handle DEMs.
-
-You will find data for this exercise on the **L:** drive in the usual place. Read alongside **GIS_guide_to_practical_exercises**.
+Mae uchder yn ffactor allweddol sy'n pennu llawer o brosesau daearyddol. Mae uchder y tir yn pennu a yw'r arfordir uwchlaw neu islaw lefel y môr. Mae llethrau mynyddoedd a dyffrynnoedd yn pennu llif dŵr a microhinsoddau. Yn aml, mae biomau wedi'u cyfyngu i uchderau penodol. Mae Digital Elevation Models (DEMs) yn disgrifio uchder wyneb tir mewn grid, ac maent yn achos arbennig o ddata geo-ofodol parhaus sydd ar gael yn eang fel setiau data raster ar wahanol benderfyniadau gofodol. Mae gan QGIS sawl offeryn i archwilio a thrin DEMs, sy'n angenrheidiol ar gyfer y prosiect fferm wynt.
 
 ::: {.callout-note}
-## Learning aims
+## Amcanion dysgu
 
-Visualise DEMs and wind speed data; subset, classify and vectorize; create slope and aspect images. These steps are vital for the wind farm Project.
+I ddelweddu DEMs a data cyflymder gwynt, is-rannu, dosbarthu a fectoreiddio rasterau, a chreu rasterau llethr ac agwedd newydd o DEMs. Mae'r camau hyn yn angenrheidiol ar gyfer Map 3.
 :::
 
-## <input type="checkbox"> Investigating the topography of Wales
+## Ychwanegu rasterau {#sec-addrast}
 
-(@) Open the raster layer `SRTM_Wales_DEM_25m.tif` (from `Wales_DSM`). This DEM is derived from Space Shuttle data (2000) at 25 m resolution.
+(@) Lansiwch QGIS a chreuwch prosiect newydd
 
-(@) In **Layer Properties**, experiment with **Singleband pseudocolor**. Adjust colour ramps, Min/Max, and mode/classes.
+(@) O'r ffolder `Wales_DEM`, ychwanegwch yr haen `SRTM_Wales_DEM_25m.tif` at eich prosiect. Mae'r DEM hwn yn deillio o'r [Shuttle Radar Topography Mission](https://www.earthdata.nasa.gov/data/instruments/srtm){target='_blank'}, a sganiodd bron i 80% o arwynebau tir y Ddaear yn 2000 i gynhyrchu DEM ar gydraniad o 25 m. Chware teg!
 
-(@) Under **Color ramp**, **Create new color ramp → cpt‑city**. Explore topography styles and experiment with Min/Max, mode (continuous/equal interval), and classes.
+(@) O symboleg yr haen (de-gliciwch → `Properties...` → `Symbology`), arbrofwch gyda'r math rendro `Singleband pseudocolor` (gweler @sec-rasterdata):
 
-(@) Install the **Value Tool** plugin and enable it (View → Panels → Value Tool Panel). Use it to interrogate raster values and find the heights of Snowdon and Pen y Fan. Validate heights using external sources.
+    i. Cliciwch y cwymplen i'r dde o'r `Color ramp`
+    ii. Cliciwch `Create New Color Ramp...`
+    iii. O dan `Please select color ramp type:`, dewiswch `Catalog: cpt ‑ city` → `OK`. Mae'r 'ddinas' hon o Dablau Palet Lliw (CPTs) yn ystorfa o dablau lliw a gynlluniwyd i gyflwyno data raster yn greadigol
+    iv. Rhowch gynnig ar rampiau lliw amrywiol o dan y thema `Topography`, a gweld pa un sydd orau gennych
 
-(@) Open `Wales_operational_wind farms` and observe that wind farms are often on coasts or high ground.
+(@) Agorwch symboleg yr haen eto ac arbrofwch gydag addasu:
 
-## <input type="checkbox"> Examining the topography of your map tile
+    i. Y `Color ramp`
+    ii. Y gwerthoedd `Min` ac `Max` i'w dangos
+    iii. Y `Mode` dosbarthu (`Continuous`, `Equal Interval`, a `Quantile`)
+    iv. Nifer y `Classes`
 
-(@) Subset the DEM to your map tile via **Raster → Extraction → Clip Raster by Mask Layer**. Input: Wales DEM; Mask layer: your map tile. Save with a sensible name on OneDrive.
+## Archwilio rasterau
 
-(@) Explore your subset with suitable palettes and ranges. Identify the highest point and, if possible, its name.
+(@) Gosodwch yr ategyn `Value Tool` (gweler @sec-geocoding). Mae'r offeryn hwn yn caniatáu ichi holi gwerthoedd data wrth i chi basio'r cyrchwr dros rasters
 
-(@) Open **View → New 3D Map View**. Configure: Terrain type = **DEM (Raster Layer)**; Elevation = your clipped DEM; Vertical scale = 4; Tile resolution = 64 px. Explore in 3D and experiment with settings. Add other layers if useful.
+(@) Cliciwch yr eicon `Value Tool` (![](figs/ValueTool.png){width=3%})
 
-## <input type="checkbox"> Slope, aspect and hillshade
+(@) Defnyddiwch yr `Value Tool` i ateb y canlynol:
 
-(@) Create a slope image (**Raster → Analysis → Slope**). Ensure slope is in **degrees**. Identify areas of highest slope and explain why.
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E05_Q1.cy.Rmd", edir = "exercises")
+```
 
-(@) Create an aspect image (**Raster → Analysis → Aspect**). Because 1° and 359° are near‑equivalents, choose a cyclic CPT (e.g., wave from cpt‑city → QGIS).
+(@) Ychwanegwch yr haen `Wales_operational_windfarms.gpkg` at eich prosiect
 
-(@) Create a hillshade (**Raster → Analysis → Hillshade**). Combine with your DEM by placing hillshade above the DEM with ~50% opacity and a grayscale to enhance relief.
+(@) Ystyriwch ar leoliad y ffermydd gwynt hyn. Sut mae eu lleoliadau'n cydberthyn ag uchder?
 
-## <input type="checkbox"> Classifying raster data
+## Clipio rasterau {#sec-cliprast}
 
-(@) Open **Raster Calculator** and classify slopes > 6° as unsuitable. For example, if your slope layer is `SS68_slope.tif`, use an expression like `"SS68_slope@1" > 6` with **Select Layer Extent** and output `SS68_slope_classified`. Pixels with value 1 are unsuitable (slope > 6°), 0 otherwise.
+(@) Ychwanegwch deilsen eich map at eich prosiect. Fel gydag haenau fector, mae'n aml yn llawer haws prosesu dim ond y rhan o DEM Cymru sydd o fewn teilsen eich map
 
-(@) Adjust transparency of the classified slope image and inspect unsuitable areas.
+(@) Clipiwch y DEM i deilsen eich map:
 
-## <input type="checkbox"> Converting to vector polygons
+    i. Cliciwch `Raster` → `Extraction` → `Clip Raster by Mask Layer...`
+    ii. Gosodwch `Input layer` i `SRTM_Wales_DEM_25m`
+    iii. Gosodwch `Mask layer` i deilsen eich map
+    iv. Cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%}) wrth ymyl `Clipped (mask)` i gadw'r raster wedi'i dopio i'ch OneDrive
+    v. Cliciwch `Run` → `Close`
+    vi. Diffoddwch welededd y raster gwreiddiol (heb ei docio)
+    vii. Ydych chi wedi cadw eich prosiect yn ddiweddar?
 
-(@) Vectorise the classified raster (**Raster → Conversion → Polygonize**). Input: your classified slope layer (slope < 6° suitable).
+(@) Archwiliwch DEM eich teilen map gan ddefnyddio palet lliw addas ac ystodau `Min / max` gwahanol
 
-(@) Under **Layer Properties**, set **Categorized** symbology on field `DN` to distinguish suitable (0) and unsuitable (1) polygons.
+(@) Nodwch y pwynt uchaf yn eich DEM wedi'i clipio ac, os yn bosibl, ei enw trwy chwilio ar Google
 
-(@) Use **Select by Expression** (DN = 1) to select unsuitable polygons and **Export → Save Selected Features As** to create a constraint layer.
+## Gweld mapiau mewn 3D
 
-## <input type="checkbox"> Wind speeds
+(@) Gwelwch y DEM wedi'i clipio mewn 3D:
 
-(@) Open raster `Wales_wind-speed_50m.tif` from `Wales_mean_windspeed` and choose an appropriate palette (see the `description_and_data_source.txt` file for details).
+    i. Cliciwch `View` → `3D Map Views` → `New 3D Map View`
+    ii. Cliciwch yr eicon `Configure...` (![](figs/Configure.png){width=3%})
+    iii. Cliciwch `Terrain`
+    iv. Gosodwch `Type` i `DEM (Raster Layer)`
+    v. Gosodwch `Elevation` i'ch DEM wedi'i clipio
+    vi. Gosodwch `Vertical scale` i `4` (mae gwerthoedd uwch yn gorliwio neu'n 'ymestyn' gwerthoedd DEM)
+    vii. Gosodwch `Tile resolution` i `64 px`
+    viii. Cliciwch `OK`
+    ix. Defnyddiwch y llygoden (drwy sgrolio a dal y botwm sgrolio i lawr) i archwilio'r map 3D
+    x. Arbrofwch gyda gwahanol werthoedd o `Vertical scale` a `Tile resolution` i ddeall sut mae'r rhain yn gweithio
+    xi. Ychwanegwch haenau eraill at eich Map Canvas i'w gweld wedi'u plotio mewn 3D
 
-(@) Clip the wind speed raster to your tile and visualise with a suitable palette.
+## Creu raster llethr
 
-## <input type="checkbox"> Putting it all together
+(@) Mae llethr (graddiant wyneb y tir) yn briodwedd sylfaenol o dopograffeg wyneb y tir, a gall ddarparu gwybodaeth werthfawr am botensial erydiad, llif dŵr, potensial adeiladu ac ati. Creuwch raster llethr o DEM:
 
-(@) Reopen your constraint layers from Exercise 4 alongside your polygonised slope constraint. With the wind speed layer beneath constraints, explore where development may be permitted and optimal (high wind, large areas).
+    i. Cliciwch `Raster` → `Analysis` → `Slope...`
+    ii. Gosodwch `Input layer` fel eich DEM wedi'i clipio
+    iii. Cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%}) wrth ymyl `Slope` i gadw raster y llethr yn rhywle synhwyrol
+    iv. Cliciwch `Run` → `Close`
+    v. Defnyddiwch allwedd yr haen i nodi'r ardaloedd mwyaf serth. Pam maen nhw yno?
 
-(@) Design **Map 3** of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location and justify why.
+## Creu raster agwedd
 
-::: {.callout-tip}
-# Learning outcomes
+(@) Mae agwedd (cyfeiriad y cwmpawd y mae'r graddiant yn wynebu tuag ato) yn briodwedd sylfaenol arall o dopograffeg tir, gan ddarparu gwybodaeth am botensial insolation, o ble mae nodweddion penodol yn weladwy, amlygiad i wynt amlwg ac ati. Creuwch raster agwedd o DEM:
 
-By the end of this exercise you should:
+    i. Cliciwch `Raster` → `Analysis` → `Aspect...`
+    ii. Gosodwch `Input layer` fel eich DEM wedi'i clipio
+    iii. Cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%}) wrth ymyl `Aspect` i gadw'r raster agwedd yn rhywle synhwyrol
+    iv. Cliciwch `Run` → `Close`
 
-1. Visualise, clip, and extract values from raster data.
-2. Create DEM products (slope, aspect, hillshade).
-3. Classify a raster layer and create polygons from the classification.
-4. Recognise wind speed variation and identify the best wind farm location.
+(@) Mae agwedd o 1° (ychydig i'r Dwyrain o'r Gogledd) yn agos iawn o ran ystyr i agwedd o 359° (ychydig i'r Gorllewin o'r Gogledd), ond maent ar bennau gyferbyniol yr ystod gwerthoedd. Byddai tabl palet lliw gyda'r un lliw ar gyfer dau ben yr ystod gwerthoedd yn gwneud dehongliad yn haws:
+
+    i. Agorwch symboleg yr haen
+    ii. Llywiwch i'r `cpt ‑ city` Tablau Palet Lliw (CPTs) (gweler @sec-addrast)
+    iii. Cliciwch y tab `All by author`
+    iv. Yn y ffenestr `Name`, cliciwch ar `grass`
+    v. Yn y ffenestr `GRASS colour ramps`, cliciwch `aspect`
+    vi. Cliciwch `OK` → `OK`
+
+## Creu raster hillshade
+
+(@) Mae hillshade yn efelychu effaith golau yn disgyn ar arwyneb trwy gyfuno llethr, agwedd, a chyfeiriad goleuo'r haul. Defnyddir y dull hwn yn gyffredin i ddelweddu topograffeg mewn mapiau a ffigurau. Creuwch raster hillshade o DEM:
+
+    i. Cliciwch `Raster` → `Analysis` → `Hillshade...`
+    ii. Gosodwch `Input layer` fel eich DEM wedi'i clipio
+    iii. Cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%}) wrth ymyl `Hillshade` i gadw'r raster agwedd yn rhywle synhwyrol
+    iv. Cliciwch `Run` → `Close`
+    v. O'r panel `Layers`, diffoddwch welededd haenau neu trefnwch haenau fel bod eich haen hillshade uwchben eich haen DEM
+    vi. Newidwch tryloywder y cysgod bryn i `50%`
+    vii. Newidiwch symboleg eich DEM i rywbeth sy'n reddfol ar gyfer uchder tir (e.e. `Greens`). Dylai'r effaith fod yn eithaf dymunol!
+
+(@) Creuwch rasterau hillshade newydd, ond y tro hwn addaswch y canlynol i wella'r effaith ar gyfer eich DEM wedi'i clipio penodol:
+
+    i. `Z factor` (dim mwy na 5, mwy na thebyg)
+    ii. `Azimuth of the light`
+    iii. `Altitude of the light`
+
+## Dosbarthu data raster
+
+(@) Defnyddiwch y raster calculator i gyflawni gweithrediadau cell wrth gell, er mwyn dod o hyd i rannau o'r haen raster sydd o fewn ystod benodol o werthoedd. Un o'r cyfyngiadau ar gyfer adeiladu fferm wynt yw na ddylai llethr wyneb y tir fod yn fwy na 6 gradd. Mae hyn oherwydd bod llethrau mwy serth yn llai sefydlog ac fel arfer nid ydynt yn hyfyw i adeiladu arnynt. Adeiladwch fynegiant yn y gyfrifiannell raster fel a ganlyn:
+
+    i. Cliciwch `Raster` → `Raster Calculator...` 
+    ii. O dan `Raster Bands`, dwbl-gliciwch ar enw'r raster llethr a greoch yn gynharach
+    iii. Yn y ffenestr `Raster Calculation Expression`, ychwanegwch `<6`
+    iv. Cliciwch yr eicon `Browse` (![](figs/Browse.png){width=3%}) wrth ymyl `Output layer` i gadw'r raster llethr dosbarthedig yn rhywle synhwyrol
+    v. Cliciwch `OK`
+    
+(@) Mae gan y raster newydd ddau werth; `0` (du) ac `1` (gwyn). O ystyried eich bod wedi cyfarwyddo'r gyfrifiannell raster i nodi ardaloedd o'r raster sy'n llai na 6°, beth ydych chi'n meddwl mae'r lliwiau yma'n cynrychioli? Atebwch y canlynol:
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E05_Q2.cy.Rmd", edir = "exercises")
+```
+
+## Trosi i bolygonau fector
+
+(@) Gellir creu polygonau fector o haenau raster er mwyn eu cyfuno â chyfyngiadau fector eraill fel y rhai a grëwyd yn [pennod 4](#sec-e04). Trosiwch y raster dosbarthu llethrau yn bolygonau fector:
+
+    i. Cliciwch `Raster` → `Conversion` → `Polygonize (Raster to Vector)...`
+    ii. Gosodwch `Input layer` fel eich haen dosbarthu llethrau 
+    iii. Gosodwch `Name of the field to create` fel `Addas`
+    iv. Cliciwch `Run` → `Close`
+
+(@) Mae polygonau bellach yn dynodi'r ardaloedd sy'n addas (llethr < 6°) neu'n anaddas (llethr > 6°) ar gyfer adeiladu arnynt. Agorwch y attribute table i archwilio pa un yw pa un. Meddyliwch am ddeuaidd; o dan y golofn 'Addas', mae 1au yn cynrychioli 'ydy', 0au yn cynrychioli 'nac ydy'
+
+(@) Delweddwch ardaloedd addas ac anaddas ar gyfer adeiladu yn y symboleg (gweler @sec-catvec)
+
+(@) Dewiswch y polygonau 'anaddas' (Addas = 0) gan ddefnyddio `Select features using an expression` (gweler @sec-selexpress)
+
+(@) Allforiwch y polygonau a ddewiswyd (cofiwch ddefnyddio'r opsiwn `Save Selected Features As...`). Enwch a storiwch yn synhwyrol
+
+## Paratoi ar gyfer Map 3
+
+(@) O'r ffolder `Wales_mean_windspeed`, ychwanegwch yr haen `Wales_wind-speed_50m.tif` at eich prosiect
+
+(@) Darllenwch dros y ffeil `description_and_data_source.txt` yn y ffolder `Wales_mean_windspeed` am fanylion am y data (Nodyn: mae gan bob ffeil GIS ffeil `description_and_data_source.txt` gysylltiedig)
+
+(@) Clipiwch raster cyflymder y gwynt i'ch teilsen a'i gadw yn rhywle synhwyrol (gweler @sec-cliprast)
+
+(@) Delweddwch y ddata gan ddefnyddio palet lliw addas
+
+(@) Ychwanegwch yr haenau cyfyngu a greoch yn Ymarfer 04 (gweler @sec-e04)
+
+(@) Gyda'r haen cyflymder gwynt o dan gyfyngiadau, archwiliwch ble y gellir caniatáu datblygiad ac sydd yn optimaidd. Gallwch archwilio nid yn unig lle y gallai fod yn ganiataol adeiladu fferm wynt, ond hefyd lle mae'r darnau tir mwyaf gwyntog (sy'n cynnig y cynhyrchu pŵer gorau) a'r rhai mwyaf o ran maint (sy'n gallu cynnwys y nifer mwyaf posibl o dyrbinau) wedi'u lleoli o fewn ardal eich teilsen fap
+
+(@) Dyluniwch Fap 3 i ddangos yn glir y lleoliad gorau ar gyfer fferm wynt (heb gyfyngiadau), a defnyddiwch yr offer amryw (e.e. raster calculator) i echdynnu gwybodaeth a fydd yn eich helpu i gyfiawnhau pam y dewiswyd yr ardal hon (e.e. drwy ddarparu gwybodaeth ychwanegol yn eich capsiwn)
+
+::: {.callout-note}
+## Canlyniadau dysgu
+
+Erbyn diwedd yr ymarfer hwn dylech chi allu:
+
+1. Delweddu data drychiad raster gan ddefnyddio rampiau ffug-liw, paletau cpt-city, a graddio min/max, a holi gwerthoedd celloedd yn uniongyrchol gyda'r Offeryn Gwerth.
+2. Clipio haenau raster i ardal o ddiddordeb ac archwiliwch yr arwyneb sy'n deillio o hyn mewn tri dimensiwn.
+3. Deilli0 rasterau llethr, agwedd, a chysgod bryniau o DEM, ac esboniwch beth mae pob un yn ei ddatgelu am dopograffeg arwyneb a phroses geoffisegol.
+4. Dosbarthu ddata raster gyda'r gyfrifiannell raster i nodi ardaloedd sy'n bodloni trothwy diffiniedig, a throsi'r canlyniad yn bolygonau fector i'w cyfuno â haenau cyfyngu eraill.
+5. Gwerthfawrogi sut mae uchder, llethr, a chyflymder y gwynt yn rhyngweithio i bennu addasrwydd safle, gan integreiddio cyfyngiadau sy'n deillio o raster i benderfyniad datblygu cyfiawn.
 :::

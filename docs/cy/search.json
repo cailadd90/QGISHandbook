@@ -174,7 +174,7 @@
     "href": "chapters/e01.cy.html#sec-attribut",
     "title": "1  Dechrau arni",
     "section": "1.5 Archwilio’r Attribute Table",
-    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nYnys MônSkyeLewis a HarrisYnys EnlliIslay\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
+    "text": "1.5 Archwilio’r Attribute Table\n\nO’r panel Layers, de-gliciwch British_Isles_land_polygons a chliciwch Open Attribute Table. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o’r tabl yn cyfateb i un nodwedd (e.e. polygon) o’r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o’r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: fid (dynodwr maes) ac Area\nCliciwch yr eicon Dock Attribute Table () fel y gallwch weld y Map Canvas a’r Attribute Table ar y sgrin ar unwaith.\nI ddeall sut mae’r tabl priodoleddau’n cyfateb â’r haen fector:\n\nTrefnwch y tabl priodoleddau yn ôl arwynebedd pob polygon drwy glicio ar deitl y golofn Area. Bydd cliciau ychwanegol yn trefnu’r gwerthoedd i fod yn esgynnol neu ddisgynnol.\nCliciwch ar rif rhes i ddewis y polygon cyfatebol. Mae’r polygon a ddewiswyd yn y Map Canvas bellach wedi’i amlygu’n felyn.\nCliciwch yr eicon Zoom map to the selected rows yn y gornel dde uchaf () i chwyddo i’r polygon a ddewiswyd yn y Map Canvas\n\n\n\n\n\n\n\n\nAiladroddwch y cam uchod i archwilio’r deg ynys fwyaf Ynysoedd Prydain\n\n\n\nAllwch chi enwi seithfed ynys fwyaf Ynysoedd Prydain?\n\nYnys EnlliYnys MônIslaySkyeLewis a Harris\n\n\n\nYnys Môn yw seithfed ynys fwyaf Ynysoedd Prydain.\n\n\n\nGallwch hefyd ddewis nodweddion yn y Map Canvas i nodi eu priodoleddau cyfatebol yn y tabl priodoleddau:\n\nCliciwch yr eicon Select Features ()\nDewiswch (amlygwch mewn melyn) Ynys Wyth\nYn y tabl priodoleddau, cliciwch yr eicon Move selection to top () i symud y llinell a ddewiswyd o’r tabl i’r brig\nDarllenwch arwynebedd y nodwedd - sydd mewn metrau sgwâr - a’i drosi i gilometrau sgwâr (h.y. rhannwch â 1,000,000)\n\n\n\n\nBeth yw union arwynebedd Ynys Wyth (mewn cilometrau sgwâr)?\n\n\n\nUnion arwynebedd Ynys Wyth oedd 382 cilomedr sgwâr.\n\n\n\nCliciwch yr eicon Deselect feature () i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Dechrau arni</span>"
     ]
@@ -492,81 +492,111 @@
   {
     "objectID": "chapters/e05.cy.html",
     "href": "chapters/e05.cy.html",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
     "section": "",
-    "text": "5.1  Investigating the topography of Wales\nDigital Elevation Models (DEMs) describe land surface height in a grid and are a special case of continuous geospatial data, widely available as raster datasets at various spatial resolutions. GIS provides tools to handle DEMs.\nYou will find data for this exercise on the L: drive in the usual place. Read alongside GIS_guide_to_practical_exercises.",
+    "text": "5.1 Ychwanegu rasterau\nMae uchder yn ffactor allweddol sy’n pennu llawer o brosesau daearyddol. Mae uchder y tir yn pennu a yw’r arfordir uwchlaw neu islaw lefel y môr. Mae llethrau mynyddoedd a dyffrynnoedd yn pennu llif dŵr a microhinsoddau. Yn aml, mae biomau wedi’u cyfyngu i uchderau penodol. Mae Digital Elevation Models (DEMs) yn disgrifio uchder wyneb tir mewn grid, ac maent yn achos arbennig o ddata geo-ofodol parhaus sydd ar gael yn eang fel setiau data raster ar wahanol benderfyniadau gofodol. Mae gan QGIS sawl offeryn i archwilio a thrin DEMs, sy’n angenrheidiol ar gyfer y prosiect fferm wynt.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {
-    "objectID": "chapters/e05.cy.html#investigating-the-topography-of-wales",
-    "href": "chapters/e05.cy.html#investigating-the-topography-of-wales",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
+    "objectID": "chapters/e05.cy.html#sec-addrast",
+    "href": "chapters/e05.cy.html#sec-addrast",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
     "section": "",
-    "text": "Open the raster layer SRTM_Wales_DEM_25m.tif (from Wales_DSM). This DEM is derived from Space Shuttle data (2000) at 25 m resolution.\nIn Layer Properties, experiment with Singleband pseudocolor. Adjust colour ramps, Min/Max, and mode/classes.\nUnder Color ramp, Create new color ramp → cpt‑city. Explore topography styles and experiment with Min/Max, mode (continuous/equal interval), and classes.\nInstall the Value Tool plugin and enable it (View → Panels → Value Tool Panel). Use it to interrogate raster values and find the heights of Snowdon and Pen y Fan. Validate heights using external sources.\nOpen Wales_operational_wind farms and observe that wind farms are often on coasts or high ground.",
+    "text": "Lansiwch QGIS a chreuwch prosiect newydd\nO’r ffolder Wales_DEM, ychwanegwch yr haen SRTM_Wales_DEM_25m.tif at eich prosiect. Mae’r DEM hwn yn deillio o’r Shuttle Radar Topography Mission, a sganiodd bron i 80% o arwynebau tir y Ddaear yn 2000 i gynhyrchu DEM ar gydraniad o 25 m. Chware teg!\nO symboleg yr haen (de-gliciwch → Properties... → Symbology), arbrofwch gyda’r math rendro Singleband pseudocolor (gweler Section 2.5):\n\nCliciwch y cwymplen i’r dde o’r Color ramp\nCliciwch Create New Color Ramp...\nO dan Please select color ramp type:, dewiswch Catalog: cpt ‑ city → OK. Mae’r ‘ddinas’ hon o Dablau Palet Lliw (CPTs) yn ystorfa o dablau lliw a gynlluniwyd i gyflwyno data raster yn greadigol\nRhowch gynnig ar rampiau lliw amrywiol o dan y thema Topography, a gweld pa un sydd orau gennych\n\nAgorwch symboleg yr haen eto ac arbrofwch gydag addasu:\n\nY Color ramp\nY gwerthoedd Min ac Max i’w dangos\nY Mode dosbarthu (Continuous, Equal Interval, a Quantile)\nNifer y Classes",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {
-    "objectID": "chapters/e05.cy.html#examining-the-topography-of-your-map-tile",
-    "href": "chapters/e05.cy.html#examining-the-topography-of-your-map-tile",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
-    "section": "5.2  Examining the topography of your map tile",
-    "text": "5.2  Examining the topography of your map tile\n\nSubset the DEM to your map tile via Raster → Extraction → Clip Raster by Mask Layer. Input: Wales DEM; Mask layer: your map tile. Save with a sensible name on OneDrive.\nExplore your subset with suitable palettes and ranges. Identify the highest point and, if possible, its name.\nOpen View → New 3D Map View. Configure: Terrain type = DEM (Raster Layer); Elevation = your clipped DEM; Vertical scale = 4; Tile resolution = 64 px. Explore in 3D and experiment with settings. Add other layers if useful.",
+    "objectID": "chapters/e05.cy.html#archwilio-rasterau",
+    "href": "chapters/e05.cy.html#archwilio-rasterau",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.2 Archwilio rasterau",
+    "text": "5.2 Archwilio rasterau\n\nGosodwch yr ategyn Value Tool (gweler ?sec-geocoding). Mae’r offeryn hwn yn caniatáu ichi holi gwerthoedd data wrth i chi basio’r cyrchwr dros rasters\nCliciwch yr eicon Value Tool ()\nDefnyddiwch yr Value Tool i ateb y canlynol:\n\n\n\nYn ôl data SRTM, beth yw uchder Yr Wyddfa (y mynydd uchaf yn Eryri)? (peidiwch â defnyddio atalnodau)\n\nYn ôl data SRTM, beth yw uchder Pen y Fan (y mynydd uchaf yn y Bannau Brycheiniog)? (peidiwch â defnyddio atalnodau)\n\n\n\n\nUchder Yr Wyddfa oedd 1,063.\nUchder Pen y Fan oedd 876.\n\n\n\n\nYchwanegwch yr haen Wales_operational_windfarms.gpkg at eich prosiect\nYstyriwch ar leoliad y ffermydd gwynt hyn. Sut mae eu lleoliadau’n cydberthyn ag uchder?",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {
-    "objectID": "chapters/e05.cy.html#slope-aspect-and-hillshade",
-    "href": "chapters/e05.cy.html#slope-aspect-and-hillshade",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
-    "section": "5.3  Slope, aspect and hillshade",
-    "text": "5.3  Slope, aspect and hillshade\n\nCreate a slope image (Raster → Analysis → Slope). Ensure slope is in degrees. Identify areas of highest slope and explain why.\nCreate an aspect image (Raster → Analysis → Aspect). Because 1° and 359° are near‑equivalents, choose a cyclic CPT (e.g., wave from cpt‑city → QGIS).\nCreate a hillshade (Raster → Analysis → Hillshade). Combine with your DEM by placing hillshade above the DEM with ~50% opacity and a grayscale to enhance relief.",
+    "objectID": "chapters/e05.cy.html#sec-cliprast",
+    "href": "chapters/e05.cy.html#sec-cliprast",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.3 Clipio rasterau",
+    "text": "5.3 Clipio rasterau\n\nYchwanegwch deilsen eich map at eich prosiect. Fel gydag haenau fector, mae’n aml yn llawer haws prosesu dim ond y rhan o DEM Cymru sydd o fewn teilsen eich map\nClipiwch y DEM i deilsen eich map:\n\nCliciwch Raster → Extraction → Clip Raster by Mask Layer...\nGosodwch Input layer i SRTM_Wales_DEM_25m\nGosodwch Mask layer i deilsen eich map\nCliciwch yr eicon Browse () wrth ymyl Clipped (mask) i gadw’r raster wedi’i dopio i’ch OneDrive\nCliciwch Run → Close\nDiffoddwch welededd y raster gwreiddiol (heb ei docio)\nYdych chi wedi cadw eich prosiect yn ddiweddar?\n\nArchwiliwch DEM eich teilen map gan ddefnyddio palet lliw addas ac ystodau Min / max gwahanol\nNodwch y pwynt uchaf yn eich DEM wedi’i clipio ac, os yn bosibl, ei enw trwy chwilio ar Google",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {
-    "objectID": "chapters/e05.cy.html#classifying-raster-data",
-    "href": "chapters/e05.cy.html#classifying-raster-data",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
-    "section": "5.4  Classifying raster data",
-    "text": "5.4  Classifying raster data\n\nOpen Raster Calculator and classify slopes &gt; 6° as unsuitable. For example, if your slope layer is SS68_slope.tif, use an expression like \"SS68_slope@1\" &gt; 6 with Select Layer Extent and output SS68_slope_classified. Pixels with value 1 are unsuitable (slope &gt; 6°), 0 otherwise.\nAdjust transparency of the classified slope image and inspect unsuitable areas.",
+    "objectID": "chapters/e05.cy.html#gweld-mapiau-mewn-3d",
+    "href": "chapters/e05.cy.html#gweld-mapiau-mewn-3d",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.4 Gweld mapiau mewn 3D",
+    "text": "5.4 Gweld mapiau mewn 3D\n\nGwelwch y DEM wedi’i clipio mewn 3D:\n\nCliciwch View → 3D Map Views → New 3D Map View\nCliciwch yr eicon Configure... ()\nCliciwch Terrain\nGosodwch Type i DEM (Raster Layer)\nGosodwch Elevation i’ch DEM wedi’i clipio\nGosodwch Vertical scale i 4 (mae gwerthoedd uwch yn gorliwio neu’n ‘ymestyn’ gwerthoedd DEM)\nGosodwch Tile resolution i 64 px\nCliciwch OK\nDefnyddiwch y llygoden (drwy sgrolio a dal y botwm sgrolio i lawr) i archwilio’r map 3D\nArbrofwch gyda gwahanol werthoedd o Vertical scale a Tile resolution i ddeall sut mae’r rhain yn gweithio\nYchwanegwch haenau eraill at eich Map Canvas i’w gweld wedi’u plotio mewn 3D",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {
-    "objectID": "chapters/e05.cy.html#converting-to-vector-polygons",
-    "href": "chapters/e05.cy.html#converting-to-vector-polygons",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
-    "section": "5.5  Converting to vector polygons",
-    "text": "5.5  Converting to vector polygons\n\nVectorise the classified raster (Raster → Conversion → Polygonize). Input: your classified slope layer (slope &lt; 6° suitable).\nUnder Layer Properties, set Categorized symbology on field DN to distinguish suitable (0) and unsuitable (1) polygons.\nUse Select by Expression (DN = 1) to select unsuitable polygons and Export → Save Selected Features As to create a constraint layer.",
+    "objectID": "chapters/e05.cy.html#creu-raster-llethr",
+    "href": "chapters/e05.cy.html#creu-raster-llethr",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.5 Creu raster llethr",
+    "text": "5.5 Creu raster llethr\n\nMae llethr (graddiant wyneb y tir) yn briodwedd sylfaenol o dopograffeg wyneb y tir, a gall ddarparu gwybodaeth werthfawr am botensial erydiad, llif dŵr, potensial adeiladu ac ati. Creuwch raster llethr o DEM:\n\nCliciwch Raster → Analysis → Slope...\nGosodwch Input layer fel eich DEM wedi’i clipio\nCliciwch yr eicon Browse () wrth ymyl Slope i gadw raster y llethr yn rhywle synhwyrol\nCliciwch Run → Close\nDefnyddiwch allwedd yr haen i nodi’r ardaloedd mwyaf serth. Pam maen nhw yno?",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {
-    "objectID": "chapters/e05.cy.html#wind-speeds",
-    "href": "chapters/e05.cy.html#wind-speeds",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
-    "section": "5.6  Wind speeds",
-    "text": "5.6  Wind speeds\n\nOpen raster Wales_wind-speed_50m.tif from Wales_mean_windspeed and choose an appropriate palette (see the description_and_data_source.txt file for details).\nClip the wind speed raster to your tile and visualise with a suitable palette.",
+    "objectID": "chapters/e05.cy.html#creu-raster-agwedd",
+    "href": "chapters/e05.cy.html#creu-raster-agwedd",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.6 Creu raster agwedd",
+    "text": "5.6 Creu raster agwedd\n\nMae agwedd (cyfeiriad y cwmpawd y mae’r graddiant yn wynebu tuag ato) yn briodwedd sylfaenol arall o dopograffeg tir, gan ddarparu gwybodaeth am botensial insolation, o ble mae nodweddion penodol yn weladwy, amlygiad i wynt amlwg ac ati. Creuwch raster agwedd o DEM:\n\nCliciwch Raster → Analysis → Aspect...\nGosodwch Input layer fel eich DEM wedi’i clipio\nCliciwch yr eicon Browse () wrth ymyl Aspect i gadw’r raster agwedd yn rhywle synhwyrol\nCliciwch Run → Close\n\nMae agwedd o 1° (ychydig i’r Dwyrain o’r Gogledd) yn agos iawn o ran ystyr i agwedd o 359° (ychydig i’r Gorllewin o’r Gogledd), ond maent ar bennau gyferbyniol yr ystod gwerthoedd. Byddai tabl palet lliw gyda’r un lliw ar gyfer dau ben yr ystod gwerthoedd yn gwneud dehongliad yn haws:\n\nAgorwch symboleg yr haen\nLlywiwch i’r cpt ‑ city Tablau Palet Lliw (CPTs) (gweler Section 5.1)\nCliciwch y tab All by author\nYn y ffenestr Name, cliciwch ar grass\nYn y ffenestr GRASS colour ramps, cliciwch aspect\nCliciwch OK → OK",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {
-    "objectID": "chapters/e05.cy.html#putting-it-all-together",
-    "href": "chapters/e05.cy.html#putting-it-all-together",
-    "title": "5  Uchder, llethr, a chyflymder gwynt",
-    "section": "5.7  Putting it all together",
-    "text": "5.7  Putting it all together\n\nReopen your constraint layers from Exercise 4 alongside your polygonised slope constraint. With the wind speed layer beneath constraints, explore where development may be permitted and optimal (high wind, large areas).\nDesign Map 3 of your wind farm Project to clearly show the best otherwise‑unconstrained wind farm location and justify why.\n\n\n\n\n\n\n\nTipLearning outcomes\n\n\n\nBy the end of this exercise you should:\n\nVisualise, clip, and extract values from raster data.\nCreate DEM products (slope, aspect, hillshade).\nClassify a raster layer and create polygons from the classification.\nRecognise wind speed variation and identify the best wind farm location.",
+    "objectID": "chapters/e05.cy.html#creu-raster-hillshade",
+    "href": "chapters/e05.cy.html#creu-raster-hillshade",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.7 Creu raster hillshade",
+    "text": "5.7 Creu raster hillshade\n\nMae hillshade yn efelychu effaith golau yn disgyn ar arwyneb trwy gyfuno llethr, agwedd, a chyfeiriad goleuo’r haul. Defnyddir y dull hwn yn gyffredin i ddelweddu topograffeg mewn mapiau a ffigurau. Creuwch raster hillshade o DEM:\n\nCliciwch Raster → Analysis → Hillshade...\nGosodwch Input layer fel eich DEM wedi’i clipio\nCliciwch yr eicon Browse () wrth ymyl Hillshade i gadw’r raster agwedd yn rhywle synhwyrol\nCliciwch Run → Close\nO’r panel Layers, diffoddwch welededd haenau neu trefnwch haenau fel bod eich haen hillshade uwchben eich haen DEM\nNewidwch tryloywder y cysgod bryn i 50%\nNewidiwch symboleg eich DEM i rywbeth sy’n reddfol ar gyfer uchder tir (e.e. Greens). Dylai’r effaith fod yn eithaf dymunol!\n\nCreuwch rasterau hillshade newydd, ond y tro hwn addaswch y canlynol i wella’r effaith ar gyfer eich DEM wedi’i clipio penodol:\n\nZ factor (dim mwy na 5, mwy na thebyg)\nAzimuth of the light\nAltitude of the light",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder gwynt</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#dosbarthu-data-raster",
+    "href": "chapters/e05.cy.html#dosbarthu-data-raster",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.8 Dosbarthu data raster",
+    "text": "5.8 Dosbarthu data raster\n\nDefnyddiwch y raster calculator i gyflawni gweithrediadau cell wrth gell, er mwyn dod o hyd i rannau o’r haen raster sydd o fewn ystod benodol o werthoedd. Un o’r cyfyngiadau ar gyfer adeiladu fferm wynt yw na ddylai llethr wyneb y tir fod yn fwy na 6 gradd. Mae hyn oherwydd bod llethrau mwy serth yn llai sefydlog ac fel arfer nid ydynt yn hyfyw i adeiladu arnynt. Adeiladwch fynegiant yn y gyfrifiannell raster fel a ganlyn:\n\nCliciwch Raster → Raster Calculator...\nO dan Raster Bands, dwbl-gliciwch ar enw’r raster llethr a greoch yn gynharach\nYn y ffenestr Raster Calculation Expression, ychwanegwch &lt;6\nCliciwch yr eicon Browse () wrth ymyl Output layer i gadw’r raster llethr dosbarthedig yn rhywle synhwyrol\nCliciwch OK\n\nMae gan y raster newydd ddau werth; 0 (du) ac 1 (gwyn). O ystyried eich bod wedi cyfarwyddo’r gyfrifiannell raster i nodi ardaloedd o’r raster sy’n llai na 6°, beth ydych chi’n meddwl mae’r lliwiau yma’n cynrychioli? Atebwch y canlynol:\n\n\n\nY lliw sy’n cynrychioli ardaloedd addas ar gyfer adeiladu ffermydd gwynt oedd dugwyn.\n\n\nY lliw sy’n cynrychioli ardaloedd addas ar gyfer adeiladu ffermydd gwynt oedd gwyn.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#trosi-i-bolygonau-fector",
+    "href": "chapters/e05.cy.html#trosi-i-bolygonau-fector",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.9 Trosi i bolygonau fector",
+    "text": "5.9 Trosi i bolygonau fector\n\nGellir creu polygonau fector o haenau raster er mwyn eu cyfuno â chyfyngiadau fector eraill fel y rhai a grëwyd yn pennod 4. Trosiwch y raster dosbarthu llethrau yn bolygonau fector:\n\nCliciwch Raster → Conversion → Polygonize (Raster to Vector)...\nGosodwch Input layer fel eich haen dosbarthu llethrau\nGosodwch Name of the field to create fel Addas\nCliciwch Run → Close\n\nMae polygonau bellach yn dynodi’r ardaloedd sy’n addas (llethr &lt; 6°) neu’n anaddas (llethr &gt; 6°) ar gyfer adeiladu arnynt. Agorwch y attribute table i archwilio pa un yw pa un. Meddyliwch am ddeuaidd; o dan y golofn ‘Addas’, mae 1au yn cynrychioli ‘ydy’, 0au yn cynrychioli ‘nac ydy’\nDelweddwch ardaloedd addas ac anaddas ar gyfer adeiladu yn y symboleg (gweler ?sec-catvec)\nDewiswch y polygonau ‘anaddas’ (Addas = 0) gan ddefnyddio Select features using an expression (gweler Section 4.8)\nAllforiwch y polygonau a ddewiswyd (cofiwch ddefnyddio’r opsiwn Save Selected Features As...). Enwch a storiwch yn synhwyrol",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.cy.html#paratoi-ar-gyfer-map-3",
+    "href": "chapters/e05.cy.html#paratoi-ar-gyfer-map-3",
+    "title": "5  Uchder, llethr, a chyflymder y gwynt",
+    "section": "5.10 Paratoi ar gyfer Map 3",
+    "text": "5.10 Paratoi ar gyfer Map 3\n\nO’r ffolder Wales_mean_windspeed, ychwanegwch yr haen Wales_wind-speed_50m.tif at eich prosiect\nDarllenwch dros y ffeil description_and_data_source.txt yn y ffolder Wales_mean_windspeed am fanylion am y data (Nodyn: mae gan bob ffeil GIS ffeil description_and_data_source.txt gysylltiedig)\nClipiwch raster cyflymder y gwynt i’ch teilsen a’i gadw yn rhywle synhwyrol (gweler Section 5.3)\nDelweddwch y ddata gan ddefnyddio palet lliw addas\nYchwanegwch yr haenau cyfyngu a greoch yn Ymarfer 04 (gweler Chapter 4)\nGyda’r haen cyflymder gwynt o dan gyfyngiadau, archwiliwch ble y gellir caniatáu datblygiad ac sydd yn optimaidd. Gallwch archwilio nid yn unig lle y gallai fod yn ganiataol adeiladu fferm wynt, ond hefyd lle mae’r darnau tir mwyaf gwyntog (sy’n cynnig y cynhyrchu pŵer gorau) a’r rhai mwyaf o ran maint (sy’n gallu cynnwys y nifer mwyaf posibl o dyrbinau) wedi’u lleoli o fewn ardal eich teilsen fap\nDyluniwch Fap 3 i ddangos yn glir y lleoliad gorau ar gyfer fferm wynt (heb gyfyngiadau), a defnyddiwch yr offer amryw (e.e. raster calculator) i echdynnu gwybodaeth a fydd yn eich helpu i gyfiawnhau pam y dewiswyd yr ardal hon (e.e. drwy ddarparu gwybodaeth ychwanegol yn eich capsiwn)\n\n\n\n\n\n\n\nNoteCanlyniadau dysgu\n\n\n\nErbyn diwedd yr ymarfer hwn dylech chi allu:\n\nDelweddu data drychiad raster gan ddefnyddio rampiau ffug-liw, paletau cpt-city, a graddio min/max, a holi gwerthoedd celloedd yn uniongyrchol gyda’r Offeryn Gwerth.\nClipio haenau raster i ardal o ddiddordeb ac archwiliwch yr arwyneb sy’n deillio o hyn mewn tri dimensiwn.\nDeilli0 rasterau llethr, agwedd, a chysgod bryniau o DEM, ac esboniwch beth mae pob un yn ei ddatgelu am dopograffeg arwyneb a phroses geoffisegol.\nDosbarthu ddata raster gyda’r gyfrifiannell raster i nodi ardaloedd sy’n bodloni trothwy diffiniedig, a throsi’r canlyniad yn bolygonau fector i’w cyfuno â haenau cyfyngu eraill.\nGwerthfawrogi sut mae uchder, llethr, a chyflymder y gwynt yn rhyngweithio i bennu addasrwydd safle, gan integreiddio cyfyngiadau sy’n deillio o raster i benderfyniad datblygu cyfiawn.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Uchder, llethr, a chyflymder y gwynt</span>"
     ]
   },
   {

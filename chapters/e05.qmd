@@ -58,7 +58,7 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
 
     i. Click `Raster` → `Extraction` → `Clip Raster by Mask Layer...`
     ii. Set `Input layer` to `SRTM_Wales_DEM_25m`
-    iii. Set` Mask layer` to your map tile
+    iii. Set `Mask layer` to your map tile
     iv. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Clipped (mask)` to save the clipped raster to your OneDrive
     v. Click `Run` → `Close`
     vi. Turn off the visibility of the original (unclipped) raster
@@ -67,8 +67,6 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
 (@) Explore your map tile's DEM using a suitable colour palette and different `Min / max` ranges
 
 (@) Identify the highest point in your clipped DEM and, if possible, its name by Googling
-
-(@) Here's an opportunity to keep your project clutter-free. Remove the `SRTM_Wales_DEM_25m` and `Wales_operational_windfarms` layers from your project
 
 ## Viewing maps in 3D
 
@@ -79,14 +77,14 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
     iii. Click `Terrain`
     iv. Set `Type` to `DEM (Raster Layer)`
     v. Set `Elevation` to your clipped DEM
-    vi. Set `Vertical scale` to `4` (higher values exaggerate or 'stetch' DEM values further appart)
+    vi. Set `Vertical scale` to `4` (higher values exaggerate or 'stetch' DEM values)
     vii. Set `Tile resolution` to `64 px`
     viii. Click `OK`
     ix. Use the mouse (by scrolling and holding down the click on the scroller) to explore the 3D map
     x. Experiment with different values of `Vertical scale` and `Tile resolution` to understand how these work
     xi. Add other layers to your Map Canvas to see them plotted in 3D
 
-## Deriving a slope raster
+## Creating a slope raster
 
 (@) Slope (gradient of the land surface) is a fundamental property of the land surface topography, and can provide valuable information on erosion potential, water flow, construction potential etc. Derive a slope raster from a DEM:
 
@@ -96,7 +94,7 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
     iv. Click `Run` → `Close`
     v. Use the layer's legend to identify the steepest areas. Why are they there?
 
-## Deriving an aspect raster
+## Creating an aspect raster
 
 (@) Aspect (compass direction towards which the gradient faces) is another fundamental property of land topography, providing information on insolation potential, where particular features are visible from, predominant wind exposure etc. Derive an aspect raster from a DEM:
 
@@ -108,13 +106,13 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
 (@) An aspect of 1° (just East of North) is very close in meaning to an aspect of 359° (just West of North), yet they are at the opposite ends of the value range. A colour palette table with the same colour for both ends of the value range would make interpretation easier:
 
     i. Open the layer's symbology
-    ii. Navigate to the `cpt‑city` colour Palette Tables (CPTs) (see @sec-addrast)
+    ii. Navigate to the `cpt‑city` Colour Palette Tables (CPTs) (see @sec-addrast)
     iii. Click the `All by author` tab
     iv. In the `Name` window, click `grass`
     v. In the `GRASS colour ramps` window, click `aspect`
     vi. Click `OK` → `OK`
 
-## Deriving a hillshade raster
+## Creating a hillshade raster
 
 (@) Hill shading simulates the effect of light falling on a surface by combining slope, aspect, and a solar illumination direction. This approach is commonly used to visualize topography in maps and figures. Derive a hillshade raster from a DEM:
 
@@ -123,7 +121,7 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
     iii. Click the `Browse` icon (![](figs/Browse.png){width=3%}) next to `Hillshade` to save the aspect raster somewhere sensible
     iv. Click `Run` → `Close`
     v. From the `Layers` panel, turn off layer visibilities or arrange layers so that your hillshade layer is above your DEM layer
-    vi. Change the hillshade transparency to 50%
+    vi. Change the hillshade transparency to `50%`
     vii. Change the symology of your DEM to something intuitive for land height (e.g. `Greens`). The effect should be quite pleasing!
 
 (@) Create new hillshade rasters, but this time modify the following to improve the effect for your specific clipped DEM:
@@ -173,7 +171,7 @@ exams2forms("E05_Q2.Rmd", edir = "exercises")
 
 (@) From the `Wales_mean_windspeed` folder, add the `Wales_wind-speed_50m.tif` layer to your project
 
-(@) Read over the `description_and_data_source.txt` file in the `Wales_mean_windspeed` folder for details about the data (Note: every GIS file as an associated `description_and_data_source.txt`)
+(@) Read over the `description_and_data_source.txt` file in the `Wales_mean_windspeed` folder for details about the data (Note: every GIS file has an associated `description_and_data_source.txt`)
 
 (@) Clip the wind speed raster to your tile and save it somewhere sensible (see @sec-cliprast)
 
@@ -181,10 +179,9 @@ exams2forms("E05_Q2.Rmd", edir = "exercises")
 
 (@) Add the constraint layers you created in Exercise 04 (see @sec-e04)
 
-(@) With the wind speed layer beneath constraints, explore where development may be permitted and optimal. You can explore not just where building a wind farm
-may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area
+(@) With the wind speed layer beneath constraints, explore where development may be permitted and is optimal. You can explore not just where building a wind farm may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area
 
-(@) Design Map 3 to clearly show the best otherwise‑unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why (e.g. by providing additional information in your caption)
+(@) Design Map 3 to clearly show the best unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why this area was selected (e.g. by providing additional information in your caption)
 
 ::: {.callout-note}
 ## Learning outcomes

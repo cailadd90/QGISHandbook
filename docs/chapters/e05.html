@@ -160,9 +160,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#inspecting-rasters" id="toc-inspecting-rasters" class="nav-link" data-scroll-target="#inspecting-rasters"><span class="header-section-number">5.2</span> Inspecting rasters</a></li>
   <li><a href="#sec-cliprast" id="toc-sec-cliprast" class="nav-link" data-scroll-target="#sec-cliprast"><span class="header-section-number">5.3</span> Clipping rasters</a></li>
   <li><a href="#viewing-maps-in-3d" id="toc-viewing-maps-in-3d" class="nav-link" data-scroll-target="#viewing-maps-in-3d"><span class="header-section-number">5.4</span> Viewing maps in 3D</a></li>
-  <li><a href="#deriving-a-slope-raster" id="toc-deriving-a-slope-raster" class="nav-link" data-scroll-target="#deriving-a-slope-raster"><span class="header-section-number">5.5</span> Deriving a slope raster</a></li>
-  <li><a href="#deriving-an-aspect-raster" id="toc-deriving-an-aspect-raster" class="nav-link" data-scroll-target="#deriving-an-aspect-raster"><span class="header-section-number">5.6</span> Deriving an aspect raster</a></li>
-  <li><a href="#deriving-a-hillshade-raster" id="toc-deriving-a-hillshade-raster" class="nav-link" data-scroll-target="#deriving-a-hillshade-raster"><span class="header-section-number">5.7</span> Deriving a hillshade raster</a></li>
+  <li><a href="#creating-a-slope-raster" id="toc-creating-a-slope-raster" class="nav-link" data-scroll-target="#creating-a-slope-raster"><span class="header-section-number">5.5</span> Creating a slope raster</a></li>
+  <li><a href="#creating-an-aspect-raster" id="toc-creating-an-aspect-raster" class="nav-link" data-scroll-target="#creating-an-aspect-raster"><span class="header-section-number">5.6</span> Creating an aspect raster</a></li>
+  <li><a href="#creating-a-hillshade-raster" id="toc-creating-a-hillshade-raster" class="nav-link" data-scroll-target="#creating-a-hillshade-raster"><span class="header-section-number">5.7</span> Creating a hillshade raster</a></li>
   <li><a href="#classifying-raster-data" id="toc-classifying-raster-data" class="nav-link" data-scroll-target="#classifying-raster-data"><span class="header-section-number">5.8</span> Classifying raster data</a></li>
   <li><a href="#converting-to-vector-polygons" id="toc-converting-to-vector-polygons" class="nav-link" data-scroll-target="#converting-to-vector-polygons"><span class="header-section-number">5.9</span> Converting to vector polygons</a></li>
   <li><a href="#preparing-for-map-3" id="toc-preparing-for-map-3" class="nav-link" data-scroll-target="#preparing-for-map-3"><span class="header-section-number">5.10</span> Preparing for Map 3</a></li>
@@ -237,9 +237,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>According to the SRTM data, what is the height of Yr Wyddfa (the highest mountain in Eryri)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-db5aa20b7a35f34706e37c843daa266c" data-tol="30" size="20" data-answer="P0AEUVcBEj8="></p>
+<p><input class="webex-solveme nospaces" id="webex-43ae45db569b9b0d61408514f372c4d2" data-tol="30" size="20" data-answer="bxFQVQIGRj8="></p>
 <p>According to the SRTM data, what is the height of Pen y Fan (the highest mountain in the Bannau Brycheiniog)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-9a6fd1db6e983f0e5a68412a0f1c0a2b" data-tol="30" size="20" data-answer="YkMOUVITOQ=="></p>
+<p><input class="webex-solveme nospaces" id="webex-6cbd6e94e33c9ec17e27e33d4db1e204" data-tol="30" size="20" data-answer="bUFaUwBHZA=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -262,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>Set <code>Input layer</code> to <code>SRTM_Wales_DEM_25m</code>
 </li>
-<li>Set<code>Mask layer</code> to your map tile</li>
+<li>Set <code>Mask layer</code> to your map tile</li>
 <li>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) next to <code>Clipped (mask)</code> to save the clipped raster to your OneDrive</li>
 <li>Click <code>Run</code> → <code>Close</code>
 </li>
@@ -272,10 +272,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><p>Explore your map tile’s DEM using a suitable colour palette and different <code>Min / max</code> ranges</p></li>
 <li><p>Identify the highest point in your clipped DEM and, if possible, its name by Googling</p></li>
-<li><p>Here’s an opportunity to keep your project clutter-free. Remove the <code>SRTM_Wales_DEM_25m</code> and <code>Wales_operational_windfarms</code> layers from your project</p></li>
 </ol></section><section id="viewing-maps-in-3d" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="viewing-maps-in-3d">
 <span class="header-section-number">5.4</span> Viewing maps in 3D</h2>
-<ol start="15" class="example" type="1">
+<ol start="14" class="example" type="1">
 <li>
 <p>View the clipped DEM in 3D:</p>
 <ol type="i">
@@ -287,7 +286,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Set <code>Type</code> to <code>DEM (Raster Layer)</code>
 </li>
 <li>Set <code>Elevation</code> to your clipped DEM</li>
-<li>Set <code>Vertical scale</code> to <code>4</code> (higher values exaggerate or ‘stetch’ DEM values further appart)</li>
+<li>Set <code>Vertical scale</code> to <code>4</code> (higher values exaggerate or ‘stetch’ DEM values)</li>
 <li>Set <code>Tile resolution</code> to <code>64 px</code>
 </li>
 <li>Click <code>OK</code>
@@ -297,9 +296,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Add other layers to your Map Canvas to see them plotted in 3D</li>
 </ol>
 </li>
-</ol></section><section id="deriving-a-slope-raster" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="deriving-a-slope-raster">
-<span class="header-section-number">5.5</span> Deriving a slope raster</h2>
-<ol start="16" class="example" type="1">
+</ol></section><section id="creating-a-slope-raster" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="creating-a-slope-raster">
+<span class="header-section-number">5.5</span> Creating a slope raster</h2>
+<ol start="15" class="example" type="1">
 <li>
 <p>Slope (gradient of the land surface) is a fundamental property of the land surface topography, and can provide valuable information on erosion potential, water flow, construction potential etc. Derive a slope raster from a DEM:</p>
 <ol type="i">
@@ -312,9 +311,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Use the layer’s legend to identify the steepest areas. Why are they there?</li>
 </ol>
 </li>
-</ol></section><section id="deriving-an-aspect-raster" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="deriving-an-aspect-raster">
-<span class="header-section-number">5.6</span> Deriving an aspect raster</h2>
-<ol start="17" class="example" type="1">
+</ol></section><section id="creating-an-aspect-raster" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="creating-an-aspect-raster">
+<span class="header-section-number">5.6</span> Creating an aspect raster</h2>
+<ol start="16" class="example" type="1">
 <li>
 <p>Aspect (compass direction towards which the gradient faces) is another fundamental property of land topography, providing information on insolation potential, where particular features are visible from, predominant wind exposure etc. Derive an aspect raster from a DEM:</p>
 <ol type="i">
@@ -330,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
 <p>An aspect of 1° (just East of North) is very close in meaning to an aspect of 359° (just West of North), yet they are at the opposite ends of the value range. A colour palette table with the same colour for both ends of the value range would make interpretation easier:</p>
 <ol type="i">
 <li>Open the layer’s symbology</li>
-<li>Navigate to the <code>cpt‑city</code> colour Palette Tables (CPTs) (see <a href="#sec-addrast" class="quarto-xref"><span>Section 5.1</span></a>)</li>
+<li>Navigate to the <code>cpt‑city</code> Colour Palette Tables (CPTs) (see <a href="#sec-addrast" class="quarto-xref"><span>Section 5.1</span></a>)</li>
 <li>Click the <code>All by author</code> tab</li>
 <li>In the <code>Name</code> window, click <code>grass</code>
 </li>
@@ -340,9 +339,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol>
 </li>
-</ol></section><section id="deriving-a-hillshade-raster" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="deriving-a-hillshade-raster">
-<span class="header-section-number">5.7</span> Deriving a hillshade raster</h2>
-<ol start="19" class="example" type="1">
+</ol></section><section id="creating-a-hillshade-raster" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="creating-a-hillshade-raster">
+<span class="header-section-number">5.7</span> Creating a hillshade raster</h2>
+<ol start="18" class="example" type="1">
 <li>
 <p>Hill shading simulates the effect of light falling on a surface by combining slope, aspect, and a solar illumination direction. This approach is commonly used to visualize topography in maps and figures. Derive a hillshade raster from a DEM:</p>
 <ol type="i">
@@ -353,7 +352,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Click <code>Run</code> → <code>Close</code>
 </li>
 <li>From the <code>Layers</code> panel, turn off layer visibilities or arrange layers so that your hillshade layer is above your DEM layer</li>
-<li>Change the hillshade transparency to 50%</li>
+<li>Change the hillshade transparency to <code>50%</code>
+</li>
 <li>Change the symology of your DEM to something intuitive for land height (e.g. <code>Greens</code>). The effect should be quite pleasing!</li>
 </ol>
 </li>
@@ -368,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="classifying-raster-data" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="classifying-raster-data">
 <span class="header-section-number">5.8</span> Classifying raster data</h2>
-<ol start="21" class="example" type="1">
+<ol start="20" class="example" type="1">
 <li>
 <p>Use the raster calculator to perform cell-by-cell operations, such as to find parts of a raster layer within a specified range of values. One of the constraints for building a wind farm is that the land surface slope should be no more than 6 degrees. This is simply because greater slopes are less stable and not normally viable to build on. Build an expression in the raster calculator as follows:</p>
 <ol type="i">
@@ -386,22 +386,17 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>If one can build on a slope only on land less than 6°, the colour that represents suitable areas to build wind farms was <select class="webex-select" id="webex-0d5d6efd52e7a126857bff44f32688ff" data-answer="a1UZVBpVSlQZAjg="><option value="blank"></option>
-<option>White</option>
-<option>Black</option>
-<option>NA</option>
-<option>NA</option>
-<option>NA</option></select></p>
+<p>The colour that represents suitable areas to build wind farms was <select class="webex-select" id="webex-8899e321fb71570f6de060718431718f" data-answer="YwgVCDg="><option value="blank"></option>
+<option>black</option>
+<option>white</option></select>.</p>
 </div>
 <div class="webex-solution">
-<ul>
-<li>The colour that represents suitable areas to build wind farms was white.</li>
-</ul>
+<p>The colour that represents suitable areas to build wind farms was white.</p>
 </div>
 </div>
 </section><section id="converting-to-vector-polygons" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="converting-to-vector-polygons">
 <span class="header-section-number">5.9</span> Converting to vector polygons</h2>
-<ol start="23" class="example" type="1">
+<ol start="22" class="example" type="1">
 <li>
 <p>Vector polygons can be created from raster layers so that they can be combined with other vector constraints such as those created in <a href="e04.html">chapter 4</a>. Convert the slope raster classifications to vector polygons:</p>
 <ol type="i">
@@ -420,14 +415,14 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Export the selected polygons (remember to use the <code>Save Selected Features As...</code> option). Name and store sensibly</p></li>
 </ol></section><section id="preparing-for-map-3" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="preparing-for-map-3">
 <span class="header-section-number">5.10</span> Preparing for Map 3</h2>
-<ol start="28" class="example" type="1">
+<ol start="27" class="example" type="1">
 <li><p>From the <code>Wales_mean_windspeed</code> folder, add the <code>Wales_wind-speed_50m.tif</code> layer to your project</p></li>
-<li><p>Read over the <code>description_and_data_source.txt</code> file in the <code>Wales_mean_windspeed</code> folder for details about the data (Note: every GIS file as an associated <code>description_and_data_source.txt</code>)</p></li>
+<li><p>Read over the <code>description_and_data_source.txt</code> file in the <code>Wales_mean_windspeed</code> folder for details about the data (Note: every GIS file has an associated <code>description_and_data_source.txt</code>)</p></li>
 <li><p>Clip the wind speed raster to your tile and save it somewhere sensible (see <a href="#sec-cliprast" class="quarto-xref"><span>Section 5.3</span></a>)</p></li>
 <li><p>Visualise the data using a suitable colour palette</p></li>
 <li><p>Add the constraint layers you created in Exercise 04 (see <a href="e04.html" class="quarto-xref"><span>Chapter 4</span></a>)</p></li>
-<li><p>With the wind speed layer beneath constraints, explore where development may be permitted and optimal. You can explore not just where building a wind farm may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area</p></li>
-<li><p>Design Map 3 to clearly show the best otherwise‑unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why (e.g. by providing additional information in your caption)</p></li>
+<li><p>With the wind speed layer beneath constraints, explore where development may be permitted and is optimal. You can explore not just where building a wind farm may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area</p></li>
+<li><p>Design Map 3 to clearly show the best unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why this area was selected (e.g. by providing additional information in your caption)</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
