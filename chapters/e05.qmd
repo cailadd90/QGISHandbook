@@ -4,8 +4,6 @@
 
 Elevation is a key determinant of many geographical processes. The height of the land determines whether the coast is above or below sea level. Mountain and valley slopes determine water flow and microclimates. Biomes are often restricted to particular altitudes. Digital Elevation Models (DEMs) describe land surface height in a grid, and are a special case of continuous geospatial data widely available as raster datasets at various spatial resolutions. QGIS has several tools to inspect and manipulate DEMs, which are necessary for the wind farm project.
 
-**This exercise will guide you through the requirements for making Map 3**
-
 ::: {.callout-note}
 ## Learning objectives
 
@@ -16,7 +14,7 @@ To visualise DEMs and wind speed data, subset, classify and vectorize rasters, a
 
 (@) Launch QGIS and create a new project
 
-(@) From the `Wales_DEM` folder, add the `SRTM_Wales_DEM_25m.tif` layer to your project. This DEM is derived from the [Shuttle Radar Topography Mission](https://www.earthdata.nasa.gov/data/instruments/srtm){target='_blank'}, which scanned nearly 80% of Earth's land surfaces in 2000 to generate a DEM at 25 m resolution. Impressive
+(@) From the `Wales_DEM` folder, add the `SRTM_Wales_DEM_25m.tif` layer to your project. This DEM is derived from the [Shuttle Radar Topography Mission](https://www.earthdata.nasa.gov/data/instruments/srtm){target='_blank'}, which scanned nearly 80% of Earth's land surfaces in 2000 to generate a DEM at 25 m resolution. Impressive!
 
 (@) From the layer's symbology (right-click → `Properties...` → `Symbology`), experiment with the `Singleband pseudocolor` render type (see @sec-rasterdata):
 
@@ -88,8 +86,6 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
     x. Experiment with different values of `Vertical scale` and `Tile resolution` to understand how these work
     xi. Add other layers to your Map Canvas to see them plotted in 3D
 
-![](figs/3DConfiguration.png){fig-align='center' width=50%}
-
 ## Deriving a slope raster
 
 (@) Slope (gradient of the land surface) is a fundamental property of the land surface topography, and can provide valuable information on erosion potential, water flow, construction potential etc. Derive a slope raster from a DEM:
@@ -117,8 +113,6 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
     iv. In the `Name` window, click `grass`
     v. In the `GRASS colour ramps` window, click `aspect`
     vi. Click `OK` → `OK`
-
-![](figs/AspectCPT.png){fig-align='center' width=50%}
 
 ## Deriving a hillshade raster
 
@@ -155,7 +149,7 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
 #| message: false
 #| results: asis
 library(exams2forms)
-exams2forms("E05_Q1.Rmd", edir = "exercises")
+exams2forms("E05_Q2.Rmd", edir = "exercises")
 ```
 
 ## Converting to vector polygons

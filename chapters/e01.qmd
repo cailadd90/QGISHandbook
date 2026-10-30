@@ -118,7 +118,7 @@ exams2forms("E01_Q3.Rmd", edir = "exercises")
 
 (@) Click the `Deselect features` icon (![](figs/Deselect.png){width=3%}) to deselect the current selection. These functions will be very useful later on
 
-## Arranging layers 
+## Arranging layers {#sec-catvec}
 
 (@) Add the `Wales_Principal_Areas.gpkg` layer in the `UK_Boundaries` folder to your project. This dataset consists of polygons representing the Principal Areas (otherwise known as counties) of Wales. Note this layer will also appear in the `Layers` panel
 

@@ -188,7 +188,6 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Date of practical:</strong> 6th and 13th November 2026</p>
 </blockquote>
 <p>Elevation is a key determinant of many geographical processes. The height of the land determines whether the coast is above or below sea level. Mountain and valley slopes determine water flow and microclimates. Biomes are often restricted to particular altitudes. Digital Elevation Models (DEMs) describe land surface height in a grid, and are a special case of continuous geospatial data widely available as raster datasets at various spatial resolutions. QGIS has several tools to inspect and manipulate DEMs, which are necessary for the wind farm project.</p>
-<p><strong>This exercise will guide you through the requirements for making Map 3</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -206,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="header-section-number">5.1</span> Adding rasters</h2>
 <ol class="example" type="1">
 <li><p>Launch QGIS and create a new project</p></li>
-<li><p>From the <code>Wales_DEM</code> folder, add the <code>SRTM_Wales_DEM_25m.tif</code> layer to your project. This DEM is derived from the <a href="https://www.earthdata.nasa.gov/data/instruments/srtm" target="_blank">Shuttle Radar Topography Mission</a>, which scanned nearly 80% of Earth’s land surfaces in 2000 to generate a DEM at 25 m resolution. Impressive</p></li>
+<li><p>From the <code>Wales_DEM</code> folder, add the <code>SRTM_Wales_DEM_25m.tif</code> layer to your project. This DEM is derived from the <a href="https://www.earthdata.nasa.gov/data/instruments/srtm" target="_blank">Shuttle Radar Topography Mission</a>, which scanned nearly 80% of Earth’s land surfaces in 2000 to generate a DEM at 25 m resolution. Impressive!</p></li>
 <li>
 <p>From the layer’s symbology (right-click → <code>Properties...</code> → <code>Symbology</code>), experiment with the <code>Singleband pseudocolor</code> render type (see <a href="e02.html#sec-rasterdata" class="quarto-xref"><span>Section 2.5</span></a>):</p>
 <ol type="i">
@@ -238,9 +237,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>According to the SRTM data, what is the height of Yr Wyddfa (the highest mountain in Eryri)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-a908dbda8878573b34564df88daa6036" data-tol="30" size="20" data-answer="OhsBCFJRRjw="></p>
+<p><input class="webex-solveme nospaces" id="webex-db5aa20b7a35f34706e37c843daa266c" data-tol="30" size="20" data-answer="P0AEUVcBEj8="></p>
 <p>According to the SRTM data, what is the height of Pen y Fan (the highest mountain in the Bannau Brycheiniog)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-6f4855a1c20e244e64a87688b71871ac" data-tol="30" size="20" data-answer="bUQMDwMXPA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-9a6fd1db6e983f0e5a68412a0f1c0a2b" data-tol="30" size="20" data-answer="YkMOUVITOQ=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -298,12 +297,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Add other layers to your Map Canvas to see them plotted in 3D</li>
 </ol>
 </li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="figs/3DConfiguration.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-</section><section id="deriving-a-slope-raster" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="deriving-a-slope-raster">
+</ol></section><section id="deriving-a-slope-raster" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="deriving-a-slope-raster">
 <span class="header-section-number">5.5</span> Deriving a slope raster</h2>
 <ol start="16" class="example" type="1">
 <li>
@@ -346,12 +340,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol>
 </li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="figs/AspectCPT.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-</section><section id="deriving-a-hillshade-raster" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="deriving-a-hillshade-raster">
+</ol></section><section id="deriving-a-hillshade-raster" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="deriving-a-hillshade-raster">
 <span class="header-section-number">5.7</span> Deriving a hillshade raster</h2>
 <ol start="19" class="example" type="1">
 <li>
@@ -397,15 +386,16 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>According to the SRTM data, what is the height of Yr Wyddfa (the highest mountain in Eryri)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-bfbb15a7dba331c63676a2ce4e3f0ddf" data-tol="30" size="20" data-answer="OURTUgcGQ2o="></p>
-<p>According to the SRTM data, what is the height of Pen y Fan (the highest mountain in the Bannau Brycheiniog)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-6644c35131d7b09d5ee2e024e63032e2" data-tol="30" size="20" data-answer="bRQMA1URaA=="></p>
+<p>If one can build on a slope only on land less than 6°, the colour that represents suitable areas to build wind farms was <select class="webex-select" id="webex-0d5d6efd52e7a126857bff44f32688ff" data-answer="a1UZVBpVSlQZAjg="><option value="blank"></option>
+<option>White</option>
+<option>Black</option>
+<option>NA</option>
+<option>NA</option>
+<option>NA</option></select></p>
 </div>
 <div class="webex-solution">
 <ul>
-<li>The height of Yr Wyddfa was 1,063.</li>
-<li>The height of Pen y Fan was 876.</li>
+<li>The colour that represents suitable areas to build wind farms was white.</li>
 </ul>
 </div>
 </div>
@@ -425,7 +415,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </li>
 <li><p>Polygons now demarcate the areas that are suitable (slope &lt; 6°) or unsuitable (slope &gt; 6°) for building upon. Open the attribute table to explore which is which. Think binary; under the ‘Suitable’ column, 1s represent ‘yes’, 0s represent ‘no’</p></li>
-<li><p>Visualise the suitable and unsuitable areas for construction in the symbology (see <span class="quarto-unresolved-ref">?sec-catvec</span>)</p></li>
+<li><p>Visualise the suitable and unsuitable areas for construction in the symbology (see <a href="e01.html#sec-catvec" class="quarto-xref"><span>Section 1.6</span></a>)</p></li>
 <li><p>Select the ‘unsuitable’ polygons (Suitable = 0) using <code>Select features using an expression</code> (see <a href="e04.html#sec-selexpress" class="quarto-xref"><span>Section 4.7</span></a>)</p></li>
 <li><p>Export the selected polygons (remember to use the <code>Save Selected Features As...</code> option). Name and store sensibly</p></li>
 </ol></section><section id="preparing-for-map-3" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="preparing-for-map-3">
