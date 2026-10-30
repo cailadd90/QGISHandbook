@@ -18,6 +18,10 @@ Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. 
 
 (@) Labelwch Awdurdodau Unedol Cymru yn y Gymraeg neu'r Saesneg
 
+(@) O'r ffolder `Wales_map_tiles`, ychwanegwch eich [teilsen map OS a neilltuwyd i chi](https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484){target='_blank'} at eich prosiect. Dyma'r haen y bydd eich prosiect fferm wynt yn canolbwyntio arni
+
+(@) Cyfrifwch arwynebedd eich teilsen map mewn cilometrau sgwâr. Angen atgoffa sut i wneud hyn? Gweler @sec-measuring
+
 (@) I greu Print Layout:
 
     i. Cliciwch `Project` → `New Print Layout...` (a dewch o hyd i'r llwybrau byr i'r ffenestr hon)

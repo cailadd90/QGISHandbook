@@ -114,7 +114,7 @@ exams2forms("E03_Q4.Rmd", edir = "exercises")
 
 (@) Saved your project recently?
 
-## Geocoding new addresses
+## Geocoding new addresses {#sec-geocoding}
 
 (@) Geocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Such a 'conversion' tool is again a powerful application of GIS. Use geocoding to plot where Swansea's local Tesco stores are located:
 

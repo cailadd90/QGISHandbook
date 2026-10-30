@@ -16,7 +16,7 @@ I docio is-setiau bach o setiau data fector mawr, crëwch byfferau toddedig o am
 
 (@) O'r ffolder `UK_Boundaries`, ychwanegwch yr haen `Wales_border.gpkg` at eich prosiect
 
-(@) O'r ffolder `Wales_map_tiles`, ychwanegwch eich [teils map OS a neilltuwyd](https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484){target='_blank'} at eich prosiect. Yr haen hon yw lle bydd eich prosiect fferm wynt yn canolbwyntio.
+(@) O'r ffolder `Wales_map_tiles`, ychwanegwch eich [teilsen map OS a neilltuwyd i chi](https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484){target='_blank'} at eich prosiect
 
 (@) Cyfrifwch arwynebedd eich teils map mewn cilometrau sgwâr. Angen atgoffa sut i wneud hyn? Gweler @sec-mesuring
 

@@ -132,6 +132,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/e05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Elevation, slope, and wind speed</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
@@ -198,6 +204,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Launch QGIS and create a new project</p></li>
 <li><p>Add the <code>British_Isles_land_polygons.gpkg</code>, <code>Wales_border.gpkg</code>, and <code>Wales_Principal_Areas.gpkg</code> layers to your project (the latter two are in the <code>UK_Boundaries</code> folder)</p></li>
 <li><p>Label the Principal Areas of Wales in Welsh or English</p></li>
+<li><p>From the <code>Wales_map_tiles</code> folder, add your <a href="https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484" target="_blank">assigned OS map tile</a> to your project. This layer is where your wind farm project will focus</p></li>
+<li><p>Calculate the area of your map tile in square kilometres. Need reminding of how to do this? See <a href="e01.html#sec-measuring" class="quarto-xref"><span>Section 1.4</span></a></p></li>
 <li>
 <p>To create a Print Layout:</p>
 <ol type="i">
@@ -223,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="sec-mapitem" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="sec-mapitem">
 <span class="header-section-number">2.2</span> Adding and adjusting a map item</h2>
-<ol start="6" class="example" type="1">
+<ol start="8" class="example" type="1">
 <li><p>Click <code>Add Item</code> → <code>Add Map</code> (look for the shortcut)</p></li>
 <li><p>Draw a map onto the print layout. <code>Map 1</code> should now appear under the <code>Items</code> tab</p></li>
 </ol>
@@ -231,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure"><p><img src="figs/Item.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
 </figure>
 </div>
-<ol start="8" class="example" type="1">
+<ol start="10" class="example" type="1">
 <li><p>If necessary, adjust the map using the squares on the map boundaries so it fits more comfortably on the page</p></li>
 <li><p>Select <code>Map 1</code> from the <code>Items</code> panel</p></li>
 <li><p>Set <code>Scale</code> to <code>1000000</code> (i.e. 1:1,000,000)</p></li>
@@ -262,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="adding-a-scale-bar-north-arrow-and-grid" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="adding-a-scale-bar-north-arrow-and-grid">
 <span class="header-section-number">2.3</span> Adding a scale bar, north arrow, and grid</h2>
-<ol start="19" class="example" type="1">
+<ol start="21" class="example" type="1">
 <li>
 <p>From the Print Layout window, add a scale bar:</p>
 <ol type="i">
@@ -309,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>You may find that some of the map items, notably the coordinates, are now beyond the edge of the page. These will be lost when the map is exported! In these cases, you will need to adjust the map size periodically as you experiment with how to best arrange map items and the caption (see <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.2</span></a>). Check how using guides can aid you in aligning map items perfectly on the page (see <a href="faq.html">FAQ</a>).</p></li>
 </ol></section><section id="adding-labels-and-a-legend" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="adding-labels-and-a-legend">
 <span class="header-section-number">2.4</span> Adding labels and a legend</h2>
-<ol start="23" class="example" type="1">
+<ol start="25" class="example" type="1">
 <li>
 <p>Add a map title label:</p>
 <ol type="i">
@@ -338,7 +346,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="sec-rasterdata" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="sec-rasterdata">
 <span class="header-section-number">2.5</span> Adding raster data</h2>
-<ol start="25" class="example" type="1">
+<ol start="27" class="example" type="1">
 <li>
 <p>Add your first raster layer in QGIS:</p>
 <ol type="i">
@@ -371,7 +379,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Under <code>Item Properties</code>, check the <code>Lock layers</code> and <code>Lock styles for layers</code> to prevent further changes to the map. Uncheck if you need to make edits</p></li>
 </ol></section><section id="adding-an-inset-map" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="adding-an-inset-map">
 <span class="header-section-number">2.6</span> Adding an inset map</h2>
-<ol start="33" class="example" type="1">
+<ol start="35" class="example" type="1">
 <li><p>Add a second map to provide an inset showing the British Isles (see <a href="#sec-mapitem" class="quarto-xref"><span>Section 2.2</span></a>)</p></li>
 <li>
 <p>Modify this second map to create an effective inset map that provides geographic context for the main map:</p>
@@ -395,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Place emphasis on only a few, simply presented layers that are useful at this scale. Aim to be minimalist to avoid cluttering the map. Note: because your map of Wales (Map 1) is locked, it’s not affected by changes in layer visibility or symbology being made for the inset. Herein lies the power of locking layers.</p>
 </div>
 </div>
-<ol start="35" class="example" type="1">
+<ol start="37" class="example" type="1">
 <li>
 <p>Add an extent indicator on your main map to connect it to the inset map:</p>
 <ol type="i">
@@ -413,7 +421,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Projects can get rapidly out of control when multiple layers are used to build a map. It’s important to remove redundant layers and label items appropriately. E.g. try renaming <code>Map 1</code> to <code>Main</code>, and <code>Map 2</code> to <code>Inset</code>. This will help when you need to revisit and adjust your maps</p></li>
 </ol></section><section id="exporting-your-map" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="exporting-your-map">
 <span class="header-section-number">2.7</span> Exporting your map</h2>
-<ol start="37" class="example" type="1">
+<ol start="39" class="example" type="1">
 <li><p>Ensure both maps have <code>Lock layers</code> checked so that your formatting is captured in the exported maps</p></li>
 <li>
 <p>To export your map as an image:</p>

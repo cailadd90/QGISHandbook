@@ -132,6 +132,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/e05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Elevation, slope, and wind speed</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
@@ -154,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-stats4fields" id="toc-sec-stats4fields" class="nav-link" data-scroll-target="#sec-stats4fields"><span class="header-section-number">3.2</span> Finding headcount statistics</a></li>
   <li><a href="#sec-selectlocation" id="toc-sec-selectlocation" class="nav-link" data-scroll-target="#sec-selectlocation"><span class="header-section-number">3.3</span> Statistics by location</a></li>
   <li><a href="#creating-a-population-density-heatmap" id="toc-creating-a-population-density-heatmap" class="nav-link" data-scroll-target="#creating-a-population-density-heatmap"><span class="header-section-number">3.4</span> Creating a population density heatmap</a></li>
-  <li><a href="#geocoding-new-addresses" id="toc-geocoding-new-addresses" class="nav-link" data-scroll-target="#geocoding-new-addresses"><span class="header-section-number">3.5</span> Geocoding new addresses</a></li>
+  <li><a href="#sec-geocoding" id="toc-sec-geocoding" class="nav-link" data-scroll-target="#sec-geocoding"><span class="header-section-number">3.5</span> Geocoding new addresses</a></li>
   <li><a href="#sec-export" id="toc-sec-export" class="nav-link" data-scroll-target="#sec-export"><span class="header-section-number">3.6</span> Exporting vector layers</a></li>
   <li><a href="#sec-buffers" id="toc-sec-buffers" class="nav-link" data-scroll-target="#sec-buffers"><span class="header-section-number">3.7</span> Using buffers as simple catchments</a></li>
   </ul></nav>
@@ -204,11 +210,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>How many people lived in the most populous postcode in the Cardiff (CF) area in 2021? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-488cdf678a864415f6546af34f1fd4c3" data-tol="0" size="20" data-answer="bxoJVl1VFGo="></p>
+<p><input class="webex-solveme nospaces" id="webex-4eec33899df4e87f7e3b23b6ec9c09c0" data-tol="0" size="20" data-answer="b0dUVgoAGmQ="></p>
 <p>How many people lived in the most populous postcode in the Swansea (SA) area in 2021? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-8c51e0e193ee4a82341ce95cc2d048fe" data-tol="0" size="20" data-answer="Y0EECFcCR2w="></p>
+<p><input class="webex-solveme nospaces" id="webex-dc1e74e5749b6bad7b30d17003b417f2" data-tol="0" size="20" data-answer="P0EAXAUGR2g="></p>
 <p>How many people lived in the most populous postcode in the Aberystwyth (SY) area in 2021? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-14c0c123224f8f35ccb25edc9987382e" data-tol="0" size="20" data-answer="ahZbAlMTbw=="></p>
+<p><input class="webex-solveme nospaces" id="webex-e4fe486c6bcd59b1f65e47897564a818" data-tol="0" size="20" data-answer="PhZeVwQaaw=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -224,19 +230,19 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which feature at the most populous postcode area explained the high population count?</p>
-<p>Swansea (SA): <select class="webex-select" id="webex-720462d4ff19c4c6deb00c5ca8cb834b" data-answer="bAMcBBoCSARKVmw="><option value="blank"></option>
+<p>Swansea (SA): <select class="webex-select" id="webex-5e4160cc7b742235e2d8879d5fd1929a" data-answer="blQYARoAT1MbUmo="><option value="blank"></option>
 <option>Student halls</option>
 <option>Prison</option>
 <option>Hospital</option>
 <option>Military barracks</option>
 <option>Care home</option></select></p>
-<p>Cardiff (CF): <select class="webex-select" id="webex-1b781747c6babd111372ddd51e2624de" data-answer="alIbCR0HGAdPBj8="><option value="blank"></option>
+<p>Cardiff (CF): <select class="webex-select" id="webex-bbd7e6abd8fd69d7ef17e22721764b67" data-answer="OVJIBkkGTVJICDs="><option value="blank"></option>
 <option>Student halls</option>
 <option>Prison</option>
 <option>Hospital</option>
 <option>Military barracks</option>
 <option>Care home</option></select></p>
-<p>Aberystwyth (SY): <select class="webex-select" id="webex-841245cf7883dc6538f4a667c726e313" data-answer="YwUdAhgFT1YbCGU="><option value="blank"></option>
+<p>Aberystwyth (SY): <select class="webex-select" id="webex-323a69f3cec76db97e97bd84158ceebc" data-answer="aAMfURoJSgNPVT4="><option value="blank"></option>
 <option>Student halls</option>
 <option>Prison</option>
 <option>Hospital</option>
@@ -285,9 +291,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What was the registered population of Wales in 2021? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-c5e6c5e1d131fdd67fba39b1775f7cbf" data-tol="0" size="20" data-answer="OBdWB1MCUQFUE24="></p>
+<p><input class="webex-solveme nospaces" id="webex-190aea92dcb627274821e598cbe0b42a" data-tol="0" size="20" data-answer="ahsDUFVWDQJUQT8="></p>
 <p>What was the percentage change in the population of Wales between 2011 and 2021?</p>
-<p><input class="webex-solveme nospaces" id="webex-cbc07d3ae125f5c3d272460e1b305ade" data-tol="1" size="20" data-answer="OEBSEmo="></p>
+<p><input class="webex-solveme nospaces" id="webex-7997e08ff30fc46c41a7641801d1324d" data-tol="1" size="20" data-answer="bBsIFTg="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -322,11 +328,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What was the total population of Swansea County in 2021? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-9ef6bb32e85f5e9757a9a1e33f33075e" data-tol="0" size="20" data-answer="YkdUBVpWBwVHZQ=="></p>
+<p><input class="webex-solveme nospaces" id="webex-31d458cf7abdd2d6ee54a2497d01a01f" data-tol="0" size="20" data-answer="aBNWBw0MV1EVPA=="></p>
 <p>What was the total population of Cardiff County in 2021? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-644c356607eed7e54c875ac2b17ef35c" data-tol="0" size="20" data-answer="bRYHVQEGAwASag=="></p>
+<p><input class="webex-solveme nospaces" id="webex-e597edffcd3e986e6393cead6b0d6f4f" data-tol="0" size="20" data-answer="PhcKAVdXU1BBOQ=="></p>
 <p>What was the percentage change in the population of Swansea County between 2011 and 2021? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-48099cd47c148d8a9572dbf966d04df8" data-tol="1" size="20" data-answer="bxodCRdRRmk="></p>
+<p><input class="webex-solveme nospaces" id="webex-8f29fc2ac74859bbb6d59d6f38f7c927" data-tol="1" size="20" data-answer="Y0QfCUhREDw="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -369,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </li>
 <li><p>Saved your project recently?</p></li>
-</ol></section><section id="geocoding-new-addresses" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="geocoding-new-addresses">
+</ol></section><section id="sec-geocoding" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="sec-geocoding">
 <span class="header-section-number">3.5</span> Geocoding new addresses</h2>
 <ol start="16" class="example" type="1">
 <li>
@@ -482,7 +488,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What was the total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-beaad90ab3fb50f39e83aa46905c8624" data-tol="0" size="20" data-answer="OUdSU10NAEM/"></p>
+<p><input class="webex-solveme nospaces" id="webex-6904a8ca6ba0f189623da31b2bdda44b" data-tol="0" size="20" data-answer="bRsDBlgMU0Nr"></p>
 </div>
 <div class="webex-solution">
 <p>The total number of people registered in 2021 within 2 km of Swansea University Singleton Campus (SA2 8PQ) and Bay Campus (SA1 8QE) was 32,940.</p>

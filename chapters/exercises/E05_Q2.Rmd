@@ -1,0 +1,19 @@
+Question
+========
+If one can build on a slope only on land less than 6°, the colour that represents suitable areas to build wind farms was ##ANSWER1##
+
+Answerlist
+----------
+* White
+* Black
+
+Solution
+========
+- The colour that represents suitable areas to build wind farms was white.
+
+Meta-information
+================
+extype: cloze
+exclozetype: schoice
+exsolution: 10000
+exname: E05_Q2

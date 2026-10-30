@@ -16,11 +16,7 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
 
 (@) From the `UK_Boundaries` folder, add the `Wales_border.gpkg` layer to your project
 
-(@) From the `Wales_map_tiles` folder, add your [assigned OS map tile](https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484){target='_blank'} to your project. This layer is where your wind farm project will focus
-
-(@) Calculate the area of your map tile in square kilometres. Need reminding of how to do this? See @sec-measuring
-
-(@) Calculate the perimeter of your map tile in kilometres
+(@) From the `Wales_map_tiles` folder, add your [assigned OS map tile](https://canvas.swansea.ac.uk/courses/69491/pages/key-information-2?module_item_id=4214484){target='_blank'} to your project
 
 (@) This time, allow QGIS to do the heavy lifting by calculating area and perimeter for you using the field calculator. Because all master layers on OneDrive cannot be edited, you will first need to save a copy of the map tile to your own OneDrive account. Remember how to export a layer? If not, see @sec-export
 

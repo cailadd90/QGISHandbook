@@ -174,7 +174,7 @@
     "href": "chapters/e01.html#sec-attrib",
     "title": "1  Getting started",
     "section": "1.5 Exploring the Attribute Table",
-    "text": "1.5 Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area\nClick the Dock Attribute Table icon () so that you can see both the Map Canvas and Attribute Table on screen at once\nTo understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles\n\n\n\nCan you name the seventh-largest island of the British Isles?\n\nLewis and HarrisYnys Enlli / BardseySkyeYnys Môn / AngleseyIslay\n\n\n\nThe seventh-largest island of the British Isles is Ynys Môn / Anglesey.\n\n\n\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attribute table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\n\n\n\n\nWhat is the precise area of the Isle of Wight (in square kilometres)?\n\n\n\nThe precise area of the Isle of Wight was 382 square kilometres.\n\n\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
+    "text": "1.5 Exploring the Attribute Table\n\nFrom the Layers panel, right-click on British_Isles_land_polygons and click Open Attribute Table. An attribute table is a fundamental part of all GIS datasets. Each row of the table corresponds to a single feature (e.g. a polygon) of the vector layer, and each column, or attribute (of which there can be as many as is needed), records a property of the feature (e.g. name, area, circumference). This particular data layer has two attributes: fid (field identifier) and Area\nClick the Dock Attribute Table icon () so that you can see both the Map Canvas and Attribute Table on screen at once\nTo understand how the attribute table corresponds with the vector layer:\n\nSort the attribute table according to each polygon’s area by clicking the Area column title. Repeated clicks will sort by ascending or descending the values\nClick a row number to select the polygon to which it corresponds. The selected polygon in the Map Canvas has now been highlighted yellow\nClick the Zoom map to the selected rows icon in the top-right corner () to zoom to the selected polygon in the Map Canvas\n\n\n\n\n\n\n\n\nRepeat the step above to explore the ten largest islands of the British Isles\n\n\n\nCan you name the seventh-largest island of the British Isles?\n\nIslayYnys Môn / AngleseySkyeLewis and HarrisYnys Enlli / Bardsey\n\n\n\nThe seventh-largest island of the British Isles is Ynys Môn / Anglesey.\n\n\n\nYou can also select features in the Map Canvas to identify their corresponding attributes in the attribute table:\n\nClick the Select Features icon ()\nSelect (highlight in yellow) the Isle of Wight\nIn the attribute table, click the Move selection to top icon () to move the selected line of the table to the top\nRead the area of the feature - which is in square metres - and convert it to square km (i.e. divide by 1,000,000)\n\n\n\n\nWhat is the precise area of the Isle of Wight (in square kilometres)?\n\n\n\nThe precise area of the Isle of Wight was 382 square kilometres.\n\n\n\nClick the Deselect features icon () to deselect the current selection. These functions will be very useful later on",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started</span>"
     ]
@@ -244,7 +244,7 @@
     "href": "chapters/e02.html#creating-a-print-layout",
     "title": "2  Composing maps",
     "section": "",
-    "text": "Launch QGIS and create a new project\nAdd the British_Isles_land_polygons.gpkg, Wales_border.gpkg, and Wales_Principal_Areas.gpkg layers to your project (the latter two are in the UK_Boundaries folder)\nLabel the Principal Areas of Wales in Welsh or English\nTo create a Print Layout:\n\nClick Project → New Print Layout... (and find the shortcuts to this window)\nGive the print layout an appropriate title\nClick Project → Layout Manager.... You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts\nClick Close\n\nChange the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption:\n\nRight‑click on the page\nClick Page Properties...\nChange Orientation to Portrait\nChange Size to Custom\nReduce the map Height (e.g. to 270)",
+    "text": "Launch QGIS and create a new project\nAdd the British_Isles_land_polygons.gpkg, Wales_border.gpkg, and Wales_Principal_Areas.gpkg layers to your project (the latter two are in the UK_Boundaries folder)\nLabel the Principal Areas of Wales in Welsh or English\nFrom the Wales_map_tiles folder, add your assigned OS map tile to your project. This layer is where your wind farm project will focus\nCalculate the area of your map tile in square kilometres. Need reminding of how to do this? See Section 1.4\nTo create a Print Layout:\n\nClick Project → New Print Layout... (and find the shortcuts to this window)\nGive the print layout an appropriate title\nClick Project → Layout Manager.... You can see here the Print Layout now saved within your project. You can create more than one print layout per project. Use this panel to access and organise layouts\nClick Close\n\nChange the page orientation and size, so it fits onto an A4 portrait document with space beneath to accommodate a caption:\n\nRight‑click on the page\nClick Page Properties...\nChange Orientation to Portrait\nChange Size to Custom\nReduce the map Height (e.g. to 270)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Composing maps</span>"
     ]
@@ -360,8 +360,8 @@
     ]
   },
   {
-    "objectID": "chapters/e03.html#geocoding-new-addresses",
-    "href": "chapters/e03.html#geocoding-new-addresses",
+    "objectID": "chapters/e03.html#sec-geocoding",
+    "href": "chapters/e03.html#sec-geocoding",
     "title": "3  Geocoding and population",
     "section": "3.5 Geocoding new addresses",
     "text": "3.5 Geocoding new addresses\n\nGeocoding is the process of converting a human-readable address or place name into geographic coordinates, such as latitude and longitude. It allows a GIS to plot locations on a map. Such a ‘conversion’ tool is again a powerful application of GIS. Use geocoding to plot where Swansea’s local Tesco stores are located:\n\nNavigate to the Tesco store locator\nSearch for stores in the Swansea area\nOpen Excel\nPopulate a spreadsheet with the Store name and Postcode of the first seven stores from the website\nSave the spreadsheet in a .csv format (UTF-8 is fine)\n\n\n\n\n\n\n\n\nNext, install a specific plugin to do the geocoding. Plugins are written by QGIS developers and other independent developers who want to extend the core functionality of the software. It is this community-led innovating that makes QGIS such a powerful tool. To install plugins:\n\nReturn to QGIS\nSelect Plugins → Manage and Install Plugins...\nSearch for mmqgis\nSelect the mmqgis tool\nClick Install Plugin\nClick Close\n\nUse the MMQGIS tool to attach coordinates to postcode data:\n\nClick MMQGIS → Geocode → Geocode CSV with Web Service\nSet Input CSV File as your .csv file\nSet Address as your postcode column\nSet Web Service as OpenStreetMap / Nominatim\nSet Output File Name to your Downloads folder\nSet Not Found Output List to your Downloads folder\nClick Apply\nWait until Geocoded 7 of 7 appears beneath the tool and check the postcodes appear in the correct places\nClick Close\n\n\n\n\n\n\n\n\nImportantTemporary output\n\n\n\nIt’s common in QGIS to create temporary layers, to check they’re displaying as intended, then save the output to somewhere more sensible. This is especially true if there are several steps (and therefore layers that need to be created) to get to the final intended output. Saving these temporary layers to your Downloads folder is a good idea, as you can eventually empty this folder without clogging up valuable space on your OneDrive account with junk data.",
@@ -404,7 +404,7 @@
     "href": "chapters/e04.html#investigating-your-map-tile",
     "title": "4  Combining vector layers",
     "section": "",
-    "text": "Launch QGIS and create a new project\nFrom the UK_Boundaries folder, add the Wales_border.gpkg layer to your project\nFrom the Wales_map_tiles folder, add your assigned OS map tile to your project. This layer is where your wind farm project will focus\nCalculate the area of your map tile in square kilometres. Need reminding of how to do this? See Section 1.4\nCalculate the perimeter of your map tile in kilometres\nThis time, allow QGIS to do the heavy lifting by calculating area and perimeter for you using the field calculator. Because all master layers on OneDrive cannot be edited, you will first need to save a copy of the map tile to your own OneDrive account. Remember how to export a layer? If not, see Section 3.6",
+    "text": "Launch QGIS and create a new project\nFrom the UK_Boundaries folder, add the Wales_border.gpkg layer to your project\nFrom the Wales_map_tiles folder, add your assigned OS map tile to your project\nThis time, allow QGIS to do the heavy lifting by calculating area and perimeter for you using the field calculator. Because all master layers on OneDrive cannot be edited, you will first need to save a copy of the map tile to your own OneDrive account. Remember how to export a layer? If not, see Section 3.6",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
     ]
@@ -477,6 +477,116 @@
     "text": "4.8 Taking stock of planning constraints\n\nBy this point you should have a set of data layers which together represent those parts of your map tile unsuitable for windfarm development because of their position within, or proximity to, man-made or natural features of the landscape. Consider how best to present these on a map as part of your Project. Remember to think about the purpose and audience, and the need to justify your thinking. Would clipping your buffers remove trailing bits beyond your map tile? In the same way you created a ‘protected areas’ layer from AONB, NP, SSSI, etc., can you do the same for transport links and water bodies? Experimentation is encouraged!\n\n\n\n\n\n\n\nNoteLearning outcomes\n\n\n\nBy the end of this exercise you should be able to:\n\nUse the field calculator to derive geometric attributes (area, perimeter) and compute values such as population density for a map tile.\nClip features from large vector datasets to a defined area of interest, retaining only the data relevant to the analysis.\nCombine multiple clipped layers into a single dataset by merging and dissolving internal boundaries to produce clean output.\nCreate dissolved buffers around line and polygon features to represent zones of constraint or proximity.\nSelect features by attribute using expressions, and organise the resulting layers methodically within a well-structured file system.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Combining vector layers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html",
+    "href": "chapters/e05.html",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "",
+    "text": "5.1 Adding rasters\nElevation is a key determinant of many geographical processes. The height of the land determines whether the coast is above or below sea level. Mountain and valley slopes determine water flow and microclimates. Biomes are often restricted to particular altitudes. Digital Elevation Models (DEMs) describe land surface height in a grid, and are a special case of continuous geospatial data widely available as raster datasets at various spatial resolutions. QGIS has several tools to inspect and manipulate DEMs, which are necessary for the wind farm project.\nThis exercise will guide you through the requirements for making Map 3",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#sec-addrast",
+    "href": "chapters/e05.html#sec-addrast",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "",
+    "text": "Launch QGIS and create a new project\nFrom the Wales_DEM folder, add the SRTM_Wales_DEM_25m.tif layer to your project. This DEM is derived from the Shuttle Radar Topography Mission, which scanned nearly 80% of Earth’s land surfaces in 2000 to generate a DEM at 25 m resolution. Impressive\nFrom the layer’s symbology (right-click → Properties... → Symbology), experiment with the Singleband pseudocolor render type (see Section 2.5):\n\nClick the drop-down arrow to the right of the Color ramp\nClick Create New Color Ramp...\nUnder Please select color ramp type:, select Catalog: cpt‑city → OK. This ‘city’ of Colour Palette Tables (CPTs) is a repository of colour tables designed to creatively present raster data\nTry out various colour ramps under the Topography theme, and see which you prefer\n\nOpen the layer’s symbology again and experiment with adjusting:\n\nThe Color ramp\nThe Min and Max values to be shown iii.The Mode of classification (Continuous, Equal Interval, and Quantile)\nThe number of Classes",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#inspecting-rasters",
+    "href": "chapters/e05.html#inspecting-rasters",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.2 Inspecting rasters",
+    "text": "5.2 Inspecting rasters\n\nInstall the Value Tool plugin (see Section 3.5). This tool allows you to interrogate data values as you pass the cursor over rasters\nClick the Value Tool icon ()\nUse the Value Tool to answer the following:\n\n\n\nAccording to the SRTM data, what is the height of Yr Wyddfa (the highest mountain in Eryri)? (don’t use commas)\n\nAccording to the SRTM data, what is the height of Pen y Fan (the highest mountain in the Bannau Brycheiniog)? (don’t use commas)\n\n\n\n\nThe height of Yr Wyddfa was 1,063.\nThe height of Pen y Fan was 876.\n\n\n\n\nAdd the Wales_operational_windfarms.gpkg layer to your project\nReflect on where these wind farms are located. How do their locations correlate with elevation?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#sec-cliprast",
+    "href": "chapters/e05.html#sec-cliprast",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.3 Clipping rasters",
+    "text": "5.3 Clipping rasters\n\nAdd your map tile to your project. As with vector layers, it is often much easier to process only the part of the Wales DEM that is within your map tile\nClip the DEM to your map tile:\n\nClick Raster → Extraction → Clip Raster by Mask Layer...\nSet Input layer to SRTM_Wales_DEM_25m\nSetMask layer to your map tile\nClick the Browse icon () next to Clipped (mask) to save the clipped raster to your OneDrive\nClick Run → Close\nTurn off the visibility of the original (unclipped) raster\nHave you saved your project recently?\n\nExplore your map tile’s DEM using a suitable colour palette and different Min / max ranges\nIdentify the highest point in your clipped DEM and, if possible, its name by Googling\nHere’s an opportunity to keep your project clutter-free. Remove the SRTM_Wales_DEM_25m and Wales_operational_windfarms layers from your project",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#viewing-maps-in-3d",
+    "href": "chapters/e05.html#viewing-maps-in-3d",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.4 Viewing maps in 3D",
+    "text": "5.4 Viewing maps in 3D\n\nView the clipped DEM in 3D:\n\nClick View → 3D Map Views → New 3D Map View\nClick the Configure... icon ()\nClick Terrain\nSet Type to DEM (Raster Layer)\nSet Elevation to your clipped DEM\nSet Vertical scale to 4 (higher values exaggerate or ‘stetch’ DEM values further appart)\nSet Tile resolution to 64 px\nClick OK\nUse the mouse (by scrolling and holding down the click on the scroller) to explore the 3D map\nExperiment with different values of Vertical scale and Tile resolution to understand how these work\nAdd other layers to your Map Canvas to see them plotted in 3D",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#deriving-a-slope-raster",
+    "href": "chapters/e05.html#deriving-a-slope-raster",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.5 Deriving a slope raster",
+    "text": "5.5 Deriving a slope raster\n\nSlope (gradient of the land surface) is a fundamental property of the land surface topography, and can provide valuable information on erosion potential, water flow, construction potential etc. Derive a slope raster from a DEM:\n\nClick Raster → Analysis → Slope...\nSet Input layer as your clipped DEM\nClick the Browse icon () next to Slope to save the slope raster somewhere sensible\nClick Run → Close\nUse the layer’s legend to identify the steepest areas. Why are they there?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#deriving-an-aspect-raster",
+    "href": "chapters/e05.html#deriving-an-aspect-raster",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.6 Deriving an aspect raster",
+    "text": "5.6 Deriving an aspect raster\n\nAspect (compass direction towards which the gradient faces) is another fundamental property of land topography, providing information on insolation potential, where particular features are visible from, predominant wind exposure etc. Derive an aspect raster from a DEM:\n\nClick Raster → Analysis → Aspect...\nSet Input layer as your clipped DEM\nClick the Browse icon () next to Aspect to save the aspect raster somewhere sensible\nClick Run → Close\n\nAn aspect of 1° (just East of North) is very close in meaning to an aspect of 359° (just West of North), yet they are at the opposite ends of the value range. A colour palette table with the same colour for both ends of the value range would make interpretation easier:\n\nOpen the layer’s symbology\nNavigate to the cpt‑city colour Palette Tables (CPTs) (see Section 5.1)\nClick the All by author tab\nIn the Name window, click grass\nIn the GRASS colour ramps window, click aspect\nClick OK → OK",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#deriving-a-hillshade-raster",
+    "href": "chapters/e05.html#deriving-a-hillshade-raster",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.7 Deriving a hillshade raster",
+    "text": "5.7 Deriving a hillshade raster\n\nHill shading simulates the effect of light falling on a surface by combining slope, aspect, and a solar illumination direction. This approach is commonly used to visualize topography in maps and figures. Derive a hillshade raster from a DEM:\n\nClick Raster → Analysis → Hillshade...\nSet Input layer as your clipped DEM\nClick the Browse icon () next to Hillshade to save the aspect raster somewhere sensible\nClick Run → Close\nFrom the Layers panel, turn off layer visibilities or arrange layers so that your hillshade layer is above your DEM layer\nChange the hillshade transparency to 50%\nChange the symology of your DEM to something intuitive for land height (e.g. Greens). The effect should be quite pleasing!\n\nCreate new hillshade rasters, but this time modify the following to improve the effect for your specific clipped DEM:\n\nZ factor (probably no more than 5)\nAzimuth of the light\nAltitude of the light",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#classifying-raster-data",
+    "href": "chapters/e05.html#classifying-raster-data",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.8 Classifying raster data",
+    "text": "5.8 Classifying raster data\n\nUse the raster calculator to perform cell-by-cell operations, such as to find parts of a raster layer within a specified range of values. One of the constraints for building a wind farm is that the land surface slope should be no more than 6 degrees. This is simply because greater slopes are less stable and not normally viable to build on. Build an expression in the raster calculator as follows:\n\nClick Raster → Raster Calculator...\nUnder Raster Bands, double-click on the slope raster name you created earlier\nIn the Raster Calculation Expression window, add &lt;6\nClick the Browse icon () next to Output layer to save the classified slope raster somewhere sensible\nClick OK\n\nThe output raster has two values; 0 (black) and 1 (white). Given you instructed the raster calculator to identify areas of the raster that are less than 6°, what do you think these colours represent? Answer the following:\n\n\n\nAccording to the SRTM data, what is the height of Yr Wyddfa (the highest mountain in Eryri)? (don’t use commas)\n\nAccording to the SRTM data, what is the height of Pen y Fan (the highest mountain in the Bannau Brycheiniog)? (don’t use commas)\n\n\n\n\nThe height of Yr Wyddfa was 1,063.\nThe height of Pen y Fan was 876.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#converting-to-vector-polygons",
+    "href": "chapters/e05.html#converting-to-vector-polygons",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.9 Converting to vector polygons",
+    "text": "5.9 Converting to vector polygons\n\nVector polygons can be created from raster layers so that they can be combined with other vector constraints such as those created in chapter 4. Convert the slope raster classifications to vector polygons:\n\nClick Raster → Conversion → Polygonize (Raster to Vector)...\nSet Input layer as your classified slope layer\nSet Name of the field to create as Suitable\nClick Run → Close\n\nPolygons now demarcate the areas that are suitable (slope &lt; 6°) or unsuitable (slope &gt; 6°) for building upon. Open the attribute table to explore which is which. Think binary; under the ‘Suitable’ column, 1s represent ‘yes’, 0s represent ‘no’\nVisualise the suitable and unsuitable areas for construction in the symbology (see ?sec-catvec)\nSelect the ‘unsuitable’ polygons (Suitable = 0) using Select features using an expression (see Section 4.7)\nExport the selected polygons (remember to use the Save Selected Features As... option). Name and store sensibly",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/e05.html#preparing-for-map-3",
+    "href": "chapters/e05.html#preparing-for-map-3",
+    "title": "5  Elevation, slope, and wind speed",
+    "section": "5.10 Preparing for Map 3",
+    "text": "5.10 Preparing for Map 3\n\nFrom the Wales_mean_windspeed folder, add the Wales_wind-speed_50m.tif layer to your project\nRead over the description_and_data_source.txt file in the Wales_mean_windspeed folder for details about the data (Note: every GIS file as an associated description_and_data_source.txt)\nClip the wind speed raster to your tile and save it somewhere sensible (see Section 5.3)\nVisualise the data using a suitable colour palette\nAdd the constraint layers you created in Exercise 04 (see Chapter 4)\nWith the wind speed layer beneath constraints, explore where development may be permitted and optimal. You can explore not just where building a wind farm may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area\nDesign Map 3 to clearly show the best otherwise‑unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why (e.g. by providing additional information in your caption)\n\n\n\n\n\n\n\nNoteLearning outcomes\n\n\n\nBy the end of this exercise you should be able to:\n\nVisualise raster elevation data using pseudocolour ramps, cpt-city palettes, and min/max scaling, and interrogate cell values directly with the Value Tool.\nClip raster layers to an area of interest and explore the resulting surface in three dimensions.\nDerive slope, aspect, and hillshade rasters from a DEM, and explain what each reveals about surface topography and geophysical process.\nClassify raster data with the raster calculator to identify areas meeting a defined threshold, and convert the result to vector polygons for combination with other constraint layers.\nAppreciate how elevation, slope, and wind speed interact to determine site suitability, integrating raster-derived constraints into a justified development decision.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Elevation, slope, and wind speed</span>"
     ]
   },
   {

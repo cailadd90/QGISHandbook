@@ -1,0 +1,22 @@
+Question
+========
+According to the SRTM data, what is the height of Yr Wyddfa (the highest mountain in Eryri)? *(don't use commas)*
+
+##ANSWER1##
+
+According to the SRTM data, what is the height of Pen y Fan (the highest mountain in the Bannau Brycheiniog)? *(don't use commas)*
+
+##ANSWER2##
+
+Solution
+========
+- The height of Yr Wyddfa was 1,063.
+- The height of Pen y Fan was 876.
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num
+exsolution: 1063|876
+extol: 30|30
+exname: E05_Q1
