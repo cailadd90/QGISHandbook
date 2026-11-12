@@ -18,6 +18,7 @@ book:
   - chapters/e03.qmd
   - chapters/e04.qmd
   - chapters/e05.qmd
+  - chapters/e06.qmd
   - chapters/faq.qmd
   - chapters/references.qmd
 bibliography: bib/references.bib
