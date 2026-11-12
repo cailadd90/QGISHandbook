@@ -10,7 +10,7 @@ Mae cyfathrebu data a chysyniadau daearyddol drwy fapiau yn sgil sylfaenol i wyd
 Creu mapiau cyflawn yn swyddogaethol yn QGIS ar gyfer print neu allbwn digidol. Byddwch yn dysgu sut i greu map graddfa 1:1,000,000 o Gymru sy'n dangos cyflymder cymedrig y gwynt a ffiniau sirol sy'n angenrheidiol ar gyfer gwneud Map 1.
 :::
 
-## Creu cynllun argraffu
+## Creu cynllun argraffu {#sec-print}
 
 (@) Lansiwch QGIS a chreuwch prosiect newydd
 

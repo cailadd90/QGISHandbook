@@ -90,3 +90,17 @@ Os oes panel neu far offer ar goll:
 1. Cliciwch `View` → `Panels` or `Toolbars`
 2. Dewiswch y panel/bar offer perthnasol
 :::
+
+::: {.callout-note collapse="true" icon=false}
+### A allaf droi'r bylchau rhwng fy nghyfyngiadau yn haen newydd sy'n cynrychioli 'ardaloedd posibl ar gyfer datblygu fferm gwynt'?
+
+Gallwch! Trwy echdynnu'r gwahaniaeth rhwng teilsen eich map a'ch haen cyfyngiadau yn gyntaf, ac yna gwneud pob polygon yn unigryw:
+
+1. Cliciwch `Vector` → `Geoprocessing Tools` → `Difference...`
+2. Gosodwch `Input layer` fel eichn teilsen map
+3. Gosodwch `Overlay layer` fel eich haen cyfyngiadau
+4. Cliciwch `Run` → `Close`
+5. Cliciwch `Vector` → `Geometry Tools` → `Multipart to Singleparts...`
+6. Gosodwch `Input layer` fel eich haen gwahaniaeth
+7. Cliciwch `Run` → `Close`
+:::

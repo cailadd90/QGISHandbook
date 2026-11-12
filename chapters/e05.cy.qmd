@@ -84,6 +84,17 @@ exams2forms("E05_Q1.cy.Rmd", edir = "exercises")
     x. Arbrofwch gyda gwahanol werthoedd o `Vertical scale` a `Tile resolution` i ddeall sut mae'r rhain yn gweithio
     xi. Ychwanegwch haenau eraill at eich Map Canvas i'w gweld wedi'u plotio mewn 3D
 
+(@) Mae hefyd yn bosibl ychwanegu mapiau 3D ar Print Layout (h.y. lle rydych chi'n llunio eich mapiau). Rhowch gynnig ar hyn:
+
+    i. Crëwch Print Layout newydd (gweler @sec-print)
+    ii. Cliciwch yr eicon `Add 3D Map` (![](figs/Add3DMap.png){width=3%})
+    iii. Lluniwch fap ar y print layout. Dylai `Map 3D 1` ymddangos o dan y tab `Items`
+    iv. Sicrhewch fod `Map 3D 1` wedi'i ddewis, yna cliciwch ar y tab `Item Properties`
+    v. Cliciwch `Copy Settings from a 3D View...` → `Map 3D 1`
+    vi. Cliciwch `Set from a 3D View...` → `Map 3D 1`
+
+(@) Dylai'r map nawr ddangos y olygfa 3D a grewch yn gynharach. Os na allwch ei weld, ceisiwch allforio'r map. Mae'n ymddangos bod fersiynau cynharach o QGIS yn cael trafferth dangos mapiau 3D yn y Print Layout, ond dim pan gaiff y map ei allforio
+
 ## Creu raster llethr
 
 (@) Mae llethr (graddiant wyneb y tir) yn briodwedd sylfaenol o dopograffeg wyneb y tir, a gall ddarparu gwybodaeth werthfawr am botensial erydiad, llif dŵr, potensial adeiladu ac ati. Creuwch raster llethr o DEM:
@@ -150,7 +161,7 @@ library(exams2forms)
 exams2forms("E05_Q2.cy.Rmd", edir = "exercises")
 ```
 
-## Trosi i bolygonau fector
+## Trosi i bolygonau fector {#sec-polygonize}
 
 (@) Gellir creu polygonau fector o haenau raster er mwyn eu cyfuno â chyfyngiadau fector eraill fel y rhai a grëwyd yn [pennod 4](#sec-e04). Trosiwch y raster dosbarthu llethrau yn bolygonau fector:
 
@@ -163,7 +174,7 @@ exams2forms("E05_Q2.cy.Rmd", edir = "exercises")
 
 (@) Delweddwch ardaloedd addas ac anaddas ar gyfer adeiladu yn y symboleg (gweler @sec-catvec)
 
-(@) Dewiswch y polygonau 'anaddas' (Addas = 0) gan ddefnyddio `Select features using an expression` (gweler @sec-selexpress)
+(@) Dewiswch y polygonau 'anaddas' (`Addas = 0`) gan ddefnyddio `Select features using an expression` (gweler @sec-selexpress)
 
 (@) Allforiwch y polygonau a ddewiswyd (cofiwch ddefnyddio'r opsiwn `Save Selected Features As...`). Enwch a storiwch yn synhwyrol
 
@@ -177,7 +188,7 @@ exams2forms("E05_Q2.cy.Rmd", edir = "exercises")
 
 (@) Delweddwch y ddata gan ddefnyddio palet lliw addas
 
-(@) Ychwanegwch yr haenau cyfyngu a greoch yn Ymarfer 04 (gweler @sec-e04)
+(@) Ychwanegwch y haenau cyfyngu a grewch yn Ymarfer 04 (gweler @sec-e04), ac defnyddiwch merge a dissolve i greu darluniad symlach o'r ardaloedd cyfyngedig
 
 (@) Gyda'r haen cyflymder gwynt o dan gyfyngiadau, archwiliwch ble y gellir caniatáu datblygiad ac sydd yn optimaidd. Gallwch archwilio nid yn unig lle y gallai fod yn ganiataol adeiladu fferm wynt, ond hefyd lle mae'r darnau tir mwyaf gwyntog (sy'n cynnig y cynhyrchu pŵer gorau) a'r rhai mwyaf o ran maint (sy'n gallu cynnwys y nifer mwyaf posibl o dyrbinau) wedi'u lleoli o fewn ardal eich teilsen fap
 

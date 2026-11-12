@@ -1,0 +1,19 @@
+Question
+========
+Y lliw sy'n cynrychioli ardaloedd y gellir gweld y fferm wynt ohonynt oedd ##ANSWER1##.
+
+Answerlist
+----------
+* du
+* gwyn
+
+Solution
+========
+Y lliw sy'n cynrychioli ardaloedd y gellir gweld y fferm wynt ohonynt oedd gwyn.
+
+Meta-information
+================
+extype: cloze
+exclozetype: schoice
+exsolution: 01
+exname: E06_Q1.cy

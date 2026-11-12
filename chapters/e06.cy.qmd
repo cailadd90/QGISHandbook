@@ -1,61 +1,148 @@
-# Polygon ardal fferm wynt, golygfa, ac effaith {#sec-e06}
+# Polygon ardal fferm wynt, viewshed, ac effaith {#sec-e06}
 
-> **Dates of practical:** 20th and 27th November and 11th December 2025
+> **Dyddiad yr ymarfer:** 20fed, 23ain, a 25ain Tachwedd 2026
 
-This exercise assumes that you have followed Exercises 04 and 05, created wind farm planning constraints for a 20 × 20 km map tile in Wales (protected areas, transport, housing, water, topography), and investigated wind speed. Data are on the **L:** drive under `College of Science/Geography/GEG276`. Read alongside **GIS_guide_to_practical_exercises** and the wind farm Project instructions on Canvas.
+Mae'r ymarfer hwn i gyd yn ymwneud â chymhwyso'r sgiliau rydych chi wedi'u hennill dros y pum ymarfer diwethaf, i atgyfnerthu eich sgiliau GIS a chwblhau'r prosiect fferm wynt yn llwyddiannus. Byddwch hefyd yn dysgu sut i greu polygon newydd (i gynrychioli lleoliad eich fferm wynt), cyfrifo faint o dyrbinau gwynt allai ffitio yn yr ardal, a chreu viewshed i nodi pwy allai gael eu heffeithio gan ddatblygiad y fferm wynt.
 
 ::: {.callout-note}
-## Learning aims
+## Amcanion dysgu
 
-Create and edit a polygon to represent a wind farm, calculate its area, create a viewshed, and count the population living within view of the proposed wind farm.
+Creu a golygu polygon i gynrychioli fferm wynt, cyfrifo faint o dyrbinau sy'n ffitio yn yr ardal, creu viewshed, a chyfrif y boblogaeth sy'n byw o fewn golwg y fferm wynt arfaethedig. Mae'r camau hyn yn angenrheidiol ar gyfer Map 4.
 :::
 
-## <input type="checkbox"> Starting point
+## Creu polygon fferm wynt
 
-(@) Prepare a QGIS project including vector constraint layers and a wind speed raster. From Maps 2 and 3, choose the single optimum unconstrained location in your tile for a wind farm (sufficiently large, with high wind). Verify suitability with OpenStreetMap XYZ Tiles. Use the Measure tool to confirm a narrowest dimension > 150 m.
+(@) Lansiwch QGIS a chreuwch prosiect newydd
 
-## <input type="checkbox"> wind farm polygon creation
+(@) Ychwanegwch eich haenau cyfyngiad a DEM y map deilsen (a grëwyd mewn ymarferion blaenorol)
 
-(@) Create a new GeoPackage polygon layer (**Layer → Create Layer → New GeoPackage Layer**). Choose a sensible name and location, **Geometry type** = polygon, **CRS** = EPSG:27700. Right‑click the layer and **Toggle Editing**.
+(@) Creuwch haen fector GeoPackage newydd sy'n cynrychioli lleoliad eich fferm wynt gorau posibl:
 
-(@) Add a polygon feature (**Edit → Add Polygon Feature**). Left‑click to draw vertices, right‑click to finish, and enter an ID (e.g., 1). Use the mouse wheel/middle button to navigate as you edit.
+    i. Cliciwch `Layer` → `Create Layer` → `New GeoPackage Layer...`
+    ii. Cliciwch yr eicon `Pori` (![](figs/Browse.png){width=3%}) wrth ymyl `Dataset` i gadw fector lleoliad y fferm wynt yn rhywle synhwyrol
+    iii. Gosodwch `Geometry type` as `Polygon`
+    iv. Gosodwch y CRS fel `EPSG:27700`
+    v. Cliciwch `OK`
+    vi. O'r panel `Layers`, dde-gliciwch ar yr haen newydd a chliciwch `Toggle Editing` neu dewch o hyd i'r llwybr byr (![](figs/ToggleEditing.png){width=3%})
+        
+    Gallwch chi weld pryd mae haen ym modd golygu, gan fod eicon pensil yn ymddangos uwchben symbol yr haen. Mae golygiadau'n rhai dros dro nes i chi eu cadw. Mae hyn yn caniatáu ichi ddadwneud unrhyw gamgymeriadau a wnaethoch chi. Ond byddwch yn ofalus - ar ôl eu cadw, ni ellir dadwneud camgymeriadau'n hawdd!
+    
+    vii. O'r `Digitizing Toolbar`, cliciwch ar `Add Polygon Feature`
+        
+    ![](figs/DigitizingToolbar.png){fig-align='center' width=50%}
+        
+    viii. Chwich-gliciwch ar y Map Canvas i lunio fertigau (pwyntiau), i amlinellu lleoliad gorau posibl eich fferm wynt
+    ix. Unwaith y bydd eich polygon wedi'i gwblhau, de-gliciwch i orffen
+    x. Cliciwch `OK`
+    xi. Os oes angen, addaswch y polygon drwy:
+        a. Cliciwch y `Vertex Tool` (![](figs/VertexTool.png){width=3%}) 
+        b. Dewiswch fertig polygon
+        c. Symudwch y cyrchwr i'r lleoliad a ddymunir a phwyswch chwich-glic
+    xii. Cliciwch yr eicon `Toggle Editing` (![](figs/ToggleEditing.png){width=3%}) unwaith eto i ddiffodd golygu
+    xiii. Cliciwch `Save`
 
-(@) Improve the polygon shape with editing tools as needed (e.g., **Vertex Tool**).
+::: {.callout-hint}
+## Galluogi snapio
 
-(@) Toggle off editing and save changes.
+Ydych chi'n berffeithydd, ond allwch chi ddim cael ymyl eich ardal fferm wynt orau i ffinio â haen gyfyngiad? Wel, yr offeryn snap yw'r un i chi! Bydd hwn yn tynnu'r cyrchwr i fyny yn erbyn ymyl haen fector i gynorthwyo gyda lleoliad perffaith y fertigau. Rhowch gynnig arni trwy glicio ar `View` → `Toolbars` → `Snapping Toolbar`, yna cliciwch ar yr eicon `Enable Snapping` (![](figs/EnableSnapping.png){width=3%}).
+:::
 
-## <input type="checkbox"> How big is your wind farm?
+## Cyfrifo nifer y tyrbinau gwynt y gellir eu hadeiladu
 
-(@) Calculate polygon area using the **Field Calculator**. Create a new field `area` (Decimal/real) and use `$area`. Open the attribute table to read the area (m²) and convert to km². A 2 MW turbine needs ~0.5 km². Estimate potential turbine count. Ensure narrowest width ≥ 150 m to be viable.
+(@) Mae'r awdurdod cynllunio lleol yn dymuno gosod tyrbinau 50 m ar draws y safle, pob un yn cynhyrchu 750kWh. Sut allwch chi nodi'r ffordd fwyaf effeithlon o bacio tyrbinau yn eich polygon? Grid o hecsagonau yw'r trefniant pacio rheolaidd mwyaf effeithlon o ran lle yn aml. Crëwch grid hecsagonol ar draws eich polygon:
 
-## <input type="checkbox"> Creating a viewshed
+    i. Cliciwch `Vector` → `Research Tools` → `Create Grid...`
+    ii. Gosodwch `Grid type` i `Hexagon (Polygon)`
+    iii. O dan `Grid extent`, cliciwch y cwymplen → `Calculate from Layer` → dewiswch bolygon lleoliad eich fferm wynt
+    iv. Gosodwch `Bylchau llorweddol` a `Bylchau fertigol` i `100` metr
+    v. Gosodwch `Grid CRS` i `EPSG:27700`
+    vi. Cliciwch `Run` → `Close`
+    
+(@) Dileuwch yr hecsagonau sy'n ymestyn y tu hwnt i'ch polygon fferm wynt:
 
-(@) Install the **Visibility Analysis** plugin.
+    i. Cliciwch `Vector` → `Research Tools` → `Select By Location...`
+    ii. Gosodwch Select features from` i'ch haen `Grid` hecsagonol
+    iii. Gwiriwch `overlap` ac `disjoint` yn unig
+    iv. Gosodwch `By comparing to the features from` i'ch polygon fferm wynt
+    v. Cliciwch `Run`
+    vi. Dewiswch yr haen `Grid` yn y panel `Layers`
+    vii. Cliciwch yr eicon `Toggle Editing` (![](figs/ToggleEditing.png){width=3%}) i droi golygu ymlaen
+    viii. Cliciwch yr eicon `Delete Selected` (![](figs/DeleteSelected.png){width=3%}) i ddileu'r hecsagonau diangen
+    ix. Cliciwch yr eicon `Toggle Editing` (![](figs/ToggleEditing.png){width=3%}) unwaith eto i ddiffodd golygu
+    x. Cliciwch `Save`
 
-(@) Create a centroid point for your wind farm polygon (**Vector → Geometry Tools → Centroids**). This point represents the wind farm location for viewshed analysis.
+(@) Marciwch leoliad y tyrbinau gwynt arfaethedig drwy greu pwynt yng nghanol pob hecsagon:
 
-(@) In the **Processing Toolbox**, run **Visibility Analysis → Create Viewpoints**. Set Observer locations = wind farm centroid; DEM = your tile DEM; Radius of analysis = 10 km; Observer height = 50 m; Target height = 2 m. Save the output viewpoint layer.
+    i. Cliciwch `Vector` → `Geometry Tools` → `Centroids...`
+    ii. Gosodwch `Input layer` i'r haen `Grid`
+    iii. Cliciwch `Run` → `Close`
+    iv. Cadwch yr haen centroidau i rywle synhwyrol
+    v. Tynnwch yr haen grid hecsagon (sydd bellach yn ddiangen)
+    
+(@) Gwiriwch y canlynol:
 
-(@) Run **Visibility Analysis → Analysis → Viewshed** using the viewpoint layer and your tile DEM. Explore and understand the result.
+    i. Cyfrifwch arwynebedd eich polygon fferm wynt (gweler @sec-fieldcalc)
+    ii. Gwiriwch y pellter rhwng pwyntiau eich tyrbin gwynt
+    iii. Defnyddiwch y tabl priodoleddau i gyfrif nifer y tyrbinau sydd yn eich fferm wynt
+    iv. Addaswch symboleg eich pwyntiau tyrbin gwynt
+    v. Cyfrifwch allbwn ynni posibl eich fferm wynt mewn kWh (gall pob tyrbin gynhyrchu 750kWh)
 
-## <input type="checkbox"> Calculating impact
+## Creu viewshed
 
-(@) Vectorise your viewshed (see Exercise 05) to create polygons representing areas within 10 km from which the wind farm is visible. Use select‑by‑value and save selected features.
+(@) Mae viewshed yn defnyddio DEM i ddarganfod yr rhyng-welededd rhwng un pwynt yn y dirwedd ac un arall. Mae hyn yn werthfawr iawn wrth archwilio effaith weledol bosib seilwaith newydd fel fferm wynt. Mae'r offeryn yn tybio eich bod am ddod o hyd i bobman yn y dirwedd (pob 'Targed') y gall 'Arsylwr' ei weld o'u lleoliad. Mewn gwirionedd, rydym am ddod o hyd i bobman yn y dirwedd lle gellir gweld y targed. Mae'r offeryn Viewshed yn gweithio yn yr un ffordd yn y ddau achos, ond mae angen i ni gyfnewid 'Arsylwr' â 'Targed'. Mae creu golygfa yn broses ddwy gam:
 
-(@) Using methods from Exercise 03, calculate the total number of people registered at postcodes within line‑of‑sight. If errors about “invalid geometry” occur, buffer the visibility polygon by 1 m and retry.
+    i. Dewiswch un o'r pwyntiau ger canol eich polygon fferm wynt
+    ii. Gosodwch yr ategyn `Visibility Analysis` (`Plugins` → `Manage and Install Plugins...`)
+    iii. Cliciwch yr eicon `Toolbox` (![](figs/ProcessingToolbox.png){width=3%}) i actifadu'r `Processing Toolbox`
+    iv. Cliciwch `Visibility analysis` → `Create viewpoints` → `Create viewpoints`
+    v. Gosodwch `Observer location(s)` i'ch pwyntiau tyrbin gwynt
+    vi. Ticiwch `Selected features only`
+    vii. Gosodwch `Digital elevation model` i'ch DEM y teilen map 
+    viii. Gosodwch `Radius of analysis, meters` i 10 km
+    ix Gosodwch `Observer height, meters` i uchder eich tyrbinau gwynt (50 m)
+    x. Gosodwch `Target height, meters` i uchder person cyffredin (1.7 m)
+    xi. Cliciwch `Run` → `Close`
+    
+    Mae math penodol o haen bwyntiau bellach wedi'i chreu, sy'n ofynnol ar gyfer y camau sy'n weddill:
+    
+    xii. O dan y `Processing Toolbox`, cliciwch `Visibility analysis` → `Analysis` → `Viewshed`
+    xiii. Gosodwch `Observer location(s)` i `Output layer`
+    xiv. Gosodwch `Digital elevation model` i'ch DEM y teilen map
+    xv. Cliciwch `Run` → `Close`
+    
+(@) Mae gan y raster allbwn ddau werth; `0` (du) ac `1` (gwyn). Drwy gymharu eich viewshed yn erbyn DEM y teilsen map, beth yw eich barn chi fod y lliwiau hyn yn ei gynrychioli? Atebwch y canlynol:
 
-(@) Design **Map 4** to present the wind farm location/extent and its visual impact. Focus on population and visibility; you do not need to repeat earlier context maps.
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+library(exams2forms)
+exams2forms("E06_Q1.cy.Rmd", edir = "exercises")
+```
 
-(@) Comment in your CW4 caption on how well your analysis captures potential impact if your wind farm lies near the tile edge.
+## Cyfrifo effeithiau gwelededd ar gyfer Map 4
 
-::: {.callout-tip}
-# Learning outcomes
+(@) Fectoreiddiwch eich golygfa i greu polygonau sy'n cynrychioli ardaloedd o fewn 10 km lle mae'r fferm wynt yn weladwy:
 
-By the end of this exercise you should:
+    i. Defnyddiwch yr offeryn `Polygonize...` i drosi'r raster i fector (gweler @sec-polygonize)
+    ii. Defnyddiwch yr offeryn `Select features using an expression` i ddewis yr ardaloedd y gellir gweld y fferm wynt (gweler @sec-selexpress)
+    iii. Cadwch y nodweddion a ddewiswyd yn rhywle synhwyrol
 
-1. Create and edit a vector layer in QGIS.
-2. Create a new polygon layer to represent a proposed wind farm location.
-3. Calculate the area of a vector polygon and estimate turbine capacity.
-4. Create a viewshed using an observer/target and a DEM.
-5. Quantify population within sight of the proposed wind farm and its proportion of the tile population.
+(@) Gan ddefnyddio sgiliau o @sec-e03, cyfrifwch y canlynol:
+
+    i. Cyfanswm y bobl sydd wedi cofrestru mewn codau post o fewn llinell olwg eich fferm wynt arfaethedig
+    ii. Y gyfran o gyfanswm y boblogaeth yn eich teilsen map sy'n gallu gweld y fferm wynt
+
+(@) Dyluniwch Fap 4 i gyflwyno maint y fferm wynt a'i heffaith weledol yn effeithiol (ystyriwch ddefnyddio'r sgiliau delweddu a ddysgwyd yn @sec-e05 i wneud i'ch map edrych yn drawiadol), a defnyddiwch eich sgiliau i echdynnu gwybodaeth berthnasol am ystadegau poblogaeth a gwelededd tirwedd - hyd yn oed y tu hwnt i deilsen eich map os dymunwch.
+
+::: {.callout-note}
+## Canlyniadau dysgu
+
+Erbyn diwedd yr ymarfer hwn dylech chi allu:
+
+1. Creu a golygu haen fector yn QGIS.
+2. Creu haen polygon newydd i gynrychioli lleoliad fferm wynt arfaethedig.
+3. Cyfrifo arwynebedd polygon fector ac amcangyfrifi gapasiti tyrbin.
+4. Creu viewshed gan ddefnyddio arsylwr/targed a DEM.
+5. Mesur y boblogaeth o fewn golwg y fferm wynt arfaethedig a'i chyfran o boblogaeth y teilsen.
 :::

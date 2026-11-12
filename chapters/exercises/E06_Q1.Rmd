@@ -1,0 +1,19 @@
+Question
+========
+The colour that represents areas from which the wind farm can be seen was ##ANSWER1##.
+
+Answerlist
+----------
+* black
+* white
+
+Solution
+========
+The colour that represents areas from which the wind farm can be seen was white.
+
+Meta-information
+================
+extype: cloze
+exclozetype: schoice
+exsolution: 01
+exname: E06_Q1

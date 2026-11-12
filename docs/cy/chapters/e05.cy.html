@@ -168,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#creu-raster-agwedd" id="toc-creu-raster-agwedd" class="nav-link" data-scroll-target="#creu-raster-agwedd"><span class="header-section-number">5.6</span> Creu raster agwedd</a></li>
   <li><a href="#creu-raster-hillshade" id="toc-creu-raster-hillshade" class="nav-link" data-scroll-target="#creu-raster-hillshade"><span class="header-section-number">5.7</span> Creu raster hillshade</a></li>
   <li><a href="#dosbarthu-data-raster" id="toc-dosbarthu-data-raster" class="nav-link" data-scroll-target="#dosbarthu-data-raster"><span class="header-section-number">5.8</span> Dosbarthu data raster</a></li>
-  <li><a href="#trosi-i-bolygonau-fector" id="toc-trosi-i-bolygonau-fector" class="nav-link" data-scroll-target="#trosi-i-bolygonau-fector"><span class="header-section-number">5.9</span> Trosi i bolygonau fector</a></li>
+  <li><a href="#sec-polygonize" id="toc-sec-polygonize" class="nav-link" data-scroll-target="#sec-polygonize"><span class="header-section-number">5.9</span> Trosi i bolygonau fector</a></li>
   <li><a href="#paratoi-ar-gyfer-map-3" id="toc-paratoi-ar-gyfer-map-3" class="nav-link" data-scroll-target="#paratoi-ar-gyfer-map-3"><span class="header-section-number">5.10</span> Paratoi ar gyfer Map 3</a></li>
   </ul></nav>
 </div>
@@ -242,9 +242,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Yn ôl data SRTM, beth yw uchder Yr Wyddfa (y mynydd uchaf yn Eryri)? <em>(peidiwch â defnyddio atalnodau)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-76b3a772064d95945b3e9902524e3f15" data-tol="30" size="20" data-answer="bBRTA1cEFW8="></p>
+<p><input class="webex-solveme nospaces" id="webex-afd1e9ecc6ccdcf56d113fd9db7fd3d4" data-tol="30" size="20" data-answer="OkRVAVMKRz4="></p>
 <p>Yn ôl data SRTM, beth yw uchder Pen y Fan (y mynydd uchaf yn y Bannau Brycheiniog)? <em>(peidiwch â defnyddio atalnodau)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-2b89253d3f808a03fbd0fa48858029d7" data-tol="30" size="20" data-answer="aUAADgQXbg=="></p>
+<p><input class="webex-solveme nospaces" id="webex-c99f18633c7a5be7fd3d493f280d3fda" data-tol="30" size="20" data-answer="OBsBUQcaaw=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -301,9 +301,25 @@ ul.task-list li input[type="checkbox"] {
 <li>Ychwanegwch haenau eraill at eich Map Canvas i’w gweld wedi’u plotio mewn 3D</li>
 </ol>
 </li>
+<li>
+<p>Mae hefyd yn bosibl ychwanegu mapiau 3D ar Print Layout (h.y. lle rydych chi’n llunio eich mapiau). Rhowch gynnig ar hyn:</p>
+<ol type="i">
+<li>Crëwch Print Layout newydd (gweler <a href="e02.cy.html#sec-print" class="quarto-xref"><span>Section 2.1</span></a>)</li>
+<li>Cliciwch yr eicon <code>Add 3D Map</code> (<img src="figs/Add3DMap.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Lluniwch fap ar y print layout. Dylai <code>Map 3D 1</code> ymddangos o dan y tab <code>Items</code>
+</li>
+<li>Sicrhewch fod <code>Map 3D 1</code> wedi’i ddewis, yna cliciwch ar y tab <code>Item Properties</code>
+</li>
+<li>Cliciwch <code>Copy Settings from a 3D View...</code> → <code>Map 3D 1</code>
+</li>
+<li>Cliciwch <code>Set from a 3D View...</code> → <code>Map 3D 1</code>
+</li>
+</ol>
+</li>
+<li><p>Dylai’r map nawr ddangos y olygfa 3D a grewch yn gynharach. Os na allwch ei weld, ceisiwch allforio’r map. Mae’n ymddangos bod fersiynau cynharach o QGIS yn cael trafferth dangos mapiau 3D yn y Print Layout, ond dim pan gaiff y map ei allforio</p></li>
 </ol></section><section id="creu-raster-llethr" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="creu-raster-llethr">
 <span class="header-section-number">5.5</span> Creu raster llethr</h2>
-<ol start="15" class="example" type="1">
+<ol start="17" class="example" type="1">
 <li>
 <p>Mae llethr (graddiant wyneb y tir) yn briodwedd sylfaenol o dopograffeg wyneb y tir, a gall ddarparu gwybodaeth werthfawr am botensial erydiad, llif dŵr, potensial adeiladu ac ati. Creuwch raster llethr o DEM:</p>
 <ol type="i">
@@ -318,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="creu-raster-agwedd" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="creu-raster-agwedd">
 <span class="header-section-number">5.6</span> Creu raster agwedd</h2>
-<ol start="16" class="example" type="1">
+<ol start="18" class="example" type="1">
 <li>
 <p>Mae agwedd (cyfeiriad y cwmpawd y mae’r graddiant yn wynebu tuag ato) yn briodwedd sylfaenol arall o dopograffeg tir, gan ddarparu gwybodaeth am botensial insolation, o ble mae nodweddion penodol yn weladwy, amlygiad i wynt amlwg ac ati. Creuwch raster agwedd o DEM:</p>
 <ol type="i">
@@ -347,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="creu-raster-hillshade" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="creu-raster-hillshade">
 <span class="header-section-number">5.7</span> Creu raster hillshade</h2>
-<ol start="18" class="example" type="1">
+<ol start="20" class="example" type="1">
 <li>
 <p>Mae hillshade yn efelychu effaith golau yn disgyn ar arwyneb trwy gyfuno llethr, agwedd, a chyfeiriad goleuo’r haul. Defnyddir y dull hwn yn gyffredin i ddelweddu topograffeg mewn mapiau a ffigurau. Creuwch raster hillshade o DEM:</p>
 <ol type="i">
@@ -374,7 +390,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="dosbarthu-data-raster" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="dosbarthu-data-raster">
 <span class="header-section-number">5.8</span> Dosbarthu data raster</h2>
-<ol start="20" class="example" type="1">
+<ol start="22" class="example" type="1">
 <li>
 <p>Defnyddiwch y raster calculator i gyflawni gweithrediadau cell wrth gell, er mwyn dod o hyd i rannau o’r haen raster sydd o fewn ystod benodol o werthoedd. Un o’r cyfyngiadau ar gyfer adeiladu fferm wynt yw na ddylai llethr wyneb y tir fod yn fwy na 6 gradd. Mae hyn oherwydd bod llethrau mwy serth yn llai sefydlog ac fel arfer nid ydynt yn hyfyw i adeiladu arnynt. Adeiladwch fynegiant yn y gyfrifiannell raster fel a ganlyn:</p>
 <ol type="i">
@@ -392,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>Y lliw sy’n cynrychioli ardaloedd addas ar gyfer adeiladu ffermydd gwynt oedd <select class="webex-select" id="webex-ad7801a52395ca6ce68a027a367b25a1" data-answer="OlQbCW0="><option value="blank"></option>
+<p>Y lliw sy’n cynrychioli ardaloedd addas ar gyfer adeiladu ffermydd gwynt oedd <select class="webex-select" id="webex-221d54ea238be9f325f68d5f68eb40e9" data-answer="aQIdVWg="><option value="blank"></option>
 <option>du</option>
 <option>gwyn</option></select>.</p>
 </div>
@@ -400,9 +416,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Y lliw sy’n cynrychioli ardaloedd addas ar gyfer adeiladu ffermydd gwynt oedd gwyn.</p>
 </div>
 </div>
-</section><section id="trosi-i-bolygonau-fector" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="trosi-i-bolygonau-fector">
+</section><section id="sec-polygonize" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="sec-polygonize">
 <span class="header-section-number">5.9</span> Trosi i bolygonau fector</h2>
-<ol start="22" class="example" type="1">
+<ol start="24" class="example" type="1">
 <li>
 <p>Gellir creu polygonau fector o haenau raster er mwyn eu cyfuno â chyfyngiadau fector eraill fel y rhai a grëwyd yn <a href="e04.cy.html">pennod 4</a>. Trosiwch y raster dosbarthu llethrau yn bolygonau fector:</p>
 <ol type="i">
@@ -417,16 +433,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><p>Mae polygonau bellach yn dynodi’r ardaloedd sy’n addas (llethr &lt; 6°) neu’n anaddas (llethr &gt; 6°) ar gyfer adeiladu arnynt. Agorwch y attribute table i archwilio pa un yw pa un. Meddyliwch am ddeuaidd; o dan y golofn ‘Addas’, mae 1au yn cynrychioli ‘ydy’, 0au yn cynrychioli ‘nac ydy’</p></li>
 <li><p>Delweddwch ardaloedd addas ac anaddas ar gyfer adeiladu yn y symboleg (gweler <span class="quarto-unresolved-ref">?sec-catvec</span>)</p></li>
-<li><p>Dewiswch y polygonau ‘anaddas’ (Addas = 0) gan ddefnyddio <code>Select features using an expression</code> (gweler <a href="e04.cy.html#sec-selexpress" class="quarto-xref"><span>Section 4.8</span></a>)</p></li>
+<li><p>Dewiswch y polygonau ‘anaddas’ (<code>Addas = 0</code>) gan ddefnyddio <code>Select features using an expression</code> (gweler <a href="e04.cy.html#sec-selexpress" class="quarto-xref"><span>Section 4.8</span></a>)</p></li>
 <li><p>Allforiwch y polygonau a ddewiswyd (cofiwch ddefnyddio’r opsiwn <code>Save Selected Features As...</code>). Enwch a storiwch yn synhwyrol</p></li>
 </ol></section><section id="paratoi-ar-gyfer-map-3" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="paratoi-ar-gyfer-map-3">
 <span class="header-section-number">5.10</span> Paratoi ar gyfer Map 3</h2>
-<ol start="27" class="example" type="1">
+<ol start="29" class="example" type="1">
 <li><p>O’r ffolder <code>Wales_mean_windspeed</code>, ychwanegwch yr haen <code>Wales_wind-speed_50m.tif</code> at eich prosiect</p></li>
 <li><p>Darllenwch dros y ffeil <code>description_and_data_source.txt</code> yn y ffolder <code>Wales_mean_windspeed</code> am fanylion am y data (Nodyn: mae gan bob ffeil GIS ffeil <code>description_and_data_source.txt</code> gysylltiedig)</p></li>
 <li><p>Clipiwch raster cyflymder y gwynt i’ch teilsen a’i gadw yn rhywle synhwyrol (gweler <a href="#sec-cliprast" class="quarto-xref"><span>Section 5.3</span></a>)</p></li>
 <li><p>Delweddwch y ddata gan ddefnyddio palet lliw addas</p></li>
-<li><p>Ychwanegwch yr haenau cyfyngu a greoch yn Ymarfer 04 (gweler <a href="e04.cy.html" class="quarto-xref"><span>Chapter 4</span></a>)</p></li>
+<li><p>Ychwanegwch y haenau cyfyngu a grewch yn Ymarfer 04 (gweler <a href="e04.cy.html" class="quarto-xref"><span>Chapter 4</span></a>), ac defnyddiwch merge a dissolve i greu darluniad symlach o’r ardaloedd cyfyngedig</p></li>
 <li><p>Gyda’r haen cyflymder gwynt o dan gyfyngiadau, archwiliwch ble y gellir caniatáu datblygiad ac sydd yn optimaidd. Gallwch archwilio nid yn unig lle y gallai fod yn ganiataol adeiladu fferm wynt, ond hefyd lle mae’r darnau tir mwyaf gwyntog (sy’n cynnig y cynhyrchu pŵer gorau) a’r rhai mwyaf o ran maint (sy’n gallu cynnwys y nifer mwyaf posibl o dyrbinau) wedi’u lleoli o fewn ardal eich teilsen fap</p></li>
 <li><p>Dyluniwch Fap 3 i ddangos yn glir y lleoliad gorau ar gyfer fferm wynt (heb gyfyngiadau), a defnyddiwch yr offer amryw (e.e. raster calculator) i echdynnu gwybodaeth a fydd yn eich helpu i gyfiawnhau pam y dewiswyd yr ardal hon (e.e. drwy ddarparu gwybodaeth ychwanegol yn eich capsiwn)</p></li>
 </ol>

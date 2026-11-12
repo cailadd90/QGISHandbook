@@ -90,3 +90,17 @@ If a panel or toolbar is missing:
 1. Click `View` → `Panels` or `Toolbars`
 2. Select the relevant panel/toolbar
 :::
+
+::: {.callout-note collapse="true" icon=false}
+### Can I convert the gaps between my constraints into a new layer representing 'potential windfarm development areas'?
+
+Yes! By first extracting the difference between your map tile and constraints layer, then making each polygon unique:
+
+1. Click `Vector` → `Geoprocessing Tools` → `Difference...` 
+2. Set `Input layer` as your map tile 
+3. Set `Overlay layer` as your constraints layer
+4. Click `Run` → `Close`
+5. Click `Vector` → `Geometry Tools` → `Multipart to Singleparts...`
+6. Set `Input layer` as your difference layer
+7. Click `Run` → `Close`
+:::

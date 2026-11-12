@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#creating-an-aspect-raster" id="toc-creating-an-aspect-raster" class="nav-link" data-scroll-target="#creating-an-aspect-raster"><span class="header-section-number">5.6</span> Creating an aspect raster</a></li>
   <li><a href="#creating-a-hillshade-raster" id="toc-creating-a-hillshade-raster" class="nav-link" data-scroll-target="#creating-a-hillshade-raster"><span class="header-section-number">5.7</span> Creating a hillshade raster</a></li>
   <li><a href="#classifying-raster-data" id="toc-classifying-raster-data" class="nav-link" data-scroll-target="#classifying-raster-data"><span class="header-section-number">5.8</span> Classifying raster data</a></li>
-  <li><a href="#converting-to-vector-polygons" id="toc-converting-to-vector-polygons" class="nav-link" data-scroll-target="#converting-to-vector-polygons"><span class="header-section-number">5.9</span> Converting to vector polygons</a></li>
+  <li><a href="#sec-polygonize" id="toc-sec-polygonize" class="nav-link" data-scroll-target="#sec-polygonize"><span class="header-section-number">5.9</span> Converting to vector polygons</a></li>
   <li><a href="#preparing-for-map-3" id="toc-preparing-for-map-3" class="nav-link" data-scroll-target="#preparing-for-map-3"><span class="header-section-number">5.10</span> Preparing for Map 3</a></li>
   </ul></nav>
 </div>
@@ -237,9 +237,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>According to the SRTM data, what is the height of Yr Wyddfa (the highest mountain in Eryri)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-43ae45db569b9b0d61408514f372c4d2" data-tol="30" size="20" data-answer="bxFQVQIGRj8="></p>
+<p><input class="webex-solveme nospaces" id="webex-fee5856035a4a5df5008414c67ce1af1" data-tol="30" size="20" data-answer="PUdUBQ4GFG0="></p>
 <p>According to the SRTM data, what is the height of Pen y Fan (the highest mountain in the Bannau Brycheiniog)? <em>(don’t use commas)</em></p>
-<p><input class="webex-solveme nospaces" id="webex-6cbd6e94e33c9ec17e27e33d4db1e204" data-tol="30" size="20" data-answer="bUFaUwBHZA=="></p>
+<p><input class="webex-solveme nospaces" id="webex-5469d519bae5f3c254436be4f5ddba1b" data-tol="30" size="20" data-answer="bhYODlIXbA=="></p>
 </div>
 <div class="webex-solution">
 <ul>
@@ -296,9 +296,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Add other layers to your Map Canvas to see them plotted in 3D</li>
 </ol>
 </li>
+<li>
+<p>It is also possible to add 3D maps to a Print Layout (i.e. where you construct your maps). Try this out:</p>
+<ol type="i">
+<li>Create a new Print Layout (see <a href="e02.html#sec-print" class="quarto-xref"><span>Section 2.1</span></a>)</li>
+<li>Click the <code>Add 3D Map</code> icon (<img src="figs/Add3DMap.png" class="img-fluid" style="width:3.0%">)</li>
+<li>Draw a map onto the print layout. <code>3D Map 1</code> should now appear under the <code>Items</code> tab</li>
+<li>Ensure <code>3D Map 1</code> is selected click the <code>Item Properties</code> tab</li>
+<li>Click <code>Copy Settings from a 3D View...</code> → <code>3D Map 1</code>
+</li>
+<li>Click <code>Set from a 3D View...</code> → <code>3D Map 1</code>
+</li>
+</ol>
+</li>
+<li><p>The map should now show the 3D view you created earlier. If you can’t see it, try exporting the map. Earlier versions of QGIS seem to struggle with visualising 3D maps in the Print Layout, but have no problems when the map is exported</p></li>
 </ol></section><section id="creating-a-slope-raster" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="creating-a-slope-raster">
 <span class="header-section-number">5.5</span> Creating a slope raster</h2>
-<ol start="15" class="example" type="1">
+<ol start="17" class="example" type="1">
 <li>
 <p>Slope (gradient of the land surface) is a fundamental property of the land surface topography, and can provide valuable information on erosion potential, water flow, construction potential etc. Derive a slope raster from a DEM:</p>
 <ol type="i">
@@ -313,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="creating-an-aspect-raster" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="creating-an-aspect-raster">
 <span class="header-section-number">5.6</span> Creating an aspect raster</h2>
-<ol start="16" class="example" type="1">
+<ol start="18" class="example" type="1">
 <li>
 <p>Aspect (compass direction towards which the gradient faces) is another fundamental property of land topography, providing information on insolation potential, where particular features are visible from, predominant wind exposure etc. Derive an aspect raster from a DEM:</p>
 <ol type="i">
@@ -341,7 +355,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="creating-a-hillshade-raster" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="creating-a-hillshade-raster">
 <span class="header-section-number">5.7</span> Creating a hillshade raster</h2>
-<ol start="18" class="example" type="1">
+<ol start="20" class="example" type="1">
 <li>
 <p>Hill shading simulates the effect of light falling on a surface by combining slope, aspect, and a solar illumination direction. This approach is commonly used to visualize topography in maps and figures. Derive a hillshade raster from a DEM:</p>
 <ol type="i">
@@ -368,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol></section><section id="classifying-raster-data" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="classifying-raster-data">
 <span class="header-section-number">5.8</span> Classifying raster data</h2>
-<ol start="20" class="example" type="1">
+<ol start="22" class="example" type="1">
 <li>
 <p>Use the raster calculator to perform cell-by-cell operations, such as to find parts of a raster layer within a specified range of values. One of the constraints for building a wind farm is that the land surface slope should be no more than 6 degrees. This is simply because greater slopes are less stable and not normally viable to build on. Build an expression in the raster calculator as follows:</p>
 <ol type="i">
@@ -386,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>The colour that represents suitable areas to build wind farms was <select class="webex-select" id="webex-8899e321fb71570f6de060718431718f" data-answer="YwgVCDg="><option value="blank"></option>
+<p>The colour that represents suitable areas to build wind farms was <select class="webex-select" id="webex-2c403b943123a15dbdae6406f6275979" data-answer="aVMYAW4="><option value="blank"></option>
 <option>black</option>
 <option>white</option></select>.</p>
 </div>
@@ -394,9 +408,9 @@ ul.task-list li input[type="checkbox"] {
 <p>The colour that represents suitable areas to build wind farms was white.</p>
 </div>
 </div>
-</section><section id="converting-to-vector-polygons" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="converting-to-vector-polygons">
+</section><section id="sec-polygonize" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="sec-polygonize">
 <span class="header-section-number">5.9</span> Converting to vector polygons</h2>
-<ol start="22" class="example" type="1">
+<ol start="24" class="example" type="1">
 <li>
 <p>Vector polygons can be created from raster layers so that they can be combined with other vector constraints such as those created in <a href="e04.html">chapter 4</a>. Convert the slope raster classifications to vector polygons:</p>
 <ol type="i">
@@ -411,16 +425,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><p>Polygons now demarcate the areas that are suitable (slope &lt; 6°) or unsuitable (slope &gt; 6°) for building upon. Open the attribute table to explore which is which. Think binary; under the ‘Suitable’ column, 1s represent ‘yes’, 0s represent ‘no’</p></li>
 <li><p>Visualise the suitable and unsuitable areas for construction in the symbology (see <a href="e01.html#sec-catvec" class="quarto-xref"><span>Section 1.6</span></a>)</p></li>
-<li><p>Select the ‘unsuitable’ polygons (Suitable = 0) using <code>Select features using an expression</code> (see <a href="e04.html#sec-selexpress" class="quarto-xref"><span>Section 4.7</span></a>)</p></li>
+<li><p>Select the ‘unsuitable’ polygons (<code>Suitable = 0</code>) using <code>Select features using an expression</code> (see <a href="e04.html#sec-selexpress" class="quarto-xref"><span>Section 4.7</span></a>)</p></li>
 <li><p>Export the selected polygons (remember to use the <code>Save Selected Features As...</code> option). Name and store sensibly</p></li>
 </ol></section><section id="preparing-for-map-3" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="preparing-for-map-3">
 <span class="header-section-number">5.10</span> Preparing for Map 3</h2>
-<ol start="27" class="example" type="1">
+<ol start="29" class="example" type="1">
 <li><p>From the <code>Wales_mean_windspeed</code> folder, add the <code>Wales_wind-speed_50m.tif</code> layer to your project</p></li>
 <li><p>Read over the <code>description_and_data_source.txt</code> file in the <code>Wales_mean_windspeed</code> folder for details about the data (Note: every GIS file has an associated <code>description_and_data_source.txt</code>)</p></li>
 <li><p>Clip the wind speed raster to your tile and save it somewhere sensible (see <a href="#sec-cliprast" class="quarto-xref"><span>Section 5.3</span></a>)</p></li>
 <li><p>Visualise the data using a suitable colour palette</p></li>
-<li><p>Add the constraint layers you created in Exercise 04 (see <a href="e04.html" class="quarto-xref"><span>Chapter 4</span></a>)</p></li>
+<li><p>Add the constraint layers you created in Exercise 04 (see <a href="e04.html" class="quarto-xref"><span>Chapter 4</span></a>) and merge and dissolve these to create a simplified indication of the constrained areas</p></li>
 <li><p>With the wind speed layer beneath constraints, explore where development may be permitted and is optimal. You can explore not just where building a wind farm may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area</p></li>
 <li><p>Design Map 3 to clearly show the best unconstrained wind farm location, and use the various tools (e.g raster calculator) to extract information to help you justify why this area was selected (e.g. by providing additional information in your caption)</p></li>
 </ol>

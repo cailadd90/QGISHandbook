@@ -84,6 +84,17 @@ exams2forms("E05_Q1.Rmd", edir = "exercises")
     x. Experiment with different values of `Vertical scale` and `Tile resolution` to understand how these work
     xi. Add other layers to your Map Canvas to see them plotted in 3D
 
+(@) It is also possible to add 3D maps to a Print Layout (i.e. where you construct your maps). Try this out:
+
+    i. Create a new Print Layout (see @sec-print)
+    ii. Click the `Add 3D Map` icon (![](figs/Add3DMap.png){width=3%})
+    iii. Draw a map onto the print layout. `3D Map 1` should now appear under the `Items` tab
+    iv. Ensure `3D Map 1` is selected click the `Item Properties` tab 
+    v. Click `Copy Settings from a 3D View...` → `3D Map 1`
+    vi. Click `Set from a 3D View...` → `3D Map 1`
+    
+(@) The map should now show the 3D view you created earlier. If you can't see it, try exporting the map. Earlier versions of QGIS seem to struggle with visualising 3D maps in the Print Layout, but have no problems when the map is exported
+
 ## Creating a slope raster
 
 (@) Slope (gradient of the land surface) is a fundamental property of the land surface topography, and can provide valuable information on erosion potential, water flow, construction potential etc. Derive a slope raster from a DEM:
@@ -150,7 +161,7 @@ library(exams2forms)
 exams2forms("E05_Q2.Rmd", edir = "exercises")
 ```
 
-## Converting to vector polygons
+## Converting to vector polygons {#sec-polygonize}
 
 (@) Vector polygons can be created from raster layers so that they can be combined with other vector constraints such as those created in [chapter 4](#sec-e04). Convert the slope raster classifications to vector polygons:
 
@@ -163,7 +174,7 @@ exams2forms("E05_Q2.Rmd", edir = "exercises")
 
 (@) Visualise the suitable and unsuitable areas for construction in the symbology (see @sec-catvec)
 
-(@) Select the 'unsuitable' polygons (Suitable = 0) using `Select features using an expression` (see @sec-selexpress)
+(@) Select the 'unsuitable' polygons (`Suitable = 0`) using `Select features using an expression` (see @sec-selexpress)
 
 (@) Export the selected polygons (remember to use the `Save Selected Features As...` option). Name and store sensibly
 
@@ -177,7 +188,7 @@ exams2forms("E05_Q2.Rmd", edir = "exercises")
 
 (@) Visualise the data using a suitable colour palette
 
-(@) Add the constraint layers you created in Exercise 04 (see @sec-e04)
+(@) Add the constraint layers you created in Exercise 04 (see @sec-e04) and merge and dissolve these to create a simplified indication of the constrained areas
 
 (@) With the wind speed layer beneath constraints, explore where development may be permitted and is optimal. You can explore not just where building a wind farm may be permitted, but where the windiest (best power generation) and largest (most number of turbines possible) plots of land are located in your map tile area
 
