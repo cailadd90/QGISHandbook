@@ -27,10 +27,7 @@ Creu a golygu polygon i gynrychioli fferm wynt, cyfrifo faint o dyrbinau sy'n ff
         
         Gallwch chi weld pryd mae haen ym modd golygu, gan fod eicon pensil yn ymddangos uwchben symbol yr haen. Mae golygiadau'n rhai dros dro nes i chi eu cadw. Mae hyn yn caniatáu ichi ddadwneud unrhyw gamgymeriadau a wnaethoch chi. Ond byddwch yn ofalus - ar ôl eu cadw, ni ellir dadwneud camgymeriadau'n hawdd!
     
-    vii. O'r `Digitizing Toolbar`, cliciwch ar `Add Polygon Feature`
-        
-    ![](figs/DigitizingToolbar.png){fig-align='center' width=50%}
-        
+    vii. O'r `Digitizing Toolbar` (![](figs/DigitizingToolbar.png){fig-align='center' width=3%}), cliciwch ar `Add Polygon Feature`
     viii. Chwich-gliciwch ar y Map Canvas i lunio fertigau (pwyntiau), i amlinellu lleoliad gorau posibl eich fferm wynt
     ix. Unwaith y bydd eich polygon wedi'i gwblhau, de-gliciwch i orffen
     x. Cliciwch `OK`

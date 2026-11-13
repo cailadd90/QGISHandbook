@@ -176,7 +176,7 @@ Place emphasis on only a few, simply presented layers that are useful at this sc
 
     i. Select your inset map (`Map 2`) from the `Items` panel
     ii. Under `Item Properties`, expand the `Overviews` tab
-    iii. Click `Add a new overview` (![](figs/E02_AddANewGrid.png){width=3%})
+    iii. Click `Add a new overview` (![](figs/AddANewGrid.png){width=3%})
     iv. Click `Overview 1`
     v. Set the `Map frame` to your main map (`Map 1`)
     vi. Adjust the `Frame style` to draw a hollow rectangle with a thick line, to easily show the main map’s extent

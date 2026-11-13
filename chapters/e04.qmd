@@ -32,7 +32,7 @@ To clip small subsets from large vector datasets, create dissolved buffers aroun
     vi. Double-click `$area`
     vii. Click `OK`
     viii. Click the `Save edits` icon (![](figs/SaveEdits.png){width=3%} )to save the changes to the attribute table
-    ix. Click the `Toggle editing mode` icon (![](figs/ToggleEditingMode.png){width=3%}) to turn off editing mode
+    ix. Click the `Toggle editing mode` icon (![](figs/ToggleEditing.png){width=3%}) to turn off editing mode
 
 (@) Calculate the `$perimeter` of your map tile as well. Now these values have been saved in the attribute table, what units are these in? Note that the values are slightly different from what you should have expected. This is because the curvature of the Earth introduces a small distortion between real and mapped areas
 

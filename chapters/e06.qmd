@@ -27,10 +27,7 @@ Create and edit a polygon to represent a wind farm, calculate how many turbines 
     
         You can tell when a layer's in edit mode, as a pencil icon appears over the layer's symbol. Edits are temporary until you save them. This allows you to undo any mistakes you may have made. But beware - once saved, mistakes can't be easily undone!  
 
-    vii. From the `Digitizing Toolbar`, click `Add Polygon Feature`
-    
-    ![](figs/DigitizingToolbar.png){fig-align='center' width=50%}
-    
+    vii. From the `Digitizing Toolbar` (![](figs/DigitizingToolbar.png){fig-align='center' width=3%}), click `Add Polygon Feature`
     viii. Left‑click on the Map Canvas to draw vertices (points), outlining your optimum wind farm location
     ix. Once your polygon is complete, right‑click to finish
     x. Click `OK` 
