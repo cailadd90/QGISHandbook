@@ -58,7 +58,7 @@ I ddod yn gyfarwydd â'r amgylchedd Quantum GIS (QGIS) ar gyfer delweddu a phros
 
 (@) Dewch o hyd i'r `Save` llwybr byr. Cofiwch gadw'n rheolaidd o hyn ymlaen!
 
-## Mesur gwrthrychau geo-ofodol {#sec-mesuring}
+## Mesur gwrthrychau geo-ofodol {#sec-measuring}
 
 (@) Cliciwch y saeth cwymplen wrth ymyl yr eicon `Measure` i ddewis yr offeryn priodol ar gyfer mesur:
 
@@ -77,7 +77,7 @@ library(exams2forms)
 exams2forms("E01_Q1.cy.Rmd", edir = "exercises")
 ```
 
-## Archwilio'r Attribute Table {#sec-attribut}
+## Archwilio'r Attribute Table {#sec-attrib}
 
 (@) O'r panel `Layers`, de-gliciwch `British_Isles_land_polygons` a chliciwch `Open Attribute Table`. Mae tabl priodoleddau yn rhan sylfaenol o bob set ddata GIS. Mae pob rhes o'r tabl yn cyfateb i un nodwedd (e.e. polygon) o'r haen fector, ac mae pob colofn, neu briodoledd (y gall fod cymaint ohonynt ag sydd eu hangen), yn cofnodi priodwedd o'r nodwedd (e.e. enw, arwynebedd, cylchedd). Mae gan yr haen ddata benodol hon ddau briodoledd: `fid` (dynodwr maes) ac `Area`
 
@@ -118,7 +118,7 @@ exams2forms("E01_Q3.cy.Rmd", edir = "exercises")
 
 (@) Cliciwch yr eicon `Deselect feature` (![](figs/Deselect.png){width=3%}) i ddad-ddewis y detholiad cyfredol. Bydd y swyddogaethau hyn yn ddefnyddiol iawn yn ddiweddarach.
 
-## Trefnu haenau
+## Trefnu haenau {#sec-catvec}
 
 (@) Ychwanegwch yr haen `Wales_Principal_Areas.gpkg` yn y ffolder `UK_Boundaries` i'ch prosiect. Mae'r set ddata hon yn cynnwys polygonau sy'n cynrychioli awdurdodau unedol (a elwir hefyd yn siroedd) Cymru. Noder y bydd yr haen hon hefyd yn ymddangos yn y panel `Layers`
 

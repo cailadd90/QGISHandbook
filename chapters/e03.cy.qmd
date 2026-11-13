@@ -20,7 +20,7 @@ I archwilio dosbarthiad pwyntiau cod post yng Nghymru, archwilio dwysedd pobloga
 
 (@) Ymchwiliwch i'r attributes table ac archwiliwch sut mae'r pwyntiau hyn wedi'u dosbarthu
 
-(@) Gan ddefnyddio sgiliau o Ymarfer 1 ([Adran 1.5](#sec-attrib)) i ateb y canlynol:
+(@) Gan ddefnyddio sgiliau o Ymarfer 1 (@sec-attrib) i ateb y canlynol:
 
 ```{r}
 #| echo: false
@@ -73,7 +73,7 @@ exams2forms("E03_Q3.cy.Rmd", edir = "exercises")
 
 (@) Cyfrifwch ystadegau sylfaenol ar is-set o ddata mewn lleoliad penodol:
 
-    i. Dewiswch bolygon Sir Abertawe o `Wales_Principal_Areas` (wedi anghofio sut i wneud hyn? Gwiriwch [Adran 1.5](#sec-attrib))
+    i. Dewiswch bolygon Sir Abertawe o `Wales_Principal_Areas` (wedi anghofio sut i wneud hyn? Gwiriwch @sec-attrib)
     ii. Cliciwch `Vector` → `Research Tools` → `Select By Location...`
     iii. Gosodwch `Select features from` i `Wales_headcounts_at_postcodes_2021`
     iv. Ticiwch `are within`
@@ -114,7 +114,7 @@ exams2forms("E03_Q4.cy.Rmd", edir = "exercises")
 
 (@) Wedi cadw eich prosiect yn ddiweddar?
 
-## Geocodio cyfeiriadau newydd
+## Geocodio cyfeiriadau newydd {#sec-geocoding}
 
 (@) Geogodio yw'r broses o drosi cyfeiriad neu enw lle i gyfesurynnau daearyddol, fel lledred a hydred. Mae'n caniatáu i GIS blotio lleoliadau ar fap. Mae offeryn 'trosi' o'r fath unwaith eto yn weithrediad pwerus o GIS. Defnyddiwch geogodio i blotio ble mae siopau Tesco lleol Abertawe wedi'u lleoli:
 

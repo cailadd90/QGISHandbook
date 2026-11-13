@@ -87,15 +87,14 @@ You'll now see a new layer called `Clipped` with a memory chip icon (![](figs/Te
 
 (@) Now you have the final product derived from a series of processing steps, export the layer (forgotten how? see @sec-export)
 
-(@) Use the field calculator to find total protected area. Calculate percentage of your tile. This might be a useful piece of information to present in a caption!
+(@) Use the field calculator to find total protected area. Calculate percentage of protected area in your tile. This might be a useful piece of information to present in a caption!
 
 (@) Have you been saving your project?
 
 ::: {.callout-tip}
 ## Efficient filing
 
-This is a good time to remind you to be careful and tidy about where to save GIS output. You will be generating many files for this project, and a hierarchical folder structure and carefully named layers is highly recommended. Be methodical in how you
-name layers and where you put them. You will need to find and use them later on.
+This is a good time to remind you to be careful and tidy about where to save GIS output. You will be generating many files for this project, and a hierarchical folder structure and carefully named layers is highly recommended. You will need to find and use them later on.
 :::
 
 ## Buffering layers
