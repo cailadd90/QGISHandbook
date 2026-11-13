@@ -25,7 +25,7 @@ Creu a golygu polygon i gynrychioli fferm wynt, cyfrifo faint o dyrbinau sy'n ff
     v. Cliciwch `OK`
     vi. O'r panel `Layers`, dde-gliciwch ar yr haen newydd a chliciwch `Toggle Editing` neu dewch o hyd i'r llwybr byr (![](figs/ToggleEditing.png){width=3%})
         
-    Gallwch chi weld pryd mae haen ym modd golygu, gan fod eicon pensil yn ymddangos uwchben symbol yr haen. Mae golygiadau'n rhai dros dro nes i chi eu cadw. Mae hyn yn caniatáu ichi ddadwneud unrhyw gamgymeriadau a wnaethoch chi. Ond byddwch yn ofalus - ar ôl eu cadw, ni ellir dadwneud camgymeriadau'n hawdd!
+        Gallwch chi weld pryd mae haen ym modd golygu, gan fod eicon pensil yn ymddangos uwchben symbol yr haen. Mae golygiadau'n rhai dros dro nes i chi eu cadw. Mae hyn yn caniatáu ichi ddadwneud unrhyw gamgymeriadau a wnaethoch chi. Ond byddwch yn ofalus - ar ôl eu cadw, ni ellir dadwneud camgymeriadau'n hawdd!
     
     vii. O'r `Digitizing Toolbar`, cliciwch ar `Add Polygon Feature`
         
@@ -41,7 +41,7 @@ Creu a golygu polygon i gynrychioli fferm wynt, cyfrifo faint o dyrbinau sy'n ff
     xii. Cliciwch yr eicon `Toggle Editing` (![](figs/ToggleEditing.png){width=3%}) unwaith eto i ddiffodd golygu
     xiii. Cliciwch `Save`
 
-::: {.callout-hint}
+::: {.callout-tip}
 ## Galluogi snapio
 
 Ydych chi'n berffeithydd, ond allwch chi ddim cael ymyl eich ardal fferm wynt orau i ffinio â haen gyfyngiad? Wel, yr offeryn snap yw'r un i chi! Bydd hwn yn tynnu'r cyrchwr i fyny yn erbyn ymyl haen fector i gynorthwyo gyda lleoliad perffaith y fertigau. Rhowch gynnig arni trwy glicio ar `View` → `Toolbars` → `Snapping Toolbar`, yna cliciwch ar yr eicon `Enable Snapping` (![](figs/EnableSnapping.png){width=3%}).

@@ -163,10 +163,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
 <li><a href="#creating-a-wind-farm-polygon" id="toc-creating-a-wind-farm-polygon" class="nav-link active" data-scroll-target="#creating-a-wind-farm-polygon"><span class="header-section-number">6.1</span> Creating a wind farm polygon</a></li>
-  <li><a href="#enable-snapping" id="toc-enable-snapping" class="nav-link" data-scroll-target="#enable-snapping"><span class="header-section-number">6.2</span> Enable snapping</a></li>
-  <li><a href="#calculating-number-of-wind-turbines-that-can-be-built" id="toc-calculating-number-of-wind-turbines-that-can-be-built" class="nav-link" data-scroll-target="#calculating-number-of-wind-turbines-that-can-be-built"><span class="header-section-number">6.3</span> Calculating number of wind turbines that can be built</a></li>
-  <li><a href="#creating-a-viewshed" id="toc-creating-a-viewshed" class="nav-link" data-scroll-target="#creating-a-viewshed"><span class="header-section-number">6.4</span> Creating a viewshed</a></li>
-  <li><a href="#calculating-visibility-impacts-for-map-4" id="toc-calculating-visibility-impacts-for-map-4" class="nav-link" data-scroll-target="#calculating-visibility-impacts-for-map-4"><span class="header-section-number">6.5</span> Calculating visibility impacts for Map 4</a></li>
+  <li><a href="#calculating-number-of-wind-turbines-that-can-be-built" id="toc-calculating-number-of-wind-turbines-that-can-be-built" class="nav-link" data-scroll-target="#calculating-number-of-wind-turbines-that-can-be-built"><span class="header-section-number">6.2</span> Calculating number of wind turbines that can be built</a></li>
+  <li><a href="#creating-a-viewshed" id="toc-creating-a-viewshed" class="nav-link" data-scroll-target="#creating-a-viewshed"><span class="header-section-number">6.3</span> Creating a viewshed</a></li>
+  <li><a href="#calculating-visibility-impacts-for-map-4" id="toc-calculating-visibility-impacts-for-map-4" class="nav-link" data-scroll-target="#calculating-visibility-impacts-for-map-4"><span class="header-section-number">6.4</span> Calculating visibility impacts for Map 4</a></li>
   </ul></nav>
 </div>
 <!-- main -->
@@ -210,21 +209,16 @@ ul.task-list li input[type="checkbox"] {
 <li>
 <p>Create a new GeoPackage vector layer representing your optimal wind farm location:</p>
 <ol type="i">
-<li>Click <code>Layer</code> → <code>Create Layer</code> → <code>New GeoPackage Layer...</code>
-</li>
-<li>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) next to <code>Dataset</code> to save the wind farm location vector somewhere sensible</li>
-<li>Set <code>Geometry type</code> as <code>Polygon</code>
-</li>
-<li>Set the CRS as <code>EPSG:27700</code>
-</li>
-<li>Click <code>OK</code>
-</li>
-<li>From the <code>Layers</code> panel, right‑click on the new layer and click <code>Toggle Editing</code> or find the shortcut (<img src="figs/ToggleEditing.png" class="img-fluid" style="width:3.0%">)</li>
-</ol>
+<li><p>Click <code>Layer</code> → <code>Create Layer</code> → <code>New GeoPackage Layer...</code></p></li>
+<li><p>Click the <code>Browse</code> icon (<img src="figs/Browse.png" class="img-fluid" style="width:3.0%">) next to <code>Dataset</code> to save the wind farm location vector somewhere sensible</p></li>
+<li><p>Set <code>Geometry type</code> as <code>Polygon</code></p></li>
+<li><p>Set the CRS as <code>EPSG:27700</code></p></li>
+<li><p>Click <code>OK</code></p></li>
+<li>
+<p>From the <code>Layers</code> panel, right‑click on the new layer and click <code>Toggle Editing</code> or find the shortcut (<img src="figs/ToggleEditing.png" class="img-fluid" style="width:3.0%">)</p>
 <p>You can tell when a layer’s in edit mode, as a pencil icon appears over the layer’s symbol. Edits are temporary until you save them. This allows you to undo any mistakes you may have made. But beware - once saved, mistakes can’t be easily undone!</p>
-<ol start="7" type="i">
-<li>From the <code>Digitizing Toolbar</code>, click <code>Add Polygon Feature</code>
 </li>
+<li><p>From the <code>Digitizing Toolbar</code>, click <code>Add Polygon Feature</code></p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="figs/DigitizingToolbar.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
@@ -247,11 +241,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ol>
 </li>
-</ol></section><section id="enable-snapping" class="level2 callout-hint" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="enable-snapping">
-<span class="header-section-number">6.2</span> Enable snapping</h2>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Enable snapping
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Are you a perfectionist, but you can’t get the edge of your optimum wind farm area to abut a constraint layer? Well the snapping tool is for you! This will pull the cursor up against the edge of a vector layer to aid in the perfect placement of vertices. Try it out by clicking <code>View</code> → <code>Toolbars</code> → <code>Snapping Toolbar</code>, then clicking the <code>Enable Snapping</code> icon (<img src="figs/EnableSnapping.png" class="img-fluid" style="width:3.0%">).</p>
-</section><section id="calculating-number-of-wind-turbines-that-can-be-built" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="calculating-number-of-wind-turbines-that-can-be-built">
-<span class="header-section-number">6.3</span> Calculating number of wind turbines that can be built</h2>
+</div>
+</div>
+</section><section id="calculating-number-of-wind-turbines-that-can-be-built" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="calculating-number-of-wind-turbines-that-can-be-built">
+<span class="header-section-number">6.2</span> Calculating number of wind turbines that can be built</h2>
 <ol start="4" class="example" type="1">
 <li>
 <p>The local planning authority wish to install 50 m turbines across the site, that each generate 750kWh. How can you identify the most efficient way to pack turbines in your polygon? A grid of hexagons is often the most space-efficient regular packing arrangement. Create a hexagonal grid across your polygon:</p>
@@ -307,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Calculate the potential energy output of your windfarm in kWh (each turbine can generate 750kWh)</li>
 </ol>
 </li>
-</ol></section><section id="creating-a-viewshed" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="creating-a-viewshed">
-<span class="header-section-number">6.4</span> Creating a viewshed</h2>
+</ol></section><section id="creating-a-viewshed" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="creating-a-viewshed">
+<span class="header-section-number">6.3</span> Creating a viewshed</h2>
 <ol start="8" class="example" type="1">
 <li>
 <p>A viewshed uses a DEM to determine the inter-visibility between one point in the landscape and another. This is very valuable in exploring the potential visual impact of planned infrastructure such as a windfarm. The tool assumes you want to find everywhere (all <code>Targets</code>) in the landscape that an <code>Observer</code> can see from their location. We actually want to find everywhere in the landscape from where a target can be seen. The Viewshed tool works the same way in both cases, but we need to exchange <code>Observer</code> with <code>Target</code>. Creating a viewshed is a two-stage process:</p>
@@ -343,7 +348,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>The colour that represents areas from which the wind farm can be seen was <select class="webex-select" id="webex-940dd9ef3e222ff8bd9a3c1b9f49a1e2" data-answer="YgQcVTk="><option value="blank"></option>
+<p>The colour that represents areas from which the wind farm can be seen was <select class="webex-select" id="webex-92830d328fef1c622716a10f55c346dc" data-answer="YgIUAm0="><option value="blank"></option>
 <option>black</option>
 <option>white</option></select>.</p>
 </div>
@@ -351,8 +356,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The colour that represents areas from which the wind farm can be seen was white.</p>
 </div>
 </div>
-</section><section id="calculating-visibility-impacts-for-map-4" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="calculating-visibility-impacts-for-map-4">
-<span class="header-section-number">6.5</span> Calculating visibility impacts for Map 4</h2>
+</section><section id="calculating-visibility-impacts-for-map-4" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="calculating-visibility-impacts-for-map-4">
+<span class="header-section-number">6.4</span> Calculating visibility impacts for Map 4</h2>
 <ol start="10" class="example" type="1">
 <li>
 <p>Vectorize your viewshed to create polygons representing areas within 10 km from which the wind farm is visible:</p>

@@ -25,7 +25,7 @@ Create and edit a polygon to represent a wind farm, calculate how many turbines 
     v. Click `OK`
     vi. From the `Layers` panel, right‑click on the new layer and click `Toggle Editing` or find the shortcut (![](figs/ToggleEditing.png){width=3%})
     
-    You can tell when a layer's in edit mode, as a pencil icon appears over the layer's symbol. Edits are temporary until you save them. This allows you to undo any mistakes you may have made. But beware - once saved, mistakes can't be easily undone!  
+        You can tell when a layer's in edit mode, as a pencil icon appears over the layer's symbol. Edits are temporary until you save them. This allows you to undo any mistakes you may have made. But beware - once saved, mistakes can't be easily undone!  
 
     vii. From the `Digitizing Toolbar`, click `Add Polygon Feature`
     
@@ -41,7 +41,7 @@ Create and edit a polygon to represent a wind farm, calculate how many turbines 
     xii. Click the `Toggle Editing` icon (![](figs/ToggleEditing.png){width=3%}) once more to turn off editing
     xiii. Click `Save`
 
-::: {.callout-hint}
+::: {.callout-tip}
 ## Enable snapping
 
 Are you a perfectionist, but you can't get the edge of your optimum wind farm area to abut a constraint layer? Well the snapping tool is for you! This will pull the cursor up against the edge of a vector layer to aid in the perfect placement of vertices. Try it out by clicking `View` → `Toolbars` → `Snapping Toolbar`, then clicking the `Enable Snapping` icon (![](figs/EnableSnapping.png){width=3%}).
