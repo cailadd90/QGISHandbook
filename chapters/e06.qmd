@@ -23,10 +23,10 @@ Create and edit a polygon to represent a wind farm, calculate how many turbines 
     iii. Set `Geometry type` as `Polygon`
     iv. Set the CRS as `EPSG:27700`
     v. Click `OK`
-    vi. From the `Layers` panel, right‑click on the new layer and click `Toggle Editing` or find the shortcut (![](figs/ToggleEditing.png){width=3%})
+    vi. From the `Layers` panel, right‑click on the new layer and click `Toggle Editing` or find the shortcut (![](figs/ToggleEditing.png){width=3%}). 
     
-        You can tell when a layer's in edit mode, as a pencil icon appears over the layer's symbol. Edits are temporary until you save them. This allows you to undo any mistakes you may have made. But beware - once saved, mistakes can't be easily undone!  
-
+    You can tell when a layer's in edit mode, as a pencil icon appears over the layer's symbol. Edits are temporary until you save them. This allows you to undo any mistakes you may have made. But beware - once saved, mistakes can't be easily undone!
+    
     vii. From the `Digitizing Toolbar` (![](figs/DigitizingToolbar.png){fig-align='center' width=25%}), click `Add Polygon Feature`
     viii. Left‑click on the Map Canvas to draw vertices (points), outlining your optimum wind farm location
     ix. Once your polygon is complete, right‑click to finish
@@ -64,7 +64,7 @@ Are you a perfectionist, but you can't get the edge of your optimum wind farm ar
     v. Click `Run`
     vi. Select the `Grid` layer in the `Layers` panel
     vii. Click the `Toggle Editing` icon (![](figs/ToggleEditing.png){width=3%}) to turn on editing
-    viii.Click the `Delete Selected` icon (![](figs/DeleteSelected.png){width=3%}) to delete the unnecessary hexagons
+    viii. Click the `Delete Selected` icon (![](figs/DeleteSelected.png){width=3%}) to delete the unnecessary hexagons
     ix. Click the `Toggle Editing` icon (![](figs/ToggleEditing.png){width=3%}) once more to turn off editing
     x. Click `Save`
 
@@ -96,7 +96,7 @@ Are you a perfectionist, but you can't get the edge of your optimum wind farm ar
     vi. Check `Selected features only`
     vii. Set `Digital elevation model` to your map tile DEM
     viii. Set `Radius of analysis, meters` to 10 km
-    ix Set `Observer height, meters` to the height of your wind turbines (50 m)
+    ix. Set `Observer height, meters` to the height of your wind turbines (50 m)
     x. Set `Target height, meters` to the height of an average person (1.7 m)
     xi. Click `Run` → `Close`
     

@@ -24,8 +24,8 @@ Creu a golygu polygon i gynrychioli fferm wynt, cyfrifo faint o dyrbinau sy'n ff
     iv. Gosodwch y CRS fel `EPSG:27700`
     v. Cliciwch `OK`
     vi. O'r panel `Layers`, dde-gliciwch ar yr haen newydd a chliciwch `Toggle Editing` neu dewch o hyd i'r llwybr byr (![](figs/ToggleEditing.png){width=3%})
-        
-        Gallwch chi weld pryd mae haen ym modd golygu, gan fod eicon pensil yn ymddangos uwchben symbol yr haen. Mae golygiadau'n rhai dros dro nes i chi eu cadw. Mae hyn yn caniatáu ichi ddadwneud unrhyw gamgymeriadau a wnaethoch chi. Ond byddwch yn ofalus - ar ôl eu cadw, ni ellir dadwneud camgymeriadau'n hawdd!
+    
+    Gallwch chi weld pryd mae haen ym modd golygu, gan fod eicon pensil yn ymddangos uwchben symbol yr haen. Mae golygiadau'n rhai dros dro nes i chi eu cadw. Mae hyn yn caniatáu ichi ddadwneud unrhyw gamgymeriadau a wnaethoch chi. Ond byddwch yn ofalus - ar ôl eu cadw, ni ellir dadwneud camgymeriadau'n hawdd!
     
     vii. O'r `Digitizing Toolbar` (![](figs/DigitizingToolbar.png){fig-align='center' width=25%}), cliciwch ar `Add Polygon Feature`
     viii. Chwich-gliciwch ar y Map Canvas i lunio fertigau (pwyntiau), i amlinellu lleoliad gorau posibl eich fferm wynt
@@ -35,8 +35,8 @@ Creu a golygu polygon i gynrychioli fferm wynt, cyfrifo faint o dyrbinau sy'n ff
         a. Cliciwch y `Vertex Tool` (![](figs/VertexTool.png){width=3%}) 
         b. Dewiswch fertig polygon
         c. Symudwch y cyrchwr i'r lleoliad a ddymunir a phwyswch chwich-glic
-    xii. Cliciwch yr eicon `Toggle Editing` (![](figs/ToggleEditing.png){width=3%}) unwaith eto i ddiffodd golygu
-    xiii. Cliciwch `Save`
+        xii. Cliciwch yr eicon `Toggle Editing` (![](figs/ToggleEditing.png){width=3%}) unwaith eto i ddiffodd golygu
+        xiii. Cliciwch `Save`
 
 ::: {.callout-tip}
 ## Galluogi snapio
@@ -96,7 +96,7 @@ Ydych chi'n berffeithydd, ond allwch chi ddim cael ymyl eich ardal fferm wynt or
     vi. Ticiwch `Selected features only`
     vii. Gosodwch `Digital elevation model` i'ch DEM y teilen map 
     viii. Gosodwch `Radius of analysis, meters` i 10 km
-    ix Gosodwch `Observer height, meters` i uchder eich tyrbinau gwynt (50 m)
+    ix. Gosodwch `Observer height, meters` i uchder eich tyrbinau gwynt (50 m)
     x. Gosodwch `Target height, meters` i uchder person cyffredin (1.7 m)
     xi. Cliciwch `Run` → `Close`
     
